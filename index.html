@@ -1,0 +1,599 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="subject" content="Lubycon" />
+    <meta name="description" content="free sources" />
+    <meta name="author" content="Daniel ZEPOT" />
+    <meta name="robots" content="index" />
+    <meta name="copyright" content="copyrights 2015 ZEPOT" />
+    <meta name="keywords" content="font ,vector, 3D design, community, designers, engineer, 3D printer, Illustration, Lubycon" />
+
+    <title>LUBYCON</title>
+    <link rel="shortcut icon" href="CH/img/lubycon.ico" />
+    <!--<link href="http://fonts.googleapis.com/css?family=Exo+2:400" rel="stylesheet" type="text/css" />-->
+    <link href='http://fonts.googleapis.com/css?family=Hind:400' rel='stylesheet' type='text/css' />	<!--google web font-->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" /> <!--icon font-->
+
+    <link href="normalize.css" rel="stylesheet" type="text/css" />
+    <link href="index.css" rel="stylesheet" type="text/css" />
+    <link href="flexslider.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="jquery.flexslider.js"></script>
+    <!-- FlexSlider -->
+    <script defer src="jquery.flexslider.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            SyntaxHighlighter.all();
+        });
+        $(window).load(function () {
+            $('.flexslider').flexslider({
+                animation: "slide",
+                start: function (slider) {
+                    $('body').removeClass('loading');
+                }
+            });
+        });
+    </script>
+
+</head>
+<body>
+    <header id="main_header">
+        <h1><a href="#"><img src="CH/img/lubycon_logo.png" width="176" height="40" alt="main_logo" /></a></h1>
+        <nav id="main_gnb">
+            <ul id="gnb">
+                <li class="bigsub">
+                    Contnets
+                    <ul class="sub">
+                        <li>
+                            <a href="#"><i class="fa fa-font fa-1x"></i><p>Font</p></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-square fa-1x"></i><p>Vector</p></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-cube fa-1x"></i><p>3D</p></a>
+                        </li>
+                    </ul>	<!--end Contents menu-->
+                </li>
+                <li class="bigsub">
+                    Community
+                    <ul class="sub">
+                        <li>
+                            <a href="#"><i class="fa fa-comments-o fa-1x"></i><p>Board</p></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-book fa-1x"></i><p>Tutorial</p></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-question fa-1x"></i><p>Q&amp;A</p></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-star fa-1x"></i><p class="long_text">Designers Page</p></a>
+                        </li>
+                    </ul>	<!--end Community menu-->
+                </li>
+                <li class="bigsub">
+                    Company
+                    <ul class="sub">
+                        <li>
+                            <a href="#"><i class="fa fa-connectdevelop fa-1x"></i><p>About us</p></a>
+                        </li>
+                    </ul>	<!--end Company menu-->
+                </li>
+            </ul> <!-- end gnb ul -->
+        </nav>	<!--end main_gnb-->
+        <div id="signin_bt">
+            <span class="partition">|</span>
+            <p class="signicon"><i class="fa fa-unlock-alt fa-lg"></i></p>
+            <p class="signin">SIGN IN</p>
+        </div>
+        <div id="lang_select_bt">
+            <ul>
+                <li class="lang_selected">KOR</li>
+                <ul class="lang_list">
+                    <li>KOR</li>
+                    <li>CHN</li>
+                    <li>ENG</li>
+                    <li>FRN</li>
+                    <li>JPN</li>
+                    <li>POR</li>
+                </ul>	<!-- end lang_list -->
+            </ul>	<!-- end lang_all -->
+        </div>	<!-- end lang_select_bt -->
+    </header>	<!--end main_header-->
+
+    <div id="main_search_bar">
+        <input type="text" id="main_search_text" value="Enter the Keyword" />
+        <!-- end searsh list -->
+        <button id="main_search_btn"><i class='fa fa-search fa-lg search_icon'></i></button>
+    </div>	 <!--end main_searsh_bar-->
+
+    <figure id="main_figure">
+        <h2>Connect Your Creativity With The World</h2>
+        <button>SIGN IN</button>
+    </figure>	<!-- end main_figure -->
+    <section id="slide_section">
+        <nav id="slide_lnb">
+            <input id="font_bt" type="radio" name="tap" checked="checked" />
+            <input id="vector_bt" type="radio" name="tap" />
+            <input id="3d_bt" type="radio" name="tap" />
+            <nav>
+                <label for="font_bt" class="la_bt">FONT</label>
+                <label for="vector_bt" class="la_bt">VECTOR</label>
+                <label for="3d_bt" class="la_bt">3D</label>
+            </nav> <!-- end nav -->
+            <p class="down_triangle"></p>
+        </nav>
+
+        <div id="slider1">
+            <section class="slider">
+                <div class="flexslider">
+                    <ul class="slides">
+                        <li>
+                            <div class="slider_item">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <p class="slider_gold_medal"></p>
+                                            <img src="ch/img/thumbnail/thumbnail_01.png" alt="썸네일02" width="213" height="165">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <p class="slider_silver_medal"></p>
+                                            <img src="ch/img/thumbnail/thumbnail_01.png" alt="썸네일02" width="175" height="165">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <p class="slider_bronze_medal"></p>
+                                            <img src="ch/img/thumbnail/thumbnail_01.png" alt="썸네일02" width="252" height="165">
+                                        </a>
+                                    </li>
+                                    <li><a href="#"><img src="ch/img/thumbnail/thumbnail_04.png" alt="썸네일04" width="141" height="165"></a></li>
+                                    <li><a href="#"><img src="ch/img/thumbnail/thumbnail_05.png" alt="썸네일05" width="220" height="155"></a></li>
+                                    <li><a href="#"><img src="ch/img/thumbnail/thumbnail_06.png" alt="썸네일06" width="125" height="155"></a></li>
+                                    <li><a href="#"><img src="ch/img/thumbnail/thumbnail_07.png" alt="썸네일07" width="212" height="155"></a></li>
+                                    <li><a href="#"><img src="ch/img/thumbnail/thumbnail_08.png" alt="썸네일08" width="224" height="155"></a></li>
+                                </ul>
+                            </div>	 <!-- end slier_item -->
+                    </ul>	<!-- end slides ul -->
+                </div>	<!-- end flexslider div -->
+            </section>	<!-- end slider section -->
+        </div>	 <!-- end slider1 div -->
+
+        <div id="slider2">
+            <section class="slider">
+                <div class="flexslider">
+                    <ul class="slides">
+                        <li>
+                            <div class="slider_item">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <p class="slider_gold_medal"></p>
+                                            <img src="ch/img/thumbnail/thumbnail_02.png" alt="썸네일02" width="213" height="165">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <p class="slider_silver_medal"></p>
+                                            <img src="ch/img/thumbnail/thumbnail_02.png" alt="썸네일02" width="175" height="165">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <p class="slider_bronze_medal"></p>
+                                            <img src="ch/img/thumbnail/thumbnail_02.png" alt="썸네일02" width="252" height="165">
+                                        </a>
+                                    </li>
+                                    <li><a href="#"><img src="ch/img/thumbnail/thumbnail_04.png" alt="썸네일04" width="141" height="165"></a></li>
+                                    <li><a href="#"><img src="ch/img/thumbnail/thumbnail_05.png" alt="썸네일05" width="220" height="155"></a></li>
+                                    <li><a href="#"><img src="ch/img/thumbnail/thumbnail_06.png" alt="썸네일06" width="125" height="155"></a></li>
+                                    <li><a href="#"><img src="ch/img/thumbnail/thumbnail_07.png" alt="썸네일07" width="212" height="155"></a></li>
+                                    <li><a href="#"><img src="ch/img/thumbnail/thumbnail_08.png" alt="썸네일08" width="224" height="155"></a></li>
+                                </ul>
+                            </div>	 <!-- end slier_item -->
+                    </ul>	<!-- end slides ul -->
+                </div>	<!-- end flexslider div -->
+            </section>	<!-- end slider section -->
+        </div>	 <!-- end slider2 div -->
+
+        <div id="slider3">
+            <section class="slider">
+                <div class="flexslider">
+                    <ul class="slides">
+                        <li>
+                            <div class="slider_item">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <p class="slider_gold_medal"></p>
+                                            <img src="ch/img/thumbnail/thumbnail_03.png" alt="썸네일02" width="213" height="165">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <p class="slider_silver_medal"></p>
+                                            <img src="ch/img/thumbnail/thumbnail_03.png" alt="썸네일02" width="175" height="165">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <p class="slider_bronze_medal"></p>
+                                            <img src="ch/img/thumbnail/thumbnail_03.png" alt="썸네일02" width="252" height="165">
+                                        </a>
+                                    </li>
+                                    <li><a href="#"><img src="ch/img/thumbnail/thumbnail_04.png" alt="썸네일04" width="141" height="165"></a></li>
+                                    <li><a href="#"><img src="ch/img/thumbnail/thumbnail_05.png" alt="썸네일05" width="220" height="155"></a></li>
+                                    <li><a href="#"><img src="ch/img/thumbnail/thumbnail_06.png" alt="썸네일06" width="125" height="155"></a></li>
+                                    <li><a href="#"><img src="ch/img/thumbnail/thumbnail_07.png" alt="썸네일07" width="212" height="155"></a></li>
+                                    <li><a href="#"><img src="ch/img/thumbnail/thumbnail_08.png" alt="썸네일08" width="224" height="155"></a></li>
+                                </ul>
+                            </div>	 <!-- end slier_item -->
+                    </ul>	<!-- end slides ul -->
+                </div>	<!-- end flexslider div -->
+            </section>	<!-- end slider section -->
+        </div>	 <!-- end slider3 div -->
+    </section>	<!--slide section end-->
+    
+    <!--<section id="designers_section">
+        <div id="designers_thumbnail">
+            <ul>
+                <li>
+                    <img src="CH/img/mostlike_1.png" width="116" height="111" alt="mostlie_1" />
+                    <p id="most_gold"></p>
+                </li>
+                <li>
+                    <img src="CH/img/mostlike_1.png" width="116" height="111" alt="mostlie_2" />
+                    <p id="most_silver"></p>
+                </li>
+                <li>
+                    <img src="CH/img/mostlike_1.png" width="116" height="111" alt="mostlie_3" />
+                    <p id="most_bronze"></p>
+                </li>
+            </ul>
+            <p id="designers_seemore"><a href="#"><i class="fa fa-plus-square-o fa-5x plus_bt"></i></a></p>
+        </div>	 <!-- designers_thumbnail -->
+        <!--<p id="medal"></p>
+    </section>-->	<!-- end designers_section -->
+    
+    <section id="main_board">
+        <input id="board_bt" type="radio" name="tap" checked="checked" />
+        <input id="tutorial_bt" type="radio" name="tap" />
+        <input id="qna_bt" type="radio" name="tap" />
+        <nav>
+            <label for="board_bt">BOARD</label>
+            <label for="tuto_bt">TUTORIAL</label>
+            <label for="qna_bt">Q&amp;A</label>
+        </nav> <!-- end nav -->
+        <p><a href="#">View more<i class="fa fa-chevron-right bo_arrow"></i></a></p>	 <!-- view more bt -->
+        <div class="tab_item">
+            <table>
+                <thead>
+                <th></th>	<!-- space -->
+                <th>No.</th>
+                <th>SUBJECT</th>
+                <th>WRITER</th>
+                <th><i class="fa fa-heart table_heart"></i></th>	<!-- heart icon -->
+                <th><i class="fa fa-eye table_eye fa-lg"></i></th> <!-- eye icon -->
+                <th>DATE</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><p class="blue_round"></p></td>	<!-- space -->
+                        <td>125</td>	<!-- number -->
+                        <td>Lubycon opens on may [1]</td>	<!-- subject -->
+                        <td>John Snow</td>	<!-- writer -->
+                        <td>123</td>	<!-- like -->
+                        <td>4512</td>	<!-- view -->
+                        <td>15.05.24</td>	<!-- date -->
+                    </tr>	<!-- 1 -->
+                    <tr>
+                        <td><p class="blue_round"></p></td>	<!-- space -->
+                        <td>125</td>	<!-- number -->
+                        <td>Lubycon opens on may [1]</td>	<!-- subject -->
+                        <td>John Snow</td>	<!-- writer -->
+                        <td>123</td>	<!-- like -->
+                        <td>4512</td>	<!-- view -->
+                        <td>15.05.24</td>	<!-- date -->
+                    </tr>	<!-- 2 -->
+                    <tr>
+                        <td><p class="blue_round"></p></td>	<!-- space -->
+                        <td>125</td>	<!-- number -->
+                        <td>Lubycon opens on may [1]</td>	<!-- subject -->
+                        <td>John Snow</td>	<!-- writer -->
+                        <td>123</td>	<!-- like -->
+                        <td>4512</td>	<!-- view -->
+                        <td>15.05.24</td>	<!-- date -->
+                    </tr>	<!-- 3 -->
+                    <tr>
+                        <td><p class="blue_round"></p></td>	<!-- space -->
+                        <td>125</td>	<!-- number -->
+                        <td>Lubycon opens on may [1]</td>	<!-- subject -->
+                        <td>John Snow</td>	<!-- writer -->
+                        <td>123</td>	<!-- like -->
+                        <td>4512</td>	<!-- view -->
+                        <td>15.05.24</td>	<!-- date -->
+                    </tr>	<!-- 4 -->
+                    <tr>
+                        <td><p class="blue_round"></p></td>	<!-- space -->
+                        <td>125</td>	<!-- number -->
+                        <td>Lubycon opens on may [1]</td>	<!-- subject -->
+                        <td>John Snow</td>	<!-- writer -->
+                        <td>123</td>	<!-- like -->
+                        <td>4512</td>	<!-- view -->
+                        <td>15.05.24</td>	<!-- date -->
+                    </tr>	<!-- 5 -->
+                    <tr>
+                        <td><p class="blue_round"></p></td>	<!-- space -->
+                        <td>125</td>	<!-- number -->
+                        <td>Lubycon opens on may [1]</td>	<!-- subject -->
+                        <td>John Snow</td>	<!-- writer -->
+                        <td>123</td>	<!-- like -->
+                        <td>4512</td>	<!-- view -->
+                        <td>15.05.24</td>	<!-- date -->
+                    </tr>	<!-- 6 -->
+                    <tr>
+                        <td><p class="blue_round"></p></td>	<!-- space -->
+                        <td>125</td>	<!-- number -->
+                        <td>Lubycon opens on may [1]</td>	<!-- subject -->
+                        <td>John Snow</td>	<!-- writer -->
+                        <td>123</td>	<!-- like -->
+                        <td>4512</td>	<!-- view -->
+                        <td>15.05.24</td>	<!-- date -->
+                    </tr>	<!-- 7 -->
+                    <tr>
+                        <td><p class="blue_round"></p></td>	<!-- space -->
+                        <td>125</td>	<!-- number -->
+                        <td>Lubycon opens on may [1]</td>	<!-- subject -->
+                        <td>John Snow</td>	<!-- writer -->
+                        <td>123</td>	<!-- like -->
+                        <td>4512</td>	<!-- view -->
+                        <td>15.05.24</td>	<!-- date -->
+                    </tr>	<!-- 8 -->
+                    <tr>
+                        <td><p class="blue_round"></p></td>	<!-- space -->
+                        <td>125</td>	<!-- number -->
+                        <td>Lubycon opens on may [1]</td>	<!-- subject -->
+                        <td>John Snow</td>	<!-- writer -->
+                        <td>123</td>	<!-- like -->
+                        <td>4512</td>	<!-- view -->
+                        <td>15.05.24</td>	<!-- date -->
+                    </tr>	<!-- 9 -->
+                    <tr>
+                        <td><p class="blue_round"></p></td>	<!-- space -->
+                        <td>125</td>	<!-- number -->
+                        <td>Lubycon opens on may [1]</td>	<!-- subject -->
+                        <td>John Snow</td>	<!-- writer -->
+                        <td>123</td>	<!-- like -->
+                        <td>4512</td>	<!-- view -->
+                        <td>15.05.24</td>	<!-- date -->
+                    </tr>	<!-- 10 -->
+                </tbody>
+            </table>
+        </div>	 <!-- end tap_item 1  -->
+        <div class="tab_item">
+            <table>
+                <thead>
+                <th></th>	<!-- space -->
+                <th>No.</th>
+                <th>SUBJECT</th>
+                <th>WRITER</th>
+                <th><i class="fa fa-heart table_heart"></i></th>	<!-- heart icon -->
+                <th><i class="fa fa-eye table_eye fa-lg"></i></th> <!-- eye icon -->
+                <th>DATE</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><p class="blue_round"></p></td>	<!-- space -->
+                        <td>125</td>	<!-- number -->
+                        <td>Lubycon opens on may [1]</td>	<!-- subject -->
+                        <td>John Snow</td>	<!-- writer -->
+                        <td>123</td>	<!-- like -->
+                        <td>4512</td>	<!-- view -->
+                        <td>15.05.24</td>	<!-- date -->
+                    </tr>	<!-- 1 -->
+                    <tr>
+                        <td><p class="blue_round"></p></td>	<!-- space -->
+                        <td>125</td>	<!-- number -->
+                        <td>Lubycon opens on may [1]</td>	<!-- subject -->
+                        <td>John Snow</td>	<!-- writer -->
+                        <td>123</td>	<!-- like -->
+                        <td>4512</td>	<!-- view -->
+                        <td>15.05.24</td>	<!-- date -->
+                    </tr>	<!-- 2 -->
+                    <tr>
+                        <td><p class="blue_round"></p></td>	<!-- space -->
+                        <td>125</td>	<!-- number -->
+                        <td>Lubycon opens on may [1]</td>	<!-- subject -->
+                        <td>John Snow</td>	<!-- writer -->
+                        <td>123</td>	<!-- like -->
+                        <td>4512</td>	<!-- view -->
+                        <td>15.05.24</td>	<!-- date -->
+                    </tr>	<!-- 3 -->
+                    <tr>
+                        <td><p class="blue_round"></p></td>	<!-- space -->
+                        <td>125</td>	<!-- number -->
+                        <td>Lubycon opens on may [1]</td>	<!-- subject -->
+                        <td>John Snow</td>	<!-- writer -->
+                        <td>123</td>	<!-- like -->
+                        <td>4512</td>	<!-- view -->
+                        <td>15.05.24</td>	<!-- date -->
+                    </tr>	<!-- 4 -->
+                    <tr>
+                        <td><p class="blue_round"></p></td>	<!-- space -->
+                        <td>125</td>	<!-- number -->
+                        <td>Lubycon opens on may [1]</td>	<!-- subject -->
+                        <td>John Snow</td>	<!-- writer -->
+                        <td>123</td>	<!-- like -->
+                        <td>4512</td>	<!-- view -->
+                        <td>15.05.24</td>	<!-- date -->
+                    </tr>	<!-- 5 -->
+                    <tr>
+                        <td><p class="blue_round"></p></td>	<!-- space -->
+                        <td>125</td>	<!-- number -->
+                        <td>Lubycon opens on may [1]</td>	<!-- subject -->
+                        <td>John Snow</td>	<!-- writer -->
+                        <td>123</td>	<!-- like -->
+                        <td>4512</td>	<!-- view -->
+                        <td>15.05.24</td>	<!-- date -->
+                    </tr>	<!-- 6 -->
+                    <tr>
+                        <td><p class="blue_round"></p></td>	<!-- space -->
+                        <td>125</td>	<!-- number -->
+                        <td>Lubycon opens on may [1]</td>	<!-- subject -->
+                        <td>John Snow</td>	<!-- writer -->
+                        <td>123</td>	<!-- like -->
+                        <td>4512</td>	<!-- view -->
+                        <td>15.05.24</td>	<!-- date -->
+                    </tr>	<!-- 7 -->
+                    <tr>
+                        <td><p class="blue_round"></p></td>	<!-- space -->
+                        <td>125</td>	<!-- number -->
+                        <td>Lubycon opens on may [1]</td>	<!-- subject -->
+                        <td>John Snow</td>	<!-- writer -->
+                        <td>123</td>	<!-- like -->
+                        <td>4512</td>	<!-- view -->
+                        <td>15.05.24</td>	<!-- date -->
+                    </tr>	<!-- 8 -->
+                    <tr>
+                        <td><p class="blue_round"></p></td>	<!-- space -->
+                        <td>125</td>	<!-- number -->
+                        <td>Lubycon opens on may [1]</td>	<!-- subject -->
+                        <td>John Snow</td>	<!-- writer -->
+                        <td>123</td>	<!-- like -->
+                        <td>4512</td>	<!-- view -->
+                        <td>15.05.24</td>	<!-- date -->
+                    </tr>	<!-- 9 -->
+                    <tr>
+                        <td><p class="blue_round"></p></td>	<!-- space -->
+                        <td>125</td>	<!-- number -->
+                        <td>Lubycon opens on may [1]</td>	<!-- subject -->
+                        <td>John Snow</td>	<!-- writer -->
+                        <td>123</td>	<!-- like -->
+                        <td>4512</td>	<!-- view -->
+                        <td>15.05.24</td>	<!-- date -->
+                    </tr>	<!-- 10 -->
+                </tbody>
+            </table>
+        </div>	 <!-- end tap_item 2  -->
+        <div class="tab_item">
+            <table>
+                <thead>
+                <th></th>	<!-- space -->
+                <th>No.</th>
+                <th>SUBJECT</th>
+                <th>WRITER</th>
+                <th><i class="fa fa-heart table_heart"></i></th>	<!-- heart icon -->
+                <th><i class="fa fa-eye table_eye fa-lg"></i></th> <!-- eye icon -->
+                <th>DATE</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><p class="blue_round"></p></td>	<!-- space -->
+                        <td>125</td>	<!-- number -->
+                        <td>Lubycon opens on may [1]</td>	<!-- subject -->
+                        <td>John Snow</td>	<!-- writer -->
+                        <td>123</td>	<!-- like -->
+                        <td>4512</td>	<!-- view -->
+                        <td>15.05.24</td>	<!-- date -->
+                    </tr>	<!-- 1 -->
+                    <tr>
+                        <td><p class="blue_round"></p></td>	<!-- space -->
+                        <td>125</td>	<!-- number -->
+                        <td>Lubycon opens on may [1]</td>	<!-- subject -->
+                        <td>John Snow</td>	<!-- writer -->
+                        <td>123</td>	<!-- like -->
+                        <td>4512</td>	<!-- view -->
+                        <td>15.05.24</td>	<!-- date -->
+                    </tr>	<!-- 2 -->
+                    <tr>
+                        <td><p class="blue_round"></p></td>	<!-- space -->
+                        <td>125</td>	<!-- number -->
+                        <td>Lubycon opens on may [1]</td>	<!-- subject -->
+                        <td>John Snow</td>	<!-- writer -->
+                        <td>123</td>	<!-- like -->
+                        <td>4512</td>	<!-- view -->
+                        <td>15.05.24</td>	<!-- date -->
+                    </tr>	<!-- 3 -->
+                    <tr>
+                        <td><p class="blue_round"></p></td>	<!-- space -->
+                        <td>125</td>	<!-- number -->
+                        <td>Lubycon opens on may [1]</td>	<!-- subject -->
+                        <td>John Snow</td>	<!-- writer -->
+                        <td>123</td>	<!-- like -->
+                        <td>4512</td>	<!-- view -->
+                        <td>15.05.24</td>	<!-- date -->
+                    </tr>	<!-- 4 -->
+                    <tr>
+                        <td><p class="blue_round"></p></td>	<!-- space -->
+                        <td>125</td>	<!-- number -->
+                        <td>Lubycon opens on may [1]</td>	<!-- subject -->
+                        <td>John Snow</td>	<!-- writer -->
+                        <td>123</td>	<!-- like -->
+                        <td>4512</td>	<!-- view -->
+                        <td>15.05.24</td>	<!-- date -->
+                    </tr>	<!-- 5 -->
+                    <tr>
+                        <td><p class="blue_round"></p></td>	<!-- space -->
+                        <td>125</td>	<!-- number -->
+                        <td>Lubycon opens on may [1]</td>	<!-- subject -->
+                        <td>John Snow</td>	<!-- writer -->
+                        <td>123</td>	<!-- like -->
+                        <td>4512</td>	<!-- view -->
+                        <td>15.05.24</td>	<!-- date -->
+                    </tr>	<!-- 6 -->
+                    <tr>
+                        <td><p class="blue_round"></p></td>	<!-- space -->
+                        <td>125</td>	<!-- number -->
+                        <td>Lubycon opens on may [1]</td>	<!-- subject -->
+                        <td>John Snow</td>	<!-- writer -->
+                        <td>123</td>	<!-- like -->
+                        <td>4512</td>	<!-- view -->
+                        <td>15.05.24</td>	<!-- date -->
+                    </tr>	<!-- 7 -->
+                    <tr>
+                        <td><p class="blue_round"></p></td>	<!-- space -->
+                        <td>125</td>	<!-- number -->
+                        <td>Lubycon opens on may [1]</td>	<!-- subject -->
+                        <td>John Snow</td>	<!-- writer -->
+                        <td>123</td>	<!-- like -->
+                        <td>4512</td>	<!-- view -->
+                        <td>15.05.24</td>	<!-- date -->
+                    </tr>	<!-- 8 -->
+                    <tr>
+                        <td><p class="blue_round"></p></td>	<!-- space -->
+                        <td>125</td>	<!-- number -->
+                        <td>Lubycon opens on may [1]</td>	<!-- subject -->
+                        <td>John Snow</td>	<!-- writer -->
+                        <td>123</td>	<!-- like -->
+                        <td>4512</td>	<!-- view -->
+                        <td>15.05.24</td>	<!-- date -->
+                    </tr>	<!-- 9 -->
+                    <tr>
+                        <td><p class="blue_round"></p></td>	<!-- space -->
+                        <td>125</td>	<!-- number -->
+                        <td>Lubycon opens on may [1]</td>	<!-- subject -->
+                        <td>John Snow</td>	<!-- writer -->
+                        <td>123</td>	<!-- like -->
+                        <td>4512</td>	<!-- view -->
+                        <td>15.05.24</td>	<!-- date -->
+                    </tr>	<!-- 10 -->
+                </tbody>
+            </table>
+        </div>	 <!-- end tap_item 3  -->
+
+        <a href="#" class="gotocom_bt"><input type="button" id="gotocom" value="Go to Community" /></a>
+    </section>
+    <footer id="footer"></footer>
+</body>
+
+
+</html>
