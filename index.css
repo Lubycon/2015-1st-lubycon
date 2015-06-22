@@ -166,11 +166,12 @@ box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5); background-color:#f2974c;  padding-
 #designers_section 
 {
     width:1200px; height:260px; 
-    margin:0px auto;
+    margin:0px auto; margin-top:50px;
+    background:#ddd; overflow:hidden;
 }
 #designers_introduce
 {
-    width:480px; height:260px; background:#fff; overflow:hidden; border-radius:5px; box-shadow:3px 3px 5px #777;
+    width:480px; height:260px; background:#fff; overflow:hidden; border-radius:5px; box-shadow:3px 3px 5px #777; float:left;
 }
 #designers_subject
 {
@@ -188,7 +189,7 @@ box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5); background-color:#f2974c;  padding-
 
 #designers_intro_disc #desingers_disc_img
 {
-    width:70px; height:80px;  margin-left:40px;  padding-top:5px; float:left;
+    width:70px; height:80px;  margin-left:40px;  padding-top:5px; 
 }
 #designers_intro_disc #desingers_disc_img img 
 {
@@ -201,12 +202,12 @@ box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5); background-color:#f2974c;  padding-
 }
 #designers_intro_disc #designers_disc_name h3
 {
-    font-size:30px; letter-spacing:2px; color:#737373; font-weight:300;
+    font-size:30px; letter-spacing:2px; color:#737373; font-weight:200;
 }
 
 #designers_intro_disc #designers_disc_name h4
 {
-     color:#737373; font-weight:300;
+     color:#737373; font-weight:200;
 }
 #designers_disc_inform
 {
@@ -224,5 +225,39 @@ box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5); background-color:#f2974c;  padding-
 #designers_disc_inform .fa-eye
 {
     font-size:15px; color:#545454;margin-right:10px;
+}
+
+.designers_ranking
+{
+    width:260px; height:100%; background:#bbb; float:right; margin-left:50px;
+}
+.designers_ranking p 
+{
+    width:100%; height:35px; line-height:35px; background:#aaa; text-align:center; color:#fff; font-size:18px
+}
+.designers_ranking ol li
+{
+    width:250px; height:45px;  background:#fff; padding-left:10px; font-size:20px; font-weight:bold; display:inline-block;vertical-align:middle;
+}
+.designers_ranking ol li > .fa-caret-up
+{
+    color:#009fe3
+}
+.designers_photo
+{
+    width:30px; height:30px;
+}
+.designers_photo img
+{
+    width:30px; height:30px; 
+}
+.designers_name
+{
+    font-size:16px; font-weight:500;
+}
+
+.designer_gold 
+{
+    width:17px; height:17px; border:1px solid #464646; background:gold; border-radius:3px; display:block; float:right;  margin-right:15px;
 }
 /* designers section */
