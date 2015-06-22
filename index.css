@@ -106,19 +106,24 @@ box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5); background-color:#f2974c;  padding-
 
 /* slide section */
 #slide_section
-{width:1200px; height:500px; margin:0px auto; position:relative; background:#000;
+{width:1200px; height:500px; margin:0px auto; position:relative;
 }
 #slider1,#slider2,#slider3
-{ width:1200px; height:400px;   margin:0px auto; background-color:#c1c1c1;  border-radius:10px; position:absolute; display:block;}
+{ width:1200px; height:400px; background:#d0d; padding:10px;   margin:0px auto; background-color:#737373;  border-radius:10px; position:absolute; display:block;}
+
+#slider1 
+{
+    z-index:2;
+}
 
 .slider_item ul
 {border-radius:10px; overflow:hidden;}
 
 .slider_item ul li
-{ float:left; width:300px; height:200px;
+{ float:left; width:240px; height:200px;
 }
 .slider_item ul li img
-{ width:300px; height:200px;}
+{ width:240px; height:200px;}
 #slide_section #slide_lnb input
 { display:none;}
 
@@ -156,3 +161,68 @@ box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5); background-color:#f2974c;  padding-
 .seemore_bt:hover
 { color:#fff; background:#ec6446;}
 /* slide section end */
+
+/* designers section */
+#designers_section 
+{
+    width:1200px; height:260px; 
+    margin:0px auto;
+}
+#designers_introduce
+{
+    width:480px; height:260px; background:#fff; overflow:hidden; border-radius:5px; box-shadow:3px 3px 5px #777;
+}
+#designers_subject
+{
+    width:480px; height:30px; line-height:30px; background:rgba(0,0,0,0.5); text-align:center; 
+    position:absolute; color:#fff; border-top-left-radius:5px; border-top-right-radius:5px;
+}
+#desingers_intro_img 
+{
+    width:480px; height:180px; background:url(ch/img/thumbnail/thumbnail_02.png);
+}
+#designers_intro_disc
+{
+    width:480px; height:80px; overflow:hidden;
+}
+
+#designers_intro_disc #desingers_disc_img
+{
+    width:70px; height:80px;  margin-left:40px;  padding-top:5px; float:left;
+}
+#designers_intro_disc #desingers_disc_img img 
+{
+    width:70px; height:70px;  border-radius:50%
+}
+
+#designers_intro_disc #designers_disc_name
+{
+    width:290px; height:80px; float:left; text-align:center; line-height:23px; padding-top:23px; 
+}
+#designers_intro_disc #designers_disc_name h3
+{
+    font-size:30px; letter-spacing:2px; color:#737373; font-weight:300;
+}
+
+#designers_intro_disc #designers_disc_name h4
+{
+     color:#737373; font-weight:300;
+}
+#designers_disc_inform
+{
+    width:70px; height:80px; line-height:20px; float:right; padding-right:10px; padding-top:10px;text-align:right; 
+}
+
+#designers_disc_inform .fa-envelope-o
+{
+    font-size:23px; color:#787878; margin-bottom:5px;
+}
+#designers_disc_inform .fa-heart 
+{
+    font-size:15px; color:#f15620;margin-right:10px;
+}
+#designers_disc_inform .fa-eye
+{
+    font-size:15px; color:#545454;margin-right:10px;
+}
+/* designers section */
