@@ -65,10 +65,22 @@ $(function()	// triple bt on event
 			$('.la_bt').removeClass('over');
 			$(this).addClass('over');
 		},
-		click : function()
-		{
-			$('.la_bt').removeClass('clicked');
-			$(this).addClass('clicked');
-		}
+		mouseleave: function () {
+		    $('.la_bt').removeClass('out');
+		    $(this).addClass('out');
+		},
+		
+
 	});
+});
+$(function () {
+    $('.la_bt').click(function () {
+        $(this).addClass("clicked", 1000, callback);
+    });
+
+    function callback() {
+        setTimeout(function () {
+            $(this).removeClass("clicked");
+        }, 1500);
+    }
 });
