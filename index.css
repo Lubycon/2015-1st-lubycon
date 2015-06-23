@@ -167,7 +167,6 @@ box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5); background-color:#f2974c;  padding-
 {
     width:1200px; height:260px; 
     margin:0px auto; margin-top:50px;
-    background:#ddd; overflow:hidden;
 }
 #designers_introduce
 {
@@ -189,11 +188,11 @@ box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5); background-color:#f2974c;  padding-
 
 #designers_intro_disc #desingers_disc_img
 {
-    width:70px; height:80px;  margin-left:40px;  padding-top:5px; 
+    width:70px; height:80px;  margin-left:40px;  padding-top:5px; float:left;
 }
 #designers_intro_disc #desingers_disc_img img 
 {
-    width:70px; height:70px;  border-radius:50%
+    width:70px; height:70px;  border-radius:50%;
 }
 
 #designers_intro_disc #designers_disc_name
@@ -229,35 +228,77 @@ box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5); background-color:#f2974c;  padding-
 
 .designers_ranking
 {
-    width:260px; height:100%; background:#bbb; float:right; margin-left:50px;
+    width:300px; height:100%; background:#bbb; float:right; margin-left:50px; border:1px solid #868686; border-radius:2px; overflow:hidden; padding:-2px 0px;
+    box-shadow:3px 3px 5px #777;
 }
-.designers_ranking p 
+.designers_ranking > p 
 {
-    width:100%; height:35px; line-height:35px; background:#aaa; text-align:center; color:#fff; font-size:18px
+    width:100%; height:35px; line-height:35px; background:#868686; text-align:center; color:#fff; font-size:18px
 }
-.designers_ranking ol li
+.designers_ranking ol > li
 {
-    width:250px; height:45px;  background:#fff; padding-left:10px; font-size:20px; font-weight:bold; display:inline-block;vertical-align:middle;
+    width:100%; height:45px;  background:#fff;
 }
-.designers_ranking ol li > .fa-caret-up
+.designers_ranking ol > li > ul > li
 {
-    color:#009fe3
+    float:left; height:45px; line-height:45px;
 }
+.designers_number
+{
+    width:30px;
+    text-align:right;
+}
+.designers_updown
+{
+    width:30px;
+    text-align:center;
+}
+    .designers_ranking ol li > .fa-caret-up
+    {
+        color:#ec6446
+    }
+    .designers_ranking ol li > .fa-caret-down
+    {
+        color:#009fe3
+    }
 .designers_photo
 {
-    width:30px; height:30px;
+    width:35px;
+    text-align:right;
 }
-.designers_photo img
-{
-    width:30px; height:30px; 
-}
+    .designers_ranking ol > li > ul > li img
+    {
+        width:30px; height:30px; vertical-align:middle;
+    }
 .designers_name
 {
+    width:140px; text-align:center;
     font-size:16px; font-weight:500;
 }
 
-.designer_gold 
+.designers_gold 
 {
-    width:17px; height:17px; border:1px solid #464646; background:gold; border-radius:3px; display:block; float:right;  margin-right:15px;
+    width:17px; height:17px; border:1px solid #464646; background:gold; border-radius:3px; display:inline-block; vertical-align:middle;
+}
+.designers_silver
+{
+    width:17px; height:17px; border:1px solid #464646; background:silver; border-radius:3px; display:inline-block; vertical-align:middle;
+}
+.designers_bronze
+{
+    width:17px; height:17px; border:1px solid #464646; background:#df9d00; border-radius:3px; display:inline-block; vertical-align:middle;
 }
 /* designers section */
+
+/* main board */
+#main_board 
+{
+    width:1200px;
+    background:#f1f1f1;
+    margin:0px auto;
+    margin-top:90px;
+}
+    #main_board input
+    {
+    }
+/* main board */
