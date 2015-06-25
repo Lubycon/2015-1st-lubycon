@@ -1,4 +1,11 @@
-$(function()
+$(function ()
+{
+    $('#signin').click(function () {
+        $('#login_box').toggle();
+    });
+});
+
+$(function ()
 {
 	$('.lang_selected').mouseenter(function()
 	{
@@ -40,20 +47,23 @@ $(function()  //slider change
 	{
 		$('#slider1').show();
 		$('#slider2').hide();
-		$('#slider3').hide();	
+		$('#slider3').hide();
+		$('.down_triangle').stop().animate({ left: 87 }, 100);
 	});
 	$('#vector_bt').click(function()
 	{
 		$('#slider1').hide();
 		$('#slider2').show();
 		$('#slider3').hide();
+		$('.down_triangle').stop().animate({ left: 276 }, 100);
 	});
 	$('#3d_bt').click(function()
 	{
 		$('#slider1').hide();
 		$('#slider2').hide();
 		$('#slider3').show();
-	});
+		$('.down_triangle').stop().animate({ left: 469 }, 100);
+	})
 });
 
 $(function()	// triple bt on event
@@ -66,13 +76,19 @@ $(function()	// triple bt on event
 			$(this).addClass('over');
 		},
 		mouseleave: function () {
-		    $('.la_bt').removeClass('out');
+		    $('.la_bt').removeClass('over');
 		    $(this).addClass('out');
 		},
+		click: function ()
+		{
+		    $('.la_bt').removeClass('clicked');
+		    $(this).addClass('clicked');
+		}
 		
 
 	});
 });
+/*
 $(function () {
     $('.la_bt').click(function () {
         $(this).addClass("clicked", 1000, callback);
@@ -83,4 +99,26 @@ $(function () {
             $(this).removeClass("clicked");
         }, 1500);
     }
+});
+*/
+$(function ()  //main_board change 
+{
+    $('#board_bt').click(function () {
+        $('#table1').show();
+        $('#table2').hide();
+        $('#table3').hide();
+        $('#cate_pointer').stop().animate({ left: 0 }, 40);
+    });
+    $('#tutorial_bt').click(function () {
+        $('#table1').hide();
+        $('#table2').show();
+        $('#table3').hide();
+        $('#cate_pointer').stop().animate({ left: 133 }, 40);
+    });
+    $('#qna_bt').click(function () {
+        $('#table1').hide();
+        $('#table2').hide();
+        $('#table3').show();
+        $('#cate_pointer').stop().animate({ left: 266 }, 40);
+    })
 });
