@@ -12,21 +12,24 @@
     <meta name="keywords" content="font ,vector, 3D design, community, designers, engineer, 3D printer, Illustration, Lubycon" />
 
     <title>LUBYCON</title>
-    <link rel="shortcut icon" href="CH/img/lubycon.ico" />
+    <link rel="shortcut icon" href="CH/img/lubycon.ico" />  <!-- favicon -->
     <!--<link href="http://fonts.googleapis.com/css?family=Exo+2:400" rel="stylesheet" type="text/css" />-->
     <link href='http://fonts.googleapis.com/css?family=Hind:400' rel='stylesheet' type='text/css' />	<!--google web font-->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" /> <!--icon font-->
 
-    <link href="normalize.css" rel="stylesheet" type="text/css" />
-    <link href="index.css" rel="stylesheet" type="text/css" />
-    <link href="flexslider.css" rel="stylesheet" type="text/css" />
+    <link href="css/normalize.css" rel="stylesheet" type="text/css" />  <!-- web normalize -->
+    <link href="css/index.css" rel="stylesheet" type="text/css" />  <!-- index file css -->
+    <link href="css/flexslider.css" rel="stylesheet" type="text/css" /> <!-- main slider css -->
+    <link href="css/selectordie.css" rel="stylesheet" type="text/css">
 
-    <script type="text/javascript" src="jquery-1.11.3.min.js"></script>
-    <script type="text/javascript" src="index.js"></script>
-    <script type="text/javascript" src="jquery.flexslider.js"></script>
-    <!-- FlexSlider -->
-    <script defer src="jquery.flexslider.js"></script>
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script> <!-- jquery library -->
+    <script type="text/javascript" src="js/index.js"></script> <!-- index file js -->
+    <script type="text/javascript" src="js/jquery.flexslider.js"></script> <!-- main slider js -->
 
+    <script type="text/javascript" src="js/selectordie.min.js"></script>
+    <script type="text/javascript" src="js/selectordie.demo.js"></script>
+
+    <!-- FlexSlider apply code -->
     <script type="text/javascript">
         $(function () {
             SyntaxHighlighter.all();
@@ -40,9 +43,10 @@
             });
         });
     </script>
+    <!-- FlexSlider apply code -->
 
 </head>
-<body>
+<body id="bodyer">
     <header id="main_header">
         <h1><a href="/index.html"><img src="CH/img/lubycon_logo.png" width="176" height="40" alt="main_logo" /></a></h1>
         <nav id="main_gnb">
@@ -129,8 +133,21 @@
 
     <div id="main_search_bar">
         <input type="text" id="main_search_text" value="Enter the Keyword" />
-        <!-- end searsh list -->
-        <button id="main_search_btn"><i class='fa fa-search fa-lg search_icon'></i></button>
+
+        <button id="main_search_btn" class="out">
+            <i class="fa fa-caret-left"></i>
+            <i class="fa fa-search"></i>
+        </button>
+
+        <div id="select_box">|
+            <select class="basic">
+                <option value="All">All</option>
+                <option value="Contents">Contents</option>
+                <option value="Desinger">Desinger</option>
+                <option value="Community">Community</option>
+            </select>
+        </div>
+        <!-- end select_box -->
     </div>	 <!--end main_searsh_bar-->
 
     <figure id="main_figure">
