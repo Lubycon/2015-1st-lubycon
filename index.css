@@ -332,23 +332,27 @@ h1 /* main logo */ {
         letter-spacing: 4px;
         margin-top: 50px;
     }
+    #main_figure button:hover{
+        background:#fff;
+        color:#000;
+    }
 
 
 /* main section end */
 
 /* slide section */
 #slide_section {
-    width: 1200px;
+    width: 1000px;
     height: 500px;
     margin: 0px auto;
     position: relative;
 }
 
 #slider1, #slider2, #slider3 {
-    width: 1200px;
-    height: 400px;
+    width: 1000px;
+    height: 383px;
     background: #d0d;
-    padding: 10px;
+    padding-top: 13px;
     margin: 0px auto;
     background-color: #737373;
     border-radius: 10px;
@@ -363,29 +367,24 @@ h1 /* main logo */ {
 .slider_item ul {
     border-radius: 10px;
     overflow: hidden;
+    width:975px;
+    margin:0px auto;
 }
 
-    .slider_item ul li {
+    .slider_item > ul > li {
         float: left;
-        width: 240px;
-        height: 200px;
     }
-
-        .slider_item ul li img {
-            width: 240px;
-            height: 200px;
-        }
 
 #slide_section #slide_lnb input {
     display: none;
 }
 
-#slide_lnb {
-    margin: 0px auto;
-    width: 573px;
-    height: 70px;
-    position: relative;
-}
+    #slide_lnb {
+        margin: 0px auto;
+        width: 573px;
+        height: 70px;
+        position: relative;
+    }
 
     .la_bt {
         width: 190px;
