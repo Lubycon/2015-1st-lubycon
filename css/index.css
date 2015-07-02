@@ -380,7 +380,8 @@ h1 /* main logo */ {
     background: #d0d;
     padding-top: 13px;
     margin: 0px auto;
-    background-color: #737373;
+    background: #e6e6e6;
+    border:1px solid #cdcdcd;
     border-radius: 10px;
     position: absolute;
     display: block;
