@@ -53,7 +53,7 @@
         slider.args = {};
         // SLIDESHOW:
         slider.manualPause = false;
-        slider.stopped = false;
+        slider.stopped = true;      //auto slide off
         //PAUSE WHEN INVISIBLE
         slider.started = false;
         slider.startTimeout = null;

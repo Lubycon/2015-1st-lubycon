@@ -114,7 +114,7 @@
                 overflow: hidden;
                 white-space: nowrap;
                 text-overflow: ellipsis;
-
+                height:28px;
                 position: relative;
                 padding: 10px 5px;
                 list-style-type: none;
