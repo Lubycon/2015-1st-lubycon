@@ -132,7 +132,10 @@ h1 /* main logo */ {
     margin-right: 60px;
     cursor:pointer;
 }
-
+    #signin{
+        width:135px;
+        height:50px;
+    }
     .partition {
         font-size: 31px;
         color: #8e8e8e;
@@ -149,7 +152,7 @@ h1 /* main logo */ {
 
     #signin_bt .signin {
         color: #fff;
-        margin: 0px 20px;
+        margin-right: 25px;
         float: right;
         line-height: 50px;
     }

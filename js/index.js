@@ -8,7 +8,7 @@ $(function ()
 
 $(function ()
 {
-    $('#signin_bt').click(function () {
+    $('#signin').click(function () {
         $('#login_box').toggle();
     });
 });
@@ -26,7 +26,7 @@ $(function ()
 	$('.lang_list li').click(function()
 	{
 		$('.lang_selected').text($(this).text());
-		$('.lang_list').slideUp(300);
+		$('.lang_list').stop().slideUp(300);
 	});
 	$('.lang_list li').hover(function()
     {

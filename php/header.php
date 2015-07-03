@@ -1,4 +1,5 @@
-    <header id="main_header">
+<link href="css/common.css" rel="stylesheet" type="text/css">    <!-- select box css -->    
+<header id="main_header">
         <h1><a href="/index.html"><img src="CH/img/lubycon_logo.png" width="176" height="40" alt="main_logo" /></a></h1>
         <nav id="main_gnb">
             <ul id="gnb">
@@ -81,6 +82,15 @@
             </ul>	<!-- end lang_all -->
         </div>	<!-- end lang_select_bt -->
     </header>	<!--end main_header-->
+
+
+    <link href="css/selectordie.css" rel="stylesheet" type="text/css">    <!-- select box css -->
+
+    <!-- select box js -->
+    <script type="text/javascript" src="js/selectordie.min.js"></script>
+    <script type="text/javascript" src="js/selectordie.demo.js"></script>
+    <!-- select box js -->
+
     <div id="main_search_bar">
       <input type="text" id="main_search_text" value="Enter the Keyword" />
 
