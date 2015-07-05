@@ -19,7 +19,7 @@
 
     <link href="css/normalize.css" rel="stylesheet" type="text/css" />  <!-- web normalize -->
     <link href="css/layout/common.css" rel="stylesheet" type="text/css" />  <!-- index file css -->
-    <link href="css/contents_page.css" rel="stylesheet" type="text/css" />  <!-- contents page css -->
+    
     
     <link href="css/selectordie.css" rel="stylesheet" type="text/css">  <!-- select box css -->
 
@@ -140,7 +140,7 @@
     <figure id="main_figure">
         <h2>ALL CONTENTS</h2>
     </figure>	<!-- end main_figure -->
-
+    <link href="css/contents_page.css" rel="stylesheet" type="text/css" />  <!-- contents page css -->
     <section id="contents">
         <section id="navsel">
             <nav id="lnb_nav">
@@ -151,26 +151,33 @@
                     <li>3D</li>
                 </ul>
             </nav>  <!-- end lnb nav -->
-            <div id="search_option">
-                <select class="basic">
+            
+            <div class="search_option">
+                <i class="fa fa-filter"></i>
+                <select class="basic_filter">
+                    <option value="Extension">Extension</option>
+                    <option value="Free">Free</option>
+                    <option value="Not Free">Not Free</option>
+                </select>
+            </div>  <!-- end select box -->
+            <div class="search_option">
+                <i class="fa fa-filter"></i>
+                <select class="basic_filter">
                     <option value="Featured">Featured</option>
                     <option value="Recent">Recent</option>
                     <option value="Most Like">Most Like</option>
                     <option value="Most Download">Most Download</option>
                     <option value="Most Coment">Most Coment</option>
                 </select>
-                <select class="basic">
-                    <option value="Extension">Extension</option>
-                    <option value="Free">Free</option>
-                    <option value="Not Free">Not Free</option>
-                </select>
+
             </div>  <!-- end select box -->
         </section>  <!-- end section -->
 
         <section id="category">
-            <h3>CATEGORY</h3>
-            <p id="down_arrow"><i class="fa fa-angle-down"></i></p>
-
+            <div id="cate_bt">
+                <h3>CATEGORY</h3>
+                <p id="down_arrow"><i class="fa fa-angle-down"></i></p>
+            </div>
             <div id="open_cate">
                 <div id="open_cate_inner">
                     <ul>
@@ -304,6 +311,19 @@
                 </div>  <!-- end contents disc -->
             </div>  <!-- end contents Card -->
         </section>  <!-- end contents box -->
+        <nav>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </nav>
     </section>  <!-- end contents section -->
 
     <footer id="footer"></footer>   <!--end footer-->

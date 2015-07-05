@@ -114,8 +114,6 @@ $(function()	// triple bt on event
 		    $('.la_bt').removeClass('clicked');
 		    $(this).addClass('clicked');
 		}
-		
-
 	});
 });
 /*
@@ -163,4 +161,12 @@ $(function ()  //main_board change
         $('#table3').show();
         $('#cate_pointer').stop().animate({ left: 266 }, 40);
     })
+});
+
+$(function ()
+{
+    
+    $('#cate_bt').click(function () {
+            $('#open_cate_inner').stop().animate({ top: 0 });
+    });
 });
