@@ -15,7 +15,7 @@
 
 #navsel{
     width:1200px;
-    height:40px;
+    height:50px;
     margin:0px auto;
 }
     .selected_nav{
@@ -28,14 +28,14 @@
         padding:0px 8px;
         color:#787878;
         font-size:20px;
-        padding-top:4px;
+        padding-top:14px;
         cursor:pointer;
     }
 
     .search_option{
         float:right;
         height:40px;
-        line-height:40px;
+        line-height:50px;
         margin-left:10px;
         position:relative;
         cursor:pointer;
@@ -43,7 +43,7 @@
         .search_option .fa-filter{
             color:#808080;
             position:absolute;
-            top:11px;
+            top:17px;
             left:7px;
             z-index:1;
             font-size:18px;
