@@ -179,16 +179,17 @@
 .con_right .designer_info figure img{
     width:50px; height:50px;
 }
-.con_right .designer_info h4,h5{
+.con_right .designer_info h4{
     width:196px;
     float:left;
     text-align:center;
-}
-.con_right .designer_info h4{
     font-size:20px;
     height:30px;
 }
 .con_right .designer_info h5{
+    width:196px;
+    float:left;
+    text-align:center;
     font-size:13px;
 }
     .con_right .designer_info h5 i {
