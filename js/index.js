@@ -170,3 +170,18 @@ $(function ()
             $('#open_cate_inner').stop().animate({ top: 0 });
     });
 });
+
+$(function () { /* designers page continets selcect */
+    $('.contents_bt').mouseenter(function () {
+        $('.continets_list').stop().slideDown(300);
+        $('.contents_bt').css('background','#464646');
+    });
+    $('.contents_bt').mouseleave(function () {
+        $('.continets_list').stop().slideUp(300);
+        $('.contents_bt').css('background', '#000');
+    });
+    $('.continets_list li').click(function () {
+        $('.continets_selected').text($(this).text());
+        $('.continets_list').stop().slideUp(300);
+    });
+});
