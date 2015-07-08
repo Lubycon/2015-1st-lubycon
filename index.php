@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" /> <!--icon font-->
 
     <link href="css/layout/normalize.css" rel="stylesheet" type="text/css" />  <!-- web normalize -->
-    <link href="css/layout/index.css" rel="stylesheet" type="text/css" />  <!-- index file css -->
+    <link href="css/layout/common.css" rel="stylesheet" type="text/css" />  <!-- index file css -->
 
     <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script> <!-- jquery library -->
     <script type="text/javascript" src="js/index.js"></script> <!-- index file js -->
