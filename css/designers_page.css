@@ -55,17 +55,15 @@
         text-align: center;
         float: right;
     }
-    #nav_guide i {
-        color: #000;
-        font-size: 30px;
-        vertical-align: middle;
-        background: #fff;
-        height: 26px;
-        line-height: 26px;
-        border-radius: 50%;
-        border: 0.5px solid #fff;
-        margin-right: 13px;
+    .global_icon {
+        height:50px;
+        line-height:50px;
+        margin-right:10px;
     }
+    .global_icon img{
+        vertical-align:middle;
+    }
+
     .continets_list{
         width:165px;
         text-align:center;
