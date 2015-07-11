@@ -180,8 +180,9 @@
 #main_board {
     width: 1200px;
     margin: 0px auto;
-    margin-top: 2px;
+    clear:both;
 }
+
     .tab_item table {
         width: 1200px;
         height: 365px;
