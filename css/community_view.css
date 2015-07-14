@@ -110,19 +110,22 @@
     border: 1px solid #c4c4c4;
     padding: 15px 20px;
 }
+    #post_contents p {
+        font-size:20px;
+    }
 
 #con_like_bt {
     width: 80px;
     height: 80px;
     border: none;
     border-radius: 50%;
-    background: #e6b1a5;
+    background: #c1c1c1;
     display: block;
     margin: 0px auto;
     margin-top: 50px;
 }
     #con_like_bt:active{
-        background:#e74d2b;
+        background:#ec6446;
     }
     #con_like_bt i {
         color: #fff;
@@ -143,7 +146,6 @@
         border-radius: 50%;
         margin-left: 10px;
     }
-
     #share_box i {
         color: #fff;
     }
@@ -191,7 +193,9 @@
         color:#fff;
         letter-spacing:0.5px;
     }
-
+    #post_edit_box button:hover {
+        background:#ffbc54;
+    }
 #comment_box {
     width: 1000px;
     height: 500px;
