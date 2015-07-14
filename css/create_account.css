@@ -8,9 +8,8 @@
     top:0;
     left:0;
 }
-#creat_account_area{
+#create_account_area{
     width:450px;
-    height:500px;
     background:#fff;
     border-radius:2px;
     z-index:6;
@@ -20,7 +19,7 @@
     margin-left:-225px;
     margin-top:-250px;
 }
-    #creat_account_area #account_title {
+    #create_account_area #account_title {
         height:35px;
         line-height:35px;
         background:#000;
@@ -28,12 +27,11 @@
         color:#fff;
         font-size:22px;
     }
-    #creat_account_area #account_box {
+    #create_account_area #account_box {
         width:430px;
-        height:450px;
         padding:20px 10px;
     }
-        #creat_account_area #account_box #account_idpass label{
+        #create_account_area #account_box #account_idpass label{
             display:inline-block;
             width:140px;
             text-align:left;
@@ -44,7 +42,7 @@
             font-size: 15px;
             line-height: 30px;
         }
-        #creat_account_area #account_box #account_idpass input{
+        #create_account_area #account_box #account_idpass input{
             width:210px;
             height:30px;
             padding:0px;
@@ -52,7 +50,7 @@
             margin-right:7px;
         }
 
-        #creat_account_area #account_box #account_idpass #wndqhr{
+        #create_account_area #account_box #account_idpass #wndqhr{
             width:59px;
             height:30px;
             border:none;
@@ -61,7 +59,7 @@
             text-align:center;
             margin:0px;
         }
-        #creat_account_area #account_box .term_check_box{
+        #create_account_area #account_box .term_check_box{
             width:200px;
             height:115px;
             text-align:center;
@@ -72,24 +70,24 @@
             margin-left:7px;
             margin-right:7px;
         }
-        #creat_account_area #account_box .term_check_box .term_title{
+        #create_account_area #account_box .term_check_box .term_title{
             text-align:center;
             font-size:18px;
             color:#8a8a8a;
             margin-bottom:10px;
             line-height:22px;
         }
-        #creat_account_area #account_box .term_check_box #check_box{
+        #create_account_area #account_box .term_check_box #check_box{
             border:none;
             background:#fff;
         }
-        #creat_account_area #account_box #account_email_sendcheck{
+        #create_account_area #account_box #account_email_sendcheck{
             color:#8a8a8a;
             text-align:center;
             padding-top:30px;
             clear:both;
         }
-        #creat_account_area #account_box #account_submit{
+        #create_account_area #account_box #account_idpass  .account_submit{
             width:210px;
             height:35px;
             margin:0px;
@@ -100,4 +98,5 @@
             font-size:19px;
             margin-left:100px;
             margin-top:8px;
+            margin-bottom:10px;
         }
