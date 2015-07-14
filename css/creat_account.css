@@ -30,7 +30,7 @@
     }
     #creat_account_area #account_box {
         width:430px;
-        height:425px;
+        height:450px;
         padding:20px 10px;
     }
         #creat_account_area #account_box #account_idpass label{
@@ -49,8 +49,9 @@
             height:30px;
             padding:0px;
             margin:0px;
-            margin-right:9px;
+            margin-right:7px;
         }
+
         #creat_account_area #account_box #account_idpass #wndqhr{
             width:59px;
             height:30px;
