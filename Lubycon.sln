@@ -13,6 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CSS", "CSS", "{907447AC-43C
 		css\designers_page.css = css\designers_page.css
 		css\flexslider.css = css\flexslider.css
 		css\index.css = css\index.css
+		css\insight.css = css\insight.css
 		css\message.css = css\message.css
 		css\normalize.css = css\normalize.css
 		css\personal_page.css = css\personal_page.css
