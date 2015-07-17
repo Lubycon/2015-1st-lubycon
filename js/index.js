@@ -174,7 +174,7 @@ $(function ()
 $(function () { /* designers page continets selcect */
     $('.contents_bt').mouseenter(function () {
         $('.continets_list').stop().slideDown(300);
-        $('.contents_bt').css('background','#464646');
+        $('.contents_bt').css('background', '#464646');
     });
     $('.contents_bt').mouseleave(function () {
         $('.continets_list').stop().slideUp(300);
