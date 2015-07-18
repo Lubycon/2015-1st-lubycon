@@ -185,3 +185,58 @@ $(function () { /* designers page continets selcect */
         $('.continets_list').stop().slideUp(300);
     });
 });
+
+$(function () { // upload grahp //
+    var context = $('.upload_graph')[0].getContext('2d');
+    var canvers_height = $('.upload_graph').height() - 95;
+    var upload_max = Math.max.apply(null, [$('.upload_data1').text(), $('.upload_data2').text(), $('.upload_data3').text(), $('.upload_data4').text(), $('.upload_data5').text(), $('.upload_data6').text(), $('.upload_data7').text()]); // => 89
+    var upload_ratio = 150 / (upload_max * 1.2);
+
+    context.beginPath();
+    context.lineTo(15,                 150 - (upload_ratio * $('.upload_data1').text()));
+    context.lineTo(15 + 50,            150 - (upload_ratio * $('.upload_data2').text()));
+    context.lineTo(15 + 50 + (44 * 1), 150 - (upload_ratio * $('.upload_data3').text()));
+    context.lineTo(15 + 50 + (44 * 2), 150 - (upload_ratio * $('.upload_data4').text()));
+    context.lineTo(15 + 50 + (44 * 3), 150 - (upload_ratio * $('.upload_data5').text()));
+    context.lineTo(15 + 50 + (44 * 4), 150 - (upload_ratio * $('.upload_data6').text()));
+    context.lineTo(15 + 50 + (44 * 5), 150 - (upload_ratio * $('.upload_data7').text()));
+    context.lineWidth = 1;
+    context.strokeStyle = '#ffbe54';
+    context.stroke();
+});
+$(function () { // like grahp //
+    var context = $('.like_graph')[0].getContext('2d');
+    var canvers_height = $('.like_graph').height() - 95;
+    var like_max = Math.max.apply(null, [$('.like_data1').text(), $('.like_data2').text(), $('.like_data3').text(), $('.like_data4').text(), $('.like_data5').text(), $('.like_data6').text(), $('.like_data7').text()]); // => 89
+    var like_ratio = 150 / (like_max * 1.2);
+
+    context.beginPath();
+    context.lineTo(15, 150 - (like_ratio * $('.like_data1').text()));
+    context.lineTo(15 + 50, 150 - (like_ratio * $('.like_data2').text()));
+    context.lineTo(15 + 50 + (44 * 1), 150 - (like_ratio * $('.like_data3').text()));
+    context.lineTo(15 + 50 + (44 * 2), 150 - (like_ratio * $('.like_data4').text()));
+    context.lineTo(15 + 50 + (44 * 3), 150 - (like_ratio * $('.like_data5').text()));
+    context.lineTo(15 + 50 + (44 * 4), 150 - (like_ratio * $('.like_data6').text()));
+    context.lineTo(15 + 50 + (44 * 5), 150 - (like_ratio * $('.like_data7').text()));
+    context.lineWidth = 1;
+    context.strokeStyle = '#9054ff';
+    context.stroke();
+});
+$(function () { // downloaded grahp //
+    var context = $('.downloaded_graph')[0].getContext('2d');
+    var canvers_height = $('.downloaded_graph').height() - 95;
+    var downloaded_max = Math.max.apply(null, [$('.downloaded_data1').text(), $('.downloaded_data2').text(), $('.downloaded_data3').text(), $('.downloaded_data4').text(), $('.downloaded_data5').text(), $('.downloaded_data6').text(), $('.downloaded_data7').text()]); // => 89
+    var downloaded_ratio = 150 / (downloaded_max * 1.2);
+
+    context.beginPath();
+    context.lineTo(15, 150 - (downloaded_ratio * $('.downloaded_data1').text()));
+    context.lineTo(15 + 50, 150 - (downloaded_ratio * $('.downloaded_data2').text()));
+    context.lineTo(15 + 50 + (44 * 1), 150 - (downloaded_ratio * $('.downloaded_data3').text()));
+    context.lineTo(15 + 50 + (44 * 2), 150 - (downloaded_ratio * $('.downloaded_data4').text()));
+    context.lineTo(15 + 50 + (44 * 3), 150 - (downloaded_ratio * $('.downloaded_data5').text()));
+    context.lineTo(15 + 50 + (44 * 4), 150 - (downloaded_ratio * $('.downloaded_data6').text()));
+    context.lineTo(15 + 50 + (44 * 5), 150 - (downloaded_ratio * $('.downloaded_data7').text()));
+    context.lineWidth = 1;
+    context.strokeStyle = '#2e7bf5';
+    context.stroke();
+});

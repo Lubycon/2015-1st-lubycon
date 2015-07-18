@@ -222,21 +222,21 @@
         float:left;
         text-align:center;
     }
-    .graph_data1, .graph_data2, .graph_data3, .graph_data4, .graph_data5, .graph_data6, .graph_data7{
+    .graph_data{
         height:245px;
         line-height:245px;
         color:#000;
     }
-    .graph_date1, .graph_date2, .graph_date3, .graph_date4, .graph_date5, .graph_date6, .graph_date7{
+    .graph_date{
         height:35px;
         line-height:35px;
         color:#c1c1c1;
     }
- .upload_graph{
+ .upload_graph,.downloaded_graph,.like_graph{
      position:absolute;
      width:470px;
-     height:245px;
-     top:40px;
-     background:#ddd;
+     height:235px;
+     top:50px;
+     background:#fff;
  }
 /* main section end */
