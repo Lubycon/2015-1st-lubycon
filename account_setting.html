@@ -203,9 +203,29 @@
                     <p class="setting_title">Basic Info</p>
                     <form class="setting_form">
                         <label>Occupation / Job</label><input type="text" /><br />
-                        <label>Location</label>셀렉박스<input type="text" id="location_text"/><br />
-                        <label>Language</label><input type="text" id="language_text" />셀렉박스<button id="lang_plus"><i class="fa fa-plus-circle"></i>
-</button><br />
+                        <label>Location</label><div class="location_option">
+                            <select class="basic_filter">
+                                <option value="Public">Public</option>
+                                <option value="Followers">Followers</option>
+                                <option value="Private">Private</option>
+                            </select>
+                        </div><input type="text" id="location_text"/><br />
+                        <label>Language</label><input type="text" id="language_text" /><div class="language_option">
+    <select class="basic_filter">
+        <option value="Beginer">Beginer</option>
+        <option value="Advanced">Advanced</option>
+        <option value="Fluent">Fluent</option>
+        <option value="Native">Native</option>
+    </select>
+</div><button id="lang_plus"><i class="fa fa-plus-circle"></i>
+</button><div class="pubilc_option">
+    <i class="fa fa-lock"></i>
+    <select class="basic_filter">
+        <option value="Public">Public</option>
+        <option value="Followers">Followers</option>
+        <option value="Private">Private</option>
+    </select>
+</div>  <!-- end select box --><br /><br />
                         <label id="basic_desc_label">Description</label><textarea id="basic_desc" maxlength="1000"></textarea><br />
                     </form>
                 </section>
@@ -213,9 +233,33 @@
                 <section class="setting_card">
                     <p class="setting_title">Contect Info</p>
                     <form class="setting_form">
-                        <label>Mobile</label><input type="text" />셀렉박스<br />
-                        <label>FAX</label><input type="text" />셀렉박스<br />
-                        <label>Website</label><input type="text" />셀렉박스<br />
+                        <label>Mobile</label><input type="text" />
+                        <div class="pubilc_option">
+                            <i class="fa fa-lock"></i>
+                            <select class="basic_filter">
+                                <option value="Public">Public</option>
+                                <option value="Followers">Followers</option>
+                                <option value="Private">Private</option>
+                            </select>
+                        </div>  <!-- end select box --><br />
+                        <label>FAX</label><input type="text" />
+                        <div class="pubilc_option">
+                            <i class="fa fa-lock"></i>
+                            <select class="basic_filter">
+                                <option value="Public">Public</option>
+                                <option value="Followers">Followers</option>
+                                <option value="Private">Private</option>
+                            </select>
+                        </div>  <!-- end select box --><br />
+                        <label>Website</label><input type="text" />
+                        <div class="pubilc_option">
+                            <i class="fa fa-lock"></i>
+                            <select class="basic_filter">
+                                <option value="Public">Public</option>
+                                <option value="Followers">Followers</option>
+                                <option value="Private">Private</option>
+                            </select>
+                        </div>  <!-- end select box --><br />
                     </form>
                 </section>
 
