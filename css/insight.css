@@ -259,7 +259,6 @@
      left:100px;
      z-index:3;
      box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.8);
-     display:none;
  }
     #hint_box #hint_name{
         height:16px;
@@ -277,7 +276,7 @@
         text-align:center;
         font-weight:bold;
     }
-    .left_triangle{
+        .left_triangle{
             border-color: transparent rgba(255,255,255,1) transparent transparent;
             border-style:solid;
             border-width:6px;
@@ -285,7 +284,17 @@
             height:0;
             position:absolute;
             z-index:5;
-            top:15px;
+            top:19px;
             left:-12px;
+        }
+        .cursor_pointer{
+            background:#fff;
+            border:2px solid #000;
+            width:5px;
+            height:5px;
+            position:absolute;
+            border-radius:50%;
+            top: 20.5px;
+            left: -25px;
         }
 /* main section end */

@@ -272,24 +272,28 @@ $(function () {
     var hint_name = $('#hint_name');
     var hint_figure = $('#hint_figure');
 
-    hint_box.mouseenter(function () {
-        hint_box.css('display','block');
+    hint_box.hover(function () {
+        hint_box.stop().fadeIn(150);
+    }, function ()
+    {
+        hint_box.stop().fadeOut(150);
     });
 
-    $('.graph_box').mouseenter(function () {
+    $('.graph_box > ul').mouseenter(function () {
         hint_box.stop().fadeIn(150);
     }).mouseleave(function () {
         hint_box.stop().fadeOut(150);
     }).mousemove(function (e) {
         hint_box.css(   //mouse follow event
             {
-                "top": e.pageY - 15 + "px",
+                "top": e.pageY - 30 + "px",
                 "left": e.pageX + 20 + "px"
             });
-    }).mouseenter(function () {
-        hint_name.html($(this).children('.graph_title').text() + ' ' + 'contents'); //graph title text pull
     });
 
+    $('.graph_box').mouseenter(function () {
+        hint_name.html($(this).children('.graph_title').text() + ' ' + 'contents'); //graph title text pull
+    });
     $('.graph_box > ul > li').mouseenter(function () {
         //alert($(this).children('.graph_data').text());
         hint_figure.html($(this).children('.graph_data').text());   //graph data text pull
