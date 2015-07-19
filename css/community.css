@@ -55,12 +55,11 @@
         text-align: center;
         float: right;
     }
-        .fa-bars{
-            font-size: 24px;
-            margin-right: 10px;
-            vertical-align: middle;
-}
-        }
+    .fa-bars {
+        font-size: 24px;
+        margin-right: 10px;
+        vertical-align: middle;
+    }
 
     .continets_list{
         width:165px;

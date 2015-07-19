@@ -236,7 +236,7 @@
     }
     .fa-lock{
         position:absolute;
-        z-index:2;
+        z-index:1;
         top:12px;
         left:10px;
         color:#646464;
@@ -253,6 +253,7 @@
     .pubilc_option .sod_select.custom .sod_list_wrapper{
         width:130px;
         box-shadow:none;
+        z-index:2;
     }
     .pubilc_option  .sod_select.custom.focus{
         box-shadow:none;

@@ -19,7 +19,8 @@ jQuery(document).ready(function ($) {
 
     $(".basic_filter").selectOrDie({
         customClass: "custom",
-        customID: "custom"
+        customID: "custom",
+        size: 5
     });
 
     $(".callback").selectOrDie({

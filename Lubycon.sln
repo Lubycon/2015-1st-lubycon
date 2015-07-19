@@ -59,6 +59,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "JS", "JS", "{1E319400-173E-4675-AFE6-CE7D4D024D87}"
 	ProjectSection(SolutionItems) = preProject
 		js\index.js = js\index.js
+		js\insight_graph.js = js\insight_graph.js
 		js\jquery-1.11.3.min.js = js\jquery-1.11.3.min.js
 		js\jquery-2.1.3.min.js = js\jquery-2.1.3.min.js
 		js\jquery.cycle.all.js = js\jquery.cycle.all.js

@@ -76,10 +76,14 @@
             margin-bottom:10px;
             line-height:22px;
         }
+        #create_account_area #account_box .term_check_box p{
+            color:#8a8a8a;
+        }
         #create_account_area #account_box .term_check_box #check_box{
             border:none;
             background:#fff;
             margin-top:5px;
+            width:13px;
         }
         #create_account_area #account_box .term_check_box img{
             cursor:pointer;
