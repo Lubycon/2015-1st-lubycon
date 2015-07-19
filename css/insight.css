@@ -215,6 +215,8 @@
         width:490px;
         height:280px;
         margin-left:-10px;
+        position:absolute;
+        z-index:2;
     }
     #insight_box .graph_box ul li{
         width:70px;
@@ -223,20 +225,67 @@
         text-align:center;
     }
     .graph_data{
+        width:15px;
+        margin:0px 24px;
         height:245px;
         line-height:245px;
         color:#000;
+        text-indent:9999px;
+        display:none;
     }
     .graph_date{
         height:35px;
         line-height:35px;
         color:#c1c1c1;
+        margin-left:20px;
+        background:#fff;
+        position:absolute;
+        bottom:0px;
     }
- .upload_graph,.downloaded_graph,.like_graph{
+ .uploaded_graph,.downloaded_graph,.like_graph{
      position:absolute;
+     z-index:1;
      width:470px;
      height:235px;
      top:50px;
-     background:#fff;
  }
+ #hint_box{
+     padding:1px 5px;
+     height:35px;
+     background:#fff;
+     border-radius:3px;
+     position:absolute;
+     top:200px;
+     left:100px;
+     z-index:3;
+     box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.8);
+     display:none;
+ }
+    #hint_box #hint_name{
+        height:16px;
+        line-height:18px;
+        color:#a1a1a1;
+        font-size:12px;
+        text-align:center;
+        margin-top:1px;
+    }
+    #hint_box #hint_figure{
+        height:16px;
+        line-height:16px;
+        color:#000;
+        font-size:16px;
+        text-align:center;
+        font-weight:bold;
+    }
+    .left_triangle{
+            border-color: transparent rgba(255,255,255,1) transparent transparent;
+            border-style:solid;
+            border-width:6px;
+            width:0;
+            height:0;
+            position:absolute;
+            z-index:5;
+            top:15px;
+            left:-12px;
+        }
 /* main section end */

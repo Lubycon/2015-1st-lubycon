@@ -187,22 +187,32 @@ $(function () { /* designers page continets selcect */
 });
 
 $(function () { // upload grahp //
-    var context = $('.upload_graph')[0].getContext('2d');
-    var canvers_height = $('.upload_graph').height() - 95;
-    var upload_max = Math.max.apply(null, [$('.upload_data1').text(), $('.upload_data2').text(), $('.upload_data3').text(), $('.upload_data4').text(), $('.upload_data5').text(), $('.upload_data6').text(), $('.upload_data7').text()]); // => 89
-    var upload_ratio = 150 / (upload_max * 1.2);
+    var context = $('.uploaded_graph')[0].getContext('2d');
+    var canvers_height = $('.uploaded_graph').height() - 95;
+    var uploaded_max = Math.max.apply(null, [$('.uploaded_data1').text(), $('.uploaded_data2').text(), $('.uploaded_data3').text(), $('.uploaded_data4').text(), $('.uploaded_data5').text(), $('.uploaded_data6').text(), $('.uploaded_data7').text()]); // => 89
+    var uploaded_ratio = 150 / (uploaded_max * 1.2);
 
     context.beginPath();
-    context.lineTo(15,                 150 - (upload_ratio * $('.upload_data1').text()));
-    context.lineTo(15 + 50,            150 - (upload_ratio * $('.upload_data2').text()));
-    context.lineTo(15 + 50 + (44 * 1), 150 - (upload_ratio * $('.upload_data3').text()));
-    context.lineTo(15 + 50 + (44 * 2), 150 - (upload_ratio * $('.upload_data4').text()));
-    context.lineTo(15 + 50 + (44 * 3), 150 - (upload_ratio * $('.upload_data5').text()));
-    context.lineTo(15 + 50 + (44 * 4), 150 - (upload_ratio * $('.upload_data6').text()));
-    context.lineTo(15 + 50 + (44 * 5), 150 - (upload_ratio * $('.upload_data7').text()));
-    context.lineWidth = 1;
+    context.lineTo(13,                 150 - (uploaded_ratio * $('.uploaded_data1').text()));
+    context.lineTo(13 + 46,            150 - (uploaded_ratio * $('.uploaded_data2').text()));
+    context.lineTo(13 + 46 + (44.5 * 1), 150 - (uploaded_ratio * $('.uploaded_data3').text()));
+    context.lineTo(13 + 46 + (44.5 * 2), 150 - (uploaded_ratio * $('.uploaded_data4').text()));
+    context.lineTo(13 + 46 + (44.5 * 3), 150 - (uploaded_ratio * $('.uploaded_data5').text()));
+    context.lineTo(13 + 46 + (44.5 * 4), 150 - (uploaded_ratio * $('.uploaded_data6').text()));
+    context.lineTo(13 + 46 + (44.5 * 5), 150 - (uploaded_ratio * $('.uploaded_data7').text()));
+    context.lineWidth = 2;
     context.strokeStyle = '#ffbe54';
     context.stroke();
+
+    $('#uploaded_ul li').children('.graph_data').css('background', 'rgba(255,190,84,0.5)');
+    $('#uploaded_ul li').hover(function ()
+    {
+        $(this).children('.graph_data').stop().fadeIn(150);
+    }, function ()
+    {
+        $(this).children('.graph_data').stop().fadeOut(150);
+    }
+    );
 });
 $(function () { // like grahp //
     var context = $('.like_graph')[0].getContext('2d');
@@ -211,16 +221,24 @@ $(function () { // like grahp //
     var like_ratio = 150 / (like_max * 1.2);
 
     context.beginPath();
-    context.lineTo(15, 150 - (like_ratio * $('.like_data1').text()));
-    context.lineTo(15 + 50, 150 - (like_ratio * $('.like_data2').text()));
-    context.lineTo(15 + 50 + (44 * 1), 150 - (like_ratio * $('.like_data3').text()));
-    context.lineTo(15 + 50 + (44 * 2), 150 - (like_ratio * $('.like_data4').text()));
-    context.lineTo(15 + 50 + (44 * 3), 150 - (like_ratio * $('.like_data5').text()));
-    context.lineTo(15 + 50 + (44 * 4), 150 - (like_ratio * $('.like_data6').text()));
-    context.lineTo(15 + 50 + (44 * 5), 150 - (like_ratio * $('.like_data7').text()));
-    context.lineWidth = 1;
+    context.lineTo(13,                   150 - (like_ratio * $('.like_data1').text()));
+    context.lineTo(13 + 46,              150 - (like_ratio * $('.like_data2').text()));
+    context.lineTo(13 + 46 + (44.5 * 1), 150 - (like_ratio * $('.like_data3').text()));
+    context.lineTo(13 + 46 + (44.5 * 2), 150 - (like_ratio * $('.like_data4').text()));
+    context.lineTo(13 + 46 + (44.5 * 3), 150 - (like_ratio * $('.like_data5').text()));
+    context.lineTo(13 + 46 + (44.5 * 4), 150 - (like_ratio * $('.like_data6').text()));
+    context.lineTo(13 + 46 + (44.5 * 5), 150 - (like_ratio * $('.like_data7').text()));
+    context.lineWidth = 2;
     context.strokeStyle = '#9054ff';
     context.stroke();
+
+    $('#like_ul li').children('.graph_data').css('background', 'rgba(144,84,255,0.5)');
+    $('#like_ul li').hover(function () {
+        $(this).children('.graph_data').stop().fadeIn(150);
+    }, function () {
+        $(this).children('.graph_data').stop().fadeOut(150);
+    }
+    );
 });
 $(function () { // downloaded grahp //
     var context = $('.downloaded_graph')[0].getContext('2d');
@@ -229,14 +247,53 @@ $(function () { // downloaded grahp //
     var downloaded_ratio = 150 / (downloaded_max * 1.2);
 
     context.beginPath();
-    context.lineTo(15, 150 - (downloaded_ratio * $('.downloaded_data1').text()));
-    context.lineTo(15 + 50, 150 - (downloaded_ratio * $('.downloaded_data2').text()));
-    context.lineTo(15 + 50 + (44 * 1), 150 - (downloaded_ratio * $('.downloaded_data3').text()));
-    context.lineTo(15 + 50 + (44 * 2), 150 - (downloaded_ratio * $('.downloaded_data4').text()));
-    context.lineTo(15 + 50 + (44 * 3), 150 - (downloaded_ratio * $('.downloaded_data5').text()));
-    context.lineTo(15 + 50 + (44 * 4), 150 - (downloaded_ratio * $('.downloaded_data6').text()));
-    context.lineTo(15 + 50 + (44 * 5), 150 - (downloaded_ratio * $('.downloaded_data7').text()));
-    context.lineWidth = 1;
+    context.lineTo(13,                   150 - (downloaded_ratio * $('.downloaded_data1').text()));
+    context.lineTo(13 + 46,              150 - (downloaded_ratio * $('.downloaded_data2').text()));
+    context.lineTo(13 + 46 + (44.5 * 1), 150 - (downloaded_ratio * $('.downloaded_data3').text()));
+    context.lineTo(13 + 46 + (44.5 * 2), 150 - (downloaded_ratio * $('.downloaded_data4').text()));
+    context.lineTo(13 + 46 + (44.5 * 3), 150 - (downloaded_ratio * $('.downloaded_data5').text()));
+    context.lineTo(13 + 46 + (44.5 * 4), 150 - (downloaded_ratio * $('.downloaded_data6').text()));
+    context.lineTo(13 + 46 + (44.5 * 5), 150 - (downloaded_ratio * $('.downloaded_data7').text()));
+    context.lineWidth = 2;
     context.strokeStyle = '#2e7bf5';
     context.stroke();
+
+    $('#downloaded_ul li').children('.graph_data').css('background', 'rgba(46,123,245,0.5)');
+    $('#downloaded_ul li').hover(function () {
+        $(this).children('.graph_data').stop().fadeIn(150);
+    }, function () {
+        $(this).children('.graph_data').stop().fadeOut(150);
+    }
+    );
+});
+
+$(function () {
+    var hint_box = $('#hint_box');
+    var hint_name = $('#hint_name');
+    var hint_figure = $('#hint_figure');
+
+    hint_box.mouseenter(function () {
+        hint_box.css('display','block');
+    });
+
+    $('.graph_box').mouseenter(function () {
+        hint_box.stop().fadeIn(150);
+    }).mouseleave(function () {
+        hint_box.stop().fadeOut(150);
+    }).mousemove(function (e) {
+        hint_box.css(   //mouse follow event
+            {
+                "top": e.pageY - 15 + "px",
+                "left": e.pageX + 20 + "px"
+            });
+    }).mouseenter(function () {
+        hint_name.html($(this).children('.graph_title').text() + ' ' + 'contents'); //graph title text pull
+    });
+
+    $('.graph_box > ul > li').mouseenter(function () {
+        //alert($(this).children('.graph_data').text());
+        hint_figure.html($(this).children('.graph_data').text());   //graph data text pull
+    });
+
+    
 });
