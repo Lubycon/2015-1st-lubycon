@@ -150,8 +150,8 @@
             <nav id="lnb_nav">
                 <ul>
                     <li>Main</li>
-                    <li>Insight</li>
-                    <li class="selected_nav">Followers</li>
+                    <li class="selected_nav">Insight</li>
+                    <li>Followers</li>
                 </ul>
             </nav>  <!-- end lnb nav -->
         </section>  <!-- end section -->
@@ -175,7 +175,7 @@
                     <li><i class="fa fa-download"></i><p>123</p></li>
                     <li><i class="fa fa-user-plus"></i><p>123</p></li>
                 </ul>
-                <button id="personal_messeage"><i class="fa fa-user-plus"></i><p>Messeage</p></button>
+                <button id="personal_messeage"><i class="fa fa-envelope-o"></i><p>Messeage</p></button>
                 <button id="personal_follow"><i class="fa fa-user-plus"></i><p>Follow</p></button>
             </aside>
         </section>
@@ -185,11 +185,11 @@
                 <p id="hint_name">contents</p>
                 <p id="hint_figure">12</p>
                 <p class="left_triangle"></p>
-                <p class="cursor_pointer"></p>
             </div>
             <div class="graph_box">
                 <p class="graph_title">Uploaded</p>
                 <canvas class="uploaded_graph"></canvas>
+                <canvas class="uploaded_arc"></canvas>
                 <ul id="uploaded_ul">
                     <li>
                         <p class="uploaded_data1 graph_data">180</p>
@@ -220,10 +220,12 @@
                         <p class="uploaded_date7 graph_date">7.13</p>
                     </li>
                 </ul>
+                <span class="gray_bar"></span>
             </div>
             <div class="graph_box">
                 <p class="graph_title">Like</p>
                 <canvas class="like_graph"></canvas>
+                <canvas class="like_arc"></canvas>
                 <ul id="like_ul">
                     <li>
                         <p class="like_data1 graph_data">10</p>
@@ -254,10 +256,12 @@
                         <p class="like_date7 graph_date">7.13</p>
                     </li>
                 </ul>
+                <span class="gray_bar"></span>
             </div>
             <div class="graph_box">
                 <p class="graph_title">Downloaded</p>
                 <canvas class="downloaded_graph"></canvas>
+                <canvas class="downloaded_arc"></canvas>
                 <ul id="downloaded_ul">
                     <li>
                         <p class="downloaded_data1 graph_data">18</p>
@@ -288,39 +292,43 @@
                         <p class="downloaded_date7 graph_date">7.13</p>
                     </li>
                 </ul>
+                <span class="gray_bar"></span>
             </div>
             <div class="graph_box">
-                <p class="graph_title">Upload</p>
-                <ul>
+                <p class="graph_title">Contents_View</p>
+                <canvas class="contents_view_graph"></canvas>
+                <canvas class="contents_view_arc"></canvas>
+                <ul id="contents_view_ul">
                     <li>
-                        <p class="graph_data1">20</p>
-                        <p class="graph_date1">7.7</p>
+                        <p class="contents_view_data1 graph_data">20</p>
+                        <p class="contents_view_date1 graph_date">7.7</p>
                     </li>
                     <li>
-                        <p class="graph_data2">20</p>
-                        <p class="graph_date2">7.8</p>
+                        <p class="contents_view_data2 graph_data">1200</p>
+                        <p class="contents_view_date2 graph_date">7.8</p>
                     </li>
                     <li>
-                        <p class="graph_data3">20</p>
-                        <p class="graph_date3">7.9</p>
+                        <p class="contents_view_data3 graph_data">1001</p>
+                        <p class="contents_view_date3 graph_date">7.9</p>
                     </li>
                     <li>
-                        <p class="graph_data4">20</p>
-                        <p class="graph_date4">7.10</p>
+                        <p class="contents_view_data4 graph_data">9055</p>
+                        <p class="contents_view_date4 graph_date">7.10</p>
                     </li>
                     <li>
-                        <p class="graph_data5">20</p>
-                        <p class="graph_date5">7.11</p>
+                        <p class="contents_view_data5 graph_data">20213</p>
+                        <p class="contents_view_date5 graph_date">7.11</p>
                     </li>
                     <li>
-                        <p class="graph_data6">20</p>
-                        <p class="graph_date6">7.12</p>
+                        <p class="contents_view_data6 graph_data">50</p>
+                        <p class="contents_view_date6 graph_date">7.12</p>
                     </li>
                     <li>
-                        <p class="graph_data7">20</p>
-                        <p class="graph_date7">7.13</p>
+                        <p class="contents_view_data7 graph_data">50474</p>
+                        <p class="contents_view_date7 graph_date">7.13</p>
                     </li>
                 </ul>
+                <span class="gray_bar"></span>
             </div>
         </section>  <!-- end contents box -->
     </section>  <!-- end contents section -->
