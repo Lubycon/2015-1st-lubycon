@@ -8,9 +8,21 @@ $(function ()
 
 $(function ()
 {
-    $('#signin').click(function () {
-        $('#login_box').toggle();
+    $('#signin_bt').click(function () {
+        $('#login_box').fadeIn(150);
     });
+    $('#login_box').blur(function () {
+        alert('1');
+    });
+    /*
+    $('body').click(function () {
+        $('#login_box').fadeOut(150);
+    });
+   
+    $('body').not('#login_box').click(function () {
+        alert('1');
+    });
+    */
 });
 
 $(function ()
