@@ -27,7 +27,7 @@ a {
 }
 
 * {
-    font-family: 'Yantramanav', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     font-size: 1em;
 }
 /*CSS RESET*/
@@ -141,7 +141,9 @@ h1 /* main logo */ {
         color: #8e8e8e;
         float: left;
     }
-
+    #signin_bt i {
+        margin-left:5px;
+    }
     #signin_bt .signicon {
         color: #fff;
         margin-left: 10px;
@@ -152,7 +154,7 @@ h1 /* main logo */ {
 
     #signin_bt .signin {
         color: #fff;
-        margin-right: 25px;
+        margin-right: 28px;
         float: right;
         line-height: 50px;
     }
@@ -160,7 +162,6 @@ h1 /* main logo */ {
     #signin_bt #login_box {
         position: absolute;
         width: 200px;
-        height: 240px;
         padding:15px;
         background: rgba(0,0,0,0.8);
         border-radius: 2px;
@@ -170,6 +171,10 @@ h1 /* main logo */ {
     }
         #signin_bt #login_box label{
             color:#fff;
+        }
+        #signin_bt #login_box input{
+            width:193px;
+            margin-top:5px;
         }
             #login_submit{
                 position:relative;
@@ -223,11 +228,17 @@ h1 /* main logo */ {
         }
         #forgot_pass{
             width: 150px;
+            height:20px;
+            line-height:20px;
             margin: 0px auto;
-            margin-top: 6px;
+            margin-top: 10px;
             text-align:center;
             color:#fff;
             font-size:14px;
+            border-radius:3px;
+        }
+        #forgot_pass:hover{
+            background:#828282;
         }
         .up_triangle{
             border-color: transparent transparent rgba(0,0,0,0.8) transparent;
