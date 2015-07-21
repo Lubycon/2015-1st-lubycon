@@ -132,7 +132,8 @@ h1 /* main logo */ {
     width: 125px;
     height: 50px;
     float: right;
-    margin-right: 60px;
+    margin-right: 50px;
+    padding-right:10px;
     cursor:pointer;
     display:none;
 }
@@ -140,9 +141,13 @@ h1 /* main logo */ {
     position: relative;
     height: 50px;
     float: right;
-    margin-right: 60px;
+    margin-right: 50px;
+    padding-right:10px;
     cursor:pointer;
 }
+    #after_signin:hover {
+        background:#464646;
+    }
     #after_signin figure {
         width:33px;
         height:33px;
@@ -167,6 +172,23 @@ h1 /* main logo */ {
         font-size:23px;
         vertical-align:middle;
     }
+    #after_signin ul{
+        width:100%;
+        position:absolute;
+        z-index:4;
+        box-shadow: 1px 5px 5px 0px rgba(0,0,0,0.5);
+        display:none;
+    }
+    #after_signin ul li{
+        height:30px;
+        line-height:30px;
+        background:#464646;
+        color:#fff;
+        text-align:center;
+    }
+        #after_signin ul li:hover {
+            background:#ffbe54;
+        }
 
     .partition {
         font-size: 31px;
