@@ -1,5 +1,5 @@
 function popup(){
 
-	window.open('./php/Overlap_check.php','target_name','scrollbars=yes,toolbar=yes, resizable=yes, width=100, height=100, left=0, top=0');
+	window.open('./php/create_account(check_duplicate_id).php','target_name','resizable=yes');
 	form.targe = "target_name";
 }
