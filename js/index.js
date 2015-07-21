@@ -175,7 +175,7 @@ $(function ()  //main_board change
     })
 });
 
-$(function ()
+$(function () //contents page category
 {
     
     $('#cate_bt').click(function () {
@@ -198,7 +198,7 @@ $(function () { /* designers page continets selcect */
     });
 });
 
-$(function ()
+$(function () //account setting script
 {
     $(document).ready(function ()
     {
@@ -207,7 +207,7 @@ $(function ()
             $('#account_aside > ul > li').removeClass('selected_account');
             $(this).addClass('selected_account');
         });
-        
+        alert($(document).offset().top);
     });
     $(document).scroll(function () {
         if ($(document).scrollTop() > 300)
@@ -227,6 +227,36 @@ $(function ()
     });
     $('#lang_plus').click(function ()
     {
-        $('.language_text').clone().appendTo('.lang_option');
+        $("#clone_div").append('<label>&nbsp;</label><input type="text" class="language_text" />');
+        $("#clone_div").append('<div class="language_option"><select class="basic_filter"><option value="Beginer">Beginer</option><option value="Advanced">Advanced</option><option value="Fluent">Fluent</option><option value="Native">Native</option></select></div>');
+
     });
 });
+
+$(function ()
+{
+    $(document).scroll(function ()
+    {
+        if ($(document).scrollTop() > 260) {
+            $('#nav_guide').css({ "position": "fixed", "top": "36px", "z-index": "2" })
+        } else
+        {
+            $('#nav_guide').css({ "position": "absolute" , "top" : "50px"})
+        }
+    });
+
+    var i = 0;
+
+    $('#con_like_bt').click(function ()
+    {
+        if (i == 0)
+        {
+            $('#con_like_bt').css('background', '#ec6446');
+            i++;
+        } else
+        {
+            $('#con_like_bt').css('background', '#c1c1c1');
+            i = 0;
+        }
+    });
+    });

@@ -1,4 +1,12 @@
 ﻿@charset "utf-8";
+#contents{
+    position:relative;
+}
+
+#nav_guide{
+    position:absolute;
+}
+
 
 #post_subject {
     font-size: 23px;
@@ -16,6 +24,7 @@
     background: #e6e6e6;
     text-align: center;
     margin-bottom: 45px;
+    margin-top:50px;
 }
     #post_writer_box_inner{
         width:1200px;
@@ -106,7 +115,6 @@
     width: 958px;
     margin: 0px auto;
     margin-left:200px;
-    background: #f9f9f9;
     border: 1px solid #c4c4c4;
     padding: 15px 20px;
 }

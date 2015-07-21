@@ -40,6 +40,9 @@ a {
     width: 100%;
     height: 50px;
     background-color: #000;
+    position:fixed;
+    z-index:3;
+    top:0px;
 }
 
 h1 /* main logo */ {
@@ -68,7 +71,6 @@ h1 /* main logo */ {
 
 .menu_bar {
     width: 1px;
-    display:;
     background: #8e8e8e;
     height: 30px;
     margin-top: 10px;
@@ -132,12 +134,45 @@ h1 /* main logo */ {
     float: right;
     margin-right: 60px;
     cursor:pointer;
+    display:none;
 }
+#after_signin {
+    position: relative;
+    height: 50px;
+    float: right;
+    margin-right: 60px;
+    cursor:pointer;
+}
+    #after_signin figure {
+        width:33px;
+        height:33px;
+        border-radius:50%;
+        overflow:hidden;
+        margin-top:8.5px;
+        margin-left:10px;
+        float:left;
+    }
+    #after_signin figure img{
+        width:33px;
+        height:33px;
+    }
+    #after_signin #user_id{
+        color:#fff;
+        height:50px;
+        line-height:50px;
+        margin:0px 10px;
+    }
+    #after_signin i{
+        color:#797979;
+        font-size:23px;
+        vertical-align:middle;
+    }
 
     .partition {
         font-size: 31px;
         color: #8e8e8e;
         float: left;
+        line-height:44px;
     }
 
     #signin_bt .signicon {
@@ -165,6 +200,7 @@ h1 /* main logo */ {
         top: 70px;
         left: -45px;
         display:none;
+        z-index:4;
     }
         #signin_bt #login_box label{
             color:#fff;
@@ -298,7 +334,7 @@ h1 /* main logo */ {
     line-height: 35px;
     border: 1px solid #818181;
     border-radius: 10px;
-    margin-top: 15px;
+    margin-top: 65px;
     margin-bottom: 15px;
     box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.1);
 }

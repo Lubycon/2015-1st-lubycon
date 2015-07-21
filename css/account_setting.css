@@ -185,7 +185,7 @@
         margin-left:10px;
     }
     .language_text{
-        width:115px;
+        width:115px !important;
         margin-right:10px;
     }
     #lang_plus{
