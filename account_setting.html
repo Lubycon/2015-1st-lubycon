@@ -171,10 +171,10 @@
         <section id="accont_setting_box">
             <aside id="account_aside">
                 <ul>
-                    <li class="selected_account">Account Setting</li>
-                    <li>Basic Info</li>
-                    <li>Contact Info</li>
-                    <li>Delete Account</li>
+                    <li class="selected_account" id="300">Account Setting</li>
+                    <li id="680">Basic Info</li>
+                    <li id="1250">Contact Info</li>
+                    <li id="1400">Delete Account</li>
                 </ul>
             </aside>
 
@@ -192,9 +192,9 @@
                             </select>
                         </div>  <!-- end select box --><br />
                         <label>Nickname</label><input type="text" disabled /><br />
-                        <label>Passward</label><input type="password" disabled /><i class="fa fa-check"></i><button id="Change_pass">Change Passward</button><br />
-                        <label>New Passward</label><input type="password" /><i class="fa fa-check"></i><br />
-                        <label>Repeat Passward</label><input type="password" /><i class="fa fa-times"></i><br />
+                        <label>Passward</label><input type="password" id="pass" disabled /><i class="fa fa-check"></i><span id="Change_pass">Change Passward</span><br />
+                        <label>New Passward</label><input type="password" id="repeat_pass" disabled /><i class="fa fa-check"></i><br />
+                        <label>Repeat Passward</label><input type="password" id="repeat_pass_again" disabled /><i class="fa fa-times"></i><br />
 
                     </form>
                 </section>
@@ -453,23 +453,26 @@
                                 <option value="Zambia">Zambia</option>
                                 <option value="Zimbabwe">Zimbabwe</option>
                             </select>
-                        </div><input type="text" id="location_text"/><br />
-                        <label>Language</label><input type="text" id="language_text" /><div class="language_option">
-    <select class="basic_filter">
-        <option value="Beginer">Beginer</option>
-        <option value="Advanced">Advanced</option>
-        <option value="Fluent">Fluent</option>
-        <option value="Native">Native</option>
-    </select>
-</div><button id="lang_plus"><i class="fa fa-plus-circle"></i>
-</button><div class="pubilc_option">
-    <i class="fa fa-lock"></i>
-    <select class="basic_filter">
-        <option value="Public">Public</option>
-        <option value="Followers">Followers</option>
-        <option value="Private">Private</option>
-    </select>
-</div>  <!-- end select box --><br /><br />
+                        </div><input type="text" id="location_text" /><br />
+                        <label>Language</label><input type="text" class="language_text" /><div class="language_option">
+                            <select class="basic_filter">
+                                <option value="Beginer">Beginer</option>
+                                <option value="Advanced">Advanced</option>
+                                <option value="Fluent">Fluent</option>
+                                <option value="Native">Native</option>
+                            </select>
+                        </div>
+                        <span id="lang_plus">
+                            <i class="fa fa-plus-circle"></i>
+                        </span>
+                        <div class="pubilc_option lang_option">
+                            <i class="fa fa-lock"></i>
+                            <select class="basic_filter">
+                                <option value="Public">Public</option>
+                                <option value="Followers">Followers</option>
+                                <option value="Private">Private</option>
+                            </select>
+                        </div>  <!-- end select box --><br /><br />
                         <label id="basic_desc_label">Description</label><textarea id="basic_desc" maxlength="1000"></textarea><br />
                     </form>
                 </section>

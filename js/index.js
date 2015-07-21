@@ -198,3 +198,35 @@ $(function () { /* designers page continets selcect */
     });
 });
 
+$(function ()
+{
+    $(document).ready(function ()
+    {
+        $('#account_aside > ul > li').click(function () {
+            $("html, body").animate({ scrollTop: ($(this).attr('id')) }, 300);
+            $('#account_aside > ul > li').removeClass('selected_account');
+            $(this).addClass('selected_account');
+        });
+        
+    });
+    $(document).scroll(function () {
+        if ($(document).scrollTop() > 300)
+        {
+            $('#account_aside').css({ "position": "fixed", "top": "65px" });
+        } else
+        {
+            $('#account_aside').css({ "position": "absolute", "top": "0px" });
+        }
+    });
+
+    $('#Change_pass').click(function ()
+    {
+        $('#pass').removeAttr('disabled');
+        $('#repeat_pass').removeAttr('disabled');
+        $('#repeat_pass_again').removeAttr('disabled');
+    });
+    $('#lang_plus').click(function ()
+    {
+        $('.language_text').clone().appendTo('.lang_option');
+    });
+});

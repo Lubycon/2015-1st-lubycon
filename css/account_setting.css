@@ -86,13 +86,16 @@
     width:1200px;
     margin:0px auto;
     margin-top:15px;
+    position:relative;
 }
 #account_aside{
     width:280px;
     border:1px solid #dadada;
     border-bottom:none;
-    float:left;
     margin-right:20px;
+    position:absolute;
+    top:0px;
+
 }
     #account_aside li {
         width:255px;
@@ -149,7 +152,9 @@
         border-radius:2px;
         color:#fff;
         font-size:14px;
-        margin-left:20px;
+        margin-left:25px;
+        padding:9px;
+        cursor:pointer;
     }
     .fa-check{
         width:25px;
@@ -161,6 +166,7 @@
         background:#8ec89a;
         color:#fff;
         margin-left:25px;
+        visibility:hidden;
     }
     .fa-times{
         width:25px;
@@ -178,7 +184,7 @@
         width:79px;
         margin-left:10px;
     }
-    #language_text{
+    .language_text{
         width:115px;
         margin-right:10px;
     }
