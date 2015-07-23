@@ -3,8 +3,10 @@
     position:relative;
 }
 
-#nav_guide{
+#post_subject_area{
     position:absolute;
+    width:100%;
+    background:#000;
 }
 
 

@@ -141,8 +141,11 @@
         color:#828282;
     }
     .setting_form input{
-        width:210px;
-        height:29px;
+        width: 190px;
+        height: 29px;
+        border-left: 2px solid #d5d5d5;
+        border-top: 2px solid #d5d5d5;
+        padding: 0px 10px;
     }
     .setting_form #Change_pass{
         width:130px;
@@ -152,7 +155,7 @@
         border-radius:2px;
         color:#fff;
         font-size:14px;
-        margin-left:25px;
+        margin-left:75px;
         padding:9px;
         cursor:pointer;
     }
@@ -166,7 +169,7 @@
         background:#8ec89a;
         color:#fff;
         margin-left:25px;
-        visibility:hidden;
+        position:absolute;
     }
     .fa-times{
         width:25px;
@@ -178,14 +181,14 @@
         background:#ffbe54;
         color:#fff;
         margin-left:25px;
-        visibility:hidden;
+        position:absolute;
     }
     #location_text{
-        width:79px;
+        width:59px;
         margin-left:10px;
     }
     .language_text{
-        width:115px !important;
+        width:95px !important;
         margin-right:10px;
     }
     #lang_plus{
@@ -194,10 +197,24 @@
         position: absolute;
         margin-top: 7px;
         margin-left: 22px;
+        cursor:pointer;
     }
     #lang_plus i{
         font-size:23px;
         color:#6b6b6b;
+        vertical-align:middle;
+    }
+    .lang_minus{
+        border:none;
+        background:none;
+        position: absolute;
+        margin-top: 7px;
+        margin-left: 22px;
+        cursor:pointer;
+    }
+    .lang_minus i{
+        font-size:23px;
+        color:#ea4126;
         vertical-align:middle;
     }
     #delete_desc{
@@ -328,3 +345,29 @@
     .language_option .sod_select.custom .sod_option.selected::before{
         display:none;
     }
+
+#file_hide {
+    visibility:hidden;
+    width:1px;
+}
+#file_bt {
+    width: 130px;
+    height: 30px;
+    background: #8ec89a;
+    border: none;
+    border-radius: 2px;
+    color: #fff;
+    font-size: 14px;
+    margin-left: 75px;
+    padding: 9px 26px;
+    cursor: pointer;
+}
+#file_text{
+    color:#464646;
+}
+
+#img_preview{
+    margin-left:130px;
+    margin-bottom:15px;
+    display:block;
+}

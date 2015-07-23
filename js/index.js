@@ -208,17 +208,30 @@ $(function () { /* designers page continets selcect */
 
 $(function () //account setting script
 {
-    $(document).ready(function ()
+    $('#account_Setting_sub').click(function () {
+        $("html, body").stop().animate({ scrollTop: ($('#account_setting_section').offset().top)-65 });
+    });
+    $('#basic_info_sub').click(function () {
+        $("html, body").stop().animate({ scrollTop: ($('#basic_info_section').offset().top) - 65 });
+    });
+    $('#contact_info_sub').click(function () {
+        $("html, body").stop().animate({ scrollTop: ($('#contact_info_section').offset().top) - 65 });
+    });
+    $('#delete_account_sub').click(function () {
+        $("html, body").stop().animate({ scrollTop: ($('#delete_account_section').offset().top) - 65 });
+    });
+
+    $(document).ready(function () //account setting banner event
     {
         $('#account_aside > ul > li').click(function () {
-            $("html, body").animate({ scrollTop: ($(this).attr('id')) }, 300);
             $('#account_aside > ul > li').removeClass('selected_account');
             $(this).addClass('selected_account');
         });
-        alert($(document).offset().top);
+        console.log($('#account_setting_section').offset().top);
     });
-    $(document).scroll(function () {
-        if ($(document).scrollTop() > 300)
+    
+    $(document).scroll(function () { //account setting move banner
+        if ($(document).scrollTop() > $('#account_setting_section').offset().top-65 )
         {
             $('#account_aside').css({ "position": "fixed", "top": "65px" });
         } else
@@ -227,35 +240,69 @@ $(function () //account setting script
         }
     });
 
-    $('#Change_pass').click(function ()
-    {
-        $('#pass').removeAttr('disabled');
-        $('#repeat_pass').removeAttr('disabled');
-        $('#repeat_pass_again').removeAttr('disabled');
+    $(document).scroll(function () { //account setting move banner
+        if ($(document).scrollTop() > $('#account_setting_section').offset().top - 65 || $(document).scrollTop() < $('#basic_info_section').offset().top - 65)
+        {
+            console.log('1');
+        }
     });
-    $('#lang_plus').click(function ()
+    var i = 2;
+    $('#Change_pass').click(function () //change pass remove attr
     {
-        $("#clone_div").append('<label>&nbsp;</label><input type="text" class="language_text" />');
-        $("#clone_div").append('<div class="language_option"><select class="basic_filter"><option value="Beginer">Beginer</option><option value="Advanced">Advanced</option><option value="Fluent">Fluent</option><option value="Native">Native</option></select></div>');
+        $('#pass ,#repeat_pass, #repeat_pass_again').removeAttr('disabled');
+    });
+    $('#pass ,#repeat_pass, #repeat_pass_again').focus(function () //change pass border color
+    {
+        $(this).css({ 'border-left': '5px solid #ffbe54', 'width': '187px' });
+        $(this).after('<i class="fa fa-times"></i>');
+    }).blur(function ()
+    {
+        $(this).css({ 'border-left': '5px solid #8ec89a', 'width': '187px' });
+        $(this).after('<i class="fa fa-check"></i>');
+    });
 
+
+    $('#lang_plus').click(function () //clone language div and change id
+    {
+        $("#clone_div").append('<div id="lang_clone"></div>');
+        $("#lang_clone").append('<label>&nbsp;</label>');
+        $('#lang_input_id').clone(true).appendTo('#lang_clone');
+        $('#lang_option_id').clone(true).appendTo('#lang_clone');
+        $("#lang_clone").append('<span id="lang_minus_id" class="lang_minus"><i class="fa fa-minus-circle"></i></span>');
+        $('#lang_public_id').clone(true).appendTo('#lang_clone');
+
+        
+        $('#lang_clone > #lang_input_id').attr('id', 'lang_input_' + i);
+        $('#lang_clone > #lang_option_id').attr('id', 'lang_option_' + i);
+        $('#lang_clone > #lang_public_id').attr('id', 'lang_public_' + i);
+        $('#lang_clone > #lang_minus_id').attr('id', 'lang_minus_' + i);
+
+        $("#lang_clone").append('<br/>');
+
+        $('#clone_div > #lang_clone').attr('id', 'lang_clone_' + i);
+        i++; //int plus
+    });
+        
+    $('.lang_minus').bind("click", function () {
+        alert("User clicked on 'foo.'");
     });
 });
 
 $(function ()
 {
-    $(document).scroll(function ()
+    $(document).scroll(function () //community subject event
     {
-        if ($(document).scrollTop() > 260) {
-            $('#nav_guide').css({ "position": "fixed", "top": "36px", "z-index": "2" })
+        if ($(document).scrollTop() > 260) { 
+            $('#post_subject_area').css({ "position": "fixed", "top": "36px", "z-index": "2" })
         } else
         {
-            $('#nav_guide').css({ "position": "absolute" , "top" : "50px"})
+            $('#post_subject_area').css({ "position": "absolute", "top": "50px" })
         }
     });
 
     var i = 0;
 
-    $('#con_like_bt').click(function ()
+    $('#con_like_bt').click(function () // like button toggle
     {
         if (i == 0)
         {
@@ -267,4 +314,85 @@ $(function ()
             i = 0;
         }
     });
+});
+
+$(function ()
+{
+    
+    $('#file_bt').click(function () // input file fake bt event
+    {
+        $('#file_hide').click();
     });
+    $('#file_hide').change(function ()
+    {
+        $('#file_text').val($(this).val());
+    });
+});
+
+// input file preview
+$.fn.setPreview = function (opt) {
+    "use strict"
+    var defaultOpt = {
+        inputFile: $(this),
+        img: null,
+        w: 216,
+        h: 216
+    };
+    $.extend(defaultOpt, opt);
+
+    var previewImage = function () {
+        if (!defaultOpt.inputFile || !defaultOpt.img) return;
+
+        var inputFile = defaultOpt.inputFile.get(0);
+        var img = defaultOpt.img.get(0);
+
+        // FileReader
+        if (window.FileReader) {
+            // image ÆÄÀÏ¸¸
+            if (!inputFile.files[0].type.match(/image\//)) return;
+
+            // preview
+            try {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    img.src = e.target.result;
+                    img.style.width = defaultOpt.w + 'px';
+                    img.style.height = defaultOpt.h + 'px';
+                    img.style.display = '';
+                }
+                reader.readAsDataURL(inputFile.files[0]);
+            } catch (e) {
+                // exception...
+            }
+            // img.filters (MSIE)
+        } else if (img.filters) {
+            inputFile.select();
+            inputFile.blur();
+            var imgSrc = document.selection.createRange().text;
+
+            img.style.width = defaultOpt.w + 'px';
+            img.style.height = defaultOpt.h + 'px';
+            img.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(enable='true',sizingMethod='scale',src=\"" + imgSrc + "\")";
+            img.style.display = '';
+            // no support
+        } else {
+            // Safari5, ...
+        }
+    };
+
+    // onchange
+    $(this).change(function () {
+        previewImage();
+    });
+};
+
+
+$(document).ready(function () {
+    var opt = {
+        img: $('#img_preview'),
+        w: 216,
+        h: 216
+    };
+
+    $('#file_hide').setPreview(opt);
+});
