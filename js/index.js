@@ -59,6 +59,14 @@ $(function()
 	{
 	    $(this).children().stop().fadeOut(300);
 	});
+
+	$('#after_signin').hover(function ()
+	{
+	    $('#after_signin > ul').fadeIn();
+	}, function ()
+	{
+	    $('#after_signin > ul').fadeOut();
+	});
 });
 
 $(function () { //search box click value reset start
