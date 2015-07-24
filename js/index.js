@@ -258,9 +258,7 @@ $(function () //account setting script
                 $('#delete_account_sub').addClass('selected_account');
             }
         });
-        
-       
-});
+    });
 
     var i = 2;
     $('#Change_pass').click(function () //change pass remove attr
@@ -276,6 +274,7 @@ $(function () //account setting script
         $(this).css({ 'border-left': '5px solid #8ec89a', 'width': '187px' });
         $(this).after('<i class="fa fa-check"></i>');
     });
+
 
 
     $('#lang_plus').click(function () //clone language div and change id
@@ -298,10 +297,13 @@ $(function () //account setting script
         $('#clone_div > #lang_clone').attr('id', 'lang_clone_' + i);
         i++; //int plus
     });
-        
-    $('.lang_minus').on("click", function () {
-        console.log('마이너스스스스');
-    });
+    
+        $(document).on("click",".lang_minus", function () {
+            $(this).parent().remove();
+            // 클릭 시 처리 
+
+        });
+    
 });
 
 $(function ()
