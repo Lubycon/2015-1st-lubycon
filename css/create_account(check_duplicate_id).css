@@ -49,9 +49,11 @@
         }
         .fa-check{
             background:#8ec89a;
+            display: inline-block;
         }
         .fa-times{
             background:#ea4126;
+            display: inline-block;
         }
 
         #check_duplicate_window button{

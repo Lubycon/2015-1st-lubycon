@@ -1,0 +1,101 @@
+@charset "utf-8";
+/* CSS Document */
+/****************************css reset start***********************************************************/
+body
+{
+	background: #fff;
+}
+body,h1,h2,h3,h4,h5,h6,div,p,ul,ol,dl,li,dt,dd,address,figure, nav, section, header, footer
+{
+	margin: 0px;
+	padding: 0px;
+	color: #000;
+	font-size: 1em;
+	font-weight: 200;
+	line-height: 0px;
+	font-style: normal;
+}
+li
+{
+	list-style: none;
+}
+img
+{
+	border-style: none;
+}
+a
+{
+	text-decoration: none;
+	color: #000;
+	font-family: 'apple Gothic', sans-serif;
+}
+form
+{
+	font-family: 'Apple Gothic', sans-serif;
+}
+
+/*********************************************css reset end*********************************************/
+
+#thanks
+{
+	width: 100%;
+	text-align: center;
+	margin-top: 150px;
+	font-size: 50px;
+}
+	#thanks p
+	{
+		color: #444444;
+	}
+
+#thanks2
+{
+	width: 100%;
+	text-align: center;
+	margin-top: 100px;
+	font-size: 50px;
+}
+	#thanks2 p
+	{
+		color: #444444;
+	}
+
+#circle
+{
+	width: 80px;
+	height: 80px;
+	line-height: 95px;
+	text-align: center;
+	background: #8ec89a;
+	border-radius: 50%;
+	margin:0px auto;
+	margin-top: 80px;
+}
+	#circle i
+	{
+		color: #ffffff;
+		font-size: 2em;
+	}
+
+
+#timer
+{
+	width: 156px;
+	height: 10px;
+	margin: 0px auto;
+	margin-top: 40px;
+}
+	#timer ul
+	{
+		width: 156px;
+	}
+	.timer_rect
+	{
+		width: 50px;
+		height: 10px;
+		background: #b1b1b1;
+		border: 1px solid #ffffff;
+		border-radius: 3px;
+		float:left;
+		display: inline-block;
+	}

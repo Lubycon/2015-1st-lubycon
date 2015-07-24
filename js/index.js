@@ -412,3 +412,4 @@ $(document).ready(function () {
 
     $('#file_hide').setPreview(opt);
 });
+
