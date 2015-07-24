@@ -208,8 +208,6 @@ $(function () { /* designers page continets selcect */
 
 $(function ()
 {
-    $(document).ready(function () {
-    });
     $(document).scroll(function () //community subject event
     {
         if ($(document).scrollTop() > 260) { 
@@ -222,14 +220,14 @@ $(function ()
 
     $(document).scroll(function () //community view banner
     {
-        if ($(document).scrollTop() > 350 && $(document).scrollTop() < $('#comment_more_box').offset().top - 500) {
+        console.log($('#comment_more_box').offset().top - 757);
+        if ($(document).scrollTop() > 350 && $(document).scrollTop() < $('#comment_more_box').offset().top - 430) {
             $('#post_banner').css({ "position": "fixed" , "top":"100px"});
         } else if ($(document).scrollTop() < 349) {
-            $('#post_banner').css({ "position": "absolute", "top": "0px" });
-        } else if ($(document).scrollTop() > $('#comment_more_box').offset().top - 500)
+            $('#post_banner').css({ "position": "absolute", "top": "0"+"px" });
+        } else if ($(document).scrollTop() > $('#comment_more_box').offset().top - 430)
         {
-            $('#post_banner').css({ "position": "absolute", "top": "bottom_fix" });
-            
+            $('#post_banner').css({ "position": "absolute", "top": $('#comment_more_box').offset().top - 757 + "px" });
         };
     });
 
