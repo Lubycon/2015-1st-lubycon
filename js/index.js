@@ -299,8 +299,8 @@ $(function () //account setting script
         i++; //int plus
     });
         
-    $('.lang_minus').bind("click", function () {
-        alert("User clicked on 'foo.'");
+    $('.lang_minus').on("click", function () {
+        console.log('마이너스스스스');
     });
 });
 
