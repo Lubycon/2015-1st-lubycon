@@ -18,16 +18,15 @@
 	$database = new DBConnect;
 	$database->DBInsert();
 
-	$email=$_GET['email'];
-
-	$database->query = "select exists(select * from member where email = '".$email."')";
+	$check=$_REQUEST["check"];
+	$database->query = "select exists(select * from member where email = '".$check."')";
 	$database->DBQuestion();
 	$result = $database->result->fetch_array();
 
 	if($result[0]){
-		echo ("<script>overlap();</script>");
+		echo ("<script>alert('중복');</script>");
 	}
 	else{
-		echo ("<script>non_overlap()</script>");
+		echo ("<script>alert('등록가능')</script>");
 	}
 ?>
