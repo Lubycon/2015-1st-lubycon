@@ -182,10 +182,23 @@ $(function ()  //main_board change
 
 $(function () //contents page category
 {
-    
+    var cate_point = 0
     $('#cate_bt').click(function () {
+        if (cate_point == 0)
+        {
             $('#open_cate_inner').stop().animate({ top: 0 });
+            $('#down_arrow').children().removeClass();
+            $('#down_arrow').children().addClass('fa fa-angle-up');
+            cate_point++;
+        } else if (cate_point == 1)
+        {
+            $('#open_cate_inner').stop().animate({ top: -85 });
+            $('#down_arrow').children().removeClass();
+            $('#down_arrow').children().addClass('fa fa-angle-down');
+            cate_point--;
+        }
     });
+    
 });
 
 $(function () { /* designers page continets selcect */
@@ -206,47 +219,42 @@ $(function () { /* designers page continets selcect */
 
 
 
+
+
+
+/* creat account */
 $(function ()
 {
-    $(document).scroll(function () //community subject event
+    $('#dupli_id').click(function ()
     {
-        if ($(document).scrollTop() > 260) { 
-            $('#post_subject_area').css({ "position": "fixed", "top": "36px", "z-index": "2" })
-        } else
-        {
-            $('#post_subject_area').css({ "position": "absolute", "top": "50px" });
-        }
+        $('#check_duplicate_area').show();
     });
 
-    $(document).scroll(function () //community view banner
+    $('#cancel').click(function ()
     {
-        console.log($('#comment_more_box').offset().top - 757);
-        if ($(document).scrollTop() > 350 && $(document).scrollTop() < $('#comment_more_box').offset().top - 430) {
-            $('#post_banner').css({ "position": "fixed" , "top":"100px"});
-        } else if ($(document).scrollTop() < 349) {
-            $('#post_banner').css({ "position": "absolute", "top": "0"+"px" });
-        } else if ($(document).scrollTop() > $('#comment_more_box').offset().top - 430)
-        {
-            $('#post_banner').css({ "position": "absolute", "top": $('#comment_more_box').offset().top - 757 + "px" });
-        };
+        $('#check_duplicate_area').css({"display":"none"});
+        //('#check_duplicate_area').hide();
     });
 
-
-
-    var i = 0;
-    $('#con_like_bt').click(function () // like button toggle
+    $('#pass_id, #re_pass_id, #re_pass_id_again').keyup(function () //change pass border color
     {
-        if (i == 0)
-        {
-            $('#con_like_bt').css('background', '#ec6446');
-            i++;
-        } else
-        {
-            $('#con_like_bt').css('background', '#c1c1c1');
-            i = 0;
+        if ($(this).val() == '0') {
+            $(this).css({ 'border-left': '5px solid #ffbe54', 'width': '187px' });
+            //alert($(this).next().text());
+            $(this).next().removeClass();
+            $(this).next().addClass('fa fa-times');
+        } else if ($(this).val() == '1') {
+            $(this).css({ 'border-left': '5px solid #8ec89a', 'width': '187px' });
+            $(this).next().removeClass();
+            $(this).next().addClass('fa fa-check');
+        } else if ($(this).val() == '') {
+            $(this).css({ 'border-left': '2px solid #D5D5D5', 'width': '190px' });
+            $(this).next().removeClass();
         }
     });
 });
 
 
 
+
+    /* creat account */
