@@ -171,15 +171,16 @@
         <section id="accont_setting_box">
             <aside id="account_aside">
                 <ul>
-                    <li class="selected_account" id="300">Account Setting</li>
-                    <li id="680">Basic Info</li>
-                    <li id="1250">Contact Info</li>
-                    <li id="1400">Delete Account</li>
+                    <li class="selected_account" id="account_Setting_sub">Account Setting</li>
+                    <li id="basic_info_sub">Basic Info</li>
+                    <li id="contact_info_sub">Contact Info</li>
+                    <li id="delete_account_sub">Delete Account</li>
                 </ul>
             </aside>
 
             <section id="account_section">
-                <section class="setting_card">
+
+                <section id="account_setting_section" class="setting_card">
                     <p class="setting_title">Account Setting</p>
                     <form class="setting_form">
                         <label>E-mail</label><input type="text" disabled />
@@ -192,17 +193,18 @@
                             </select>
                         </div>  <!-- end select box --><br />
                         <label>Nickname</label><input type="text" disabled /><br />
-                        <label>Passward</label><input type="password" id="pass" disabled /><i class="fa fa-check"></i><span id="Change_pass">Change Passward</span><br />
-                        <label>New Passward</label><input type="password" id="repeat_pass" disabled /><i class="fa fa-check"></i><br />
-                        <label>Repeat Passward</label><input type="password" id="repeat_pass_again" disabled /><i class="fa fa-times"></i><br />
+                        <label>Passward</label><input type="password" id="pass" disabled /><span id="Change_pass">Change Passward</span><br />
+                        <label>New Passward</label><input type="password" id="repeat_pass" disabled /><br />
+                        <label>Repeat Passward</label><input type="password" id="repeat_pass_again" disabled /><br />
 
                     </form>
                 </section>
 
-                <section class="setting_card">
+                <section id="basic_info_section" class="setting_card">
                     <p class="setting_title">Basic Info</p>
                     <form class="setting_form">
-                        <label>Profile Photo</label><input type="text" /><input type="file" value="Find the file"/><br />
+                        <label>Profile Photo</label><input type="text" id="file_text" readonly/><span id="file_bt">Find the file</span><input type="file" id="file_hide"  accept="image/*" /> <br />
+                        <img id="img_preview"  />
                         <label>Occupation / Job</label><input type="text" /><br />
                         <label>Location</label><div class="location_option">
                             <select class="basic_filter">
@@ -455,18 +457,16 @@
                                 <option value="Zimbabwe">Zimbabwe</option>
                             </select>
                         </div><input type="text" id="location_text" /><br />
-                        <label>Language</label><input type="text" class="language_text" /><div class="language_option">
+                        <label>Language</label><input type="text" id="lang_input_id" class="language_text" /><div id="lang_option_id" class="language_option">
                             <select class="basic_filter">
                                 <option value="Beginer">Beginer</option>
                                 <option value="Advanced">Advanced</option>
                                 <option value="Fluent">Fluent</option>
                                 <option value="Native">Native</option>
                             </select>
-                        </div>
-                        <span id="lang_plus">
+                        </div><span id="lang_plus">
                             <i class="fa fa-plus-circle"></i>
-                        </span>
-                        <div class="pubilc_option">
+                        </span><div id="lang_public_id" class="pubilc_option">
                             <i class="fa fa-lock"></i>
                             <select class="basic_filter">
                                 <option value="Public">Public</option>
@@ -479,8 +479,8 @@
                     </form>
                 </section>
 
-                <section class="setting_card">
-                    <p class="setting_title">Contect Info</p>
+                <section id="contact_info_section" class="setting_card">
+                    <p class="setting_title">Contact Info</p>
                     <form class="setting_form">
                         <label>Mobile</label><input type="text" />
                         <div class="pubilc_option">
@@ -512,7 +512,7 @@
                     </form>
                 </section>
 
-                <section class="setting_card">
+                <section id="delete_account_section" class="setting_card">
                     <p class="setting_title">Delete Account</p>
                     <form class="setting_form">
                         <p id="delete_desc">Deleting your account will delete all of your content and remove all data associated with it.</p>
