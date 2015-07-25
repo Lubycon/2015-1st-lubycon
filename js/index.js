@@ -216,7 +216,6 @@ $(function () { /* designers page continets selcect */
     });
 });
 
-<<<<<<< HEAD
 $(function () //account setting script
 {
     $(document).ready(function ()
@@ -303,7 +302,7 @@ $(function () //account setting script
     });
         
     
-});
+
 
 /* creat account */
 $(function ()
