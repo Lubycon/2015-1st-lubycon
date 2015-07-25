@@ -6,7 +6,7 @@ class DBConnect{
 	public $result;
 
 	public function DBInsert(){
-		$this->database = new mysqli('localhost', 'root', 'd76082167', 'lubycon');
+		$this->database = new mysqli('192.168.0.63', 'lubycon', 'luby', 'lubycon');
 		$this->database->query('SET NAMES UTF-8');
 		if(mysqli_connect_errno()){
 			header("Content-Type: text/html; charset=UTF-8");
