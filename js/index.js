@@ -305,7 +305,7 @@ $(function () //account setting script
     });
         
     
-});
+
 
 /* creat account */
 $(function ()
