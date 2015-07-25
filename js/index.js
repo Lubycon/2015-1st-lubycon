@@ -208,6 +208,14 @@ $(function () { /* designers page continets selcect */
 
 $(function () //account setting script
 {
+    $(document).ready(function ()
+    {
+        $('#clone_div').click(function () {
+            console.log('minus gogo');
+        });
+    });
+    
+
     $(document).scroll(function () { //account setting move banner
         if ($(document).scrollTop() > $('#account_setting_section').offset().top-65 )
         {
@@ -223,7 +231,7 @@ $(function () //account setting script
 
         
         $(document).scroll(function () { //account setting move banner
-            console.log($(document).scrollTop());
+            //console.log($(document).scrollTop());
             if ($(document).scrollTop() > $('#account_setting_section').offset().top -65 && $(document).scrollTop() < $('#basic_info_section').offset().top -80) {
                 $('#account_aside > ul > li').removeClass('selected_account');
                 $('#account_Setting_sub').addClass('selected_account');
@@ -298,9 +306,7 @@ $(function () //account setting script
         i++; //int plus
     });
         
-    $('.lang_minus').bind("click", function () {
-        alert("User clicked on 'foo.'");
-    });
+    
 });
 
 $(function ()

@@ -21,6 +21,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CSS", "CSS", "{907447AC-43C
 		css\normalize.css = css\normalize.css
 		css\personal_page.css = css\personal_page.css
 		css\selectordie.css = css\selectordie.css
+		css\success_account.css = css\success_account.css
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lubycon", "Lubycon", "{5D39FE98-3500-497F-9B52-7C3D3C52E03D}"
@@ -38,6 +39,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lubycon", "Lubycon", "{5D39
 		insight.html = insight.html
 		message.html = message.html
 		personal_page.html = personal_page.html
+		success_account.html = success_account.html
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Main_page", "Main_page", "{9ADD3AEB-AF46-4EFE-B532-183714F15170}"
