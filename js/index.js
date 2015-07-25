@@ -293,6 +293,11 @@ $(function () //account setting script
         $(this).css({ 'border-left': '5px solid #8ec89a', 'width': '187px' });
         $(this).after('<i class="fa fa-check"></i>');
     });
+<<<<<<< HEAD
+=======
+
+    
+>>>>>>> 6372675e9d7c1bae1acf94f1e4a193d3e8dddae5
         $("#lang_clone").append('<br/>');
 
         $('#clone_div > #lang_clone').attr('id', 'lang_clone_' + i);
