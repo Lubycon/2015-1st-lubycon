@@ -1,4 +1,4 @@
-$(function ()
+$(function () //window fadein effect
 {
     $(window).load(function ()
     {
@@ -6,13 +6,10 @@ $(function ()
     });
 });
 
-$(function ()
+$(function () //sign in toggle event
 {
     $('#signin_bt').click(function () {
         $('#login_box').fadeIn(150);
-    });
-    $('#login_box').blur(function () {
-        alert('1');
     });
     /*
     $('body').click(function () {
@@ -25,7 +22,7 @@ $(function ()
     */
 });
 
-$(function ()
+$(function () //language change bt slide and change
 {
 	$('.lang_selected').mouseenter(function()
 	{
@@ -50,7 +47,7 @@ $(function ()
     });
 });
 
-$(function()
+$(function() //gnb hober event
 {
 	$('.bigsub').hover(function()
 	{
@@ -185,10 +182,23 @@ $(function ()  //main_board change
 
 $(function () //contents page category
 {
-    
+    var cate_point = 0
     $('#cate_bt').click(function () {
+        if (cate_point == 0)
+        {
             $('#open_cate_inner').stop().animate({ top: 0 });
+            $('#down_arrow').children().removeClass();
+            $('#down_arrow').children().addClass('fa fa-angle-up');
+            cate_point++;
+        } else if (cate_point == 1)
+        {
+            $('#open_cate_inner').stop().animate({ top: -85 });
+            $('#down_arrow').children().removeClass();
+            $('#down_arrow').children().addClass('fa fa-angle-down');
+            cate_point--;
+        }
     });
+    
 });
 
 $(function () { /* designers page continets selcect */
@@ -206,6 +216,7 @@ $(function () { /* designers page continets selcect */
     });
 });
 
+<<<<<<< HEAD
 $(function () //account setting script
 {
     $(document).ready(function ()
@@ -283,23 +294,14 @@ $(function () //account setting script
         $(this).css({ 'border-left': '5px solid #8ec89a', 'width': '187px' });
         $(this).after('<i class="fa fa-check"></i>');
     });
+=======
+
+>>>>>>> 5dc708ef441ba6b508334575faadcfffb7048c2e
 
 
-    $('#lang_plus').click(function () //clone language div and change id
-    {
-        $("#clone_div").append('<div id="lang_clone"></div>');
-        $("#lang_clone").append('<label>&nbsp;</label>');
-        $('#lang_input_id').clone(true).appendTo('#lang_clone');
-        $('#lang_option_id').clone(true).appendTo('#lang_clone');
-        $("#lang_clone").append('<span id="lang_minus_id" class="lang_minus"><i class="fa fa-minus-circle"></i></span>');
-        $('#lang_public_id').clone(true).appendTo('#lang_clone');
 
-        
-        $('#lang_clone > #lang_input_id').attr('id', 'lang_input_' + i);
-        $('#lang_clone > #lang_option_id').attr('id', 'lang_option_' + i);
-        $('#lang_clone > #lang_public_id').attr('id', 'lang_public_' + i);
-        $('#lang_clone > #lang_minus_id').attr('id', 'lang_minus_' + i);
 
+<<<<<<< HEAD
         $("#lang_clone").append('<br/>');
 
         $('#clone_div > #lang_clone').attr('id', 'lang_clone_' + i);
@@ -308,112 +310,42 @@ $(function () //account setting script
         
     
 });
+=======
+>>>>>>> 5dc708ef441ba6b508334575faadcfffb7048c2e
 
+/* creat account */
 $(function ()
 {
-    $(document).scroll(function () //community subject event
+    $('#dupli_id').click(function ()
     {
-        if ($(document).scrollTop() > 260) { 
-            $('#post_subject_area').css({ "position": "fixed", "top": "36px", "z-index": "2" })
-        } else
-        {
-            $('#post_subject_area').css({ "position": "absolute", "top": "50px" })
-        }
+        $('#check_duplicate_area').show();
     });
 
-    var i = 0;
-
-    $('#con_like_bt').click(function () // like button toggle
+    $('#cancel').click(function ()
     {
-        if (i == 0)
-        {
-            $('#con_like_bt').css('background', '#ec6446');
-            i++;
-        } else
-        {
-            $('#con_like_bt').css('background', '#c1c1c1');
-            i = 0;
+        $('#check_duplicate_area').css({"display":"none"});
+        //('#check_duplicate_area').hide();
+    });
+
+    $('#pass_id, #re_pass_id, #re_pass_id_again').keyup(function () //change pass border color
+    {
+        if ($(this).val() == '0') {
+            $(this).css({ 'border-left': '5px solid #ffbe54', 'width': '187px' });
+            //alert($(this).next().text());
+            $(this).next().removeClass();
+            $(this).next().addClass('fa fa-times');
+        } else if ($(this).val() == '1') {
+            $(this).css({ 'border-left': '5px solid #8ec89a', 'width': '187px' });
+            $(this).next().removeClass();
+            $(this).next().addClass('fa fa-check');
+        } else if ($(this).val() == '') {
+            $(this).css({ 'border-left': '2px solid #D5D5D5', 'width': '190px' });
+            $(this).next().removeClass();
         }
     });
 });
 
-$(function ()
-{
-    
-    $('#file_bt').click(function () // input file fake bt event
-    {
-        $('#file_hide').click();
-    });
-    $('#file_hide').change(function ()
-    {
-        $('#file_text').val($(this).val());
-    });
-});
-
-// input file preview
-$.fn.setPreview = function (opt) {
-    "use strict"
-    var defaultOpt = {
-        inputFile: $(this),
-        img: null,
-        w: 216,
-        h: 216
-    };
-    $.extend(defaultOpt, opt);
-
-    var previewImage = function () {
-        if (!defaultOpt.inputFile || !defaultOpt.img) return;
-
-        var inputFile = defaultOpt.inputFile.get(0);
-        var img = defaultOpt.img.get(0);
-
-        // FileReader
-        if (window.FileReader) {
-            // image ÆÄÀÏ¸¸
-            if (!inputFile.files[0].type.match(/image\//)) return;
-
-            // preview
-            try {
-                var reader = new FileReader();
-                reader.onload = function (e) {
-                    img.src = e.target.result;
-                    img.style.width = defaultOpt.w + 'px';
-                    img.style.height = defaultOpt.h + 'px';
-                    img.style.display = '';
-                }
-                reader.readAsDataURL(inputFile.files[0]);
-            } catch (e) {
-                // exception...
-            }
-            // img.filters (MSIE)
-        } else if (img.filters) {
-            inputFile.select();
-            inputFile.blur();
-            var imgSrc = document.selection.createRange().text;
-
-            img.style.width = defaultOpt.w + 'px';
-            img.style.height = defaultOpt.h + 'px';
-            img.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(enable='true',sizingMethod='scale',src=\"" + imgSrc + "\")";
-            img.style.display = '';
-            // no support
-        } else {
-            // Safari5, ...
-        }
-    };
-
-    // onchange
-    $(this).change(function () {
-        previewImage();
-    });
-};
 
 
-$(document).ready(function () {
-    var opt = {
-        img: $('#img_preview'),
-        w: 216,
-        h: 216
-    };
 
-    $('#file_hide').setPreview(opt);
-});
+    /* creat account */

@@ -178,7 +178,7 @@
         line-height:25px;
         vertical-align:middle;
         text-align:center;
-        background:#ffbe54;
+        background:#ea4126;
         color:#fff;
         margin-left:25px;
         position:absolute;
@@ -301,7 +301,11 @@
         height:36px;
     }
     .location_option .sod_select.custom .sod_label{
-        padding:0px;
+        padding: 0px;
+        text-overflow: ellipsis;
+        width: 81px;
+        display: inline-block;
+        margin-left: -5px;
     }
     .location_option .sod_select.custom .sod_list_wrapper{
         width:121px;
