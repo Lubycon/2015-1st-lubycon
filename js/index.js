@@ -216,11 +216,102 @@ $(function () { /* designers page continets selcect */
     });
 });
 
+<<<<<<< HEAD
+$(function () //account setting script
+{
+    $(document).ready(function ()
+    {
+        $('#clone_div').click(function () {
+            console.log('minus gogo');
+        });
+    });
+    
+
+    $(document).scroll(function () { //account setting move banner
+        if ($(document).scrollTop() > $('#account_setting_section').offset().top-65 )
+        {
+            $('#account_aside').css({ "position": "fixed", "top": "65px" });
+        } else
+        {
+            $('#account_aside').css({ "position": "absolute", "top": "0px" });
+        }
+    });
+    $(document).ready(function () //account setting banner event
+    {
+        
+
+        
+        $(document).scroll(function () { //account setting move banner
+            //console.log($(document).scrollTop());
+            if ($(document).scrollTop() > $('#account_setting_section').offset().top -65 && $(document).scrollTop() < $('#basic_info_section').offset().top -80) {
+                $('#account_aside > ul > li').removeClass('selected_account');
+                $('#account_Setting_sub').addClass('selected_account');
+            } else if ($(document).scrollTop() > $('#basic_info_section').offset().top - 79 && $(document).scrollTop() < $('#contact_info_section').offset().top - 80) {
+                $('#account_aside > ul > li').removeClass('selected_account');
+                $('#basic_info_sub').addClass('selected_account');
+            } else if ($(document).scrollTop() > $('#contact_info_section').offset().top - 79 && $(document).scrollTop() < $('#contact_info_section').offset().top - 70) {
+                $('#account_aside > ul > li').removeClass('selected_account');
+                $('#contact_info_sub').addClass('selected_account');
+            } else if ($(document).scrollTop() == 1360) {
+                $('#account_aside > ul > li').removeClass('selected_account');
+                $('#delete_account_sub').addClass('selected_account');
+            }
+        });
+        $('#account_Setting_sub').click(function () {
+            $("html, body").stop().animate({ scrollTop: ($('#account_setting_section').offset().top) - 65 });
+            $('#account_aside > ul > li').removeClass('selected_account');
+            $('#account_Setting_sub').addClass('selected_account');
+        });
+        $('#basic_info_sub').click(function () {
+            $("html, body").stop().animate({ scrollTop: ($('#basic_info_section').offset().top) - 65 });
+            $('#account_aside > ul > li').removeClass('selected_account');
+            $('#basic_info_sub').addClass('selected_account');
+        });
+        $('#contact_info_sub').click(function () {
+            $("html, body").stop().animate({ scrollTop: ($('#contact_info_section').offset().top) - 65 });
+            $('#account_aside > ul > li').removeClass('selected_account');
+            $('#contact_info_sub').addClass('selected_account');
+        });
+        $('#delete_account_sub').click(function () {
+            $("html, body").stop().animate({ scrollTop: ($('#delete_account_section').offset().top) - 65 });
+            $('#account_aside > ul > li').removeClass('selected_account');
+            $('#delete_account_sub').addClass('selected_account');
+        });
+       
+});
+
+    var i = 2;
+    $('#Change_pass').click(function () //change pass remove attr
+    {
+        $('#pass ,#repeat_pass, #repeat_pass_again').removeAttr('disabled');
+    });
+    $('#pass ,#repeat_pass, #repeat_pass_again').focus(function () //change pass border color
+    {
+        $(this).css({ 'border-left': '5px solid #ffbe54', 'width': '187px' });
+        $(this).after('<i class="fa fa-times"></i>');
+    }).blur(function ()
+    {
+        $(this).css({ 'border-left': '5px solid #8ec89a', 'width': '187px' });
+        $(this).after('<i class="fa fa-check"></i>');
+    });
+=======
+
+>>>>>>> 5dc708ef441ba6b508334575faadcfffb7048c2e
 
 
 
 
+<<<<<<< HEAD
+        $("#lang_clone").append('<br/>');
 
+        $('#clone_div > #lang_clone').attr('id', 'lang_clone_' + i);
+        i++; //int plus
+    });
+        
+    
+});
+=======
+>>>>>>> 5dc708ef441ba6b508334575faadcfffb7048c2e
 
 /* creat account */
 $(function ()
