@@ -53,29 +53,55 @@ $(function () //account setting script
     {
         $('#pass ,#repeat_pass, #repeat_pass_again').removeAttr('disabled');
     });
-    $('#pass ,#repeat_pass, #repeat_pass_again').keyup(function () //change pass border color
+    
+
+
+    $('#pass ,#repeat_pass, #repeat_pass_again').blur(function () //change pass border color
     {
-        if( $(this).val() == '0' )
-        {
-            $(this).css({ 'border-left': '5px solid #ffbe54', 'width': '187px' });
-            $(this).next(i).removeClass();
-            $(this).next(i).addClass('fa fa-times');
-        } else if ($(this).val() == '1')
-        {
-            $(this).css({ 'border-left': '5px solid #8ec89a', 'width': '187px' });
-            $(this).next(i).removeClass();
-            $(this).next(i).addClass('fa fa-check');
-        } else if ($(this).val() == '')
-        {
-            $(this).css({ 'border-left': '2px solid #D5D5D5', 'width': '190px' });
-            $(this).next(i).removeClass();
-        }
-        /*$(this).css({ 'border-left': '5px solid #ffbe54', 'width': '187px' });
-        $(this).after('<i class="fa fa-times"></i>');
-        }).blur(function () {
-        $(this).css({ 'border-left': '5px solid #8ec89a', 'width': '187px' });
-        $(this).after('<i class="fa fa-check"></i>');
-        */
+
+        // id_overlapping Logic
+        // 추가적인 비밀번호 로직 필요
+        var data = $(this).val();
+        var Id = $(this).attr('id');
+        var CurrentId = '#'+Id;
+
+        $.ajax({
+            type:"POST",
+            url:"./php/overlap_check.php",
+            data:'check='+ data ,
+            cache: false,
+            success: function(data){
+
+                if(data == "")
+                {   console.log('empty');
+                    $(CurrentId).css({ 'border-left': '2px solid #D5D5D5', 'width': '190px' });
+                    $(CurrentId).next(i).removeClass();
+                }
+                else
+                {
+                    if(data == 1)//overlapping
+                    {
+                        console.log('overlap');
+                        $(CurrentId).css({ 'border-left': '2px solid #D5D5D5', 'width': '190px' });
+                        $(CurrentId).next(i).removeClass();
+                        $(CurrentId).next(i).addClass('fa fa-times');
+                    }
+                    else if(data == 0)
+                    {
+                        console.log('non-overlap');
+                        $(CurrentId).css({ 'border-left': '5px solid #8ec89a', 'width': '187px' });
+                        $(CurrentId).next(i).removeClass();
+                        $(CurrentId).next(i).addClass('fa fa-check');
+                    }
+                    else
+                    {
+                        console.log("exception");
+                    }
+                }
+            }
+
+        });
+
     });
 
 
@@ -103,7 +129,7 @@ $(function () //account setting script
 
     $(document).on("click", ".lang_minus", function () {
         $(this).parent().remove();
-        // Ŭ�� �� ó�� 
+        // Å¬¸¯ ½Ã Ã³¸® 
 
     });
 
@@ -139,7 +165,7 @@ $.fn.setPreview = function (opt) {
 
         // FileReader
         if (window.FileReader) {
-            // image ���ϸ�
+            // image ÆÄÀÏ¸¸
             if (!inputFile.files[0].type.match(/image\//)) return;
 
             // preview
