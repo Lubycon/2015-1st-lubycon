@@ -230,8 +230,6 @@ $(function () { /* designers page continets selcect */
         $('.continets_list').stop().slideUp(300);
     });
 });
-
-
 $(function () //account setting script
 {
     $(document).ready(function ()
@@ -309,16 +307,12 @@ $(function () //account setting script
         $(this).css({ 'border-left': '5px solid #8ec89a', 'width': '187px' });
         $(this).after('<i class="fa fa-check"></i>');
     });
-
         $("#lang_clone").append('<br/>');
 
         $('#clone_div > #lang_clone').attr('id', 'lang_clone_' + i);
         i++; //int plus
     });
         
-    
-
-
 /* creat account */
 $(function ()
 {
