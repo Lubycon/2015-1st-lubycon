@@ -66,18 +66,28 @@ form
 {
 	width: 80px;
 	height: 80px;
-	line-height: 95px;
-	text-align: center;
-	background: #8ec89a;
-	border-radius: 50%;
 	margin:0px auto;
 	margin-top: 80px;
 	opacity: 0;
+	position:relative;
 }
+	#cir_body
+	{
+		width: 80px;
+		height: 80px;
+		border-radius: 50%;
+		position:absolute;
+	}
 	#circle i
 	{
 		color: #ffffff;
-		font-size: 2em;
+		font-size: 35px;
+		z-index: 2;
+		position:absolute;
+		left:50%;
+		top:50%;
+		margin-left:-18px;
+		margin-top:-18px;
 	}
 
 
