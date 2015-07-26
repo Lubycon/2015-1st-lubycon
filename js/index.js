@@ -216,7 +216,6 @@ $(function () { /* designers page continets selcect */
     });
 });
 
-<<<<<<< HEAD
 $(function () //account setting script
 {
     $(document).ready(function ()
@@ -294,14 +293,6 @@ $(function () //account setting script
         $(this).css({ 'border-left': '5px solid #8ec89a', 'width': '187px' });
         $(this).after('<i class="fa fa-check"></i>');
     });
-=======
-
->>>>>>> 5dc708ef441ba6b508334575faadcfffb7048c2e
-
-
-
-
-<<<<<<< HEAD
         $("#lang_clone").append('<br/>');
 
         $('#clone_div > #lang_clone').attr('id', 'lang_clone_' + i);
@@ -309,10 +300,6 @@ $(function () //account setting script
     });
         
     
-});
-=======
->>>>>>> 5dc708ef441ba6b508334575faadcfffb7048c2e
-
 /* creat account */
 $(function ()
 {
