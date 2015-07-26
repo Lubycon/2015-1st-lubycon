@@ -81,6 +81,21 @@ $(function () { //search box click value reset start
     });
 });		//search box click value reset end
 
+//main figure button animation start
+$(function(){
+    $('#main_figure button').hover(
+        function (){
+            $(this).animate({opacity:0.5, width:160},200);
+        },
+        function (){
+            $(this).animate({opacity:1, width:150},200);
+        }
+    );
+});
+//main figure button animation end
+
+
+
 $(function()  //slider change 
 {
 	$('#font_bt').click(function()
