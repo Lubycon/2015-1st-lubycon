@@ -81,6 +81,21 @@ $(function () { //search box click value reset start
     });
 });		//search box click value reset end
 
+//main figure button animation start
+$(function(){
+    $('#main_figure button').hover(
+        function (){
+            $(this).animate({opacity:0.5, width:160},200);
+        },
+        function (){
+            $(this).animate({opacity:1, width:150},200);
+        }
+    );
+});
+//main figure button animation end
+
+
+
 $(function()  //slider change 
 {
 	$('#font_bt').click(function()
@@ -215,7 +230,6 @@ $(function () { /* designers page continets selcect */
         $('.continets_list').stop().slideUp(300);
     });
 });
-
 $(function () //account setting script
 {
     $(document).ready(function ()
@@ -227,7 +241,7 @@ $(function () //account setting script
     
 
     $(document).scroll(function () { //account setting move banner
-        if ($(document).scrollTop() > $('#account_setting_section').offset().top-65 )
+        if ($(document).scrollTop() > $('#account_setting_section').offset().top-65)
         {
             $('#account_aside').css({ "position": "fixed", "top": "65px" });
         } else
@@ -242,13 +256,13 @@ $(function () //account setting script
         
         $(document).scroll(function () { //account setting move banner
             //console.log($(document).scrollTop());
-            if ($(document).scrollTop() > $('#account_setting_section').offset().top -65 && $(document).scrollTop() < $('#basic_info_section').offset().top -80) {
+            if ($(document).scrollTop() > $('#account_setting_section').offset().top-65 && $(document).scrollTop() < $('#basic_info_section').offset().top -80) {
                 $('#account_aside > ul > li').removeClass('selected_account');
                 $('#account_Setting_sub').addClass('selected_account');
-            } else if ($(document).scrollTop() > $('#basic_info_section').offset().top - 79 && $(document).scrollTop() < $('#contact_info_section').offset().top - 80) {
+            } else if ($(document).scrollTop() > $('#basic_info_section').offset().top-79 && $(document).scrollTop() < $('#contact_info_section').offset().top - 80) {
                 $('#account_aside > ul > li').removeClass('selected_account');
                 $('#basic_info_sub').addClass('selected_account');
-            } else if ($(document).scrollTop() > $('#contact_info_section').offset().top - 79 && $(document).scrollTop() < $('#contact_info_section').offset().top - 70) {
+            } else if ($(document).scrollTop() > $('#contact_info_section').offset().top-79 && $(document).scrollTop() < $('#contact_info_section').offset().top - 70) {
                 $('#account_aside > ul > li').removeClass('selected_account');
                 $('#contact_info_sub').addClass('selected_account');
             } else if ($(document).scrollTop() == 1360) {
@@ -299,7 +313,6 @@ $(function () //account setting script
         i++; //int plus
     });
         
-    
 /* creat account */
 $(function ()
 {
