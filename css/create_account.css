@@ -84,7 +84,7 @@
             border:none;
             background:#fff;
             margin-top:5px;
-            width:13px;
+            width:16px;
         }
         #create_account_area #account_box .term_check_box img{
             cursor:pointer;
@@ -96,7 +96,8 @@
             line-height:25px;
             clear:both;
         }
-        #create_account_area #account_box #account_idpass  .account_submit{
+     
+        #create_account_area #account_box #account_idpass .account_submit{
             width:210px;
             height:35px;
             margin:0px;

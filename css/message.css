@@ -11,6 +11,7 @@
     #main_figure h2 {
         color: #fff;
         font-size: 40px;
+        font-weight: 200;
     }
 
 #navsel{
@@ -58,9 +59,14 @@
         .fa-bars{
             font-size: 24px;
             margin-right: 10px;
+            margin-top: -4px;
             vertical-align: middle;
         }
-        
+
+        .continets_selected{
+            font-weight: 200;
+        }
+            
 
     .continets_list{
         width:165px;
@@ -78,6 +84,7 @@
             height:30px;
             line-height:30px;
             font-size:16px;
+            font-weight: 200;
         }
         .continets_list li:hover {
             background:#ffbe54;
@@ -135,7 +142,7 @@
                     width:50px;
                 }
             #message_box #message_history ul li h4{
-                font-size: 23px;
+                font-size: 20px;
                 height: 22px;
                 line-height: 18px;
                 margin-top:3px;
@@ -180,6 +187,7 @@
             border:none;
             border-radius:2px;
             color:#fff;
+            font-size:15px;
 
             position:absolute;
             top:10px;

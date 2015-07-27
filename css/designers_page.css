@@ -11,6 +11,7 @@
     #main_figure h2 {
         color: #fff;
         font-size: 40px;
+        font-weight: 200;
     }
 
 #navsel{
@@ -30,6 +31,7 @@
         font-size:22px;
         padding-top:18px;
         cursor:pointer;
+        letter-spacing: -1px;
     }
 
 #nav_guide{
@@ -63,6 +65,10 @@
     .global_icon img{
         vertical-align:middle;
     }
+    
+    .continets_selected{
+        font-weight: 200;
+    }
 
     .continets_list{
         width:165px;
@@ -79,6 +85,7 @@
             height:30px;
             line-height:30px;
             font-size:16px;
+            font-weight: 200;
         }
         .continets_list li:hover {
             background:#ffbe54;
