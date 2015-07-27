@@ -228,6 +228,7 @@ $(function () { /* designers page continets selcect */
         $('.continets_list').stop().slideUp(300);
     });
 });
+/*
 $(function () //account setting script
 {
     $(document).ready(function ()
@@ -310,22 +311,11 @@ $(function () //account setting script
         $('#clone_div > #lang_clone').attr('id', 'lang_clone_' + i);
         i++; //int plus
     });
-        
+ */
 /* creat account */
 $(function ()
 {
-    $('#dupli_id').click(function ()
-    {
-        $('#check_duplicate_area').show();
-    });
-
-    $('#cancel').click(function ()
-    {
-        $('#check_duplicate_area').css({"display":"none"});
-        //('#check_duplicate_area').hide();
-    });
-
-    $('#pass_id, #re_pass_id, #re_pass_id_again').keyup(function () //change pass border color
+    $('#email_id, #pass_id, #re_pass_id, #re_pass_id_again').keyup(function () //change pass border color
     {
         if ($(this).val() == '0') {
             $(this).css({ 'border-left': '5px solid #ffbe54', 'width': '187px' });
