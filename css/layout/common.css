@@ -87,7 +87,7 @@ h1 /* main logo */ {
         width: 100%;
         border-bottom-left-radius: 2px;
         border-bottom-right-radius: 2px;
-        box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5);
+        box-shadow: 0px 1px 1px 1px rgba(0,0,0,0.5);
         display: none;
         z-index:2;
     }
@@ -177,7 +177,7 @@ h1 /* main logo */ {
         width:100%;
         position:absolute;
         z-index:4;
-        box-shadow: 1px 5px 5px 0px rgba(0,0,0,0.5);
+        box-shadow: 0px 1px 1px 1px rgba(0,0,0,0.5);
         display:none;
     }
     #after_signin ul li{
@@ -322,7 +322,7 @@ h1 /* main logo */ {
         border-bottom-right-radius: 2px;
         position: absolute;
         top: 50px;
-        box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5);
+        box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.3);
         background-color: #f2974c;
         padding-top: 5px;
         padding-bottom: 5px;
@@ -360,7 +360,6 @@ h1 /* main logo */ {
     border-radius: 10px;
     margin-top: 65px;
     margin-bottom: 15px;
-    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.1);
 }
 
     #main_search_text {
