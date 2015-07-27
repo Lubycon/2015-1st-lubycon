@@ -129,7 +129,7 @@ $(function () //account setting script
 
     $(document).on("click", ".lang_minus", function () {
         $(this).parent().remove();
-        // Å¬¸¯ ½Ã Ã³¸® 
+        // clone div remove
 
     });
 
