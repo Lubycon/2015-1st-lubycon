@@ -10,10 +10,12 @@
 }
 .contents_view{
     position:absolute;
-    top:10px;
+    width:900px;
+    height:1255px;
+    top:30px;
     left:50%;
     margin-left:-450px;
-    width:900px;
+    margin-bottom:30px;
     background:#fff;
     z-index:3;
     border-radius:5px;
@@ -24,6 +26,7 @@
     width:100%;
     height:55px;
     background:#08141f;
+    border-top-left-radius: 5px;
 }
 .contents_view header h3{
     color:#fff;
@@ -41,17 +44,18 @@
 }
 
 .contents_view #bookmark{
-    width:42px;
-    height:35px;
-    background:none;
+    width:55px;
+    height:55px;
+    background:#1f2e3c;
     position:absolute;
     top:0px;
-    right:10px;
+    right:0px;
+    border-top-right-radius: 5px;
 }
 .contents_view #bookmark i{
     font-size: 30px;
-    margin-left: 8px;
-    margin-top: 12px;
+    margin-left: 13px;
+    margin-top: 13px;
     color:#ff8f10;
     cursor:pointer;
 }
@@ -64,6 +68,7 @@
 .contents_view .contents_img{
 }
 .contents_view .contents_slide{
+    width: 631px;
     height:110px;
     background:#000;
     color:#fff;
@@ -103,50 +108,62 @@
     padding:0px;
     background:#488ccb;
 }
-.contents_view #comment_box #comment_bt i{
-    color:#fff;
-    font-size:48px;
+    .contents_view #comment_box #comment_bt i{
+        color:#fff;
+        font-size:48px;
+    }
+
+#comment_list
+{
+    width:630px;
+    height:300px;
+    overflow:auto;
+    position:relative;
+    top:30px;
 }
 
-.contents_view #comment_box .comment_div{
+
+
+.contents_view #comment_box #comment_list .comment_div{
     position:relative;
     border-top: 1px solid #DADADA;
     float: left;
     margin-top: 20px;
     padding-top:13px;
-    width: 100%;
+    width: 97%;
 }
 
-.contents_view #comment_box .comment_div .comment_pic{
+.contents_view #comment_box #comment_list .comment_div .comment_pic{
     float:left;
     width:50px;
     height:50px;
     margin-right:8px;
 }
-.contents_view #comment_box .comment_div .comment_pic img{
+.contents_view #comment_box #comment_list .comment_div .comment_pic img{
     width:50px;
     height:50px;
 }
 
-.contents_view #comment_box .comment_div h4{
+.contents_view #comment_box #comment_list .comment_div h4{
     line-height:20px;
     margin-top:-4px;
     margin-bottom:6px;
     font-size:18px;
 }
-.contents_view #comment_box .comment_div .comment_contents{
+.contents_view #comment_box #comment_list .comment_div .comment_contents{
     line-height:19px;
     margin-left: 58px
 }
-.contents_view #comment_box .comment_div .comment_time{
+.contents_view #comment_box #comment_list .comment_div .comment_time{
     position:absolute;
     top:8px;
     right:0px;
-    color:#7c7c7c;
+    color:#a1a1a1;
+    font-size:13px;
 }
 .con_right{
     width:246px;
-    height:1359px;
+    height:1200px;
     float:right;
     padding:0px 11px;
     border-left: 1px solid #d1d1d1;
