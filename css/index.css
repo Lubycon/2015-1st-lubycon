@@ -14,7 +14,9 @@
     #main_figure h2 {
         padding-top: 100px;
         color: #fff;
-        font-size: 40px;
+        font-size: 43px;
+        font-weight:200;
+        letter-spacing: 3px;
     }
 
     #main_figure button {
@@ -27,6 +29,7 @@
         font-size: 18px;
         letter-spacing: 4px;
         margin-top: 50px;
+        font-weight: 200;
     }
    
 /* main section end */
@@ -57,6 +60,7 @@
         display: block;
         float: left;
         text-align: center;
+        font-weight: 200;
         margin-top: 15px;
         border-radius: 2px;
         color: #fff;
@@ -192,7 +196,7 @@
             float: left;
             text-align: center;
             line-height: 23px;
-            padding-top: 23px;
+            padding-top: 19px;
         }
 
             #designers_intro_disc #designers_disc_name h3 {
@@ -203,8 +207,9 @@
             }
 
             #designers_intro_disc #designers_disc_name h4 {
+                margin-top:6px;
                 color: #737373;
-                font-weight: 200;
+                font-weight: 400;
             }
 
     #designers_disc_inform {
@@ -492,6 +497,7 @@
         margin: 0px auto;
         margin-top: 20px;
         color: #2e82ff;
+        font-weight: 400;
     }
 
         #gotocom:hover {

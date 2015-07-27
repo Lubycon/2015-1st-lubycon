@@ -68,6 +68,7 @@ h1 /* main logo */ {
     line-height: 50px;
     float: left;
     text-align: center;
+    font-weight: 200;
 }
 
 .menu_bar {
@@ -117,6 +118,7 @@ h1 /* main logo */ {
             line-height: 30px;
             color: #fff;
             float: left;
+            font-weight: 200;
         }
 
         #main_gnb ul li i {
@@ -186,6 +188,7 @@ h1 /* main logo */ {
         background:#464646;
         color:#fff;
         text-align:center;
+        font-weight: 200;
     }
         #after_signin ul li:hover {
             background:#ffbe54;

@@ -45,10 +45,10 @@
     position:relative;
 }
     #nav_guide .contents_bt {
-        color: #FFF;
+        color: #ffffff;
         width: 165px;
-        font-size: 20px;
-        font-weight: 300;
+        font-size: 18px;
+        font-weight: 200;
         height: 50px;
         line-height: 50px;
         background: #000;
@@ -59,6 +59,12 @@
             font-size: 24px;
             margin-right: 10px;
             vertical-align: middle;
+            margin-top:-4px;
+        }
+
+        .continets_selected
+        {
+            font-weight: 200;
         }
         
 
@@ -78,6 +84,7 @@
             height:30px;
             line-height:30px;
             font-size:16px;
+            font-weight: 200;
         }
         .continets_list li:hover {
             background:#ffbe54;
@@ -158,6 +165,7 @@
         margin-left:75px;
         padding:9px;
         cursor:pointer;
+        font-weight: 200;
     }
     .fa-check{
         width:25px;
@@ -229,6 +237,7 @@
         border-radius:2px;
         padding:8px 15px;
         margin-bottom:60px;
+        font-weight: 200;
     }
     #submit_bt{
         width:210px;
@@ -239,6 +248,7 @@
         color:#fff;
         margin-top:55px;
         margin-left:215px;
+        font-weight: 200;
     }
     #basic_desc{
         width:210px;
@@ -365,6 +375,7 @@
     margin-left: 75px;
     padding: 9px 26px;
     cursor: pointer;
+    font-weight: 200;
 }
 #file_text{
     color:#464646;

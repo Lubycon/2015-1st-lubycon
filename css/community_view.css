@@ -83,12 +83,10 @@
     }
     #post_banner h5{
         font-size:16px;
-        font-weight:300;
         color:#333333;
     }
     #post_banner h6{
         font-size:13px;
-        font-weight:300;
         margin-top:10px;
         color:#777777;
     }
@@ -128,7 +126,7 @@
     padding: 15px 20px;
 }
     #post_contents p {
-        font-size:20px;
+        font-size:18px;
     }
 
 #con_like_bt {
@@ -209,6 +207,8 @@
         margin-left:10px;
         color:#fff;
         letter-spacing:0.5px;
+        font-weight: 200;
+        font-size: 15px;
     }
     #post_edit_box button:hover {
         background:#ffbc54;
@@ -224,8 +224,8 @@
     #comment_box #comment_count {
         color: #8d8d8d;
         text-align: right;
-        margin-right: 10px;
         margin-top: 10px;
+        font-size:15px;
     }
 
     #comment_box #comment_text {
@@ -281,12 +281,14 @@
             line-height: 20px;
             margin-top: -4px;
             margin-bottom: 6px;
-            font-size: 18px;
+            font-size: 19px;
         }
 
         #comment_box .comment_div .comment_contents {
             line-height: 19px;
             margin-left: 58px;
+            font-size:15px;
+            color:#444444;
         }
 
         #comment_box .comment_div .comment_time {
@@ -294,6 +296,8 @@
             top: 8px;
             right: 0px;
             color: #7c7c7c;
+            font-weight: 200;
+            font-size: 13px;
         }
 
 #comment_more_box {

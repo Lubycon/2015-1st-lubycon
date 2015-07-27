@@ -11,6 +11,7 @@
     #main_figure h2 {
         color: #fff;
         font-size: 40px;
+        font-weight: 200;
     }
 
 #navsel{
@@ -58,8 +59,8 @@
     #category h3 {
         color:#fff;
         text-align:center;
-        font-size:20px;
-        font-weight:300;
+        font-size:22px;
+        font-weight:200;
         height:16px;
         line-height:16px;
         padding-top:12px;
@@ -106,6 +107,7 @@
                         float:left;
                         color:#fff;
                         text-align:center;
+                        font-weight: 200;
                     }
 
 #contents_box{
@@ -246,11 +248,12 @@
 #contents_pager li{
     float:left;
     margin:0px 5px;
-    font-size:25px;
+    font-size:23px;
     width:35px;
     height:35px;
     line-height:31px;
     text-align:center;
     margin-top:17px;
+    font-weight: 200;
 }
 /* main section end */
