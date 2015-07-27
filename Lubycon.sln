@@ -21,6 +21,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CSS", "CSS", "{907447AC-43C
 		css\normalize.css = css\normalize.css
 		css\personal_page.css = css\personal_page.css
 		css\selectordie.css = css\selectordie.css
+		css\slider.css = css\slider.css
 		css\success_account.css = css\success_account.css
 	EndProjectSection
 EndProject
@@ -72,6 +73,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "JS", "JS", "{1E319400-173E-
 		js\jquery.flexslider.js = js\jquery.flexslider.js
 		js\selectordie.demo.js = js\selectordie.demo.js
 		js\selectordie.min.js = js\selectordie.min.js
+		js\slider.js = js\slider.js
 	EndProjectSection
 EndProject
 Global

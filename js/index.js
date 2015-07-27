@@ -11,15 +11,12 @@ $(function () //sign in toggle event
     $('#signin_bt').click(function () {
         $('#login_box').fadeIn(150);
     });
-    /*
-    $('body').click(function () {
-        $('#login_box').fadeOut(150);
+
+    $('#sign_out').click(function () //logout
+    {
+        $("#after_signin").hide();
+        $("#signin_bt").show();
     });
-   
-    $('body').not('#login_box').click(function () {
-        alert('1');
-    });
-    */
 });
 
 $(function () //language change bt slide and change
@@ -92,6 +89,7 @@ $(function(){
         }
     );
 });
+
 //main figure button animation end
 
 
