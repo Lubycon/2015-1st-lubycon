@@ -12,9 +12,9 @@
     position:absolute;
     width:630px;
     height:1255px;
-    top:30px;
+    top:40px;
     left:50%;
-    margin-left:-473px;
+    margin-left:-468px;
     margin-bottom:30px;
     background:#fff;
     z-index:3;
@@ -24,30 +24,31 @@
 
 .contents_view header{
     width:100%;
-    height:55px;
+    height:65px;
     background:#08141f;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
 .contents_view header h3{
-    color:#fff;
-    font-size: 23px;
-    padding-left: 13px;
-    line-height: 40px;
+    color:#ffffff;
+    font-size: 28px;
+    padding-left: 22px;
+    line-height: 46px;
     height:35px;
     letter-spacing:1px;
 }
 .contents_view header h4{
-    color:#fff;
-    font-size:14px;
-    line-height:12px;
-    padding-left:13px;
+    color:#ffffff;
+    font-size:17px;
+    font-weight:200;
+    line-height:24px;
+    padding-left:22px;
 }
 
 .contents_view #bookmark{
-    width:55px;
-    height:55px;
-    background:#1f2e3c;
+    width:65px;
+    height:65px;
+    background:#1f2e43;
     position:absolute;
     top:0px;
     right:0px;
@@ -55,8 +56,8 @@
 }
 .contents_view #bookmark i{
     font-size: 30px;
-    margin-left: 13px;
-    margin-top: 13px;
+    margin-left: 18px;
+    margin-top: 17px;
     color:#ff8f10;
     cursor:pointer;
 }
@@ -82,7 +83,7 @@
 .contents_view #comment_box #comment_count{
      color:#8d8d8d;
      text-align:right;
-     margin-right:10px;
+     font-size: 15px;
      margin-top:10px;
  }
 .contents_view #comment_box #comment_text
@@ -99,6 +100,9 @@
     margin:0px;
     padding: 6px;
     line-height: 20px;
+
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
 }
 .contents_view #comment_box #comment_bt{
     float:left;
@@ -108,6 +112,8 @@
     margin:0px;
     padding:0px;
     background:#488ccb;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
 }
     .contents_view #comment_box #comment_bt i{
         color:#fff;
@@ -118,7 +124,7 @@
 {
     width:630px;
     height:300px;
-    overflow:auto;
+    overflow:hidden;
     position:relative;
     top:30px;
 }
@@ -149,27 +155,29 @@
     line-height:20px;
     margin-top:-4px;
     margin-bottom:6px;
-    font-size:18px;
+    font-size:19px;
 }
 .contents_view #comment_box #comment_list .comment_div .comment_contents{
     line-height:19px;
-    margin-left: 58px
+    margin-left: 58px;
+    color: #444444;
+    font-size: 15px;
 }
 .contents_view #comment_box #comment_list .comment_div .comment_time{
     position:absolute;
     top:8px;
     right:0px;
-    color:#a1a1a1;
+    color:#7c7c7c;
     font-size:13px;
 }
 .con_right{
     width:246px;
-    height:900px;
+    height:auto;
     position:absolute;
     padding:0px 10px;
-    top:30px;
+    top:40px;
     left:50%;
-    margin-left:200px;
+    margin-left:186px;
     margin-bottom:30px;
     background: #ffffff;
     border-radius: 5px;
@@ -180,11 +188,11 @@
     text-align:center;
     background:#08141f;
     color:#fff;
-    font-size:19px;
+    font-size:20px;
     margin-left:-11px;
     width:270px;
-    height:55px;
-    line-height:55px;
+    height:39px;
+    line-height:39px;
     border:none;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
@@ -215,7 +223,8 @@
 .con_right .designer_info h5{
     width:186px;
     float:left;
-    font-size:13px;
+    font-size:15px;
+    font-weight:400;
 }
     .con_right .designer_info h5 i {
         margin-right:5px;
@@ -227,7 +236,7 @@
     height:35px;
     line-height: 33px;
     border:none;
-    border-radius: 2px;
+    border-radius: 3px;
     background:#818181;
     color:#fff;
     font-size:14px;
@@ -247,7 +256,7 @@
     height:55px;
     background:#0069b4;
     border:none;
-    border-radius: 2px;
+    border-radius: 3px;
     margin-bottom:20px;
 }
 
@@ -275,6 +284,7 @@
         color:#fff;
         font-size:32px;
         vertical-align:middle;
+        margin-top:7px;
     }
     #con_like_score{
         color:#f54c26;
@@ -328,14 +338,17 @@
     width:100%;
     height:58px;
     border:none;
-    border-radius:2px;
+    border-radius:3px;
     margin-top:10px;
     color:#fff;
     text-align:center;
+    padding-top: 4px;
+    font-weight: 200;
+    font-size: 17px;
 }
     .share_sns i {
-        margin-left: -22px;
-        margin-right: 15px;
+        margin-left: -11px;
+        margin-right: 23px;
         font-size: 24px;
         vertical-align: middle;
     }
@@ -346,8 +359,8 @@
     background:#12abf2;
 }
 .share_twit i{
-    margin-left: -38px;
-    margin-right: 19px;
+    margin-left: -22px;
+    margin-right: 32px;
 }
 #contents_tag{
     width:232px;
@@ -355,6 +368,8 @@
     padding:0px 7px;
     padding-bottom:6px;
     margin-top:50px;
+    margin-bottom: 10px;
+    border-radius: 3px;
 }
 
     #contents_tag li {
@@ -364,4 +379,5 @@
         display:inline-block;
         padding:0px 8px;
         margin-top:7px;
+        font-size: 15px;
     }

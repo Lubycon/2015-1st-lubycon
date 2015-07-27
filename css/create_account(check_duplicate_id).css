@@ -76,9 +76,11 @@
             background:#47bf7e;
             width:85px;
             margin-left:110px;
+            font-weight:200;
         }
         #check_duplicate_window #cancle{
-            background:#ed6252;
+            background:none;
+            color:#ed6252;
             width:85px;
             margin-left:7px;
         }

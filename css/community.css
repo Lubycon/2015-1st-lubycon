@@ -23,14 +23,20 @@
         color:#ffc76b !important;
         border-bottom:3px solid #ffc76b;
     }
+    
+    #lnb_nav > ul
+    {
+        width: 100%;
+    }
 
     #lnb_nav > ul > li{
         float:left;
         padding:0px 8px;
         color:#787878;
         font-size:22px;
-        padding-top:18px;
+        padding-top:19px;
         cursor:pointer;
+        letter-spacing: -1px;
     }
 
 #nav_guide{
@@ -179,7 +185,7 @@
         color:#fff;
         font-size:17px;
         float:right;
-        box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.1);
+        box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.1);
         font-weight: 200;
     }
 /*main header end*/
@@ -205,8 +211,8 @@
 
         .tab_item table th {
             color: #fff;
-            font-size: 1.02em;
-            font-weight: 300;
+            font-size: 17px;
+            font-weight: 200;
         }
 
         .tab_item table tr {
