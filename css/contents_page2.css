@@ -6,7 +6,7 @@
     position:fixed;
     top:0;
     left:0;
-    z-index:1;
+    z-index:3;
 }
 .contents_view{
     position:absolute;
@@ -17,7 +17,6 @@
     background:#fff;
     z-index:3;
     border-radius:5px;
-    padding-bottom:30px;
 }
 
 
@@ -44,28 +43,19 @@
 .contents_view #bookmark{
     width:42px;
     height:35px;
-    background:#60ffeb;
+    background:none;
     position:absolute;
     top:0px;
-    right:30px;
+    right:10px;
 }
 .contents_view #bookmark i{
-    font-size: 26px;
+    font-size: 30px;
     margin-left: 8px;
     margin-top: 12px;
     color:#ff8f10;
     cursor:pointer;
 }
-#bookmark_tri {
-        position: absolute;
-        z-index: 2;
-        border-color: #60ffeb transparent transparent transparent;
-        border-style: solid;
-        border-width: 12px 21px 0px 21px;
-        height: 0px;
-        width: 0px;
-        top: 35px;
-    }
+
 #con_left{
     width:630px;
     height:auto;
@@ -156,15 +146,17 @@
 }
 .con_right{
     width:246px;
+    height:1359px;
     float:right;
-    padding:0px 12px;
+    padding:0px 11px;
+    border-left: 1px solid #d1d1d1;
 }
 .con_right #designer_tap{
     text-align:center;
     background:#818181;
     color:#fff;
     margin-left:-12px;
-    width:270px;
+    width:269px;
 }
 
 .con_right .designer_info{
