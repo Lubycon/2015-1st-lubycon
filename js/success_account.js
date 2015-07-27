@@ -1,16 +1,18 @@
 
 $(function(){
 	////////////////////////////////////////////first animation start
-	$("#thanks").animate({opacity:1},700);//1s	
+	$("#thanks").animate({opacity:1},1000);//1s
+	$("#thanks2").animate({opacity:1},1000);//1s	
 	$("#circle").animate({opacity:1},700);//1s
     draw_circle();			
 	/////////////////////////////////////////////first animation end
-	$("#thanks").queue(function(){
+	$("#circle").queue(function(){
 		/////////////////////////////////////////second animation start					
-		$("#thanks2").animate({opacity:1},700);//1s
+		$("#cir_body").animate({marginLeft:-5, marginTop:-5, width:90, height:90},230);
+		$("#cir_body").animate({marginLeft:0, marginTop:0, width:80, height:80},230);
 		/////////////////////////////////////////second animation end		
 		$("#thanks2").queue(function(){
-			////////////////////////////////////third animation start			
+			////////////////////////////////////third animation start
 			setTimeout("go_index()", 4000);//4s
 			setInterval("remove_rect()", 1000);//1s
 			///////////////////////////////////third animation end		
