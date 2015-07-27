@@ -33,40 +33,11 @@
 
 /* slide section */
 #slide_section {
-    width: 1000px;
     height: 500px;
     margin: 0px auto;
     position: relative;
 }
 
-#slider1, #slider2, #slider3 {
-    width: 1000px;
-    height: 383px;
-    background: #d0d;
-    padding-top: 13px;
-    margin: 0px auto;
-    background: #e6e6e6;
-    border:1px solid #cdcdcd;
-    border-radius: 10px;
-    position: absolute;
-    display: block;
-}
-
-#slider1 {
-    z-index: 2;
-}
-
-.slider_item ul {
-    border-radius: 10px;
-    overflow: hidden;
-    width:975px;
-    margin:0px auto;
-    background:#fff;
-}
-
-    .slider_item > ul > li {
-        float: left;
-    }
 
 #slide_section #slide_lnb input {
     display: none;
@@ -192,7 +163,7 @@
     #desingers_intro_img {
         width: 480px;
         height: 180px;
-        background: url(../ch/img/thumbnail/thumbnail_02.png);
+        background: url(../ch/img/idea.jpg) 50% 19%;
     }
 
     #designers_intro_disc {
