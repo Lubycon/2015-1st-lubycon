@@ -22,7 +22,7 @@ $(function(){
 
 
 function go_index(){
-		location.href = "index.html";
+	location.href = "index.html";
 };
 
 
@@ -35,12 +35,11 @@ function remove_rect(){
 
 function draw_circle(){
 	var context = $('#cir_body')[0].getContext('2d');
-	var dig1 = 360/3000;
 	var numalt = 3600;
 	var i = 0;
 		
-	context.translate(65,65);//center
-	context.rotate(315*(Math.PI/90));//start point and draw speed
+	context.translate(66,66);//center
+	context.rotate(315*(Math.PI/42));//start point and draw speed
 	
 	setInterval(function(){
 		context.beginPath();
