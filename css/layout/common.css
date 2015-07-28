@@ -130,6 +130,32 @@ h1 /* main logo */ {
             float: left;
         }
 
+#addcontent_bt
+{
+    position:relative;
+    width:130px;
+    height:32px;
+    background:#ec6446;
+    border:none;
+    border-radius:3px;
+    margin-top:9px;
+    right:-45px;
+
+    color:#ffffff;
+    font-size:15px;
+
+    opacity:1;
+}
+
+#addcontent_bt i
+{
+    margin-right:4px;
+    margin-bottom:1px;
+    vertical-align: middle;
+}
+
+
+
 #signin_bt {
     position: relative;
     width: 125px;
