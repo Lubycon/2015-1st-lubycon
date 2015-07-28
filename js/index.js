@@ -480,11 +480,27 @@ $(function(){
 
 /*waiting for resisting start*/
 $(function(){
-    $("#thanks").animate({opacity:1},1000);//1s
-    $("#thanks2").animate({opacity:1},1000);//1s
-    $("#circle").animate({opacity:1},1000);  
-    $("#circle").animate({marginTop:78.5, marginBottom:78.5, width:85, height:85},230);
-    $("#circle").animate({marginTop:80, marginBottom:80, width:80, height:80},230);
+    $("#thanks").animate({opacity:1},500);
+    $("#thanks").queue(function(){
+        $("#thanks2").animate({opacity:1},500);//
+        $("#thanks2").queue(function(){
+            $("#circle").animate({opacity:1},800); 
+        });
+    }); 
+});
+
+$(function(){
+    $('#circle').hover(
+        function (){
+            $(this).stop().animate({opacity:0.7},200);
+            $('#gotomain').stop().animate({opacity:1},500);
+        },
+        function (){
+            stop();
+            $(this).stop().animate({opacity:1},200);
+            $('#gotomain').stop().animate({opacity:0},500);
+        }
+    );
 });
 /*waiting for resisting end*/
 
