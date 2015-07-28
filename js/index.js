@@ -326,13 +326,16 @@ $(function ()
         $(this).next().addClass('fa fa-times');
 
         $('#email_check').text('worng email').show();
-        return false;
+
+        email_com = false;
 
     } else if ($(this).val() == '') { //blank
         $(this).css({ 'border-left': '2px solid #D5D5D5', 'width': '190px' });
         $(this).next().removeClass();
 
         $('#email_check').text('').show();
+
+        email_com = false;
 
     } else { //complite
         $(this).css({ 'border-left': '5px solid #8ec89a', 'width': '187px' });
@@ -406,12 +409,16 @@ $(function ()
             $(this).css({ 'border-left': '2px solid #D5D5D5', 'width': '190px' });
             $(this).next().removeClass();
 
+            pass_com = false;
+
             $('#pass_check').text('').show();
             }
         else if ($(this).val() != $('#pass_id').val()) { //not same
             $(this).css({ 'border-left': '5px solid #ffbe54', 'width': '187px' });
             $(this).next().removeClass();
             $(this).next().addClass('fa fa-times');
+
+            pass_com = false;
 
             $('#re_pass_check').text('not same pass').show();
 
@@ -423,7 +430,6 @@ $(function ()
 
             $('#re_pass_check').text('').show();
             pass_com = true;
-            console.log(pass_com)
 
         }
         
@@ -438,12 +444,16 @@ $(function ()
             $(this).css({ 'border-left': '2px solid #D5D5D5', 'width': '190px' });
             $(this).next().removeClass();
 
+            nick_com = false;
+
             $('#nick_check').text('').show();
 
         } else if (jQuery.inArray($(this).val(),abuse_name) >= 0) { //abuse names
             $(this).css({ 'border-left': '5px solid #ffbe54', 'width': '187px' });
             $(this).next().removeClass();
             $(this).next().addClass('fa fa-times');
+
+            nick_com = false;
 
             $('#nick_check').text('abuse name').show();
 
@@ -455,6 +465,8 @@ $(function ()
             $(this).next().addClass('fa fa-times');
 
             $('#nick_check').text('duplicated name').show();
+
+            nick_com = false;
 
         } else{ //complite
             $(this).css({ 'border-left': '5px solid #8ec89a', 'width': '187px' });
@@ -470,6 +482,11 @@ $(function ()
 
     $(document).click(function () //submit able event
     {
+        console.log(email_com == true)
+        console.log(pass_com == true)
+        console.log(nick_com == true)
+        console.log($('.check_box:checked').length == 2)
+
         //console.log($('.check_box:checked').length == 2);
         if ( email_com && nick_com && pass_com && $('.check_box:checked').length == 2)
         {
@@ -481,9 +498,18 @@ $(function ()
         }
         
     });
-    $('#account_submit').click(function ()
+
+    $(document).keyup(function () //submit able event
     {
-        $.trim($('#nick_id, #pass_id, #re_pass_id').val());
+        //console.log($('.check_box:checked').length == 2);
+        if (email_com && nick_com && pass_com && $('.check_box:checked').length == 2) {
+            $('.account_submit').removeAttr('disabled');
+            $('.account_submit').css('background', '#47bf7e');
+        } else {
+            $('.account_submit').attr('disabled', 'disabled');
+            $('.account_submit').css('background', '#c1c1c1');
+        }
+
     });
 });
 
