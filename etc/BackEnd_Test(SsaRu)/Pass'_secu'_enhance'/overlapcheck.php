@@ -1,21 +1,9 @@
 <?php
-
-//include library file
-require_once './Database.php';
-
-// class instance
-$database = new DBconnect;
-
-// Database connect
-$database->DBInsert();
-
+// check password
 // get parameter from overlapcheck.js
 $check = trim($_POST["check"]);
 
-// make the inquiry query
-$database->query = "select exists(select * from member where email = '".$check."')";
-	$database->DBQuestion();
-	$result = $database->result->fetch_array();
+$deny[] =
 
 
 if($check == ""){
