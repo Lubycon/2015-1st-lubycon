@@ -26,8 +26,8 @@
     width:100%;
     height:65px;
     background:#08141f;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
 }
 .contents_view header h3{
     color:#ffffff;
@@ -53,11 +53,12 @@
     top:0px;
     right:0px;
     border-top-right-radius: 5px;
+    text-align: center;
 }
 .contents_view #bookmark i{
     font-size: 30px;
-    margin-left: 18px;
-    margin-top: 17px;
+    vertical-align:middle;
+    line-height: 65px;
     color:#ff8f10;
     cursor:pointer;
 }
@@ -89,25 +90,26 @@
 .contents_view #comment_box #comment_text
 {
     float:left;
-    width: 518px;
-    height: 66px;
+    width: 85%;
+    height: 68px;
 
-    min-width: 518px;
-    min-height:66px;
-    max-width: 518px;
-    max-height:66px;
+    min-width: 85%;
+    min-height:68px;
+    max-width: 85%;
+    max-height:68px;
 
     margin:0px;
-    padding: 6px;
+    padding: 4px;
     line-height: 20px;
 
+    border:1px solid #000;
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
 }
 .contents_view #comment_box #comment_bt{
     float:left;
     width:78px;
-    height:80px;
+    height:78px;
     border:none;
     margin:0px;
     padding:0px;
@@ -182,7 +184,6 @@
     background: #ffffff;
     border-radius: 5px;
     z-index: 3;
-    overflow: hidden;
 }
 .con_right #designer_tap{
     text-align:center;
@@ -194,8 +195,8 @@
     height:39px;
     line-height:39px;
     border:none;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
 }
 
 .con_right .designer_info{

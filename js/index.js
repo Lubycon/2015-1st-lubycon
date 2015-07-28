@@ -477,3 +477,24 @@ $(function(){
 });
 
 /*about us*/
+
+/*waiting for resisting start*/
+$(function(){
+    $("#thanks").animate({opacity:1},1000);//1s
+    $("#thanks2").animate({opacity:1},1000);//1s
+    $("#circle").animate({opacity:1},1000);  
+    $("#circle").animate({marginTop:78.5, marginBottom:78.5, width:85, height:85},230);
+    $("#circle").animate({marginTop:80, marginBottom:80, width:80, height:80},230);
+});
+/*waiting for resisting end*/
+
+
+
+
+
+
+
+
+
+
+
