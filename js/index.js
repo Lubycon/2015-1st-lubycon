@@ -315,6 +315,35 @@ $(function () //account setting script
 /* creat account */
 $(function ()
 {
+    var email_com;
+    $('#email_id').keyup(function () //create account email logic
+    { 
+    var regex = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/;
+
+    if (regex.test($(this).val()) === false) {
+        $(this).css({ 'border-left': '5px solid #ffbe54', 'width': '187px' });
+        $(this).next().removeClass();
+        $(this).next().addClass('fa fa-times');
+
+        $('#email_check').text('worng email').show();
+        return false;
+
+    } else if ($(this).val() == '') { //blank
+        $(this).css({ 'border-left': '2px solid #D5D5D5', 'width': '190px' });
+        $(this).next().removeClass();
+
+        $('#email_check').text('').show();
+
+    } else { //complite
+        $(this).css({ 'border-left': '5px solid #8ec89a', 'width': '187px' });
+        $(this).next().removeClass();
+        $(this).next().addClass('fa fa-check');
+        $('#email_check').text('').show();
+
+        email_com = true;
+    }
+    });
+
     $('#pass_id').keyup(function () //creat account password logic
     {
         if ($(this).val() == '') { //blank
@@ -338,11 +367,11 @@ $(function ()
 
             $('#pass_check').text('8~12 wirte plz').show();
 
-        } else if ($(this).val().length >= 8 && $(this).val().length <= 16) { // 8ÀÚ ÀÌ»ó
+        } else if ($(this).val().length >= 8 && $(this).val().length <= 16) { // complite
             $(this).css({ 'border-left': '5px solid #8ec89a', 'width': '187px' });
             $(this).next().removeClass();
             $(this).next().addClass('fa fa-check');
-
+            $(this).val($.trim($(this).val()));
             $('#pass_check').text('').show();
         };
 
@@ -372,6 +401,7 @@ $(function ()
     var pass_com;
     $('#re_pass_id').keyup(function () // repeat pass check
     {
+        $(this).val($.trim($(this).val()));
         if ($(this).val() == '') { //blank
             $(this).css({ 'border-left': '2px solid #D5D5D5', 'width': '190px' });
             $(this).next().removeClass();
@@ -389,6 +419,7 @@ $(function ()
             $(this).css({ 'border-left': '5px solid #8ec89a', 'width': '187px' });
             $(this).next().removeClass();
             $(this).next().addClass('fa fa-check');
+            $(this).val($.trim($(this).val()));
 
             $('#re_pass_check').text('').show();
             pass_com = true;
@@ -402,6 +433,7 @@ $(function ()
     var nick_com;
     $('#nick_id').keyup(function () //creat account nick name logic
     {
+        $(this).val($.trim($(this).val()));
         if ($(this).val() == '') { //blank
             $(this).css({ 'border-left': '2px solid #D5D5D5', 'width': '190px' });
             $(this).next().removeClass();
@@ -428,6 +460,7 @@ $(function ()
             $(this).css({ 'border-left': '5px solid #8ec89a', 'width': '187px' });
             $(this).next().removeClass();
             $(this).next().addClass('fa fa-check');
+            $(this).val($.trim($(this).val()));
 
             $('#nick_check').text('').show();
             nick_com = true;
@@ -438,7 +471,7 @@ $(function ()
     $(document).click(function () //submit able event
     {
         //console.log($('.check_box:checked').length == 2);
-        if (nick_com && pass_com && $('.check_box:checked').length == 2)
+        if ( email_com && nick_com && pass_com && $('.check_box:checked').length == 2)
         {
             $('.account_submit').removeAttr('disabled');
             $('.account_submit').css('background', '#47bf7e');
@@ -447,6 +480,10 @@ $(function ()
             $('.account_submit').css('background', '#c1c1c1');
         }
         
+    });
+    $('#account_submit').click(function ()
+    {
+        $.trim($('#nick_id, #pass_id, #re_pass_id').val());
     });
 });
 
@@ -477,24 +514,3 @@ $(function(){
 });
 
 /*about us*/
-
-/*waiting for resisting start*/
-$(function(){
-    $("#thanks").animate({opacity:1},1000);//1s
-    $("#thanks2").animate({opacity:1},1000);//1s
-    $("#circle").animate({opacity:1},1000);  
-    $("#circle").animate({marginTop:78.5, marginBottom:78.5, width:85, height:85},230);
-    $("#circle").animate({marginTop:80, marginBottom:80, width:80, height:80},230);
-});
-/*waiting for resisting end*/
-
-
-
-
-
-
-
-
-
-
-
