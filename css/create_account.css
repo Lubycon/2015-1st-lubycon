@@ -93,9 +93,18 @@
         #create_account_area #account_box .term_check_box .check_box{
             border:none;
             background:#fff;
+            margin-top:10px;
+            width:14px !important;
+            height:14px !important;
+        }
+        #create_account_area #account_box .email_resive{
+            border:none;
+            background:#fff;
             margin-top:5px;
             width:14px !important;
             height:14px !important;
+            display:block;
+            margin:5px auto;
         }
         #create_account_area #account_box .term_check_box img{
             cursor:pointer;

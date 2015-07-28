@@ -471,7 +471,7 @@ $(function ()
     $(document).click(function () //submit able event
     {
         //console.log($('.check_box:checked').length == 2);
-        if ( email_com && nick_com && pass_com && $('.check_box:checked').length == 2)
+        if (email_com && nick_com && pass_com && $('.term_check:checked').length == 2)
         {
             $('.account_submit').removeAttr('disabled');
             $('.account_submit').css('background', '#47bf7e');
