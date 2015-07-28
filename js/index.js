@@ -514,3 +514,29 @@ $(function(){
 });
 
 /*about us*/
+
+/*waiting for resisting start*/
+$(function(){
+    $("#thanks").animate({opacity:1},500);
+    $("#thanks").queue(function(){
+        $("#thanks2").animate({opacity:1},500);//
+        $("#thanks2").queue(function(){
+            $("#circle").animate({opacity:1},800); 
+        });
+    }); 
+});
+
+$(function(){
+    $('#circle').hover(
+        function (){
+            $(this).stop().animate({opacity:0.7},200);
+            $('#gotomain').stop().animate({opacity:1},500);
+        },
+        function (){
+            stop();
+            $(this).stop().animate({opacity:1},200);
+            $('#gotomain').stop().animate({opacity:0},500);
+        }
+    );
+});
+/*waiting for resisting end*/

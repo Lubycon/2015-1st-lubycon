@@ -62,6 +62,7 @@ form
 		color: #444444;
 	}
 
+
 #circle
 {
 	width: 80px;
@@ -72,17 +73,27 @@ form
 	position:relative;
 	background:#b1b1b1;
 	border-radius: 50%;
+	cursor:pointer;
 }
-	#circle i
+	#circle #lubyicon
 	{
-		color: #ffffff;
-		font-size: 35px;
 		z-index: 2;
 		position:absolute;
-		left:50%;
-		top:50%;
-		margin-left:-18px;
-		margin-top:-18px;
+		top:14%;
+		left:13%;
+	}
+
+	#circle #gotomain
+	{
+		width: 105px;
+		height: 10px;
+		color:#333333;
+		position: absolute;
+		text-align: center;
+		top:123%;
+		left:-12%;
+		font-weight: 400;
+		opacity:0;
 	}
 
 
