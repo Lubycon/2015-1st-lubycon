@@ -94,7 +94,8 @@
             border:none;
             background:#fff;
             margin-top:5px;
-            width:16px;
+            width:14px !important;
+            height:14px !important;
         }
         #create_account_area #account_box .term_check_box img{
             cursor:pointer;
