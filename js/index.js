@@ -63,6 +63,14 @@ $(function() //gnb hober event
 	});
 });
 
+$(function(){ //add contents button start
+    $('#addcontent_bt').hover(function(){
+        $(this).stop().animate({opacity:0.9},200);
+    },function(){
+        $(this).stop().animate({opacity:1},200);
+    });
+});
+
 $(function () { //search box click value reset start
     var search_box = $('#main_search_text');
 
