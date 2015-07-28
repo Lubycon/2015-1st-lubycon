@@ -59,6 +59,16 @@
             text-align:center;
             margin-left:5px;
         }
+        .form_check{
+            color:#ea4126;
+            font-size: 12px;
+            margin-left: 140px;
+            margin-top: -16px;
+            display:none;
+            height: 16px;
+            line-height: 13px;
+        }
+
         #create_account_area #account_box .term_check_box{
             width:200px;
             height:115px;
@@ -80,7 +90,7 @@
         #create_account_area #account_box .term_check_box p{
             color:#8a8a8a;
         }
-        #create_account_area #account_box .term_check_box #check_box{
+        #create_account_area #account_box .term_check_box .check_box{
             border:none;
             background:#fff;
             margin-top:5px;
@@ -103,7 +113,8 @@
             margin:0px;
             padding:0px;
             border:none;
-            background:#47bf7e;
+            background:#c1c1c1;
+            /*background:#47bf7e; apply */
             color:#fff;
             font-size:19px;
             margin-left:108px;

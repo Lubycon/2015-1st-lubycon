@@ -315,21 +315,138 @@ $(function () //account setting script
 /* creat account */
 $(function ()
 {
-    $('#email_id, #pass_id, #re_pass_id, #re_pass_id_again').keyup(function () //change pass border color
+    $('#pass_id').keyup(function () //creat account password logic
     {
-        if ($(this).val() == '0') {
+        if ($(this).val() == '') { //blank
+            $(this).css({ 'border-left': '2px solid #D5D5D5', 'width': '190px' });
+            $(this).next().removeClass();
+
+            $('#pass_check').text('').show();
+
+        } else if ($(this).val().match(/[^0-9]/g) == null) //문자한개필요
+        {
             $(this).css({ 'border-left': '5px solid #ffbe54', 'width': '187px' });
-            //alert($(this).next().text());
             $(this).next().removeClass();
             $(this).next().addClass('fa fa-times');
-        } else if ($(this).val() == '1') {
+
+            $('#pass_check').text('you must insert alpabet').show();
+
+        } else if ($(this).val().length < 8 || $(this).val().length > 16) {  // 8자보다 짧을때
+            $(this).css({ 'border-left': '5px solid #ffbe54', 'width': '187px' });
+            $(this).next().removeClass();
+            $(this).next().addClass('fa fa-times');
+
+            $('#pass_check').text('8~12 wirte plz').show();
+
+        } else if ($(this).val().length >= 8 && $(this).val().length <= 16) { // 8자 이상
             $(this).css({ 'border-left': '5px solid #8ec89a', 'width': '187px' });
             $(this).next().removeClass();
             $(this).next().addClass('fa fa-check');
-        } else if ($(this).val() == '') {
+
+            $('#pass_check').text('').show();
+        };
+
+        // 동일한 문자가 3회 이상 반복되는 경우
+        var val = $(this).val();
+        var ch = '';
+        var cnt = 0;
+        for (var i = 0 ; i < val.length ; i++) {
+            if (ch == val.charAt(i)) {
+                cnt++;
+
+                if (cnt > 2) {
+                    $(this).css({ 'border-left': '5px solid #ffbe54', 'width': '187px' });
+                    $(this).next().removeClass();
+                    $(this).next().addClass('fa fa-times');
+
+                    $('#pass_check').text('3word repeat').show();
+                    break;
+                }
+            }
+            else {
+                ch = val.charAt(i);
+                cnt = 1;
+            }
+        };
+    });
+    var pass_com;
+    $('#re_pass_id').keyup(function () // repeat pass check
+    {
+        if ($(this).val() == '') { //blank
             $(this).css({ 'border-left': '2px solid #D5D5D5', 'width': '190px' });
             $(this).next().removeClass();
+
+            $('#pass_check').text('').show();
+            }
+        else if ($(this).val() != $('#pass_id').val()) { //not same
+            $(this).css({ 'border-left': '5px solid #ffbe54', 'width': '187px' });
+            $(this).next().removeClass();
+            $(this).next().addClass('fa fa-times');
+
+            $('#re_pass_check').text('not same pass').show();
+
+        } else if ($(this).val() == $('#pass_id').val()) { //complite
+            $(this).css({ 'border-left': '5px solid #8ec89a', 'width': '187px' });
+            $(this).next().removeClass();
+            $(this).next().addClass('fa fa-check');
+
+            $('#re_pass_check').text('').show();
+            pass_com = true;
+            console.log(pass_com)
+
         }
+        
+    });
+
+    var abuse_name = new Array('sex','bitch')
+    var nick_com;
+    $('#nick_id').keyup(function () //creat account nick name logic
+    {
+        if ($(this).val() == '') { //blank
+            $(this).css({ 'border-left': '2px solid #D5D5D5', 'width': '190px' });
+            $(this).next().removeClass();
+
+            $('#nick_check').text('').show();
+
+        } else if (jQuery.inArray($(this).val(),abuse_name) >= 0) { //abuse names
+            $(this).css({ 'border-left': '5px solid #ffbe54', 'width': '187px' });
+            $(this).next().removeClass();
+            $(this).next().addClass('fa fa-times');
+
+            $('#nick_check').text('abuse name').show();
+
+            //console.log(jQuery.inArray($('#nick_id').val(), abuse_name))
+
+        } else if ($(this).val() == '2') { //duplicate names
+            $(this).css({ 'border-left': '5px solid #ffbe54', 'width': '187px' });
+            $(this).next().removeClass();
+            $(this).next().addClass('fa fa-times');
+
+            $('#nick_check').text('duplicated name').show();
+
+        } else{ //complite
+            $(this).css({ 'border-left': '5px solid #8ec89a', 'width': '187px' });
+            $(this).next().removeClass();
+            $(this).next().addClass('fa fa-check');
+
+            $('#nick_check').text('').show();
+            nick_com = true;
+
+        }
+    });
+
+    $(document).click(function () //submit able event
+    {
+        //console.log($('.check_box:checked').length == 2);
+        if (nick_com && pass_com && $('.check_box:checked').length == 2)
+        {
+            $('.account_submit').removeAttr('disabled');
+            $('.account_submit').css('background', '#47bf7e');
+        } else {
+            $('.account_submit').attr('disabled', 'disabled');
+            $('.account_submit').css('background', '#c1c1c1');
+        }
+        
     });
 });
 
