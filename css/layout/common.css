@@ -139,7 +139,7 @@ h1 /* main logo */ {
     border:none;
     border-radius:3px;
     margin-top:9px;
-    right:-45px;
+    float:right;
 
     color:#ffffff;
     font-size:15px;

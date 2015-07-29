@@ -16,6 +16,7 @@ $(function () //sign in toggle event
     {
         $("#after_signin").hide();
         $("#signin_bt").show();
+        $("#addcontent_bt").hide();
     });
 });
 
@@ -323,27 +324,32 @@ $(function () //account setting script
 /* creat account */
 $(function ()
 {
+    var regx = /[`;',./~!@\#$%<>^&*\()\-=+_\’]/gi;
+    var space = / /gi
+    var regex = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/; //email check 
+
     var email_com;
     $('#email_id').keyup(function () //create account email logic
     { 
-    var regex = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/;
+        
+    if ($(this).val() == '') { //blank
+            $(this).css({ 'border-left': '2px solid #D5D5D5', 'width': '190px' });
+            $(this).next().removeClass();
 
-    if (regex.test($(this).val()) === false) {
+            $('#email_check').text('').show();
+
+            email_com = false;
+    } else if (regex.test($(this).val()) === false) {
+
+        
+
         $(this).css({ 'border-left': '5px solid #ffbe54', 'width': '187px' });
         $(this).next().removeClass();
         $(this).next().addClass('fa fa-times');
 
         $('#email_check').text('worng email').show();
 
-        email_com = false;
-
-    } else if ($(this).val() == '') { //blank
-        $(this).css({ 'border-left': '2px solid #D5D5D5', 'width': '190px' });
-        $(this).next().removeClass();
-
-        $('#email_check').text('').show();
-
-        email_com = false;
+        email_com = false
 
     } else { //complite
         $(this).css({ 'border-left': '5px solid #8ec89a', 'width': '187px' });
@@ -357,6 +363,8 @@ $(function ()
 
     $('#pass_id').keyup(function () //creat account password logic
     {
+        //console.log($(this).val().match('null') == null == false)
+        //console.log(regx.test($(this).val()));
         if ($(this).val() == '') { //blank
             $(this).css({ 'border-left': '2px solid #D5D5D5', 'width': '190px' });
             $(this).next().removeClass();
@@ -376,14 +384,33 @@ $(function ()
             $(this).next().removeClass();
             $(this).next().addClass('fa fa-times');
 
-            $('#pass_check').text('8~12 wirte plz').show();
+            $('#pass_check').text('8~16 wirte plz').show();
 
-        } else if ($(this).val().length >= 8 && $(this).val().length <= 16) { // complite
+        } else if ($(this).val().match(regx)) //특수문자 불가
+        {
+            $(this).css({ 'border-left': '5px solid #ffbe54', 'width': '187px' });
+            $(this).next().removeClass();
+            $(this).next().addClass('fa fa-times');
+
+            $('#pass_check').text('you can not write !@#%').show();
+
+        } else if ($(this).val().match(space) || $(this).val().match('null') == null == false) //공백 불가
+        {
+            $(this).css({ 'border-left': '5px solid #ffbe54', 'width': '187px' });
+            $(this).next().removeClass();
+            $(this).next().addClass('fa fa-times');
+
+            $('#pass_check').text('you can not write null').show();
+
+        } else if($(this).val().length >= 8 && $(this).val().length <= 16) { // complite
             $(this).css({ 'border-left': '5px solid #8ec89a', 'width': '187px' });
             $(this).next().removeClass();
             $(this).next().addClass('fa fa-check');
-            $(this).val($.trim($(this).val()));
+            $(this).val($(this).val().toLowerCase()); // lowercase and uppercase same
+
             $('#pass_check').text('').show();
+
+            console.log($(this).val());
         };
 
         // 동일한 문자가 3회 이상 반복되는 경우
@@ -490,10 +517,10 @@ $(function ()
 
     $(document).click(function () //submit able event
     {
-        console.log(email_com == true)
-        console.log(pass_com == true)
-        console.log(nick_com == true)
-        console.log($('.check_box:checked').length == 2)
+        //console.log(email_com == true)
+        //console.log(pass_com == true)
+        //console.log(nick_com == true)
+        //console.log($('.check_box:checked').length == 2)
 
         //console.log($('.check_box:checked').length == 2);
         if ( email_com && nick_com && pass_com && $('.check_box:checked').length == 2)
