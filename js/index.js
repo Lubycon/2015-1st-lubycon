@@ -343,11 +343,11 @@ $(function ()
 
         
 
-        $(this).css({ 'border-left': '5px solid #ffbe54', 'width': '187px' });
+        $(this).css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
         $(this).next().removeClass();
         $(this).next().addClass('fa fa-times');
 
-        $('#email_check').text('worng email').show();
+        $('#email_check').text('wrong email adress').show();
 
         email_com = false
 
@@ -373,22 +373,22 @@ $(function ()
 
         } else if ($(this).val().match(/[^0-9]/g) == null) //문자한개필요
         {
-            $(this).css({ 'border-left': '5px solid #ffbe54', 'width': '187px' });
+            $(this).css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
             $(this).next().removeClass();
             $(this).next().addClass('fa fa-times');
 
-            $('#pass_check').text('you must insert alpabet').show();
+            $('#pass_check').text('you must use least one alpabet').show();
 
         } else if ($(this).val().length < 8 || $(this).val().length > 16) {  // 8자보다 짧을때
-            $(this).css({ 'border-left': '5px solid #ffbe54', 'width': '187px' });
+            $(this).css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
             $(this).next().removeClass();
             $(this).next().addClass('fa fa-times');
 
-            $('#pass_check').text('8~16 wirte plz').show();
+            $('#pass_check').text('8~16 write plz').show();
 
         } else if ($(this).val().match(regx)) //특수문자 불가
         {
-            $(this).css({ 'border-left': '5px solid #ffbe54', 'width': '187px' });
+            $(this).css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
             $(this).next().removeClass();
             $(this).next().addClass('fa fa-times');
 
@@ -396,7 +396,7 @@ $(function ()
 
         } else if ($(this).val().match(space) || $(this).val().match('null') == null == false) //공백 불가
         {
-            $(this).css({ 'border-left': '5px solid #ffbe54', 'width': '187px' });
+            $(this).css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
             $(this).next().removeClass();
             $(this).next().addClass('fa fa-times');
 
@@ -422,11 +422,11 @@ $(function ()
                 cnt++;
 
                 if (cnt > 2) {
-                    $(this).css({ 'border-left': '5px solid #ffbe54', 'width': '187px' });
+                    $(this).css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
                     $(this).next().removeClass();
                     $(this).next().addClass('fa fa-times');
 
-                    $('#pass_check').text('3word repeat').show();
+                    $('#pass_check').text('Repeat 3 words').show();
                     break;
                 }
             }
@@ -449,13 +449,13 @@ $(function ()
             $('#pass_check').text('').show();
             }
         else if ($(this).val() != $('#pass_id').val()) { //not same
-            $(this).css({ 'border-left': '5px solid #ffbe54', 'width': '187px' });
+            $(this).css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
             $(this).next().removeClass();
             $(this).next().addClass('fa fa-times');
 
             pass_com = false;
 
-            $('#re_pass_check').text('not same pass').show();
+            $('#re_pass_check').text('It`s not same').show();
 
         } else if ($(this).val() == $('#pass_id').val()) { //complite
             $(this).css({ 'border-left': '5px solid #8ec89a', 'width': '187px' });
@@ -470,7 +470,7 @@ $(function ()
         
     });
 
-    var abuse_name = new Array('sex','bitch')
+    var abuse_name = new Array('sex','bitch','pussy','cunt','fuck','fucking')
     var nick_com;
     $('#nick_id').keyup(function () //creat account nick name logic
     {
@@ -484,7 +484,7 @@ $(function ()
             $('#nick_check').text('').show();
 
         } else if (jQuery.inArray($(this).val(),abuse_name) >= 0) { //abuse names
-            $(this).css({ 'border-left': '5px solid #ffbe54', 'width': '187px' });
+            $(this).css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
             $(this).next().removeClass();
             $(this).next().addClass('fa fa-times');
 
@@ -495,7 +495,7 @@ $(function ()
             //console.log(jQuery.inArray($('#nick_id').val(), abuse_name))
 
         } else if ($(this).val() == '2') { //duplicate names
-            $(this).css({ 'border-left': '5px solid #ffbe54', 'width': '187px' });
+            $(this).css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
             $(this).next().removeClass();
             $(this).next().addClass('fa fa-times');
 
