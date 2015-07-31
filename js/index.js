@@ -322,16 +322,17 @@ $(function () //account setting script
     });
  */
 /* creat account */
-$(function ()
+$(function form_check (fo)
 {
-    var regx = /[`;',./~!@\#$%<>^&*\()\-=+_\¡¯]/gi;
-    var space = / /gi
-    var regex = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/; //email check 
+    var regx = /[`;',./~!@\#$%<>^&*\()\-=+_\¡¯]/gi; //Æ¯¼ö¹®ÀÚ
+    var space = / /gi //°ø¹é
+    var regex = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/; //email check
+    var nick_check = /^[A-Za-z0-9+]*$/; ;
+    //var korean_check = /[¤¡-¤¾|¤¿-¤Ó|°¡-ÆR]/;
 
     var email_com;
-    $('#email_id').keyup(function () //create account email logic
+    $('#email_id').on("keydown keyup click blur ready", function () //create account email logic
     { 
-        
     if ($(this).val() == '') { //blank
             $(this).css({ 'border-left': '2px solid #D5D5D5', 'width': '190px' });
             $(this).next().removeClass();
@@ -361,7 +362,7 @@ $(function ()
     }
     });
 
-    $('#pass_id').keyup(function () //creat account password logic
+    $('#pass_id').on("keydown keyup click blur ready", function () //creat account password logic
     {
         //console.log($(this).val().match('null') == null == false)
         //console.log(regx.test($(this).val()));
@@ -379,13 +380,6 @@ $(function ()
 
             $('#pass_check').text('you must use least one alpabet').show();
 
-        } else if ($(this).val().length < 8 || $(this).val().length > 16) {  // 8ÀÚº¸´Ù ÂªÀ»¶§
-            $(this).css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
-            $(this).next().removeClass();
-            $(this).next().addClass('fa fa-times');
-
-            $('#pass_check').text('8~16 write plz').show();
-
         } else if ($(this).val().match(regx)) //Æ¯¼ö¹®ÀÚ ºÒ°¡
         {
             $(this).css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
@@ -402,7 +396,23 @@ $(function ()
 
             $('#pass_check').text('you can not write null').show();
 
-        } else if($(this).val().length >= 8 && $(this).val().length <= 16) { // complite
+        } else if ($(this).val().length < 8 || $(this).val().length > 16) {  // 8ÀÚº¸´Ù ÂªÀ»¶§
+            $(this).css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
+            $(this).next().removeClass();
+            $(this).next().addClass('fa fa-times');
+
+            $('#pass_check').text('8~16 write plz').show();
+
+        } else if ($(this).val() != $('#re_pass_id').val() && $('#re_pass_id').val() != '') { //not same repeat pass
+            $('#re_pass_id').css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
+            $('#re_pass_id').next().removeClass();
+            $('#re_pass_id').next().addClass('fa fa-times');
+
+            pass_com = false;
+
+            $('#re_pass_check').text('It`s not same').show();
+
+        } else if ($(this).val().length >= 8 && $(this).val().length <= 16) { // complite
             $(this).css({ 'border-left': '5px solid #8ec89a', 'width': '187px' });
             $(this).next().removeClass();
             $(this).next().addClass('fa fa-check');
@@ -411,6 +421,16 @@ $(function ()
             $('#pass_check').text('').show();
 
             console.log($(this).val());
+
+            if ($(this).val() == $('#re_pass_id').val())
+            {
+                $('#re_pass_id').css({ 'border-left': '5px solid #8ec89a', 'width': '187px' });
+                $('#re_pass_id').next().removeClass();
+                $('#re_pass_id').next().addClass('fa fa-check');
+
+                $('#re_pass_check').text('').show();
+                pass_com = true;
+            };
         };
 
         // µ¿ÀÏÇÑ ¹®ÀÚ°¡ 3È¸ ÀÌ»ó ¹Ýº¹µÇ´Â °æ¿ì
@@ -437,9 +457,8 @@ $(function ()
         };
     });
     var pass_com;
-    $('#re_pass_id').keyup(function () // repeat pass check
+    $('#re_pass_id').on("keydown keyup click blur ready", function () // repeat pass check
     {
-        $(this).val($.trim($(this).val()));
         if ($(this).val() == '') { //blank
             $(this).css({ 'border-left': '2px solid #D5D5D5', 'width': '190px' });
             $(this).next().removeClass();
@@ -447,8 +466,7 @@ $(function ()
             pass_com = false;
 
             $('#pass_check').text('').show();
-            }
-        else if ($(this).val() != $('#pass_id').val()) { //not same
+        }else if ($(this).val() != $('#pass_id').val()) { //not same
             $(this).css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
             $(this).next().removeClass();
             $(this).next().addClass('fa fa-times');
@@ -461,7 +479,6 @@ $(function ()
             $(this).css({ 'border-left': '5px solid #8ec89a', 'width': '187px' });
             $(this).next().removeClass();
             $(this).next().addClass('fa fa-check');
-            $(this).val($.trim($(this).val()));
 
             $('#re_pass_check').text('').show();
             pass_com = true;
@@ -470,11 +487,12 @@ $(function ()
         
     });
 
-    var abuse_name = new Array('sex','bitch','pussy','cunt','fuck','fucking')
+    var abuse_name = new Array('sex', 'bitch', 'pussy', 'cunt', 'fuck', 'fucking' ,'dart');
+
     var nick_com;
-    $('#nick_id').keyup(function () //creat account nick name logic
+    $('#nick_id').on("keydown keyup click blur ready", function () //creat account nick name logic
     {
-        $(this).val($.trim($(this).val()));
+        //console.log(jQuery.inArray($('#nick_id').val(), nick_array));
         if ($(this).val() == '') { //blank
             $(this).css({ 'border-left': '2px solid #D5D5D5', 'width': '190px' });
             $(this).next().removeClass();
@@ -503,11 +521,30 @@ $(function ()
 
             nick_com = false;
 
-        } else{ //complite
+        } else if (!nick_check.test($(this).val())) //¿µ¾î,¼ýÀÚ ¿Ü ºÒ°¡
+        {
+            $(this).css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
+            $(this).next().removeClass();
+            $(this).next().addClass('fa fa-times');
+
+            $('#nick_check').text('you can write only english and number').show();
+
+            nick_com = false;
+
+        } else if ($(this).val().match(space) || $(this).val().match('null') == null == false) //°ø¹é ºÒ°¡
+        {
+            $(this).css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
+            $(this).next().removeClass();
+            $(this).next().addClass('fa fa-times');
+
+            $('#nick_check').text('you can not write null').show();
+
+            nick_com = false;
+
+        } else { //complite
             $(this).css({ 'border-left': '5px solid #8ec89a', 'width': '187px' });
             $(this).next().removeClass();
             $(this).next().addClass('fa fa-check');
-            $(this).val($.trim($(this).val()));
 
             $('#nick_check').text('').show();
             nick_com = true;
@@ -522,7 +559,7 @@ $(function ()
         //console.log(nick_com == true)
         //console.log($('.check_box:checked').length == 2)
 
-        //console.log($('.check_box:checked').length == 2);
+        //console.log(!!('#nick_id').match(nick_check));
         if ( email_com && nick_com && pass_com && $('.check_box:checked').length == 2)
         {
             $('.account_submit').removeAttr('disabled');
@@ -534,7 +571,7 @@ $(function ()
         
     });
 
-    $(document).keyup(function () //submit able event
+    $(document).on("keydown keyup click blur ready mouseenter", function () //submit able event
     {
         //console.log($('.check_box:checked').length == 2);
         if (email_com && nick_com && pass_com && $('.check_box:checked').length == 2) {
@@ -543,6 +580,18 @@ $(function ()
         } else {
             $('.account_submit').attr('disabled', 'disabled');
             $('.account_submit').css('background', '#c1c1c1');
+        }
+
+        if (!nick_check.test($('#nick_id').val())) //¿µ¾î,¼ýÀÚ ¿Ü ºÒ°¡
+        {
+            $('#nick_id').css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
+            $('#nick_id').next().removeClass();
+            $('#nick_id').next().addClass('fa fa-times');
+
+            $('#nick_check').text('you can write only english and number').show();
+
+            nick_com = false;
+
         }
 
     });
