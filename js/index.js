@@ -408,7 +408,7 @@ $(function form_check (fo)
                 else if(data == 0){ //Non-overlapping
                     console.log('DB return value non-overlapping');
                     console.log(data);
-                    $(current_id).css({ 'border-left': '5px solid #8ec89a', 'width': '187px' });
+                    $(current_id).css({ 'border-left': '5px solid #48cfad', 'width': '187px' });
                     $(current_id).next().removeClass();
                     $(current_id).next().addClass('fa fa-check');
                     $('#email_check').text('').show();
@@ -481,7 +481,7 @@ $(function form_check (fo)
             $('#re_pass_check').text('It`s not same').show();
 
         } else if ($(this).val().length >= 8 && $(this).val().length <= 16) { // complite
-            $(this).css({ 'border-left': '5px solid #8ec89a', 'width': '187px' });
+            $(this).css({ 'border-left': '5px solid #48cfad', 'width': '187px' });
             $(this).next().removeClass();
             $(this).next().addClass('fa fa-check');
             $(this).val($(this).val().toLowerCase()); // lowercase and uppercase same
@@ -492,7 +492,7 @@ $(function form_check (fo)
 
             if ($(this).val() == $('#re_pass_id').val())
             {
-                $('#re_pass_id').css({ 'border-left': '5px solid #8ec89a', 'width': '187px' });
+                $('#re_pass_id').css({ 'border-left': '5px solid #48cfad', 'width': '187px' });
                 $('#re_pass_id').next().removeClass();
                 $('#re_pass_id').next().addClass('fa fa-check');
 
@@ -544,7 +544,7 @@ $(function form_check (fo)
             $('#re_pass_check').text('It`s not same').show();
 
         } else if ($(this).val() == $('#pass_id').val()) { //complite
-            $(this).css({ 'border-left': '5px solid #8ec89a', 'width': '187px' });
+            $(this).css({ 'border-left': '5px solid #48cfad', 'width': '187px' });
             $(this).next().removeClass();
             $(this).next().addClass('fa fa-check');
 
@@ -557,7 +557,7 @@ $(function form_check (fo)
 
     /*----------------------------end creat account password logic----------------------------*/
 
-    var abuse_name = new Array('sex', 'bitch', 'pussy', 'cunt', 'fuck', 'fucking' ,'dart');
+    var abuse_name = new Array('sex', 'bitch', 'pussy', 'cunt', 'fuck', 'fucking' ,'zepot');
 
     /*----------------------------creat account nick name logic----------------------------*/
     var nick_com;
@@ -650,7 +650,7 @@ $(function form_check (fo)
                     {
                         console.log('DB return value Non-overlapping');
 
-                        $(current_id).css({ 'border-left': '5px solid #8ec89a', 'width': '187px' });
+                        $(current_id).css({ 'border-left': '5px solid #48cfad', 'width': '187px' });
                         $(current_id).next().removeClass();
                         $(current_id).next().addClass('fa fa-check');
 
@@ -683,7 +683,7 @@ $(function form_check (fo)
         if ( email_com && nick_com && pass_com && $('.check_box:checked').length == 2)
         {
             $('.account_submit').removeAttr('disabled');
-            $('.account_submit').css('background', '#47bf7e');
+            $('.account_submit').css('background', '#48cfad');
         } else {
             $('.account_submit').attr('disabled', 'disabled');
             $('.account_submit').css('background', '#c1c1c1');

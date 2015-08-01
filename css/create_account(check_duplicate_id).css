@@ -48,7 +48,7 @@
             color:#fff;
         }
         .fa-check{
-            background:#8ec89a;
+            background:#48cfad;
             display: inline-block;
         }
         .fa-times{
@@ -73,7 +73,7 @@
             margin-bottom:15px;
         }
         #check_duplicate_window #use_id{
-            background:#47bf7e;
+            background:#48cfad;
             width:85px;
             margin-left:110px;
         }

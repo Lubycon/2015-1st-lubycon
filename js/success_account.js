@@ -50,7 +50,7 @@ function draw_circle(){
 			i--;
 		};
 			
-		context.strokeStyle = '#8ec89a';
+		context.strokeStyle = '#48cfad';
 		context.lineWidth = 100;
 		context.stroke();
 	},2);
