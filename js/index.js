@@ -751,7 +751,7 @@ $(function(){
         }
     );
 });
-<<<<<<< HEAD
+
 /*waiting for resisting end*/
 
 /*index_2 canvas*/
@@ -795,6 +795,5 @@ $(function(){
 
 
 /*index_2 canvas*/
-=======
+
 /*----------------------------waiting for resisting end----------------------------*/
->>>>>>> 1a274f65842264387f301920969b68bca0fffd0d
