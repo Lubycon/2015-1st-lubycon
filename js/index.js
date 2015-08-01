@@ -334,7 +334,7 @@ $(function form_check (fo)
     
 
     /*----------------------------create account email logic----------------------------*/
-    $('#email_id').on("keydown keyup click blur ready change", function () 
+    $('#email_id').on("blur", function () 
     { 
         var current_id = '#' + $(this).attr('id');
         var value = $(this).val();
@@ -411,7 +411,7 @@ $(function form_check (fo)
 
     /*----------------------------creat account password logic----------------------------*/
 
-    $('#pass_id').on("keydown keyup click blur ready change", function () 
+    $('#pass_id').on("keydown keyup click blur ready", function () 
     {
         //console.log($(this).val().match('null') == null == false)
         //console.log(regx.test($(this).val()));
@@ -506,7 +506,7 @@ $(function form_check (fo)
         };
     });
     var pass_com;
-    $('#re_pass_id').on("keydown keyup click blur ready change", function () // repeat pass check
+    $('#re_pass_id').on("keydown keyup click blur ready", function () // repeat pass check
     {
         if ($(this).val() == '') { //blank
             $(this).css({ 'border-left': '2px solid #D5D5D5', 'width': '190px' });
@@ -542,7 +542,7 @@ $(function form_check (fo)
 
     /*----------------------------creat account nick name logic----------------------------*/
     var nick_com;
-    $('#nick_id').on("keydown keyup click blur ready change", function () 
+    $('#nick_id').on("blur", function () 
     {
         var value = $(this).val();
         var current_id = '#' + $(this).attr('id');
