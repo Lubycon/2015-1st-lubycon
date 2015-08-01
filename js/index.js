@@ -754,7 +754,7 @@ $(function(){
 
 /*waiting for resisting end*/
 
-/*index_2 canvas*/
+/***********************************index_2 canvas start****************************************/
 $(function(){
     /*photo frame
     var pf = document.getElementById('photo_frame');
