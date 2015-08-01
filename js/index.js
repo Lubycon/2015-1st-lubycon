@@ -324,11 +324,11 @@ $(function () //account setting script
 /* creat account */
 $(function form_check (fo)
 {
-    var regx = /[`;',./~!@\#$%<>^&*\()\-=+_\¡¯]/gi; //Æ¯¼ö¹®ÀÚ
-    var space = / /gi //°ø¹é
+    var regx = /[`;',./~!@\#$%<>^&*\()\-=+_\Â¡Â¯]/gi; //Ã†Â¯Â¼Ã¶Â¹Â®Ã€Ãš
+    var space = / /gi //Â°Ã¸Â¹Ã©
     var regex = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/; //email check
     var nick_check = /^[A-Za-z0-9+]*$/; ;
-    //var korean_check = /[¤¡-¤¾|¤¿-¤Ó|°¡-ÆR]/;
+    //var korean_check = /[Â¤Â¡-Â¤Â¾|Â¤Â¿-Â¤Ã“|Â°Â¡-Ã†R]/;
 
     var email_com;
     $('#email_id').on("keydown keyup click blur ready", function () //create account email logic
@@ -372,7 +372,7 @@ $(function form_check (fo)
 
             $('#pass_check').text('').show();
 
-        } else if ($(this).val().match(/[^0-9]/g) == null) //¹®ÀÚÇÑ°³ÇÊ¿ä
+        } else if ($(this).val().match(/[^0-9]/g) == null) //Â¹Â®Ã€ÃšÃ‡Ã‘Â°Â³Ã‡ÃŠÂ¿Ã¤
         {
             $(this).css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
             $(this).next().removeClass();
@@ -380,7 +380,7 @@ $(function form_check (fo)
 
             $('#pass_check').text('you must use least one alpabet').show();
 
-        } else if ($(this).val().match(regx)) //Æ¯¼ö¹®ÀÚ ºÒ°¡
+        } else if ($(this).val().match(regx)) //Ã†Â¯Â¼Ã¶Â¹Â®Ã€Ãš ÂºÃ’Â°Â¡
         {
             $(this).css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
             $(this).next().removeClass();
@@ -388,7 +388,7 @@ $(function form_check (fo)
 
             $('#pass_check').text('you can not write !@#%').show();
 
-        } else if ($(this).val().match(space) || $(this).val().match('null') == null == false) //°ø¹é ºÒ°¡
+        } else if ($(this).val().match(space) || $(this).val().match('null') == null == false) //Â°Ã¸Â¹Ã© ÂºÃ’Â°Â¡
         {
             $(this).css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
             $(this).next().removeClass();
@@ -396,7 +396,7 @@ $(function form_check (fo)
 
             $('#pass_check').text('you can not write null').show();
 
-        } else if ($(this).val().length < 8 || $(this).val().length > 16) {  // 8ÀÚº¸´Ù ÂªÀ»¶§
+        } else if ($(this).val().length < 8 || $(this).val().length > 16) {  // 8Ã€ÃšÂºÂ¸Â´Ã™ Ã‚ÂªÃ€Â»Â¶Â§
             $(this).css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
             $(this).next().removeClass();
             $(this).next().addClass('fa fa-times');
@@ -433,7 +433,7 @@ $(function form_check (fo)
             };
         };
 
-        // µ¿ÀÏÇÑ ¹®ÀÚ°¡ 3È¸ ÀÌ»ó ¹İº¹µÇ´Â °æ¿ì
+        // ÂµÂ¿Ã€ÃÃ‡Ã‘ Â¹Â®Ã€ÃšÂ°Â¡ 3ÃˆÂ¸ Ã€ÃŒÂ»Ã³ Â¹ÃÂºÂ¹ÂµÃ‡Â´Ã‚ Â°Ã¦Â¿Ã¬
         var val = $(this).val();
         var ch = '';
         var cnt = 0;
@@ -521,7 +521,7 @@ $(function form_check (fo)
 
             nick_com = false;
 
-        } else if (!nick_check.test($(this).val())) //¿µ¾î,¼ıÀÚ ¿Ü ºÒ°¡
+        } else if (!nick_check.test($(this).val())) //Â¿ÂµÂ¾Ã®,Â¼Ã½Ã€Ãš Â¿Ãœ ÂºÃ’Â°Â¡
         {
             $(this).css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
             $(this).next().removeClass();
@@ -531,7 +531,7 @@ $(function form_check (fo)
 
             nick_com = false;
 
-        } else if ($(this).val().match(space) || $(this).val().match('null') == null == false) //°ø¹é ºÒ°¡
+        } else if ($(this).val().match(space) || $(this).val().match('null') == null == false) //Â°Ã¸Â¹Ã© ÂºÃ’Â°Â¡
         {
             $(this).css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
             $(this).next().removeClass();
@@ -582,7 +582,7 @@ $(function form_check (fo)
             $('.account_submit').css('background', '#c1c1c1');
         }
 
-        if (!nick_check.test($('#nick_id').val())) //¿µ¾î,¼ıÀÚ ¿Ü ºÒ°¡
+        if (!nick_check.test($('#nick_id').val())) //Â¿ÂµÂ¾Ã®,Â¼Ã½Ã€Ãš Â¿Ãœ ÂºÃ’Â°Â¡
         {
             $('#nick_id').css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
             $('#nick_id').next().removeClass();
@@ -650,3 +650,45 @@ $(function(){
     );
 });
 /*waiting for resisting end*/
+
+/*index_2 canvas*/
+$(function(){
+    /*photo frame
+    var pf = document.getElementById('photo_frame');
+    var pfdraw = pf.getContext('2d');
+
+        pfdraw.beginPath();
+            pfdraw.moveTo(90,0);  
+            pfdraw.lineTo(0,50);
+            pfdraw.lineTo(0,160);
+            pfdraw.lineTo(90,210);
+            pfdraw.lineTo(180,160);
+            pfdraw.lineTo(180,50);
+            pfdraw.closePath();
+            pfdraw.lineWidth = 3;
+
+        pfdraw.strokeStyle = '#488ccb';
+        pfdraw.stroke();
+    */
+
+    var pb = document.getElementById('photo_body');
+    var pbdraw = pb.getContext('2d');
+
+        pbdraw.beginPath();
+            pbdraw.moveTo(140,0);
+            pbdraw.lineTo(0,88);
+            pbdraw.lineTo(0,246);
+            pbdraw.lineTo(140,325);
+            pbdraw.lineTo(280,246);
+            pbdraw.lineTo(280,88);
+            pbdraw.closePath();
+
+            //pbdraw.shadowColor="#555555"
+            //pbdraw.shadowOffsetY = 2;
+            //pbdraw.shadowBlur = 4;
+        pbdraw.fillStyle = '#464646';
+        pbdraw.fill();
+});
+
+
+/*index_2 canvas*/
