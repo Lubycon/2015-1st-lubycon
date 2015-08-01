@@ -70,6 +70,25 @@ $(function(){ //add contents button start
     },function(){
         $(this).stop().animate({opacity:1},200);
     });
+
+    $('#addcontent_bt').click(function () {
+        $('.dark_overlay').show();
+        $('.editer_popup').show();
+    });
+
+    $('.editer_popup > ul > li').hover(function ()
+    {
+        $(this).children('i').css({"color":"#fff","background":"#ffbe54"})
+    }, function ()
+    {
+        $(this).children('i').css({ "color": "#838383", "background": "#fff" })
+    });
+
+    $('.editer_popup_cancel , .dark_overlay').click(function ()
+    {
+        $('.dark_overlay').hide();
+        $('.editer_popup').hide();
+    });
 });
 
 $(function () { //search box click value reset start
