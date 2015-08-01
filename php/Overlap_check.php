@@ -8,12 +8,14 @@
 	$database->DBInsert();
 
 	//get variable
-	$check = $_POST['check'];
+	$data = $_POST['data'];
+	$id = $_POST['id'];
 
 	//overlap check
-	$database->query = "select exists(select * from member where email = '".$check."')";
+	$database->query = "select exists(select * from member where ".$id." = '".$data."')";
 	$database->DBQuestion();
 	$result = $database->result->fetch_array();
+
 
 	//return to xml
 	echo ($result[0]);
