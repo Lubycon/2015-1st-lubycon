@@ -321,7 +321,7 @@ $(function () //account setting script
         i++; //int plus
     });
  */
-/* creat account */
+/*----------------------------creat account----------------------------*/
 $(function form_check (fo)
 {
     var regx = /[`;',./~!@\#$%<>^&*\()\-=+_\¡¯]/gi; //Æ¯¼ö¹®ÀÚ
@@ -331,8 +331,13 @@ $(function form_check (fo)
     //var korean_check = /[¤¡-¤¾|¤¿-¤Ó|°¡-ÆR]/;
 
     var email_com;
-    $('#email_id').on("keydown keyup click blur ready", function () //create account email logic
+    
+
+    /*----------------------------create account email logic----------------------------*/
+    $('#email_id').on("blur", function () 
     { 
+        var current_id = '#' + $(this).attr('id');
+        var value = $(this).val();
     if ($(this).val() == '') { //blank
             $(this).css({ 'border-left': '2px solid #D5D5D5', 'width': '190px' });
             $(this).next().removeClass();
@@ -352,17 +357,61 @@ $(function form_check (fo)
 
         email_com = false
 
-    } else { //complite
-        $(this).css({ 'border-left': '5px solid #8ec89a', 'width': '187px' });
-        $(this).next().removeClass();
-        $(this).next().addClass('fa fa-check');
-        $('#email_check').text('').show();
+    } 
+    else { //complite
 
-        email_com = true;
+        //enter to AJAX Logic by SsaRu
+        $.ajax({
+            type:"POST",
+            url:"./php/Overlap_check.php",
+            data:'data='+ value +'&'+ 'id=email',
+            cache: false,
+            success: function(data)
+            {
+                if(data == ''){ //void value
+                    console.log('DB return value empty');
+                    console.log(data);
+                    $(current_id).css({ 'border-left': '2px solid #D5D5D5', 'width': '190px' });
+                    $(current_id).next().removeClass();
+                    $('#email_check').text('').show();
+                    email_com = false;
+                }
+                else if(data == 1){ //overlapping
+                    console.log('DB return value overlapping');
+                    console.log(data);
+                    $(current_id).css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
+                    $(current_id).next().removeClass();
+                    $(current_id).next().addClass('fa fa-times');
+
+                    $('#email_check').text('Overlapping').show();
+                    email_com = false;
+                }
+                else if(data == 0){ //Non-overlapping
+                    console.log('DB return value non-overlapping');
+                    console.log(data);
+                    $(current_id).css({ 'border-left': '5px solid #8ec89a', 'width': '187px' });
+                    $(current_id).next().removeClass();
+                    $(current_id).next().addClass('fa fa-check');
+                    $('#email_check').text('').show();
+
+                    email_com = true;
+                }
+                else{
+                    console.log("return value error");
+                    console.log(data);
+
+                    email_com = false;
+                }
+            }
+        })
     }
     });
 
-    $('#pass_id').on("keydown keyup click blur ready", function () //creat account password logic
+    /*----------------------------end create account email logic----------------------------*/
+
+    /*----------------------------creat account password logic----------------------------*/
+
+    $('#pass_id').on("keydown keyup click blur ready", function () 
     {
         //console.log($(this).val().match('null') == null == false)
         //console.log(regx.test($(this).val()));
@@ -487,11 +536,16 @@ $(function form_check (fo)
         
     });
 
+    /*----------------------------end creat account password logic----------------------------*/
+
     var abuse_name = new Array('sex', 'bitch', 'pussy', 'cunt', 'fuck', 'fucking' ,'dart');
 
+    /*----------------------------creat account nick name logic----------------------------*/
     var nick_com;
-    $('#nick_id').on("keydown keyup click blur ready", function () //creat account nick name logic
+    $('#nick_id').on("blur", function () 
     {
+        var value = $(this).val();
+        var current_id = '#' + $(this).attr('id');
         //console.log(jQuery.inArray($('#nick_id').val(), nick_array));
         if ($(this).val() == '') { //blank
             $(this).css({ 'border-left': '2px solid #D5D5D5', 'width': '190px' });
@@ -542,17 +596,64 @@ $(function form_check (fo)
             nick_com = false;
 
         } else { //complite
-            $(this).css({ 'border-left': '5px solid #8ec89a', 'width': '187px' });
-            $(this).next().removeClass();
-            $(this).next().addClass('fa fa-check');
 
-            $('#nick_check').text('').show();
-            nick_com = true;
+            //enter to AJAX Logic by SsaRu
+            $.ajax({
+                type:"POST",
+                url:"./php/Overlap_check.php",
+                data:'data=' + value + '&' + 'id=nick',
+                cache: false,
+                success: function(data){
+                    if(data == "")  //void value
+                    {
+                        console.log("DB return value empty");
+                        
+                        $(current_id).css({ 'border-left': '2px solid #D5D5D5', 'width': '190px' });
+                        $(current_id).next().removeClass();
+                        nick_com = false;
 
+                        $('#nick_check').text('').show();
+                        
+                    }
+                    else if(data == 1)  //overlapping
+                    {
+                        console.log('DB return value overlapping');
+
+                        $(current_id).css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
+                        $(current_id).next().removeClass();
+                        $(current_id).next().addClass('fa fa-times');
+                       
+                        $('#nick_check').text('Overlapping')
+                        nick_com = false;
+
+                    }
+                    else if(data == 0)  //non-overlapping
+                    {
+                        console.log('DB return value Non-overlapping');
+
+                        $(current_id).css({ 'border-left': '5px solid #8ec89a', 'width': '187px' });
+                        $(current_id).next().removeClass();
+                        $(current_id).next().addClass('fa fa-check');
+
+                        $('#nick_check').text('').show();
+                        nick_com = true;
+                    }
+                    else    //exception processing
+                    {
+                        console.log("DB return value error");
+                        console.log(data);
+                        nick_com = false;
+                    }
+                }
+            })
         }
     });
 
-    $(document).click(function () //submit able event
+    /*----------------------------end creat account nick name logic----------------------------*/
+
+    /*----------------------------submit able event----------------------------*/
+
+    $(document).click(function () 
     {
         //console.log(email_com == true)
         //console.log(pass_com == true)
@@ -596,11 +697,12 @@ $(function form_check (fo)
 
     });
 });
+/*----------------------------end submit able event----------------------------*/
 
-/* creat account */
+/*----------------------------creat account----------------------------*/
 
 
-/*about us*/
+/*----------------------------about us----------------------------*/
 $(function(){
     $('#mailbtn').hover(
         function (){
@@ -625,7 +727,7 @@ $(function(){
 
 /*about us*/
 
-/*waiting for resisting start*/
+/*----------------------------waiting for resisting start----------------------------*/
 $(function(){
     $("#thanks").animate({opacity:1},500);
     $("#thanks").queue(function(){
@@ -649,4 +751,4 @@ $(function(){
         }
     );
 });
-/*waiting for resisting end*/
+/*----------------------------waiting for resisting end----------------------------*/
