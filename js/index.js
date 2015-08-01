@@ -756,26 +756,9 @@ $(function(){
 
 /***********************************index_2 canvas start****************************************/
 $(function(){
-    /*photo frame
-    var pf = document.getElementById('photo_frame');
-    var pfdraw = pf.getContext('2d');
-
-        pfdraw.beginPath();
-            pfdraw.moveTo(90,0);  
-            pfdraw.lineTo(0,50);
-            pfdraw.lineTo(0,160);
-            pfdraw.lineTo(90,210);
-            pfdraw.lineTo(180,160);
-            pfdraw.lineTo(180,50);
-            pfdraw.closePath();
-            pfdraw.lineWidth = 3;
-
-        pfdraw.strokeStyle = '#488ccb';
-        pfdraw.stroke();
-    */
-
     var pb = document.getElementById('photo_body');
-    var pbdraw = pb.getContext('2d');
+    if(pb){
+        var pbdraw = pb.getContext("2d");
 
         pbdraw.beginPath();
             pbdraw.moveTo(140,0);
@@ -784,13 +767,11 @@ $(function(){
             pbdraw.lineTo(140,325);
             pbdraw.lineTo(280,246);
             pbdraw.lineTo(280,88);
-            pbdraw.closePath();
-
-            //pbdraw.shadowColor="#555555"
-            //pbdraw.shadowOffsetY = 2;
-            //pbdraw.shadowBlur = 4;
+        pbdraw.closePath();
+        
         pbdraw.fillStyle = '#464646';
         pbdraw.fill();
+    }
 });
 
 
