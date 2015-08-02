@@ -87,7 +87,7 @@ a {
                 width:70px;
                 height:70px;
                 line-height:70px;
-                border:1px solid #ffbe54;
+                border:1px solid #48cfad;
                 border-radius:50%;
                 color:#383838;
                 font-size:25px;
@@ -184,7 +184,7 @@ h1 /* main logo */ {
         }
 
         #main_gnb > ul > li > ul > li:hover {
-            background: #ffbe54;
+            background: #48cfad;
         }
 
         #main_gnb ul li p {
@@ -489,12 +489,13 @@ h1 /* main logo */ {
         border: none;
         border-top-right-radius: 4px;
         border-bottom-right-radius: 4px;
+        background: #666666;
     }
     #main_search_btn .fa-caret-left{
         position:absolute;
         top:5px;
         left:-8px;
-        color:#8d8d8d;
+        color:#666666;
         font-size:25px;
         z-index:2;
     }

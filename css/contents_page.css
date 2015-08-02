@@ -21,8 +21,8 @@
     margin:0px auto;
 }
     .selected_nav{
-        color:#ffc76b !important;
-        border-bottom:3px solid #ffc76b;
+        color:#48cfad !important;
+        border-bottom:3px solid #48cfad;
     }
 
     #lnb_nav > ul > li{
@@ -235,7 +235,7 @@
 }
 .selected_pager{
     color:#fff;
-    background:#ffbe54;
+    background:#48cfad;
     border-radius:50%;
 }
 .one_page{

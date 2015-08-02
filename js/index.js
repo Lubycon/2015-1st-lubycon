@@ -78,7 +78,7 @@ $(function(){ //add contents button start
 
     $('.editer_popup > ul > li').hover(function ()
     {
-        $(this).children('i').css({"color":"#fff","background":"#ffbe54"})
+        $(this).children('i').css({"color":"#fff","background":"#48cfad"})
     }, function ()
     {
         $(this).children('i').css({ "color": "#838383", "background": "#fff" })
@@ -249,7 +249,7 @@ $(function () { /* designers page continets selcect */
     });
     $('.contents_bt').mouseleave(function () {
         $('.continets_list').stop().slideUp(300);
-        $('.contents_bt').css('background', '#000');
+        $('.contents_bt').css('background', '#222');
     });
     $('.continets_list li').click(function () {
         $('.continets_selected').text($(this).text());
@@ -803,7 +803,7 @@ $(function ()
 {
     $('#editer_aside ol li').hover(function () //aside li mouse hover event
     {
-        $(this).css({ "background": "#ffbe54", "color": "#fff" });
+        $(this).css({ "background": "#48cfad", "color": "#fff" });
         $(this).children('i').css({"color": "#fff" });
     }, function ()
     {

@@ -477,6 +477,12 @@
             margin-right:37px;
         }
 
+            #files ul li:hover
+                {
+                    background:#48cfad;
+                }
+
+
     #storage
     {
         width: 100%;

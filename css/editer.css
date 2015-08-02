@@ -25,7 +25,7 @@
         }
         .editer_selected_gnv
         {
-            color:#ffbe54 !important;
+            color:#48cfad !important;
         }
 
     #editer_gnv button 
@@ -36,6 +36,7 @@
         width: 110px;
         height: 40px;
         border: none;
+        border-radius: 3px;
         background: #48cfad;
         color: #fff;
         font-size: 20px;
@@ -50,6 +51,7 @@
     {
         width:240px;
         border-top:25px solid #737373;
+        border-radius: 3px;
         margin-bottom:30px;
     }
         #editer_aside ol li 
@@ -76,20 +78,137 @@
                 visibility:hidden;
                 position:absolute;
             }
+
+
+        
+    #file_info{
+        width: 240px;
+        background: #444444;
+        margin-top: 40px;
+        border-radius: 3px;
+        overflow: hidden;
+    }
+        #file_info #info_header{
+            width: 100%;
+            height: 23px;
+            line-height: 23px;
+            
+            background: #666666;
+            color:#fff;
+            font-size:16px;
+            text-align: center;
+        }
+
+        #file_info #files{
+            width: 100%;
+            min-height: 118px;
+        }
+
+            #files #file_name
+            {
+                width: 100%;
+                height: 30px;
+                line-height: 30px;
+
+                background: #444444;
+            }
+
+                #file_name p
+                {
+                    color:#fff;
+                    font-size:14px;
+                    margin-left: 10px;
+                    display:inline;
+                }
+                
+                #file_name p i
+                {
+                    color:#48cfad;
+                    font-size:14px;
+                    margin-right:10px;
+                }
+
+                #file_name i
+                {
+                    color:#48cfad;
+                    font-size:14px;
+                    margin-left:10px;
+                    margin-right:10px;
+                    display: inline;
+                }
+
+            #files ul
+            {
+                width:100%;
+                
+                padding: 1px;
+                background: #333333;
+                font-size:12px;
+            }
+            #files ul li
+            {
+                color:#fff;
+                margin: 5px 5px 5px 15px;
+                border-left: 1px solid #48cfad;
+                padding-left:42px;
+            }
+
+            #files ul li:last-child
+            {
+                margin: 5px 5px 5px 11px;
+                border: none;
+                padding: 0px;
+            }
+
+            #files ul li i
+            {
+                color:#48cfad;
+                font-size:11px;
+                margin-right:37px;
+            }
+
+                #files ul li:hover
+                {
+                    background:#48cfad;
+                }
+
+        #storage
+        {
+            width: 100%;
+            height: 23px;
+            line-height: 23px;
+
+            background: #444444;
+            text-align: right;
+
+        }
+            #storage p
+            {
+                font-size:14px;
+                color:#fff;
+                margin-right:10px;
+            }
+
+
+
+
 #editer_section 
 {
     width:900px;
     position:relative;
     margin-left:700px;
     margin-right:50px;
-    box-shadow: 2px 3px 6px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.2);
         border:1px solid #e6e6e6;
+        border-radius:3px;
+
+    overflow:hidden;
 }
     #editer_section p 
     {
         height:60px;
         line-height:60px;
-        background:#e6e6e6;
+        background:#c1c1c1;
     }
     #editer_section p input
     {
@@ -111,5 +230,5 @@
     width: 100%;
     height: 200px;
     background: #222;
-    margin-top: 100px;
+    margin-top: 140px;
 }

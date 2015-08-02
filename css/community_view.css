@@ -6,7 +6,7 @@
 #post_subject_area{
     position:absolute;
     width:100%;
-    background:#000;
+    background:#222;
 }
 
 
@@ -211,9 +211,10 @@
         letter-spacing:0.5px;
         font-weight: 200;
         font-size: 15px;
+        background: #666666;
     }
     #post_edit_box button:hover {
-        background:#ffbc54;
+        background:#48cfad;
     }
 #comment_box {
     width: 1000px;
