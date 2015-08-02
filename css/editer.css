@@ -1,0 +1,108 @@
+﻿@charset "utf-8";
+#editer_gnv
+{
+    height:65px;
+    border-bottom:1px solid #cdcdcd;
+    margin:50px 0px;
+    padding:0px 20px;
+    position:relative;
+}
+    #editer_gnv ol 
+    {
+        width:800px;
+        height:65px;
+    }
+        #editer_gnv ol li
+        {
+            
+            height:65px;
+            line-height:65px;
+            margin-right:15px;
+            float:left;
+            color:#353535;
+            font-size: 26px;
+            letter-spacing: 1px;
+        }
+        .editer_selected_gnv
+        {
+            color:#ffbe54 !important;
+        }
+
+    #editer_gnv button 
+    {
+        position: absolute;
+        top: 13px;
+        right: 60px;
+        width: 110px;
+        height: 40px;
+        border: none;
+        background: #48cfad;
+        color: #fff;
+        font-size: 20px;
+    }
+
+#editer_aside
+{
+    position:absolute;
+    left:50px;
+}
+    #editer_aside ol 
+    {
+        width:240px;
+        border-top:25px solid #737373;
+        margin-bottom:30px;
+    }
+        #editer_aside ol li 
+        {
+            height:50px;
+            line-height:50px;
+            border:1px solid #e6e6e6;
+            margin-bottom:-1px;
+            text-align:center;
+            padding-left:35px;
+            color:#2f2f2f;
+        }
+            #editer_aside ol li i {
+                position:absolute;
+                left: 20px;
+                margin-top: 8px;
+                font-size: 33px;
+                width: 45px;
+                color: #646464;
+            }
+#editer_section 
+{
+    width:900px;
+    float:right;
+    background:#ddd;
+    margin-right:50px;
+}
+    #editer_section p 
+    {
+        height:60px;
+        line-height:60px;
+        background:#e6e6e6;
+    }
+    #editer_section p input
+    {
+        background:none;
+        border:none;
+        margin-left:20px;
+        font-size: 35px;
+        line-height: 60px;
+        padding:0px;
+        color:#2e2e2e;
+    }
+    #editer_section img
+    {
+        width:820px;
+        background:#ddd;
+        padding: 30px 40px;
+    }
+
+#footer {
+    width: 100%;
+    height: 200px;
+    background: #222;
+    margin-top: 600px;
+}
