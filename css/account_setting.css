@@ -14,7 +14,7 @@
     }
 
 #navsel{
-    width:1200px;
+    width:99%;
     height:50px;
     margin:0px auto;
 }
@@ -40,7 +40,7 @@
     cursor:pointer;
 }
 .continets_box{
-    width:1200px;
+    width:98%;
     margin:0px auto;
     position:relative;
 }

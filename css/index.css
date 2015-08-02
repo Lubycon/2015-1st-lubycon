@@ -412,7 +412,7 @@
 
     .tab_item table {
         width: 1200px;
-        height: 365px;
+        height: 415px;
         vertical-align: middle;
     }
 
@@ -501,7 +501,7 @@
     }
 
         #gotocom:hover {
-            background: #ec6446;
+            background: #48cfad;
             color: #fff;
         }
 

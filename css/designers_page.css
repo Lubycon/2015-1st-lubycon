@@ -15,7 +15,7 @@
     }
 
 #navsel{
-    width:1200px;
+    width:99%;
     height:50px;
     margin:0px auto;
 }
@@ -42,7 +42,7 @@
     cursor:pointer;
 }
 .continets_box{
-    width:1200px;
+    width:100%;
     margin:0px auto;
     position:relative;
 }
@@ -109,16 +109,12 @@
         border-bottom:1px solid #ddd;
     }
     #top_rank{
-        background:#ffd9ad;
-    }
-    #top_rank{
-        background:#ffd9ad;
+        background:#48cfad;
+        color:#fff;
     }
         #top_rank .fa-trophy {
-            color:#70c3aa;
+            color:#ffbe54;
             font-size:32px;
-            border-radius:50%;
-            border:2px solid #fff;
         }
         .rank_number{
             width:50px;
@@ -127,7 +123,7 @@
             width:20px;
         }
             .fa-caret-up{
-                color:#ff034b;
+                color:#ec6446;
             }
             .fa-caret-down{
                 color:#009fe3;
@@ -145,15 +141,15 @@
         }
         .rank_like{
             width:70px;
-            color:#2f6fff;
+            color:#555555;
         }
             .rank_like .fa-heart {
-                color:#ff034b;
+                color:#ec6446;
                 font-size:22px;
             }
         .rank_art{
             width:50px;
-            color:#2f6fff;
+            color:#555555;
         }
             .rank_art .fa-user-plus {
                 color:#000;
