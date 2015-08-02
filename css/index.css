@@ -278,56 +278,18 @@
     position: relative;
 }
 
-    #main_board input {
-        display: none;
-    }
+#forum_title
+{
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    margin-top: 80px;
+    font-size:36px;
+    font-weight: 200;
+    text-align:center;
+}
 
-    #board_label_box {
-        position: relative;
-    }
 
-    #main_board label {
-        width: 130px;
-        height: 30px;
-        line-height: 30px;
-        border: 1px solid #d1d1d1;
-        text-align: center;
-        display: block;
-        float: left;
-        margin-right: 1px;
-        color: #737373;
-    }
-
-    #cate_pointer {
-        width: 132px;
-        height: 5px;
-        background: #ffbe54;
-        position: absolute;
-        top: 27px;
-        left: 0px;
-    }
-
-    #board_view_more {
-        width: 100px;
-        height: 30px;
-        line-height: 30px;
-        vertical-align: middle;
-        position: absolute;
-        top: 0px;
-        right: 20px;
-    }
-
-        #board_view_more a {
-            font-size: 14px;
-            color: #a9a9a9;
-        }
-
-        #board_view_more i {
-            font-size: 12px;
-            vertical-align: middle;
-            margin-left: 10px;
-            color: #a9a9a9;
-        }
 
     .tab_item {
         width: 1200px;
