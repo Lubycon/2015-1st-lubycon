@@ -134,212 +134,140 @@
 /* slide section end */
 
 /* designers section */
-#designers_section {
-    width: 1200px;
-    height: 260px;
-    margin: 0px auto;
-    margin-top: 50px;
+#designer_month
+{
+    width: 100%;
+    margin-bottom:250px;
 }
-
-    #designers_introduce {
-        width: 480px;
-        height: 260px;
-        background: #fff;
-        overflow: hidden;
-        border:1px solid #b1b1b1;
-        border-radius: 5px;
-        box-shadow: 0px 1px 1px rgba(0,0,0,0.3);
-        float: left;
+    #designer_title
+    {
+        width: 100%;
+        height: 100px;
+        line-height: 100px;
+        margin-top: 80px;
+        font-size:36px;
+        font-weight: 200;
+        text-align:center;
     }
 
-    #designers_subject {
-        width: 480px;
-        height: 30px;
-        line-height: 30px;
-        background: rgba(0,0,0,0.5);
-        text-align: center;
-        position: absolute;
-        color: #fff;
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
+    #designer_body
+    {
+        width: 100%;
+        height: 270px;
+        position: relative;
+        background: #ebebeb;
     }
 
-    #desingers_intro_img {
-        width: 480px;
-        height: 180px;
-        background: url(../ch/img/idea.jpg) 50% 19%;
-    }
 
-    #designers_intro_disc {
-        width: 480px;
-        height: 80px;
-        overflow: hidden;
-    }
 
-        #designers_intro_disc #desingers_disc_img {
-            width: 70px;
-            height: 80px;
-            margin-left: 40px;
-            padding-top: 5px;
+    #designer_inbody
+    {
+        width: 1260px;
+        height: 270px;
+        margin:0px auto;
+    }
+        #designer_photo
+        {
+            width: 280px;
+            position: relative;
+            top:-53px;
+            margin-left: 20px;
             float: left;
         }
 
-            #designers_intro_disc #desingers_disc_img img {
-                width: 70px;
-                height: 70px;
-                border-radius: 50%;
+            #photo_frame {
+                width: 187px;
+                height: 217px;
+                background: url(../CH/img/designer_of_the_month/frame.png);
+                position: absolute;
+                z-index: 2;
+                left: 50%;
+                margin-left:-91px;
             }
 
-        #designers_intro_disc #designers_disc_name {
-            width: 290px;
-            height: 80px;
+
+            #photo_body {
+                position:absolute;
+                top:50px;
+            }
+
+            #designer_photo ul
+            {
+                position:relative;
+                width:124px;
+                height: 110px;
+                margin:0px auto;
+                padding-top:213px;
+                z-index:2;
+            }
+                #designer_name
+                {
+                    height:50px;
+                    font-size:36px;
+                    color:#fff;
+                    text-align: center;
+                    text-shadow: 0px 3px 3px #000;
+                }
+                #designer_job
+                {
+                    height:35px;
+                    font-size:21px;
+                    color: #fff;
+                    text-align: center;
+                    font-weight: 200;
+                }
+                #designer_location
+                {
+                    height: 14px;
+                    font-size:14px;
+                    color: #fff;
+                    text-align: center;
+                    font-weight: 200;
+                }
+                    #designer_location i
+                    {
+                        margin-right: 5px;
+                    }
+
+
+        #designer_body p
+        {
+            font-size: 18px;
+            font-weight: 200;
+            position: relative;
             float: left;
+            top: 80px;
+            margin-left: 80px;
+        }
+
+        #interview
+        {
+            width: 200px;
+            height: 40px;
+            line-height: 40px;
+            top: 215px;
+            
+            border-radius:3px;
+            background:#48cfad;
+            
+            font-size:17px;
+            font-weight: 200;
+            color:#fff;
             text-align: center;
-            line-height: 23px;
-            padding-top: 19px;
+            
+            position:relative;
+            overflow:hidden;
+            cursor:pointer;
         }
-
-            #designers_intro_disc #designers_disc_name h3 {
+            #interview i
+            {
+                width: 35px;
+                height: 100%;
+                line-height: 40px;
+                background:#37bc9b;
                 font-size: 30px;
-                letter-spacing: 2px;
-                color: #737373;
-                font-weight: 200;
+                float:right;
             }
-
-            #designers_intro_disc #designers_disc_name h4 {
-                margin-top:6px;
-                color: #737373;
-                font-weight: 400;
-            }
-
-    #designers_disc_inform {
-        width: 70px;
-        height: 80px;
-        line-height: 20px;
-        float: right;
-        padding-right: 10px;
-        padding-top: 10px;
-        text-align: right;
-    }
-
-        #designers_disc_inform .fa-envelope-o {
-            font-size: 23px;
-            color: #787878;
-            margin-bottom: 5px;
-        }
-
-        #designers_disc_inform .fa-heart {
-            font-size: 15px;
-            color: #f15620;
-            margin-right: 10px;
-        }
-
-        #designers_disc_inform .fa-eye {
-            font-size: 15px;
-            color: #545454;
-            margin-right: 10px;
-        }
-
-.designers_ranking {
-    width: 300px;
-    height: 100%;
-    background: #bbb;
-    float: right;
-    margin-left: 50px;
-    border: 1px solid #868686;
-    border-radius: 2px;
-    overflow: hidden;
-    padding: -2px 0px;
-    box-shadow: 0px 1px 1px rgba(0,0,0,0.3);
-}
-
-    .designers_ranking > p {
-        width: 100%;
-        height: 35px;
-        line-height: 35px;
-        background: #868686;
-        text-align: center;
-        color: #fff;
-        font-size: 18px;
-    }
-
-    .designers_ranking ol > li {
-        width: 100%;
-        height: 45px;
-        background: #fff;
-    }
-
-        .designers_ranking ol > li > ul > li {
-            float: left;
-            height: 45px;
-            line-height: 45px;
-        }
-
-    .designers_number {
-        width: 30px;
-        text-align: right;
-    }
-
-    .designers_updown {
-        width: 30px;
-        text-align: center;
-    }
-
-    .designers_ranking ol li > .fa-caret-up {
-        color: #ec6446;
-    }
-
-    .designers_ranking ol li > .fa-caret-down {
-        color: #009fe3;
-    }
-
-    .designers_photo {
-        width: 35px;
-        text-align: right;
-    }
-
-    .designers_ranking ol > li > ul > li img {
-        width: 30px;
-        height: 30px;
-        vertical-align: middle;
-    }
-
-    .designers_name {
-        width: 150px;
-        text-align: center;
-        font-size: 16px;
-        font-weight: 500;
-    }
-
-    .designers_gold {
-        width: 17px;
-        height: 17px;
-        border: 1px solid #464646;
-        background: gold;
-        border-radius: 3px;
-        display: inline-block;
-        vertical-align: middle;
-    }
-
-    .designers_silver {
-        width: 17px;
-        height: 17px;
-        border: 1px solid #464646;
-        background: silver;
-        border-radius: 3px;
-        display: inline-block;
-        vertical-align: middle;
-    }
-
-    .designers_bronze {
-        width: 17px;
-        height: 17px;
-        border: 1px solid #464646;
-        background: #df9d00;
-        border-radius: 3px;
-        display: inline-block;
-        vertical-align: middle;
-    }
 /* designers section */
 
 /* main board */
