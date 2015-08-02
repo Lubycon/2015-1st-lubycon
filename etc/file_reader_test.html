@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<meta charset="utf-8">
+<html>
+<head>
+    <title>file_reader_test</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type=text/javascript>
+
+        $(document).ready(function() {
+            var fileInput = $("#fileInput").get(0);
+            fileInput.addEventListener("change",
+                //change eventListener start
+                function(e) {
+                    
+                    fileContent = "";
+                    
+                    var filee = fileInput.files[0];
+                    var textType = /text.*/;
+                    
+                    if(filee.type.match(textType)) {
+                        var reader = new FileReader();
+                        reader.onload = function(e) { $("#check").html(reader.result); }
+                        reader.readAsText(filee, "UTF-8");
+                    } 
+                    else {
+                        $("#check").html("File not supported");
+                    }
+                });//change eventListener end
+        });//END OF READY
+    </script>
+</head>
+<body>
+    <input type="file" id="fileInput">
+    <div id="check"></div>
+</body>
+</html>
