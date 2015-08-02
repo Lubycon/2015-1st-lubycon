@@ -430,6 +430,14 @@
                 margin-left: 10px;
                 display:inline;
             }
+            
+            #file_name p i
+            {
+                color:#48cfad;
+                font-size:14px;
+                margin-right:10px;
+            }
+
             #file_name i
             {
                 color:#48cfad;
