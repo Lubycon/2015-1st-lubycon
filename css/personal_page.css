@@ -16,6 +16,7 @@
 
 #navsel{
     width:99%;
+    max-width:1600px;
     height:50px;
     margin:0px auto;
 }
@@ -42,6 +43,7 @@
 }
 .continets_box{
     width:100%;
+    max-width:1600px;
     margin:0px auto;
     position:relative;
 }
@@ -90,6 +92,7 @@
         }
 #personal_box{
     width:100%;
+    max-width:1600px;
     height:240px;
     margin:0px auto;
     margin-top:15px;
@@ -204,13 +207,17 @@
     width:81%;
     margin:0px auto;
     margin-top:40px;
+    text-align: center;
 }
 
 #contents_box ul li
 {
     width: 285px;
     position:relative;
-    display: inline;
+    display: inline-block;
+    margin-right: 10px;
+    margin-left: 10px;
+    text-align:left;
 }
 
 
