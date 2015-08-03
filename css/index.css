@@ -315,11 +315,11 @@
         .tab_item table th {
             color: #fff;
             font-size: 1.02em;
-            font-weight: 300;
+            font-weight: 200;
         }
 
         .tab_item table tr {
-            height: 33px;
+            height: 43px;
             border-bottom: 1px solid #dadada;
         }
 
