@@ -41,11 +41,20 @@
         color: #fff;
         font-size: 20px;
     }
+#editer_body
+{
+    max-width:1600px;
+    min-width:1200px;
+    margin:0px auto;
+    min-height:600px;
+    text-align:center;
+}
 
 #editer_aside
 {
-    position:absolute;
-    left:50px;
+    margin-left: 50px;
+    position: relative;
+    float:left;
 }
     #editer_aside ol 
     {
@@ -78,7 +87,11 @@
                 visibility:hidden;
                 position:absolute;
             }
-
+            #preview_upload_input
+            {
+                visibility:hidden;
+                position:absolute;
+            }
 
         
     #file_info{
@@ -189,20 +202,16 @@
                 margin-right:10px;
             }
 
-
-
-
 #editer_section 
 {
-    width:900px;
-    position:relative;
-    margin-left:700px;
-    margin-right:50px;
     box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.2);
-        border:1px solid #e6e6e6;
-        border-radius:3px;
-
-    overflow:hidden;
+    border: 1px solid #E6E6E6;
+    border-radius: 3px;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: top;
+    text-align:center;
+    
 }
     #editer_section p 
     {
@@ -214,16 +223,23 @@
     {
         background:none;
         border:none;
-        margin-left:20px;
+        margin-left: 20px;
         font-size: 35px;
         line-height: 60px;
-        padding:0px;
-        color:#2e2e2e;
+        padding: 0px;
+        color: #2E2E2E;
+        float: left;
     }
-    #editer_section img
+
+    #editer_preview_box
     {
-        width:818px;
+        max-width:1200px;
         padding: 30px 40px;
+    }
+
+    #editer_section iframe,img,span
+    {
+        max-width: 1100px;
     }
 
 #footer {
@@ -232,3 +248,59 @@
     background: #222;
     margin-top: 140px;
 }
+
+
+
+/* embed pop up */
+#embed_popup 
+{
+    position:absolute;
+    display:none;
+    top:50%;
+    left:50%;
+    width:540px;
+    height:225px;
+    margin-left:-270px;
+    margin-top:-113px;
+    background:#fff;
+    z-index:5;
+}
+    #embed_popup p 
+    {
+        margin-top:5px;
+        margin-left:15px;
+        font-size:25px;
+    }
+    #embed_popup textarea 
+    {
+        width:490px;
+        max-width:490px;
+        min-width:490px;
+        height:95px;
+        max-height:95px;
+        min-height:95px;
+
+        margin-left:25px;
+        margin-top:15px;
+    }
+    #embed_popup #embed_bt,#cancel_bt
+    {
+        width:85px;
+        height:35px;
+        border:none;
+        border-radius:1px;
+        padding:0px;
+        margin-top:20px;
+    }
+    #embed_popup #embed_bt 
+    {
+        color:#fff;
+        background:#48cfad;
+        margin-left:190px;
+    }
+    #embed_popup #cancel_bt 
+    {
+        color:#ec6446;
+        background:#fff;
+    }
+/* embed pop up */

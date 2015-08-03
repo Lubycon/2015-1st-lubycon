@@ -48,6 +48,12 @@
         </ul>
         <button class="editer_popup_cancel"><i class="fa fa-times"></i></button>
     </div>
+    <div id="embed_popup">
+        <p>Embed Media</p>
+        <textarea id="embed_textarea"></textarea>
+        <button id="embed_bt">Embed</button><button id="cancel_bt">Cancel</button>
+        <button class="editer_popup_cancel"><i class="fa fa-times"></i></button>
+    </div>
     <header id="main_header">
         <h1><a href="/index.html"><img src="CH/img/lubycon_logo.png" width="176" height="40" alt="main_logo" /></a></h1>
         <nav id="main_gnb">
@@ -162,40 +168,44 @@
         </ol>
         <button>Next</button>
     </nav>
+    <section id="editer_body">
+        <aside id="editer_aside">
+            <ol>
+                <li id="editer_upload_file"><i class="fa fa-cloud-upload"></i>Upload Files</li>
+                <li id="editer_preview_upload"><i class="fa fa-picture-o"></i>Upload Preview</li>
+            </ol>
+            <input type="file" id="upload_file_input"/>
+            <input type="file" id="preview_upload_input" accept="image/*" multiple />
+            <ol>
+                <li><i class="fa fa-crop"></i>Image Crop</li>
+                <li><i class="fa fa-font"></i>Add Text</li>
+                <li id="embed_media"><i class="fa fa-code"></i>Embed Media</li>
+            </ol>
 
-    <aside id="editer_aside">
-        <ol>
-            <li id="editer_upload_file"><i class="fa fa-cloud-upload"></i>Upload Files</li>
-            <li><i class="fa fa-font"></i>Add Text</li>
-            <li><i class="fa fa-code"></i>Embed Media</li>
-        </ol>
-        <input type="file" id="upload_file_input" accept="image/*" />
-        <ol>
-            <li><i class="fa fa-picture-o"></i>Upload Preview</li>
-            <li><i class="fa fa-crop"></i>Devide</li>
-        </ol>
+            <div id="file_info">
+                <header id="info_header">File info</header>
+                <section id="files">
+                    <article id="file_name"><i class="fa fa-circle-o"></i><p><i class="fa fa-folder-open"></i>Lorem ipsum.zip</p></article>
+                    <ul>
+                        <li><i class="fa fa-file"></i>ipsum.psd</li>
+                        <li><i class="fa fa-file"></i>ipsum.ai</li>
+                        <li><i class="fa fa-file"></i>ipsum.html</li>
+                        <li><i class="fa fa-file"></i>ipsum.css</li>
+                        <li><i class="fa fa-circle"></i><i class="fa fa-file"></i>ipsum.js</li>
+                    </ul>
+                </section>
+                <footer id="storage"><p>1.2 MB</p></footer>
+            </div>
 
-        <div id="file_info">
-            <header id="info_header">File info</header>
-            <section id="files">
-                <article id="file_name"><i class="fa fa-circle-o"></i><p><i class="fa fa-folder-open"></i>Lorem ipsum.zip</p></article>
-                <ul>
-                    <li><i class="fa fa-file"></i>ipsum.psd</li>
-                    <li><i class="fa fa-file"></i>ipsum.ai</li>
-                    <li><i class="fa fa-file"></i>ipsum.html</li>
-                    <li><i class="fa fa-file"></i>ipsum.css</li>
-                    <li><i class="fa fa-circle"></i><i class="fa fa-file"></i>ipsum.js</li>
-            </section>
-            <footer id="storage"><p>1.2 MB</p></footer>
-        </div>
+        </aside>
 
-    </aside>
-
-    <section id="editer_section">
-        <p>
-            <input type="text" value="Your Contents Name" />
-        </p>
-        <img id="preview_img" src="ch/img/mein_img.png" />
+        <section id="editer_section">
+            <p>
+                <input type="text" value="Your Contents Name" />
+            </p>
+            <div id="editer_preview_box">
+            </div>
+        </section>
     </section>
     <footer id="footer"></footer>   <!--end footer-->
 </body>

@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+﻿<!DOCTYPE HTML>
 <meta charset="utf-8">
 <html>
 <head>
@@ -8,28 +8,42 @@
 
         $(document).ready(function() {
             var fileInput = $("#fileInput").get(0);
+            var textType = /text.*/;
+            var reader = new FileReader();
+
             fileInput.addEventListener("change",
                 //change eventListener start
                 function(e) {
                     
                     fileContent = "";
-                    
+
                     var filee = fileInput.files[0];
-                    var textType = /text.*/;
-                    
                     if(filee.type.match(textType)) {
-                        var reader = new FileReader();
-                        reader.onload = function(e) { $("#check").html(reader.result); }
-                        reader.readAsText(filee, "UTF-8");
+                        reader.onload = function (e) { $("#check").html(reader.result); }
+                        alert(reader.text())
                     } 
                     else {
                         $("#check").html("File not supported");
                     }
                 });//change eventListener end
+
+            $('#text_input').keydown(function ()
+            {
+                if ($(this).val() == reader.result)
+                { //duplicate names
+                    $(this).css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
+                    $(this).next().removeClass();
+                    $(this).next().addClass('fa fa-times');
+
+                    $('#nick_check').text('duplicated name').show();
+                }
+            });
         });//END OF READY
     </script>
 </head>
 <body>
+    <input type="text" id="text_input" />
+    <p id="nick_check"></p>
     <input type="file" id="fileInput">
     <div id="check"></div>
 </body>
