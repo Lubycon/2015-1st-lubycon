@@ -176,6 +176,7 @@ h1 /* main logo */ {
         #main_gnb > ul > li:hover {
             background: #464646;
         }
+        
 
         #main_gnb > ul > li > ul > li {
             background: #464646;
@@ -293,7 +294,7 @@ h1 /* main logo */ {
         font-weight: 200;
     }
         #after_signin ul li:hover {
-            background:#ffbe54;
+            background:#48cfad;
         }
 
     .partition {
