@@ -889,7 +889,7 @@ $(function ()
         $('.dark_overlay').show();
         $('#embed_popup').show();
     });
-    var iframe_check = /<iframe[^>]*?>[\s\S.]*?</iframe>/i  
+    var iframe_check = /<iframe[^>]*?>[\s\S.]*?<iframe>/i  
     $('#embed_bt').click(function () // embed code event
     {
         if ($('#embed_textarea').val().match(/<[/]?iframe[^>]+>/i))
