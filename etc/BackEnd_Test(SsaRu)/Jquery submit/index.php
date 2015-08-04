@@ -1,18 +1,11 @@
 <?php
 
-	
-	require_once './Database.php';
+$email = $_POST['email'];
+$nick = $_POST['nick'];
+$pass = $_POST['pass'];
+$repass = $_POST['re_pass'];
 
-	$database = new DBConnect;
-	$database->DBInsert();
-
-	$email = $_POST['email'];
-	$nick = $_POST['nick'];
-	$pass = $_POST['pass'];
-	$repass = $_POST['repass'];
-	$date = date('Y-m-d');
-
-	//regular expression
+//regular expression
 	$mail_vali = "/^[0-9a-zA-Z]([\-.\w]*[0-9a-zA-Z\-_+])*@([0-9a-zA-Z][\-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9}$/";	// email validation check
 	$pass_vali[0] = "/[^0-9]/";
 	$pass_vali[1] = "/[`;',.\/~!@\#$%<>^&*\()\-=+_\¡¯]/";
@@ -35,46 +28,38 @@
 	//email validation check
 	if($confirm_email){	//check to length & validation
 		$email_validation = true;
+		echo("console.log('email = true');");
 	}
 	else{
 		$email_validation = false;
+		echo("<sciprt>console.log('email = false');</sciprt>");
 	}
 
 	//password validation check
 	if($confirm_pass){
 		$pass_validation = true;
+		echo("<sciprt>console.log('pass = true');</sciprt>");
 	}
 	else{
 		$pass_validation = false;
+		echo("<sciprt>console.log('pass = false');</sciprt>");
 	}
 
 	//nickname validation check
 	if($confirm_nick){
 		$nick_validation = true;
+		echo("<sciprt>console.log('nick = true');</sciprt>");
 	}
 	else{
 		$nick_validation = false;
+		echo("<sciprt>console.log('nick = false');</sciprt>");
 	}
 
 	if($email_validation && $pass_validation && $nick_validation){
-		
-		$database->query = "insert into member values('".$email."', '".$nick."', password('".$pass."'), '".$date."')";
-		$database->DBQuestion();
-
-		if(!$database->result){
-			echo "<script>alert('회원가입 실패');</script>";
-			$database->DBOut();
-			exit;
-		}
-		else{
-			echo('<script>document.location.href="../waiting_for_resisting.html"</script>');
-			$database->DBOut();  
-			exit;
-		}
+		echo("정상적인 입력입니다.");
 	}
 	else{
-		header("Content-Type: text/html; charset=UTF-8");
-		echo('<sciprt>console.log("정상적이지 않은 입력입니다.");</sciprt>');
+		echo("정상적이지 않은 입력입니다.");
 	}
 
 ?>

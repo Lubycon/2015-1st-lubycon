@@ -70,26 +70,6 @@ $(function(){ //add contents button start
     },function(){
         $(this).stop().animate({opacity:1},200);
     });
-
-    $('#addcontent_bt').click(function () {
-        $('.dark_overlay').show();
-        $('.editer_popup').show();
-    });
-
-    $('.editer_popup > ul > li').hover(function ()
-    {
-        $(this).children('i').css({"color":"#fff","background":"#48cfad"})
-    }, function ()
-    {
-        $(this).children('i').css({ "color": "#838383", "background": "#fff" })
-    });
-
-    $('.editer_popup_cancel , .dark_overlay , #cancel_bt').click(function ()
-    {
-        $('.dark_overlay').hide();
-        $('.editer_popup').hide();
-        $('#embed_popup').hide();
-    });
 });
 
 $(function () { //search box click value reset start
@@ -250,7 +230,7 @@ $(function () { /* designers page continets selcect */
     });
     $('.contents_bt').mouseleave(function () {
         $('.continets_list').stop().slideUp(300);
-        $('.contents_bt').css('background', '#222');
+        $('.contents_bt').css('background', '#000');
     });
     $('.continets_list li').click(function () {
         $('.continets_selected').text($(this).text());
@@ -344,11 +324,11 @@ $(function () //account setting script
 /*----------------------------creat account----------------------------*/
 $(function form_check (fo)
 {
-    var regx = /[`;',./~!@\#$%<>^&*\()\-=+_\Â¡Â¯]/gi; //Ã†Â¯Â¼Ã¶Â¹Â®Ã€Ãš
-    var space = / /gi //Â°Ã¸Â¹Ã©
+    var regx = /[`;',./~!@\#$%<>^&*\()\-=+_\¡¯]/gi; //Æ¯¼ö¹®ÀÚ
+    var space = / /gi //°ø¹é
     var regex = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/; //email check
     var nick_check = /^[A-Za-z0-9+]*$/; ;
-    //var korean_check = /[Â¤Â¡-Â¤Â¾|Â¤Â¿-Â¤Ã“|Â°Â¡-Ã†R]/;
+    //var korean_check = /[¤¡-¤¾|¤¿-¤Ó|°¡-ÆR]/;
 
     var email_com;
     
@@ -409,7 +389,7 @@ $(function form_check (fo)
                 else if(data == 0){ //Non-overlapping
                     console.log('DB return value non-overlapping');
                     console.log(data);
-                    $(current_id).css({ 'border-left': '5px solid #48cfad', 'width': '187px' });
+                    $(current_id).css({ 'border-left': '5px solid #8ec89a', 'width': '187px' });
                     $(current_id).next().removeClass();
                     $(current_id).next().addClass('fa fa-check');
                     $('#email_check').text('').show();
@@ -441,7 +421,7 @@ $(function form_check (fo)
 
             $('#pass_check').text('').show();
 
-        } else if ($(this).val().match(/[^0-9]/g) == null) //Â¹Â®Ã€ÃšÃ‡Ã‘Â°Â³Ã‡ÃŠÂ¿Ã¤
+        } else if ($(this).val().match(/[^0-9]/g) == null) //¹®ÀÚÇÑ°³ÇÊ¿ä
         {
             $(this).css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
             $(this).next().removeClass();
@@ -449,7 +429,7 @@ $(function form_check (fo)
 
             $('#pass_check').text('you must use least one alpabet').show();
 
-        } else if ($(this).val().match(regx)) //Ã†Â¯Â¼Ã¶Â¹Â®Ã€Ãš ÂºÃ’Â°Â¡
+        } else if ($(this).val().match(regx)) //Æ¯¼ö¹®ÀÚ ºÒ°¡
         {
             $(this).css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
             $(this).next().removeClass();
@@ -457,7 +437,7 @@ $(function form_check (fo)
 
             $('#pass_check').text('you can not write !@#%').show();
 
-        } else if ($(this).val().match(space) || $(this).val().match('null') == null == false) //Â°Ã¸Â¹Ã© ÂºÃ’Â°Â¡
+        } else if ($(this).val().match(space) || $(this).val().match('null') == null == false) //°ø¹é ºÒ°¡
         {
             $(this).css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
             $(this).next().removeClass();
@@ -465,7 +445,7 @@ $(function form_check (fo)
 
             $('#pass_check').text('you can not write null').show();
 
-        } else if ($(this).val().length < 8 || $(this).val().length > 16) {  // 8Ã€ÃšÂºÂ¸Â´Ã™ Ã‚ÂªÃ€Â»Â¶Â§
+        } else if ($(this).val().length < 8 || $(this).val().length > 16) {  // 8ÀÚº¸´Ù ÂªÀ»¶§
             $(this).css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
             $(this).next().removeClass();
             $(this).next().addClass('fa fa-times');
@@ -482,7 +462,7 @@ $(function form_check (fo)
             $('#re_pass_check').text('It`s not same').show();
 
         } else if ($(this).val().length >= 8 && $(this).val().length <= 16) { // complite
-            $(this).css({ 'border-left': '5px solid #48cfad', 'width': '187px' });
+            $(this).css({ 'border-left': '5px solid #8ec89a', 'width': '187px' });
             $(this).next().removeClass();
             $(this).next().addClass('fa fa-check');
             $(this).val($(this).val().toLowerCase()); // lowercase and uppercase same
@@ -493,7 +473,7 @@ $(function form_check (fo)
 
             if ($(this).val() == $('#re_pass_id').val())
             {
-                $('#re_pass_id').css({ 'border-left': '5px solid #48cfad', 'width': '187px' });
+                $('#re_pass_id').css({ 'border-left': '5px solid #8ec89a', 'width': '187px' });
                 $('#re_pass_id').next().removeClass();
                 $('#re_pass_id').next().addClass('fa fa-check');
 
@@ -502,7 +482,7 @@ $(function form_check (fo)
             };
         };
 
-        // ÂµÂ¿Ã€ÃÃ‡Ã‘ Â¹Â®Ã€ÃšÂ°Â¡ 3ÃˆÂ¸ Ã€ÃŒÂ»Ã³ Â¹ÃÂºÂ¹ÂµÃ‡Â´Ã‚ Â°Ã¦Â¿Ã¬
+        // µ¿ÀÏÇÑ ¹®ÀÚ°¡ 3È¸ ÀÌ»ó ¹Ýº¹µÇ´Â °æ¿ì
         var val = $(this).val();
         var ch = '';
         var cnt = 0;
@@ -545,7 +525,7 @@ $(function form_check (fo)
             $('#re_pass_check').text('It`s not same').show();
 
         } else if ($(this).val() == $('#pass_id').val()) { //complite
-            $(this).css({ 'border-left': '5px solid #48cfad', 'width': '187px' });
+            $(this).css({ 'border-left': '5px solid #8ec89a', 'width': '187px' });
             $(this).next().removeClass();
             $(this).next().addClass('fa fa-check');
 
@@ -558,7 +538,7 @@ $(function form_check (fo)
 
     /*----------------------------end creat account password logic----------------------------*/
 
-    var abuse_name = new Array('sex', 'bitch', 'pussy', 'cunt', 'fuck', 'fucking' ,'zepot');
+    var abuse_name = new Array('sex', 'bitch', 'pussy', 'cunt', 'fuck', 'fucking' ,'dart');
 
     /*----------------------------creat account nick name logic----------------------------*/
     var nick_com;
@@ -586,16 +566,7 @@ $(function form_check (fo)
 
             //console.log(jQuery.inArray($('#nick_id').val(), abuse_name))
 
-        } else if ($(this).val() == '2') { //duplicate names
-            $(this).css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
-            $(this).next().removeClass();
-            $(this).next().addClass('fa fa-times');
-
-            $('#nick_check').text('duplicated name').show();
-
-            nick_com = false;
-
-        } else if (!nick_check.test($(this).val())) //Â¿ÂµÂ¾Ã®,Â¼Ã½Ã€Ãš Â¿Ãœ ÂºÃ’Â°Â¡
+        } else if (!nick_check.test($(this).val())) //¿µ¾î,¼ýÀÚ ¿Ü ºÒ°¡
         {
             $(this).css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
             $(this).next().removeClass();
@@ -605,7 +576,7 @@ $(function form_check (fo)
 
             nick_com = false;
 
-        } else if ($(this).val().match(space) || $(this).val().match('null') == null == false) //Â°Ã¸Â¹Ã© ÂºÃ’Â°Â¡
+        } else if ($(this).val().match(space) || $(this).val().match('null') == null == false) //°ø¹é ºÒ°¡
         {
             $(this).css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
             $(this).next().removeClass();
@@ -651,7 +622,7 @@ $(function form_check (fo)
                     {
                         console.log('DB return value Non-overlapping');
 
-                        $(current_id).css({ 'border-left': '5px solid #48cfad', 'width': '187px' });
+                        $(current_id).css({ 'border-left': '5px solid #8ec89a', 'width': '187px' });
                         $(current_id).next().removeClass();
                         $(current_id).next().addClass('fa fa-check');
 
@@ -665,7 +636,7 @@ $(function form_check (fo)
                         nick_com = false;
                     }
                 }
-            })
+            });
         }
     });
 
@@ -684,7 +655,7 @@ $(function form_check (fo)
         if ( email_com && nick_com && pass_com && $('.check_box:checked').length == 2)
         {
             $('.account_submit').removeAttr('disabled');
-            $('.account_submit').css('background', '#48cfad');
+            $('.account_submit').css('background', '#47bf7e');
         } else {
             $('.account_submit').attr('disabled', 'disabled');
             $('.account_submit').css('background', '#c1c1c1');
@@ -703,7 +674,7 @@ $(function form_check (fo)
             $('.account_submit').css('background', '#c1c1c1');
         }
 
-        if (!nick_check.test($('#nick_id').val())) //Â¿ÂµÂ¾Ã®,Â¼Ã½Ã€Ãš Â¿Ãœ ÂºÃ’Â°Â¡
+        if (!nick_check.test($('#nick_id').val())) //¿µ¾î,¼ýÀÚ ¿Ü ºÒ°¡
         {
             $('#nick_id').css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
             $('#nick_id').next().removeClass();
@@ -719,7 +690,7 @@ $(function form_check (fo)
 });
 /*----------------------------end submit able event----------------------------*/
 
-/*----------------------------creat account----------------------------*/
+/*----------------------------end creat account----------------------------*/
 
 
 /*----------------------------about us----------------------------*/
@@ -771,135 +742,4 @@ $(function(){
         }
     );
 });
-
-/*waiting for resisting end*/
-
-/***********************************index_2 canvas start****************************************/
-$(function(){
-    var pb = document.getElementById('photo_body');
-    if(pb){
-        var pbdraw = pb.getContext("2d");
-
-        pbdraw.beginPath();
-            pbdraw.moveTo(140,0);
-            pbdraw.lineTo(0,88);
-            pbdraw.lineTo(0,246);
-            pbdraw.lineTo(140,325);
-            pbdraw.lineTo(280,246);
-            pbdraw.lineTo(280,88);
-        pbdraw.closePath();
-        
-        pbdraw.fillStyle = '#464646';
-        pbdraw.fill();
-    }
-});
-
-
-/*index_2 canvas*/
-
 /*----------------------------waiting for resisting end----------------------------*/
-
-
-$(function ()
-{
-    $('#editer_aside ol li').hover(function () //aside li mouse hover event
-    {
-        $(this).css({ "background": "#48cfad", "color": "#fff" });
-        $(this).children('i').css({"color": "#fff" });
-    }, function ()
-    {
-        $(this).css({ "background": "#fff", "color": "#2f2f2f" });
-        $(this).children('i').css({ "color": "#646464" });
-    });
-
-    $('#editer_upload_file').click(function ()
-    {
-        $('#upload_file_input').click();
-    });
-    $('#editer_preview_upload').click(function () {
-        $('#preview_upload_input').click();
-    });
-
-    // input file preview
-    $.fn.setPreview = function (opt) {
-        "use strict"
-        var defaultOpt = {
-            inputFile: $(this),
-            img: null
-        };
-        $.extend(defaultOpt, opt);
-
-        var previewImage = function () {
-            if (!defaultOpt.inputFile || !defaultOpt.img) return;
-
-            var inputFile = defaultOpt.inputFile.get(0);
-            var img = defaultOpt.img.get(0);
-
-            // FileReader
-            if (window.FileReader) {
-                // image Ã†Ã„Ã€ÃÂ¸Â¸
-                if (!inputFile.files[0].type.match(/image\//)) return;
-
-                // preview
-                try {
-                    var reader = new FileReader();
-                    reader.onload = function (e) {
-                        img.src = e.target.result;
-                        img.style.width = defaultOpt.w + 'px';
-                        img.style.height = defaultOpt.h + 'px';
-                        img.style.display = '';
-                    }
-                    reader.readAsDataURL(inputFile.files[0]);
-                } catch (e) {
-                    // exception...
-                }
-                // img.filters (MSIE)
-            } else if (img.filters) {
-                inputFile.select();
-                inputFile.blur();
-                var imgSrc = document.selection.createRange().text;
-
-                img.style.width = defaultOpt.w + 'px';
-                img.style.height = defaultOpt.h + 'px';
-                img.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(enable='true',sizingMethod='scale',src=\"" + imgSrc + "\")";
-                img.style.display = '';
-                // no support
-            } else {
-                // Safari5, ...
-            }
-        };
-
-        // onchange
-        $(this).change(function () {
-            previewImage();
-        });
-    };
-
-
-    $(document).ready(function () {
-        var opt = {
-            img: $('#preview_img')
-        };
-
-        $('#preview_upload_input').setPreview(opt);
-    });
-
-    $('#embed_media').click(function ()
-    {
-        $('.dark_overlay').show();
-        $('#embed_popup').show();
-    });
-    var iframe_check = /<iframe[^>]*?>[\s\S.]*?<iframe>/i  
-    $('#embed_bt').click(function () // embed code event
-    {
-        if ($('#embed_textarea').val().match(/<[/]?iframe[^>]+>/i))
-        {
-        $('#editer_preview_box').append($('#embed_textarea').val());
-        $('#embed_popup').hide();
-        $('.dark_overlay').hide();
-        } else
-        {
-            alert('wrong');
-        }
-    });
-});
