@@ -551,7 +551,7 @@ $(function form_check (fo)
 
     /*----------------------------end creat account password logic----------------------------*/
 
-    var abuse_name = new Array('sex', 'bitch', 'pussy', 'cunt', 'fuck', 'fucking' ,'zepot');
+    var abuse_name = new Array('sex', 'bitch', 'pussy', 'cunt', 'fuck', 'fucking' ,'dart');
 
     /*----------------------------creat account nick name logic----------------------------*/
     var nick_com;
@@ -878,13 +878,45 @@ $(function () {
     });
 
     var i = 0;
-    $('#add_text').click(function () {
-        $('#editer_preview_box').append('<div class="editer_"><textarea id="editer_body_text" class="editer_body_text"></textarea></div>');
+    $('#add_text').click(function () { //add text bt event
+        $('#text_editer').clone(true).appendTo('#editer_preview_box');
         $('#editer_body_text').attr('id', 'editer_body_text_' + i);
+        $('#text_editer').attr('id', 'text_editer_' + i);
         i++;
     });
-    $('.editer_body_text').mouseenter(function () {
-        $('.')
+
+    $('.text_editer').hover(function () // textarea move, delete bt hover
+    {
+        $('.con_move_bt, .con_delete_bt').stop().fadeIn(150);
+    }, function ()
+    {
+        $('.con_move_bt, .con_delete_bt').stop().fadeOut(150);
     });
 
+    $('.editer_body_text').focus(function ()
+    {
+        $('.textarea_editer').fadeIn(150);
+    });
+
+
+    $(document).ready(function () { //outside click toggle
+        $(document).click(function (e) {
+            var subject = $(".text_editer");
+
+            if (e.target.id != subject.attr('id') && !subject.has(e.target).length) {
+                $('.textarea_editer').fadeOut(150);
+            }
+        });
+    });
+
+
+    $('.selected_color').click(function () //color picker toggle
+    {
+        $(this).next('ul').toggle();
+    });
+
+    $('.color_picker > ul > li').click(function ()
+    {
+        $(this).parent('ul').hide();
+    });
 });
