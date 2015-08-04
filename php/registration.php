@@ -62,19 +62,23 @@
 		$database->DBQuestion();
 
 		if(!$database->result){
-			echo "<script>alert('회원가입 실패');</script>";
+			echo "회원가입에 실패하였습니다. 5초 후에 이전 페이지로 이동합니다.";
 			$database->DBOut();
 			exit;
+			sleep(5);
+			echo("<script>history.back();</script>");
+
 		}
-		else{
-			echo('<script>document.location.href="../waiting_for_resisting.html"</script>');
+		else{		
+			//echo('<script>document.location.href="../waiting_for_resisting.html"</script>');
 			$database->DBOut();  
 			exit;
 		}
 	}
 	else{
-		header("Content-Type: text/html; charset=UTF-8");
-		echo('<sciprt>console.log("정상적이지 않은 입력입니다.");</sciprt>');
+		echo "정상적이지 않은 입력입니다. 5초 후에 이전 페이지로 이동합니다.";
+		sleep(5);
+		echo("<script>history.back();</script>");
 	}
 
 ?>

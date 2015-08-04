@@ -341,11 +341,10 @@ $(function () //account setting script
 /*----------------------------creat account----------------------------*/
 $(function form_check (fo)
 {
-    var regx = /[`;',./~!@\#$%<>^&*\()\-=+_\’]/gi; //특수문자
-    var space = / /gi //공백
+    var regx = /[`;',./~!@\#$%<>^&*\()\-=+_\’]/gi; //special letters
+    var space = / /gi //space
     var regex = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/; //email check
     var nick_check = /^[A-Za-z0-9+]*$/; ;
-    //var korean_check = /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/;
 
     var email_com;
     
@@ -364,8 +363,6 @@ $(function form_check (fo)
             email_com = false;
     } else if (regex.test($(this).val()) === false) {
 
-        
-
         $(this).css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
         $(this).next().removeClass();
         $(this).next().addClass('fa fa-times');
@@ -373,14 +370,13 @@ $(function form_check (fo)
         $('#email_check').text('wrong email adress').show();
 
         email_com = false
-
     } 
     else { //complite
 
         //enter to AJAX Logic by SsaRu
         $.ajax({
             type:"POST",
-            url:"./php/Overlap_check.php",
+            url:"./php/overlap_check.php",
             data:'data='+ value +'&'+ 'id=email',
             cache: false,
             success: function(data)
@@ -499,7 +495,7 @@ $(function form_check (fo)
             };
         };
 
-        // 동일한 문자가 3회 이상 반복되는 경우
+        // Repeat 3 words
         var val = $(this).val();
         var ch = '';
         var cnt = 0;
@@ -608,7 +604,7 @@ $(function form_check (fo)
             //enter to AJAX Logic by SsaRu
             $.ajax({
                 type:"POST",
-                url:"./php/Overlap_check.php",
+                url:"./php/overlap_check.php",
                 data:'data=' + value + '&' + 'id=nick',
                 cache: false,
                 success: function(data){
