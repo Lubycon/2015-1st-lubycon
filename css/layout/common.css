@@ -53,7 +53,7 @@ a {
         height:175px;
         background:#fff;
         border-radius:4px;
-        position:absolute;
+        position:fixed;
         top:50%;
         left:50%;
         margin-top:-112.5px;

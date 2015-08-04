@@ -178,7 +178,7 @@
             <input type="file" id="preview_upload_input" accept="image/*" multiple />
             <ol>
                 <li><i class="fa fa-crop"></i>Image Crop</li>
-                <li><i class="fa fa-font"></i>Add Text</li>
+                <li id="add_text"><i class="fa fa-font"></i>Add Text</li>
                 <li id="embed_media"><i class="fa fa-code"></i>Embed Media</li>
             </ol>
 
@@ -204,6 +204,52 @@
                 <input type="text" value="Your Contents Name" />
             </p>
             <div id="editer_preview_box">
+                <div id="text_editer" class="text_editer">
+                    <button class="con_move_bt"><i class="fa fa-arrows"></i></button><button class="con_delete_bt"><i class="fa fa-times"></i></button>
+                    <textarea id="editer_body_text" class="editer_body_text"></textarea>
+                    <div class="textarea_editer">
+                        <div id="select_box">
+                            <select class="basic">
+                                <option value="14pt">14pt</option>
+                                <option value="18pt">18pt</option>
+                                <option value="24pt">24pt</option>
+                                <option value="30pt">30pt</option>
+                                <option value="36pt">36pt</option>
+                                <option value="48pt">48pt</option>
+                                <option value="60pt">60pt</option>
+                                <option value="72pt">72pt</option>
+                            </select>
+                        </div>
+                        <button class="text_bold"><i class="fa fa-bold"></i></button>
+                        <button class="text_italic"><i class="fa fa-italic"></i></button>
+                        <button class="text_underline"><i class="fa fa-underline"></i></button>
+                        <button class="text_strike"><i class="fa fa-strikethrough"></i></button>
+                        <div class="color_picker">
+                            <div class="selected_color"></div>
+                            <ul>
+                                <li>#fff</li>
+                                <li>#ccc</li>
+                                <li>#aaa</li>
+                                <li>#999</li>
+                                <li>#777</li>
+                                <li>#555</li>
+                                <li>#333</li>
+                                <li>#1d1d1d</li>
+                                <li>#000</li>
+                                <li>#ffbe54</li>
+                                <li>#baced4</li>
+                                <li>#fdfdaf</li>
+                                <li>#123456</li>
+                                <li>#baced4</li>
+                                <li>#fdfdaf</li>
+                                <li>#123456</li>
+                            </ul>
+                        </div>
+                        <button class="align_left"><i class="fa fa-align-left"></i></button>
+                        <button class="align_center"><i class="fa fa-align-center"></i></button>
+                        <button class="align_right"><i class="fa fa-align-right"></i></button>
+                    </div>
+                </div>
             </div>
         </section>
     </section>

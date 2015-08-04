@@ -1,4 +1,4 @@
-$(function () //window fadein effect
+﻿$(function () //window fadein effect
 {
     $(window).load(function ()
     {
@@ -64,11 +64,11 @@ $(function() //gnb hober event
 	});
 });
 
-$(function(){ //add contents button start
-    $('#addcontent_bt').hover(function(){
-        $(this).stop().animate({opacity:0.9},200);
-    },function(){
-        $(this).stop().animate({opacity:1},200);
+$(function () { //add contents button start
+    $('#addcontent_bt').hover(function () {
+        $(this).stop().animate({ opacity: 0.9 }, 200);
+    }, function () {
+        $(this).stop().animate({ opacity: 1 }, 200);
     });
 
     $('#addcontent_bt').click(function () {
@@ -76,16 +76,13 @@ $(function(){ //add contents button start
         $('.editer_popup').show();
     });
 
-    $('.editer_popup > ul > li').hover(function ()
-    {
-        $(this).children('i').css({"color":"#fff","background":"#48cfad"})
-    }, function ()
-    {
+    $('.editer_popup > ul > li').hover(function () {
+        $(this).children('i').css({ "color": "#fff", "background": "#48cfad" })
+    }, function () {
         $(this).children('i').css({ "color": "#838383", "background": "#fff" })
     });
 
-    $('.editer_popup_cancel , .dark_overlay , #cancel_bt').click(function ()
-    {
+    $('.editer_popup_cancel , .dark_overlay , #cancel_bt').click(function () {
         $('.dark_overlay').hide();
         $('.editer_popup').hide();
         $('#embed_popup').hide();
@@ -250,7 +247,7 @@ $(function () { /* designers page continets selcect */
     });
     $('.contents_bt').mouseleave(function () {
         $('.continets_list').stop().slideUp(300);
-        $('.contents_bt').css('background', '#222');
+        $('.contents_bt').css('background', '#000');
     });
     $('.continets_list li').click(function () {
         $('.continets_selected').text($(this).text());
@@ -344,11 +341,10 @@ $(function () //account setting script
 /*----------------------------creat account----------------------------*/
 $(function form_check (fo)
 {
-    var regx = /[`;',./~!@\#$%<>^&*\()\-=+_\¡¯]/gi; //Æ¯¼ö¹®ÀÚ
-    var space = / /gi //°ø¹é
+    var regx = /[`;',./~!@\#$%<>^&*\()\-=+_\’]/gi; //special letters
+    var space = / /gi //space
     var regex = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/; //email check
     var nick_check = /^[A-Za-z0-9+]*$/; ;
-    //var korean_check = /[¤¡-¤¾|¤¿-¤Ó|°¡-ÆR]/;
 
     var email_com;
     
@@ -367,8 +363,6 @@ $(function form_check (fo)
             email_com = false;
     } else if (regex.test($(this).val()) === false) {
 
-        
-
         $(this).css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
         $(this).next().removeClass();
         $(this).next().addClass('fa fa-times');
@@ -376,14 +370,13 @@ $(function form_check (fo)
         $('#email_check').text('wrong email adress').show();
 
         email_com = false
-
     } 
     else { //complite
 
         //enter to AJAX Logic by SsaRu
         $.ajax({
             type:"POST",
-            url:"./php/Overlap_check.php",
+            url:"./php/overlap_check.php",
             data:'data='+ value +'&'+ 'id=email',
             cache: false,
             success: function(data)
@@ -409,7 +402,7 @@ $(function form_check (fo)
                 else if(data == 0){ //Non-overlapping
                     console.log('DB return value non-overlapping');
                     console.log(data);
-                    $(current_id).css({ 'border-left': '5px solid #48cfad', 'width': '187px' });
+                    $(current_id).css({ 'border-left': '5px solid #8ec89a', 'width': '187px' });
                     $(current_id).next().removeClass();
                     $(current_id).next().addClass('fa fa-check');
                     $('#email_check').text('').show();
@@ -441,7 +434,7 @@ $(function form_check (fo)
 
             $('#pass_check').text('').show();
 
-        } else if ($(this).val().match(/[^0-9]/g) == null) //¹®ÀÚÇÑ°³ÇÊ¿ä
+        } else if ($(this).val().match(/[^0-9]/g) == null) //문자한개필요
         {
             $(this).css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
             $(this).next().removeClass();
@@ -449,7 +442,7 @@ $(function form_check (fo)
 
             $('#pass_check').text('you must use least one alpabet').show();
 
-        } else if ($(this).val().match(regx)) //Æ¯¼ö¹®ÀÚ ºÒ°¡
+        } else if ($(this).val().match(regx)) //특수문자 불가
         {
             $(this).css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
             $(this).next().removeClass();
@@ -457,7 +450,7 @@ $(function form_check (fo)
 
             $('#pass_check').text('you can not write !@#%').show();
 
-        } else if ($(this).val().match(space) || $(this).val().match('null') == null == false) //°ø¹é ºÒ°¡
+        } else if ($(this).val().match(space) || $(this).val().match('null') == null == false) //공백 불가
         {
             $(this).css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
             $(this).next().removeClass();
@@ -465,7 +458,7 @@ $(function form_check (fo)
 
             $('#pass_check').text('you can not write null').show();
 
-        } else if ($(this).val().length < 8 || $(this).val().length > 16) {  // 8ÀÚº¸´Ù ÂªÀ»¶§
+        } else if ($(this).val().length < 8 || $(this).val().length > 16) {  // 8자보다 짧을때
             $(this).css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
             $(this).next().removeClass();
             $(this).next().addClass('fa fa-times');
@@ -482,7 +475,7 @@ $(function form_check (fo)
             $('#re_pass_check').text('It`s not same').show();
 
         } else if ($(this).val().length >= 8 && $(this).val().length <= 16) { // complite
-            $(this).css({ 'border-left': '5px solid #48cfad', 'width': '187px' });
+            $(this).css({ 'border-left': '5px solid #8ec89a', 'width': '187px' });
             $(this).next().removeClass();
             $(this).next().addClass('fa fa-check');
             $(this).val($(this).val().toLowerCase()); // lowercase and uppercase same
@@ -493,7 +486,7 @@ $(function form_check (fo)
 
             if ($(this).val() == $('#re_pass_id').val())
             {
-                $('#re_pass_id').css({ 'border-left': '5px solid #48cfad', 'width': '187px' });
+                $('#re_pass_id').css({ 'border-left': '5px solid #8ec89a', 'width': '187px' });
                 $('#re_pass_id').next().removeClass();
                 $('#re_pass_id').next().addClass('fa fa-check');
 
@@ -502,7 +495,7 @@ $(function form_check (fo)
             };
         };
 
-        // µ¿ÀÏÇÑ ¹®ÀÚ°¡ 3È¸ ÀÌ»ó ¹Ýº¹µÇ´Â °æ¿ì
+        // Repeat 3 words
         var val = $(this).val();
         var ch = '';
         var cnt = 0;
@@ -545,7 +538,7 @@ $(function form_check (fo)
             $('#re_pass_check').text('It`s not same').show();
 
         } else if ($(this).val() == $('#pass_id').val()) { //complite
-            $(this).css({ 'border-left': '5px solid #48cfad', 'width': '187px' });
+            $(this).css({ 'border-left': '5px solid #8ec89a', 'width': '187px' });
             $(this).next().removeClass();
             $(this).next().addClass('fa fa-check');
 
@@ -558,7 +551,7 @@ $(function form_check (fo)
 
     /*----------------------------end creat account password logic----------------------------*/
 
-    var abuse_name = new Array('sex', 'bitch', 'pussy', 'cunt', 'fuck', 'fucking' ,'zepot');
+    var abuse_name = new Array('sex', 'bitch', 'pussy', 'cunt', 'fuck', 'fucking' ,'dart');
 
     /*----------------------------creat account nick name logic----------------------------*/
     var nick_com;
@@ -586,16 +579,7 @@ $(function form_check (fo)
 
             //console.log(jQuery.inArray($('#nick_id').val(), abuse_name))
 
-        } else if ($(this).val() == '2') { //duplicate names
-            $(this).css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
-            $(this).next().removeClass();
-            $(this).next().addClass('fa fa-times');
-
-            $('#nick_check').text('duplicated name').show();
-
-            nick_com = false;
-
-        } else if (!nick_check.test($(this).val())) //¿µ¾î,¼ýÀÚ ¿Ü ºÒ°¡
+        } else if (!nick_check.test($(this).val())) //영어,숫자 외 불가
         {
             $(this).css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
             $(this).next().removeClass();
@@ -605,7 +589,7 @@ $(function form_check (fo)
 
             nick_com = false;
 
-        } else if ($(this).val().match(space) || $(this).val().match('null') == null == false) //°ø¹é ºÒ°¡
+        } else if ($(this).val().match(space) || $(this).val().match('null') == null == false) //공백 불가
         {
             $(this).css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
             $(this).next().removeClass();
@@ -620,7 +604,7 @@ $(function form_check (fo)
             //enter to AJAX Logic by SsaRu
             $.ajax({
                 type:"POST",
-                url:"./php/Overlap_check.php",
+                url:"./php/overlap_check.php",
                 data:'data=' + value + '&' + 'id=nick',
                 cache: false,
                 success: function(data){
@@ -651,7 +635,7 @@ $(function form_check (fo)
                     {
                         console.log('DB return value Non-overlapping');
 
-                        $(current_id).css({ 'border-left': '5px solid #48cfad', 'width': '187px' });
+                        $(current_id).css({ 'border-left': '5px solid #8ec89a', 'width': '187px' });
                         $(current_id).next().removeClass();
                         $(current_id).next().addClass('fa fa-check');
 
@@ -665,7 +649,7 @@ $(function form_check (fo)
                         nick_com = false;
                     }
                 }
-            })
+            });
         }
     });
 
@@ -684,7 +668,7 @@ $(function form_check (fo)
         if ( email_com && nick_com && pass_com && $('.check_box:checked').length == 2)
         {
             $('.account_submit').removeAttr('disabled');
-            $('.account_submit').css('background', '#48cfad');
+            $('.account_submit').css('background', '#47bf7e');
         } else {
             $('.account_submit').attr('disabled', 'disabled');
             $('.account_submit').css('background', '#c1c1c1');
@@ -703,7 +687,7 @@ $(function form_check (fo)
             $('.account_submit').css('background', '#c1c1c1');
         }
 
-        if (!nick_check.test($('#nick_id').val())) //¿µ¾î,¼ýÀÚ ¿Ü ºÒ°¡
+        if (!nick_check.test($('#nick_id').val())) //영어,숫자 외 불가
         {
             $('#nick_id').css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
             $('#nick_id').next().removeClass();
@@ -719,7 +703,7 @@ $(function form_check (fo)
 });
 /*----------------------------end submit able event----------------------------*/
 
-/*----------------------------creat account----------------------------*/
+/*----------------------------end creat account----------------------------*/
 
 
 /*----------------------------about us----------------------------*/
@@ -771,24 +755,23 @@ $(function(){
         }
     );
 });
-
-/*waiting for resisting end*/
+/*----------------------------waiting for resisting end----------------------------*/
 
 /***********************************index_2 canvas start****************************************/
-$(function(){
+$(function () {
     var pb = document.getElementById('photo_body');
-    if(pb){
+    if (pb) {
         var pbdraw = pb.getContext("2d");
 
         pbdraw.beginPath();
-            pbdraw.moveTo(140,0);
-            pbdraw.lineTo(0,88);
-            pbdraw.lineTo(0,246);
-            pbdraw.lineTo(140,325);
-            pbdraw.lineTo(280,246);
-            pbdraw.lineTo(280,88);
+        pbdraw.moveTo(140, 0);
+        pbdraw.lineTo(0, 88);
+        pbdraw.lineTo(0, 246);
+        pbdraw.lineTo(140, 325);
+        pbdraw.lineTo(280, 246);
+        pbdraw.lineTo(280, 88);
         pbdraw.closePath();
-        
+
         pbdraw.fillStyle = '#464646';
         pbdraw.fill();
     }
@@ -800,20 +783,17 @@ $(function(){
 /*----------------------------waiting for resisting end----------------------------*/
 
 
-$(function ()
-{
+$(function () {
     $('#editer_aside ol li').hover(function () //aside li mouse hover event
     {
         $(this).css({ "background": "#48cfad", "color": "#fff" });
-        $(this).children('i').css({"color": "#fff" });
-    }, function ()
-    {
+        $(this).children('i').css({ "color": "#fff" });
+    }, function () {
         $(this).css({ "background": "#fff", "color": "#2f2f2f" });
         $(this).children('i').css({ "color": "#646464" });
     });
 
-    $('#editer_upload_file').click(function ()
-    {
+    $('#editer_upload_file').click(function () {
         $('#upload_file_input').click();
     });
     $('#editer_preview_upload').click(function () {
@@ -884,22 +864,59 @@ $(function ()
         $('#preview_upload_input').setPreview(opt);
     });
 
-    $('#embed_media').click(function ()
-    {
+    $('#embed_media').click(function () {
         $('.dark_overlay').show();
         $('#embed_popup').show();
     });
-    var iframe_check = /<iframe[^>]*?>[\s\S.]*?<iframe>/i  
+
+
     $('#embed_bt').click(function () // embed code event
     {
-        if ($('#embed_textarea').val().match(/<[/]?iframe[^>]+>/i))
-        {
         $('#editer_preview_box').append($('#embed_textarea').val());
         $('#embed_popup').hide();
         $('.dark_overlay').hide();
-        } else
-        {
-            alert('wrong');
-        }
+    });
+
+    var i = 0;
+    $('#add_text').click(function () { //add text bt event
+        $('#text_editer').clone(true).appendTo('#editer_preview_box');
+        $('#editer_body_text').attr('id', 'editer_body_text_' + i);
+        $('#text_editer').attr('id', 'text_editer_' + i);
+        i++;
+    });
+
+    $('.text_editer').hover(function () // textarea move, delete bt hover
+    {
+        $('.con_move_bt, .con_delete_bt').stop().fadeIn(150);
+    }, function ()
+    {
+        $('.con_move_bt, .con_delete_bt').stop().fadeOut(150);
+    });
+
+    $('.editer_body_text').focus(function ()
+    {
+        $('.textarea_editer').fadeIn(150);
+    });
+
+
+    $(document).ready(function () { //outside click toggle
+        $(document).click(function (e) {
+            var subject = $(".text_editer");
+
+            if (e.target.id != subject.attr('id') && !subject.has(e.target).length) {
+                $('.textarea_editer').fadeOut(150);
+            }
+        });
+    });
+
+
+    $('.selected_color').click(function () //color picker toggle
+    {
+        $(this).next('ul').toggle();
+    });
+
+    $('.color_picker > ul > li').click(function ()
+    {
+        $(this).parent('ul').hide();
     });
 });
