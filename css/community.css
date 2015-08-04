@@ -222,6 +222,11 @@
             border-bottom: 1px solid #dadada;
         }
 
+    .table_body tr:hover
+    {
+        background: #eeeeee;
+    }
+
     .table_blank {
         width: 60px;
     }
