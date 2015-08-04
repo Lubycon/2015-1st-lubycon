@@ -268,6 +268,11 @@
                 font-size: 30px;
                 float:right;
             }
+
+            #interview:hover
+            {
+                opacity:0.7;
+            }
 /* designers section */
 
 /* main board */
@@ -381,19 +386,19 @@
         width: 180px;
         height: 35px;
         line-height: 35px;
-        border: 1px solid #acacac;
         border-radius: 3px;
+        background: #48cfad;
         text-align: center;
         margin: 0px auto;
         margin-top: 20px;
-        color: #2e82ff;
+        color: #fff;
         font-weight: 400;
     }
 
-        #gotocom:hover {
-            background: #48cfad;
-            color: #fff;
-        }
+    #gotocom:hover
+    {
+        opacity:0.7;
+    }
 
     #main_board hr {
         color: #fff;
