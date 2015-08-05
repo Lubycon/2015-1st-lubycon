@@ -51,7 +51,17 @@ $(function () //account setting script
 
     $('#Change_pass').click(function () //change pass remove attr
     {
-        $('#pass ,#repeat_pass, #repeat_pass_again').removeAttr('disabled');
+        if($('#now_pass_id').attr('disabled'))
+        {
+            $('#now_pass_id , #pass_id ,#re_pass_id').removeAttr('disabled');
+            $('#Change_pass').text('Not Change Password');
+            $('#Change_pass').css({'background':'#c1c1c1 ','margin-left':'65px'});
+        }else
+        {
+            $('#now_pass_id , #pass_id ,#re_pass_id').attr('disabled', 'disabled');
+            $('#Change_pass').text('Change Password');
+            $('#Change_pass').css({ 'background': '#48CFAD ', 'margin-left': '75px' });
+        }
     });
     
 
