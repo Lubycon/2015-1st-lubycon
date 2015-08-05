@@ -157,6 +157,17 @@
         border-top: 2px solid #d5d5d5;
         padding: 0px 10px;
     }
+    .form_check{
+            color:#ea4126;
+            font-size: 12px !important;
+            margin-left: 140px;
+            margin-top: -16px;
+            margin-bottom:0px !important;
+            display:none;
+            height: 16px;
+            line-height: 13px;
+        }
+
     .setting_form #Change_pass{
         width:130px;
         height:30px;

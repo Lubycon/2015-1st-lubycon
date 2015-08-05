@@ -246,6 +246,7 @@
         position:relative;
         padding:25px 0px;
         min-height: 80px;
+        height:80px;
     }
     #text_editer
     {display:none;}
