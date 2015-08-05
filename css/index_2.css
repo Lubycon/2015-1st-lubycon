@@ -275,6 +275,126 @@
 
 /*community start*/
 
+#community_pre
+{
+    width: 100%;
+}
+    #community_pre ul
+    {
+        padding:0px 50px 50px 50px;
+    }
+
+        .forum_card
+        {
+            margin-top: 35px;
+        }
+
+.f_card_body
+{
+    position:relative;
+
+    width: 1200px;
+    height: 180px;
+    margin: 0px auto;
+
+    border: 1px solid #888888;
+    border-top: 5px solid #48cfad;
+    border-radius:3px;
+
+    overflow: hidden;
+}
+
+.f_card_body:hover
+{
+    text-decoration: underline;
+    opacity:0.8;
+}
+    .side_bar
+    {
+        width:5px;
+        height:80%;
+        float:left;
+
+        border-right: 2px solid #48cfad;
+        margin: 20px 20px 15px 15px;
+
+        text-align:right;
+    }
+        .side_bar i
+        {
+            font-size:13px;
+            color:#48cfad;
+            margin-right:-6.5px;
+
+            vertical-align: top;
+        }
+
+
+    .f_card_header
+    {
+        width: 1153px;
+        float:left;
+        margin-top: 5px;
+    }
+        .f_card_title
+        {
+            width:933px;
+            height:40px;
+            line-height: 40px;
+            margin-top:5px;
+
+            color:#333333;
+            font-size:30px;
+            float: left;
+        }
+
+        .f_card_counters
+        {
+            width:200px;
+            height: 40px;
+            line-height: 40px;
+            padding-right:10px;
+            padding-left:10px;
+            float:right;
+        }
+            .forum_like
+            {
+                float: right;
+                color:#818181;
+                margin-right:30px;
+            }
+                .forum_like i
+                {
+                    font-size:20px;
+                    color:#818181;
+                    margin-right: 15px;
+                }
+            .forum_comment
+            {
+                float: right;
+                color:#818181;
+            }
+                .forum_comment i
+                {
+                    font-size:20px;
+                    color:#818181;
+                    margin-right: 15px;
+                }
+        .f_card_content
+        {
+            width:1143px;
+            height: 120px;
+            padding:15px 15px 5px 0px;
+            margin-left:43px;
+            margin-top:40px;
+        }
+
+            .f_card_content p
+            {
+                font-size:18px;
+                font-weight: 200;
+                color:#666666;
+            }
 
 /*community end*/
 
