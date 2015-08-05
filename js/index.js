@@ -20,6 +20,16 @@ $(function () //sign in toggle event
     });
 });
 
+$(document).ready(function () { // signin box click toggle
+    $(document).click(function (e) {
+        var subject = $("#signin_bt");
+
+        if (e.target.id != subject.attr('id') && !subject.has(e.target).length) {
+            $("#login_box").fadeOut(150);
+        }
+    });
+});
+
 $(function () //language change bt slide and change
 {
 	$('.lang_selected').mouseenter(function()
@@ -237,7 +247,19 @@ $(function () //contents page category
             cate_point--;
         }
     });
-    
+
+    $(document).ready(function () { // signin box click toggle
+        $(document).click(function (e) {
+            var subject = $("#category");
+
+            if (e.target.id != subject.attr('id') && !subject.has(e.target).length) {
+                $('#open_cate_inner').stop().animate({ top: -85 });
+                $('#down_arrow').children().removeClass();
+                $('#down_arrow').children().addClass('fa fa-angle-down');
+                cate_point--;
+            }
+        });
+    });
 });
 
 $(function () { /* designers page continets selcect */
