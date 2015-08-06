@@ -6,6 +6,10 @@
     });
 });
 
+window.addEventListener('load',function(){
+    setTimeout(scrollTo,0,0,1);
+},false); //disable web adress window in mobile
+
 $(function () //sign in toggle event
 {
     $('#signin_bt').click(function () {
