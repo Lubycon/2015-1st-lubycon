@@ -3,6 +3,7 @@
     $(window).load(function ()
     {
         $('#bodyer').fadeIn('200');
+        this.reset();
     });
 });
 
@@ -33,6 +34,37 @@ $(document).ready(function () { // signin box click toggle
         }
     });
 });
+
+$(function () { //e-mail and password value reset start
+    var emailbox = $('#login_id');
+    var passbox = $('#login_pass');
+
+    emailbox.focus(function (){
+        if (emailbox.val() == 'E-mail'){
+            emailbox.val('');
+        }
+    });
+    emailbox.blur(function (){
+        if (emailbox.val() == ''){
+            emailbox.val('E-mail');
+        }
+    });
+
+    passbox.focus(function(){
+        passbox.attr('type','password');
+        if(passbox.val()=='Password'){
+            passbox.val('');
+        }
+    });
+    passbox.blur(function(){
+        if(passbox.val==''){
+            passbox.attr('type','text');            
+            passbox.val('Password');
+        }
+    });
+});     //e-mail and password value reset start
+
+
 
 $(function () //language change bt slide and change
 {
