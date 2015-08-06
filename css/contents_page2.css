@@ -74,7 +74,7 @@
 .contents_view .contents_slide{
     width: 631px;
     height:110px;
-    background:#000;
+    background:#222;
     color:#fff;
     text-align:center;
     line-height:110px;
@@ -148,6 +148,10 @@
     width:50px;
     height:50px;
     margin-right:8px;
+
+    border: 2px solid #48cfad;
+    border-radius: 50%;
+    overflow:hidden;
 }
 .contents_view #comment_box #comment_list .comment_div .comment_pic img{
     width:50px;
@@ -379,7 +383,7 @@
         vertical-align: middle;
     }
 .share_face{
-    background:#4b65a3;
+    background:#3b5998;
 }
 .share_twit{
     background:#12abf2;

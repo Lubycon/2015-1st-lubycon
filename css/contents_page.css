@@ -194,7 +194,7 @@
         }
         .contents_disc h4,h5{
             display:inline-block;
-            color:#2f2f2f;
+            color:#444444;
             font-weight:600;
             float:left;
             font-size:20px;
@@ -212,15 +212,19 @@
             font-weight:300;
         }
         .contents_disc img{
-            width:36px;
+            width:40px;
             height:40px;
             padding-top:3px;
             clear:both;
+            border-radius: 50%;
         }
         .contents_disc .by{
             color:#808080;
-            margin-left:10px;
+            margin-left:5px;
             margin-right:5px;
+        }
+        .contents_disc .name{
+            color:#444444;
         }
         .contents_disc .fa-heart{
             color:#f15620;
