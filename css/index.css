@@ -5,7 +5,8 @@
 /* main section start */
 
 #main_figure {
-    background: url(../CH/img/mein_Img.png) no-repeat;
+    background: url(../CH/img/mein_Img.png) 0% 47% no-repeat;
+    background-size:100%;
     width: 100%;
     height: 350px;
     text-align: center;
@@ -276,133 +277,128 @@
 /* designers section */
 
 /* main board */
-#main_board {
-    width: 1200px;
-    margin: 0px auto;
-    margin-top: 90px;
-    position: relative;
-}
 
-#forum_title
+#community_pre
 {
     width: 100%;
-    height: 100px;
-    line-height: 100px;
-    margin-top: 80px;
-    font-size:36px;
-    font-weight: 200;
-    text-align:center;
+}
+    #community_pre ul
+    {
+        padding:0px 50px 50px 50px;
+    }
+
+        .forum_card
+        {
+            margin-top: 35px;
+        }
+
+.f_card_body
+{
+    position:relative;
+
+    width: 1200px;
+    height: 180px;
+    margin: 0px auto;
+
+    border: 1px solid #888888;
+    border-top: 5px solid #48cfad;
+    border-radius:3px;
+
+    overflow: hidden;
 }
 
-
-
-    .tab_item {
-        width: 1200px;
-        clear: both;
-    }
-
-    #table2, #table3 {
-        display: none;
-    }
-
-    .tab_item table {
-        width: 1200px;
-        height: 415px;
-        vertical-align: middle;
-    }
-
-        .tab_item table thead {
-            background: #737373;
-            color: #fff;
-            text-align: center;
-        }
-
-        .tab_item table th {
-            color: #fff;
-            font-size: 1.02em;
-            font-weight: 200;
-        }
-
-        .tab_item table tr {
-            height: 43px;
-            border-bottom: 1px solid #dadada;
-        }
-
-    .table_blank {
-        width: 60px;
-    }
-
-    .tab_item table .fa-circle {
-        color: #42a6ed;
-        font-size: 10px;
-        vertical-align: middle;
-        margin-left: 50px;
-    }
-
-    .table_number {
-        width: 110px;
-        text-align: center;
-        color: #545454;
-    }
-
-    .table_subject {
-        padding-left: 20px;
-    }
-
-    .table_writer {
-        width: 130px;
-        text-align: center;
-        color: #545454;
-    }
-
-    .table_like {
-        width: 70px;
-        text-align: center;
-        color: #2f6fff;
-    }
-
-    .fa-heart {
-        font-size: 12px;
-        color: #f32b64;
-    }
-
-    .table_view {
-        width: 70px;
-        text-align: center;
-        color: #2f6fff;
-    }
-
-    .fa-eye {
-        font-size: 15px;
-    }
-
-    .table_date {
-        width: 150px;
-        text-align: center;
-        color: #545454;
-    }
-
-    #gotocom {
-        width: 180px;
-        height: 35px;
-        line-height: 35px;
-        border-radius: 3px;
-        background: #48cfad;
-        text-align: center;
-        margin: 0px auto;
-        margin-top: 20px;
-        color: #fff;
-        font-weight: 400;
-    }
-
-    #gotocom:hover
+.f_card_body:hover
+{
+    text-decoration: underline;
+    opacity:0.8;
+}
+    .side_bar
     {
-        opacity:0.7;
-    }
+        width:5px;
+        height:80%;
+        float:left;
 
-    #main_board hr {
-        color: #fff;
+        border-right: 2px solid #48cfad;
+        margin: 20px 20px 15px 15px;
+
+        text-align:right;
     }
+        .side_bar i
+        {
+            font-size:13px;
+            color:#48cfad;
+            margin-right:-6.5px;
+
+            vertical-align: top;
+        }
+
+
+    .f_card_header
+    {
+        width: 1153px;
+        float:left;
+        margin-top: 5px;
+    }
+        .f_card_title
+        {
+            width:933px;
+            height:40px;
+            line-height: 40px;
+            margin-top:5px;
+
+            color:#333333;
+            font-size:30px;
+            float: left;
+        }
+
+        .f_card_counters
+        {
+            width:200px;
+            height: 40px;
+            line-height: 40px;
+            padding-right:10px;
+            padding-left:10px;
+            float:right;
+        }
+            .forum_like
+            {
+                float: right;
+                color:#818181;
+                margin-right:30px;
+            }
+                .forum_like i
+                {
+                    font-size:20px;
+                    color:#818181;
+                    margin-right: 15px;
+                }
+            .forum_comment
+            {
+                float: right;
+                color:#818181;
+            }
+                .forum_comment i
+                {
+                    font-size:20px;
+                    color:#818181;
+                    margin-right: 15px;
+                }
+        .f_card_content
+        {
+            width:1143px;
+            height: 120px;
+            padding:15px 15px 5px 0px;
+            margin-left:43px;
+            margin-top:40px;
+        }
+
+            .f_card_content p
+            {
+                font-size:18px;
+                font-weight: 200;
+                color:#666666;
+            }
+
 
 /* main board */
 

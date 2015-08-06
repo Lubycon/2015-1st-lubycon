@@ -1,7 +1,8 @@
 ﻿@charset "utf-8";
 
 #main_figure {
-    background: url(../CH/img/mein_img.png) no-repeat;
+    background: url(../CH/img/mein_img.png) 0% 47% no-repeat;
+    background-size:100%;
     width: 100%;
     height: 135px;
     line-height: 135px;
@@ -41,123 +42,184 @@
     cursor:pointer;
 }
 
-#about_img_logo
-{
-    width: 282px;
-    margin: 0px auto;
-    margin-top: 90px;
-    height: 333px;
-    background: url(../CH/img/about_us/about_logo.jpg) no-repeat;
-}
 
 #descript_lubycon
 {
     z-index:2;
-    position:absolute;
+    position:relative;
     width: 100%;
     height: 160px;
-    background: rgba(8,20,31,0.85);
 }
 
-#descript_lubycon p
-{
-    padding-top: 40px;
-    text-align: center;
-    color: #fff;
-    font-size: 20px;
-    font-weight: 200;
-}
+    #descript_lubycon p
+    {
+        margin-top: 150px;
+        text-align: center;
+        color: #333333;
+        font-size: 25px;
+        font-weight: 200;
+    }
 
-#about_img_jumbo
-{
-    width:100%;
-    height: 410px;
-    background: url(../CH/img/about_us/jumbo_img2.jpg) 50% 80%;
-    opacity: 0.5;
-}
 
 #icons
 {
     position:relative;
     width: 100%;
-    height: 358px;
+    height: 490px;
+    margin-top:120px;
 }
 
-#icons ul
+    #icons ul
+    {
+        width: 1176px;
+        height: 210px;
+        left: 50%;
+        margin: 0px auto;
+    }
+
+        #icons #icon1
+        {
+            float: left;
+            width:212px;
+            height:160px;
+            margin-right: 90px;
+            margin-left: 90px;
+            padding-top: 170px;
+            background: url(../CH/img/about_us/icon_1.png) 50% 0% no-repeat;
+            background-size: 212px 212px;
+        }
+
+        #icons #icon2
+        {
+            float: left;
+            width:212px;
+            height:160px;
+            margin-right: 90px;
+            margin-left: 90px;
+            padding-top: 170px;
+            background: url(../CH/img/about_us/icon_2.png) 50% 0% no-repeat;
+            background-size: 212px 212px;
+        }
+
+        #icons #icon3
+        {
+            float: left;
+            width:212px;
+            height:160px;
+            margin-right: 90px;
+            margin-left: 90px;
+            padding-top: 170px;
+            background: url(../CH/img/about_us/icon_3.png) 50% 0% no-repeat;
+            background-size: 212px 212px;
+        }
+
+        .icon_title
+        {
+            margin-top:60px;
+            text-align: center;
+            font-size: 28px;
+        }
+
+        .icon_descript
+        {
+            font-weight: 200;
+            font-size:18px;
+            text-align: center;
+            margin-top:15px;
+        }
+
+
+#employees
 {
-    position:absolute;
-    width: 988px;
-    height: 210px;
-    left: 50%;
-    margin-left: -494px;
+    width: 100%;
+    height: 800px;
+    margin-top: 120px;
+    background: #fbfbfb;
+    padding-top: 150px;
 }
 
-    #icons #icon1
+    #ceo
     {
-        float: left;
-        width:212px;
-        height:160px;
-        margin-right: 176px;
-        margin-top: -50px;
-        padding-top: 170px;
-        text-align: center;
-        font-size: 25px;
-        background: url(../CH/img/about_us/icon_1.png) 50% 0% no-repeat;
-    }
-    #icons #icon1 p
-    {
-        font-size: 15px;
+        width: 200px;
+        height: 200px;
+        border: 5px solid #48cfad;
+        border-radius: 50%;
+        margin: 0px auto;
+
+        background:url(../CH/img/about_us/employee/paul_kim.png), #fff;
+        background-size: 200px 200px;
     }
 
-    #icons #icon2
+    #employees ul
     {
-        float: left;
-        width:212px;
-        height:160px;
-        margin-right: 176px;
-        margin-top: -50px;
-        padding-top: 170px;
-        text-align: center;
-        font-size: 25px;
-        background: url(../CH/img/about_us/icon_2.png) 50% 0%;
-        background-repeat: no-repeat;
-    }
-    #icons #icon2 p
-    {
-        font-size: 15px;
+        width: 1200px;
+        margin: 0px auto;
+        margin-top: 150px;
     }
 
-    #icons #icon3
+        .employee
+        {
+            width: 200px;
+            height: 200px;
+            border: 5px solid #48cfad;
+            border-radius: 50%;
+            
+            float:left;
+            margin-right: 40px;
+            margin-left: 40px;
+        }
+        .employee:nth-child(1)
+        {
+            background:url(../CH/img/about_us/employee/ssaru.png), #fff;
+            background-size: 200px 200px;
+        }
+        .employee:nth-child(2)
+        {
+            background:url(../CH/img/about_us/employee/zepot.png), #fff;
+            background-size: 200px 200px;
+        }
+        .employee:nth-child(3)
+        {
+            background:url(../CH/img/about_us/employee/dart.png), #fff;
+            background-size: 200px 200px;
+        }
+        .employee:nth-child(4)
+        {
+            background:url(../CH/img/about_us/employee/simon.png), #fff;
+            background-size: 200px 200px;
+        }
+      
+    .emp_name
     {
-        float: left;
-        width:212px;
-        height:160px;
-        margin-top: -50px;
-        padding-top: 170px;
         text-align: center;
-        font-size: 25px;
-        background: url(../CH/img/about_us/icon_3.png) 50% 0%;
-        background-repeat: no-repeat;
+        font-size:30px;
+        color:#333333;
+        margin-top: 210px;
     }
-    #icons #icon3 p
+    .emp_position
     {
-        font-size: 15px;
+        text-align: center;
+        font-size:24px;
+        color:#48cfad;
     }
+
+
+
 
 
 #contact_body
 {
     width: 100%;
-    height: 500px;
-    background:#f0f0f0;
+    height: 700px;
     position: relative;
+    margin-bottom: -80px;
 }
 
     #contact_body #contact_title
     {
         font-size: 55px;
         color: #252525;
-        padding-top: 90px;
+        padding-top:170px;
         text-align: center;
     }
     #contact_body #contact_title p
@@ -171,11 +233,13 @@
     #contact_body #mailbtn
     {
         position: absolute;
-        bottom: 40px;
-        left:50%;
-        margin-left: -115px;
         width: 230px;
         height: 80px;
+       
+        bottom: 120px;
+        left:50%;
+        margin-left: -115px;
+        
         border: none;
         border-radius: 7px;
         background: #ec6446;

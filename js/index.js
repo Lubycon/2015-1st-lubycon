@@ -6,6 +6,10 @@
     });
 });
 
+window.addEventListener('load',function(){
+    setTimeout(scrollTo,0,0,1);
+},false); //disable web adress window in mobile
+
 $(function () //sign in toggle event
 {
     $('#signin_bt').click(function () {
@@ -17,6 +21,16 @@ $(function () //sign in toggle event
         $("#after_signin").hide();
         $("#signin_bt").show();
         $("#addcontent_bt").hide();
+    });
+});
+
+$(document).ready(function () { // signin box click toggle
+    $(document).click(function (e) {
+        var subject = $("#signin_bt");
+
+        if (e.target.id != subject.attr('id') && !subject.has(e.target).length) {
+            $("#login_box").fadeOut(150);
+        }
     });
 });
 
@@ -237,7 +251,19 @@ $(function () //contents page category
             cate_point--;
         }
     });
-    
+
+    $(document).ready(function () { // signin box click toggle
+        $(document).click(function (e) {
+            var subject = $("#category");
+
+            if (e.target.id != subject.attr('id') && !subject.has(e.target).length) {
+                $('#open_cate_inner').stop().animate({ top: -85 });
+                $('#down_arrow').children().removeClass();
+                $('#down_arrow').children().addClass('fa fa-angle-down');
+                cate_point--;
+            }
+        });
+    });
 });
 
 $(function () { /* designers page continets selcect */
@@ -549,6 +575,35 @@ $(function form_check (fo)
         
     });
 
+    var now_pass_com;
+    $('#now_pass_id').on("keydown keyup click blur ready change", function () //account setting page now password check
+    {
+        if ($(this).val() == '') { //blank
+            $(this).css({ 'border-left': '2px solid #D5D5D5', 'width': '190px' });
+            $(this).next().removeClass();
+
+            $('#now_pass_check').text('').show();
+
+            now_pass_com = false;
+        } else if ($(this).val() != 'idiotdart') { //not same
+            $(this).css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
+            $(this).next().removeClass();
+            $(this).next().addClass('fa fa-times');
+
+            $('#now_pass_check').text('Wrong your password').show();
+
+            now_pass_com = false;
+        } else if ($(this).val() == 'idiotdart') { //complite
+            $(this).css({ 'border-left': '5px solid #8ec89a', 'width': '187px' });
+            $(this).next().removeClass();
+            $(this).next().addClass('fa fa-check');
+
+            $('#now_pass_check').text('').show();
+            now_pass_com = true;
+        }
+    });
+
+
     /*----------------------------end creat account password logic----------------------------*/
 
     var abuse_name = new Array('sex', 'bitch', 'pussy', 'cunt', 'fuck', 'fucking');
@@ -696,7 +751,15 @@ $(function form_check (fo)
             $('#nick_check').text('you can write only english and number').show();
 
             nick_com = false;
-
+        }
+        if (!$('#now_pass_id').attr('disabled')) { //account setting page submit bt disable event
+            if (now_pass_com && pass_com) {
+                $('#submit_bt').removeAttr('disabled');
+                $('#submit_bt').css('background', '#47bf7e');
+            } else {
+                $('#submit_bt').attr('disabled', 'disabled');
+                $('#submit_bt').css('background', '#c1c1c1');
+            };
         }
 
     });
