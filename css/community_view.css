@@ -71,12 +71,33 @@
     text-align:center;
     top:0px;
     box-shadow: -1px 1px 6px 0px rgba(0,0,0,0.1);
+    overflow:hidden;
 }
 
-    #post_banner img {
-        width: 100%;
-        border-radius: 2px;
+#profile_pic
+{
+    width:177px;
+    height:143px;
+
+    background: #48cfad;
+
+    margin-top:-15px;
+    margin-left:-10px;
+    padding-top:25px;
+}
+    #img_mask
+    {
+        width:120px;
+        height: 120px;
+        margin: 0px auto;
+
+        border-radius: 50%;
+        overflow: hidden;
     }
+        #img_mask img {
+            width: 100%;
+            border-radius: 2px;
+        }
     #post_banner h4{
         font-size:22px;
         margin-top:3px;
@@ -85,6 +106,7 @@
     #post_banner h5{
         font-size:16px;
         color:#333333;
+        margin-top: 5px;
     }
     #post_banner h6{
         font-size:14px;
@@ -99,8 +121,8 @@
             margin-left: -5px;
         }
         #post_banner #designer_follow{
-            width:45px;
-            height:45px;
+            width:40px;
+            height:40px;
             border:none;
             border-radius:50%;
             background:#48cfad;
@@ -109,7 +131,7 @@
             #post_banner #designer_follow i {
                 font-size:22px;
                 color:#fff;
-                margin-left:4px;
+                margin-left:3px;
             }
 
 
@@ -124,10 +146,11 @@
     margin-left:200px;
     border: 1px solid #c4c4c4;
     border-radius:3px;
-    padding: 15px 20px;
+    padding: 20px;
 }
     #post_contents p {
         font-size:18px;
+        font-weight: 200;
     }
 
 #con_like_bt {
@@ -157,22 +180,22 @@
 }
 
     #share_box button {
-        width: 45px;
-        height: 45px;
+        width: 50px;
+        height: 30px;
         border: none;
-        border-radius: 50%;
-        margin-left: 10px;
+        border-radius: 3px;
+        margin-left: 5px;
     }
     #share_box i {
         color: #fff;
     }
 
     #share_box #share_face {
-        background: #3f78d8;
+        background: #3b5998;
     }
 
         #share_box #share_face i {
-            font-size: 27px;
+            font-size: 20px;
             margin-top: 3px;
         }
 
@@ -181,28 +204,19 @@
     }
 
         #share_box #share_google i {
-            font-size: 27px;
+            font-size: 20px;
             margin-top: 3px;
             margin-left: 4px;
         }
 
-    #share_box #share_plus {
-        background: #35b5fc;
-    }
-
-        #share_box #share_plus i {
-            font-size: 24px;
-            margin-top: 1px;
-            margin-left: 4px;
-        }
-
+  
 #post_edit_box {
     display: block;
     text-align: right;
     margin-top:10px;
 }
     #post_edit_box button {
-        width:90px;
+        width:109px;
         height:30px;
         border:none;
         border-radius:3px;
@@ -264,7 +278,7 @@
         border-top: 1px solid #DADADA;
         float: left;
         margin-top: 20px;
-        padding-top: 13px;
+        padding-top: 20px;
         width: 100%;
     }
 
@@ -272,7 +286,11 @@
             float: left;
             width: 50px;
             height: 50px;
-            margin-right: 8px;
+            margin-right: 15px;
+            
+            border:2px solid #48cfad;
+            border-radius: 50%;
+            overflow: hidden;
         }
 
             #comment_box .comment_div .comment_pic img {
@@ -282,7 +300,6 @@
 
         #comment_box .comment_div h4 {
             line-height: 20px;
-            margin-top: -4px;
             margin-bottom: 6px;
             font-size: 19px;
         }

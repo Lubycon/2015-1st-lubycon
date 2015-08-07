@@ -245,19 +245,18 @@
     {
         position:relative;
         padding:25px 0px;
-        min-height: 80px;
-        height:80px;
+        min-height: 110px;
     }
     #text_editer
     {display:none;}
     /* selector */
-    .text_editer #select_box
+    .text_editer .select_box
     {
         float: none;
         display: inline-block;
         margin-right:7px;
     }
-    .text_editer #select_box .sod_select
+    .text_editer .select_box .sod_select
     {
         background:#444;
         color:#fff;
@@ -267,30 +266,30 @@
         padding-bottom:0px;
         border-radius:3px;
     }
-        .text_editer #select_box .sod_label 
+        .text_editer .select_box .sod_label 
         {
             margin-right: 11px;
         }
-        .text_editer #select_box .sod_select::before, .sod_select::after
+        .text_editer .select_box .sod_select::before, .sod_select::after
         {
             right: 5px;
             top: 7px;
             font-size: 10px;
         }
-        .text_editer #select_box .sod_select .sod_list_wrapper
+        .text_editer .select_box .sod_select .sod_list_wrapper
         {
             width: 53px;
             margin: -2px 0px 0px 0px;
-            background: #444;
+            background: #333;
             border:none;
             color:#fff;
         }
-        .text_editer #select_box .sod_select .sod_option
+        .text_editer .select_box .sod_select .sod_option
         {
             height: 22px;
             padding: 3px 5px;
         }
-            .text_editer #select_box .sod_select .sod_option.selected::before 
+            .text_editer .select_box .sod_select .sod_option.selected::before 
             {
                 display:none;
             }
@@ -309,6 +308,7 @@
         text-align: center;
         display: block;
         margin: 10px auto;
+        font-weight:normal;
     }
 
     #editer_body_text 

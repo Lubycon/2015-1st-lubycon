@@ -205,10 +205,10 @@
             </p>
             <div id="editer_preview_box">
                 <div id="text_editer" class="text_editer">
-                    <button class="con_move_bt"><i class="fa fa-arrows"></i></button><button class="con_delete_bt"><i class="fa fa-times"></i></button>
+                    <button id="con_move_bt" class="con_move_bt"><i class="fa fa-arrows"></i></button><button id="con_delete_bt" class="con_delete_bt"><i class="fa fa-times"></i></button>
                     <textarea id="editer_body_text" class="editer_body_text"></textarea>
-                    <div class="textarea_editer">
-                        <div id="select_box">
+                    <div id="textarea_editer" class="textarea_editer">
+                        <div id="select_box" class="select_box">
                             <select class="basic">
                                 <option value="14pt">14pt</option>
                                 <option value="18pt">18pt</option>
@@ -220,14 +220,14 @@
                                 <option value="72pt">72pt</option>
                             </select>
                         </div>
-                        <button class="text_bold"><i class="fa fa-bold"></i></button>
-                        <button class="text_italic"><i class="fa fa-italic"></i></button>
-                        <button class="text_underline"><i class="fa fa-underline"></i></button>
-                        <button class="text_strike"><i class="fa fa-strikethrough"></i></button>
-                        <div class="color_picker">
-                            <div class="selected_color"></div>
+                        <button id="text_bold" class="text_bold"><i class="fa fa-bold"></i></button>
+                        <button id="text_italic" class="text_italic"><i class="fa fa-italic"></i></button>
+                        <button id="text_underline" class="text_underline"><i class="fa fa-underline"></i></button>
+                        <button id="text_strike" class="text_strike"><i class="fa fa-strikethrough"></i></button>
+                        <div id="color_picker" class="color_picker">
+                            <div id="selected_color" class="selected_color"></div>
                             <ul>
-                                <li>#fff</li>
+                                <li class="colors">#fff</li>
                                 <li>#ccc</li>
                                 <li>#aaa</li>
                                 <li>#999</li>
@@ -245,9 +245,9 @@
                                 <li>#123456</li>
                             </ul>
                         </div>
-                        <button class="align_left"><i class="fa fa-align-left"></i></button>
-                        <button class="align_center"><i class="fa fa-align-center"></i></button>
-                        <button class="align_right"><i class="fa fa-align-right"></i></button>
+                        <button id="align_left" class="align_left"><i class="fa fa-align-left"></i></button>
+                        <button id="align_center" class="align_center"><i class="fa fa-align-center"></i></button>
+                        <button id="align_right" class="align_right"><i class="fa fa-align-right"></i></button>
                     </div>
                 </div>
             </div>
