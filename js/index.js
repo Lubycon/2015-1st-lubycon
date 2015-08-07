@@ -1058,6 +1058,13 @@ $(function () {
             $(this).parent('.textarea_editer').prev('.editer_body_text').css({ 'text-decoration': 'none' });
         }
     });
+
+    $('.color_picker[id*="color_picker"] > ul > li').click(function () //change font underline
+    {
+        $(this).parents('.textarea_editer').prev('.editer_body_text').css({ "color": $(this).text() });
+        $(this).parent('ul').prev('.selected_color').css({ "background": $(this).text() });
+    });
+
     $('.align_left[id*="align_left"]').click(function () //change txt align left
     {
         $(this).parent('.textarea_editer').prev('.editer_body_text').css({ 'text-align': 'left' });
