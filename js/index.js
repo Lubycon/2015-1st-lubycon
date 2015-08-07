@@ -431,6 +431,7 @@ $(function form_check (fo)
                     $(current_id).css({ 'border-left': '5px solid #8ec89a', 'width': '187px' });
                     $(current_id).next().removeClass();
                     $(current_id).next().addClass('fa fa-check');
+                    $(current_id).val($(this).val().toLowerCase()); // lowercase and uppercase same
                     $('#email_check').text('').show();
 
                     email_com = true;
@@ -468,7 +469,7 @@ $(function form_check (fo)
 
             $('#pass_check').text('you must use least one alpabet').show();
 
-        } else if ($(this).val().match(regx)) //특수문자 불가
+        } /*else if ($(this).val().match(regx)) //특수문자 불가
         {
             $(this).css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
             $(this).next().removeClass();
@@ -476,7 +477,7 @@ $(function form_check (fo)
 
             $('#pass_check').text('you can not write !@#%').show();
 
-        } else if ($(this).val().match(space) || $(this).val().match('null') == null == false) //공백 불가
+        }*/ else if ($(this).val().match(space) || $(this).val().match('null') == null == false) //공백 불가
         {
             $(this).css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
             $(this).next().removeClass();
@@ -484,7 +485,7 @@ $(function form_check (fo)
 
             $('#pass_check').text('you can not write null').show();
 
-        } else if ($(this).val().length < 8 || $(this).val().length > 16) {  // 8자보다 짧을때
+        } else if ($(this).val().length < 8 || $(this).val().length > 20) {  // 8 to 20 letters
             $(this).css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
             $(this).next().removeClass();
             $(this).next().addClass('fa fa-times');
@@ -500,7 +501,7 @@ $(function form_check (fo)
 
             $('#re_pass_check').text('It`s not same').show();
 
-        } else if ($(this).val().length >= 8 && $(this).val().length <= 16) { // complite
+        } else if ($(this).val().length >= 8 && $(this).val().length <= 20) { // complite
             $(this).css({ 'border-left': '5px solid #8ec89a', 'width': '187px' });
             $(this).next().removeClass();
             $(this).next().addClass('fa fa-check');
@@ -693,6 +694,7 @@ $(function form_check (fo)
                         $(current_id).css({ 'border-left': '5px solid #8ec89a', 'width': '187px' });
                         $(current_id).next().removeClass();
                         $(current_id).next().addClass('fa fa-check');
+                        $(current_id).val($(this).val().toLowerCase()); // lowercase and uppercase same
 
                         $('#nick_check').text('').show();
                         nick_com = true;
