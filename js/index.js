@@ -51,15 +51,15 @@ $(function () { //e-mail and password value reset start
     });
 
     passbox.focus(function(){
-        passbox.attr('type','password');
         if(passbox.val()=='Password'){
             passbox.val('');
+            passbox.attr('type', 'password');
         }
     });
     passbox.blur(function(){
-        if(passbox.val==''){
-            passbox.attr('type','text');            
+        if (passbox.val() == '') {
             passbox.val('Password');
+            passbox.attr('type', 'text');
         }
     });
 });     //e-mail and password value reset start
@@ -103,10 +103,10 @@ $(function() //gnb hober event
 
 	$('#after_signin').hover(function ()
 	{
-	    $('#after_signin > ul').fadeIn();
+	    $('#after_signin > ul').stop().fadeIn();
 	}, function ()
 	{
-	    $('#after_signin > ul').fadeOut();
+	    $('#after_signin > ul').stop().fadeOut();
 	});
 });
 
