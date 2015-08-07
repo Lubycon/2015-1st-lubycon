@@ -806,6 +806,15 @@ $(function form_check (fo)
             };
         }
 
+        if (email_com && $('.find_submit').attr('class') == 'find_submit')
+        {
+            $('.find_submit').removeAttr('disabled');
+            $('.find_submit').css('background', '#48cfad');
+        } else
+        {
+            $('.find_submit').attr('disabled', 'disabled');
+            $('.find_submit').css('background', '#c1c1c1');
+        }
     });
 });
 /*----------------------------end submit able event----------------------------*/
