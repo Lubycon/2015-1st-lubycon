@@ -394,9 +394,19 @@
 
             .f_card_content p
             {
+                
+                width:1143px;
+                height:120px;
                 font-size:18px;
                 font-weight: 200;
                 color:#666666;
+
+                display:-webkit-box;
+                overflow:hidden;
+                text-overflow:ellipsis;
+                -webkit-line-clamp: 5;
+                -webkit-box-orient: vertical;
+                word-wrap:break-word;
             }
 
 
