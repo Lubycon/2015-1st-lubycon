@@ -3,7 +3,6 @@
     $(window).load(function ()
     {
         $('#bodyer').fadeIn('200');
-        this.reset();
     });
 });
 
@@ -975,22 +974,117 @@ $(function () {
     var i = 0;
     $('#add_text').click(function () { //add text bt event
         $('#text_editer').clone(true).appendTo('#editer_preview_box');
-        $('#editer_body_text').attr('id', 'editer_body_text_' + i);
+
         $('#text_editer').attr('id', 'text_editer_' + i);
+
+        $('#con_move_bt').attr('id', 'con_move_bt_' + i);
+        $('#con_delete_bt').attr('id', 'con_delete_bt_' + i);
+
+        $('#editer_body_text').attr('id', 'editer_body_text_' + i);
+        $('#textarea_editer').attr('id', 'textarea_editer_' + i);
+
+        $('#select_box').attr('id', 'select_box_' + i);
+
+        $('#text_bold').attr('id', 'text_bold_' + i);
+        $('#text_italic').attr('id', 'text_italic_' + i);
+        $('#text_underline').attr('id', 'text_underline_' + i);
+        $('#text_strike').attr('id', 'text_strike_' + i);
+
+        $('#color_picker').attr('id', 'color_picker_' + i);
+
+        $('#align_left').attr('id', 'aign_left_' + i);
+        $('#align_center').attr('id', 'align_center_' + i);
+        $('#align_right').attr('id', 'align_right_' + i);
         i++;
     });
 
-    $('.text_editer').hover(function () // textarea move, delete bt hover
+    $('.color_picker').ready(function () // color picker palete making
     {
-        $('.con_move_bt, .con_delete_bt').stop().fadeIn(150);
-    }, function ()
-    {
-        $('.con_move_bt, .con_delete_bt').stop().fadeOut(150);
+        $('.color_picker > ul > li').each(function () {
+            $(this).css("background",$(this).text());
+        });
     });
 
-    $('.editer_body_text').focus(function ()
+
+
+    //var find_textarea = $(this).parent('.textarea_editer').prev('.editer_body_text');
+
+    $('.con_delete_bt[id*="con_delete_bt"]').click(function () //delete text area
     {
-        $('.textarea_editer').fadeIn(150);
+        $(this).parent().remove();
+    });
+    $('.select_box[id*="select_box"]').change(function () //change font size
+    {
+        $(this).parent('.textarea_editer').prev('.editer_body_text').css({ 'font-size': $(this).find('option:selected').text() });
+    });
+
+    $('.text_bold[id*="text_bold"]').click(function () //change font weight
+    {
+        if ($(this).parent('.textarea_editer').prev('.editer_body_text').css("font-weight") == "400")
+        {
+            $(this).parent('.textarea_editer').prev('.editer_body_text').css({ 'font-weight': '600' });
+        } else
+        {
+            $(this).parent('.textarea_editer').prev('.editer_body_text').css({ 'font-weight': '400' });
+        }
+    });
+
+    $('.text_italic[id*="text_italic"]').click(function () //change font italic
+    {
+        if ($(this).parent('.textarea_editer').prev('.editer_body_text').css('font-style') == 'normal' ) 
+        {
+            $(this).parent('.textarea_editer').prev('.editer_body_text').css({ 'font-style': 'italic' });
+        } else {
+            $(this).parent('.textarea_editer').prev('.editer_body_text').css({ 'font-style': 'normal' });
+        }
+    });
+    $('.text_strike[id*="text_strike"]').click(function () //change font strike
+    {
+        if ($(this).parent('.textarea_editer').prev('.editer_body_text').css('text-decoration') == 'none' ||
+            $(this).parent('.textarea_editer').prev('.editer_body_text').css('text-decoration') == 'underline')
+        {
+            $(this).parent('.textarea_editer').prev('.editer_body_text').css({ 'text-decoration': 'line-through' });
+        } else {
+            $(this).parent('.textarea_editer').prev('.editer_body_text').css({ 'text-decoration': 'none' });
+        }
+    });
+    $('.text_underline[id*="text_underline"]').click(function () //change font underline
+    {
+        if ($(this).parent('.textarea_editer').prev('.editer_body_text').css('text-decoration') == 'none' ||
+            $(this).parent('.textarea_editer').prev('.editer_body_text').css('text-decoration') == 'line-through')
+        {
+            $(this).parent('.textarea_editer').prev('.editer_body_text').css({ 'text-decoration': 'underline' });
+        } else {
+            $(this).parent('.textarea_editer').prev('.editer_body_text').css({ 'text-decoration': 'none' });
+        }
+    });
+    $('.align_left[id*="align_left"]').click(function () //change txt align left
+    {
+        $(this).parent('.textarea_editer').prev('.editer_body_text').css({ 'text-align': 'left' });
+    });
+    $('.align_center[id*="align_center"]').click(function () //change txt align center
+    {
+        $(this).parent('.textarea_editer').prev('.editer_body_text').css({ 'text-align': 'center' });
+    });
+    $('.align_right[id*="align_right"]').click(function () //change txt align right
+    {
+        $(this).parent('.textarea_editer').prev('.editer_body_text').css({ 'text-align': 'right' });
+    });
+
+
+    $(".text_editer[id*='text_editer']").hover(function () // textarea move, delete bt hover
+    {
+        $(this).children('.con_move_bt, .con_delete_bt').stop().fadeIn(150);
+        //$('.con_move_bt, .con_delete_bt').stop().fadeIn(150);
+    }, function ()
+    {
+        $(this).children('.con_move_bt, .con_delete_bt').stop().fadeOut(150);
+    });
+
+    $(".editer_body_text[id*='editer_body_text']").focus(function ()
+    {
+        $(this).next('.textarea_editer').stop().fadeIn(150);
+        //$('.textarea_editer').fadeIn(150);
     });
 
 
