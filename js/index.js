@@ -6,9 +6,20 @@
     });
 });
 
-window.addEventListener('load',function(){
+window.addEventListener('load',function(){ //disable web adress window in mobile
     setTimeout(scrollTo,0,0,1);
-},false); //disable web adress window in mobile
+},false);
+
+$(function(){//add hover animation for every buttons
+    $('button').hover(function()
+    {
+         $(this).stop().animate({ opacity: 0.8 }, 200);
+    }, function ()
+    {
+         $(this).stop().animate({ opacity: 1 }, 200);
+    });
+});
+
 
 $(function () //sign in toggle event
 {
