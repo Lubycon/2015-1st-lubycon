@@ -68,6 +68,7 @@
     width:630px;
     height:auto;
     float:left;
+    overflow:hidden;
 }
 .contents_view .contents_img{
 }
@@ -180,15 +181,15 @@
 .con_right{
     width:246px;
     height:auto;
-    position:absolute;
     padding:0px 10px;
-    top:40px;
+    top:0px;
     left:50%;
-    margin-left:186px;
+    margin-left:361px;
     margin-bottom:30px;
     background: #ffffff;
     border-radius: 5px;
     z-index: 3;
+    position: absolute;
 }
 .con_right #designer_tap{
     text-align:center;
@@ -527,3 +528,82 @@
         margin-top:7px;
         font-size: 15px;
     }
+
+
+
+  /* contents view slider start */
+  
+#contents_view_slider{
+    position: relative;
+    margin: 0px auto;
+    top: 0px;
+    left: 0px;
+    width:610px;
+    height:110px;
+    background: #000 none repeat scroll 0% 0%;
+    padding: 20px 10px;
+}
+.slides {
+    position: absolute;
+    left: 10px;
+    top: 30px;
+    width: 610px;
+    height: 90px;
+    overflow: hidden;
+}
+    .slides ul
+    {
+       width:545px;
+       margin:0px auto;
+
+    }
+    .slides ul li {
+        float:left;
+        margin:0px 7px;
+        padding:0px;
+        display:inline-block;
+    }
+
+    .slides ul li img
+    {
+        width:95px;
+
+    }
+/* slider body */
+
+/* slider arrow */
+
+.slider_arrow_left, .slider_arrow_right {
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 46px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+    .slider_arrow_left i, .slider_arrow_right i {
+        font-size: 55px;
+        color: #7d7d7d;
+    }
+
+.slider_arrow_left {
+    top: 43px;
+    left: 13px;
+}
+
+.slider_arrow_right {
+    top: 43px;
+    right: -18px;
+}
+
+.slider_arrow_left i:hover {
+    color: #a4a4a4;
+}
+
+.slider_arrow_right i:hover {
+    color: #a4a4a4;
+}
+
+/* slider arrow */
+/* contents view slider end */
