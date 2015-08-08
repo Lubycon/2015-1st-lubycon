@@ -988,9 +988,26 @@ $(function () {
 
     $('#embed_bt').click(function () // embed code event
     {
-        $('#editer_preview_box').append($('#embed_textarea').val());
+        $('#editer_preview_box').append('<li class="embed_contents">' + $('#embed_textarea').val() + '</li>');
+        $('.con_move_bt, .con_delete_bt').clone(true).appendTo('.embed_contents');
         $('#embed_popup').hide();
         $('.dark_overlay').hide();
+    });
+
+    $(document).on('mouseenter', '.embed_contents', function () {
+        $(this).children('.con_delete_bt').stop().fadeIn(150);
+        $(this).css({ "border":"1px solid #d1d1d1" });
+    });
+    $(document).on('mouseleave', '.embed_contents', function () {
+        $(this).children('.con_delete_bt').stop().fadeOut(150);
+        $(this).css({ "border": "none" });
+    });
+
+    $(".embed_contents").on("mouseenter", ".con_move_bt", function () // textarea move, delete bt hover
+    {
+        alert('1');
+        //$(this).children('.con_move_bt, .con_delete_bt').stop().fadeIn(150);
+        //$('.con_move_bt, .con_delete_bt').stop().fadeIn(150);
     });
 
     var i = 0;
@@ -998,8 +1015,8 @@ $(function () {
         $('#text_editer').clone(true).appendTo('#editer_preview_box');
 
         $('#text_editer').attr('id', 'text_editer_' + i);
+        $('#contents_div').attr('id', 'contents_div_' + i);
 
-        $('#con_move_bt').attr('id', 'con_move_bt_' + i);
         $('#con_delete_bt').attr('id', 'con_delete_bt_' + i);
 
         $('#editer_body_text').attr('id', 'editer_body_text_' + i);
@@ -1103,11 +1120,13 @@ $(function () {
 
     $(".text_editer[id*='text_editer']").hover(function () // textarea move, delete bt hover
     {
-        $(this).children('.con_move_bt, .con_delete_bt').stop().fadeIn(150);
+        $(this).children('.con_delete_bt').stop().fadeIn(150);
+        $(this).css({ "border": "1px solid #d1d1d1" });
         //$('.con_move_bt, .con_delete_bt').stop().fadeIn(150);
     }, function ()
     {
-        $(this).children('.con_move_bt, .con_delete_bt').stop().fadeOut(150);
+        $(this).children('.con_delete_bt').stop().fadeOut(150);
+        $(this).css({"border":"none"});
     });
 
     $(".editer_body_text[id*='editer_body_text']").focus(function ()
