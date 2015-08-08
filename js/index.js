@@ -473,7 +473,7 @@ $(function form_check (fo)
                     $(current_id).css({ 'border-left': '5px solid #8ec89a', 'width': '187px' });
                     $(current_id).next().removeClass();
                     $(current_id).next().addClass('fa fa-check');
-                    $(current_id).val($(this).val().toLowerCase()); // lowercase and uppercase same
+                    $(current_id).val($(current_id).val().toLowerCase()); // lowercase and uppercase same
                     $('#email_check').text('').show();
 
                     email_com = true;
@@ -736,7 +736,7 @@ $(function form_check (fo)
                         $(current_id).css({ 'border-left': '5px solid #8ec89a', 'width': '187px' });
                         $(current_id).next().removeClass();
                         $(current_id).next().addClass('fa fa-check');
-                        $(current_id).val($(this).val().toLowerCase()); // lowercase and uppercase same
+                        $(current_id).val($(current_id).val().toLowerCase()); // lowercase and uppercase same
 
                         $('#nick_check').text('').show();
                         nick_com = true;
