@@ -1000,7 +1000,7 @@ $(function () {
     });
     $(document).on('mouseleave', '.embed_contents', function () {
         $(this).children('.con_delete_bt').stop().fadeOut(150);
-        $(this).css({ "border": "none" });
+        $(this).css({ "border": "1px solid #fff" });
     });
 
     $(".embed_contents").on("mouseenter", ".con_move_bt", function () // textarea move, delete bt hover
@@ -1120,16 +1120,16 @@ $(function () {
 
     $(".text_editer[id*='text_editer']").hover(function () // textarea move, delete bt hover
     {
-        $(this).children('.con_delete_bt').stop().fadeIn(150);
-        $(this).css({ "border": "1px solid #d1d1d1" });
+        $(this).children('.contents_div > .con_delete_bt').stop().fadeIn(150);
+        $(this).children('.contents_div').css({ "border": "1px solid #d1d1d1" });
         //$('.con_move_bt, .con_delete_bt').stop().fadeIn(150);
     }, function ()
     {
-        $(this).children('.con_delete_bt').stop().fadeOut(150);
-        $(this).css({"border":"none"});
+        $(this).children('.contents_div > .con_delete_bt').stop().fadeOut(150);
+        $(this).children('.contents_div').css({ "border": "1px solid #fff" });
     });
 
-    $(".editer_body_text[id*='editer_body_text']").focus(function ()
+    $(".editer_body_text[id*='editer_body_text']").focus(function () // text editer focus view
     {
         $(this).next('.textarea_editer').stop().fadeIn(150);
         //$('.textarea_editer').fadeIn(150);
