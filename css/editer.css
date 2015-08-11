@@ -249,8 +249,6 @@
         cursor:move;        
 
     }
-    #text_editer
-    {display:none;}
 
     .contents_div
     {
@@ -264,7 +262,7 @@
     /* selector */
     .text_editer .select_box
     {
-        float: none;
+        float: none !important;
         display: inline-block;
         margin-right:7px;
     }
@@ -325,7 +323,6 @@
 
     #editer_body_text 
     {
-        display:none;
     }
 
     .con_move_bt,.con_delete_bt
@@ -366,6 +363,7 @@
         width: 25px;
         height: 23px;
         padding: 0px;
+        margin: 0px 1px;
     }
     .textarea_editer .color_picker
     {
@@ -395,6 +393,7 @@
             box-shadow: 0px 1px 1px 1px rgba(0,0,0,0.3);
             display:none;
             z-index: 2;
+            cursor:default;
         }
             .textarea_editer .color_picker ul li
             {
@@ -405,7 +404,13 @@
                 text-indent:9999px;
                 float:left;
                 margin:3px;
+                cursor:pointer;
             }
+
+            .preview_img 
+            {
+            }
+
 
 #footer {
     width: 100%;
