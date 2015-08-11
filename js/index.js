@@ -1,4 +1,10 @@
-﻿$(function () //window fadein effect
+﻿/*----------------------------common js----------------------------*/
+
+/////////////////////////////////////////////////////////
+//      ready to body fadein event start
+/////////////////////////////////////////////////////////
+
+$(function () //window fadein effect
 {
     $(window).load(function ()
     {
@@ -6,11 +12,16 @@
     });
 });
 
-window.addEventListener('load',function(){ //disable web adress window in mobile
-    setTimeout(scrollTo,0,0,1);
-},false);
+/////////////////////////////////////////////////////////
+//      ready to body fadein event end
+/////////////////////////////////////////////////////////
 
-$(function(){//add hover animation for every buttons
+/////////////////////////////////////////////////////////
+//      add hover animation for every buttons
+/////////////////////////////////////////////////////////
+
+$(function () //add hover animation for every buttons
+{
     $('button').hover(function()
     {
          $(this).stop().animate({ opacity: 0.9 }, 200);
@@ -20,61 +31,13 @@ $(function(){//add hover animation for every buttons
     });
 });
 
+/////////////////////////////////////////////////////////
+//      add hover animation for every buttons
+/////////////////////////////////////////////////////////
 
-$(function () //sign in toggle event
-{
-    $('#signin_bt').click(function () {
-        $('#login_box').stop().fadeIn(150);
-    });
-
-    $('#sign_out').click(function () //logout
-    {
-        $("#after_signin").hide();
-        $("#signin_bt").show();
-        $("#addcontent_bt").hide();
-    });
-});
-
-$(document).ready(function () { // signin box click toggle
-    $(document).click(function (e) {
-        var subject = $("#signin_bt");
-
-        if (e.target.id != subject.attr('id') && !subject.has(e.target).length) {
-            $("#login_box").stop().fadeOut(150);
-        }
-    });
-});
-
-$(function () { //e-mail and password value reset start
-    var emailbox = $('#login_id');
-    var passbox = $('#login_pass');
-
-    emailbox.focus(function (){
-        if (emailbox.val() == 'E-mail'){
-            emailbox.val('');
-        }
-    });
-    emailbox.blur(function (){
-        if (emailbox.val() == ''){
-            emailbox.val('E-mail');
-        }
-    });
-
-    passbox.focus(function(){
-        if(passbox.val()=='Password'){
-            passbox.val('');
-            passbox.attr('type', 'password');
-        }
-    });
-    passbox.blur(function(){
-        if (passbox.val() == '') {
-            passbox.val('Password');
-            passbox.attr('type', 'text');
-        }
-    });
-});     //e-mail and password value reset start
-
-
+/////////////////////////////////////////////////////////
+//      change language start
+/////////////////////////////////////////////////////////
 
 $(function () //language change bt slide and change
 {
@@ -101,6 +64,85 @@ $(function () //language change bt slide and change
     });
 });
 
+/////////////////////////////////////////////////////////
+//      change language end
+/////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////
+//      before sign in child event start
+/////////////////////////////////////////////////////////
+
+$(function () //sign in toggle event
+{
+    $('#signin_bt').click(function () {
+        $('#login_box').stop().fadeIn(150);
+    });
+
+    $('#sign_out').click(function () //logout
+    {
+        $("#after_signin").hide();
+        $("#signin_bt").show();
+        $("#addcontent_bt").hide();
+    });
+});
+
+$(document).ready(function () // signin box click toggle
+{
+    $(document).click(function (e) {
+        var subject = $("#signin_bt");
+
+        if (e.target.id != subject.attr('id') && !subject.has(e.target).length) {
+            $("#login_box").stop().fadeOut(150);
+        }
+    });
+});
+
+/////////////////////////////////////////////////////////
+//      before sign in child event end
+/////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////
+//      before sign in input reset start
+/////////////////////////////////////////////////////////
+
+$(function () //e-mail and password value reset start
+{
+    var emailbox = $('#login_id');
+    var passbox = $('#login_pass');
+
+    emailbox.focus(function () {
+        if (emailbox.val() == 'E-mail') {
+            emailbox.val('');
+        }
+    });
+    emailbox.blur(function () {
+        if (emailbox.val() == '') {
+            emailbox.val('E-mail');
+        }
+    });
+
+    passbox.focus(function () {
+        if (passbox.val() == 'Password') {
+            passbox.val('');
+            passbox.attr('type', 'password');
+        }
+    });
+    passbox.blur(function () {
+        if (passbox.val() == '') {
+            passbox.val('Password');
+            passbox.attr('type', 'text');
+        }
+    });
+});     //e-mail and password value reset end
+
+/////////////////////////////////////////////////////////
+//      before sign in input reset end
+/////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////
+//      sign in child menu event start
+/////////////////////////////////////////////////////////
+
 $(function() //gnb hober event
 {
 	$('.bigsub').hover(function()
@@ -119,6 +161,14 @@ $(function() //gnb hober event
 	    $('#after_signin > ul').stop().fadeOut();
 	});
 });
+
+/////////////////////////////////////////////////////////
+//      sign in child menu event end
+/////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////
+//      add contents bt popup event start
+/////////////////////////////////////////////////////////
 
 $(function () { //add contents button start
     $('#addcontent_bt').hover(function () {
@@ -145,6 +195,14 @@ $(function () { //add contents button start
     });
 });
 
+/////////////////////////////////////////////////////////
+//      add contents bt popup event end
+/////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////
+//      main search bar input reset start
+/////////////////////////////////////////////////////////
+
 $(function () { //search box click value reset start
     var search_box = $('#main_search_text');
 
@@ -160,6 +218,14 @@ $(function () { //search box click value reset start
     });
 });		//search box click value reset end
 
+/////////////////////////////////////////////////////////
+//      main search bar input reset end
+/////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////
+//      main figure animate end
+/////////////////////////////////////////////////////////
+
 //main figure button animation start
 $(function(){
     $('#main_figure button').hover(
@@ -171,10 +237,18 @@ $(function(){
         }
     );
 });
+/////////////////////////////////////////////////////////
+//      main figure animate end
+/////////////////////////////////////////////////////////
 
-//main figure button animation end
+/*----------------------------common js----------------------------*/
+
+/*----------------------------index page slider----------------------------*/
 
 
+/////////////////////////////////////////////////////////
+//      index page slide switch start
+/////////////////////////////////////////////////////////
 
 $(function()  //slider change 
 {
@@ -207,7 +281,14 @@ $(function()  //slider change
 	    $(this).stop().animate({ opacity: 1 },100);
 	});
 });
+/////////////////////////////////////////////////////////
+//      index page slide switch end
+/////////////////////////////////////////////////////////
 
+
+/////////////////////////////////////////////////////////
+//      index page triple bt event start
+/////////////////////////////////////////////////////////
 $(function()	// triple bt on event
 {
 	$('.la_bt').on(
@@ -228,30 +309,17 @@ $(function()	// triple bt on event
 		}
 	});
 });
-/*
-$(function () {
-    $('.la_bt').click(function () {
-        $(this).addClass("clicked", 1000, callback);
-    });
+/////////////////////////////////////////////////////////
+//      index page triple bt event end
+/////////////////////////////////////////////////////////
+/*----------------------------index page slider----------------------------*/
 
-    function callback() {
-        setTimeout(function () {
-            $(this).removeClass("clicked");
-        }, 1500);
-    }
-});
-*/
-/*
-$(function ()
-{
-    $('#desingers_intro_img').hover(function ()
-    {
-        $(this).animate({ opacity: 0.5 },100);
-    }, function () {
-        $(this).animate({ opacity: 1 },100);
-    });
-});
-*/
+
+/*----------------------------contents page----------------------------*/
+/////////////////////////////////////////////////////////
+//      category bar select menu end
+/////////////////////////////////////////////////////////
+
 
 $(function () //contents page category
 {
@@ -300,91 +368,14 @@ $(function () { /* designers page continets selcect */
         $('.continets_list').stop().slideUp(300);
     });
 });
-/*
-$(function () //account setting script
-{
-    $(document).ready(function ()
-    {
-        $('#clone_div').click(function () {
-            console.log('minus gogo');
-        });
-    });
-    
+/////////////////////////////////////////////////////////
+//      category bar select menu end
+/////////////////////////////////////////////////////////
+/*----------------------------contents page----------------------------*/
 
-    $(document).scroll(function () { //account setting move banner
-        if ($(document).scrollTop() > $('#account_setting_section').offset().top-65)
-        {
-            $('#account_aside').css({ "position": "fixed", "top": "65px" });
-        } else
-        {
-            $('#account_aside').css({ "position": "absolute", "top": "0px" });
-        }
-    });
-    $(document).ready(function () //account setting banner event
-    {
-        
 
-        
-        $(document).scroll(function () { //account setting move banner
-            //console.log($(document).scrollTop());
-            if ($(document).scrollTop() > $('#account_setting_section').offset().top-65 && $(document).scrollTop() < $('#basic_info_section').offset().top -80) {
-                $('#account_aside > ul > li').removeClass('selected_account');
-                $('#account_Setting_sub').addClass('selected_account');
-            } else if ($(document).scrollTop() > $('#basic_info_section').offset().top-79 && $(document).scrollTop() < $('#contact_info_section').offset().top - 80) {
-                $('#account_aside > ul > li').removeClass('selected_account');
-                $('#basic_info_sub').addClass('selected_account');
-            } else if ($(document).scrollTop() > $('#contact_info_section').offset().top-79 && $(document).scrollTop() < $('#contact_info_section').offset().top - 70) {
-                $('#account_aside > ul > li').removeClass('selected_account');
-                $('#contact_info_sub').addClass('selected_account');
-            } else if ($(document).scrollTop() == 1360) {
-                $('#account_aside > ul > li').removeClass('selected_account');
-                $('#delete_account_sub').addClass('selected_account');
-            }
-        });
-        $('#account_Setting_sub').click(function () {
-            $("html, body").stop().animate({ scrollTop: ($('#account_setting_section').offset().top) - 65 });
-            $('#account_aside > ul > li').removeClass('selected_account');
-            $('#account_Setting_sub').addClass('selected_account');
-        });
-        $('#basic_info_sub').click(function () {
-            $("html, body").stop().animate({ scrollTop: ($('#basic_info_section').offset().top) - 65 });
-            $('#account_aside > ul > li').removeClass('selected_account');
-            $('#basic_info_sub').addClass('selected_account');
-        });
-        $('#contact_info_sub').click(function () {
-            $("html, body").stop().animate({ scrollTop: ($('#contact_info_section').offset().top) - 65 });
-            $('#account_aside > ul > li').removeClass('selected_account');
-            $('#contact_info_sub').addClass('selected_account');
-        });
-        $('#delete_account_sub').click(function () {
-            $("html, body").stop().animate({ scrollTop: ($('#delete_account_section').offset().top) - 65 });
-            $('#account_aside > ul > li').removeClass('selected_account');
-            $('#delete_account_sub').addClass('selected_account');
-        });
-       
-});
 
-    var i = 2;
-    $('#Change_pass').click(function () //change pass remove attr
-    {
-        $('#pass ,#repeat_pass, #repeat_pass_again').removeAttr('disabled');
-    });
-    $('#pass ,#repeat_pass, #repeat_pass_again').focus(function () //change pass border color
-    {
-        $(this).css({ 'border-left': '5px solid #ffbe54', 'width': '187px' });
-        $(this).after('<i class="fa fa-times"></i>');
-    }).blur(function ()
-    {
-        $(this).css({ 'border-left': '5px solid #8ec89a', 'width': '187px' });
-        $(this).after('<i class="fa fa-check"></i>');
-    });
-        $("#lang_clone").append('<br/>');
-
-        $('#clone_div > #lang_clone').attr('id', 'lang_clone_' + i);
-        i++; //int plus
-    });
- */
-/*----------------------------creat account----------------------------*/
+/*----------------------------creat account statt----------------------------*/
 $(function form_check (fo)
 {
     var regx = /[`;',./~!@\#$%<>^&*\()\-=+_\’]/gi; //special letters
@@ -392,10 +383,14 @@ $(function form_check (fo)
     var regex = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/; //email check
     var nick_check = /^[A-Za-z0-9+]*$/; ;
 
-    var email_com;
-    
+/*----------------------------create account email logic----------------------------*/
 
-    /*----------------------------create account email logic----------------------------*/
+    /////////////////////////////////////////////////////////
+    //      e-mail check start
+    /////////////////////////////////////////////////////////
+
+    var email_com;
+
     $('#email_id').on("keydown keyup click blur ready change", function () 
     { 
         var current_id = '#' + $(this).attr('id');
@@ -466,10 +461,18 @@ $(function form_check (fo)
         })
     }
     });
+    /////////////////////////////////////////////////////////
+    //      e-mail check end
+    /////////////////////////////////////////////////////////
+
 
     /*----------------------------end create account email logic----------------------------*/
 
     /*----------------------------creat account password logic----------------------------*/
+
+    /////////////////////////////////////////////////////////
+    //      password check end
+    /////////////////////////////////////////////////////////
 
     $('#pass_id').on("keydown keyup click blur ready change", function () 
     {
@@ -595,7 +598,16 @@ $(function form_check (fo)
         }
         
     });
+    /////////////////////////////////////////////////////////
+    //      password check end
+    /////////////////////////////////////////////////////////
 
+
+
+
+    /////////////////////////////////////////////////////////
+    //      now pass check start
+    /////////////////////////////////////////////////////////
     var now_pass_com;
     $('#now_pass_id').on("keydown keyup click blur ready change", function () //account setting page now password check
     {
@@ -623,13 +635,19 @@ $(function form_check (fo)
             now_pass_com = true;
         }
     });
-
+    /////////////////////////////////////////////////////////
+    //      now pass check end
+    /////////////////////////////////////////////////////////
 
     /*----------------------------end creat account password logic----------------------------*/
 
     var abuse_name = new Array('sex', 'bitch', 'pussy', 'cunt', 'fuck', 'fucking');
 
     /*----------------------------creat account nick name logic----------------------------*/
+    /////////////////////////////////////////////////////////
+    //      nick name check start
+    /////////////////////////////////////////////////////////
+
     var nick_com;
     $('#nick_id').on("keydown keyup click blur ready change", function () 
     {
@@ -730,9 +748,17 @@ $(function form_check (fo)
         }
     });
 
+    /////////////////////////////////////////////////////////
+    //      nick name check end
+    /////////////////////////////////////////////////////////
+
     /*----------------------------end creat account nick name logic----------------------------*/
 
     /*----------------------------submit able event----------------------------*/
+
+    /////////////////////////////////////////////////////////
+    //      account submit event start
+    /////////////////////////////////////////////////////////
 
     $(document).click(function () 
     {
@@ -750,7 +776,6 @@ $(function form_check (fo)
             $('.account_submit').attr('disabled', 'disabled');
             $('.account_submit').css('background', '#c1c1c1');
         }
-        
     });
 
     $(document).on("keydown keyup click blur ready mouseenter", function () //submit able event
@@ -794,6 +819,9 @@ $(function form_check (fo)
             $('.find_submit').css('background', '#c1c1c1');
         }
     });
+    /////////////////////////////////////////////////////////
+    //      account submit event end
+    /////////////////////////////////////////////////////////
 });
 /*----------------------------end submit able event----------------------------*/
 
@@ -801,6 +829,10 @@ $(function form_check (fo)
 
 
 /*----------------------------about us----------------------------*/
+
+/////////////////////////////////////////////////////////
+//      about us hover event
+/////////////////////////////////////////////////////////
 $(function(){
     $('#mailbtn').hover(
         function (){
@@ -822,10 +854,18 @@ $(function(){
         }
     );
 });
+/////////////////////////////////////////////////////////
+//      about us hover event
+/////////////////////////////////////////////////////////
 
-/*about us*/
+
+/************************************about us**************************************/
 
 /*----------------------------waiting for resisting start----------------------------*/
+
+/////////////////////////////////////////////////////////
+//      waiting for resisting animate
+/////////////////////////////////////////////////////////
 $(function(){
     $("#thanks").animate({opacity:1},500);
     $("#thanks").queue(function(){
@@ -849,6 +889,10 @@ $(function(){
         }
     );
 });
+/////////////////////////////////////////////////////////
+//      waiting for resisting animate
+/////////////////////////////////////////////////////////
+
 /*----------------------------waiting for resisting end----------------------------*/
 
 /***********************************index_2 canvas start****************************************/
@@ -877,6 +921,12 @@ $(function () {
 /*----------------------------waiting for resisting end----------------------------*/
 
 
+
+/*----------------------------editer start----------------------------*/
+/////////////////////////////////////////////////////////
+//      editer nav start
+/////////////////////////////////////////////////////////
+
 $(function () {
     $('#editer_aside ol li').hover(function () //aside li mouse hover event
     {
@@ -887,78 +937,62 @@ $(function () {
         $(this).children('i').css({ "color": "#646464" });
     });
 
-    $('#editer_upload_file').click(function () {
+/////////////////////////////////////////////////////////
+//      editer nav end
+/////////////////////////////////////////////////////////
+
+    /////////////////////////////////////////////////////////
+    //      editer_upload_file start
+    /////////////////////////////////////////////////////////
+
+    $('#editer_upload_file').click(function () { //upload file window open
         $('#upload_file_input').click();
     });
-    $('#editer_preview_upload').click(function () {
+
+    /////////////////////////////////////////////////////////
+    //      editer_upload_file end
+    /////////////////////////////////////////////////////////
+
+    /////////////////////////////////////////////////////////
+    //      preview img start 
+    /////////////////////////////////////////////////////////
+
+
+    $('#editer_preview_upload').click(function () { //preview image window open
         $('#preview_upload_input').click();
     });
 
-    // input file preview
-    $.fn.setPreview = function (opt) {
-        "use strict"
-        var defaultOpt = {
-            inputFile: $(this),
-            img: null
-        };
-        $.extend(defaultOpt, opt);
+    $('#preview_upload_input').on('change', function (e) //preview image upload
+    {
+        var files = e.target.files;
 
-        var previewImage = function () {
-            if (!defaultOpt.inputFile || !defaultOpt.img) return;
+			$.each(files, function (i, file)
+			{
+				var reader = new FileReader();
+				reader.readAsDataURL(file);
+				reader.onload = function (e)
+				{
 
-            var inputFile = defaultOpt.inputFile.get(0);
-            var img = defaultOpt.img.get(0);
-
-            // FileReader
-            if (window.FileReader) {
-                // image ÆÄÀÏ¸¸
-                if (!inputFile.files[0].type.match(/image\//)) return;
-
-                // preview
-                try {
-                    var reader = new FileReader();
-                    reader.onload = function (e) {
-                        img.src = e.target.result;
-                        img.style.width = defaultOpt.w + 'px';
-                        img.style.height = defaultOpt.h + 'px';
-                        img.style.display = '';
-                    }
-                    reader.readAsDataURL(inputFile.files[0]);
-                } catch (e) {
-                    // exception...
-                }
-                // img.filters (MSIE)
-            } else if (img.filters) {
-                inputFile.select();
-                inputFile.blur();
-                var imgSrc = document.selection.createRange().text;
-
-                img.style.width = defaultOpt.w + 'px';
-                img.style.height = defaultOpt.h + 'px';
-                img.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(enable='true',sizingMethod='scale',src=\"" + imgSrc + "\")";
-                img.style.display = '';
-                // no support
-            } else {
-                // Safari5, ...
-            }
-        };
-
-        // onchange
-        $(this).change(function () {
-            previewImage();
-        });
-    };
-
-
-    $(document).ready(function () {
-        var opt = {
-            img: $('#preview_img')
-        };
-
-        $('#preview_upload_input').setPreview(opt);
+				    var template = '<li class="preview_img">' +
+                                   '<div id="contents_div" class="contents_div">' +
+                                   '<img src="' + e.target.result + '">' +
+                                   '<button class="con_delete_bt"><i class="fa fa-times"></i></button>' +
+                                   '</div>' +
+                                   '</li>'
+				    
+				    $('#editer_section ul').append(template);
+				};
+			});
     });
+    /////////////////////////////////////////////////////////
+    //      editer nav end
+    /////////////////////////////////////////////////////////
 
-    $('#embed_media').click(function () {
+    /////////////////////////////////////////////////////////
+    //      embed midea 
+    /////////////////////////////////////////////////////////
+
+    $('#embed_media').click(function () { // embed code window load
         $('.dark_overlay').stop().fadeIn(100);
         $('#embed_popup').stop().fadeIn(100);
     });
@@ -966,76 +1000,160 @@ $(function () {
 
     $('#embed_bt').click(function () // embed code event
     {
-        $('#editer_preview_box').append('<li class="embed_contents">' + $('#embed_textarea').val() + '</li>');
-        $('.con_move_bt, .con_delete_bt').clone(true).appendTo('.embed_contents');
+        var embed_midea =
+            '<li class="embed_contents">' +
+            $('#embed_textarea').val() +
+            '<button class="con_delete_bt"><i class="fa fa-times"></i></button>' +
+            '</li>'
+
+        $('#editer_preview_box').append(embed_midea);
         $('#embed_popup').hide();
         $('.dark_overlay').hide();
     });
 
-    $(document).on('mouseenter', '.embed_contents', function () {
-        $(this).children('.con_delete_bt').stop().fadeIn(150);
-        $(this).css({ "border":"1px solid #d1d1d1" });
-    });
-    $(document).on('mouseleave', '.embed_contents', function () {
-        $(this).children('.con_delete_bt').stop().fadeOut(150);
-        $(this).css({ "border": "1px solid #fff" });
-    });
+    /////////////////////////////////////////////////////////
+    //      embed midea 
+    /////////////////////////////////////////////////////////
 
-    $(".embed_contents").on("mouseenter", ".con_move_bt", function () // textarea move, delete bt hover
+    /////////////////////////////////////////////////////////
+    //      add text 
+    /////////////////////////////////////////////////////////
+    
+    $('#add_text').click(function ()
     {
-        alert('1');
-        //$(this).children('.con_move_bt, .con_delete_bt').stop().fadeIn(150);
-        //$('.con_move_bt, .con_delete_bt').stop().fadeIn(150);
+        var text_editer =
+            '<li class="text_editer">'+
+                    '<div class="contents_div">'+
+                        '<button class="con_delete_bt"><i class="fa fa-times"></i></button>'+
+                        '<textarea class="editer_body_text"></textarea>'+
+                        '<div class="textarea_editer">'+
+                            '<div class="select_box">'+
+                                '<select class="basic">'+
+                                    '<option value="14pt">14pt</option>'+
+                                    '<option value="18pt">18pt</option>'+
+                                    '<option value="24pt">24pt</option>'+
+                                    '<option value="30pt">30pt</option>'+
+                                    '<option value="36pt">36pt</option>'+
+                                    '<option value="48pt">48pt</option>'+
+                                    '<option value="60pt">60pt</option>'+
+                                    '<option value="72pt">72pt</option>'+
+                                '</select>'+
+                            '</div>'+
+                            '<button class="text_bold"><i class="fa fa-bold"></i></button>'+
+                            '<button class="text_italic"><i class="fa fa-italic"></i></button>'+
+                            '<button class="text_underline"><i class="fa fa-underline"></i></button>'+
+                            '<button class="text_strike"><i class="fa fa-strikethrough"></i></button>'+
+                            '<div class="color_picker">'+
+                                '<div class="selected_color"></div>'+
+                                '<ul><!--color list-->'+
+                                    '<li class="colors">#fff</li><!--monotone-->'+
+                                    '<li>#aaaaaa</li>'+
+                                    '<li>#999999</li>'+
+                                    '<li>#777777</li>'+
+                                    '<li>#555555</li>'+
+                                    '<li>#333333</li>'+
+                                    '<li>#222222</li>'+
+                                    '<li>#000000</li>'+
+
+                                    '<li>#ffe8e8</li>' + '<!--red-->'+
+                                    '<li>#fdc8c8</li>'+
+                                    '<li>#fea3a3</li>'+
+                                    '<li>#fe7a7a</li>'+
+                                    '<li>#ff0000</li>' + '<!--middle-->'+
+                                    '<li>#db0101</li>'+
+                                    '<li>#b70202</li>'+
+                                    '<li>#920000</li>'+
+
+                                    '<li>#fff9e8</li>' + '<!--orange-->'+
+                                    '<li>#fdefc8</li>'+
+                                    '<li>#fee5a3</li>'+
+                                    '<li>#feda7a</li>'+
+                                    '<li>#ffba00</li>' + '<!--middle-->'+
+                                    '<li>#dba001</li>'+
+                                    '<li>#b78602</li>'+
+                                    '<li>#926b00</li>'+
+
+                                    '<li>#ffffe8</li>' + '<!--yellow-->'+
+                                    '<li>#fdfdc8</li>'+
+                                    '<li>#fefda3</li>'+
+                                    '<li>#fefc7a</li>'+
+                                    '<li>#ffff00</li>' + '<!--middle-->'+
+                                    '<li>#dbd901</li>'+
+                                    '<li>#b7b602</li>'+
+                                    '<li>#818201</li>'+
+
+                                    '<li>#efffe8</li>' + '<!--green-->'+
+                                    '<li>#d9fdc8</li>'+
+                                    '<li>#c2fea3</li>'+
+                                    '<li>#a7fe7a</li>'+
+                                    '<li>#00ff00</li>' + '<!--middle-->'+
+                                    '<li>#4adb01</li>'+
+                                    '<li>#3db702</li>'+
+                                    '<li>#2b8402</li>'+
+
+                                    '<li>#e8fffc</li>' + '<!--mint-->'+
+                                    '<li>#c8fdf5</li>'+
+                                    '<li>#a3feef</li>'+
+                                    '<li>#7afee6</li>'+
+                                    '<li>#00ffd5</li>' + '<!--middle-->'+
+                                    '<li>#48cfad</li>'+
+                                    '<li>#02b799</li>'+
+                                    '<li>#00927d</li>'+
+
+                                    '<li>#e8f8ff</li>' + '<!--sky blue-->'+
+                                    '<li>#c8eefd</li>'+
+                                    '<li>#a3e6fe</li>'+
+                                    '<li>#7adcfe</li>'+
+                                    '<li>#00baff</li>' + '<!--middle-->'+
+                                    '<li>#01a1db</li>'+
+                                    '<li>#0286b7</li>'+
+                                    '<li>#006892</li>' +
+
+                                    '<li>#e8ecff</li>' + '<!--blue-->'+
+                                    '<li>#c8d4fd</li>'+
+                                    '<li>#a3b9fe</li>'+
+                                    '<li>#7a9cfe</li>'+
+                                    '<li>#0000ff</li>' + '<!--middle-->'+
+                                    '<li>#0136db</li>'+
+                                    '<li>#022eb7</li>'+
+                                    '<li>#002192</li>'+
+
+                                    '<li>#f4e8ff</li>' + '<!--pupple-->'+
+                                    '<li>#e4c8fd</li>'+
+                                    '<li>#d0a3fe</li>'+
+                                    '<li>#ba7afe</li>'+
+                                    '<li>#8000ff</li>' + '<!--middle-->'+
+                                    '<li>#6e01db</li>'+
+                                    '<li>#5c02b7</li>'+
+                                    '<li>#4c0092</li>'+
+                                '</ul>'+
+                            '</div>'+
+                            '<button class="align_left"><i class="fa fa-align-left"></i></button>'+
+                            '<button class="align_center"><i class="fa fa-align-center"></i></button>'+
+                            '<button class="align_right"><i class="fa fa-align-right"></i></button>'+
+                        '</div>'+
+                    '</div>'+
+                    '</li>'
+        
+        $('#editer_preview_box').append(text_editer);
+        $(".basic").selectOrDie(); //seleter load script
     });
+     
+    /////////////////////////////////////////////////////////
+    //      add text end
+    /////////////////////////////////////////////////////////
 
-    var i = 0;
-    $('#add_text').click(function () { //add text bt event
-        $('#text_editer').clone(true).appendTo('#editer_preview_box');
+    /////////////////////////////////////////////////////////
+    //      text editer tools start
+    /////////////////////////////////////////////////////////
 
-        $('#text_editer').attr('id', 'text_editer_' + i);
-        $('#contents_div').attr('id', 'contents_div_' + i);
-
-        $('#con_delete_bt').attr('id', 'con_delete_bt_' + i);
-
-        $('#editer_body_text').attr('id', 'editer_body_text_' + i);
-        $('#textarea_editer').attr('id', 'textarea_editer_' + i);
-
-        $('#select_box').attr('id', 'select_box_' + i);
-
-        $('#text_bold').attr('id', 'text_bold_' + i);
-        $('#text_italic').attr('id', 'text_italic_' + i);
-        $('#text_underline').attr('id', 'text_underline_' + i);
-        $('#text_strike').attr('id', 'text_strike_' + i);
-
-        $('#color_picker').attr('id', 'color_picker_' + i);
-
-        $('#align_left').attr('id', 'aign_left_' + i);
-        $('#align_center').attr('id', 'align_center_' + i);
-        $('#align_right').attr('id', 'align_right_' + i);
-        i++;
-    });
-
-    $('.color_picker').ready(function () // color picker palete making
-    {
-        $('.color_picker > ul > li').each(function () {
-            $(this).css("background",$(this).text());
-        });
-    });
-
-
-
-    //var find_textarea = $(this).parent('.textarea_editer').prev('.editer_body_text');
-
-    $('.con_delete_bt[id*="con_delete_bt"]').click(function () //delete text area
-    {
-        $(this).parent().remove();
-    });
-    $('.select_box[id*="select_box"]').change(function () //change font size
+    
+    $(document).on('change', '.select_box', function () //change font size
     {
         $(this).parent('.textarea_editer').prev('.editer_body_text').css({ 'font-size': $(this).find('option:selected').text() });
     });
 
-    $('.text_bold[id*="text_bold"]').click(function () //change font weight
+    $(document).on('click', '.text_bold', function () //change font weight
     {
         if ($(this).parent('.textarea_editer').prev('.editer_body_text').css("font-weight") == "400")
         {
@@ -1046,7 +1164,7 @@ $(function () {
         }
     });
 
-    $('.text_italic[id*="text_italic"]').click(function () //change font italic
+    $(document).on('click', '.text_italic', function () //change font italic
     {
         if ($(this).parent('.textarea_editer').prev('.editer_body_text').css('font-style') == 'normal' ) 
         {
@@ -1055,7 +1173,7 @@ $(function () {
             $(this).parent('.textarea_editer').prev('.editer_body_text').css({ 'font-style': 'normal' });
         }
     });
-    $('.text_strike[id*="text_strike"]').click(function () //change font strike
+    $(document).on('click', '.text_strike', function () //change font strike
     {
         if ($(this).parent('.textarea_editer').prev('.editer_body_text').css('text-decoration') == 'none' ||
             $(this).parent('.textarea_editer').prev('.editer_body_text').css('text-decoration') == 'underline')
@@ -1065,7 +1183,7 @@ $(function () {
             $(this).parent('.textarea_editer').prev('.editer_body_text').css({ 'text-decoration': 'none' });
         }
     });
-    $('.text_underline[id*="text_underline"]').click(function () //change font underline
+    $(document).on('click', '.text_underline', function () //change font underline
     {
         if ($(this).parent('.textarea_editer').prev('.editer_body_text').css('text-decoration') == 'none' ||
             $(this).parent('.textarea_editer').prev('.editer_body_text').css('text-decoration') == 'line-through')
@@ -1076,43 +1194,92 @@ $(function () {
         }
     });
 
-    $('.color_picker[id*="color_picker"] > ul > li').click(function () //change font underline
-    {
-        $(this).parents('.textarea_editer').prev('.editer_body_text').css({ "color": $(this).text() });
-        $(this).parent('ul').prev('.selected_color').css({ "background": $(this).text() });
-    });
-
-    $('.align_left[id*="align_left"]').click(function () //change txt align left
+    $(document).on('click', '.align_left', function () //change txt align left
     {
         $(this).parent('.textarea_editer').prev('.editer_body_text').css({ 'text-align': 'left' });
     });
-    $('.align_center[id*="align_center"]').click(function () //change txt align center
+    $(document).on('click', '.align_center', function () //change txt align center
     {
         $(this).parent('.textarea_editer').prev('.editer_body_text').css({ 'text-align': 'center' });
     });
-    $('.align_right[id*="align_right"]').click(function () //change txt align right
+    $(document).on('click', '.align_right', function () //change txt align right
     {
         $(this).parent('.textarea_editer').prev('.editer_body_text').css({ 'text-align': 'right' });
     });
+    /////////////////////////////////////////////////////////
+    //      text editer tools end
+    /////////////////////////////////////////////////////////
 
+    /////////////////////////////////////////////////////////
+    //      delete bt hover start
+    /////////////////////////////////////////////////////////
 
-    $(".text_editer[id*='text_editer']").hover(function () // textarea move, delete bt hover
+    $(document).on('mouseenter', '.text_editer', function () // textarea delete bt hover
     {
-        $(this).children('.contents_div > .con_delete_bt').stop().fadeIn(150);
+        $(this).find('.con_delete_bt').stop().fadeIn(150);
         $(this).children('.contents_div').css({ "border": "1px solid #d1d1d1" });
-        //$('.con_move_bt, .con_delete_bt').stop().fadeIn(150);
-    }, function ()
+    });
+    $(document).on('mouseleave', '.text_editer', function () // textarea delete bt hover
     {
-        $(this).children('.contents_div > .con_delete_bt').stop().fadeOut(150);
+        $(this).find('.con_delete_bt').stop().fadeOut(150);
         $(this).children('.contents_div').css({ "border": "1px solid #fff" });
     });
 
-    $(".editer_body_text[id*='editer_body_text']").focus(function () // text editer focus view
+
+    $(document).on('mouseenter', '.preview_img', function () // preview_img delete bt hover
     {
-        $(this).next('.textarea_editer').stop().fadeIn(150);
-        //$('.textarea_editer').fadeIn(150);
+        $(this).find('.con_delete_bt').stop().fadeIn(150);
+        $(this).children('.contents_div').css({ "border": "1px solid #d1d1d1" });
+    });
+    $(document).on('mouseleave', '.preview_img', function () // preview_img delete bt hover
+    {
+        $(this).find('.con_delete_bt').stop().fadeOut(150);
+        $(this).children('.contents_div').css({ "border": "1px solid #fff" });
     });
 
+
+    $(document).on('mouseenter', '.embed_contents', function () { // embed contents delete bt hover
+        $(this).children('.con_delete_bt').stop().fadeIn(150);
+        $(this).css({ "border": "1px solid #d1d1d1" });
+    });
+    $(document).on('mouseleave', '.embed_contents', function () { // embed contents delete bt hover
+        $(this).children('.con_delete_bt').stop().fadeOut(150);
+        $(this).css({ "border": "1px solid #fff" });
+    });
+
+    /////////////////////////////////////////////////////////
+    //      delete bt hover end
+    /////////////////////////////////////////////////////////
+
+    /////////////////////////////////////////////////////////
+    //      contents delete btn start
+    /////////////////////////////////////////////////////////
+
+    $(document).on('click', '.con_delete_bt', function () //text area delete event
+    {
+        $(this).parents('.text_editer').remove();
+        $(this).parents('.embed_contents').remove();
+        $(this).parents('.preview_img').remove();
+    });
+
+    /////////////////////////////////////////////////////////
+    //      contents delete btn end
+    /////////////////////////////////////////////////////////
+
+    /////////////////////////////////////////////////////////
+    //      color picker start
+    /////////////////////////////////////////////////////////
+    $(document).on('focus', '.editer_body_text', function () // text editer focus view
+    {
+        $(this).next('.textarea_editer').stop().fadeIn(150);
+    });
+
+    $(document).on('click', '.color_picker > ul > li', function () //change text color change
+    {
+        $(this).parents('.textarea_editer').prev('.editer_body_text').css({ "color": $(this).text() });
+        $(this).parent('ul').prev('.selected_color').css({ "background": $(this).text() });
+        $(this).parent('ul').hide();
+    });
 
     $(document).ready(function () { //outside click toggle
         $(document).click(function (e) {
@@ -1124,14 +1291,26 @@ $(function () {
         });
     });
 
-
-    $('.selected_color').click(function () //color picker toggle
+    $(document).on('click', '.selected_color', function () //color picker toggle
     {
         $(this).next('ul').toggle();
     });
 
-    $('.color_picker > ul > li').click(function ()
+    $(document).on('click', '.color_picker', function () // color picker palete making
     {
-        $(this).parent('ul').hide();
+        $('.color_picker > ul > li').each(function ()
+        {
+            $(this).css("background", $(this).text());
+        });
     });
+    /////////////////////////////////////////////////////////
+    //      color picker end
+    /////////////////////////////////////////////////////////
+
+    /////////////////////////////////////////////////////////
+    //      text editer tools end
+    /////////////////////////////////////////////////////////
+
+
 });
+/*----------------------------editer end----------------------------*/
