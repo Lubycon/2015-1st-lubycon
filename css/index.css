@@ -315,11 +315,11 @@
     .side_bar
     {
         width:5px;
-        height:80%;
+        height:71%;
         float:left;
 
         border-right: 2px solid #48cfad;
-        margin: 20px 20px 15px 15px;
+        margin: 32px 20px 15px 15px;
 
         text-align:right;
     }
@@ -330,6 +330,7 @@
             margin-right:-6.5px;
 
             vertical-align: top;
+            margin-top:-4px;
         }
 
 
