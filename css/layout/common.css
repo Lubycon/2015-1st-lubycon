@@ -372,6 +372,16 @@ h1 /* main logo */ {
                 margin-bottom:5px;
                 padding-left:10px;
             }
+
+            #login_input > #email_icon,#pass_icon
+            {
+                position:absolute;
+                color:#b1b1b1;
+                left:237px;
+                margin-top:19px;
+                font-size: 17px;
+
+            }
                 #login_submit{
                     position:relative;
                     width:240px;
@@ -397,28 +407,33 @@ h1 /* main logo */ {
                         #signin_bt #login_box #login_facebook{
                             background:#3b5998;
                         }
+                         
+                        #signin_bt #login_box #login_google{
+                            background:#ec6446;
+                        }
+                            
+                            
+                       #signin_bt #login_box .fa-facebook,.fa-google-plus{
+                            color:#fff;
+                            width:38px;
+                            height: 37px;
+                            line-height: 39px;
+                            text-align: center;
+                            float:left;
+                        }
+
                             #signin_bt #login_box .fa-facebook{
                                 font-size:20px;
                                 top:4px;
                                 left:25px;
                                 background: #03326c;
                             }
-                        
-                        #signin_bt #login_box #login_google{
-                            background:#ec6446;
-                        }
+
                             #signin_bt #login_box .fa-google-plus{
                                 font-size:20px;
                                 background: #b44931;
                             }
-                    #signin_bt #login_box i{
-                        color:#fff;
-                        width:38px;
-                        height: 36px;
-                        line-height: 36px;
-                        text-align: center;
-                        float:left;
-                    }
+                 
         
 
 
