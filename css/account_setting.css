@@ -263,7 +263,12 @@
         margin-top:55px;
         margin-left:215px;
         font-weight: 200;
+        cursor:pointer;
     }
+        #submit_bt:hover
+        {
+            opacity: 0.8;
+        }
     #basic_desc{
         width:210px;
         height:260px;
@@ -272,6 +277,7 @@
         max-width:210px;
         min-height:29px;
         margin-bottom:10px;
+        resize:none;
     }
     #basic_desc_label{
         vertical-align:top;
@@ -399,4 +405,5 @@
     margin-left:130px;
     margin-bottom:15px;
     display:block;
+    overflow:hidden;
 }
