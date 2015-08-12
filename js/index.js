@@ -941,6 +941,33 @@ $(function () {
 //      editer nav end
 /////////////////////////////////////////////////////////
 
+
+    /////////////////////////////////////////////////////////
+    //      img crop start
+    /////////////////////////////////////////////////////////
+    $(document).on('click', '.preview_img', function ()
+    {
+        if ($(this).css('background-color') == 'rgb(255, 255, 255)')
+        {
+            $('.preview_img').css({ "background": "rgb(255, 255, 255)" }); //css reset
+            $('.preview_img').removeAttr('id'); // remove all id
+
+            $(this).css({ "background": "#48CFAD" });
+            $(this).attr('id', 'selected_img');
+
+            $('#img_crop').removeClass('img_crop_notallow'); //img crop bt able
+        } else
+        {
+            $(this).css({ "background": "rgb(255, 255, 255)" });
+
+            $('#img_crop').addClass('img_crop_notallow'); //img crop bt disable
+        }
+    });
+
+    /////////////////////////////////////////////////////////
+    //      img crop end
+    /////////////////////////////////////////////////////////
+
     /////////////////////////////////////////////////////////
     //      editer_upload_file start
     /////////////////////////////////////////////////////////
