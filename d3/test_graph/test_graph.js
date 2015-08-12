@@ -2,51 +2,51 @@
 //upload data
 var upload_data = [
     {
-        "upload": "15",
+        "value": "15",
         "month": "1"
     }, 
     {
-        "upload": "22",
+        "value": "22",
         "month": "2"
     }, 
     {
-        "upload": "33",
+        "value": "33",
         "month": "3"
     }, 
     {
-        "upload": "5",
+        "value": "5",
         "month": "4"
     }, 
     {
-        "upload": "34",
+        "value": "34",
         "month": "5"
     }, 
     {
-        "upload": "22",
+        "value": "22",
         "month": "6"
     },
     {
-        "upload": "7",
+        "value": "7",
         "month": "7"
     },
     {
-        "upload": "6",
+        "value": "6",
         "month": "8"
     },
     {
-        "upload": "1",
+        "value": "1",
         "month": "9"
     },
     {
-        "upload": "7",
+        "value": "7",
         "month": "10"
     },
     {
-        "upload": "11",
+        "value": "11",
         "month": "11"
     },
     {
-        "upload": "3",
+        "value": "3",
         "month": "12"
     }
 ];
@@ -55,51 +55,51 @@ var upload_data = [
 //download data
 var download_data = [
     {
-        "download": "15",
+        "value": "15",
         "month": "1"
     }, 
     {
-        "download": "13",
+        "value": "13",
         "month": "2"
     }, 
     {
-        "download": "3",
+        "value": "3",
         "month": "3"
     }, 
     {
-        "download": "7",
+        "value": "7",
         "month": "4"
     }, 
     {
-        "download": "10",
+        "value": "10",
         "month": "5"
     }, 
     {
-        "download": "1",
+        "value": "1",
         "month": "6"
     },
     {
-        "download": "15",
+        "value": "15",
         "month": "7"
     },
     {
-        "download": "27",
+        "value": "27",
         "month": "8"
     },
     {
-        "download": "0",
+        "value": "0",
         "month": "9"
     },
     {
-        "download": "17",
+        "value": "17",
         "month": "10"
     },
     {
-        "download": "5",
+        "value": "5",
         "month": "11"
     },
     {
-        "download": "9",
+        "value": "9",
         "month": "12"
     }
 ];
@@ -151,7 +151,7 @@ var lineGen = d3.svg.line()
         return xScale(d.month);
     })
     .y(function(d){
-        return yScale(d.upload);
+        return yScale(d.value);
     })
     .interpolate("basis");
 //////////////////graph line ready//////////////////
