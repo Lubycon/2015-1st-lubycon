@@ -50,6 +50,9 @@
     text-align:center;
 }
 
+
+
+
 #editer_aside
 {
     margin-left: 50px;
@@ -91,6 +94,16 @@
             {
                 visibility:hidden;
                 position:absolute;
+            }
+            .img_crop_notallow 
+            {
+                background:#ddd !important;
+                color:#2f2f2f !important;
+                cursor:not-allowed !important;
+            }
+            .img_crop_notallow  i
+            {
+                color:#646464 !important;
             }
 
         
@@ -409,6 +422,7 @@
 
             .preview_img 
             {
+                background:#fff;
             }
 
 
