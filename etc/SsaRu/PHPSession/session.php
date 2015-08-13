@@ -2,7 +2,6 @@
 ini_set("display_errors", "1");
 session_save_path('./');
 session_start();
-echo (file_get_contents("sess_".session_id()));
 
 echo $_SESSION['IDENTITY'];
 echo '<br />';
