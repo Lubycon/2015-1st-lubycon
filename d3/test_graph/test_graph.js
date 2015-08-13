@@ -51,63 +51,9 @@ var upload_data = [
     }
 ];
 //upload data
-
-//download data
-var download_data = [
-    {
-        "value": "15",
-        "month": "1"
-    }, 
-    {
-        "value": "13",
-        "month": "2"
-    }, 
-    {
-        "value": "3",
-        "month": "3"
-    }, 
-    {
-        "value": "7",
-        "month": "4"
-    }, 
-    {
-        "value": "10",
-        "month": "5"
-    }, 
-    {
-        "value": "1",
-        "month": "6"
-    },
-    {
-        "value": "15",
-        "month": "7"
-    },
-    {
-        "value": "27",
-        "month": "8"
-    },
-    {
-        "value": "0",
-        "month": "9"
-    },
-    {
-        "value": "17",
-        "month": "10"
-    },
-    {
-        "value": "5",
-        "month": "11"
-    },
-    {
-        "value": "9",
-        "month": "12"
-    }
-];
-//Like data
-
 //////////////////data ready////////////////////////
 //////////////////chart ready///////////////////////
-var vis = d3.select('#visualisation'),
+var vis = d3.select('#graph'),
     WIDTH = 700,
     HEIGHT = 350,
     MARGINS = {
@@ -153,21 +99,102 @@ var lineGen = d3.svg.line()
     .y(function(d){
         return yScale(d.value);
     })
-    .interpolate("basis");
+    .interpolate("cardinal");
+
+var areaGen = d3.svg.area()
+    .x(function(d){
+        return xScale(d.month);
+    })
+    .y0(HEIGHT-MARGINS.bottom)
+    .y1(function(d){
+        return yScale(d.value);
+    })
+    .interpolate("cardinal");
 //////////////////graph line ready//////////////////
 //////////////////draw graph line///////////////////
-//upload graph drawing
+//upload graph line drawing start
 vis.append('svg:path')
     .attr('d', lineGen(upload_data))
+    .attr('class','up_graph_line')
     .attr('stroke','#48cfad')
     .attr('stroke-width','2')
-    .attr('fill','none');
-//upload graph drawing
-//download graph drawing
+    .attr('fill','none')
+//upload graph line drawing end
+//upload graph area drawing start     
 vis.append('svg:path')
-    .attr('d', lineGen(download_data))
-    .attr('stroke','#ffbe54')
-    .attr('stroke-width','2')
-    .attr('fill','none');
-//download graph drawing
+    .attr('d', areaGen(upload_data))
+    .attr('class','up_graph_area')
+    .attr('stroke-width','0')
+    .attr('fill','#48cfad')
+    .attr('opacity','0.5')
+    
+    /*.on('mouseover', function(){
+        d3.select(this).style('fill','#48cfad');
+        d3.select(this).style('opacity','1');
+    })
+    .on('mouseout', function(){
+        d3.select(this).style('fill','#48cfad');
+        d3.select(this).style('opacity','0.5');
+    });*/
+//upload graph area drawing end
 //////////////////draw graph line///////////////////
+//////////////////datapoint start/////////////////////
+
+
+
+vis.selectAll("svg")
+    .data(upload_data)
+    .enter().append("circle")
+    .attr('class', 'datapoint')
+    .attr('cx', function(d) { return xScale(d.month); })
+    .attr('cy', function(d) { return yScale(d.value); })
+    .attr('r', 5)
+    .attr('fill', 'white')
+    .attr('stroke', '#48cfad')
+    .attr('stroke-width', '1')
+
+    .on('mouseover', function(){
+        d3.select(this).transition()
+            .delay(0)
+            .duration(500)
+            .attr('r',8);
+
+        d3.select('.tooltip').transition()
+            .delay(0)
+            .duration(500)
+            .attr('display','block')
+            .attr('opacity','1');
+    })
+    .on('mouseout', function(){
+         d3.select(this).transition()
+            .delay(0)
+            .duration(500)
+            .attr('r',5);
+
+        d3.select('.tooltip').transition()
+            .delay(0)
+            .duration(500) 
+            .attr('opacity','0')
+            .attr('display','none');
+    });
+    
+//////////////////datapoint end///////////////////////
+//////////////////tooltip start///////////////////////
+vis.selectAll("svg")
+    .data(upload_data)
+    .enter().append('rect')
+    .attr('class','tooltip')
+    .attr('x', function(d) { return xScale(d.month); })
+    .attr('y', function(d) { return yScale(d.value); })
+    .attr('width', 150)
+    .attr('height', 50)
+    .attr('fill', '#ffffff')
+    .attr('stroke', '#000000')
+    .attr('stroke-width', '1')
+    .attr('color','#000000')
+    .attr('opacity','0')
+    .attr('display','none');
+
+//////////////////tooltip end/////////////////////////
+//////////////////mouse move start////////////////////
+/////////////////mouse move end//////////////////////
