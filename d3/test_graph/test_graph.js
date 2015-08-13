@@ -99,6 +99,7 @@ var lineGen = d3.svg.line()
     .y(function(d){
         return yScale(d.value);
     })
+    .interpolate("cardinal");
 
 var areaGen = d3.svg.area()
     .x(function(d){
@@ -108,6 +109,7 @@ var areaGen = d3.svg.area()
     .y1(function(d){
         return yScale(d.value);
     })
+    .interpolate("cardinal");
 //////////////////graph line ready//////////////////
 //////////////////draw graph line///////////////////
 //upload graph line drawing start
@@ -137,6 +139,9 @@ vis.append('svg:path')
 //upload graph area drawing end
 //////////////////draw graph line///////////////////
 //////////////////datapoint start/////////////////////
+
+
+
 vis.selectAll("svg")
     .data(upload_data)
     .enter().append("circle")
@@ -152,14 +157,27 @@ vis.selectAll("svg")
         d3.select(this).transition()
             .delay(0)
             .duration(500)
-            .attr('r',8)
+            .attr('r',8);
+
+        d3.select('.tooltip').transition()
+            .delay(0)
+            .duration(500)
+            .attr('display','block')
+            .attr('opacity','1');
     })
     .on('mouseout', function(){
          d3.select(this).transition()
             .delay(0)
             .duration(500)
-            .attr('r',5)
+            .attr('r',5);
+
+        d3.select('.tooltip').transition()
+            .delay(0)
+            .duration(500) 
+            .attr('opacity','0')
+            .attr('display','none');
     });
+    
 //////////////////datapoint end///////////////////////
 //////////////////tooltip start///////////////////////
 vis.selectAll("svg")
@@ -173,6 +191,10 @@ vis.selectAll("svg")
     .attr('fill', '#ffffff')
     .attr('stroke', '#000000')
     .attr('stroke-width', '1')
+    .attr('color','#000000')
+    .attr('opacity','0')
     .attr('display','none');
 
 //////////////////tooltip end/////////////////////////
+//////////////////mouse move start////////////////////
+/////////////////mouse move end//////////////////////
