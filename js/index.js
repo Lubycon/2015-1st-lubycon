@@ -896,6 +896,7 @@ $(function(){
 /*----------------------------waiting for resisting end----------------------------*/
 
 /***********************************index_2 canvas start****************************************/
+/*
 $(function () {
     var pb = document.getElementById('photo_body');
     if (pb) {
@@ -914,7 +915,7 @@ $(function () {
         pbdraw.fill();
     }
 });
-
+*/
 
 /*index_2 canvas*/
 
