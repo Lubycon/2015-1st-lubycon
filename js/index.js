@@ -24,7 +24,7 @@ $(function () //add hover animation for every buttons
 {
     $('button').hover(function()
     {
-         $(this).stop().animate({ opacity: 0.9 }, 200);
+         $(this).stop().animate({ opacity: 0.8 }, 200);
     }, function ()
     {
          $(this).stop().animate({ opacity: 1 }, 200);
@@ -114,11 +114,13 @@ $(function () //e-mail and password value reset start
         if (emailbox.val() == 'E-mail') {
             emailbox.val('');
         }
+        $('#email_icon').css('color','#48cfad');
     });
     emailbox.blur(function () {
         if (emailbox.val() == '') {
             emailbox.val('E-mail');
         }
+         $('#email_icon').css('color','#b1b1b1');
     });
 
     passbox.focus(function () {
@@ -126,15 +128,29 @@ $(function () //e-mail and password value reset start
             passbox.val('');
             passbox.attr('type', 'password');
         }
+        $('#pass_icon').css('color','#48cfad');
     });
     passbox.blur(function () {
         if (passbox.val() == '') {
             passbox.val('Password');
             passbox.attr('type', 'text');
         }
+        $('#pass_icon').css('color','#b1b1b1');
     });
 });     //e-mail and password value reset end
 
+
+$(function(){
+    var c_account = $('#creat_acc');
+
+    c_account.hover(function()
+    {
+        $(this).stop().animate({ opacity: 0.8 }, 200);
+    }, function ()
+    {
+        $(this).stop().animate({ opacity: 1 }, 200);
+    });
+});
 /////////////////////////////////////////////////////////
 //      before sign in input reset end
 /////////////////////////////////////////////////////////
@@ -361,7 +377,7 @@ $(function () { /* designers page continets selcect */
     });
     $('.contents_bt').mouseleave(function () {
         $('.continets_list').stop().slideUp(300);
-        $('.contents_bt').css('background', '#000');
+        $('.contents_bt').css('background', '#222');
     });
     $('.continets_list li').click(function () {
         $('.continets_selected').text($(this).text());
@@ -897,6 +913,8 @@ $(function(){
 
 /***********************************index_2 canvas start****************************************/
 /*
+=======
+/***********************************designer of the month canvas start****************************************/
 $(function () {
     var pb = document.getElementById('photo_body');
     if (pb) {
@@ -915,9 +933,8 @@ $(function () {
         pbdraw.fill();
     }
 });
-*/
 
-/*index_2 canvas*/
+/***********************************designer of the month canvas end****************************************/
 
 /*----------------------------waiting for resisting end----------------------------*/
 

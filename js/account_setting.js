@@ -217,7 +217,7 @@ $.fn.setPreview = function (opt) {
 $(document).ready(function () {
     var opt = {
         img: $('#img_preview'),
-        w: 216,
+        w: 'auto',
         h: 216
     };
 

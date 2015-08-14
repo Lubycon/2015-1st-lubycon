@@ -5,7 +5,7 @@
 /* main section start */
 
 #main_figure {
-    background: url(../CH/img/mein_Img.png) 0% 47% no-repeat;
+    background: url(../CH/img/main_Img.png) 0% 47% no-repeat;
     background-size:100%;
     width: 100%;
     height: 350px;
@@ -179,7 +179,7 @@
             #photo_frame {
                 width: 187px;
                 height: 217px;
-                background: url(../CH/img/designer_of_the_month/frame.png);
+                background: url(../CH/img/designer_of_the_month/frame.png) no-repeat;
                 position: absolute;
                 z-index: 2;
                 left: 50%;
@@ -315,11 +315,11 @@
     .side_bar
     {
         width:5px;
-        height:80%;
+        height:71%;
         float:left;
 
         border-right: 2px solid #48cfad;
-        margin: 20px 20px 15px 15px;
+        margin: 32px 20px 15px 15px;
 
         text-align:right;
     }
@@ -330,6 +330,7 @@
             margin-right:-6.5px;
 
             vertical-align: top;
+            margin-top:-4px;
         }
 
 

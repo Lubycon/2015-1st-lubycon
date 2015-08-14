@@ -12,7 +12,7 @@
     <meta name="keywords" content="font ,vector, 3D design, community, designers, engineer, 3D printer, Illustration, Lubycon" />
 
     <title>LUBYCON</title>
-    <link rel="shortcut icon" href="CH/img/lubycon.ico" />  <!-- favicon -->
+    <link rel="shortcut icon" href="CH/img/logo/lubycon.ico" />  <!-- favicon -->
     <link href='http://fonts.googleapis.com/css?family=Hind:400' rel='stylesheet' type='text/css' />	<!--google web font-->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" /> <!--icon font-->
 
