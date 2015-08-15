@@ -135,8 +135,8 @@ vis.selectAll("svg")
     .data(upload_data)
     .enter().append("circle")
     .attr('class', 'datapoint')
-    .attr('cx', function(d) { return xScale(d.month); })
-    .attr('cy', function(d) { return yScale(d.value); })
+    .attr('cx', function(d,i) { return xScale(d.month); })
+    .attr('cy', function(d,i) { return yScale(d.value); })
     .attr('r', 5)
     .attr('fill', 'white')
     .attr('stroke', '#48cfad')
@@ -148,27 +148,27 @@ vis.selectAll("svg")
             .delay(0)
             .duration(500)
             .attr('r',8);
+
+        var value_both = d3.select('div.value');
+
+        value_both.selectAll("p")
+            .data(upload_data)
+            .enter().append("p")
+            .attr('class','value_text')
+            .html(function(d,i) {
+                return "month : "+ upload_data[0].month + '<br>' + "contents : " + upload_data[0].value;
+            });
+
         ////////////////////////tool_tip(jQuery)/////////////////////////
         var tooltipX = $(this).offset().left + 10;///circle X = tooltip_X
         var tooltipY = $(this).offset().top + 10;////circle Y = tooltip_Y
-        var dataPoint = $('.datapoint');
-
 
         $('#tooltip').css('top',tooltipY);
         $('#tooltip').css('left',tooltipX);
 
         $('#tooltip').stop().fadeIn(200);
         ////////////////////////tool_tip(jQuery)/////////////////////////
-        var value_both = d3.select('div.value');
-
-        value_both.selectAll("p")
-            .data(upload_data)
-            .enter().append("p")
-            .attr('class','value_month')
-            .html(function(d,i) {
-                return "month : "+ d.month + '<br>' + "contents : " + d.value;
-            });
-        })
+    })
 
     
     .on('mouseout', function(){//mouse_out event
