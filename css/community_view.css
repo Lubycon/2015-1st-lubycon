@@ -62,15 +62,18 @@
 }
 
 #post_banner {
+    position:absolute;
+
     width: 155px;
-    padding:15px 10px;
+    top:0px;
+
     border:1px solid #c4c4c4;
     border-radius: 3px;
     background:#ffffff;
-    position:absolute;
+    padding:15px 10px;   
     text-align:center;
-    top:0px;
-    box-shadow: -1px 1px 6px 0px rgba(0,0,0,0.1);
+
+    box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.2);
     overflow:hidden;
 }
 
@@ -79,24 +82,25 @@
     width:177px;
     height:143px;
 
-    background: #48cfad;
+    border-bottom: 10px solid #48cfad;
 
     margin-top:-15px;
     margin-left:-10px;
     padding-top:25px;
+    padding-bottom: 17px;
 }
     #img_mask
     {
-        width:120px;
-        height: 120px;
+        width:130px;
+        height: 130px;
         margin: 0px auto;
-
+        
+        border: 3px solid #48cfad;
         border-radius: 50%;
         overflow: hidden;
     }
         #img_mask img {
             width: 100%;
-            border-radius: 2px;
         }
     #post_banner h4{
         font-size:22px;
@@ -175,8 +179,8 @@
 
 #share_box {
     display: block;
-    height: 45px;
-    text-align: right;
+    height: 30px;
+    padding-left: 847px;
 }
 
     #share_box button {
@@ -185,6 +189,7 @@
         border: none;
         border-radius: 3px;
         margin-left: 5px;
+        float: left;
     }
     #share_box i {
         color: #fff;
@@ -205,8 +210,8 @@
 
         #share_box #share_google i {
             font-size: 20px;
-            margin-top: 3px;
-            margin-left: 4px;
+            margin-top: -4px;
+            margin-left: 3px;
         }
 
   

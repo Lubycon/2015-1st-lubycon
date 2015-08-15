@@ -127,20 +127,9 @@ vis.append('svg:path')
     .attr('stroke-width','0')
     .attr('fill','#48cfad')
     .attr('opacity','0.5')
-    
-    /*.on('mouseover', function(){
-        d3.select(this).style('fill','#48cfad');
-        d3.select(this).style('opacity','1');
-    })
-    .on('mouseout', function(){
-        d3.select(this).style('fill','#48cfad');
-        d3.select(this).style('opacity','0.5');
-    });*/
 //upload graph area drawing end
 //////////////////draw graph line///////////////////
 //////////////////datapoint start/////////////////////
-
-
 
 vis.selectAll("svg")
     .data(upload_data)
@@ -152,49 +141,44 @@ vis.selectAll("svg")
     .attr('fill', 'white')
     .attr('stroke', '#48cfad')
     .attr('stroke-width', '1')
+    
+    .on('mouseover', function(){//mouse_over event
 
-    .on('mouseover', function(){
-        d3.select(this).transition()
+        d3.select(this).transition()//animation for circle
             .delay(0)
             .duration(500)
             .attr('r',8);
+        ////////////////////////tool_tip(jQuery)/////////////////////////
+        var tooltipX = $(this).offset().left + 10;///circle X = tooltip_X
+        var tooltipY = $(this).offset().top + 10;////circle Y = tooltip_Y
+        var dataPoint = $('.datapoint');
 
-        d3.select('.tooltip').transition()
-            .delay(0)
-            .duration(500)
-            .attr('display','block')
-            .attr('opacity','1');
-    })
-    .on('mouseout', function(){
+
+        $('#tooltip').css('top',tooltipY);
+        $('#tooltip').css('left',tooltipX);
+
+        $('#tooltip').stop().fadeIn(200);
+        ////////////////////////tool_tip(jQuery)/////////////////////////
+        var value_both = d3.select('div.value');
+
+        value_both.selectAll("p")
+            .data(upload_data)
+            .enter().append("p")
+            .attr('class','value_month')
+            .html(function(d,i) {
+                return "month : "+ d.month + '<br>' + "contents : " + d.value;
+            });
+        })
+
+    
+    .on('mouseout', function(){//mouse_out event
          d3.select(this).transition()
             .delay(0)
             .duration(500)
             .attr('r',5);
-
-        d3.select('.tooltip').transition()
-            .delay(0)
-            .duration(500) 
-            .attr('opacity','0')
-            .attr('display','none');
+        ////////////////////////tool_tip(jQuery)/////////////////////////
+        $('#tooltip').stop().fadeOut(200);
+        ////////////////////////tool_tip(jQuery)/////////////////////////
     });
     
 //////////////////datapoint end///////////////////////
-//////////////////tooltip start///////////////////////
-vis.selectAll("svg")
-    .data(upload_data)
-    .enter().append('rect')
-    .attr('class','tooltip')
-    .attr('x', function(d) { return xScale(d.month); })
-    .attr('y', function(d) { return yScale(d.value); })
-    .attr('width', 150)
-    .attr('height', 50)
-    .attr('fill', '#ffffff')
-    .attr('stroke', '#000000')
-    .attr('stroke-width', '1')
-    .attr('color','#000000')
-    .attr('opacity','0')
-    .attr('display','none');
-
-//////////////////tooltip end/////////////////////////
-//////////////////mouse move start////////////////////
-/////////////////mouse move end//////////////////////
