@@ -40,7 +40,7 @@
     height:50px;
     background:#222;
     color:#fff;
-    cursor:pointer;
+    cursor:default;
 }
 .continets_box{
     width:1200px;
@@ -94,6 +94,7 @@
     background:#f0f0f0;
     position:relative;
     border-radius: 3px;
+    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.3);
 }
     #personal_box figure{
     width:200px;
@@ -166,6 +167,7 @@
             text-align:right;
             color:#ffffff;
             font-size:23px;
+            font-weight: 200;
         }
         #personal_score button{
             width:133px;
@@ -194,137 +196,87 @@
             background:#48cfad;
         }
 
-#insight_box{
-    width:1065px;
-    height:690px;
+#insight_box
+{
+    width:100%;
+    max-width:1600px;
     margin:0px auto;
-    padding-top:50px;
+    margin-top:50px;
+    margin-bottom:50px;
 }
-    #insight_box .graph_box{
-        width:470px;
-        height:320px;
-        border:1px solid #e6e6e6;
-        border-radius:5px;
-        overflow:hidden;
-        margin:15px 30px;
-        float:left;
-        position:relative;
-        
-    }
-    #insight_box .graph_box .graph_title{
+
+#graph_ul
+{
+    width:100%;
+    margin:0px auto;
+    text-align: center;
+}
+
+.graph_box
+{
+    width:730px;
+    height:450px;
+    position: relative;
+    display: inline-block;
+    margin:20px;
+    border:1px solid #333;
+}
+    .graph_title
+    {
         width:100%;
-        height:40px;
-        line-height:40px;
-        background:#333333;
-        color:#fff;
+        height: 50px;
+        line-height: 50px;
+
+        background: rgba(0,0,0,0.7);
+        
+        text-align: center;
+        color:#ffffff;
         font-size:20px;
         font-weight: 200;
-        text-align:center;
+    }
+    
 
-    }
-    #insight_box .graph_box ul{
-        width:490px;
-        height:280px;
-        margin-left:-10px;
-        position:absolute;
-        z-index:2;
-    }
-    #insight_box .graph_box ul li{
-        width:70px;
-        height:280px;
-        float:left;
-        text-align:center;
+    #graph1,#graph2,#graph3
+    {
+        display:block;
+        margin:0px auto;
     }
 
-    #insight_box .graph_box .gray_bar{
-        position:absolute;
-        width:490px;
-        height:5px;
-        background:#a1a1a1;
-        bottom:30px;
-        z-index:2;
-    }
-
-    .graph_data{
-        width:15px;
-        margin:0px 24px;
-        height:245px;
-        line-height:245px;
-        color:#000;
-        text-indent:9999px;
-        display:none;
-    }
-    .graph_date{
-        width:70px;
-        height:35px;
-        line-height:38px;
-        color:#999999;
-        font-size:15px;
-        position:absolute;
-        bottom:0px;
-    }
- .uploaded_graph,.downloaded_graph,.like_graph,.contents_view_graph{
-     position:absolute;
-     z-index:1;
-     width:470px;
-     height:235px;
-     top:50px;
-     background-image:url(../ch/img/grid.jpg);
- }
- .uploaded_arc, .like_arc, .downloaded_arc, .contents_view_arc{
-     position:absolute;
-     z-index:2;
-     width:470px;
-     height:235px;
-     top:50px;
- }
- #hint_box{
-     padding:1px 5px;
-     height:35px;
-     background:#fff;
-     border-radius:3px;
-     position:absolute;
-     top:200px;
-     left:100px;
-     z-index:3;
-     box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.8);
-     display:none;
- }
-    #hint_box #hint_name{
-        height:16px;
-        line-height:18px;
-        color:#a1a1a1;
-        font-size:12px;
-        text-align:center;
-        margin-top:1px;
-    }
-    #hint_box #hint_figure{
-        height:16px;
-        line-height:16px;
-        color:#000;
-        font-size:16px;
-        text-align:center;
-        font-weight:bold;
-    }
-        .left_triangle{
-            border-color: transparent rgba(255,255,255,1) transparent transparent;
-            border-style:solid;
-            border-width:6px;
-            width:0;
-            height:0;
-            position:absolute;
-            z-index:5;
-            top:19px;
-            left:-12px;
+        .axis path
+        {
+            fill: none;
+            stroke: #555555;
+            shape-rendering: cripsEdges;
         }
-        .cursor_pointer{
-            background:#fff;
-            border:2px solid #000;
-            width:5px;
-            height:5px;
-            position:absolute;
-            border-radius:50%;
-            top: 20.5px;
-            left: -25px;
+        .axis text
+        {
+            font-family: Lato;
+            font-size: 13px;
         }
+
+
+#tooltip
+{
+    width:150px;
+    height:50px;
+    background:rgba(0,0,0,0.8);
+
+    border-radius: 5px;
+    padding:10px;
+
+    position: absolute;
+    display: none;
+    overflow:hidden;
+
+
+}
+    .value_text
+    {
+        color:#ffffff;
+        font-size:17px;
+        font-weight: 200;
+        text-align: center;
+    }
+
+
 /* main section end */

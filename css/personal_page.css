@@ -40,7 +40,7 @@
     height:50px;
     background:#222;
     color:#fff;
-    cursor:pointer;
+    cursor:default;
 }
 .continets_box{
     width:100%;
@@ -58,6 +58,7 @@
         background: #222;
         text-align: center;
         float: right;
+        cursor:pointer;
     }
         .fa-bars{
             font-size: 21px;
@@ -100,6 +101,7 @@
     background:#f0f0f0;
     position:relative;
     border-radius: 3px;
+    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.3);
 }
     #personal_box figure{
     width:200px;
@@ -170,6 +172,7 @@
             text-align:right;
             color:#fff;
             font-size:23px;
+            font-weight: 200;
         }
         #personal_score button{
             width:133px;

@@ -46,7 +46,7 @@
     height:50px;
     background:#222;
     color:#fff;
-    cursor:pointer;
+    cursor:default;
 }
 .continets_box{
     width:100%;
@@ -63,6 +63,7 @@
         background: #222;
         text-align: center;
         float: right;
+        cursor:pointer;
     }
     .fa-bars {
         font-size: 21px;
