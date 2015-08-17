@@ -7,7 +7,7 @@ You can modify this page free. what i'm going to say if you have any ideas plz a
 
 I think we better determine some rules for LUBYCON.
 
-###for example 
+###example 
 * file Directory
 * structure for Web Database
 * The date that When we meet
