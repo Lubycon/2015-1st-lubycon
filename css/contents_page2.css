@@ -286,7 +286,7 @@
     background:#48cfad;
     border:none;
     border-radius: 3px;
-    margin-bottom:20px;
+    margin-top:20px;
 }
 
     #content_down i {
@@ -294,6 +294,7 @@
         font-size: 34px;
         vertical-align: middle;
         margin-top: 1px;
+        -webkit-text-stroke: 1px #48cfad;
 
     }
 
@@ -306,6 +307,7 @@
     border-radius:50%;
     display:block;
     margin:0px auto;
+    margin-top:25px;
 
 }
 
@@ -399,7 +401,7 @@
 #file_info{
     width: 246px;
     background: #444444;
-    margin-top: 40px;
+    margin-top: 34px;
     border-radius: 3px;
     overflow: hidden;
 }
@@ -412,11 +414,16 @@
         color:#fff;
         font-size:16px;
         text-align: center;
+        padding-left: 43px;
     }
+        #info_toggle{
+            color:#ffffff;
+            padding-left: 70px;
+        }
 
     #file_info #files{
         width: 100%;
-        min-height: 118px;
+        display:none;
     }
 
         #files #file_name
@@ -503,6 +510,7 @@
             font-size:14px;
             color:#fff;
             margin-right:10px;
+            font-weight: 200;
         }
 
 

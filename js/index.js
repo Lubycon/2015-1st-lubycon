@@ -1359,3 +1359,24 @@ $(function () {
 
 });
 /*----------------------------editer end----------------------------*/
+/*-------------------------file info start--------------------------*/
+$(function(){
+    var toggle_count = 0;
+    
+    $("#info_header").click(function(){
+        switch(toggle_count){
+            case 0 : 
+                $("#files").slideDown(300);
+                $("#info_toggle").attr('class','fa fa-angle-up');
+                toggle_count = 1;
+            break;
+            
+            case 1 :
+                $("#files").slideUp(300);
+                $("#info_toggle").attr('class','fa fa-angle-down');
+                toggle_count = 0;
+            break;
+        }
+    });   
+});
+/*-------------------------file info end----------------------------*/
