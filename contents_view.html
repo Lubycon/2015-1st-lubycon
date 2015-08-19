@@ -201,7 +201,6 @@
         <h2>ALL CONTENTS</h2>
     </figure>	<!-- end main_figure -->
 
-    <script type="text/javascript" src="js/contents.js"></script>
     <link href="css/contents_page.css" rel="stylesheet" type="text/css" />  <!-- contents page css -->
     <section id="contents">
         <section id="navsel">
@@ -568,6 +567,20 @@
             <button id="designer_chat"><i class="fa fa-envelope-o"></i>Message</button>
             <button id="follow_designer"><i class="fa fa-user-plus"></i>Follow</button>
             <button id="content_down"><i class="fa fa-download"></i></button>
+            <div id="file_info">
+                <header id="info_header">File info<i class="fa fa-angle-down" id="info_toggle"></i></header>
+                <section id="files">
+                    <article id="file_name"><i class="fa fa-circle-o"></i><p><i class="fa fa-folder"></i>Lorem ipsum.zip</p></article>
+                    <ul>
+                        <li><i class="fa fa-file"></i>ipsum.psd</li>
+                        <li><i class="fa fa-file"></i>ipsum.ai</li>
+                        <li><i class="fa fa-file"></i>ipsum.html</li>
+                        <li><i class="fa fa-file"></i>ipsum.css</li>
+                        <li><i class="fa fa-circle"></i><i class="fa fa-file"></i>ipsum.js</li>
+                </section>
+                <footer id="storage"><p>1.2 MB</p></footer>
+            </div>
+
             <button id="con_like_bt"><i class="fa fa-heart"></i></button>
             <p id="con_like_score">1232</p>
             <article id="file_disc">
@@ -586,30 +599,19 @@
                 </ul>
             </div>
 
-            <button class="share_sns share_face"><i class="fa fa-facebook"></i>Sharing on Facebook</button>
-            <button class="share_sns share_twit"><i class="fa fa-twitter"></i>Sharing on twitter</button>
-
-
-            <div id="file_info">
-                <header id="info_header">File info</header>
-                <section id="files">
-                    <article id="file_name"><i class="fa fa-circle-o"></i><p><i class="fa fa-folder-open"></i>Lorem ipsum.zip</p></article>
-                    <ul>
-                        <li><i class="fa fa-file"></i>ipsum.psd</li>
-                        <li><i class="fa fa-file"></i>ipsum.ai</li>
-                        <li><i class="fa fa-file"></i>ipsum.html</li>
-                        <li><i class="fa fa-file"></i>ipsum.css</li>
-                        <li><i class="fa fa-circle"></i><i class="fa fa-file"></i>ipsum.js</li>
-                </section>
-                <footer id="storage"><p>1.2 MB</p></footer>
-            </div>
+            <button class="share_sns share_face">
+                <i class="fa fa-facebook"></i>Sharing on Facebook
+            </button>
+            <button class="share_sns share_twit">
+                <i class="fa fa-twitter"></i>Sharing on twitter
+            </button>
             
             <ul id="contents_tag">
-                <li>shoes</li>
-                <li>vans</li>
-                <li>flower</li>
-                <li>red</li>
-                <li>love</li>
+                <li><span>shoes</span><i class="fa fa-times"></i></li>
+                <li><span>vansM</span><i class="fa fa-times"></i></li>
+                <li><span>flower</span><i class="fa fa-times"></i></li>
+                <li><span>red</span><i class="fa fa-times"></i></li>
+                <li><span>love</span><i class="fa fa-times"></i></li>
             </ul>
         </aside>
     </div>

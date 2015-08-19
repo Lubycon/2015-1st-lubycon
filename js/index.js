@@ -246,10 +246,10 @@ $(function () { //search box click value reset start
 $(function(){
     $('#main_figure button').hover(
         function (){
-            $(this).animate({opacity:0.5, width:160},200);
+            $(this).stop().animate({opacity:0.5, width:160},200);
         },
         function (){
-            $(this).animate({opacity:1, width:150},200);
+            $(this).stop().animate({opacity:1, width:150},200);
         }
     );
 });
@@ -1359,3 +1359,24 @@ $(function () {
 
 });
 /*----------------------------editer end----------------------------*/
+/*-------------------------file info start--------------------------*/
+$(function(){
+    var toggle_count = 0;
+    
+    $("#info_header").click(function(){
+        switch(toggle_count){
+            case 0 : 
+                $("#files").stop().slideDown(300);
+                $("#info_toggle").attr('class','fa fa-angle-up');
+                toggle_count = 1;
+            break;
+            
+            case 1 :
+                $("#files").stop().slideUp(300);
+                $("#info_toggle").attr('class','fa fa-angle-down');
+                toggle_count = 0;
+            break;
+        }
+    });   
+});
+/*-------------------------file info end----------------------------*/
