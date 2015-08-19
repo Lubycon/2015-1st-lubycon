@@ -95,56 +95,66 @@
 #personal_box{
     width:100%;
     max-width:1600px;
-    height:240px;
-    margin:0px auto;
-    margin-top:15px;
-    background:#f0f0f0;
+    height:220px;
+    background:#f3f3f3;
     position:relative;
     border-radius: 3px;
     box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.3);
+    margin-top: 15px;
+    padding: 10px 0px;
 }
     #personal_box figure{
-    width:200px;
-    height:200px;
-    margin-left:20px;
-    margin-top:20px;
+    width:150px;
+    height:150px;
     margin-right:50px;
+    margin-left: 10px;
     vertical-align:middle;
     background:#e6e6e6;
     text-align:center;
     display:inline-block;
     float:left;
     }
-        #personal_box figure img{
-        height:200px;
+        #personal_box #personal_photo img{
+        height:150px;
         }
-    #personal_box h3{
-        padding-top:20px;
-        font-size:30px;
-        display:inline-block;
-    }
-    #personal_box h4{
-        font-size: 19px;
-        color: #727272;
-        display: inline-block;
-        margin-left: 10px;
-    }
-    #personal_box #personal_legion{
-        font-size: 17px;
-        color: #727272;
-        margin-top: 5px;
-    }
-        #personal_box #personal_legion i{
-        font-size: 25px;
-        margin-right: 10px;
-        vertical-align: middle;
-        margin-top: -3px;
-    }
-        #personal_box #personal_intro{
-            margin-top:20px;
-            font-size:20px;
-            color:#555555;
+
+        #basic_info_box
+        {
+            
         }
+            #personal_name
+            {
+                padding-top:20px;
+                font-size:30px;
+                display:inline-block;
+            }
+            #personal_job
+            {
+                font-size: 19px;
+                color: #727272;
+                display: inline-block;
+                margin-left: 10px;
+            }
+            #personal_legion
+            {
+
+                font-size: 17px;
+                color: #727272;
+                margin-top: 5px;
+            }
+                #personal_legion i
+                {
+                    font-size: 25px;
+                    margin-right: 10px;
+                    vertical-align: middle;
+                    margin-top: -3px;
+                }
+            #personal_intro
+            {
+                margin-top:20px;
+                font-size:18px;
+                color:#555555;
+            }
     #personal_score{
         width:280px;
         height:210px;
@@ -188,11 +198,14 @@
                 line-height:35px;
                 color:#fff;
                 margin-left:5px;
+                margin-top: -1px;
             }
             #personal_score button p {
                 text-align:center;
                 line-height:35px;
                 color:#fff;
+                margin-top: -1px;
+                font-weight: 200;
             }
         #personal_score #personal_messeage {
             background:#9a9a9a;
