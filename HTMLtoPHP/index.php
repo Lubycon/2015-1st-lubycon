@@ -227,12 +227,12 @@
     <?php
     if( empty($_GET['1']) == false ) 
     {
-        echo file_get_contents("html/".$_GET['1']."/".$_GET['2'].".html");
+        include("html/".$_GET['1']."/".$_GET['2'].".html");
         //echo $_GET['1']."/".$_GET['2'].".html";
     }
     else
     {
-        echo file_get_contents("index_body.php");
+        include("index_body.php");
     }
     ?>
     
