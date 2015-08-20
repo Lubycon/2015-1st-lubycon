@@ -144,6 +144,8 @@
                 </li>
             </ul> <!-- end gnb ul -->
         </nav>	<!--end main_gnb-->
+
+        <!-- before sign in -->
         <div id="signin_bt">
             <div id="signin">
                 <span class="partition">|</span>
@@ -163,8 +165,11 @@
                     <a href="http://localhost/html-php/html/account/forgot_password.html" target="_self"><p id="forgot_pass">Forgot your password?</p></a>  
                     <p id="creat_acc">Create An Account</p>          
                 </div>  <!-- end login_box div -->
-        </div>  <!-- end signin_bt div -->
+        </div>
+        <!-- before sign in -->
 
+
+        <!-- after sign in -->
         <div id="after_signin">
             <span class="partition">|</span>
             <figure><img src="ch/img/designer_img.png" /></figure>
@@ -178,7 +183,9 @@
             </ul>
         </div>
         <!-- end after sign in -->
+
         <button id="addcontent_bt"><i class="fa fa-plus"></i>Add Contents</button>
+
         <!--end content button-->
         <div id="lang_select_bt">
             <ul>

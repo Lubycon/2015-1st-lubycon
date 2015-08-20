@@ -17,7 +17,24 @@ $(function () //window fadein effect
 /////////////////////////////////////////////////////////
 
 /////////////////////////////////////////////////////////
-//      add hover animation for every buttons
+//      gloval navigation button hover event start
+/////////////////////////////////////////////////////////
+
+$(function () //gnb hober event
+{
+    $('.bigsub').hover(function () {
+        $(this).children().stop().fadeIn(300);
+    }, function () {
+        $(this).children().stop().fadeOut(300);
+    });
+});
+
+/////////////////////////////////////////////////////////
+//      gloval navigation button hover event end
+/////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////
+//      add hover animation for every buttons start
 /////////////////////////////////////////////////////////
 
 $(function () //add hover animation for every buttons
@@ -32,7 +49,7 @@ $(function () //add hover animation for every buttons
 });
 
 /////////////////////////////////////////////////////////
-//      add hover animation for every buttons
+//      add hover animation for every buttons end
 /////////////////////////////////////////////////////////
 
 /////////////////////////////////////////////////////////
@@ -74,22 +91,15 @@ $(function () //language change bt slide and change
 
 $(function () //sign in toggle event
 {
-    $('#signin_bt').click(function () {
+    $('#signin_bt,#figure_signin').click(function () {
         $('#login_box').stop().fadeIn(150);
-    });
-
-    $('#sign_out').click(function () //logout
-    {
-        $("#after_signin").hide();
-        $("#signin_bt").show();
-        $("#addcontent_bt").hide();
     });
 });
 
 $(document).ready(function () // signin box click toggle
 {
     $(document).click(function (e) {
-        var subject = $("#signin_bt");
+        var subject = $("#signin_bt,#figure_signin");
 
         if (e.target.id != subject.attr('id') && !subject.has(e.target).length) {
             $("#login_box").stop().fadeOut(150);
@@ -156,19 +166,31 @@ $(function(){
 /////////////////////////////////////////////////////////
 
 /////////////////////////////////////////////////////////
-//      sign in child menu event start
+//      create account bt popup event start
 /////////////////////////////////////////////////////////
 
-$(function() //gnb hober event
-{
-	$('.bigsub').hover(function()
-	{
-		$(this).children().stop().fadeIn(300);
-	}, function ()
-	{
-	    $(this).children().stop().fadeOut(300);
-	});
+$(function () { //create account bt popup event start
+    $('#creat_acc').click(function () {
+        $('.dark_overlay').stop().fadeIn(100);
+        $('#create_account_area').stop().fadeIn(100);
+    });
 
+    $('.dark_overlay').click(function () {
+        $('.dark_overlay').stop().fadeOut(150);
+        $('#create_account_area').stop().fadeOut(150);
+    });
+});
+
+/////////////////////////////////////////////////////////
+//      create account bt popup event end
+/////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////
+//      after signin child hover show and hide start
+/////////////////////////////////////////////////////////
+
+$(function() //after signin child hover show and hide
+{
 	$('#after_signin').hover(function ()
 	{
 	    $('#after_signin > ul').stop().fadeIn();
@@ -176,10 +198,17 @@ $(function() //gnb hober event
 	{
 	    $('#after_signin > ul').stop().fadeOut();
 	});
+
+	$('#sign_out').click(function () // sign out
+	{
+	    $("#after_signin").hide();
+	    $("#signin_bt").show();
+	    $("#addcontent_bt").hide();
+	});
 });
 
 /////////////////////////////////////////////////////////
-//      sign in child menu event end
+//      after signin child hover show and hide end
 /////////////////////////////////////////////////////////
 
 /////////////////////////////////////////////////////////
@@ -213,26 +242,6 @@ $(function () { //add contents button start
 
 /////////////////////////////////////////////////////////
 //      add contents bt popup event end
-/////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////
-//      create account bt popup event start
-/////////////////////////////////////////////////////////
-
-$(function () { //create account bt popup event start
-    $('#creat_acc').click(function () {
-        $('.dark_overlay').stop().fadeIn(100);
-        $('#create_account_area').stop().fadeIn(100);
-        $('#login_box').css({"display":"none !important"});
-    });
-
-    $('.dark_overlay').click(function () {
-        $('.dark_overlay').stop().fadeOut(150);
-        $('#create_account_area').stop().fadeOut(150);
-    });
-});
-
-/////////////////////////////////////////////////////////
-//      create account bt popup event end
 /////////////////////////////////////////////////////////
 
 /////////////////////////////////////////////////////////
