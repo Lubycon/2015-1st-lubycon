@@ -7,7 +7,7 @@
 
     <link href="css/slider.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="js/slider.js"></script> <!-- main slider js -->
-<!-- FlexSlider apply code -->
+    <!-- index page slider plugin -->
     <script>
         jQuery(document).ready(function ($) {
 
@@ -69,7 +69,7 @@
         });
     </script>
 
-    <!-- FlexSlider apply code -->
+    <!-- index page slider plugin -->
 
     <section id="slide_section">
         <nav id="slide_lnb">
@@ -81,33 +81,19 @@
                 <label for="vector_bt" class="la_bt">VECTOR</label>
                 <label for="3d_bt" class="la_bt">3D DESIGN</label>
                 <p class="down_triangle"></p>
+
             </nav> <!-- end nav -->
             
         </nav><!--end slide lnb-->
         <div id="slider1" style="  width: 980px; height: 363px;  ">
             <div class="slides" u="slides">
                 <div>
-                    <ul>
-                        <?php
-                            for($i = 1; $i < 11; $i++){
-                                echo '<li><img src="ch/img/slider/slider1/'.$i.'.png'."</li>";
-                            }
-                        ?>
-                    </ul>
+                      <?php
+                      echo "<li>hello world</li>";
+                      ?>
                 </div>
                 <div>
-                    <ul>
-                        <li><img src="ch/img/slider/slider1/1.png" alt="½æ³×ÀÏ02"></li>
-                        <li><img src="ch/img/slider/slider1/2.png" alt="½æ³×ÀÏ02"></li>
-                        <li><img src="ch/img/slider/slider1/3.png" alt="½æ³×ÀÏ02"></li>
-                        <li><img src="ch/img/slider/slider1/4.png" alt="½æ³×ÀÏ04"></li>
-                        <li><img src="ch/img/slider/slider1/5.png" alt="½æ³×ÀÏ05"></li>
-                        <li><img src="ch/img/slider/slider1/6.png" alt="½æ³×ÀÏ06"></li>
-                        <li><img src="ch/img/slider/slider1/7.png" alt="½æ³×ÀÏ07"></li>
-                        <li><img src="ch/img/slider/slider1/8.png" alt="½æ³×ÀÏ08"></li>
-                        <li><img src="ch/img/slider/slider1/9.png" alt="½æ³×ÀÏ07"></li>
-                        <li><img src="ch/img/slider/slider1/10.png" alt="½æ³×ÀÏ08"></li>
-                    </ul>
+                    2222222222222
                 </div>
                 <div>
                     <ul>
