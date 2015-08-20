@@ -1,0 +1,130 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lubycon_php", "Lubycon_php", "{0776844A-08DE-4742-A0B4-6CEC4EF8BE00}"
+	ProjectSection(SolutionItems) = preProject
+		index.php = index.php
+		index_body.php = index_body.php
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "html", "html", "{DAEE0839-5F41-492F-95AB-58A345B7C2AE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "account", "account", "{EB38E6BD-6829-4E8C-8594-BEEC354919CB}"
+	ProjectSection(SolutionItems) = preProject
+		html\account\create_account.html = html\account\create_account.html
+		html\account\forgot_password.html = html\account\forgot_password.html
+		html\account\mail_for_resist.html = html\account\mail_for_resist.html
+		html\account\success_account.html = html\account\success_account.html
+		html\account\waiting_for_resisting.html = html\account\waiting_for_resisting.html
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "community", "community", "{21B889A6-ABE9-4229-90DE-654198AA2D3E}"
+	ProjectSection(SolutionItems) = preProject
+		html\community\community_page.html = html\community\community_page.html
+		html\community\community_view.html = html\community\community_view.html
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "company", "company", "{2444400F-89DF-48F0-B2FC-DA811A7CF73C}"
+	ProjectSection(SolutionItems) = preProject
+		html\company\about_us.html = html\company\about_us.html
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "contents", "contents", "{CFB3191C-27E6-431F-9AC4-056BEBA97233}"
+	ProjectSection(SolutionItems) = preProject
+		html\contents\contents_page.html = html\contents\contents_page.html
+		html\contents\contents_view.html = html\contents\contents_view.html
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "designers_page", "designers_page", "{0F23BE5D-2D0E-490F-ADA1-70CBEDCECAF8}"
+	ProjectSection(SolutionItems) = preProject
+		html\designers_page\designers_page.html = html\designers_page\designers_page.html
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "editer", "editer", "{3FC22545-B208-4275-8530-090F43F8CDD4}"
+	ProjectSection(SolutionItems) = preProject
+		html\editer\editer.html = html\editer\editer.html
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "personal_page", "personal_page", "{5528D5D6-2249-4D2D-917F-4B4987AE93D2}"
+	ProjectSection(SolutionItems) = preProject
+		html\personal_page\account_setting.html = html\personal_page\account_setting.html
+		html\personal_page\insight.html = html\personal_page\insight.html
+		html\personal_page\message.html = html\personal_page\message.html
+		html\personal_page\personal_page.html = html\personal_page\personal_page.html
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "css", "css", "{89F53E10-E9B7-495E-82C7-F2122711B934}"
+	ProjectSection(SolutionItems) = preProject
+		css\about_us.css = css\about_us.css
+		css\account_setting.css = css\account_setting.css
+		css\community.css = css\community.css
+		css\community_view.css = css\community_view.css
+		css\contents_page.css = css\contents_page.css
+		css\contents_page2.css = css\contents_page2.css
+		css\create_account.css = css\create_account.css
+		css\designers_page.css = css\designers_page.css
+		css\editer.css = css\editer.css
+		css\find_password.css = css\find_password.css
+		css\flexslider.css = css\flexslider.css
+		css\index.css = css\index.css
+		css\insight.css = css\insight.css
+		css\message.css = css\message.css
+		css\normalize.css = css\normalize.css
+		css\personal_page.css = css\personal_page.css
+		css\selectordie.css = css\selectordie.css
+		css\slider.css = css\slider.css
+		css\success_account.css = css\success_account.css
+		css\waiting_for_resisting.css = css\waiting_for_resisting.css
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "js", "js", "{F4657569-6E1C-48D8-8BE1-96250A2CB5CA}"
+	ProjectSection(SolutionItems) = preProject
+		js\account_setting.js = js\account_setting.js
+		js\community.js = js\community.js
+		js\d3.min.js = js\d3.min.js
+		js\index.js = js\index.js
+		js\insight.js = js\insight.js
+		js\jquery-1.11.3.min.js = js\jquery-1.11.3.min.js
+		js\jquery-2.1.3.min.js = js\jquery-2.1.3.min.js
+		js\jquery-ui.min.js = js\jquery-ui.min.js
+		js\jquery.cycle.all.js = js\jquery.cycle.all.js
+		js\jquery.flexslider.js = js\jquery.flexslider.js
+		js\selectordie.demo.js = js\selectordie.demo.js
+		js\selectordie.min.js = js\selectordie.min.js
+		js\slider.js = js\slider.js
+		js\success_account.js = js\success_account.js
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "contents_page", "contents_page", "{7328460A-3607-460C-8C81-56CB4C1DF3A8}"
+	ProjectSection(SolutionItems) = preProject
+		css\contents_page\main_page.css = css\contents_page\main_page.css
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "layout", "layout", "{79EDE1A8-A22F-45A4-8EBB-14D24588F03D}"
+	ProjectSection(SolutionItems) = preProject
+		css\layout\common.css = css\layout\common.css
+		css\layout\normalize.css = css\layout\normalize.css
+		css\layout\selectordie.css = css\layout\selectordie.css
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DAEE0839-5F41-492F-95AB-58A345B7C2AE} = {0776844A-08DE-4742-A0B4-6CEC4EF8BE00}
+		{EB38E6BD-6829-4E8C-8594-BEEC354919CB} = {DAEE0839-5F41-492F-95AB-58A345B7C2AE}
+		{21B889A6-ABE9-4229-90DE-654198AA2D3E} = {DAEE0839-5F41-492F-95AB-58A345B7C2AE}
+		{2444400F-89DF-48F0-B2FC-DA811A7CF73C} = {DAEE0839-5F41-492F-95AB-58A345B7C2AE}
+		{CFB3191C-27E6-431F-9AC4-056BEBA97233} = {DAEE0839-5F41-492F-95AB-58A345B7C2AE}
+		{0F23BE5D-2D0E-490F-ADA1-70CBEDCECAF8} = {DAEE0839-5F41-492F-95AB-58A345B7C2AE}
+		{3FC22545-B208-4275-8530-090F43F8CDD4} = {DAEE0839-5F41-492F-95AB-58A345B7C2AE}
+		{5528D5D6-2249-4D2D-917F-4B4987AE93D2} = {DAEE0839-5F41-492F-95AB-58A345B7C2AE}
+		{89F53E10-E9B7-495E-82C7-F2122711B934} = {0776844A-08DE-4742-A0B4-6CEC4EF8BE00}
+		{F4657569-6E1C-48D8-8BE1-96250A2CB5CA} = {0776844A-08DE-4742-A0B4-6CEC4EF8BE00}
+		{7328460A-3607-460C-8C81-56CB4C1DF3A8} = {89F53E10-E9B7-495E-82C7-F2122711B934}
+		{79EDE1A8-A22F-45A4-8EBB-14D24588F03D} = {89F53E10-E9B7-495E-82C7-F2122711B934}
+	EndGlobalSection
+EndGlobal

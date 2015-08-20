@@ -91,7 +91,7 @@ $(function () //language change bt slide and change
 
 $(function () //sign in toggle event
 {
-    $('#signin_bt,#figure_signin').click(function () {
+    $('#signin_bt, #figure_signin').click(function () {
         $('#login_box').stop().fadeIn(150);
     });
 });
@@ -99,8 +99,8 @@ $(function () //sign in toggle event
 $(document).ready(function () // signin box click toggle
 {
     $(document).click(function (e) {
-        var subject = $("#signin_bt,#figure_signin");
-
+        var subject = $('#signin_bt');
+        var i = 1;
         if (e.target.id != subject.attr('id') && !subject.has(e.target).length) {
             $("#login_box").stop().fadeOut(150);
         }
@@ -149,18 +149,6 @@ $(function () //e-mail and password value reset start
     });
 });     //e-mail and password value reset end
 
-
-$(function(){
-    var c_account = $('#creat_acc');
-
-    c_account.hover(function()
-    {
-        $(this).stop().animate({ opacity: 0.8 }, 200);
-    }, function ()
-    {
-        $(this).stop().animate({ opacity: 1 }, 200);
-    });
-});
 /////////////////////////////////////////////////////////
 //      before sign in input reset end
 /////////////////////////////////////////////////////////
@@ -170,7 +158,16 @@ $(function(){
 /////////////////////////////////////////////////////////
 
 $(function () { //create account bt popup event start
-    $('#creat_acc').click(function () {
+
+    $('#create_acc').hover(function ()
+    {
+        $(this).stop().animate({ opacity: 0.8 }, 200);
+    }, function ()
+    {
+        $(this).stop().animate({ opacity: 1 }, 200);
+    });
+
+    $('#create_acc').click(function () {
         $('.dark_overlay').stop().fadeIn(100);
         $('#create_account_area').stop().fadeIn(100);
     });
