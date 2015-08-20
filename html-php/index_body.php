@@ -88,16 +88,11 @@
             <div class="slides" u="slides">
                 <div>
                     <ul>
-                        <li><img src="ch/img/slider/slider1/1.png" alt="½æ³×ÀÏ02"></li>
-                        <li><img src="ch/img/slider/slider1/2.png" alt="½æ³×ÀÏ02"></li>
-                        <li><img src="ch/img/slider/slider1/3.png" alt="½æ³×ÀÏ02"></li>
-                        <li><img src="ch/img/slider/slider1/4.png" alt="½æ³×ÀÏ04"></li>
-                        <li><img src="ch/img/slider/slider1/5.png" alt="½æ³×ÀÏ05"></li>
-                        <li><img src="ch/img/slider/slider1/6.png" alt="½æ³×ÀÏ06"></li>
-                        <li><img src="ch/img/slider/slider1/7.png" alt="½æ³×ÀÏ07"></li>
-                        <li><img src="ch/img/slider/slider1/8.png" alt="½æ³×ÀÏ08"></li>
-                        <li><img src="ch/img/slider/slider1/9.png" alt="½æ³×ÀÏ07"></li>
-                        <li><img src="ch/img/slider/slider1/10.png" alt="½æ³×ÀÏ08"></li>
+                        <?php
+                            for($i = 1; $i < 11; $i++){
+                                echo '<li><img src="ch/img/slider/slider1/'.$i.'.png'."</li>";
+                            }
+                        ?>
                     </ul>
                 </div>
                 <div>

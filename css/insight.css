@@ -203,6 +203,7 @@
 {
     width:100%;
     max-width:1600px;
+    min-width: 1200px;
     margin:0px auto;
     margin-top:50px;
     margin-bottom:50px;
