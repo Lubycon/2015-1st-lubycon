@@ -98,7 +98,9 @@
                 <ul>';
                     for( $k=1 ; $k<11 ; $k++ ) //loop slide img call
                     {
-                        echo '<li><img src="ch/img/slider/slider'.$i.'/'.$k.'.png" alt="thumbnail_photo_'.$k.'"></li>';
+                    echo '<li>
+                                <img src="ch/img/slider/slider'.$i.'/'.$k.'.png" alt="thumbnail_photo_'.$k.'">
+                          </li>';
                     }
            echo'</ul>
             </div>';
@@ -160,7 +162,7 @@
         <!-- card list start-->
             <div class="f_card_body">
                 <!--card start-->
-                <a href="#">
+                <a href="http://localhost/htmltophp/index.php?1=community&2=community_view">
                     <!--link start-->
                     <aside class="side_bar"><i class="fa fa-circle"></i></aside>
                     <div class="f_card_header">

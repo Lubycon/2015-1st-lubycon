@@ -48,15 +48,7 @@
     position:relative;
 }
     #nav_guide .contents_bt {
-        color: #FFF;
-        width: 165px;
-        font-size: 20px;
-        font-weight: 300;
-        height: 50px;
-        line-height: 50px;
-        background: #222;
-        text-align: center;
-        float: right;
+        display:none;
     }
         .fa-bars{
             font-size: 24px;

@@ -227,7 +227,7 @@
     <?php
     if( empty($_GET['1']) == false ) 
     {
-        include("html/".$_GET['1']."/".$_GET['2'].".html");
+        include("php/".$_GET['1']."/".$_GET['2'].".php");
         //echo $_GET['1']."/".$_GET['2'].".html";
     }
     else

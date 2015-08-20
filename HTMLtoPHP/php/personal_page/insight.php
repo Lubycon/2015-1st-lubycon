@@ -1,4 +1,4 @@
-﻿    <figure id="main_figure">
+    <figure id="main_figure">
         <h2>DESIGNERS</h2>
     </figure>	<!-- end main_figure -->
 
@@ -6,18 +6,9 @@
     <script type="text/javascript" src="js/insight.js"></script><!--graph script-->
 
     <section id="contents">
-        <section id="navsel">
-            <nav id="lnb_nav">
-                <ul>
-                    <li>Main</li>
-                    <li class="selected_nav">Insight</li>
-                    <li>Followers</li>
-                </ul>
-            </nav>  <!-- end lnb nav -->
-        </section>  <!-- end section -->
-
-        <section id="nav_guide">
-        </section>   <!-- end category -->
+        <?php
+        include("php/layout/personal_layout.php");
+        ?>
 
         <section id="personal_box">
             <figure>

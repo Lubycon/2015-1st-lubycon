@@ -1,31 +1,11 @@
-﻿    <figure id="main_figure">
+    <figure id="main_figure">
         <h2>DESIGNERS</h2>
     </figure>	<!-- end main_figure -->
     <link href="css/personal_page.css" rel="stylesheet" type="text/css" />  <!-- personal page css -->
     <section id="contents">
-        <section id="navsel">
-            <nav id="lnb_nav">
-                <ul>
-                    <li class="selected_nav">Main</li>
-                    <li>Insight</li>
-                    <li>Followers</li>
-                </ul>
-            </nav>  <!-- end lnb nav -->
-        </section>  <!-- end section -->
-
-        <section id="nav_guide">
-            <div class="continets_box">
-                <div class="contents_bt">
-                    <span class="global_icon"><i class="fa fa-bars"></i></span>
-                    <span class="continets_selected">Profile</span>
-                    <ul class="continets_list">
-                        <li>Profile</li>
-                        <li>Message</li>
-                        <li>Account Setting</li>
-                    </ul>
-                </div>
-            </div>
-        </section>   <!-- end category -->
+        <?php
+        include("php/layout/personal_layout.php");
+        ?>
 
         <section id="personal_box">
             <figure>
