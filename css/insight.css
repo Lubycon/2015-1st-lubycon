@@ -85,120 +85,210 @@
         .continets_list li:hover {
             background:#ffbe54;
         }
-#personal_box{
-    width:100%;
-    max-width:1600px;
-    height:240px;
+
+#information
+{
+    width:1200px;
+    background:#333333;
+
     margin:0px auto;
-    background:#f0f0f0;
+    margin-top:30px;
+}
+
+#personal_info{
+    width:560px;
+    height:220px;
+    background:#f3f3f3;
     position:relative;
     border-radius: 3px;
     box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.3);
-    margin-top: 15px;
+    padding: 10px 0px;
+    float: left;
+    margin:10px;
 }
-    #personal_box figure{
-    width:200px;
-    height:200px;
-    margin-left:20px;
-    margin-top:20px;
+    #personal_photo{
+    width:150px;
+    height:150px;
     margin-right:50px;
+    margin-left: 10px;
     vertical-align:middle;
     background:#e6e6e6;
     text-align:center;
     display:inline-block;
     float:left;
     }
-    #personal_box figure img{
-        height:200px;
-        border-radius: 3px;
-    }
-    #personal_box h3{
-        padding-top:20px;
-        font-size:30px;
-        display:inline-block;
-    }
-    #personal_box h4{
-        font-size: 19px;
-        color: #727272;
-        display: inline-block;
-        margin-left: 10px;
-    }
-    #personal_box #personal_legion{
-        font-size: 17px;
-        color: #727272;
-        margin-top: 5px;
-    }
-        #personal_box #personal_legion i{
-        font-size: 25px;
-        margin-right: 10px;
-        vertical-align: middle;
-        margin-top:-3px;
-    }
-        #personal_box #personal_intro{
-            margin-top:20px;
-            font-size:20px;
-            color:#555555;
+        #personal_photo img{
+        height:150px;
         }
-    #personal_score{
-        width:280px;
-        height:210px;
-        background:#4b4b4b;
-        position:absolute;
-        padding:15px 10px;
-        top:0px;
-        right:0px;
 
-        border-top-right-radius: 3px;
-        border-bottom-right-radius: 3px;
+        #basic_info_box
+        {
+            display:inline-block;
+        }
+            #personal_name
+            {
+                padding-top:20px;
+                font-size:30px;
+                display:inline-block;
+            }
+            #personal_job
+            {
+                font-size: 19px;
+                color: #727272;
+                margin-left: 10px;
+            }
+            #personal_legion
+            {
+
+                font-size: 17px;
+                color: #727272;
+                margin-top: 5px;
+            }
+                #personal_legion i
+                {
+                    font-size: 25px;
+                    margin-right: 10px;
+                    vertical-align: middle;
+                    margin-top: -3px;
+                }
+            #personal_language
+            {
+                font-size:15px;
+                color: #727272;
+                margin-top: 5px;
+            }
+                #personal_language i
+                {
+                    font-size: 20px;
+                    margin-right: 13px;
+                    vertical-align: middle;
+                    margin-top: -3px;
+                    margin-left:3px;
+                }
+        #descript_box
+        {
+
+        }
+            #personal_des
+            {
+                margin-top:20px;
+                font-size:18px;
+                color:#555555;
+            }
+   
+#personal_contact
+{
+    width:260px;
+    height:210px;
+    background:#f3f3f3;
+    position:relative;
+    border-radius: 3px;
+    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.3);
+    padding: 15px 10px;
+    float: left;
+    margin:10px;
+}
+
+.personal_num
+{
+    height:40px;
+    line-height: 40px;
+    font-size:20px;
+    color: #727272;
+    margin-top: 5px;   
+}
+.in_num
+{
+    height:20px;
+    vertical-align: top;
+    text-align: right;
+}
+
+    .fa-mobile
+    {
+        font-size:40px;
+        margin-right:26px;
+        color:#555;
     }
-        #personal_score ul li{
-            height:40px;
-            line-height:40px;
+    
+    .fa-fax
+    {
+        font-size:22px;
+        margin-right:20px;
+        color:#555;
+    }
+    .fa-desktop
+        {
+            font-size:22px;
+            margin-right:20px;
+            color:#555;
         }
-        #personal_score ul li i{
+
+
+#personal_score{
+    width:280px;
+    height:210px;
+    background:#4b4b4b;
+    position:relative;
+    padding:15px 10px;
+    border-radius: 3px;
+    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.3);
+    float: left;
+    margin:10px;
+}
+    #personal_score ul li{
+        height:40px;
+        line-height:40px;
+    }
+    #personal_score ul li i{
+        float:left;
+        line-height:40px;
+        color:#fff;
+        font-size:25px;
+        margin-left:10px;
+        
+    }
+    #personal_score ul li p {
+        text-align:right;
+        color:#fff;
+        font-size:23px;
+        font-weight: 200;
+    }
+    #personal_score button{
+        width:133px;
+        height:35px;
+        border:none;
+        border-radius:2px;
+        float:left;
+        margin-left:5px;
+        margin-top:10px;
+    }
+        #personal_score button i {
             float:left;
-            line-height:40px;
+            line-height:35px;
             color:#fff;
-            font-size:25px;
-            margin-left:10px;
-            
+            margin-left:5px;
+            margin-top: -1px;
         }
-        #personal_score ul li p {
-            text-align:right;
-            color:#ffffff;
-            font-size:23px;
+        #personal_score button p {
+            text-align:center;
+            line-height:35px;
+            color:#fff;
+            margin-top: -1px;
             font-weight: 200;
         }
-        #personal_score button{
-            width:133px;
-            height:35px;
-            border:none;
-            border-radius:2px;
-            float:left;
-            margin-left:5px;
-            margin-top:10px;
-        }
-            #personal_score button i {
-                float:left;
-                line-height:35px;
-                color:#fff;
-                margin-left:5px;
-                margin-top: -1px;
-            }
-            #personal_score button p {
-                text-align:center;
-                line-height:35px;
-                color:#fff;
-                margin-top: -1px;
-                font-weight: 200;
-            }
-        #personal_score #personal_messeage {
-            background:#9a9a9a;
-        }
-        #personal_score #personal_follow {
-            background:#48cfad;
-        }
+    #personal_score #personal_messeage {
+        background:#9a9a9a;
+    }
+    #personal_score #personal_follow {
+        background:#48cfad;
+    }
 
+
+
+
+
+    
 #insight_box
 {
     width:100%;
