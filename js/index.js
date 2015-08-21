@@ -1380,3 +1380,13 @@ $(function(){
     });   
 });
 /*-------------------------file info end----------------------------*/
+/*------------------------forgot password start---------------------*/
+$(function(){
+    $('#email_id').focus(function () {
+       $('#email_input label').css('color','#48cfad'); 
+    });
+   $('#email_id').blur(function () {
+       $('#email_input label').css('color','#838282');
+    });
+});
+/*------------------------forgot password end-----------------------*/
