@@ -44,19 +44,19 @@
         <p>Which content will you upload?</p>
         <ul>
             <li>
-                <a href="http://localhost/htmltophp/index.php?1=editer&2=editer&3=font">
+                <a href="./index.php?1=editer&2=editer&3=font">
                 <i class="fa fa-font"></i>
                 <p>Font</p>
                 </a>
             </li>
             <li>
-                <a href="http://localhost/htmltophp/index.php?1=editer&2=editer&3=vector">
+                <a href="./index.php?1=editer&2=editer&3=vector">
                 <i class="fa fa-stop"></i>
                 <p>Vector</p>
                 </a>
             </li>
             <li>
-                <a href="http://localhost/htmltophp/index.php?1=editer&2=editer&3=3d">
+                <a href="./index.php?1=editer&2=editer&3=3d">
                 <i class="fa fa-cube"></i>
                 <p>3D</p>
                 </a>
@@ -98,20 +98,20 @@
     <!---------------- common parts start ---------------->
     <!---------------- header start ---------------->
     <header id="main_header">
-        <h1><a href="http://localhost/htmltophp/index.php"><img src="CH/img/logo/lubycon_logo.svg" width="176" height="40" alt="main_logo" /></a></h1>
+        <h1><a href="./index.php"><img src="CH/img/logo/lubycon_logo.svg" width="176" height="40" alt="main_logo" /></a></h1>
         <nav id="main_gnb">
             <ul id="gnb">
                 <li class="bigsub">
                     Contents
                     <ul class="sub">
                         <li>
-                            <a href="http://localhost/htmltophp/index.php?1=contents&2=contents_page&3=font"><i class="fa fa-font fa-1x"></i><p>Font</p></a>
+                            <a href="./index.php?1=contents&2=contents_page&3=font"><i class="fa fa-font fa-1x"></i><p>Font</p></a>
                         </li>
                         <li>
-                            <a href="http://localhost/htmltophp/index.php?1=contents&2=contents_page&3=vector"><i class="fa fa-square fa-1x"></i><p>Vector</p></a>
+                            <a href="./index.php?1=contents&2=contents_page&3=vector"><i class="fa fa-square fa-1x"></i><p>Vector</p></a>
                         </li>
                         <li>
-                            <a href="http://localhost/htmltophp/index.php?1=contents&2=contents_page&3=3d"><i class="fa fa-cube fa-1x"></i><p>3D</p></a>
+                            <a href="./index.php?1=contents&2=contents_page&3=3d"><i class="fa fa-cube fa-1x"></i><p>3D</p></a>
                         </li>
                     </ul>	<!--end Contents menu-->
                 </li>
@@ -120,16 +120,16 @@
                     Community
                     <ul class="sub">
                         <li>
-                            <a href="http://localhost/htmltophp/index.php?1=community&2=community_page"><i class="fa fa-comments-o fa-1x"></i><p>Board</p></a>
+                            <a href="./index.php?1=community&2=community_page"><i class="fa fa-comments-o fa-1x"></i><p>Board</p></a>
                         </li>
                         <li>
-                            <a href="http://localhost/htmltophp/index.php?1=community&2=tutorial"><i class="fa fa-book fa-1x"></i><p>Tutorial</p></a>
+                            <a href="./index.php?1=community&2=tutorial"><i class="fa fa-book fa-1x"></i><p>Tutorial</p></a>
                         </li>
                         <li>
-                            <a href="http://localhost/htmltophp/index.php?1=community&2=qna"><i class="fa fa-question fa-1x"></i><p>Q&amp;A</p></a>
+                            <a href="./index.php?1=community&2=qna"><i class="fa fa-question fa-1x"></i><p>Q&amp;A</p></a>
                         </li>
                         <li>
-                            <a href="http://localhost/htmltophp/index.php?1=designers_page&2=designers_page"><i class="fa fa-star fa-1x"></i><p class="long_text">Designers Page</p></a>
+                            <a href="./index.php?1=designers_page&2=designers_page"><i class="fa fa-star fa-1x"></i><p class="long_text">Designers Page</p></a>
                         </li>
                     </ul>	<!--end Community menu-->
                 </li>
@@ -138,7 +138,7 @@
                     Company
                     <ul class="sub">
                         <li>
-                            <a href="http://localhost/htmltophp/index.php?1=company&2=about_us"><i class="fa fa-building fa-1x"></i><p>About us</p></a>
+                            <a href="./index.php?1=company&2=about_us"><i class="fa fa-building fa-1x"></i><p>About us</p></a>
                         </li>
                     </ul>	<!--end Company menu-->
                 </li>
@@ -162,7 +162,7 @@
                         <button id="login_facebook"><i class="fa fa-facebook"></i>Facebook</button>
                         <button id="login_google"><i class="fa fa-google-plus"></i>Google</button>
                     </div>     <!-- end login_submit div -->
-                    <a href="http://localhost/htmltophp/html/account/forgot_password.html" target="_self"><p id="forgot_pass">Forgot your password?</p></a>  
+                    <a href="./html/account/forgot_password.html" target="_self"><p id="forgot_pass">Forgot your password?</p></a>  
                     <p id="create_acc">Create An Account</p>          
                 </div>  <!-- end login_box div -->
         </div>
@@ -176,9 +176,9 @@
             <span id="user_id">Daniel_zeppppp</span>
             <i class="fa fa-angle-down"></i>
             <ul>
-                <li><a href="http://localhost/htmltophp/index.php?1=personal_page&2=personal_page">Profile</a></li>
-                <li><a href="http://localhost/htmltophp/index.php?1=personal_page&2=message">Message</a></li>
-                <li><a href="http://localhost/htmltophp/index.php?1=personal_page&2=account_setting">Account Setting</a></li>
+                <li><a href="./index.php?1=personal_page&2=personal_page">Profile</a></li>
+                <li><a href="./index.php?1=personal_page&2=message">Message</a></li>
+                <li><a href="./index.php?1=personal_page&2=account_setting">Account Setting</a></li>
                 <li id="sign_out">Sign Out</li>
             </ul>
         </div>

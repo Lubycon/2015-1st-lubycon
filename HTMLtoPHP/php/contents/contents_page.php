@@ -7,16 +7,16 @@
         <nav id="lnb_nav">
             <ul>
                 <li class="selected_nav">
-                    <a href="http://localhost/htmltophp/index.php?1=contents&2=contents_page&3=all">All</a>
+                    <a href="./index.php?1=contents&2=contents_page&3=all">All</a>
                 </li>
                 <li>
-                    <a href="http://localhost/htmltophp/index.php?1=contents&2=contents_page&3=font">Font</a>
+                    <a href="./index.php?1=contents&2=contents_page&3=font">Font</a>
                 </li>
                 <li>
-                    <a href="http://localhost/htmltophp/index.php?1=contents&2=contents_page&3=vector">Vector</a>
+                    <a href="./index.php?1=contents&2=contents_page&3=vector">Vector</a>
                 </li>
                 <li>
-                    <a href="http://localhost/htmltophp/index.php?1=contents&2=contents_page&3=3d">3D</a>
+                    <a href="./index.php?1=contents&2=contents_page&3=3d">3D</a>
                 </li>
             </ul>
         </nav>  <!-- end lnb nav -->
