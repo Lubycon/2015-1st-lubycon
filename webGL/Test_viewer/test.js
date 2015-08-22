@@ -17,11 +17,17 @@ var scene = new THREE.Scene();
 			var cir2 = new THREE.Mesh(geometry2, material2);
 			scene.add(cir1);
 			scene.add(cir2);
+			//---------------------------------------------------------------------//
 
+			var HemiLight = new THREE.HemisphereLight(0xffffff, 0xffffff, 0.6);
+			HemiLight.color.setHSL( 0.6, 1, 0.6 );
+			HemiLight.groundColor.setHSL( 0.095, 1, 0.75 );
+			HemiLight.position.set(1, 1, 1); // Position the light source at (x, y, z).
+			scene.add(HemiLight); // Add the light source to the scene.
 
-			var Light = new THREE.DirectionalLight(0xffffff,1);//(color, intensity, distance)
-			Light.position.set(1, 1, 1); // Position the light source at (x, y, z).
-			scene.add(Light); // Add the light source to the scene.
+			var directLight = new THREE.DirectionalLight(0xffffff,1);//(color, intensity, distance)
+			directLight.position.set(1, 1, 1); // Position the light source at (x, y, z).
+			scene.add(directLight); // Add the light source to the scene.
 			
 			camera.position.z = 6;//z index
 
@@ -33,4 +39,6 @@ var scene = new THREE.Scene();
 
 				renderer.render(scene, camera);
 			};
+
+
 			render();
