@@ -210,7 +210,21 @@
                     <form class="setting_form">
                         <label>Profile Photo</label><input type="text" id="file_text" readonly/><span id="file_bt">Find the file</span><input type="file" id="file_hide"  accept="image/*" /> <br />
                         <img id="img_preview"  />
-                        <label>Occupation / Job</label><input type="text" /><br />
+                        <label>Occupation / Job</label>
+                        <div class="location_option">
+                            <select class="basic_filter">
+                                <option value="Select Job">Select Job</option>
+                                <option value="Animator">Animator</option>
+                                <option value="Icon Designer">Icon Designer</option>
+                                <option value="Illustrator">Illustrator</option>
+                                <option value="Interior Designer">Interior Designer</option>
+                                <option value="Font Designer">Font Designer</option>
+                                <option value="UIUX Designer">UI/UX Designer</option>
+                                <option value="Web Designer">Web Designer</option>
+                                <option value="3D Designer">3D Designer</option>
+                                <option value="etc">etc</option>
+                            </select>
+                        </div><br />
                         <label>Location</label><div class="location_option">
                             <select class="basic_filter">
                                 <option value="Afganistan">Afghanistan</option>
@@ -487,7 +501,16 @@
                 <section id="contact_info_section" class="setting_card">
                     <p class="setting_title">Contact Info</p>
                     <form class="setting_form">
-                        <label>Mobile</label><input type="text" />
+                        <label>Mobile</label>
+                        <div id="tel_code" class="language_option">
+                            <select class="basic_filter">
+                                <option value="usa_canada">+1</option>
+                                <option value="japan">+81</option>
+                                <option value="korea">+82</option>
+                                <option value="china">+86</option>
+                            </select>
+                        </div>
+                        <input type="text" />
                         <div class="pubilc_option">
                             <i class="fa fa-lock"></i>
                             <select class="basic_filter">
@@ -496,7 +519,16 @@
                                 <option value="Private">Private</option>
                             </select>
                         </div>  <!-- end select box --><br />
-                        <label>FAX</label><input type="text" />
+                        <label>FAX</label>
+                        <div id="tel_code" class="language_option">
+                            <select class="basic_filter">
+                                <option value="usa_canada">+1</option>
+                                <option value="japan">+81</option>
+                                <option value="korea">+82</option>
+                                <option value="china">+86</option>
+                            </select>
+                        </div>
+                        <input type="text" />
                         <div class="pubilc_option">
                             <i class="fa fa-lock"></i>
                             <select class="basic_filter">
@@ -505,7 +537,7 @@
                                 <option value="Private">Private</option>
                             </select>
                         </div>  <!-- end select box --><br />
-                        <label>Website</label><input type="text" />
+                        <label>Website</label><input type="text" id="website_text" />
                         <div class="pubilc_option">
                             <i class="fa fa-lock"></i>
                             <select class="basic_filter">

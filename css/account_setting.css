@@ -152,7 +152,7 @@
         color:#828282;
     }
     .setting_form input{
-        width: 190px;
+        width: 130px;
         height: 29px;
         border-left: 2px solid #d5d5d5;
         border-top: 2px solid #d5d5d5;
@@ -407,4 +407,13 @@
     margin-bottom:15px;
     display:block;
     overflow:hidden;
+}
+#tel_code
+{
+    margin-left:-3px;
+    margin-right:5px;
+}
+#website_text
+{
+    width:223px;
 }

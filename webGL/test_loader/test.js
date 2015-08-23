@@ -1,22 +1,21 @@
 var container, stats;
 var camera, scene, renderer;
-var mouseX = 0, mouseY = 0;
 
 var windowHalfX = window.innerWidth / 2;
 var windowHalfY = window.innerHeight / 2;
 
 
-init();
+running();
 animate();
 
 
-function init() {
+function running() {
 
 	container = document.createElement( 'div' );
 	document.body.appendChild( container );
 
-	camera = new THREE.PerspectiveCamera( 30, window.innerWidth / window.innerHeight, 50, 1000 );
-	camera.position.z = 100;
+	camera = new THREE.PerspectiveCamera( 30, window.innerWidth / window.innerHeight, 5, 1000 );
+	camera.position.z = 70;
 
 	// scene
 
@@ -47,7 +46,7 @@ function init() {
 
 	THREE.Loader.Handlers.add( /\.dds$/i, new THREE.DDSLoader() );
 	var loader = new THREE.OBJMTLLoader();
-	loader.load( 'obj/captain.obj', 'obj/captain.mtl', function ( object ) {
+	loader.load( 'obj/ring.obj', '', function ( object ) {
 
 		object.position.y = 0;
 		scene.add( object );
@@ -92,7 +91,6 @@ function animate() {
 function render() {
 
 	camera.lookAt( scene.position );
-
 	renderer.render( scene, camera );
 
 }
