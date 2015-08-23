@@ -339,20 +339,21 @@ $(function()	// triple bt on event
 
 $(function () //contents page category
 {
-    var cate_point = 0
+    var toggle_count = 0;
     $('#cate_bt').click(function () {
-        if (cate_point == 0)
-        {
-            $('#open_cate_inner').stop().animate({ top: 0 });
-            $('#down_arrow').children().removeClass();
-            $('#down_arrow').children().addClass('fa fa-angle-up');
-            cate_point++;
-        } else if (cate_point == 1)
-        {
-            $('#open_cate_inner').stop().animate({ top: -85 });
-            $('#down_arrow').children().removeClass();
-            $('#down_arrow').children().addClass('fa fa-angle-down');
-            cate_point--;
+        switch(toggle_count){
+            case 0 :
+                $('#open_cate_inner').stop().animate({ top: 0 });
+                $('#down_arrow').children().removeClass();
+                $('#down_arrow').children().addClass('fa fa-angle-up');
+                toggle_count=1;
+            break;
+            case 1 :
+                $('#open_cate_inner').stop().animate({ top: -85 });
+                $('#down_arrow').children().removeClass();
+                $('#down_arrow').children().addClass('fa fa-angle-down');
+                toggle_count=0;
+            break;
         }
     });
 
@@ -364,7 +365,7 @@ $(function () //contents page category
                 $('#open_cate_inner').stop().animate({ top: -85 });
                 $('#down_arrow').children().removeClass();
                 $('#down_arrow').children().addClass('fa fa-angle-down');
-                cate_point--;
+                toggle_count=0;
             }
         });
     });
@@ -911,9 +912,7 @@ $(function(){
 
 /*----------------------------waiting for resisting end----------------------------*/
 
-/***********************************index_2 canvas start****************************************/
-/*
-=======
+
 /***********************************designer of the month canvas start****************************************/
 $(function () {
     var pb = document.getElementById('photo_body');
@@ -1390,3 +1389,22 @@ $(function(){
     });
 });
 /*------------------------forgot password end-----------------------*/
+/*------------------------content bookmark toggle-------------------*/
+$(function(){
+    var toggle_count = 0;
+    
+    $("#bookmark_bt,#bookmark_inner_bt").click(function(){
+        switch(toggle_count){
+            case 0 : 
+                $(this).css('color','#ffbe54');
+                toggle_count = 1;
+            break;
+            
+            case 1 :
+                $(this).css('color','#c1c1c1');
+                toggle_count = 0;
+            break;
+        }
+    });  
+});
+/*------------------------content bookmark toggle-------------------*/

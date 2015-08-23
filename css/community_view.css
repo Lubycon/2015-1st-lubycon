@@ -167,9 +167,7 @@
     margin: 0px auto;
     margin-top: 50px;
 }
-    #con_like_bt:active{
-        background:#ec6446;
-    }
+
     #con_like_bt i {
         color: #fff;
         font-size: 32px;

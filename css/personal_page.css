@@ -432,10 +432,11 @@
     margin-right: 5px;
 }
 
-.contents_disc .fa-heart {
-    color: #f15620;
-    font-size: 30px;
-    margin-top: 11px;
-    float: right;
+.contents_disc #bookmark_bt{
+    color:#c1c1c1;
+    font-size:30px;
+    margin-top:11px;
+    float:right;
+    cursor: pointer;
 }
 /* main section end */

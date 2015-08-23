@@ -43,7 +43,7 @@
         position:relative;
         cursor:pointer;
     }
-        .search_option .fa-filter{
+        .search_option i{
             color:#808080;
             position:absolute;
             top:17px;
@@ -226,11 +226,12 @@
         .contents_disc .name{
             color:#444444;
         }
-        .contents_disc .fa-heart{
-            color:#f15620;
+        .contents_disc #bookmark_bt{
+            color:#c1c1c1;
             font-size:30px;
             margin-top:11px;
             float:right;
+            cursor: pointer;
         }
 #contents_pager ul{
     width:758px;
