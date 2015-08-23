@@ -17,6 +17,7 @@
         text-align:center;
         color:#fff;
         font-size:22px;
+        font-weight: 200;
         border-top-right-radius: 3px;
         border-top-left-radius: 3px;
     }
@@ -251,3 +252,33 @@
             float:left;
             cursor:pointer;
         }
+
+.location_option{
+        display:inline-block;
+        position:relative;
+        margin-left:-3px;
+    }
+    .location_option .sod_select.custom.custom{
+        width:212px;
+        background:#fff;
+    }
+    .location_option  .sod_select.custom.focus{
+        box-shadow:none;
+    }
+    .location_option  .sod_select.custom.custom{
+        padding:12px 10px;
+    }
+    .location_option .sod_select{
+        height:36px;
+    }
+    .location_option .sod_select.custom .sod_label{
+        padding: 0px;
+        text-overflow: ellipsis;
+        width: 140px;
+        display: inline-block;
+        margin-left: -5px;
+    }
+    .location_option .sod_select.custom .sod_list_wrapper{
+        width:212px;
+        box-shadow:none;
+    }

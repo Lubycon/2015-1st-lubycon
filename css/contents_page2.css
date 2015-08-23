@@ -56,11 +56,11 @@
     border-top-right-radius: 5px;
     text-align: center;
 }
-.contents_view #bookmark i{
+.contents_view #bookmark #bookmark_inner_bt{
     font-size: 30px;
     vertical-align:middle;
     line-height: 65px;
-    color:#ff8f10;
+    color:#444444;
     cursor:pointer;
 }
 
@@ -303,14 +303,13 @@
     height:70px;
     border:none;
     text-align:center;
-    background:#f54c26;
+    background:#ec6446;
     border-radius:50%;
     display:block;
     margin:0px auto;
     margin-top:25px;
 
 }
-
     #con_like_bt i {
         color:#fff;
         font-size:32px;
