@@ -47,7 +47,7 @@ function running() {
 
 	var onError = function ( xhr ) {
 		console.log("Error!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-	};//if this has error...
+	};//xhr error
 
 
 	THREE.Loader.Handlers.add( /\.dds$/i, new THREE.DDSLoader() );
