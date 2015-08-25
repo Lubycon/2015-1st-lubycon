@@ -62,18 +62,14 @@ function running() {
 
 
 	renderer = new THREE.WebGLRenderer();
-	renderer.setPixelRatio( window.devicePixelRatio );//pixel ratio setting
-	renderer.setSize( window.innerWidth, window.innerHeight );
-	gl.appendChild( renderer.domElement );
-	if(renderer==THREE.WebGLRenderer)
-	{
-		alert("Your browser does not support OpenGL. Please use Chrome or Firefox");
-	}
+	renderer.setPixelRatio(window.devicePixelRatio);//pixel ratio setting
+	renderer.setSize(window.innerWidth, window.innerHeight);
+	renderer.setClearColor(0x222222, 1);//background color
+	gl.appendChild(renderer.domElement);
 
 	controls = new THREE.OrbitControls(camera);//mouse control on
 	
 	window.addEventListener( 'resize', onWindowResize, false );
-
 	animate();
 }
 
@@ -84,13 +80,13 @@ function onWindowResize() {
 	camera.aspect = window.innerWidth / window.innerHeight;
 	camera.updateProjectionMatrix();
 
-	renderer.setSize( window.innerWidth, window.innerHeight );
+	renderer.setSize(window.innerWidth, window.innerHeight);
 }
 
 
 //
 
-function animate() {
+function animate(){
 	requestAnimationFrame( animate );
 	//if you want add animation to this object, you can write here
 	render();
