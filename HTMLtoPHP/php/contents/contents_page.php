@@ -69,7 +69,7 @@
     <section id="contents_box">
         <ul>
             <?php
-            for($i=0;$i<10;$i++)
+            for($i=0;$i<30;$i++)
             {
                 echo
                 '<li>
@@ -84,7 +84,7 @@
                         </div>
                         <img src="ch/img/designer_img.png" />
                         <span class="by">by</span><span class="name">Daniel Zepp</span>
-                        <i class="fa fa-heart"></i>
+                        <i id="bookmark_bt" class="fa fa-star"></i>
                     </div>  <!-- end contents disc -->
                     <div id="contents_overlay">
                         <ul>
@@ -103,7 +103,7 @@
                         </ul>
                     </div>
                 </div>
-            </li>';
+                </li>';
             }
             ?>
         </ul>

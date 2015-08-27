@@ -270,12 +270,12 @@ $(function () { //search box click value reset start
 
 //main figure button animation start
 $(function(){
-    $('#main_figure button').hover(
+    $('#figure_signin').hover(
         function (){
-            $(this).animate({opacity:0.5, width:160},200);
+            $(this).stop().animate({opacity:0.5, width:160},200);
         },
         function (){
-            $(this).animate({opacity:1, width:150},200);
+            $(this).stop().animate({opacity:1, width:150},200);
         }
     );
 });
