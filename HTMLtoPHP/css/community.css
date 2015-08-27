@@ -55,9 +55,10 @@
     position:relative;
 }
     #nav_guide .contents_bt {
-        color: #FFF;
+        color: #fff;
         width: 165px;
-        font-size: 20px;
+        font-size: 18px;
+        font-weight: 200;
         height: 50px;
         line-height: 50px;
         background: #222;
@@ -176,7 +177,8 @@
         color:#fff;
         font-size:17px;
         vertical-align: middle;
-        margin-top: -9px;
+        margin-top: -7px;
+        -webkit-text-stroke:1px #48cfad;
     }
 
     #write_bt{
@@ -259,7 +261,7 @@
     .table_like {
         width: 70px;
         text-align: center;
-        color: #2f6fff;
+        color: #488ccb;
     }
 
     .fa-heart {
@@ -270,7 +272,7 @@
     .table_view {
         width: 70px;
         text-align: center;
-        color: #2f6fff;
+        color: #488ccb;
     }
 
     .fa-eye {

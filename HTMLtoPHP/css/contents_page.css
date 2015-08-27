@@ -22,8 +22,10 @@
     margin:0px auto;
 }
     .selected_nav{
-        color:#48cfad !important;
         border-bottom:3px solid #48cfad;
+    }
+    .selected_nav a{
+        color:#48cfad !important;
     }
 
     #lnb_nav > ul > li{
@@ -31,9 +33,13 @@
         padding:0px 8px;
         color:#787878;
         font-size:22px;
-        padding-top:18px;
+        padding-top:19px;
         cursor:pointer;
     }
+        #lnb_nav > ul > li > a
+        {
+            color:#999;
+        }
 
     .search_option{
         float:right;

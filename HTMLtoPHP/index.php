@@ -120,7 +120,7 @@
                     Community
                     <ul class="sub">
                         <li>
-                            <a href="./index.php?1=community&2=community_page"><i class="fa fa-comments-o fa-1x"></i><p>Board</p></a>
+                            <a href="./index.php?1=community&2=community_page"><i class="fa fa-comments-o fa-1x"></i><p>Forum</p></a>
                         </li>
                         <li>
                             <a href="./index.php?1=community&2=tutorial"><i class="fa fa-book fa-1x"></i><p>Tutorial</p></a>
@@ -129,7 +129,7 @@
                             <a href="./index.php?1=community&2=qna"><i class="fa fa-question fa-1x"></i><p>Q&amp;A</p></a>
                         </li>
                         <li>
-                            <a href="./index.php?1=designers_page&2=designers_page"><i class="fa fa-star fa-1x"></i><p class="long_text">Designers Page</p></a>
+                            <a href="./index.php?1=designers_page&2=designers_page"><i class="fa fa-star fa-1x"></i><p class="long_text">Designers</p></a>
                         </li>
                     </ul>	<!--end Community menu-->
                 </li>

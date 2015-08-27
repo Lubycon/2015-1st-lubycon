@@ -457,13 +457,22 @@ h1 /* main logo */ {
         height:30px;
         line-height:30px;
         background:#464646;
-        color:#fff;
-        text-align:center;
-        font-weight: 200;
+        text-align:center;    
     }
         #after_signin ul li:hover {
             background:#48cfad;
         }
+            #after_signin ul li a
+            {
+                color:#fff;
+                font-weight:200;
+                display: block;
+            }
+            #sign_out
+            {
+                color:#fff;
+                font-weight:200;
+            }
 
     .partition {
         font-size: 31px;
@@ -732,6 +741,7 @@ h1 /* main logo */ {
     {
         color:#fff;
         font-size:17px;
+        -webkit-text-stroke:1px #666666;
     }
     .out {
         background: #999999; /* Old browsers */
