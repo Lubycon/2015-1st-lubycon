@@ -80,12 +80,12 @@
             
             <div class="term_check_box">
                 <p class="term_title">Terms of service</p>
-                <p><img src="ch/img/pdf_icon.png" width="50" height="60" /></p>
+                <p><img src="ch/img/pdf_icon.png" width="50" height="60" alt="terms of service" /></p>
                 <p>I agree to terms of service</p><input type="checkbox" class="check_box" />
             </div>
             <div class="term_check_box">
                 <p class="term_title">Terms of service</p>
-                <p><img src="ch/img/pdf_icon.png" width="50" height="60" /></p>
+                <p><img src="ch/img/pdf_icon.png" width="50" height="60" alt="terms of service" /></p>
                 <p>I agree to terms of service</p><input type="checkbox" class="check_box"  />
             </div>
             <p id="account_email_sendcheck"> would like to receive newsletter by e-mail<input type="checkbox" class="email_resive" /></p>
@@ -98,7 +98,7 @@
     <!---------------- common parts start ---------------->
     <!---------------- header start ---------------->
     <header id="main_header">
-        <h1><a href="./index.php"><img src="CH/img/logo/lubycon_logo.svg" width="176" height="40" alt="main_logo" /></a></h1>
+        <h1><a href="./index.php"><img src="CH/img/logo/lubycon_logo.svg" width="176" height="40" alt="Lubycon logo" /></a></h1>
         <nav id="main_gnb">
             <ul id="gnb">
                 <li class="bigsub">
@@ -162,7 +162,7 @@
                         <button id="login_facebook"><i class="fa fa-facebook"></i>Facebook</button>
                         <button id="login_google"><i class="fa fa-google-plus"></i>Google</button>
                     </div>     <!-- end login_submit div -->
-                    <a href="./html/account/forgot_password.html" target="_self"><p id="forgot_pass">Forgot your password?</p></a>  
+                    <a href="./php/account/forgot_password.php" target="_self"><p id="forgot_pass">Forgot your password?</p></a>  
                     <p id="create_acc">Create An Account</p>          
                 </div>  <!-- end login_box div -->
         </div>
@@ -172,7 +172,7 @@
         <!-- after sign in -->
         <div id="after_signin">
             <span class="partition">|</span>
-            <figure><img src="ch/img/designer_img.png" /></figure>
+            <figure><img src="ch/img/designer_img.png" alt="profile img" /></figure>
             <span id="user_id">Daniel_zeppppp</span>
             <i class="fa fa-angle-down"></i>
             <ul>
@@ -215,7 +215,7 @@
             <select class="basic">
                 <option value="All">All</option>
                 <option value="Contents">Contents</option>
-                <option value="Desinger">Desinger</option>
+                <option value="Designer">Designer</option>
                 <option value="Community">Community</option>
             </select>
         </div>

@@ -8,7 +8,7 @@ $(function () //window fadein effect
 {
     $(window).load(function ()
     {
-        $('#bodyer').stop().fadeIn(500);
+        $('#bodyer').fadeIn(500); //don't add stop function
     });
 });
 
@@ -18,6 +18,7 @@ $(function () //window fadein effect
 
 /////////////////////////////////////////////////////////
 //      gloval navigation button hover event start
+//      get parameter change selected nav color
 /////////////////////////////////////////////////////////
 
 $(function () //gnb hober event
@@ -29,6 +30,32 @@ $(function () //gnb hober event
     });
 });
 
+function getUrlParameter(sParam) //get parameter
+
+{
+    var sPageURL = window.location.search.substring(1);
+    var sURLVariables = sPageURL.split('&');
+    for (var i = 0; i < sURLVariables.length; i++) 
+    {
+        var sParameterName = sURLVariables[i].split('=');
+        if (sParameterName[0] == sParam) 
+        {
+            return sParameterName[1];
+        }
+    }
+}
+
+var first_param = getUrlParameter('1');
+var seceond_param = getUrlParameter('2');
+var third_param = getUrlParameter('3');
+
+$(function () //selcted change
+{
+    $('#lnb_nav ul').children('.' + third_param).addClass('selected_nav');
+
+})
+
+       
 /////////////////////////////////////////////////////////
 //      gloval navigation button hover event end
 /////////////////////////////////////////////////////////
@@ -41,7 +68,7 @@ $(function () //add hover animation for every buttons
 {
     $('button').hover(function()
     {
-         $(this).stop().animate({ opacity: 0.8 }, 200);
+        $(this).stop().animate({ opacity: 0.8 }, 200);
     }, function ()
     {
          $(this).stop().animate({ opacity: 1 }, 200);

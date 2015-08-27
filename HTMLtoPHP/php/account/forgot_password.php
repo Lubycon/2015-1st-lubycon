@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -30,7 +30,7 @@
             <label>E-mail</label><input id="email_id" type="text" />
         </section>
         <input type="submit" id="find_submit" value="Find password" disabled/>
-        <p id="return_main"><a href="http://localhost/html-php/index.php">Return to main page</a></p>
+        <p id="return_main"><a href="../../index.php">Return to main page</a></p>
     </wrap>
 </body>
 </html>
