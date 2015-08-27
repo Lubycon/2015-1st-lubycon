@@ -1412,3 +1412,53 @@ $(function () {
 
 });
 /*----------------------------editer end----------------------------*/
+/*-------------------------file info start--------------------------*/
+$(function(){
+    var toggle_count = 0;
+    
+    $("#info_header").click(function(){
+        switch(toggle_count){
+            case 0 : 
+                $("#files").stop().slideDown(300);
+                $("#info_toggle").attr('class','fa fa-angle-up');
+                toggle_count = 1;
+            break;
+            
+            case 1 :
+                $("#files").stop().slideUp(300);
+                $("#info_toggle").attr('class','fa fa-angle-down');
+                toggle_count = 0;
+            break;
+        }
+    });   
+});
+/*-------------------------file info end----------------------------*/
+/*------------------------forgot password start---------------------*/
+$(function(){
+    $('#email_id').focus(function () {
+       $('#email_input label').css('color','#48cfad'); 
+    });
+   $('#email_id').blur(function () {
+       $('#email_input label').css('color','#838282');
+    });
+});
+/*------------------------forgot password end-----------------------*/
+/*------------------------content bookmark toggle-------------------*/
+$(function(){
+    var toggle_count = 0;
+    
+    $("#bookmark_bt,#bookmark_inner_bt").click(function(){
+        switch(toggle_count){
+            case 0 : 
+                $(this).css('color','#ffbe54');
+                toggle_count = 1;
+            break;
+            
+            case 1 :
+                $(this).css('color','#c1c1c1');
+                toggle_count = 0;
+            break;
+        }
+    });  
+});
+/*------------------------content bookmark toggle-------------------*/

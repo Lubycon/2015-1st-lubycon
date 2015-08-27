@@ -50,10 +50,10 @@
     position:relative;
 }
     #nav_guide .contents_bt {
-        color: #FFF;
+        color: #fff;
         width: 165px;
-        font-size: 20px;
-        font-weight: 300;
+        font-size: 18px;
+        font-weight: 200;
         height: 50px;
         line-height: 50px;
         background: #222;
@@ -156,7 +156,7 @@
             color:#555555;
         }
             .rank_art .fa-user-plus {
-                color:#000;
+                color:#444;
                 font-size:22px;
             }
 /* main section end */

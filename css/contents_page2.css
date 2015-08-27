@@ -87,8 +87,9 @@
 .contents_view #comment_box #comment_count{
      color:#8d8d8d;
      text-align:right;
-     font-size: 15px;
+     font-size: 14px;
      margin-top:10px;
+     margin-right: 4px;
  }
 .contents_view #comment_box #comment_text
 {
@@ -364,7 +365,7 @@
     }
     #contents_score .contents_view_score{
         float:right;
-        color:#0530d2;
+        color:#488ccb;
         margin-right:15px;
     }
 
