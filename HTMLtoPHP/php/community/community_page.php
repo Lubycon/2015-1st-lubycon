@@ -9,9 +9,15 @@
     <section id="navsel">
         <nav id="lnb_nav">
             <ul>
-                <li class="selected_nav">Recent</li>
-                <li>Most Like</li>
-                <li>Most Comment</li>
+                <li class="recent">
+                    <a href="./index.php?1=community&2=community_page&3=recent">Recent</a>
+                </li>
+                <li class="most_like">
+                    <a href="./index.php?1=community&2=community_page&3=most_like">Most Like</a>
+                </li>
+                <li class="most_comment">
+                    <a href="./index.php?1=community&2=community_page&3=most_comment">Most Comment</a>
+                </li>
             </ul>
         </nav>
         <!-- end lnb nav -->

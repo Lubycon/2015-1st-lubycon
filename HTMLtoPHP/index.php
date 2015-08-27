@@ -121,7 +121,7 @@
                     Community
                     <ul class="sub">
                         <li>
-                            <a href="./index.php?1=community&2=community_page"><i class="fa fa-comments-o fa-1x"></i><p>Forum</p></a>
+                            <a href="./index.php?1=community&2=community_page&3=recent"><i class="fa fa-comments-o fa-1x"></i><p>Forum</p></a>
                         </li>
                         <li>
                             <a href="./index.php?1=community&2=tutorial"><i class="fa fa-book fa-1x"></i><p>Tutorial</p></a>
@@ -130,7 +130,7 @@
                             <a href="./index.php?1=community&2=qna"><i class="fa fa-question fa-1x"></i><p>Q&amp;A</p></a>
                         </li>
                         <li>
-                            <a href="./index.php?1=designers_page&2=designers_page"><i class="fa fa-star fa-1x"></i><p class="long_text">Designers</p></a>
+                            <a href="./index.php?1=designers_page&2=designers_page&3=all"><i class="fa fa-star fa-1x"></i><p class="long_text">Designers</p></a>
                         </li>
                     </ul>	<!--end Community menu-->
                 </li>
@@ -177,9 +177,9 @@
             <span id="user_id">Daniel_zeppppp</span>
             <i class="fa fa-angle-down"></i>
             <ul>
-                <li><a href="./index.php?1=personal_page&2=personal_page">Profile</a></li>
-                <li><a href="./index.php?1=personal_page&2=message">Message</a></li>
-                <li><a href="./index.php?1=personal_page&2=account_setting">Account Setting</a></li>
+                <li><a href="./index.php?1=personal_page&2=personal_page&3=main">Profile</a></li>
+                <li><a href="./index.php?1=personal_page&2=message&3=main">Message</a></li>
+                <li><a href="./index.php?1=personal_page&2=account_setting&3=main">Account Setting</a></li>
                 <li id="sign_out">Sign Out</li>
             </ul>
         </div>
