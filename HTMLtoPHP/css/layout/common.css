@@ -874,13 +874,13 @@ h1 /* main logo */ {
             background: #48cfad;
         }
 
-.continets_box .global_icon {
+.contents_bt .global_icon {
     height: 50px;
     line-height: 50px;
     margin-right: 10px;
 }
 
-continets_box .global_icon img {
+.contents_bt .global_icon img {
     vertical-align: middle;
 }
 

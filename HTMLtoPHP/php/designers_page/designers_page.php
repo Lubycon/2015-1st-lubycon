@@ -9,10 +9,18 @@
     <section id="navsel">
         <nav id="lnb_nav">
             <ul>
-                <li class="selected_nav">All</li>
-                <li>Like</li>
-                <li>Download</li>
-                <li>Follow</li>
+                <li class="all">
+                    <a href="./index.php?1=designers_page&2=designers_page&3=all">All</a>
+                </li>
+                <li class="like">
+                    <a href="./index.php?1=designers_page&2=designers_page&3=like">Like</a>
+                </li>
+                <li class="download">
+                    <a href="./index.php?1=designers_page&2=designers_page&3=download">Download</a>
+                </li>
+                <li class="follow">
+                    <a href="./index.php?1=designers_page&2=designers_page&3=follow">Follow</a>
+                </li>
             </ul>
         </nav>
         <!-- end lnb nav -->
