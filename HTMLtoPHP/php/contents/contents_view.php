@@ -1,5 +1,5 @@
-﻿<link href="css/contents_view.css" rel="stylesheet" type="text/css" />  <!-- contents page css -->
-
+<link href="css/contents_view.css" rel="stylesheet" type="text/css" />
+<!-- contents page css -->
 <div id="pop_up">
     <section class="contents_view">
         <header>
@@ -20,29 +20,44 @@
                     <div class="slides" u="slides">
                         <div>
                             <ul>
-                                <li><img src="ch/img/slider/slider1/1.png" alt="썸네일02"></li>
-                                <li><img src="ch/img/slider/slider1/2.png" alt="썸네일02"></li>
-                                <li><img src="ch/img/slider/slider1/3.png" alt="썸네일02"></li>
-                                <li><img src="ch/img/slider/slider1/4.png" alt="썸네일04"></li>
-                                <li><img src="ch/img/slider/slider1/5.png" alt="썸네일05"></li>
+                                <li>
+                                    <img src="ch/img/slider/slider1/1.png" alt="썸네일02"></li>
+                                <li>
+                                    <img src="ch/img/slider/slider1/2.png" alt="썸네일02"></li>
+                                <li>
+                                    <img src="ch/img/slider/slider1/3.png" alt="썸네일02"></li>
+                                <li>
+                                    <img src="ch/img/slider/slider1/4.png" alt="썸네일04"></li>
+                                <li>
+                                    <img src="ch/img/slider/slider1/5.png" alt="썸네일05"></li>
                             </ul>
                         </div>
                         <div>
                             <ul>
-                                <li><img src="ch/img/slider/slider1/1.png" alt="썸네일02"></li>
-                                <li><img src="ch/img/slider/slider1/2.png" alt="썸네일02"></li>
-                                <li><img src="ch/img/slider/slider1/3.png" alt="썸네일02"></li>
-                                <li><img src="ch/img/slider/slider1/4.png" alt="썸네일04"></li>
-                                <li><img src="ch/img/slider/slider1/5.png" alt="썸네일05"></li>
+                                <li>
+                                    <img src="ch/img/slider/slider1/1.png" alt="썸네일02"></li>
+                                <li>
+                                    <img src="ch/img/slider/slider1/2.png" alt="썸네일02"></li>
+                                <li>
+                                    <img src="ch/img/slider/slider1/3.png" alt="썸네일02"></li>
+                                <li>
+                                    <img src="ch/img/slider/slider1/4.png" alt="썸네일04"></li>
+                                <li>
+                                    <img src="ch/img/slider/slider1/5.png" alt="썸네일05"></li>
                             </ul>
                         </div>
                         <div>
                             <ul>
-                                <li><img src="ch/img/slider/slider1/1.png" alt="썸네일02"></li>
-                                <li><img src="ch/img/slider/slider1/2.png" alt="썸네일02"></li>
-                                <li><img src="ch/img/slider/slider1/3.png" alt="썸네일02"></li>
-                                <li><img src="ch/img/slider/slider1/4.png" alt="썸네일04"></li>
-                                <li><img src="ch/img/slider/slider1/5.png" alt="썸네일05"></li>
+                                <li>
+                                    <img src="ch/img/slider/slider1/1.png" alt="썸네일02"></li>
+                                <li>
+                                    <img src="ch/img/slider/slider1/2.png" alt="썸네일02"></li>
+                                <li>
+                                    <img src="ch/img/slider/slider1/3.png" alt="썸네일02"></li>
+                                <li>
+                                    <img src="ch/img/slider/slider1/4.png" alt="썸네일04"></li>
+                                <li>
+                                    <img src="ch/img/slider/slider1/5.png" alt="썸네일05"></li>
                             </ul>
                         </div>
                     </div>
@@ -52,7 +67,8 @@
                     <span u="arrowright" class="slider_arrow_right">
                         <i class="fa fa-angle-right"></i>
                     </span>
-                </div>  <!-- end contents slider-->
+                </div>
+                <!-- end contents slider-->
                 <article id="comment_box">
                     <p id="comment_count">12 Comments</p>
                     <textarea id="comment_text">You Must Sign in First</textarea>
@@ -141,7 +157,9 @@
             <div id="file_info">
                 <header id="info_header">File info</header>
                 <section id="files">
-                    <article id="file_name"><i class="fa fa-circle-o"></i><p><i class="fa fa-folder-open"></i>Lorem ipsum.zip</p></article>
+                    <article id="file_name"><i class="fa fa-circle-o"></i>
+                        <p><i class="fa fa-folder-open"></i>Lorem ipsum.zip</p>
+                    </article>
                     <ul>
                         <li><i class="fa fa-file"></i>ipsum.psd</li>
                         <li><i class="fa fa-file"></i>ipsum.ai</li>
@@ -149,7 +167,9 @@
                         <li><i class="fa fa-file"></i>ipsum.css</li>
                         <li><i class="fa fa-circle"></i><i class="fa fa-file"></i>ipsum.js</li>
                 </section>
-                <footer id="storage"><p>1.2 MB</p></footer>
+                <footer id="storage">
+                    <p>1.2 MB</p>
+                </footer>
             </div>
 
             <ul id="contents_tag">

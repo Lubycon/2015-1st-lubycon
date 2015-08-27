@@ -253,9 +253,9 @@ $(function () { //add contents button start
     });
 
     $('.editer_popup > ul > li').hover(function () {
-        $(this).children('i').css({ "color": "#fff", "background": "#48cfad" })
+        $(this).children('a').children('i').css({ "color": "#fff", "background": "#48cfad" })
     }, function () {
-        $(this).children('i').css({ "color": "#838383", "background": "#fff" })
+        $(this).children('a').children('i').css({ "color": "#383838", "background": "#fff" })
     });
 
     $('.editer_popup_cancel , .dark_overlay , #cancel_bt').click(function () {

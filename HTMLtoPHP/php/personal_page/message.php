@@ -1,13 +1,15 @@
-    <figure id="main_figure">
-        <h2>MESSAGE</h2>
-    </figure>	<!-- end main_figure -->
-    <link href="css/message.css" rel="stylesheet" type="text/css" />  <!-- personal page css -->
-    <section id="contents">
-        <?php
-        include("php/layout/personal_layout.php");
-        ?>
+<figure id="main_figure">
+    <h2>MESSAGE</h2>
+</figure>
+<!-- end main_figure -->
+<link href="css/message.css" rel="stylesheet" type="text/css" />
+<!-- personal page css -->
+<section id="contents">
+    <?php
+    include("php/layout/personal_layout.php");
+    ?>
 
-        <!--<section id="message_box">
+    <!--<section id="message_box">
             <aside id="message_history">
                 <p class="message_sub_menu">History</p>
                 <ul>
@@ -67,14 +69,14 @@
                 </ul>
             </aside>
         </section>-->
-        <div class="coming_soon">
-            <figure class="coming_soon_img">
-                <img src="CH/img/coming_soon/coming_soon_logo.png" />
-            </figure>
-            <div class="coming_soon_bt">
-                <a href="javascript:history.back()">
-                    <img src="CH/img/coming_soon/coming_soon_bt.png" />
-                </a>
-            </div>
+    <div class="coming_soon">
+        <figure class="coming_soon_img">
+            <img src="CH/img/coming_soon/coming_soon_logo.png" />
+        </figure>
+        <div class="coming_soon_bt">
+            <a href="javascript:history.back()">
+                <img src="CH/img/coming_soon/coming_soon_bt.png" />
+            </a>
         </div>
-    </section>
+    </div>
+</section>
