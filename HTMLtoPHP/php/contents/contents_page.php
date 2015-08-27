@@ -6,16 +6,16 @@
     <section id="navsel">
         <nav id="lnb_nav">
             <ul>
-                <li class="selected_nav">
+                <li class="all" >
                     <a href="./index.php?1=contents&2=contents_page&3=all">All</a>
                 </li>
-                <li>
+                <li class="font">
                     <a href="./index.php?1=contents&2=contents_page&3=font">Font</a>
                 </li>
-                <li>
+                <li class="vector">
                     <a href="./index.php?1=contents&2=contents_page&3=vector">Vector</a>
                 </li>
-                <li>
+                <li class="3d"> 
                     <a href="./index.php?1=contents&2=contents_page&3=3d">3D</a>
                 </li>
             </ul>
