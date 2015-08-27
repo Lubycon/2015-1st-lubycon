@@ -16,7 +16,6 @@
                     type:'POST',
                     data:{'msg':$('#msg').val()},
                     success:function(result){
-                        if(result['result']==true){
                           $('#result').html(result['msg']);
                         }
                     }
