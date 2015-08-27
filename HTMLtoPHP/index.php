@@ -177,9 +177,9 @@
             <span id="user_id">Daniel_zeppppp</span>
             <i class="fa fa-angle-down"></i>
             <ul>
-                <li><a href="./index.php?1=personal_page&2=personal_page">Profile</a></li>
-                <li><a href="./index.php?1=personal_page&2=message">Message</a></li>
-                <li><a href="./index.php?1=personal_page&2=account_setting">Account Setting</a></li>
+                <li><a href="./index.php?1=personal_page&2=personal_page&3=main">Profile</a></li>
+                <li><a href="./index.php?1=personal_page&2=message&3=main">Message</a></li>
+                <li><a href="./index.php?1=personal_page&2=account_setting&3=main">Account Setting</a></li>
                 <li id="sign_out">Sign Out</li>
             </ul>
         </div>
