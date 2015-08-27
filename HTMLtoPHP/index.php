@@ -41,7 +41,7 @@
     <!-- popup start -->
     <div class="dark_overlay"></div>
 
-    <div class="editer_popup bounceIn animated">
+    <div class="editer_popup fadeInDown animated">
         <p>Which content will you upload?</p>
         <ul>
             <li>

@@ -139,13 +139,23 @@ forum_search_box .select_box {
 
 .table_subject {
     padding-left: 20px;
+    cursor:pointer;
 }
+    .table_subject:hover
+    {
+        text-decoration: underline;
+    }
 
 .table_writer {
     width: 130px;
     text-align: center;
     color: #545454;
+    cursor:pointer;
 }
+    .table_writer:hover
+        {
+            text-decoration: underline;
+        }
 
 .table_like {
     width: 70px;

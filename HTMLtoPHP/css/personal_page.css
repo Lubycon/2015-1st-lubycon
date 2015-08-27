@@ -1,113 +1,256 @@
 ﻿@charset "utf-8";
 
-#personal_box{
+
+
+#information_body
+{
     width:100%;
-    max-width:1600px;
-    height:240px;
+    height:290px;
+    background:#333333;
+
     margin:0px auto;
-    margin-top:15px;
-    background:#f0f0f0;
-    position:relative;
-    border-radius: 3px;
-    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.3);
+    padding-top:30px;
 }
-    #personal_box figure{
-    width:200px;
-    height:200px;
-    margin-left:20px;
-    margin-top:20px;
-    margin-right:50px;
-    vertical-align:middle;
-    background:#e6e6e6;
-    text-align:center;
-    display:inline-block;
-    float:left;
+    #information_inbody
+    {
+        width:1200px;
+        margin:0px auto;
     }
-        #personal_box figure img{
-        height:200px;
-        }
-    #personal_box h3{
-        padding-top:20px;
-        font-size:30px;
+
+
+
+#personal_info
+{
+    width:540px;
+    height:220px;
+    
+    position:relative;
+    overflow: hidden;
+
+    background:#555555;
+    border: 1px solid #222222;
+    border-radius: 3px;
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,1);
+    
+    padding: 10px;
+    float: left;
+    margin:10px;
+}
+    #personal_photo
+    {
+        width:150px;
+        height:220px;
+        margin-right:40px;
+        vertical-align:middle;
+        text-align:center;
         display:inline-block;
+        float:left;
     }
-    #personal_box h4{
-        font-size: 19px;
-        color: #727272;
-        display: inline-block;
-        margin-left: 10px;
-    }
-    #personal_box #personal_legion{
-        font-size: 17px;
-        color: #727272;
-        margin-top: 5px;
-    }
-        #personal_box #personal_legion i{
-        font-size: 25px;
-        margin-right: 10px;
-        vertical-align: middle;
-        margin-top: -3px;
-    }
-        #personal_box #personal_intro{
+        #personal_photo img
+        {
+            height:150px;
+            border:6px solid #48cfad;
+            border-radius: 3px;
+        }
+
+        #basic_info_box
+        {
+            display:inline-block;
             margin-top:20px;
-            font-size:20px;
-            color:#555555;
+            margin-bottom:20px;
         }
-    #personal_score{
-        width:280px;
-        height:210px;
-        background:#4b4b4b;
-        position:absolute;
-        padding:15px 10px;;
-        top:0px;
-        right:0px;
-        border-top-right-radius: 3px;
-        border-bottom-right-radius: 3px;
+            #personal_name
+            {
+                font-size:30px;
+                display:inline-block;
+                color:#48cfad;
+            }
+            #personal_job
+            {
+                font-size: 19px;
+                color: #fff;
+                margin-left: 10px;
+            }
+            #personal_legion
+            {
+
+                font-size: 17px;
+                color: #fff;
+                margin-top: 5px;
+            }
+                #personal_legion i
+                {
+                    font-size: 25px;
+                    margin-right: 18px;
+                    vertical-align: middle;
+                    margin-top: -3px;
+                    color:#fff;
+                }
+            #personal_language
+            {
+                font-size:17px;
+                color: #fff;
+                margin-top: 5px;
+            }
+                #personal_language i
+                {
+                    font-size: 20px;
+                    margin-right: 21px;
+                    vertical-align: middle;
+                    margin-top: -3px;
+                    margin-left:3px;
+                    color:#fff;
+                }
+        #descript_box
+        {
+
+        }
+            #personal_des
+            {
+                font-size:16px;
+                color:#fff;
+            }
+   
+#personal_contact
+{
+    width:250px;
+    height:200px;
+    background:#555555;
+    position:relative;
+    border: 1px solid #222222;
+    border-radius: 3px;
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,1);
+    padding: 20px 15px;
+    float: left;
+    margin:10px;
+}
+
+#personal_contact ul
+{
+    vertical-align: middle;
+    margin-top:20px;
+    text-align: right;
+}
+    .personal_num
+    {
+        height:40px;
+        line-height: 40px;      
+        margin-top: 10px;   
     }
-        #personal_score ul li{
-            height:40px;
-            line-height:40px;
+
+    .in_num
+    {
+        height:20px;
+        vertical-align: top;
+        font-weight: 200;
+        color: #ffffff;
+        font-size:20px; 
+    }
+        .in_num a
+        {
+            color:#ffffff;
+            font-weight: 200;
+            font-size:20px;
         }
-        #personal_score ul li i{
+        .in_num a:hover
+        {
+            color:#48cfad;
+            text-decoration: underline;
+        }
+
+        .fa-mobile
+        {
+            line-height: 40px;
+            font-size:40px;
+            margin-left:3px;
+            margin-right:33px;
+            color:#fff;
+            float: left;
+        }
+        
+        .fa-fax
+        {
+            line-height: 40px;
+            font-size:22px;
+            margin-right:30px;
+            color:#fff;
+            float: left;
+        }
+        .fa-desktop
+            {
+                line-height: 40px;
+                font-size:22px;
+                margin-right:30px;
+                color:#fff;
+                float: left;
+            }
+
+
+
+#personal_score{
+    width:270px;
+    height:210px;
+    background:#555555;
+    position:relative;
+    padding:15px 10px;
+    border:1px solid #222222;
+    border-radius: 3px;
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,1);
+    float: left;
+    margin:10px;
+}
+    #personal_score ul li{
+        height:40px;
+        line-height:40px;
+    }
+    #personal_score ul li i{
+        float:left;
+        line-height:40px;
+        color:#fff;
+        font-size:25px;
+        margin-left:10px;
+        
+    }
+    #personal_score ul li p {
+        text-align:right;
+        color:#fff;
+        font-size:23px;
+        font-weight: 200;
+    }
+    #personal_score button{
+        width:130px;
+        height:35px;
+        border:none;
+        border-radius:2px;
+        float:left;
+        margin-left:5px;
+        margin-top:10px;
+    }
+        #personal_score button i {
             float:left;
-            line-height:40px;
+            line-height:35px;
             color:#fff;
-            font-size:25px;
-            margin-left:10px;
-            
+            margin-left:5px;
+            margin-top: -1px;
         }
-        #personal_score ul li p {
-            text-align:right;
+        #personal_score button p {
+            text-align:center;
+            line-height:35px;
             color:#fff;
-            font-size:23px;
+            margin-top: -1px;
             font-weight: 200;
         }
-        #personal_score button{
-            width:133px;
-            height:35px;
-            border:none;
-            border-radius:2px;
-            float:left;
-            margin-left:5px;
-            margin-top:10px;
-        }
-            #personal_score button i {
-                float:left;
-                line-height:35px;
-                color:#fff;
-                margin-left:5px;
-            }
-            #personal_score button p {
-                text-align:center;
-                line-height:35px;
-                color:#fff;
-            }
-        #personal_score #personal_messeage {
-            background:#9a9a9a;
-        }
-        #personal_score #personal_follow {
-            background:#48cfad;
-        }
+    #personal_score #personal_messeage {
+        background:#9a9a9a;
+    }
+    #personal_score #personal_follow {
+        background:#48cfad;
+    }
+
+
+
+
+
 #contents_box{
     width:100%;
     height:auto;
@@ -142,7 +285,8 @@
     border-radius: 3px;
     float: left;
     margin-right: 26px;
-    box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.3);
+    border: 1px solid #d1d1d1;
+    box-shadow: 0px 3px 2px 0px rgba(0,0,0,0.3);
 }
 
 .last_contents {
@@ -196,10 +340,66 @@
     margin-right: 5px;
 }
 
-.contents_disc .fa-heart {
-    color: #f15620;
-    font-size: 30px;
-    margin-top: 11px;
-    float: right;
+.contents_disc #bookmark_bt{
+    color:#c1c1c1;
+    font-size:30px;
+    margin-top:11px;
+    float:right;
+    cursor: pointer;
+}
+
+
+
+
+
+#contents_pager ul{
+    width:758px;
+    height:67px;
+    margin:0px auto;
+    margin-top:75px;
+}
+.selected_pager{
+    color:#fff;
+    background:#48cfad;
+    border-radius:50%;
+}
+.one_page{
+    width:65px !important;
+    height:65px !important;
+    border-radius:50%;
+    border:1px solid #b4b4b4;
+    margin-top:0px !important;
+    margin-left: 15px !important;
+    margin-right: 15px !important;
+}
+.one_page i{
+    vertical-align:middle;
+    line-height:65px;
+    color:#646464;
+    font-size:60px;
+}
+.ten_page{
+    width:45px !important;
+    height:45px !important;
+    border-radius:50%;
+    border:1px solid #b4b4b4;
+    margin-top: 12px !important;
+}
+.ten_page i{
+    vertical-align:middle;
+    line-height:45px;
+    color:#646464;
+    font-size:30px;
+}
+#contents_pager li{
+    float:left;
+    margin:0px 5px;
+    font-size:23px;
+    width:35px;
+    height:35px;
+    line-height:31px;
+    text-align:center;
+    margin-top:17px;
+    font-weight: 200;
 }
 /* main section end */

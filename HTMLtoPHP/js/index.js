@@ -249,7 +249,8 @@ $(function () { //add contents button start
 
     $('#addcontent_bt').click(function () {
         $('.dark_overlay').stop().fadeIn(100);
-        $('.editer_popup').stop().fadeIn(100);
+        $('.editer_popup').css("display","block");
+        $('.editer_popup').attr("class","editer_popup fadeInDown animated");
     });
 
     $('.editer_popup > ul > li').hover(function () {
@@ -259,8 +260,8 @@ $(function () { //add contents button start
     });
 
     $('.editer_popup_cancel , .dark_overlay , #cancel_bt').click(function () {
-        $('.dark_overlay').stop().fadeOut(150);
-        $('.editer_popup').stop().fadeOut(150);
+        $('.dark_overlay').stop().fadeOut(200);
+        $('.editer_popup').stop().fadeOut(200);
         $('#embed_popup').stop().fadeOut(150);
     });
 });
