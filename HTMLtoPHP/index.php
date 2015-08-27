@@ -20,7 +20,8 @@
     <link href="css/normalize.css" rel="stylesheet" type="text/css" />  <!-- web normalize -->
     <link href="css/layout/common.css" rel="stylesheet" type="text/css" />  <!-- common css -->
     <link href="css/index.css" rel="stylesheet" type="text/css" />  <!-- index file css -->
-    <link href="css/selectordie.css" rel="stylesheet" type="text/css"> <!-- selector decoration css -->
+    <link href="css/selectordie.css" rel="stylesheet" type="text/css" /> <!-- selector decoration css -->
+    <link href="css/layout/animate.css" rel="stylesheet" type="text/css" />
 
     <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script> <!-- jquery library -->
     <script type="text/javascript" src="js/index.js"></script> <!-- index file js -->
@@ -40,7 +41,7 @@
     <!-- popup start -->
     <div class="dark_overlay"></div>
 
-    <div class="editer_popup">
+    <div class="editer_popup bounceIn animated">
         <p>Which content will you upload?</p>
         <ul>
             <li>
@@ -152,7 +153,7 @@
                 <p class="signicon"><i class="fa fa-unlock-alt fa-lg"></i></p>
                 <p class="signin">SIGN IN</p>
             </div>  <!-- end signin -->
-                <div id="login_box">
+                <div id="login_box" class="bounceInDown animated">
                     <div id="login_box_header">SIGN IN</div>
                     <div id="login_input">
                         <input type="text" id="login_id" value="E-mail" /><i id="email_icon" class="fa fa-user"></i>

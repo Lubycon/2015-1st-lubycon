@@ -120,6 +120,7 @@ $(function () //sign in toggle event
 {
     $('#signin_bt, #figure_signin').click(function () {
         $('#login_box').stop().fadeIn(150);
+        $("#login_box").attr("class","bounceInDown animated");
     });
 });
 
@@ -129,7 +130,7 @@ $(document).ready(function () // signin box click toggle
         var subject = $('#signin_bt');
         var i = 1;
         if (e.target.id != subject.attr('id') && !subject.has(e.target).length) {
-            $("#login_box").stop().fadeOut(150);
+            $("#login_box").attr("class","bounceOutUp animated");
         }
     });
 });

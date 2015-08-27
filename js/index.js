@@ -76,6 +76,7 @@ $(function () //sign in toggle event
 {
     $('#signin_bt').click(function () {
         $('#login_box').stop().fadeIn(150);
+        $('#login_box').attr("class","bounceInDown animated");
     });
 
     $('#sign_out').click(function () //logout
@@ -92,7 +93,7 @@ $(document).ready(function () // signin box click toggle
         var subject = $("#signin_bt");
 
         if (e.target.id != subject.attr('id') && !subject.has(e.target).length) {
-            $("#login_box").stop().fadeOut(150);
+            $("#login_box").attr("class","bounceOutUp animated");
         }
     });
 });
