@@ -68,7 +68,7 @@
     overflow:auto;
 }
 
-#contents_box ul
+#contents_box > ul
 {
     width:81%;
     margin:0px auto;
@@ -76,7 +76,7 @@
     text-align: center;
 }
 
-#contents_box ul li
+#contents_box > ul > li
 {
     width: 285px;
     position:relative;
@@ -100,7 +100,7 @@
     border: 1px solid #d1d1d1;
     box-shadow: 0px 3px 2px 0px rgba(0,0,0,0.3);
 }
-    #contents_overlay{
+    .contents_overlay{
         position:absolute;
         z-index:2;
         width:280px;
@@ -109,23 +109,23 @@
         top:0px;
         display:none;
     }
-        #contents_overlay ul li {
+        .contents_overlay ul li {
             margin-top:187px;
         }
-        #contents_overlay li {
+        .contents_overlay li {
             float:left;
             color:#fff;
             font-size:18px;
             margin-right:10px;
             margin-left:10px;
         }
-        #contents_overlay li i{
+        .contents_overlay li i{
             margin-right:5px;
         }
-        #contents_overlay #contents_like_li{
+        .contents_overlay .contents_like_li{
             float:right;
         }
-        #contents_overlay #contents_like_li i{
+        .contents_overlay .contents_like_li i{
             color:#F15620;
         }
 .last_contents{
@@ -176,61 +176,11 @@
         .contents_disc .name{
             color:#444444;
         }
-        .contents_disc #bookmark_bt{
+        .contents_disc .bookmark_bt{
             color:#c1c1c1;
             font-size:30px;
             margin-top:11px;
             float:right;
             cursor: pointer;
         }
-#contents_pager ul{
-    width:758px;
-    height:67px;
-    margin:0px auto;
-    margin-top:75px;
-}
-.selected_pager{
-    color:#fff;
-    background:#48cfad;
-    border-radius:50%;
-}
-.one_page{
-    width:65px !important;
-    height:65px !important;
-    border-radius:50%;
-    border:1px solid #b4b4b4;
-    margin-top:0px !important;
-    margin-left: 15px !important;
-    margin-right: 15px !important;
-}
-.one_page i{
-    vertical-align:middle;
-    line-height:65px;
-    color:#646464;
-    font-size:60px;
-}
-.ten_page{
-    width:45px !important;
-    height:45px !important;
-    border-radius:50%;
-    border:1px solid #b4b4b4;
-    margin-top: 12px !important;
-}
-.ten_page i{
-    vertical-align:middle;
-    line-height:45px;
-    color:#646464;
-    font-size:30px;
-}
-#contents_pager li{
-    float:left;
-    margin:0px 5px;
-    font-size:23px;
-    width:35px;
-    height:35px;
-    line-height:31px;
-    text-align:center;
-    margin-top:17px;
-    font-weight: 200;
-}
 /* main section end */

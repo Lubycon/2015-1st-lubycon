@@ -190,6 +190,21 @@ $(function () //e-mail and password value reset start
 /////////////////////////////////////////////////////////
 
 /////////////////////////////////////////////////////////
+//      before sign in input shiny start
+/////////////////////////////////////////////////////////
+$(function () {
+    $('#email_id').focus(function () {
+        $('#email_input label').css('color', '#48cfad');
+    });
+    $('#email_id').blur(function () {
+        $('#email_input label').css('color', '#838282');
+    });
+});
+/////////////////////////////////////////////////////////
+//      before sign in input shiny end
+/////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////
 //      create account bt popup event start
 /////////////////////////////////////////////////////////
 
@@ -402,20 +417,17 @@ $(function()	// triple bt on event
 
 $(function () //contents page category
 {
-    var cate_point = 0
     $('#cate_bt').click(function () {
-        if (cate_point == 0)
+        if ($('#open_cate_inner').css('top') == '-85px')
         {
             $('#open_cate_inner').stop().animate({ top: 0 });
             $('#down_arrow').children().removeClass();
             $('#down_arrow').children().addClass('fa fa-angle-up');
-            cate_point++;
-        } else if (cate_point == 1)
+        } else if ($('#open_cate_inner').css('top') == '0px')
         {
             $('#open_cate_inner').stop().animate({ top: -85 });
             $('#down_arrow').children().removeClass();
             $('#down_arrow').children().addClass('fa fa-angle-down');
-            cate_point--;
         }
     });
 
@@ -427,7 +439,6 @@ $(function () //contents page category
                 $('#open_cate_inner').stop().animate({ top: -85 });
                 $('#down_arrow').children().removeClass();
                 $('#down_arrow').children().addClass('fa fa-angle-down');
-                cate_point--;
             }
         });
     });
@@ -449,6 +460,73 @@ $(function () { /* designers page subnav selcect */
 });
 /////////////////////////////////////////////////////////
 //      category bar select menu end
+/////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////
+//      contents card hover overlay view start
+/////////////////////////////////////////////////////////
+$(function ()
+{
+    $('.contents_card').hover(function ()
+    {
+        $(this).children('.contents_overlay').stop().fadeIn(150);
+    }, function ()
+    {
+        $(this).children('.contents_overlay').stop().fadeOut(150);
+    });
+});
+/////////////////////////////////////////////////////////
+//      contents card hover overlay view end
+/////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////
+//      contents card bookmark toggle start
+/////////////////////////////////////////////////////////
+$(function () {
+    var toggle_count = 0;
+
+    $(".bookmark_bt,#bookmark_inner_bt").click(function () {
+        switch (toggle_count) {
+            case 0:
+                $(this).css('color', '#ffbe54');
+                toggle_count = 1;
+                break;
+
+            case 1:
+                $(this).css('color', '#c1c1c1');
+                toggle_count = 0;
+                break;
+        }
+    });
+});
+/////////////////////////////////////////////////////////
+//      contents card bookmark toggle end
+/////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////
+//      contents view fileinfo toggle start
+/////////////////////////////////////////////////////////
+$(function () {
+    var toggle_count = 0;
+
+    $("#info_header").click(function () {
+        switch (toggle_count) {
+            case 0:
+                $("#files").stop().slideDown(300);
+                $("#info_toggle").attr('class', 'fa fa-angle-up');
+                toggle_count = 1;
+                break;
+
+            case 1:
+                $("#files").stop().slideUp(300);
+                $("#info_toggle").attr('class', 'fa fa-angle-down');
+                toggle_count = 0;
+                break;
+        }
+    });
+});
+/////////////////////////////////////////////////////////
+//      contents view fileinfo toggle end
 /////////////////////////////////////////////////////////
 /*----------------------------contents page----------------------------*/
 
@@ -1422,53 +1500,3 @@ $(function () {
 
 });
 /*----------------------------editer end----------------------------*/
-/*-------------------------file info start--------------------------*/
-$(function(){
-    var toggle_count = 0;
-    
-    $("#info_header").click(function(){
-        switch(toggle_count){
-            case 0 : 
-                $("#files").stop().slideDown(300);
-                $("#info_toggle").attr('class','fa fa-angle-up');
-                toggle_count = 1;
-            break;
-            
-            case 1 :
-                $("#files").stop().slideUp(300);
-                $("#info_toggle").attr('class','fa fa-angle-down');
-                toggle_count = 0;
-            break;
-        }
-    });   
-});
-/*-------------------------file info end----------------------------*/
-/*------------------------forgot password start---------------------*/
-$(function(){
-    $('#email_id').focus(function () {
-       $('#email_input label').css('color','#48cfad'); 
-    });
-   $('#email_id').blur(function () {
-       $('#email_input label').css('color','#838282');
-    });
-});
-/*------------------------forgot password end-----------------------*/
-/*------------------------content bookmark toggle-------------------*/
-$(function(){
-    var toggle_count = 0;
-    
-    $("#bookmark_bt,#bookmark_inner_bt").click(function(){
-        switch(toggle_count){
-            case 0 : 
-                $(this).css('color','#ffbe54');
-                toggle_count = 1;
-            break;
-            
-            case 1 :
-                $(this).css('color','#c1c1c1');
-                toggle_count = 0;
-            break;
-        }
-    });  
-});
-/*------------------------content bookmark toggle-------------------*/
