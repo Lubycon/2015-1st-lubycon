@@ -98,7 +98,7 @@
                 <ul>';
                     for( $k=1 ; $k<11 ; $k++ ) //loop slide img call
                     {
-                    echo '<li>
+                    echo '<li class="load_view">
                                 <img src="ch/img/slider/slider'.$i.'/'.$k.'.png" alt="thumbnail_photo_'.$k.'">
                           </li>';
                     }

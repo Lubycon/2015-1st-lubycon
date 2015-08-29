@@ -528,6 +528,36 @@ $(function () {
 /////////////////////////////////////////////////////////
 //      contents view fileinfo toggle end
 /////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////
+//      contents view load ajax start
+/////////////////////////////////////////////////////////
+$(function ()
+{
+    $(".load_view").click(function ()
+    {
+        $.ajax({
+            type: "POST",
+            url: "php/ajax/contents_view.php", //이페이지에서 중복체크를 한다
+            //data: "id=" + id,//test.asp에 id 값을 보낸다
+            cache: false,
+            success: function (data) {
+                $('#bodyer').fadeIn(150).append(data); //해당 내용을 보여준다
+                $('.dark_overlay').fadeIn(150);
+            }
+        });
+    });
+
+    $('.dark_overlay').click(function ()
+    {
+        $('.dark_overlay').stop().fadeOut(150);
+        $('#pop_up').stop().fadeOut(150).remove();
+    });
+});
+
+/////////////////////////////////////////////////////////
+//      contents view load ajax end
+/////////////////////////////////////////////////////////
 /*----------------------------contents page----------------------------*/
 
 
