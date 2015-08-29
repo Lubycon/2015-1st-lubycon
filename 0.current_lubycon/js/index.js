@@ -433,18 +433,18 @@ $(function () //contents page category
     });
 });
 
-$(function () { /* designers page continets selcect */
+$(function () { /* designers page subnav selcect */
     $('.contents_bt').mouseenter(function () {
-        $('.continets_list').stop().slideDown(300);
+        $('.subnav_list').stop().slideDown(300);
         $('.contents_bt').css('background', '#464646');
     });
     $('.contents_bt').mouseleave(function () {
-        $('.continets_list').stop().slideUp(300);
+        $('.subnav_list').stop().slideUp(300);
         $('.contents_bt').css('background', '#222');
     });
-    $('.continets_list li').click(function () {
-        $('.continets_selected').text($(this).text());
-        $('.continets_list').stop().slideUp(300);
+    $('.subnav_list li').click(function () {
+        $('.subnav_selected').text($(this).text());
+        $('.subnav_list').stop().slideUp(300);
     });
 });
 /////////////////////////////////////////////////////////

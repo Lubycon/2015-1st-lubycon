@@ -4,6 +4,7 @@
 /*main header end*/
 /* main section start */
 
+/* reperence common.css
 #index_figure {
     background: url(../CH/img/main_Img.png) 0% 47% no-repeat;
     background-size:100%;
@@ -11,14 +12,8 @@
     height: 350px;
     text-align: center;
 }
-
-    #index_figure h2 {
-        padding-top: 100px;
-        color: #fff;
-        font-size: 43px;
-        font-weight:200;
-        letter-spacing: 1px;
-    }
+*/
+    
 
     #index_figure button {
         border: 1px solid #fff;

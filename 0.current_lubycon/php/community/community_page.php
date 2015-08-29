@@ -44,11 +44,11 @@
         <!-- end select box -->
     </section>
     <section id="nav_guide">
-        <div class="continets_box">
+        <div class="subnav_box">
             <div class="contents_bt">
                 <span class="global_icon"><i class="fa fa-bars"></i></span>
-                <span class="continets_selected">20 Contents</span>
-                <ul class="continets_list">
+                <span class="subnav_selected">20 Contents</span>
+                <ul class="subnav_list">
                     <li>20 Contents</li>
                     <li>30 Contents</li>
                     <li>40 Contents</li>

@@ -11,11 +11,11 @@
 <!-- end section -->
 
 <section id="nav_guide">
-    <div class="continets_box">
+    <div class="subnav_box">
         <div class="contents_bt">
             <span class="global_icon"><i class="fa fa-bars"></i></span>
-            <span class="continets_selected">Account Setting</span>
-            <ul class="continets_list">
+            <span class="subnav_selected">Account Setting</span>
+            <ul class="subnav_list">
                 <li><a href="./index.php?1=personal_page&2=personal_page&3=main">My Contents</a></li>
                 <li><a href="./index.php?1=personal_page&2=message&3=main">Message</a></li>
                 <li><a href="#">Bookmarks</a></li>
