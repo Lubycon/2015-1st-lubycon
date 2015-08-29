@@ -196,6 +196,39 @@
         box-shadow:none;
     }
 
+    
+
+    .job_option{
+        display:inline-block;
+        position:relative;
+    }
+    .job_option .sod_select.custom.custom{
+        width:210px;
+        background:#fff;
+    }
+    .job_option .sod_select.custom.focus{
+        box-shadow:none;
+    }
+    .job_option .sod_select.custom.custom{
+        padding:12px 10px;
+    }
+    .job_option .sod_select{
+        height:36px;
+    }
+    .job_option .sod_select.custom .sod_label{
+        padding: 0px;
+        text-overflow: ellipsis;
+        width: 81px;
+        display: inline-block;
+        margin-left: -5px;
+    }
+    .job_option .sod_select.custom .sod_list_wrapper{
+        width:210px;
+        box-shadow:none;
+    }
+
+
+
 
     .location_option{
         display:inline-block;

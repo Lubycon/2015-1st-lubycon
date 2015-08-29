@@ -122,6 +122,7 @@ $(function () //sign in toggle event
         $('#login_box').stop().fadeIn(150);
         $('#login_box').attr("class","bounceInDown animated");
         $("#login_box").css("display","block");
+        $("#login_id").focus();
     });
 
     $('#sign_out').click(function () //logout
@@ -469,10 +470,10 @@ $(function ()
 {
     $('.contents_card').hover(function ()
     {
-        $(this).children('.contents_overlay').stop().fadeIn(150);
+        $(this).children('.contents_overlay').stop().fadeIn(300);
     }, function ()
     {
-        $(this).children('.contents_overlay').stop().fadeOut(150);
+        $(this).children('.contents_overlay').stop().fadeOut(300);
     });
 });
 /////////////////////////////////////////////////////////
