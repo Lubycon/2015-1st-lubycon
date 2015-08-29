@@ -9,14 +9,14 @@
     <section id="navsel">
         <nav id="lnb_nav">
             <ul>
-                <li class="recent">
-                    <a href="./index.php?1=community&2=community_page&3=recent">Forum</a>
+                <li class="forum">
+                    <a href="./index.php?1=community&2=community_page&3=forum">Forum</a>
                 </li>
-                <li class="most_like">
-                    <a href="./index.php?1=community&2=community_page&3=most_like">Tutorial</a>
+                <li class="tutorial">
+                    <a href="./index.php?1=community&2=community_page&3=tutorial">Tutorial</a>
                 </li>
-                <li class="most_comment">
-                    <a href="./index.php?1=community&2=community_page&3=most_comment">Q&amp;A</a>
+                <li class="qna">
+                    <a href="./index.php?1=community&2=community_page&3=qna">Q&amp;A</a>
                 </li>
             </ul>
         </nav>

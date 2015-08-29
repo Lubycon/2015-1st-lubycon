@@ -50,6 +50,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "personal_page", "personal_page", "{5528D5D6-2249-4D2D-917F-4B4987AE93D2}"
 	ProjectSection(SolutionItems) = preProject
 		php\personal_page\account_setting.php = php\personal_page\account_setting.php
+		php\personal_page\followers.php = php\personal_page\followers.php
 		php\personal_page\insight.php = php\personal_page\insight.php
 		php\personal_page\message.php = php\personal_page\message.php
 		php\personal_page\personal_page.php = php\personal_page\personal_page.php
@@ -112,6 +113,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "layout", "layout", "{95A2715A-1E5C-45E2-A385-A4B1032CE2F9}"
 	ProjectSection(SolutionItems) = preProject
 		php\layout\personal_layout.php = php\layout\personal_layout.php
+		php\layout\user_inform.php = php\layout\user_inform.php
 	EndProjectSection
 EndProject
 Global

@@ -89,30 +89,6 @@
         cursor:pointer;
         font-weight: 200;
     }
-    .fa-check{
-        width:25px;
-        height:25px;
-        border-radius:50%;
-        line-height:25px;
-        vertical-align:middle;
-        text-align:center;
-        background:#8ec89a;
-        color:#fff;
-        margin-left:25px;
-        position:absolute;
-    }
-    .fa-times{
-        width:25px;
-        height:25px;
-        border-radius:50%;
-        line-height:25px;
-        vertical-align:middle;
-        text-align:center;
-        background:#ea4126;
-        color:#fff;
-        margin-left:25px;
-        position:absolute;
-    }
     #location_text{
         width:59px;
         margin-left:10px;
