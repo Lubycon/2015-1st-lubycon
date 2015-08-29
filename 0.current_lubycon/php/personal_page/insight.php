@@ -11,40 +11,8 @@
 <section id="contents">
     <?php
     include("php/layout/personal_layout.php");
+    include("php/layout/user_inform.php");
     ?>
-
-    <section id="personal_box">
-        <figure>
-            <img src="ch/img/designer_img.png" alt="개새끼" />
-        </figure>
-        <h3>Daniel Zepp</h3>
-        <h4>Pro web designer</h4>
-        <p id="personal_legion"><i class="fa fa-home"></i>Seoul, Korea</p>
-        <p id="personal_intro">everybody loves coding</p>
-
-        <aside id="personal_score">
-            <ul>
-                <li><i class="fa fa-eye"></i>
-                    <p>123</p>
-                </li>
-                <li><i class="fa fa-heart"></i>
-                    <p>111123</p>
-                </li>
-                <li><i class="fa fa-download"></i>
-                    <p>123</p>
-                </li>
-                <li><i class="fa fa-user-plus"></i>
-                    <p>123</p>
-                </li>
-            </ul>
-            <button id="personal_messeage"><i class="fa fa-envelope-o"></i>
-                <p>Messeage</p>
-            </button>
-            <button id="personal_follow"><i class="fa fa-user-plus"></i>
-                <p>Follow</p>
-            </button>
-        </aside>
-    </section>
 
     <section id="insight_box">
         <div id="graph_ul">
