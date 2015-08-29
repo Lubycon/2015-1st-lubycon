@@ -112,8 +112,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "layout", "layout", "{79EDE1
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "layout", "layout", "{95A2715A-1E5C-45E2-A385-A4B1032CE2F9}"
 	ProjectSection(SolutionItems) = preProject
+		php\layout\content_card.php = php\layout\content_card.php
 		php\layout\personal_layout.php = php\layout\personal_layout.php
 		php\layout\user_inform.php = php\layout\user_inform.php
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ajax", "ajax", "{A5A8174F-E088-43E5-BDAE-1CF2E3FCFFAE}"
+	ProjectSection(SolutionItems) = preProject
+		php\ajax\contents_view.php = php\ajax\contents_view.php
 	EndProjectSection
 EndProject
 Global
@@ -134,5 +140,6 @@ Global
 		{7328460A-3607-460C-8C81-56CB4C1DF3A8} = {89F53E10-E9B7-495E-82C7-F2122711B934}
 		{79EDE1A8-A22F-45A4-8EBB-14D24588F03D} = {89F53E10-E9B7-495E-82C7-F2122711B934}
 		{95A2715A-1E5C-45E2-A385-A4B1032CE2F9} = {DAEE0839-5F41-492F-95AB-58A345B7C2AE}
+		{A5A8174F-E088-43E5-BDAE-1CF2E3FCFFAE} = {DAEE0839-5F41-492F-95AB-58A345B7C2AE}
 	EndGlobalSection
 EndGlobal

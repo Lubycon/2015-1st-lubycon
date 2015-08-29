@@ -129,7 +129,7 @@ a {
     left: 50%;
     margin-left: -225px;
     margin-top: -250px;
-    display: none;
+    display: block;
 }
 
     #create_account_area #account_title {

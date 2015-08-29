@@ -1,6 +1,6 @@
-<link href="css/contents_view.css" rel="stylesheet" type="text/css" />
-<!-- contents page css -->
 <div id="pop_up">
+    <link href="css/contents_view.css" rel="stylesheet" type="text/css" />
+    <!-- contents page css -->
     <section class="contents_view">
         <header>
             <h3>Vans flower Shoes</h3>
@@ -13,8 +13,6 @@
             <figure class="contents_img">
                 <img src="ch/img/contents/contents.jpg" width="630" />
             </figure>
-
-
             <section id="contens_slide">
                 <div id="contents_view_slider">
                     <div class="slides" u="slides">
