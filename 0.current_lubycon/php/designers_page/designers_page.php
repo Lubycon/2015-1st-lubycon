@@ -7,22 +7,15 @@
 <!-- contents page css -->
 <section id="contents">
     <section id="navsel">
-        <nav id="lnb_nav">
-            <ul>
-                <li class="all">
-                    <a href="./index.php?1=designers_page&2=designers_page&3=all">All</a>
-                </li>
-                <li class="like">
-                    <a href="./index.php?1=designers_page&2=designers_page&3=like">Like</a>
-                </li>
-                <li class="download">
-                    <a href="./index.php?1=designers_page&2=designers_page&3=download">Download</a>
-                </li>
-                <li class="follow">
-                    <a href="./index.php?1=designers_page&2=designers_page&3=follow">Follow</a>
-                </li>
-            </ul>
-        </nav>
+        <div class="search_option">
+            <i class="fa fa-filter"></i>
+            <select class="basic_filter">
+                <option value="all">All</option>
+                <option value="mostDownload">Most Download</option>
+                <option value="mostFollow">Most Follow</option>
+                <option value="mostLike">Most Like</option>
+            </select>
+        </div>
         <!-- end lnb nav -->
     </section>
     <section id="nav_guide">

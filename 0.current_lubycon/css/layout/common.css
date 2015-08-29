@@ -984,6 +984,7 @@ h1 /* main logo */ {
                 font-size: 17px;
                 color: #fff;
                 margin-top: 5px;
+                font-weight: 200;
             }
                 #personal_legion i
                 {
@@ -998,6 +999,7 @@ h1 /* main logo */ {
                 font-size:17px;
                 color: #fff;
                 margin-top: 5px;
+                font-weight:200;
             }
                 #personal_language i
                 {
@@ -1016,6 +1018,7 @@ h1 /* main logo */ {
             {
                 font-size:16px;
                 color:#fff;
+                font-weight:200;
             }
    
 #personal_contact
