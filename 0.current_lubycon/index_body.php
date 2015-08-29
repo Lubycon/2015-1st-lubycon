@@ -162,7 +162,7 @@
         <!-- card list start-->
             <div class="f_card_body">
                 <!--card start-->
-                <a href="http://localhost/htmltophp/index.php?1=community&2=community_view">
+                <a href="http://localhost/0.current_lubycon/index.php?1=community&2=community_view">
                     <!--link start-->
                     <aside class="side_bar"><i class="fa fa-circle"></i></aside>
                     <div class="f_card_header">
