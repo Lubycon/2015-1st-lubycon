@@ -10,13 +10,13 @@
         <nav id="lnb_nav">
             <ul>
                 <li class="recent">
-                    <a href="./index.php?1=community&2=community_page&3=recent">Recent</a>
+                    <a href="./index.php?1=community&2=community_page&3=recent">Forum</a>
                 </li>
                 <li class="most_like">
-                    <a href="./index.php?1=community&2=community_page&3=most_like">Most Like</a>
+                    <a href="./index.php?1=community&2=community_page&3=most_like">Tutorial</a>
                 </li>
                 <li class="most_comment">
-                    <a href="./index.php?1=community&2=community_page&3=most_comment">Most Comment</a>
+                    <a href="./index.php?1=community&2=community_page&3=most_comment">Q&amp;A</a>
                 </li>
             </ul>
         </nav>
@@ -30,8 +30,17 @@
                 <option value="Chinese">Chinese</option>
                 <option value="French">French</option>
             </select>
-
         </div>
+        <div class="search_option">
+            <i class="fa fa-filter"></i>
+            <select class="basic_filter">
+                <option value="Featured">Featured</option>
+                <option value="Recent">Recent</option>
+                <option value="Most Like">Most Like</option>
+                <option value="Most Download">Most Download</option>
+                <option value="Most Coment">Most Comment</option>
+            </select>
+        </div>  <!-- end select box -->
         <!-- end select box -->
     </section>
     <section id="nav_guide">
