@@ -179,6 +179,15 @@ a {
             text-align: center;
             margin-left: 5px;
         }
+        .location_option_ca {
+            display: inline-block;
+        }
+            .location_option_ca #custom {
+                width: 214px;
+            }
+                .location_option_ca #custom .sod_list_wrapper {
+                    width: 214px;
+                }
 
 .form_check {
     color: #ea4126;
@@ -639,7 +648,7 @@ h1 /* main logo */ {
 
 
 #create_acc {
-    width: 230px;
+    width: 240px;
     height: 40px;
     line-height: 40px;
     margin: 0px auto;

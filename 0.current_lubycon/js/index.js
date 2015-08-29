@@ -122,6 +122,7 @@ $(function () //sign in toggle event
         $('#login_box').stop().fadeIn(150);
         $('#login_box').attr("class","bounceInDown animated");
         $("#login_box").css("display","block");
+        $("#login_id").focus();
     });
 
     $('#sign_out').click(function () //logout

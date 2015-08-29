@@ -55,8 +55,16 @@
                     <label>Profile Photo</label><input type="text" id="file_text" readonly /><span id="file_bt">Find the file</span><input type="file" id="file_hide" accept="image/*" />
                     <br />
                     <img id="img_preview" />
-                    <label>Occupation / Job</label><input type="text" /><br />
-                    <label>Location</label><div class="location_option">
+                    <label>Occupation / Job</label>
+                    <div class="job_option">
+                        <select class="basic_filter">
+                            <option value="designer">Designer</option>
+                            <option value="engineer">Engineer</option>
+                            <option value="student">Student</option>
+                        </select>
+                    </div><br />
+                    <label>Location</label>
+                    <div class="location_option">
                         <select class="basic_filter">
                             <option value="Afganistan">Afghanistan</option>
                             <option value="Albania">Albania</option>
