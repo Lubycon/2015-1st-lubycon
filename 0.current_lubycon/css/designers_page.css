@@ -1,0 +1,67 @@
+﻿@charset "utf-8";
+
+#designers_rank_table{
+    width:1200px;
+    margin:0px auto;
+    margin-top:20px;
+    text-align:center;
+}
+    #designers_rank_table img {
+        width:50px;
+        height:50px;
+    }
+    #designers_rank_table th {
+        height:60px;
+    }
+    #designers_rank_table tr {
+        line-height:10px;
+        border-bottom:1px solid #ddd;
+    }
+    #top_rank{
+        background:#48cfad;
+        color:#fff;
+    }
+        #top_rank .fa-trophy {
+            color:#ffbe54;
+            font-size:32px;
+        }
+        .rank_number{
+            width:50px;
+        }
+        .rank_updown{
+            width:20px;
+        }
+            .fa-caret-up{
+                color:#ec6446;
+            }
+            .fa-caret-down{
+                color:#009fe3;
+            }
+
+        .rank_contry{
+            width:290px;
+        }
+        .rank_photo{
+            width:50px;
+        }
+        .rank_name{
+            padding-left:40px;
+            text-align:left;
+        }
+        .rank_like{
+            width:70px;
+            color:#555555;
+        }
+            .rank_like .fa-heart {
+                color:#ec6446;
+                font-size:22px;
+            }
+        .rank_art{
+            width:50px;
+            color:#555555;
+        }
+            .rank_art .fa-user-plus {
+                color:#444;
+                font-size:22px;
+            }
+/* main section end */
