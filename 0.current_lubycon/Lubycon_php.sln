@@ -53,6 +53,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "personal_page", "personal_p
 		php\personal_page\followers.php = php\personal_page\followers.php
 		php\personal_page\insight.php = php\personal_page\insight.php
 		php\personal_page\message.php = php\personal_page\message.php
+		php\personal_page\my_contents.php = php\personal_page\my_contents.php
 		php\personal_page\personal_page.php = php\personal_page\personal_page.php
 	EndProjectSection
 EndProject
@@ -120,6 +121,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ajax", "ajax", "{A5A8174F-E088-43E5-BDAE-1CF2E3FCFFAE}"
 	ProjectSection(SolutionItems) = preProject
 		php\ajax\contents_view.php = php\ajax\contents_view.php
+		php\ajax\create_account_popup.php = php\ajax\create_account_popup.php
+		php\ajax\subnav.php = php\ajax\subnav.php
 	EndProjectSection
 EndProject
 Global

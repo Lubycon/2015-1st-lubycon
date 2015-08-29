@@ -48,6 +48,7 @@ function getUrlParameter(sParam) //get parameter
 var first_param = getUrlParameter('1');
 var seceond_param = getUrlParameter('2');
 var third_param = getUrlParameter('3');
+var four_param = getUrlParameter('4');
 
 $(function () //selcted change
 {
@@ -234,7 +235,6 @@ $(function () { //create account bt popup event start
                     customID: "custom",
                     size: 5
                 });
-                console.log(data);
                 $('.dark_overlay').fadeIn(300);
             }
         });
@@ -461,20 +461,7 @@ $(function () //contents page category
     });
 });
 
-$(function () { /* designers page subnav selcect */
-    $('.contents_bt').mouseenter(function () {
-        $('.subnav_list').stop().slideDown(300);
-        $('.contents_bt').css('background', '#464646');
-    });
-    $('.contents_bt').mouseleave(function () {
-        $('.subnav_list').stop().slideUp(300);
-        $('.contents_bt').css('background', '#222');
-    });
-    $('.subnav_list li').click(function () {
-        $('.subnav_selected').text($(this).text());
-        $('.subnav_list').stop().slideUp(300);
-    });
-});
+
 /////////////////////////////////////////////////////////
 //      category bar select menu end
 /////////////////////////////////////////////////////////
@@ -1031,6 +1018,83 @@ $(function form_check (fo)
 
 /*----------------------------end creat account----------------------------*/
 
+/*----------------------------start personal page----------------------------*/
+
+/////////////////////////////////////////////////////////
+//      personal page subnav hover and ajax
+/////////////////////////////////////////////////////////
+$(function () { /* designers page subnav selcect */
+    $('.contents_bt').mouseenter(function () {
+        $('.subnav_list').stop().slideDown(300);
+        $('.contents_bt').css('background', '#464646');
+    });
+    $('.contents_bt').mouseleave(function () {
+        $('.subnav_list').stop().slideUp(300);
+        $('.contents_bt').css('background', '#222');
+    });
+    /*
+    $('.subnav_list li').click(function () {
+        $('.subnav_selected').text($(this).text());
+        $('.subnav_list').stop().slideUp(300);
+    });
+    */
+    $('document').ready(function () {
+        if ($('.personal').attr('class') == 'personal')
+        {
+            var id = four_param;
+        $.ajax(
+            {
+                type: "POST",
+                url: "php/ajax/subnav.php", //이페이지에서 중복체크를 한다
+                data: 'id='+id,//test.asp에 id 값을 보낸다
+                cache: false,
+                success: function (data) {
+                    //$('#bodyer').hide().append(data).fadeIn(300); //해당 내용을 보여준다
+                    $('#contents_box').html('');
+                    $('#contents_box').append(data);
+                    $(".basic_filter").selectOrDie
+                    ({
+                        customClass: "custom",
+                        customID: "custom",
+                        size: 5
+                    });
+                }
+        });
+        }
+    });
+
+    $(".subnav_list li").click(function () {
+        $('.subnav_selected').text($(this).text());
+        $('.subnav_list').stop().slideUp(300);
+        var id = $(this).attr('id');
+        console.log(id);
+
+        $.ajax(
+            {
+                type: "POST",
+                url: "php/ajax/subnav.php", //이페이지에서 중복체크를 한다
+                data: "id=" + id,//test.asp에 id 값을 보낸다
+                cache: false,
+                success: function (data) {
+                    //$('#bodyer').hide().append(data).fadeIn(300); //해당 내용을 보여준다
+                    $('#contents_box').html('');
+                    $('#contents_box').append(data);
+                    $(".basic_filter").selectOrDie
+                    ({
+                        customClass: "custom",
+                        customID: "custom",
+                        size: 5
+                    });
+                }
+            });
+    });
+});
+
+/////////////////////////////////////////////////////////
+//      personal page subnav hover and ajax
+/////////////////////////////////////////////////////////
+
+/*----------------------------personal page----------------------------*/
 
 /*----------------------------about us----------------------------*/
 

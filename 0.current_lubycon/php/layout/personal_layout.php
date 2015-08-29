@@ -14,12 +14,12 @@
     <div class="subnav_box">
         <div class="contents_bt">
             <span class="global_icon"><i class="fa fa-bars"></i></span>
-            <span class="subnav_selected">Account Setting</span>
+            <span class="subnav_selected">My Contents</span>
             <ul class="subnav_list">
-                <li><a href="./index.php?1=personal_page&2=personal_page&3=main">My Contents</a></li>
-                <li><a href="./index.php?1=personal_page&2=message&3=main">Message</a></li>
-                <li><a href="#">Bookmarks</a></li>
-                <li><a href="./index.php?1=personal_page&2=account_setting&3=main">Account Setting</a></li>
+                <li id="my_contents">My Contents</li>
+                <li id="message">Message</li>
+                <li id="bookmark">Bookmarks</li>
+                <li id="account_setting">Account Setting</li>
             </ul>
         </div>
     </div>

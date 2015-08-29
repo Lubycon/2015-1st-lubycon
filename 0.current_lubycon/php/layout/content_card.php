@@ -1,7 +1,7 @@
 <li>
     <div class="contents_card">
         <div class="contents_pic">
-            <img src="ch/img/slider/slider2/9.png" alt="contents thumbnail"/>
+            <img src="ch/img/slider/slider2/9.png" class="load_view" alt="contents thumbnail"/>
         </div>
         <!-- end contents pic -->
         <div class="contents_disc">

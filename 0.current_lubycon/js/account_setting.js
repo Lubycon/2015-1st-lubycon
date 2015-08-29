@@ -10,6 +10,11 @@ $(function () //account setting script
     $(document).ready(function () //account setting banner event
     {
         $(document).scroll(function () { //account setting move banner
+            $('#preview_inform').click(function () {
+                $("html, body").stop().animate({ scrollTop: ($('#information_body').offset().top) - 50 }),
+                $('#account_aside > ul > li').removeClass('selected_account'),
+                $('#preview_inform').addClass('selected_account');
+            });
             $('#account_Setting_sub').click(function () {
                 $("html, body").stop().animate({ scrollTop: ($('#account_setting_section').offset().top) - 65 }),
                 $('#account_aside > ul > li').removeClass('selected_account'),
@@ -31,7 +36,10 @@ $(function () //account setting script
                 $('#delete_account_sub').addClass('selected_account');
             });
 
-            if ($(document).scrollTop() > $('#account_setting_section').offset().top - 65 && $(document).scrollTop() < $('#basic_info_section').offset().top - 80) {
+            if ($(document).scrollTop() > $('#information_body').offset().top - 50 && $(document).scrollTop() < $('#account_setting_section').offset().top - 120) {
+                $('#account_aside > ul > li').removeClass('selected_account');
+                $('#preview_inform').addClass('selected_account');
+            } else if ($(document).scrollTop() > $('#account_setting_section').offset().top - 65 && $(document).scrollTop() < $('#basic_info_section').offset().top - 80) {
                 $('#account_aside > ul > li').removeClass('selected_account');
                 $('#account_Setting_sub').addClass('selected_account');
             } else if ($(document).scrollTop() > $('#basic_info_section').offset().top - 79 && $(document).scrollTop() < $('#contact_info_section').offset().top - 80) {

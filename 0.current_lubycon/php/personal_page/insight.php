@@ -1,5 +1,5 @@
 <figure id="main_figure">
-    <h2>DESIGNERS</h2>
+    <h2>INSIGHT</h2>
 </figure>
 <!-- end main_figure -->
 

@@ -1,14 +1,4 @@
-<figure id="main_figure">
-    <h2>MESSAGE</h2>
-</figure>
-<!-- end main_figure -->
 <link href="css/message.css" rel="stylesheet" type="text/css" />
-<!-- personal page css -->
-<section id="contents">
-    <?php
-    include("php/layout/personal_layout.php");
-    ?>
-
     <!--<section id="message_box">
             <aside id="message_history">
                 <p class="message_sub_menu">History</p>
