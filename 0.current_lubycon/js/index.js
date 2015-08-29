@@ -206,7 +206,7 @@ $(function () {
 /////////////////////////////////////////////////////////
 
 /////////////////////////////////////////////////////////
-//      create account bt popup event start
+//      create account bt popup event start (ajax)
 /////////////////////////////////////////////////////////
 
 $(function () { //create account bt popup event start
@@ -219,14 +219,30 @@ $(function () { //create account bt popup event start
         $(this).stop().animate({ opacity: 1 }, 200);
     });
 
-    $('#create_acc').click(function () {
-        $('.dark_overlay').stop().fadeIn(100);
-        $('#create_account_area').stop().fadeIn(100);
+    $("#create_acc").click(function () {
+        $.ajax({
+            type: "POST",
+            url: "php/ajax/create_account_popup.php", //이페이지에서 중복체크를 한다
+            //data: "id=" + id,//test.asp에 id 값을 보낸다
+            cache: false,
+            success: function (data)
+            {
+                $('#bodyer').hide().append(data).fadeIn(300); //해당 내용을 보여준다
+                $(".basic_filter").selectOrDie
+                ({
+                    customClass: "custom",
+                    customID: "custom",
+                    size: 5
+                });
+                console.log(data);
+                $('.dark_overlay').fadeIn(300);
+            }
+        });
     });
 
     $('.dark_overlay').click(function () {
-        $('.dark_overlay').stop().fadeOut(150);
-        $('#create_account_area').stop().fadeOut(150);
+        $('.dark_overlay').stop().fadeOut(300);
+        $('#create_account_area').stop().fadeOut(300).remove();
     });
 });
 
@@ -543,16 +559,16 @@ $(function ()
             //data: "id=" + id,//test.asp에 id 값을 보낸다
             cache: false,
             success: function (data) {
-                $('#bodyer').fadeIn(150).append(data); //해당 내용을 보여준다
-                $('.dark_overlay').fadeIn(150);
+                $('#bodyer').hide().append(data).fadeIn(300); //해당 내용을 보여준다
+                $('.dark_overlay').fadeIn(300);
             }
         });
     });
 
     $('.dark_overlay').click(function ()
     {
-        $('.dark_overlay').stop().fadeOut(150);
-        $('#pop_up').stop().fadeOut(150).remove();
+        $('.dark_overlay').stop().fadeOut(300);
+        $('#pop_up').stop().fadeOut(300).remove();
     });
 });
 
