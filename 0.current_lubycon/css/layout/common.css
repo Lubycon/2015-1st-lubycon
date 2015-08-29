@@ -788,10 +788,12 @@ h1 /* main logo */ {
     margin: 0px auto;
 }
 
-.selected_nav {
-    color: #48cfad !important;
+.selected_nav{
     border-bottom: 3px solid #48cfad;
 }
+    .selected_nav a{
+        color: #48cfad !important;
+    }
 
 #lnb_nav > ul {
     width: 100%;
@@ -801,7 +803,7 @@ h1 /* main logo */ {
         float: left;
         padding: 0px 8px;
         font-size: 22px;
-        padding-top: 18px;
+        padding-top: 19px;
         cursor: pointer;
         letter-spacing: -1px;
     }
@@ -860,13 +862,14 @@ h1 /* main logo */ {
 
     .continets_list li {
         background: #464646;
+        color:#fff;
         height: 30px;
         line-height: 30px;
         font-size: 16px;
+        font-weight: 200;
     }
         .continets_list li a {
-        color: #fff;
-        
+        color: #fff;   
         font-weight: 200;
     }
 
