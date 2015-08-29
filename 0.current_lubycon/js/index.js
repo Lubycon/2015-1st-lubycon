@@ -469,10 +469,10 @@ $(function ()
 {
     $('.contents_card').hover(function ()
     {
-        $(this).children('.contents_overlay').stop().fadeIn(150);
+        $(this).children('.contents_overlay').stop().fadeIn(300);
     }, function ()
     {
-        $(this).children('.contents_overlay').stop().fadeOut(150);
+        $(this).children('.contents_overlay').stop().fadeOut(300);
     });
 });
 /////////////////////////////////////////////////////////

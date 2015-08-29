@@ -105,9 +105,10 @@
         z-index:2;
         width:280px;
         height:215px;
-        background:rgba(0,0,0,0.3);
+        background:rgba(0,0,0,0.2);
         top:0px;
         display:none;
+        cursor:pointer;
     }
         .contents_overlay ul li {
             margin-top:187px;
@@ -121,6 +122,7 @@
         }
         .contents_overlay li i{
             margin-right:5px;
+            -webkit-text-stroke:1px rgba(0,0,0,0.2);
         }
         .contents_overlay .contents_like_li{
             float:right;
@@ -142,24 +144,26 @@
             width:100%;
             height:27px;
         }
-        .contents_disc h4,h5{
-            display:inline-block;
+        .contents_disc h4{
+            cursor:pointer;
             color:#444444;
-            font-weight:600;
+            font-weight:200;
             float:left;
             font-size:20px;
             font-weight: 400;
+            text-decoration: none;
             height:26px;
             line-height:26px;
         }
         .contents_disc h5 {
+            display: inline-block;
             float:right;
             color:#686868;
             font-size:14px;
             height:15px;
             line-height:15px;
             margin-top:4px;
-            font-weight:300;
+            font-weight:400;
         }
         .contents_disc img{
             width:40px;

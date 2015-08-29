@@ -6,7 +6,7 @@
         <!-- end contents pic -->
         <div class="contents_disc">
             <div class="contents_sub">
-                <h4>Holly shit</h4>
+                <h4 class="contents_title">Holly shit</h4>
                 <h5>Free</h5>
             </div>
             <img src="ch/img/designer_img.png" />
@@ -21,7 +21,7 @@
                     <span class="contents_view">124</span>
                 </li>
                 <li>
-                    <i class="fa fa-comments-o"></i>
+                    <i class="fa fa-comment-o"></i>
                     <span class="contents_comments">124</span>
                 </li>
                 <li class="contents_like_li">
