@@ -26,12 +26,12 @@
         <!-- end lnb nav -->
     </section>
     <section id="nav_guide">
-        <div class="continets_box">
+        <div class="subnav_box">
             <div class="contents_bt">
                 <span class="global_icon">
                     <img src="ch/img/grobal_icon.png" width="24" height="24" /></span>
-                <span class="continets_selected">All Continents</span>
-                <ul class="continets_list">
+                <span class="subnav_selected">All Continents</span>
+                <ul class="subnav_list">
                     <li>All Continents</li>
                     <li>Africa</li>
                     <li>Asia</li>
