@@ -488,8 +488,8 @@ $(function ()
 /////////////////////////////////////////////////////////
 $(function () {
     var toggle_count = 0;
-
-    $(".bookmark_bt,#bookmark_inner_bt").click(function () {
+    $(document).on('click', ".bookmark_bt,#bookmark_inner_bt", function ()
+        {
         switch (toggle_count) {
             case 0:
                 $(this).css('color', '#ffbe54');
@@ -513,7 +513,8 @@ $(function () {
 $(function () {
     var toggle_count = 0;
 
-    $("#info_header").click(function () {
+    $(document).on('click', '#info_header', function ()
+    {
         switch (toggle_count) {
             case 0:
                 $("#files").stop().slideDown(300);
