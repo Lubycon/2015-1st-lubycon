@@ -1,4 +1,6 @@
 <div id="pop_up">
+    <link rel="stylesheet" type="text/css" href="css/contents_view.css" />
+    <script type="text/javascript" src="js/slider.js"></script>
     <script>
     jQuery(document).ready(function ($) {
 
@@ -57,7 +59,6 @@
         //responsive code end
     });
     </script>
-    <link rel="stylesheet" type="text/css" href="css/contents_view.css" />
 
     <section class="contents_view">
         <header>
