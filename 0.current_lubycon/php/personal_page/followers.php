@@ -3,10 +3,9 @@
 </figure>
 <!-- end main_figure -->
 
-<link href="css/insight.css" rel="stylesheet" type="text/css" />
+<link href="css/followers.css" rel="stylesheet" type="text/css" />
 <!-- personal page css -->
-<script type="text/javascript" src="js/insight.js"></script>
-<!--graph script-->
+
 
 <section id="contents">
     <?php
@@ -14,6 +13,22 @@
     include("php/layout/user_inform.php");
     ?>
     <!-- end contents box -->
+    <div id="follower_bar">
+        <article id="follower_count">
+            <span id="follower_num">20</span>
+            <span id="follower_text">followers</span>
+        </article>
+    </div>
+        <section id="followers_box">
+        	<ul>
+                <?php
+                for($i=0;$i<20;$i++)
+                {
+                    include('php/layout/follower_card.php');
+                }
+                ?>
+            </ul>
+        </section><!--end follower box-->
 </section>
 <!-- end contents section -->
 

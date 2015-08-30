@@ -5,7 +5,7 @@
 
 <link href="css/insight.css" rel="stylesheet" type="text/css" />
 <!-- personal page css -->
-<script type="text/javascript" src="js/insight.js"></script>
+<script type="text/javascript" src="js/d3.min.js"></script>
 <!--graph script-->
 
 <section id="contents">
@@ -38,6 +38,7 @@
                 </div>
             </div>
         </div>
+        <script type="text/javascript" src="js/insight.js"></script>
     </section>
     <!-- end contents box -->
 </section>
