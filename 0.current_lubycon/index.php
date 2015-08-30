@@ -17,7 +17,7 @@
     <link href='http://fonts.googleapis.com/css?family=Source Sans Pro:200,400' rel='stylesheet' type='text/css' />	<!--google web font-->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" /> <!--icon font-->
 
-    <link href="css/normalize.css" rel="stylesheet" type="text/css" />  <!-- web normalize -->
+    <link href="css/layout/normalize.css" rel="stylesheet" type="text/css" />  <!-- web normalize -->
     <link href="css/layout/common.css" rel="stylesheet" type="text/css" />  <!-- common css -->
     <link href="css/index.css" rel="stylesheet" type="text/css" />  <!-- index file css -->
     <link href="css/selectordie.css" rel="stylesheet" type="text/css" /> <!-- selector decoration css -->
