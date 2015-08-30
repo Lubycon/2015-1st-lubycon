@@ -265,20 +265,28 @@
                  </div>
 
                <div class="term_check_box">
-                    <p class="term_title">Terms of service</p>
-                    <p>
-                         <img src="ch/img/pdf_icon.png" width="50" height="60" alt="terms of service" />
-                    </p>
-                    <p>I agree to terms of service</p>
-                    <input type="checkbox" class="check_box" id="check1"/><label for="check1"></label>
+                    <a href="#" class="document">
+                         <p>
+                              <img src="ch/img/pdf_icon.png" width="25" height="30" alt="terms of service" />
+                         </p>
+                         <p class="term_title">Terms of service.pdf</p>
+                    </a>
+                    <span class="check_zone">
+                         <p>I agree</p>
+                         <input type="checkbox" class="check_box" id="check1"/><label for="check1"></label>
+                    </span>
                </div>
                <div class="term_check_box">
-                    <p class="term_title">Terms of service</p>
-                    <p>
-                         <img src="ch/img/pdf_icon.png" width="50" height="60" alt="terms of service" />
-                    </p>
-                    <p>I agree to terms of service</p>
-                    <input type="checkbox" class="check_box" id="check2" /><label for="check2"></label>
+                    <a href="#" class="document">
+                         <p>
+                              <img src="ch/img/pdf_icon.png" width="25" height="30" alt="terms of service" />
+                         </p>
+                         <p class="term_title">Private policy.pdf</p>
+                    </a>
+                    <span class="check_zone">
+                         <p>I agree</p>
+                         <input type="checkbox" class="check_box" id="check2" /><label for="check2"></label>
+                    </span>
                </div>
                <p id="account_email_sendcheck">would like to receive newsletter by e-mail
                     <input type="checkbox" class="email_resive" id="check3" /><label for="check3"></label>
