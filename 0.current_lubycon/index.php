@@ -29,6 +29,9 @@
     <script type="text/javascript" src="js/selectordie.min.js"></script> <!-- selector decoration js -->
     <script type="text/javascript" src="js/selectordie.demo.js"></script> <!-- selector decoration js -->
 
+    <link href="css/slider.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/slider.js"></script>
+
       <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->

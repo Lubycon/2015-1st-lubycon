@@ -1,6 +1,5 @@
 <div id="pop_up">
     <link rel="stylesheet" type="text/css" href="css/contents_view.css" />
-    <script type="text/javascript" src="js/slider.js"></script>
     <script>
     jQuery(document).ready(function ($) {
 
@@ -40,14 +39,14 @@
             }
         };
 
-        var jssor_slider1 = new $JssorSlider$("contents_view_slider", options);
+        var contents_view_slider = new $JssorSlider$("contents_view_slider", options);
 
         //responsive code begin
         //you can remove responsive code if you don't want the slider scales while window resizes
         function ScaleSlider() {
-            var parentWidth = jssor_slider1.$Elmt.parentNode.clientWidth;
+            var parentWidth = contents_view_slider.$Elmt.parentNode.clientWidth;
             if (parentWidth)
-                jssor_slider1.$ScaleWidth(Math.min(parentWidth, 610));
+                contents_view_slider.$ScaleWidth(Math.min(parentWidth, 610));
             else
                 window.setTimeout(ScaleSlider, 30);
         }
