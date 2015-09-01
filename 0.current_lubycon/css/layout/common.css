@@ -664,10 +664,12 @@ h1 /* main logo */ {
 
 #signin_bt #login_box #login_facebook {
     background: #3b5998;
+    font-weight: 200;
 }
 
 #signin_bt #login_box #login_google {
     background: #ec6446;
+    font-weight: 200;
 }
 
 
@@ -701,6 +703,7 @@ h1 /* main logo */ {
     line-height: 22px;
     color: #fff;
     font-size: 14px;
+    font-weight: 200;
     border-radius: 2px;
     cursor: pointer;
     display: inline;
@@ -716,13 +719,17 @@ h1 /* main logo */ {
     width: 240px;
     height: 40px;
     line-height: 40px;
+    
     margin: 0px auto;
     margin-top: 13px;
     border-radius: 2px;
+    
     background: #48cfad;
     text-align: center;
     color: #fff;
     font-size: 14px;
+    font-weight: 200;
+    
     cursor: pointer;
 }
 
@@ -1335,7 +1342,7 @@ h1 /* main logo */ {
 }
 .contents_pic img
 {
-    width:285px;
+    width:280px;
     height:215px;
 }
     .contents_overlay{
@@ -1355,13 +1362,23 @@ h1 /* main logo */ {
             float:left;
             color:#fff;
             font-size:18px;
+            font-weight: 200;
             margin-right:10px;
             margin-left:10px;
         }
-        .contents_overlay li i{
-            margin-right:5px;
-            -webkit-text-stroke:1px rgba(0,0,0,0.2);
-        }
+            .contents_view_count {
+                font-weight: 200;
+            }
+            .contents_comments {
+                font-weight: 200;
+            }
+            .contents_like {
+                font-weight: 200;
+            }
+            .contents_overlay li i{
+                margin-right:5px;
+                -webkit-text-stroke:1px rgba(0,0,0,0.2);
+            }
         .contents_overlay .contents_like_li{
             float:right;
         }

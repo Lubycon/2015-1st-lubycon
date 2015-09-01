@@ -140,6 +140,7 @@ forum_search_box .select_box {
 .table_subject {
     padding-left: 20px;
     cursor:pointer;
+    color:#333333;
 }
     .table_subject:hover
     {

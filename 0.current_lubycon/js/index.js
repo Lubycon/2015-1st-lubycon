@@ -316,18 +316,30 @@ $(function () { //add contents button start
 
 $(function () { //search box click value reset start
     var search_box = $('#main_search_text');
+    var search_box2 = $('#forum_search_text');
 
-    search_box.focus(function () {
+    search_box.focus(function(){
         if (search_box.val() == 'Enter the Keyword') {
             search_box.val('');
         }
     });
-    search_box.blur(function () {
+    search_box.blur(function(){
         if (search_box.val() == '') {
             search_box.val('Enter the Keyword');
         }
     });
-});		//search box click value reset end
+
+    search_box2.focus(function(){
+        if(search_box2.val()=='Enter the Keyword'){
+            search_box2.val('')
+        }
+    });
+    search_box2.blur(function(){
+        if(search_box2.val()==''){
+            search_box2.val('Enter the Keyword');
+        }
+    });
+});//search box click value reset end
 
 /////////////////////////////////////////////////////////
 //      main search bar input reset end
@@ -1608,7 +1620,27 @@ $(function () {
     /////////////////////////////////////////////////////////
     //      text editer tools end
     /////////////////////////////////////////////////////////
-
-
 });
 /*----------------------------editer end----------------------------*/
+/*----------------------------followers start--------------------------*/
+$(function(){
+    var toggle_count=0;//from DB
+    $(document).on('click','.follow_card_bt', function(){
+        switch(toggle_count){
+            case 0:
+                $(this).css("background","#333");
+                $(this).children().attr("class","fa fa-user-times");
+                toggle_count=1;
+                console.log(toggle_count);
+            break;
+
+            case 1:
+                $(this).css("background","#48cfad");
+                $(this).children().attr("class","fa fa-user-plus");
+                toggle_count=0;
+                console.log(toggle_count);
+            break;
+        };
+    });
+});
+/*----------------------------followers end----------------------------*/
