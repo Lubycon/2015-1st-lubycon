@@ -16,7 +16,7 @@
                       display:none;
                   }
 
-.slides {
+#slide_section .slides {
     position: absolute;
     left: 10px;
     top: 10px;
@@ -26,13 +26,13 @@
     border-radius: 10px;
 }
 
-    .slides ul li {
+    #slide_section .slides ul li {
         float:left;
         margin:0px;
         padding:0px;
     }
 
-    .slides ul li:hover
+    #slide_section  .slides ul li:hover
     {
         opacity: 0.7;
     }
@@ -40,14 +40,14 @@
 
 /* slider pager*/
 
-.slider_pager {
+#slide_section  .slider_pager {
     position: absolute;
     bottom: -50px;
     left: 50% !important;
     margin-left: -18px;
 }
 
-    .slider_pager div, .slider_pager div:hover, .slider_pager .av {
+    #slide_section  .slider_pager div, #slide_section  .slider_pager div:hover, #slide_section  .slider_pager .av {
         position: absolute;
         /* size of bullet elment */
         width: 12px;
@@ -58,15 +58,15 @@
         border-radius: 50%;
     }
 
-        .slider_pager div:hover, .slider_pager .av:hover {
+        #slide_section  .slider_pager div:hover, #slide_section  .slider_pager .av:hover {
             background: #999;
         }
 
-    .slider_pager .av {
+    #slide_section  .slider_pager .av {
         background: #737373;
     }
 
-    .slider_pager .dn, .slider_pager .dn:hover {
+    #slide_section  .slider_pager .dn, #slide_section  .slider_pager .dn:hover {
         background: #999;
     }
 /* slider pager*/
@@ -74,7 +74,7 @@
 
 /* slider arrow */
 
-.slider_arrow_left, .slider_arrow_right {
+#slide_section  .slider_arrow_left, #slide_section  .slider_arrow_right {
     display: block;
     position: absolute;
     width: 30px;
@@ -83,28 +83,28 @@
     overflow: hidden;
 }
 
-    .slider_arrow_left i, .slider_arrow_right i {
+    #slide_section  .slider_arrow_left i, #slide_section  .slider_arrow_right i {
         font-size: 55px;
         color: #7d7d7d;
     }
 
-.slider_arrow_left {
+#slide_section  .slider_arrow_left {
     top: 50%;
     margin-top: -23px;
     left: -50px;
 }
 
-.slider_arrow_right {
+#slide_section  .slider_arrow_right {
     top: 50%;
     margin-top: -23px;
     right: -80px;
 }
 
-.slider_arrow_left i:hover {
+#slide_section  .slider_arrow_left i:hover {
     color: #a4a4a4;
 }
 
-.slider_arrow_right i:hover {
+#slide_section  .slider_arrow_right i:hover {
     color: #a4a4a4;
 }
 

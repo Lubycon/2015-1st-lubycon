@@ -11,13 +11,12 @@
 }
 .contents_view{
     position:absolute;
-    width:630px;
+    width:100%;
     height:1255px;
     top:40px;
     left:50%;
     margin-left:-468px;
     margin-bottom:30px;
-    background:#fff;
     z-index:3;
     border-radius:5px;
 }
@@ -29,8 +28,9 @@
     background:#08141f;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
+    position: relative;
 }
-.contents_view header h3{
+.contents_view header #contents_title{
     color:#ffffff;
     font-size: 28px;
     padding-left: 22px;
@@ -38,7 +38,7 @@
     height:35px;
     letter-spacing:1px;
 }
-.contents_view header h4{
+.contents_view header #contents_price{
     color:#ffffff;
     font-size:17px;
     font-weight:200;
@@ -73,16 +73,9 @@
 }
 .contents_view .contents_img{
 }
-.contents_view .contents_slide{
-    width: 631px;
-    height:110px;
-    background:#222;
-    color:#fff;
-    text-align:center;
-    line-height:110px;
-}
 .contents_view #comment_box{
-    margin:0px 10px;
+    background:#fff;
+    padding: 10px;
 }
 .contents_view #comment_box #comment_count{
      color:#8d8d8d;
@@ -134,8 +127,6 @@
     position:relative;
     top:30px;
 }
-
-
 
 .contents_view #comment_box #comment_list .comment_div{
     position:relative;
@@ -558,80 +549,28 @@
         }
 
 
-
-  /* contents view slider start */
-  
-#contents_view_slider{
-    position: relative;
-    margin: 0px auto;
-    top: 0px;
-    left: 0px;
-    width:610px;
-    height:110px;
-    background: #000 none repeat scroll 0% 0%;
-    padding: 20px 10px;
-}
-.slides {
-    position: absolute;
-    left: 10px;
-    top: 30px;
-    width: 610px;
-    height: 90px;
-    overflow: hidden;
-}
-    .slides ul
-    {
-       width:545px;
-       margin:0px auto;
-
-    }
-    .slides ul li {
-        float:left;
-        margin:0px 7px;
-        padding:0px;
-        display:inline-block;
-    }
-
-    .slides ul li img
-    {
-        width:95px;
-
-    }
 /* slider body */
+#con_view_slider
+{
+    position: relative; top: 0px; left: 0px; width: 600px; height: 300px;
+}
+#con_view_slider #outer_div
+{
+    cursor: default; position: absolute; left: 0px; top: 0px; width: 600px; height: 300px; overflow: hidden;
+}
+
+
 
 /* slider arrow */
-
-.slider_arrow_left, .slider_arrow_right {
+.arrow_left ,.arrow_right
+{
     display: block;
     position: absolute;
-    width: 30px;
-    height: 46px;
+    /* size of arrow element */
+    width: 55px;
+    height: 55px;
     cursor: pointer;
+    background: #fff;
     overflow: hidden;
 }
-
-    .slider_arrow_left i, .slider_arrow_right i {
-        font-size: 55px;
-        color: #7d7d7d;
-    }
-
-.slider_arrow_left {
-    top: 43px;
-    left: 13px;
-}
-
-.slider_arrow_right {
-    top: 43px;
-    right: -18px;
-}
-
-.slider_arrow_left i:hover {
-    color: #a4a4a4;
-}
-
-.slider_arrow_right i:hover {
-    color: #a4a4a4;
-}
-
 /* slider arrow */
-/* contents view slider end */

@@ -12,9 +12,9 @@
     <meta name="keywords" content="font ,vector, 3D design, community, designers, engineer, 3D printer, Illustration, Lubycon" />
 
     <title>LUBYCON</title>
-    <link rel="shortcut icon" href="CH/img/logo/lubycon.ico" />  <!-- favicon -->
-    <!--<link href="http://fonts.googleapis.com/css?family=Exo+2:400" rel="stylesheet" type="text/css" />-->
-    <link href='http://fonts.googleapis.com/css?family=Source Sans Pro:200,400' rel='stylesheet' type='text/css' />	<!--google web font-->
+
+    <link rel="shortcut icon" href="CH/img/logo/lubycon.ico" /> <!-- favicon -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source Sans Pro:200,400" type="text/css" />	<!--google web font-->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" /> <!--icon font-->
 
     <link href="css/layout/normalize.css" rel="stylesheet" type="text/css" />  <!-- web normalize -->
@@ -22,15 +22,13 @@
     <link href="css/index.css" rel="stylesheet" type="text/css" />  <!-- index file css -->
     <link href="css/selectordie.css" rel="stylesheet" type="text/css" /> <!-- selector decoration css -->
     <link href="css/layout/animate.css" rel="stylesheet" type="text/css" />
+    <link href="css/slider.css" rel="stylesheet" type="text/css">
 
     <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script> <!-- jquery library -->
-    <script type="text/javascript" src="js/index.js"></script> <!-- index file js -->
-
     <script type="text/javascript" src="js/selectordie.min.js"></script> <!-- selector decoration js -->
     <script type="text/javascript" src="js/selectordie.demo.js"></script> <!-- selector decoration js -->
-
-    <link href="css/slider.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="js/slider.js"></script>
+    <script type="text/javascript" src="js/slider.js"></script><!--slider plugin-->
+    <script type="text/javascript" src="js/index.js"></script> <!-- index file js -->
 
       <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -213,6 +211,5 @@
     
     <footer id="footer"></footer>   <!--end footer-->
 </body>
-
 
 </html>
