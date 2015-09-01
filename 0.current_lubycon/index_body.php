@@ -5,7 +5,6 @@
 <!-- end main_figure -->
 
 
-<link href="css/slider.css" rel="stylesheet" type="text/css">
 <!-- main slider js -->
 <!-- index page slider plugin -->
 <script>

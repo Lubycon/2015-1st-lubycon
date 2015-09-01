@@ -22,6 +22,7 @@
     <link href="css/index.css" rel="stylesheet" type="text/css" />  <!-- index file css -->
     <link href="css/selectordie.css" rel="stylesheet" type="text/css" /> <!-- selector decoration css -->
     <link href="css/layout/animate.css" rel="stylesheet" type="text/css" />
+    <link href="css/slider.css" rel="stylesheet" type="text/css">
 
     <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script> <!-- jquery library -->
     <script type="text/javascript" src="js/selectordie.min.js"></script> <!-- selector decoration js -->
