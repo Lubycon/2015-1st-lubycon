@@ -6,7 +6,6 @@
 
 
 <link href="css/slider.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="js/slider.js"></script>
 <!-- main slider js -->
 <!-- index page slider plugin -->
 <script>
