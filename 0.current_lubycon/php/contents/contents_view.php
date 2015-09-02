@@ -25,12 +25,12 @@
                 </div>
             </header>
             <figure class="contents_img">
-                <img src="ch/img/contents/contents.jpg" width="630" />
+                <img class="inner_img" src="ch/img/contents/contents.jpg" />
             </figure>
 
                 <div id="slider1_container">
                     <!-- Slides Container -->
-                    <div class="slider1_showbox" u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 630px; height: 100px; overflow: hidden;">
+                    <div class="slider1_showbox" u="slides" style="cursor: default; position: absolute; left: 0px; top: 0px; width: 630px; height: 100px; overflow: hidden;">
                         <div><ul class="slider_img_box">
                             <li class="slider_img"><img u="image" src="CH/img/slider/slider1/1.png" /></li>
                             <li class="slider_img"><img u="image" src="CH/img/slider/slider1/2.png" /></li>
