@@ -27,40 +27,41 @@
             <figure class="contents_img">
                 <img class="inner_img" src="ch/img/contents/contents.jpg" />
             </figure>
-
-                <div id="slider1_container">
-                    <!-- Slides Container -->
-                    <div class="slider1_showbox" u="slides" style="cursor: default; position: absolute; left: 0px; top: 0px; width: 630px; height: 100px; overflow: hidden;">
-                        <div><ul class="slider_img_box">
-                            <li class="slider_img"><img u="image" src="CH/img/slider/slider1/1.png" /></li>
-                            <li class="slider_img"><img u="image" src="CH/img/slider/slider1/2.png" /></li>
-                            <li class="slider_img"><img u="image" src="CH/img/slider/slider1/3.png" /></li>
-                            <li class="slider_img"><img u="image" src="CH/img/slider/slider1/4.png" /></li>
-                            <li class="slider_img"><img u="image" src="CH/img/slider/slider1/5.png" /></li>
-                        </ul></div>
-                        <div><ul class="slider_img_box">
-                            <li class="slider_img"><img u="image" src="CH/img/slider/slider2/1.png" /></li>
-                            <li class="slider_img"><img u="image" src="CH/img/slider/slider2/2.png" /></li>
-                            <li class="slider_img"><img u="image" src="CH/img/slider/slider2/3.png" /></li>
-                            <li class="slider_img"><img u="image" src="CH/img/slider/slider2/4.png" /></li>
-                            <li class="slider_img"><img u="image" src="CH/img/slider/slider2/5.png" /></li>
-                        </ul></div>
-                        <div><ul class="slider_img_box">
-                            <li class="slider_img"><img u="image" src="CH/img/slider/slider3/1.png" /></li>
-                            <li class="slider_img"><img u="image" src="CH/img/slider/slider3/2.png" /></li>
-                            <li class="slider_img"><img u="image" src="CH/img/slider/slider3/3.png" /></li>
-                            <li class="slider_img"><img u="image" src="CH/img/slider/slider3/4.png" /></li>
-                            <li class="slider_img"><img u="image" src="CH/img/slider/slider3/5.png" /></li>
-                        </ul></div>
+                <div id="slider1_bg">
+                    <div id="slider1_container">
+                        <!-- Slides Container -->
+                        <div class="slider1_showbox" u="slides" style="cursor: default; position: absolute; left: 0px; top: 0px; width: 630px; height: 100px; overflow: hidden;">
+                            <div><ul class="slider_img_box">
+                                <li class="slider_img"><img u="image" src="CH/img/slider/slider1/1.png" /></li>
+                                <li class="slider_img"><img u="image" src="CH/img/slider/slider1/2.png" /></li>
+                                <li class="slider_img"><img u="image" src="CH/img/slider/slider1/3.png" /></li>
+                                <li class="slider_img"><img u="image" src="CH/img/slider/slider1/4.png" /></li>
+                                <li class="slider_img"><img u="image" src="CH/img/slider/slider1/5.png" /></li>
+                            </ul></div>
+                            <div><ul class="slider_img_box">
+                                <li class="slider_img"><img u="image" src="CH/img/slider/slider2/1.png" /></li>
+                                <li class="slider_img"><img u="image" src="CH/img/slider/slider2/2.png" /></li>
+                                <li class="slider_img"><img u="image" src="CH/img/slider/slider2/3.png" /></li>
+                                <li class="slider_img"><img u="image" src="CH/img/slider/slider2/4.png" /></li>
+                                <li class="slider_img"><img u="image" src="CH/img/slider/slider2/5.png" /></li>
+                            </ul></div>
+                            <div><ul class="slider_img_box">
+                                <li class="slider_img"><img u="image" src="CH/img/slider/slider3/1.png" /></li>
+                                <li class="slider_img"><img u="image" src="CH/img/slider/slider3/2.png" /></li>
+                                <li class="slider_img"><img u="image" src="CH/img/slider/slider3/3.png" /></li>
+                                <li class="slider_img"><img u="image" src="CH/img/slider/slider3/4.png" /></li>
+                                <li class="slider_img"><img u="image" src="CH/img/slider/slider3/5.png" /></li>
+                            </ul></div>
+                        </div>
+                        <!-- Arrow Left -->
+                        <span u="arrowleft" class="arrow_left" style="top: 40px; left: 8px;">
+                            <i class="fa fa-angle-left"></i>
+                        </span>
+                        <!-- Arrow Right -->
+                        <span u="arrowright" class="arrow_right" style="top: 40px; right: -665px;">
+                            <i class="fa fa-angle-right"></i>
+                        </span>
                     </div>
-                    <!-- Arrow Left -->
-                    <span u="arrowleft" class="arrow_left" style="top: 40px; left: 8px;">
-                        <i class="fa fa-angle-left"></i>
-                    </span>
-                    <!-- Arrow Right -->
-                    <span u="arrowright" class="arrow_right" style="top: 40px; right: -665px;">
-                        <i class="fa fa-angle-right"></i>
-                    </span>
                 </div>
                 <!-- end contents slider-->
                 <article id="comment_box">
