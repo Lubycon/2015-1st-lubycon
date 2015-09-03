@@ -45,6 +45,38 @@ a {
 /*CSS RESET*/
 /* class */
 /* class */
+/*-------------------------------------------------------scroll bar start*/
+/*chrome*/
+::-webkit-scrollbar {
+    display:none;
+}
+/*::-webkit-scrollbar-button {}
+::-webkit-scrollbar-track {}
+::-webkit-scrollbar-track-piece {}
+::-webkit-scrollbar-thumb {}
+::-webkit-scrollbar-corner {}
+::-webkit-resizer {}*/
+
+
+/*IE*/
+body{
+    -ms-overflow-style: none;
+    /*scrollbar-face-color: #fff; 
+    scrollbar-highlight-color: #fff;
+    scrollbar-shadow-color: #fff; 
+    scrollbar-3dlight-color: #fff;
+    scrollbar-arrow-color: #fff; 
+    scrollbar-track-color: #fff;
+    scrollbar-darkshadow-color: #fff;*/
+}
+
+/*moz*/
+::-moz-scrollbar {
+    display: none;
+}/*It does not working. we should use bug#77790 for mozila FF
+
+/*----------------------------------------------------------scroll bar end*/
+
 
 /* main header start */
 
