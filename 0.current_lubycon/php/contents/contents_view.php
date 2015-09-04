@@ -61,11 +61,11 @@
                             </div>
                         </div>
                         <!-- Arrow Left -->
-                        <span u="arrowleft" class="arrow_left" style="top: 40px; left: -13px;">
+                        <span u="arrowleft" class="arrow_left">
                             <i class="fa fa-angle-left"></i>
                         </span>
                         <!-- Arrow Right -->
-                        <span u="arrowright" class="arrow_right" style="top: 40px; right: -644px;">
+                        <span u="arrowright" class="arrow_right">
                             <i class="fa fa-angle-right"></i>
                         </span>
                     </div>
@@ -73,7 +73,6 @@
                 
                 <article id="comment_box">
                     <div id="comment_writer">
-                        <p id="comment_count">12 Comments</p>
                         <div id="comment_text_box">
                             <textarea id="comment_text">You Must Sign in First</textarea>
                             <button id="comment_bt">
@@ -83,6 +82,7 @@
                     </div>
                     
                     <div id="comment_list">
+                        <p id="comment_count">12 Comments</p>
                         <div class="comment_div">
                             <figure class="comment_pic">
                                 <img src="ch/img/designer_img.png">
@@ -98,6 +98,22 @@
                             <h4>ABC MART</h4>
                             <p class="comment_contents">i love vans daniel thanx upload photo</p>
                             <p class="comment_time">10 minute ago</p>
+                        </div>
+                        <div class="comment_div">
+                            <figure class="comment_pic">
+                                <img src="ch/img/designer_img.png">
+                            </figure>
+                            <h4>idiot ZEPOT</h4>
+                            <p class="comment_contents">what the fucking shoes ruber smell?? piss off</p>
+                            <p class="comment_time">13 minute ago</p>
+                        </div>
+                        <div class="comment_div">
+                            <figure class="comment_pic">
+                                <img src="ch/img/designer_img.png">
+                            </figure>
+                            <h4>idiot ZEPOT</h4>
+                            <p class="comment_contents">what the fucking shoes ruber smell?? piss off</p>
+                            <p class="comment_time">13 minute ago</p>
                         </div>
                         <div class="comment_div">
                             <figure class="comment_pic">
