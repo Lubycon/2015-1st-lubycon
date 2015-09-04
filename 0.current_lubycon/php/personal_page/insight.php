@@ -17,18 +17,27 @@
     <section id="insight_box">
         <div id="graph_ul">
             <div class="graph_box">
-                <div class="graph_title">UPLOAD</div>
-                <svg id="graph1" width="700" height="400"></svg><!--graph1-->
+                <div class="graph_title">
+                    <i class="fa fa-upload" id="upload_icon"></i>
+                    <p class="graph_title_text">UPLOAD</p>
+                </div>
+                <svg id="graph1" width="500" height="200"></svg><!--graph1-->
             </div>
 
             <div class="graph_box">
-                <div class="graph_title">DOWNLOAD</div>
-                <svg id="graph2" width="700" height="400"></svg><!--graph2-->
+                <div class="graph_title">
+                    <i class="fa fa-download" id="down_icon"></i>
+                    <p class="graph_title_text">DOWNLOAD</p>
+                </div>
+                <svg id="graph2" width="500" height="200"></svg><!--graph2-->
             </div>
 
             <div class="graph_box">
-                <div class="graph_title">LIKE</div>
-                <svg id="graph3" width="700" height="400"></svg><!--graph3-->
+                <div class="graph_title">
+                    <i class="fa fa-heart" id="like_icon"></i>
+                    <p class="graph_title_text">LIKE</p>      
+                </div>
+                <svg id="graph3" width="500" height="200"></svg><!--graph3-->
             </div>
 
             <div id="tooltip">

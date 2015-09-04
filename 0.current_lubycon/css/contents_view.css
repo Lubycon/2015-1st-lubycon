@@ -8,6 +8,7 @@
     left:0;
     z-index:3;
     display:block;
+    cursor:pointer;
 }
 .contents_view{
     position:absolute;
@@ -17,7 +18,7 @@
 }
     .contents_box_total
     {
-        width:88%;
+        width:86%;
         max-width:1646px;
         min-width:1200px;
         display:block;

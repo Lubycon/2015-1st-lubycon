@@ -167,8 +167,8 @@ var vis = d3.select('#graph1'),
     vis2 = d3.select('#graph2'),
     vis3 = d3.select('#graph3'),
     
-    WIDTH = 700,
-    HEIGHT = 350,
+    WIDTH = 480,
+    HEIGHT = 200,
     MARGINS = {
         top: 20,
         right: 20,
@@ -176,7 +176,7 @@ var vis = d3.select('#graph1'),
         left: 50
     },
 
-    xScale = d3.scale.linear().domain([1,12]).range([MARGINS.left, WIDTH - MARGINS.right]),
+    xScale = d3.scale.linear().domain([1,12]).range([MARGINS.left, WIDTH - MARGINS.right]),//input=domain output=range
     yScale = d3.scale.linear().domain([0,max_uv*1.2]).range([HEIGHT - MARGINS.top, MARGINS.bottom]),
     yScale2 = d3.scale.linear().domain([0,max_dv*1.2]).range([HEIGHT - MARGINS.top, MARGINS.bottom]),
     yScale3 = d3.scale.linear().domain([0,max_lv*1.2]).range([HEIGHT - MARGINS.top, MARGINS.bottom]),
@@ -196,7 +196,7 @@ var vis = d3.select('#graph1'),
 //////////////////chart ready///////////////////////
 //////////////////make guide line///////////////////
 
-vis.append("g")
+vis.append("g")//g is group tag
     .attr("class","axis")
     .attr("transform","translate(0,"+(HEIGHT-MARGINS.bottom)+")")
     .call(xAxis);
@@ -343,7 +343,7 @@ vis.selectAll("svg")
     .attr('class', 'datapoint')
     .attr('cx', function(d,i) { return xScale(d.month); })
     .attr('cy', function(d,i) { return yScale(d.value); })
-    .attr('r', 5)
+    .attr('r', 4)
     .attr('index', function(d,i){ return i})
     .attr('fill', 'white')
     .attr('stroke', '#48cfad')
@@ -353,7 +353,7 @@ vis.selectAll("svg")
         d3.select(this).transition()//animation for circle
             .delay(0)
             .duration(300)
-            .attr('r',10);                     
+            .attr('r',6);                     
 
 
             var value_both = d3.select('div.value');
@@ -416,7 +416,7 @@ vis.selectAll("svg")
          d3.select(this).transition()
             .delay(0)
             .duration(500)
-            .attr('r',5);
+            .attr('r',4);
 
         $('#tooltip').stop().fadeOut(200);
 
@@ -429,7 +429,7 @@ vis2.selectAll("svg")
     .attr('class', 'datapoint')
     .attr('cx', function(d,i) { return xScale(d.month); })
     .attr('cy', function(d,i) { return yScale2(d.value); })
-    .attr('r', 5)
+    .attr('r', 4)
     .attr('index', function(d,i){ return i})
     .attr('fill', 'white')
     .attr('stroke', '#ffbe54')
@@ -439,7 +439,7 @@ vis2.selectAll("svg")
         d3.select(this).transition()//animation for circle
             .delay(0)
             .duration(300)
-            .attr('r',10);                     
+            .attr('r',6);                     
 
 
             var value_both = d3.select('div.value');
@@ -503,7 +503,7 @@ vis2.selectAll("svg")
          d3.select(this).transition()
             .delay(0)
             .duration(500)
-            .attr('r',5);
+            .attr('r', 4);
 
         $('#tooltip').stop().fadeOut(200);
 
@@ -516,7 +516,7 @@ vis3.selectAll("svg")
     .attr('class', 'datapoint')
     .attr('cx', function(d,i) { return xScale(d.month); })
     .attr('cy', function(d,i) { return yScale3(d.value); })
-    .attr('r', 5)
+    .attr('r', 4)
     .attr('index', function(d,i){ return i})
     .attr('fill', 'white')
     .attr('stroke', '#488ccb')
@@ -526,7 +526,7 @@ vis3.selectAll("svg")
         d3.select(this).transition()//animation for circle
             .delay(0)
             .duration(300)
-            .attr('r',10);                     
+            .attr('r',6);                     
 
 
             var value_both = d3.select('div.value');
@@ -589,7 +589,7 @@ vis3.selectAll("svg")
          d3.select(this).transition()
             .delay(0)
             .duration(500)
-            .attr('r',5);
+            .attr('r',4);
 
         $('#tooltip').stop().fadeOut(200);
 

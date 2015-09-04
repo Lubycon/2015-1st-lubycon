@@ -7,6 +7,7 @@
 {
     width:100%;
     max-width:1600px;
+    min-width:1200px;
     margin:0px auto;
     margin-top:50px;
     margin-bottom:50px;
@@ -21,32 +22,66 @@
 
 .graph_box
 {
-    width:730px;
-    height:450px;
+    width:900px;
+    height:200px;
     position: relative;
-    display: inline-block;
+    display: block;
     margin:20px;
     border:1px solid #333;
+    border-radius: 3px;
 }
     .graph_title
     {
-        width:100%;
-        height: 50px;
-        line-height: 50px;
-
+        width:140px;
+        height: 100%;
+        line-height: 40px;
         background: rgba(0,0,0,0.7);
-        
         text-align: center;
-        color:#ffffff;
-        font-size:20px;
-        font-weight: 200;
+        float: left;
     }
+        .graph_title i
+        {
+            width:70px;
+            height:70px;
+            line-height: 70px;
+            display:block;
+            margin:0px auto;
+            margin-top: 50px;
+            border-radius: 50%;
+            color:#ffffff;
+            font-size:45px;
+            font-weight: 200;
+
+        }
+            #upload_icon
+            {
+                background: #48cfad;
+                -webkit-text-stroke:1px #48cfad;
+            }
+            #down_icon
+            {
+                background: #ffbe54;
+                -webkit-text-stroke:1px #ffbe54;
+            }
+            #like_icon
+            {
+                background: #488ccb;
+                -webkit-text-stroke:1px #488ccb;
+                font-size:40px;
+                line-height:77px;
+            }
+        .graph_title_text
+        {
+            display:block;
+            color:#ffffff;
+            font-size:20px;
+            font-weight: 200;
+        }
     
 
     #graph1,#graph2,#graph3
     {
         display:block;
-        margin:0px auto;
     }
 
         .axis path
@@ -59,6 +94,7 @@
         {
             font-family: Lato;
             font-size: 13px;
+            display:none;
         }
 
 
