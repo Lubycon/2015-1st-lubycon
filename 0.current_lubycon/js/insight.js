@@ -293,7 +293,7 @@ vis.append('svg:path')
     .attr('d', lineGen(upload_data))
     .attr('class','up_graph_line')
     .attr('stroke','#48cfad')
-    .attr('stroke-width','2')
+    .attr('stroke-width','1')
     .attr('fill','none');
 
 vis.append('svg:path')
@@ -309,7 +309,7 @@ vis2.append('svg:path')
     .attr('d', lineGen2(download_data))
     .attr('class','down_graph_line')
     .attr('stroke','#ffbe54')
-    .attr('stroke-width','2')
+    .attr('stroke-width','1')
     .attr('fill','none');
 
 vis2.append('svg:path')
@@ -324,7 +324,7 @@ vis3.append('svg:path')
     .attr('d', lineGen3(like_data))
     .attr('class','like_graph_line')
     .attr('stroke','#488ccb')
-    .attr('stroke-width','2')
+    .attr('stroke-width','1')
     .attr('fill','none');
 
 vis3.append('svg:path')
