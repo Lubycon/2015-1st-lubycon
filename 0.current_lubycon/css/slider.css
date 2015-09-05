@@ -31,6 +31,8 @@
         margin:0px;
         padding:0px;
         cursor:pointer;
+        width: 196px;
+        height: 186px;
     }
 
     #slide_section  .slides ul li:hover
