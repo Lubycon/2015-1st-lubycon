@@ -6,11 +6,12 @@
 #editer_gnv
 {
     height:65px;
-    border-bottom:1px solid #cdcdcd;
     margin-top:50px;
     padding:0px 20px;
     position:relative;
-    box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2);
+    background:#666666;
+    z-index: 1;
 }
     #editer_gnv ol 
     {
@@ -23,7 +24,7 @@
             line-height:65px;
             margin-right:15px;
             float:left;
-            color:#353535;
+            color:#ffffff;
             font-size: 26px;
             font-weight: 200;
             letter-spacing: 1px;
@@ -49,15 +50,26 @@
         font-weight: 200;
         font-size: 20px;
     }
+#editer_inbody
+{
+    width:100%;
+    position:relative;
+    display: inline-block;
+    background: #333333;
+}
+
+
+
+
 #editer_body
 {
     max-width:1600px;
-    min-width:1200px;
+    min-width:580px;
     margin:0px auto;
-    min-height:600px;
     text-align:center;
-    background:#fbfbfb;
-    padding-top: 50px;
+    background:#333333;
+    padding: 50px 0px;
+    display: block;
 }
 
 
@@ -65,16 +77,22 @@
 
 #editer_aside
 {
-    margin-left: 50px;
+    width:260px;
+    height: 100%;
+    padding:20px;
+    background:#444444;
     position: relative;
-    float:left;
+    display: inline-block;
+    box-shadow: 2px 3px 9px 0px rgba(0,0,0,0.3);
+    float: left;
 }
     #editer_aside ol 
     {
         width:246px;
         border-top:25px solid #737373;
         border-radius: 3px;
-        margin-bottom:30px;
+        margin:30px auto;
+        box-shadow:0px 2px 2px 0px rgba(0,0,0,0.3);
     }
         
         #editer_aside ol li 
@@ -89,6 +107,7 @@
             color:#444444;
             cursor:pointer;
             font-weight: 200;
+            position:relative;
         }
             #editer_aside ol li:last-child
             {
@@ -97,7 +116,7 @@
             }
             #editer_aside ol li i {
                 position:absolute;
-                left: 20px;
+                left: 32px;
                 margin-top: 8px;
                 font-size: 33px;
                 width: 45px;
@@ -248,7 +267,6 @@
 #editer_section 
 {
     box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.2);
-    border: 1px solid #E6E6E6;
     border-radius: 5px;
     display: inline-block;
     vertical-align: top;
@@ -478,7 +496,7 @@
     width: 100%;
     height: 200px;
     background: #222;
-    margin-top: 140px;
+    margin-top:0px !important;
 }
 
 
@@ -496,6 +514,7 @@
     margin-top:-113px;
     background:#fff;
     z-index:5;
+    border-radius:3px;
 }
     #embed_popup p 
     {
@@ -515,6 +534,10 @@
         margin-left:25px;
         margin-top:15px;
     }
+        #embed_popup textarea:focus
+        {
+            border:1px solid #48cfad;
+        }
     #embed_popup #embed_bt,#cancel_bt
     {
         width:85px;
@@ -529,6 +552,8 @@
         color:#fff;
         background:#48cfad;
         margin-left:190px;
+        border-radius: 3px;
+        box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2);
     }
     #embed_popup #cancel_bt 
     {

@@ -19,7 +19,7 @@
     </ol>
     <button>Next</button>
 </nav>
-<section id="editer_body">
+<section id="editer_inbody">
     <aside id="editer_aside">
         <ol>
             <li id="editer_upload_file"><i class="fa fa-cloud-upload"></i>Upload Files</li>
@@ -32,7 +32,6 @@
             <li id="add_text"><i class="fa fa-font"></i>Add Text</li>
             <li id="embed_media"><i class="fa fa-code"></i>Embed Media</li>
         </ol>
-
         <div id="file_info">
             <header id="info_header">File info<i class="fa fa-angle-down" id="info_toggle"></i></header>
             <section id="files">
@@ -51,24 +50,26 @@
                 <p>1.2 MB</p>
             </footer>
         </div>
-
     </aside>
-    <!-- drag able script aply code -->
-    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
-    <script>
-        $(function () {
-            $("#editer_preview_box").sortable({
-                revert: true
+    <section id="editer_body">
+        
+        <!-- drag able script aply code -->
+        <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+        <script>
+            $(function () {
+                $("#editer_preview_box").sortable({
+                    revert: true
+                });
             });
-        });
-    </script>
-    <!-- drag able script aply code -->
+        </script>
+        <!-- drag able script aply code -->
 
-    <section id="editer_section">
-        <p>
-            <input type="text" value="Your Contents Name" />
-        </p>
-        <ul id="editer_preview_box">
-        </ul>
+        <section id="editer_section">
+            <p>
+                <input type="text" value="Your Contents Name" />
+            </p>
+            <ul id="editer_preview_box">
+            </ul>
+        </section>
     </section>
 </section>

@@ -1213,18 +1213,16 @@ $(function () {
 $(function () {
     $('#editer_aside ol li').hover(function () //aside li mouse hover event
     {
-        $(this).css({ "background": "#48cfad", "color": "#fff" });
-        $(this).children('i').css({ "color": "#fff" });
+        $(this).css({ "background": "#eeeeee", "color": "#48cfad" });
+        $(this).children('i').css({ "color": "#48cfad" });
     }, function () {
-        $(this).css({ "background": "#fff", "color": "#2f2f2f" });
-        $(this).children('i').css({ "color": "#646464" });
+        $(this).css({ "background": "#fff", "color": "#444444" });
+        $(this).children('i').css({ "color": "#444444" });
     });
 
 /////////////////////////////////////////////////////////
 //      editer nav end
 /////////////////////////////////////////////////////////
-
-
     /////////////////////////////////////////////////////////
     //      img crop start
     /////////////////////////////////////////////////////////
