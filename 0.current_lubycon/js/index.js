@@ -1231,6 +1231,7 @@ $(function () {
         if ($(this).css('border') == '1px solid rgb(255, 255, 255)')
         {
             $('.preview_img').css({ "background": "rgb(255, 255, 255)" }); //css reset
+            $('.preview_img').css({ "box-shadow": "0px 0px 5px rgba(81, 203, 238, 1)"});
             $('.preview_img').removeAttr('id'); // remove all id
 
             $(this).css({ "border": "1px solid #48cfad" });
@@ -1240,6 +1241,7 @@ $(function () {
         } else
         {
             $(this).css({ "border": "1px solid #ffffff" });
+            $('.preview_img').css({ "box-shadow": "none"});
             $('#img_crop').addClass('img_crop_notallow'); //img crop bt disable
         }
     });
@@ -1330,7 +1332,7 @@ $(function () {
     {
         var text_editer =
             '<li class="text_editer">'+
-                    '<div class="contents_div">'+
+                    '<div id="text_contents_div" class="contents_div">'+
                         '<button class="con_delete_bt"><i class="fa fa-times"></i></button>'+
                         '<textarea class="editer_body_text"></textarea>'+
                         '<div class="textarea_editer">'+
