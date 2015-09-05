@@ -1,22 +1,27 @@
 ﻿@charset "utf-8";
+body{
+    background:#333333;
+}
 #main_search_bar
 {
     display:none !important;
 }
 #editer_gnv
 {
+    width:100%;
+    min-width: 1200px;
     height:65px;
     margin-top:50px;
-    padding:0px 20px;
-    position:relative;
+    position:fixed;
     box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2);
     background:#666666;
     z-index: 1;
 }
     #editer_gnv ol 
     {
-        width:800px;
+        display: inline-block;
         height:65px;
+        margin-left:20px;
     }
         #editer_gnv ol li
         {       
@@ -54,18 +59,16 @@
 {
     width:100%;
     position:relative;
-    display: inline-block;
     background: #333333;
+    top:115px;
 }
-
-
 
 
 #editer_body
 {
     max-width:1600px;
     min-width:580px;
-    margin:0px auto;
+    margin-left: 300px;
     text-align:center;
     background:#333333;
     padding: 50px 0px;
@@ -80,11 +83,10 @@
     width:260px;
     height: 100%;
     padding:20px;
+    top:115px;
     background:#444444;
-    position: relative;
-    display: inline-block;
+    position: fixed;
     box-shadow: 2px 3px 9px 0px rgba(0,0,0,0.3);
-    float: left;
 }
     #editer_aside ol 
     {
@@ -151,6 +153,7 @@
         text-align:left;
         margin:0px auto;
         margin-top: 34px;
+        margin-bottom: 30px;
         box-shadow:0px 2px 2px 0px rgba(0,0,0,0.3);
     }
         #file_info #info_header{
@@ -272,6 +275,10 @@
     vertical-align: top;
     text-align:center;
     overflow:hidden;
+    margin:50px;
+
+    max-width:1100px;
+    min-width:630px;
     
 }
     #editer_section p 
@@ -304,16 +311,21 @@
 
     #editer_preview_box
     {
-        max-width:1200px;
-        min-width:500px;
+        max-width:1100px;
+        min-width:630px;
+        min-height: 120px;
         padding: 30px 40px;
         background:#ffffff;
     }
 
-    #editer_section iframe,img,span
+    #editer_section > iframe,img,span
     {
-        max-width: 1160px;
+       max-width:1100px;
     }
+        .preview_img #contents_div img
+        {
+            width:100% !important;
+        }
 
     .text_editer
     {
@@ -326,7 +338,6 @@
     .contents_div
     {
         display:inline-block;
-        padding:30px;
         position:relative;
         border:1px solid #fff;
         background:rgba(255,255,255,0.5);
@@ -497,6 +508,7 @@
     height: 200px;
     background: #222;
     margin-top:0px !important;
+    display:none;
 }
 
 
