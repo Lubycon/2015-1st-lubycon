@@ -7,9 +7,10 @@
 {
     height:65px;
     border-bottom:1px solid #cdcdcd;
-    margin:50px 0px;
+    margin-top:50px;
     padding:0px 20px;
     position:relative;
+    box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.2);
 }
     #editer_gnv ol 
     {
@@ -17,32 +18,35 @@
         height:65px;
     }
         #editer_gnv ol li
-        {
-            
+        {       
             height:65px;
             line-height:65px;
             margin-right:15px;
             float:left;
             color:#353535;
             font-size: 26px;
+            font-weight: 200;
             letter-spacing: 1px;
         }
         .editer_selected_gnv
         {
             color:#48cfad !important;
+            font-weight: 400 !important;
         }
 
     #editer_gnv button 
     {
         position: absolute;
         top: 13px;
-        right: 60px;
-        width: 110px;
+        right: 15px;
+        width: 136px;
         height: 40px;
         border: none;
         border-radius: 3px;
+        box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2);
         background: #48cfad;
         color: #fff;
+        font-weight: 200;
         font-size: 20px;
     }
 #editer_body
@@ -52,6 +56,8 @@
     margin:0px auto;
     min-height:600px;
     text-align:center;
+    background:#fbfbfb;
+    padding-top: 50px;
 }
 
 
@@ -65,22 +71,30 @@
 }
     #editer_aside ol 
     {
-        width:240px;
+        width:246px;
         border-top:25px solid #737373;
         border-radius: 3px;
         margin-bottom:30px;
     }
+        
         #editer_aside ol li 
         {
             height:50px;
             line-height:50px;
             border:1px solid #e6e6e6;
+            background: #fff;
             margin-bottom:-1px;
             text-align:center;
             padding-left:35px;
-            color:#2f2f2f;
+            color:#444444;
             cursor:pointer;
+            font-weight: 200;
         }
+            #editer_aside ol li:last-child
+            {
+                border-bottom-left-radius: 3px;
+                border-bottom-right-radius: 3px;
+            }
             #editer_aside ol li i {
                 position:absolute;
                 left: 20px;
@@ -112,11 +126,13 @@
 
         
     #file_info{
-        width: 240px;
-        background: #444444;
-        margin-top: 40px;
+        width: 246px; 
         border-radius: 3px;
         overflow: hidden;
+        text-align:left;
+        margin:0px auto;
+        margin-top: 34px;
+        box-shadow:0px 2px 2px 0px rgba(0,0,0,0.3);
     }
         #file_info #info_header{
             width: 100%;
@@ -127,11 +143,17 @@
             color:#fff;
             font-size:16px;
             text-align: center;
+            padding-left: 43px;
+            font-weight:200;
         }
+            #info_toggle{
+                color:#ffffff;
+                padding-left: 70px;
+            }
 
         #file_info #files{
             width: 100%;
-            min-height: 118px;
+            display:none;
         }
 
             #files #file_name
@@ -140,7 +162,7 @@
                 height: 30px;
                 line-height: 30px;
 
-                background: #444444;
+                background: #555555;
             }
 
                 #file_name p
@@ -198,9 +220,10 @@
             }
 
                 #files ul li:hover
-                {
-                    background:#48cfad;
-                }
+                    {
+                        background:rgba(72,207,173,0.8);/*#48cfad*/
+                    }
+
 
         #storage
         {
@@ -208,7 +231,7 @@
             height: 23px;
             line-height: 23px;
 
-            background: #444444;
+            background: #555555;
             text-align: right;
 
         }
@@ -217,40 +240,56 @@
                 font-size:14px;
                 color:#fff;
                 margin-right:10px;
+                font-weight: 200;
             }
+
+
 
 #editer_section 
 {
     box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.2);
     border: 1px solid #E6E6E6;
-    border-radius: 3px;
+    border-radius: 5px;
     display: inline-block;
     vertical-align: top;
     text-align:center;
+    overflow:hidden;
     
 }
     #editer_section p 
     {
-        height:60px;
-        line-height:60px;
-        background:#c1c1c1;
+        height:80px;
+        line-height:70px;
+        background:#444444;
     }
     #editer_section p input
     {
         background:none;
         border:none;
-        margin-left: 20px;
+        border-radius: 3px;
+        margin: 5px 30px 5px 20px;
         font-size: 35px;
+        font-weight: 200;
         line-height: 60px;
-        padding: 0px;
-        color: #2E2E2E;
+        padding: 5px;
+        color: #ffffff;
         float: left;
     }
+        #editer_section p input:hover
+        {
+            background:#666666;
+        }
+        #editer_section p input:focus
+        {
+            background:#666666
+        }
 
     #editer_preview_box
     {
         max-width:1200px;
+        min-width:500px;
         padding: 30px 40px;
+        background:#ffffff;
     }
 
     #editer_section iframe,img,span
@@ -263,8 +302,7 @@
         position:relative;
         padding:25px 0px;
         min-height: 110px;
-        cursor:move;        
-
+        cursor:move;   
     }
 
     .contents_div
@@ -274,6 +312,10 @@
         position:relative;
         border:1px solid #fff;
         background:rgba(255,255,255,0.5);
+    }
+    .text_editer > .contents_div
+    {
+        border-radius: 5px;
     }
 
     /* selector */
@@ -323,7 +365,8 @@
     /* selector */
     .editer_body_text
     {
-        border:1px dashed #c1c1c1;
+        border:none;
+        border-radius: 3px;
         width:330px;
         max-width:1140px;
         min-width: 330px;
@@ -335,12 +378,12 @@
         text-align: center;
         display: block;
         margin: 10px auto;
-        font-weight:normal;
+        font-weight:200;
     }
-
-    #editer_body_text 
-    {
-    }
+        .editer_body_text:focus
+        {
+            border:1px solid #48cfad;
+        }
 
     .con_move_bt,.con_delete_bt
     {
@@ -355,8 +398,8 @@
         background:#767676;
 
         position:absolute;
-        top:7px;
-        right:3px;
+        top:-13px;
+        right:-12px;
         
         display:none;
     }
@@ -426,7 +469,8 @@
 
             .preview_img 
             {
-                background:#fff;
+                background:#ffffff;
+                border: 1px solid #ffffff;
             }
 
 

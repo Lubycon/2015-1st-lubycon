@@ -34,10 +34,10 @@
         </ol>
 
         <div id="file_info">
-            <header id="info_header">File info</header>
+            <header id="info_header">File info<i class="fa fa-angle-down" id="info_toggle"></i></header>
             <section id="files">
                 <article id="file_name"><i class="fa fa-circle-o"></i>
-                    <p><i class="fa fa-folder-open"></i>Lorem ipsum.zip</p>
+                    <p><i class="fa fa-folder"></i>Lorem ipsum.zip</p>
                 </article>
                 <ul>
                     <li><i class="fa fa-file"></i>ipsum.psd</li>

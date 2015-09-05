@@ -1230,19 +1230,18 @@ $(function () {
     /////////////////////////////////////////////////////////
     $(document).on('click', '.preview_img', function ()
     {
-        if ($(this).css('background-color') == 'rgb(255, 255, 255)')
+        if ($(this).css('border') == '1px solid rgb(255, 255, 255)')
         {
             $('.preview_img').css({ "background": "rgb(255, 255, 255)" }); //css reset
             $('.preview_img').removeAttr('id'); // remove all id
 
-            $(this).css({ "background": "#48CFAD" });
+            $(this).css({ "border": "1px solid #48cfad" });
             $(this).attr('id', 'selected_img');
 
             $('#img_crop').removeClass('img_crop_notallow'); //img crop bt able
         } else
         {
-            $(this).css({ "background": "rgb(255, 255, 255)" });
-
+            $(this).css({ "border": "1px solid #ffffff" });
             $('#img_crop').addClass('img_crop_notallow'); //img crop bt disable
         }
     });
@@ -1567,9 +1566,9 @@ $(function () {
 
     $(document).on('click', '.con_delete_bt', function () //text area delete event
     {
-        $(this).parents('.text_editer').remove();
-        $(this).parents('.embed_contents').remove();
-        $(this).parents('.preview_img').remove();
+        $(this).parents('.text_editer').fadeOut(200, function() { $(this).remove(); });
+        $(this).parents('.embed_contents').fadeOut(200, function() { $(this).remove(); });
+        $(this).parents('.preview_img').fadeOut(200, function() { $(this).remove(); });
     });
 
     /////////////////////////////////////////////////////////
