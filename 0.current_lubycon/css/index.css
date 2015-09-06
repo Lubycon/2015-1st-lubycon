@@ -414,21 +414,3 @@
     background: #222;
     margin-top: 80px;
 }
-
-
-
-/*---------------------------------------------------BETA*/
-#beta_version
-{
-    width: 40px;
-    background:#333;
-    color:#fff;
-    font-weight: 200;
-    text-align: center;
-    border-radius: 3px;
-    padding: 3px 10px;
-    font-size:12px;
-    border:1px solid #444;
-    float: right;
-    margin-top: 10px;
-}
