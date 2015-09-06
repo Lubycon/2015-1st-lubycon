@@ -143,7 +143,7 @@
                 <div id="file_info">
                     <header id="info_header">File info<i class="fa fa-angle-down" id="info_toggle"></i></header>
                     <section id="files">
-                        <article id="file_name"><i class="fa fa-circle-o"></i>
+                        <article id="file_name"><i class="fa fa-chevron-circle-down"></i>
                             <p><i class="fa fa-folder"></i>Lorem ipsum.zip</p>
                         </article>
                         <ul>

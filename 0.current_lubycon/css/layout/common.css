@@ -110,7 +110,8 @@ body{
 
     .editer_popup p {
         font-size: 24px;
-        color: #383838;
+        color: #333333;
+        font-weight: 200;
     }
 
     .editer_popup ul {
@@ -914,6 +915,7 @@ h1 /* main logo */ {
     max-width: 1600px;
     height: 50px;
     margin: 0px auto;
+    overflow:hidden;
 }
 
 .selected_nav{
