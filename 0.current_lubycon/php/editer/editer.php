@@ -1,4 +1,5 @@
 <link href="css/editer.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
 <!-- editer css -->
 <div id="embed_popup">
     <p>Embed Media</p>
@@ -22,16 +23,37 @@
 <section id="editer_inbody">
     <aside id="editer_aside">
         <ol>
-            <li id="editer_upload_file"><i class="fa fa-cloud-upload"></i>Upload Files</li>
-            <li id="editer_preview_upload"><i class="fa fa-picture-o"></i>Upload Preview</li>
+            <li id="editer_upload_file">
+                <i class="fa fa-cloud-upload"></i>
+                <span class="tooltip_bt" id="file_tooltip">Upload file to server</span><!--tooltip-->
+            </li><!--upload file bt-->
+            <li id="editer_preview_upload">
+                <i class="fa fa-picture-o"></i>
+                <span class="tooltip_bt" id="image_tooltip">Upload preview image</span><!--tooltip-->
+            </li><!--upload preview img bt-->
         </ol>
-        <input type="file" id="upload_file_input" />
+        
+        
+        
+        <input type="file" id="upload_file_input"/>
         <input type="file" name="images[]" id="preview_upload_input" accept="image/*" multiple />
+        
         <ol>
-            <li id="img_crop" class="img_crop_notallow"><i class="fa fa-crop"></i>Image Crop</li>
-            <li id="add_text"><i class="fa fa-font"></i>Add Text</li>
-            <li id="embed_media"><i class="fa fa-code"></i>Embed Media</li>
+            <li id="img_crop" class="img_crop_notallow">
+                <i class="fa fa-crop"></i>
+                <span class="tooltip_bt" id="file_tooltip">Image crop tool</span><!--tooltip-->
+            </li>
+            <li id="add_text">
+                <i class="fa fa-font"></i>
+                <span class="tooltip_bt" id="file_tooltip">Text tool</span><!--tooltip-->
+            </li>
+            <li id="embed_media">
+                <i class="fa fa-code"></i>
+                <span class="tooltip_bt" id="file_tooltip">Embed media</span><!--tooltip-->
+            </li>
         </ol>
+        
+
         <div id="file_info">
             <header id="info_header">File info<i class="fa fa-angle-down" id="info_toggle"></i></header>
             <section id="files">
@@ -54,7 +76,6 @@
     <section id="editer_body">
         
         <!-- drag able script aply code -->
-        <script type="text/javascript" src="js/jquery-ui.min.js"></script>
         <script>
             $(function () {
                 $("#editer_preview_box").sortable({
@@ -62,8 +83,6 @@
                 });
             });
         </script>
-        <script type="text/javascript" src="js/spectrum.js"></script>
-        <link rel="stylesheet" href="css/layout/spectrum.css" />
         <!-- drag able script aply code -->
 
         <section id="editer_section">

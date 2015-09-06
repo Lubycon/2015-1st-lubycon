@@ -70,7 +70,13 @@
     <!---------------- common parts start ---------------->
     <!---------------- header start ---------------->
     <header id="main_header">
-        <h1><a href="./index.php"><img src="CH/img/logo/lubycon_logo.svg" width="176" height="40" alt="Lubycon logo" /></a></h1>
+        <h1>
+            <a href="./index.php">
+                <img src="CH/img/logo/lubycon_logo.svg" width="176" height="40" alt="Lubycon logo" />
+            </a>
+            <span id="beta_version">BETA</span>
+        </h1><!--LUBYCON LOGO-->
+
         <nav id="main_gnb">
             <ul id="gnb">
                 <li class="bigsub">

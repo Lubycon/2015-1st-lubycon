@@ -1209,15 +1209,17 @@ $(function () {
 /////////////////////////////////////////////////////////
 //      editer nav start
 /////////////////////////////////////////////////////////
-
 $(function () {
     $('#editer_aside ol li').hover(function () //aside li mouse hover event
     {
-        $(this).css({ "background": "#eeeeee", "color": "#48cfad" });
+        $(this).css({ "background": "#666666"});
         $(this).children('i').css({ "color": "#48cfad" });
+        $(this).children('.tooltip_bt').stop().fadeIn(300).css("display","inline-block");
     }, function () {
-        $(this).css({ "background": "#fff", "color": "#444444" });
-        $(this).children('i').css({ "color": "#444444" });
+        $(this).css({ "background": "#555"});
+        $(this).children('i').css({ "color": "#333333" });
+        $(this).children('.tooltip_bt').stop().fadeOut(300);
+
     });
 
 /////////////////////////////////////////////////////////
