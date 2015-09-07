@@ -551,7 +551,7 @@ $(function () {
 /////////////////////////////////////////////////////////
 $(function ()
 {
-    $(".load_view").click(function ()
+    $(document).on('click','.load_view',function ()
     {
         $.ajax({
             type: "POST",

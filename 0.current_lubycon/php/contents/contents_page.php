@@ -70,7 +70,7 @@
             <?php
             for($i=0;$i<30;$i++)
             {
-                include_once('php/layout/content_card.php');
+                include('php/layout/content_card.php');
             }
             ?>
         </ul>

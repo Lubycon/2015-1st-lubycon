@@ -24,7 +24,7 @@
                 <?php
                 for($i=0;$i<20;$i++)
                 {
-                    include_once('php/layout/follower_card.php');
+                    include('php/layout/follower_card.php');
                 }
                 ?>
             </ul>

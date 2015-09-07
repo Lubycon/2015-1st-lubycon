@@ -30,13 +30,9 @@
     <script type="text/javascript" src="js/slider.js"></script><!--slider plugin-->
     <script type="text/javascript" src="js/index.js"></script> <!-- index file js -->
 
-      <!--[if lt IE 9]>
+    <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-
-
-    
-
 </head>
 <body id="bodyer" ondragstart="return false" onselectstart="return false">
     <!-- popup start -->
@@ -202,7 +198,6 @@
     </div>
     <!---------------- search bar end ---------------->
     <!---------------- common parts end ---------------->
-
     <?php
     if( empty($_GET['1']) == false ) 
     {
@@ -214,7 +209,6 @@
         include_once("index_body.php");
     }
     ?>
-    
     <footer id="footer"></footer>   <!--end footer-->
 </body>
 
