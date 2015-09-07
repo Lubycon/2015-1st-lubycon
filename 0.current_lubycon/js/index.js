@@ -1625,7 +1625,7 @@ $(function () {
     /////////////////////////////////////////////////////////
     //      editor next contents call ajax start
     /////////////////////////////////////////////////////////
-    $(".next_bt").click(function ()
+    $(document).on('click','.next_bt',function ()
     {
         var check_id = $(this).attr('id');
         console.log(check_id);
@@ -1635,7 +1635,7 @@ $(function () {
             data: "check_id=" + check_id,//test.asp에 id 값을 보낸다
             cache: false,
             success: function (data) {
-                $('#bodyer').hide().append(data).fadeIn(300); //해당 내용을 보여준다
+                $('#next_pop_body').html('').append(data).fadeIn(300); //해당 내용을 보여준다
                 $('.dark_overlay').fadeIn(300);
             }
         });
@@ -1643,7 +1643,7 @@ $(function () {
 
     $('.dark_overlay').click(function () {
         $('.dark_overlay').stop().fadeOut(300);
-        $('#next_pop_body').stop().fadeOut(300).remove();
+        $('#next_pop_body').stop().fadeOut(300).html('');
     });
 
     /////////////////////////////////////////////////////////
