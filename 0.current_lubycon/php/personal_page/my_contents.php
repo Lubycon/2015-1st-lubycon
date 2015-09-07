@@ -2,7 +2,7 @@
     <?php
     for($i=0;$i<30;$i++)
     {
-        include('../layout/content_card.php');
+        require('../layout/content_card.php');
     };
         include_once('../layout/pager.php');
     ?>

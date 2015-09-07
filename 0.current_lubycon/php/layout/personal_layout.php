@@ -1,4 +1,4 @@
-﻿<section id="navsel">
+<section id="navsel">
     <nav id="lnb_nav">
         <ul>
             <li class="main"><a href="./index.php?1=personal_page&2=personal_page&3=main&4=my_contents">Contents</a></li>
@@ -11,7 +11,7 @@
 <!-- end section -->
 <section id="nav_guide">
 <?php
-if($_GET['3'] == main)
+if($_GET['3'] == 'main')
 {
     echo 
 '<div class="subnav_box">

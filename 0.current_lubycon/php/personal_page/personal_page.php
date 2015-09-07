@@ -10,9 +10,6 @@
     	include_once("php/layout/user_inform.php");
     ?>
     <section id="contents_box" class="personal">
-    	<?php
-    		include_once("php/personal_page/my_contents.php");
-    	?>
     </section>
     <!-- end contents box -->
 </section>
