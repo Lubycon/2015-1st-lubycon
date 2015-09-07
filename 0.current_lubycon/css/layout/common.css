@@ -90,6 +90,7 @@ body{
     top: 0;
     left: 0;
     display: none;
+    cursor: pointer;
 }
 
 .editor_popup {
