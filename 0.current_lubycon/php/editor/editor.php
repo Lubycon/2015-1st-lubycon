@@ -1,12 +1,12 @@
 <link href="css/editor.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="js/jquery-ui.min.js"></script>
 <!-- editor css -->
-<div id="next_pop_body"></div>
+<div id="next_pop_body"></div><!--go to thumbnail-->
 
 <div id="embed_popup">
     <p>Embed Media</p>
     <textarea id="embed_textarea"></textarea>
-    <button id="embed_bt">Embed</button>
+    <button class="mic_next_bt">Embed</button>
     <button class="cancel_bt">Cancel</button>
     <button class="editor_popup_cancel"><i class="fa fa-times"></i></button>
 </div>

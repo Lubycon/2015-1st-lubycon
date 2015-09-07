@@ -1309,7 +1309,7 @@ $(function () {
     });
 
 
-    $('#embed_bt').click(function () // embed code event
+    $('.mic_next_bt').click(function () // embed code event
     {
         var embed_midea =
             '<li class="embed_contents">' +
@@ -1645,10 +1645,29 @@ $(function () {
         $('.dark_overlay').stop().fadeOut(300);
         $('#next_pop_body').stop().fadeOut(300).html('');
     });
+    $(document).on('click','.cancel_bt, .editor_popup_cancel',function()
+    {
+        $('.dark_overlay').stop().fadeOut(300);
+        $('#next_pop_body').stop().fadeOut(300).html('');
+    })
 
     /////////////////////////////////////////////////////////
     //      editor next contents call ajax end
     /////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////
+    //      editor change thumbnail start
+    /////////////////////////////////////////////////////////
+    $(function(){
+        $(document).on('click','#change_img_bt', function(){
+            $('#change_img_real').click();
+        });
+    });
+    /////////////////////////////////////////////////////////
+    //      editor change thumbnail start
+    /////////////////////////////////////////////////////////
+
+
+
 });
 /*----------------------------editor end----------------------------*/
 /*----------------------------followers start--------------------------*/

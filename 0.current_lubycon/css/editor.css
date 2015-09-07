@@ -40,7 +40,7 @@ body{
             font-weight: 400 !important;
         }
 
-    #editor_gnv .next_bt 
+    .next_bt 
     {
         position: absolute;
         top: 13px;
@@ -165,17 +165,18 @@ body{
 
 
 
-    #file_info{
+    #editor_aside #file_info{
         width: 246px; 
         border-radius: 3px;
         overflow: hidden;
         text-align:left;
         box-shadow:0px 2px 2px 0px rgba(0,0,0,0.2);
         display: inline-block;
-        vertical-align: middle;
-        float: right;
-        margin-right:14px;
+        vertical-align: middle !important;
         border:1px solid #222222;
+        right: 13px !important;
+        margin:0px !important;
+        position:absolute !important;
     }
         #file_info #info_header{
             width: 100%;
@@ -596,7 +597,7 @@ body{
             border:1px solid #48cfad;
             box-shadow: 0px 0px 5px rgba(81, 203, 238, 1); 
         }
-    #embed_popup #embed_bt,.cancel_bt
+    .mic_next_bt,.cancel_bt
     {
         width:85px;
         height:35px;
@@ -605,7 +606,7 @@ body{
         padding:0px;
         margin-top:20px;
     }
-    #embed_popup #embed_bt 
+    .mic_next_bt 
     {
         color:#fff;
         background:#48cfad;
@@ -613,7 +614,7 @@ body{
         border-radius: 3px;
         box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2);
     }
-    #embed_popup .cancel_bt 
+    .cancel_bt 
     {
         color:#ec6446;
         background:#fff;
@@ -632,4 +633,92 @@ body{
 
 
 /* Thumbnail start*/
+#next_pop_body
+{
+    width: 600px;
+    height: 500px;
+    left:50%;
+    top:15%;
+    margin-left:-300px;
+    text-align: center;
+
+    background: #fff;
+    border-radius: 3px;
+
+    position:absolute;
+    z-index:4;
+    display:none;
+}
+    #tnail_header
+    {
+        display: block;
+        position:relative;
+        width:590px;
+        padding:5px 0px 0px 20px;
+        margin-bottom:10px;
+        text-align: left;
+        font-size:25px;
+        color:#444;
+    }
+    
+    #work_space
+    {
+        margin:0px auto;
+        display: inline-block;
+        left:50%;
+    }
+    #tnail_preview
+    {
+        width:250px;
+        height:300px;
+        background:#fafafa;
+        display: inline-block;
+        vertical-align: top;
+        margin: 20px;
+        margin-right:10px;
+    }
+    #tnail_work
+    {
+        width:250px;
+        height:330px;
+        display: inline-block;
+        margin: 20px;
+        margin-left:10px;
+        text-align: right;
+    }
+        #tnail_work #work_inbody
+        {
+            width:250px;
+            height:300px;
+            position:relative;
+            background: #fafafa;
+        }
+            #work_inbody img
+            {
+                width:100%;
+                vertical-align:middle;
+            }
+        #change_img_bt
+        {
+            width:50px;
+            color:#488ccb;
+            font-size:15px;
+            font-weight:200;
+            cursor:pointer;
+        }    
+        #change_img_real
+        {
+            width:0px;
+            height:0px;
+            border:none;
+        }
+    .button_pop
+    {
+        text-align: center;
+        padding:5px;
+    }
+        #call_setting
+        {
+            margin-left:7px;
+        }
 /* Thumbnail end*/
