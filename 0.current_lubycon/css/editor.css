@@ -40,7 +40,7 @@ body{
             font-weight: 400 !important;
         }
 
-    #editor_gnv button 
+    #editor_gnv .next_bt 
     {
         position: absolute;
         top: 13px;
@@ -596,7 +596,7 @@ body{
             border:1px solid #48cfad;
             box-shadow: 0px 0px 5px rgba(81, 203, 238, 1); 
         }
-    #embed_popup #embed_bt,#cancel_bt
+    #embed_popup #embed_bt,.cancel_bt
     {
         width:85px;
         height:35px;
@@ -613,7 +613,7 @@ body{
         border-radius: 3px;
         box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2);
     }
-    #embed_popup #cancel_bt 
+    #embed_popup .cancel_bt 
     {
         color:#ec6446;
         background:#fff;
@@ -629,3 +629,7 @@ body{
         border-radius: 3px;
     }
 /* embed pop up */
+
+
+/* Thumbnail start*/
+/* Thumbnail end*/

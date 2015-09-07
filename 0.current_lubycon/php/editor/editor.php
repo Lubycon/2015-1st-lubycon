@@ -5,7 +5,7 @@
     <p>Embed Media</p>
     <textarea id="embed_textarea"></textarea>
     <button id="embed_bt">Embed</button>
-    <button id="cancel_bt">Cancel</button>
+    <button class="cancel_bt">Cancel</button>
     <button class="editor_popup_cancel"><i class="fa fa-times"></i></button>
 </div>
 <nav id="editor_gnv">
@@ -18,7 +18,7 @@
         <li>></li>
         <li>4.Preview</li>
     </ol>
-    <button>Next</button>
+    <button class="next_bt">Next</button>
 </nav>
 <section id="editor_inbody">
     <aside id="editor_aside">

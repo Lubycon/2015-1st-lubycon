@@ -299,7 +299,7 @@ $(function () { //add contents button start
         $(this).children('a').children('i').css({ "color": "#383838", "background": "#fff" })
     });
 
-    $('.editor_popup_cancel , .dark_overlay , #cancel_bt').click(function () {
+    $('.editor_popup_cancel , .dark_overlay , .cancel_bt').click(function () {
         $('.dark_overlay').stop().fadeOut(200);
         $('.editor_popup').stop().fadeOut(200);
         $('#embed_popup').stop().fadeOut(150);
@@ -1232,9 +1232,9 @@ $(function () {
     {
         if ($(this).css('border') == '1px solid rgb(255, 255, 255)')
         {
-            $('.preview_img').css({ "background": "rgb(255, 255, 255)" }); //css reset
-            $('.preview_img').css({ "box-shadow": "0px 0px 5px rgba(81, 203, 238, 1)"});
-            $('.preview_img').removeAttr('id'); // remove all id
+            $(this).css({ "background": "rgb(255, 255, 255)" }); //css reset
+            $(this).css({ "box-shadow": "0px 0px 5px rgba(72, 203, 173, 1)"});
+            $(this).removeAttr('id'); // remove all id
 
             $(this).css({ "border": "1px solid #48cfad" });
             $(this).attr('id', 'selected_img');
@@ -1243,7 +1243,7 @@ $(function () {
         } else
         {
             $(this).css({ "border": "1px solid #ffffff" });
-            $('.preview_img').css({ "box-shadow": "none"});
+            $(this).css({ "box-shadow": "none"});
             $('#img_crop').addClass('img_crop_notallow'); //img crop bt disable
         }
     });
