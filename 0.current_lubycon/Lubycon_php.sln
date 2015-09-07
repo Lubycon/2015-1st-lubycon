@@ -45,6 +45,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "editor", "editor", "{3FC22545-B208-4275-8530-090F43F8CDD4}"
 	ProjectSection(SolutionItems) = preProject
 		php\editor\editor.php = php\editor\editor.php
+		php\editor\editor_setting.php = php\editor\editor_setting.php
+		php\editor\editor_thumbnail.php = php\editor\editor_thumbnail.php
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "personal_page", "personal_page", "{5528D5D6-2249-4D2D-917F-4B4987AE93D2}"
@@ -122,6 +124,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ajax", "ajax", "{A5A8174F-E
 	ProjectSection(SolutionItems) = preProject
 		php\ajax\contents_view.php = php\ajax\contents_view.php
 		php\ajax\create_account_popup.php = php\ajax\create_account_popup.php
+		php\ajax\editor_ajax.php = php\ajax\editor_ajax.php
 		php\ajax\subnav.php = php\ajax\subnav.php
 	EndProjectSection
 EndProject
