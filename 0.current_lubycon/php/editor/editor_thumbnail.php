@@ -2,21 +2,26 @@
 <!-- editor css -->
 <button class="editor_popup_cancel"><i class="fa fa-times"></i></button>
 <header id="tnail_header">Thumbnail Image</header>
-<div id="tnail_preview">
-    <?php
-    include_once('../php/layout/content_card.php');
-    ?>
-</div>
-<!--tnail_preview end-->
-<div id="tnail_work">
-    <div id="work_inbody">
-        <img src="#" />
+<div id="work_space">
+    <div id="tnail_preview">
+        <ul>
+            <?php
+                include_once('../php/layout/content_card.php');
+            ?>
+        </ul>
     </div>
-    <!--work_inbody end-->
-    <input type="file" id="change_img" />
+    <!--tnail_preview end-->
+    <div id="tnail_work">
+        <div id="work_inbody">
+            <img src="CH/img/main_img.png" />
+        </div>
+        <!--work_inbody end-->
+        <span id="change_img_bt">Change Image</span>
+        <input type="file" id="change_img_real" />
+    </div>
+    <!--tnail_work end-->
 </div>
-<!--tnail_work end-->
 <div class="buttons_pop">
-    <button class="next_bt" id="call_setting">Next</button>
-    <button class="cancel_bt">Cancel</button>
+    <button class="mic_next_bt" id="call_setting">Next</button>
+    <button class="cancel_bt" id="tnail_cancel">Cancel</button>
 </div>
