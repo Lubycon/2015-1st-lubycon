@@ -423,10 +423,20 @@ body{
         {
             height: 22px;
             padding: 3px 5px;
+            font-weight: 200;
         }
             .text_editor .select_box .sod_select .sod_option.selected::before 
             {
                 display:none;
+            }
+            .sod_select .sod_option.selected
+            {
+                color:#48cfad;
+            }
+            .sod_select .sod_option.active
+            {
+                color:#444444;
+                font-weight: 400 !important;
             }
     /* selector */
     .editor_body_text
@@ -445,11 +455,13 @@ body{
         display: block;
         margin: 10px auto;
         font-weight:200;
+        resize:none;
     }
         .editor_body_text:focus
         {
             border:1px solid #48cfad;
             box-shadow: 0px 0px 5px rgba(81, 203, 238, 1);
+            resize:both;
         }
 
     .con_move_bt,.con_delete_bt
@@ -633,20 +645,25 @@ body{
 
 
 /* Thumbnail start*/
+#popup_wrap
+{
+    width:100%;
+    text-align: center;
+}
+
 #next_pop_body
 {
-    width: 645px;
+    width:auto;
+    min-width:655px;
     height: 500px;
-    left:50%;
     top:15%;
-    margin-left:-300px;
     text-align: center;
 
     background: #fff;
     border-radius: 3px;
 
     position:absolute;
-    z-index:4;
+    z-index:5;
     display:none;
 }
     #tnail_header
@@ -696,6 +713,7 @@ body{
             height:300px;
             position:relative;
             background: #fafafa;
+            box-shadow:0px 3px 2px 0px rgba(0,0,0,0.3)
         }
             #work_inbody img
             {
@@ -725,20 +743,171 @@ body{
         {
             width:85px;
             height:35px;
+            
             border:none;
             border-radius:3px;
+            
             padding:0px;
             margin-top:20px;
             margin-left:7px;
-            color:#fff;
-            background:#48cfad;
-            box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2);
             position:relative;
             top:0px;
             right:0px;
+
+            color:#fff;
+            background:#48cfad;
+            box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2);
             font-size:1em;
         }
 /* Thumbnail end*/
 /* editor setting start*/
 
+#setting_header
+{
+    display: block;
+    position:relative;
+    width:635px;
+    padding:5px 0px 0px 20px;
+    margin-bottom:10px;
+    margin-top: 10px;
+    text-align: left;
+    font-size:25px;
+    color:#444;
+}
+#total_set
+{
+    padding:5px;
+    height:360px;
+    text-align: left;
+}
+    #left_set
+    {
+        width:480px;
+        height:330px;
+        display: inline-block;
+        margin: 20px;
+        margin-right:10px;
+        background: #eeeeee;
+        border-radius: 5px;
+        vertical-align: top;
+        padding:10px;
+    }
+        #cate_editor
+        {
+
+        }
+        #tag_editor
+        {
+
+        }
+        #des_editor
+        {
+
+        }
+            #setting_des_text
+            {
+                width:470px;
+                height:100px;
+                border:none;
+                border-radius: 3px;
+                padding:5px;
+                resize:none;
+            }
+                #setting_des_text:focus
+                {
+                    border:1px solid #48cfad;
+                    box-shadow: 0px 0px 5px rgba(81, 203, 238, 1); 
+                }
+    #right_set
+    {
+        width:480px;
+        height:330px;
+        display: inline-block;
+        margin: 20px;
+        margin-left:10px;
+        background: #eeeeee;
+        border-radius: 5px;
+        padding:10px;
+    }
+        #price_editor
+        {
+
+        }
+            #price_editor .sod_select.custom.custom{
+                width:170px;
+                background:#fff;
+            }
+
+            #price_editor .sod_select.custom .sod_list_wrapper{
+                width:170px;
+                box-shadow:none;
+                z-index:2;
+            }
+            #price_editor .sod_select.custom.focus{
+                box-shadow:none;
+            }
+            #price_input
+            {
+                width:200px;
+                height:31px;
+                border-radius: 3px;
+                border:none;
+                margin-left:10px;
+            }
+                #price_input:focus
+                {
+                    border:1px solid #48cfad;
+                    box-shadow: 0px 0px 5px rgba(81, 203, 238, 1); 
+                }
+                #price_input[disabled]
+                {
+                    background:#aaaaaa;
+                }
+        #copyright_editor
+        {
+
+        }
+
+
+
+
+.setting_title
+{
+    font-size:20px;
+    color:#444;
+    font-weight: 200;
+    margin:6px 0px;
+}
+.set_con
+{
+    width:470px;
+    height:35px;
+    background:#fff;
+    border-radius: 3px;
+    padding:5px;
+    margin:6px 0px;
+}
+
+#upload_final
+{
+    width:85px;
+    height:35px;
+    
+    border:none;
+    border-radius:3px;
+    
+    position:relative;
+    top:0px;
+    right:0px;
+    padding:0px;
+    margin-top:20px;
+    margin-left:7px;
+    
+    color:#fff;
+    font-size:1em;
+    font-weight: 200;
+    background:#48cfad;
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2);
+      
+}
 /* editor setting end*/

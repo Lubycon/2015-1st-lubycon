@@ -1,5 +1,4 @@
-<link rel="stylesheet" href="css/contents_view.css" />
-<!-- editor css -->
+
 <button class="editor_popup_cancel"><i class="fa fa-times"></i></button>
 <header id="tnail_header">Thumbnail Image</header>
 <div id="work_space">

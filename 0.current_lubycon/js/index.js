@@ -1627,15 +1627,25 @@ $(function () {
     /////////////////////////////////////////////////////////
     $(document).on('click','.next_bt',function ()
     {
-        var check_id = $(this).attr('id');
+        var check_id = $(this).attr('id');      
         console.log(check_id);
+        
         $.ajax({
             type: "POST",
             url: "php/ajax/editor_ajax.php", //이페이지에서 중복체크를 한다
             data: "check_id=" + check_id,//test.asp에 id 값을 보낸다
             cache: false,
             success: function (data) {
-                $('#next_pop_body').html('').append(data).fadeIn(300); //해당 내용을 보여준다
+                $('#next_pop_body').html('').append(data).fadeIn(300).css('display','inline-block'); //해당 내용을 보여준다
+                $('#next_pop_body').css('marginLeft', function() { 
+                    return $(this).width()/-2;//set width
+                });
+                $(".basic_filter").selectOrDie
+                ({
+                    customClass: "custom",
+                    customID: "custom",
+                    size: 5
+                });
                 $('.dark_overlay').fadeIn(300);
             }
         });
