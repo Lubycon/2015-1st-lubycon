@@ -6,7 +6,7 @@
     <div id="tnail_preview">
         <ul>
             <?php
-                include_once('../php/layout/content_card.php');
+                include_once('../layout/content_card.php');
             ?>
         </ul>
     </div>
@@ -22,6 +22,6 @@
     <!--tnail_work end-->
 </div>
 <div class="buttons_pop">
-    <button class="mic_next_bt" id="call_setting">Next</button>
+    <button class="next_bt" id="call_setting">Next</button>
     <button class="cancel_bt" id="tnail_cancel">Cancel</button>
 </div>

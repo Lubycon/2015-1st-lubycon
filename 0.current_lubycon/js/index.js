@@ -1309,7 +1309,7 @@ $(function () {
     });
 
 
-    $('.mic_next_bt').click(function () // embed code event
+    $('.next_bt').click(function () // embed code event
     {
         var embed_midea =
             '<li class="embed_contents">' +
