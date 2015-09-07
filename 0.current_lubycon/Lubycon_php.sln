@@ -42,9 +42,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "designers_page", "designers
 		php\designers_page\designers_page.php = php\designers_page\designers_page.php
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "editer", "editer", "{3FC22545-B208-4275-8530-090F43F8CDD4}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "editor", "editor", "{3FC22545-B208-4275-8530-090F43F8CDD4}"
 	ProjectSection(SolutionItems) = preProject
-		php\editer\editer.php = php\editer\editer.php
+		php\editor\editor.php = php\editor\editor.php
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "personal_page", "personal_page", "{5528D5D6-2249-4D2D-917F-4B4987AE93D2}"
@@ -67,7 +67,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "css", "css", "{89F53E10-E9B
 		css\contents_view.css = css\contents_view.css
 		css\create_account.css = css\create_account.css
 		css\designers_page.css = css\designers_page.css
-		css\editer.css = css\editer.css
+		css\editor.css = css\editor.css
 		css\find_password.css = css\find_password.css
 		css\flexslider.css = css\flexslider.css
 		css\index.css = css\index.css

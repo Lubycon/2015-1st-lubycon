@@ -289,19 +289,19 @@ $(function () { //add contents button start
 
     $('#addcontent_bt').click(function () {
         $('.dark_overlay').stop().fadeIn(100);
-        $('.editer_popup').css("display","block");
-        $('.editer_popup').attr("class","editer_popup fadeInDown animated");
+        $('.editor_popup').css("display","block");
+        $('.editor_popup').attr("class","editor_popup fadeInDown animated");
     });
 
-    $('.editer_popup > ul > li').hover(function () {
+    $('.editor_popup > ul > li').hover(function () {
         $(this).children('a').children('i').css({ "color": "#fff", "background": "#48cfad" })
     }, function () {
         $(this).children('a').children('i').css({ "color": "#383838", "background": "#fff" })
     });
 
-    $('.editer_popup_cancel , .dark_overlay , #cancel_bt').click(function () {
+    $('.editor_popup_cancel , .dark_overlay , #cancel_bt').click(function () {
         $('.dark_overlay').stop().fadeOut(200);
-        $('.editer_popup').stop().fadeOut(200);
+        $('.editor_popup').stop().fadeOut(200);
         $('#embed_popup').stop().fadeOut(150);
     });
 });
@@ -1205,12 +1205,12 @@ $(function () {
 
 
 
-/*----------------------------editer start----------------------------*/
+/*----------------------------editor start----------------------------*/
 /////////////////////////////////////////////////////////
-//      editer nav start
+//      editor nav start
 /////////////////////////////////////////////////////////
 $(function () {
-    $('#editer_aside ol li').hover(function () //aside li mouse hover event
+    $('#editor_aside ol li').hover(function () //aside li mouse hover event
     {
         $(this).css({ "background": "#666666"});
         $(this).children('i').css({ "color": "#48cfad" });
@@ -1223,7 +1223,7 @@ $(function () {
     });
 
 /////////////////////////////////////////////////////////
-//      editer nav end
+//      editor nav end
 /////////////////////////////////////////////////////////
     /////////////////////////////////////////////////////////
     //      img crop start
@@ -1253,15 +1253,15 @@ $(function () {
     /////////////////////////////////////////////////////////
 
     /////////////////////////////////////////////////////////
-    //      editer_upload_file start
+    //      editor_upload_file start
     /////////////////////////////////////////////////////////
 
-    $('#editer_upload_file').click(function () { //upload file window open
+    $('#editor_upload_file').click(function () { //upload file window open
         $('#upload_file_input').click();
     });
 
     /////////////////////////////////////////////////////////
-    //      editer_upload_file end
+    //      editor_upload_file end
     /////////////////////////////////////////////////////////
 
     /////////////////////////////////////////////////////////
@@ -1269,7 +1269,7 @@ $(function () {
     /////////////////////////////////////////////////////////
 
 
-    $('#editer_preview_upload').click(function () { //preview image window open
+    $('#editor_preview_upload').click(function () { //preview image window open
         $('#preview_upload_input').click();
     });
 
@@ -1291,12 +1291,12 @@ $(function () {
                                    '</div>' +
                                    '</li>'
 				    
-				    $('#editer_section ul').append(template);
+				    $('#editor_section ul').append(template);
 				};
 			});
     });
     /////////////////////////////////////////////////////////
-    //      editer nav end
+    //      editor nav end
     /////////////////////////////////////////////////////////
 
     /////////////////////////////////////////////////////////
@@ -1317,7 +1317,7 @@ $(function () {
             '<button class="con_delete_bt"><i class="fa fa-times"></i></button>' +
             '</li>'
 
-        $('#editer_preview_box').append(embed_midea);
+        $('#editor_preview_box').append(embed_midea);
         $('#embed_popup').hide();
         $('.dark_overlay').hide();
     });
@@ -1332,12 +1332,12 @@ $(function () {
     
     $('#add_text').click(function ()
     {
-        var text_editer =
-            '<li class="text_editer">'+
+        var text_editor =
+            '<li class="text_editor">'+
                     '<div id="text_contents_div" class="contents_div">'+
                         '<button class="con_delete_bt"><i class="fa fa-times"></i></button>'+
-                        '<textarea class="editer_body_text"></textarea>'+
-                        '<div class="textarea_editer">'+
+                        '<textarea class="editor_body_text"></textarea>'+
+                        '<div class="textarea_editor">'+
                             '<div class="select_box">'+
                                 '<select class="basic">'+
                                     '<option value="14pt">14pt</option>'+
@@ -1446,7 +1446,7 @@ $(function () {
                     '</div>'+
                     '</li>'
         
-        $('#editer_preview_box').append(text_editer);
+        $('#editor_preview_box').append(text_editor);
         $(".basic").selectOrDie(); //seleter load script
     });
      
@@ -1455,82 +1455,82 @@ $(function () {
     /////////////////////////////////////////////////////////
 
     /////////////////////////////////////////////////////////
-    //      text editer tools start
+    //      text editor tools start
     /////////////////////////////////////////////////////////
 
     
     $(document).on('change', '.select_box', function () //change font size
     {
-        $(this).parent('.textarea_editer').prev('.editer_body_text').css({ 'font-size': $(this).find('option:selected').text() });
+        $(this).parent('.textarea_editor').prev('.editor_body_text').css({ 'font-size': $(this).find('option:selected').text() });
     });
 
     $(document).on('click', '.text_bold', function () //change font weight
     {
-        if ($(this).parent('.textarea_editer').prev('.editer_body_text').css("font-weight") == "400")
+        if ($(this).parent('.textarea_editor').prev('.editor_body_text').css("font-weight") == "400")
         {
-            $(this).parent('.textarea_editer').prev('.editer_body_text').css({ 'font-weight': '600' });
+            $(this).parent('.textarea_editor').prev('.editor_body_text').css({ 'font-weight': '600' });
         } else
         {
-            $(this).parent('.textarea_editer').prev('.editer_body_text').css({ 'font-weight': '400' });
+            $(this).parent('.textarea_editor').prev('.editor_body_text').css({ 'font-weight': '400' });
         }
     });
 
     $(document).on('click', '.text_italic', function () //change font italic
     {
-        if ($(this).parent('.textarea_editer').prev('.editer_body_text').css('font-style') == 'normal' ) 
+        if ($(this).parent('.textarea_editor').prev('.editor_body_text').css('font-style') == 'normal' ) 
         {
-            $(this).parent('.textarea_editer').prev('.editer_body_text').css({ 'font-style': 'italic' });
+            $(this).parent('.textarea_editor').prev('.editor_body_text').css({ 'font-style': 'italic' });
         } else {
-            $(this).parent('.textarea_editer').prev('.editer_body_text').css({ 'font-style': 'normal' });
+            $(this).parent('.textarea_editor').prev('.editor_body_text').css({ 'font-style': 'normal' });
         }
     });
     $(document).on('click', '.text_strike', function () //change font strike
     {
-        if ($(this).parent('.textarea_editer').prev('.editer_body_text').css('text-decoration') == 'none' ||
-            $(this).parent('.textarea_editer').prev('.editer_body_text').css('text-decoration') == 'underline')
+        if ($(this).parent('.textarea_editor').prev('.editor_body_text').css('text-decoration') == 'none' ||
+            $(this).parent('.textarea_editor').prev('.editor_body_text').css('text-decoration') == 'underline')
         {
-            $(this).parent('.textarea_editer').prev('.editer_body_text').css({ 'text-decoration': 'line-through' });
+            $(this).parent('.textarea_editor').prev('.editor_body_text').css({ 'text-decoration': 'line-through' });
         } else {
-            $(this).parent('.textarea_editer').prev('.editer_body_text').css({ 'text-decoration': 'none' });
+            $(this).parent('.textarea_editor').prev('.editor_body_text').css({ 'text-decoration': 'none' });
         }
     });
     $(document).on('click', '.text_underline', function () //change font underline
     {
-        if ($(this).parent('.textarea_editer').prev('.editer_body_text').css('text-decoration') == 'none' ||
-            $(this).parent('.textarea_editer').prev('.editer_body_text').css('text-decoration') == 'line-through')
+        if ($(this).parent('.textarea_editor').prev('.editor_body_text').css('text-decoration') == 'none' ||
+            $(this).parent('.textarea_editor').prev('.editor_body_text').css('text-decoration') == 'line-through')
         {
-            $(this).parent('.textarea_editer').prev('.editer_body_text').css({ 'text-decoration': 'underline' });
+            $(this).parent('.textarea_editor').prev('.editor_body_text').css({ 'text-decoration': 'underline' });
         } else {
-            $(this).parent('.textarea_editer').prev('.editer_body_text').css({ 'text-decoration': 'none' });
+            $(this).parent('.textarea_editor').prev('.editor_body_text').css({ 'text-decoration': 'none' });
         }
     });
 
     $(document).on('click', '.align_left', function () //change txt align left
     {
-        $(this).parent('.textarea_editer').prev('.editer_body_text').css({ 'text-align': 'left' });
+        $(this).parent('.textarea_editor').prev('.editor_body_text').css({ 'text-align': 'left' });
     });
     $(document).on('click', '.align_center', function () //change txt align center
     {
-        $(this).parent('.textarea_editer').prev('.editer_body_text').css({ 'text-align': 'center' });
+        $(this).parent('.textarea_editor').prev('.editor_body_text').css({ 'text-align': 'center' });
     });
     $(document).on('click', '.align_right', function () //change txt align right
     {
-        $(this).parent('.textarea_editer').prev('.editer_body_text').css({ 'text-align': 'right' });
+        $(this).parent('.textarea_editor').prev('.editor_body_text').css({ 'text-align': 'right' });
     });
     /////////////////////////////////////////////////////////
-    //      text editer tools end
+    //      text editor tools end
     /////////////////////////////////////////////////////////
 
     /////////////////////////////////////////////////////////
     //      delete bt hover start
     /////////////////////////////////////////////////////////
 
-    $(document).on('mouseenter', '.text_editer', function () // textarea delete bt hover
+    $(document).on('mouseenter', '.text_editor', function () // textarea delete bt hover
     {
         $(this).find('.con_delete_bt').stop().fadeIn(150);
         $(this).children('.contents_div').css({ "border": "1px solid #d1d1d1" });
     });
-    $(document).on('mouseleave', '.text_editer', function () // textarea delete bt hover
+    $(document).on('mouseleave', '.text_editor', function () // textarea delete bt hover
     {
         $(this).find('.con_delete_bt').stop().fadeOut(150);
         $(this).children('.contents_div').css({ "border": "1px solid #fff" });
@@ -1568,7 +1568,7 @@ $(function () {
 
     $(document).on('click', '.con_delete_bt', function () //text area delete event
     {
-        $(this).parents('.text_editer').fadeOut(200, function() { $(this).remove(); });
+        $(this).parents('.text_editor').fadeOut(200, function() { $(this).remove(); });
         $(this).parents('.embed_contents').fadeOut(200, function() { $(this).remove(); });
         $(this).parents('.preview_img').fadeOut(200, function() { $(this).remove(); });
     });
@@ -1580,24 +1580,24 @@ $(function () {
     /////////////////////////////////////////////////////////
     //      color picker start
     /////////////////////////////////////////////////////////
-    $(document).on('focus', '.editer_body_text', function () // text editer focus view
+    $(document).on('focus', '.editor_body_text', function () // text editor focus view
     {
-        $(this).next('.textarea_editer').stop().fadeIn(150);
+        $(this).next('.textarea_editor').stop().fadeIn(150);
     });
 
     $(document).on('click', '.color_picker > ul > li', function () //change text color change
     {
-        $(this).parents('.textarea_editer').prev('.editer_body_text').css({ "color": $(this).text() });
+        $(this).parents('.textarea_editor').prev('.editor_body_text').css({ "color": $(this).text() });
         $(this).parent('ul').prev('.selected_color').css({ "background": $(this).text() });
         $(this).parent('ul').hide();
     });
 
     $(document).ready(function () { //outside click toggle
         $(document).click(function (e) {
-            var subject = $(".text_editer");
+            var subject = $(".text_editor");
 
             if (e.target.id != subject.attr('id') && !subject.has(e.target).length) {
-                $('.textarea_editer').stop().fadeOut(150);
+                $('.textarea_editor').stop().fadeOut(150);
             }
         });
     });
@@ -1619,10 +1619,10 @@ $(function () {
     /////////////////////////////////////////////////////////
 
     /////////////////////////////////////////////////////////
-    //      text editer tools end
+    //      text editor tools end
     /////////////////////////////////////////////////////////
 });
-/*----------------------------editer end----------------------------*/
+/*----------------------------editor end----------------------------*/
 /*----------------------------followers start--------------------------*/
 $(function(){
     var toggle_count=0;//from DB

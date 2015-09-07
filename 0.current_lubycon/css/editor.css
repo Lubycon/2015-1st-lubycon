@@ -6,7 +6,7 @@ body{
 {
     display:none !important;
 }
-#editer_gnv
+#editor_gnv
 {
     width:100%;
     min-width: 1200px;
@@ -17,13 +17,13 @@ body{
     background:#666666;
     z-index: 1;
 }
-    #editer_gnv ol 
+    #editor_gnv ol 
     {
         display: inline-block;
         height:65px;
         margin-left:20px;
     }
-        #editer_gnv ol li
+        #editor_gnv ol li
         {       
             height:65px;
             line-height:65px;
@@ -34,13 +34,13 @@ body{
             font-weight: 200;
             letter-spacing: 1px;
         }
-        .editer_selected_gnv
+        .editor_selected_gnv
         {
             color:#48cfad !important;
             font-weight: 400 !important;
         }
 
-    #editer_gnv button 
+    #editor_gnv button 
     {
         position: absolute;
         top: 13px;
@@ -55,7 +55,7 @@ body{
         font-weight: 200;
         font-size: 20px;
     }
-#editer_inbody
+#editor_inbody
 {
     width:100%;
     position:relative;
@@ -64,7 +64,7 @@ body{
 }
 
 
-#editer_body
+#editor_body
 {
     max-width:1600px;
     min-width:580px;
@@ -79,7 +79,7 @@ body{
 
 
 
-#editer_aside
+#editor_aside
 {
     width:100%;
     height: 55px;
@@ -90,13 +90,13 @@ body{
     box-shadow: 2px 3px 9px 0px rgba(0,0,0,0.3);
     z-index:1;
 }
-    #editer_aside ol 
+    #editor_aside ol 
     {
         display: inline-block;
         margin-left:20px;
     }
         
-        #editer_aside ol li 
+        #editor_aside ol li 
         {
             width:45px;
             height:45px;
@@ -114,7 +114,7 @@ body{
             position:relative;
             display:inline-block;
         }
-            #editer_aside ol li i {
+            #editor_aside ol li i {
                 margin-top: 8px;
                 font-size: 20px;
                 width: 45px;
@@ -299,7 +299,7 @@ body{
 
 
 
-#editer_section 
+#editor_section 
 {
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.4);
     border-radius: 5px;
@@ -312,7 +312,7 @@ body{
     min-width:630px;
     
 }
-    #editer_section p 
+    #editor_section p 
     {
         height:80px;
         line-height:70px;
@@ -320,7 +320,7 @@ body{
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
     }
-    #editer_section p input
+    #editor_section p input
     {
         background:none;
         border:none;
@@ -333,16 +333,16 @@ body{
         color: #ffffff;
         float: left;
     }
-        #editer_section p input:hover
+        #editor_section p input:hover
         {
             background:#666666;
         }
-        #editer_section p input:focus
+        #editor_section p input:focus
         {
             background:#666666
         }
 
-    #editer_preview_box
+    #editor_preview_box
     {
         max-width:1100px;
         min-width:630px;
@@ -353,7 +353,7 @@ body{
         border-bottom-right-radius: 5px;
     }
 
-    #editer_section > iframe,img,span
+    #editor_section > iframe,img,span
     {
        max-width:1100px;
     }
@@ -362,7 +362,7 @@ body{
             width:100% !important;
         }
 
-    .text_editer
+    .text_editor
     {
         position:relative;
         padding:25px 0px;
@@ -377,20 +377,20 @@ body{
         border:1px solid #fff;
         background:rgba(255,255,255,0.5);
     }
-    .text_editer > .contents_div
+    .text_editor > .contents_div
     {
         border-radius: 5px;
         padding:10px;
     }
 
     /* selector */
-    .text_editer .select_box
+    .text_editor .select_box
     {
         float: none !important;
         display: inline-block;
         margin-right:7px;
     }
-    .text_editer .select_box .sod_select
+    .text_editor .select_box .sod_select
     {
         background:#444;
         color:#fff;
@@ -400,17 +400,17 @@ body{
         padding-bottom:0px;
         border-radius:3px;
     }
-        .text_editer .select_box .sod_label 
+        .text_editor .select_box .sod_label 
         {
             margin-right: 11px;
         }
-        .text_editer .select_box .sod_select::before, .sod_select::after
+        .text_editor .select_box .sod_select::before, .sod_select::after
         {
             right: 5px;
             top: 7px;
             font-size: 10px;
         }
-        .text_editer .select_box .sod_select .sod_list_wrapper
+        .text_editor .select_box .sod_select .sod_list_wrapper
         {
             width: 53px;
             margin: -2px 0px 0px 0px;
@@ -418,17 +418,17 @@ body{
             border:none;
             color:#fff;
         }
-        .text_editer .select_box .sod_select .sod_option
+        .text_editor .select_box .sod_select .sod_option
         {
             height: 22px;
             padding: 3px 5px;
         }
-            .text_editer .select_box .sod_select .sod_option.selected::before 
+            .text_editor .select_box .sod_select .sod_option.selected::before 
             {
                 display:none;
             }
     /* selector */
-    .editer_body_text
+    .editor_body_text
     {
         border:none;
         border-radius: 3px;
@@ -445,7 +445,7 @@ body{
         margin: 10px auto;
         font-weight:200;
     }
-        .editer_body_text:focus
+        .editor_body_text:focus
         {
             border:1px solid #48cfad;
             box-shadow: 0px 0px 5px rgba(81, 203, 238, 1);
@@ -479,12 +479,12 @@ body{
     {
         right:28px;
     }
-    .textarea_editer
+    .textarea_editor
     {
         text-align:right;
         display:none;
     }
-    .textarea_editer button
+    .textarea_editor button
     {
         border: medium none;
         background: #444 none repeat scroll 0% 0%;
@@ -498,14 +498,14 @@ body{
         margin: 0px 1px;
         box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.3);
     }
-    .textarea_editer .color_picker
+    .textarea_editor .color_picker
     {
         display: inline-block;
         height: 15px;
         margin: 0px 7px;
         position:relative;
     }
-        .textarea_editer .color_picker .selected_color
+        .textarea_editor .color_picker .selected_color
         {
             width: 15px;
             height: 15px;
@@ -516,7 +516,7 @@ body{
             cursor:pointer;
             box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.3);
         }
-        .textarea_editer .color_picker ul
+        .textarea_editor .color_picker ul
         {
             position:absolute;
             top: 28px;
@@ -529,7 +529,7 @@ body{
             z-index: 2;
             cursor:default;
         }
-            .textarea_editer .color_picker ul li
+            .textarea_editor .color_picker ul li
             {
                 width: 15px;
                 height:15px;

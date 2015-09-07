@@ -1,16 +1,16 @@
-<link href="css/editer.css" rel="stylesheet" type="text/css" />
+<link href="css/editor.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="js/jquery-ui.min.js"></script>
-<!-- editer css -->
+<!-- editor css -->
 <div id="embed_popup">
     <p>Embed Media</p>
     <textarea id="embed_textarea"></textarea>
     <button id="embed_bt">Embed</button>
     <button id="cancel_bt">Cancel</button>
-    <button class="editer_popup_cancel"><i class="fa fa-times"></i></button>
+    <button class="editor_popup_cancel"><i class="fa fa-times"></i></button>
 </div>
-<nav id="editer_gnv">
+<nav id="editor_gnv">
     <ol>
-        <li class="editer_selected_gnv">1.Edit</li>
+        <li class="editor_selected_gnv">1.Edit</li>
         <li>></li>
         <li>2.Thumbnail</li>
         <li>></li>
@@ -20,14 +20,14 @@
     </ol>
     <button>Next</button>
 </nav>
-<section id="editer_inbody">
-    <aside id="editer_aside">
+<section id="editor_inbody">
+    <aside id="editor_aside">
         <ol>
-            <li id="editer_upload_file">
+            <li id="editor_upload_file">
                 <i class="fa fa-cloud-upload"></i>
                 <span class="tooltip_bt" id="file_tooltip">Upload file to server</span><!--tooltip-->
             </li><!--upload file bt-->
-            <li id="editer_preview_upload">
+            <li id="editor_preview_upload">
                 <i class="fa fa-picture-o"></i>
                 <span class="tooltip_bt" id="image_tooltip">Upload preview image</span><!--tooltip-->
             </li><!--upload preview img bt-->
@@ -73,23 +73,23 @@
             </footer>
         </div>
     </aside>
-    <section id="editer_body">
+    <section id="editor_body">
         
         <!-- drag able script aply code -->
         <script>
             $(function () {
-                $("#editer_preview_box").sortable({
+                $("#editor_preview_box").sortable({
                     revert: true
                 });
             });
         </script>
         <!-- drag able script aply code -->
 
-        <section id="editer_section">
+        <section id="editor_section">
             <p>
                 <input type="text" value="Your Contents Name" />
             </p>
-            <ul id="editer_preview_box">
+            <ul id="editor_preview_box">
             </ul>
         </section>
     </section>

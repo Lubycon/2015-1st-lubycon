@@ -42,29 +42,29 @@
     <!-- popup start -->
     <div class="dark_overlay"></div>
 
-    <div class="editer_popup fadeInDown animated">
+    <div class="editor_popup fadeInDown animated">
         <p>Which content will you upload?</p>
         <ul>
             <li>
-                <a href="./index.php?1=editer&2=editer&3=font">
+                <a href="./index.php?1=editor&2=editor&3=font">
                 <i class="fa fa-font"></i>
                 <p>Font</p>
                 </a>
             </li>
             <li>
-                <a href="./index.php?1=editer&2=editer&3=vector">
+                <a href="./index.php?1=editor&2=editor&3=vector">
                 <i class="fa fa-stop"></i>
                 <p>Vector</p>
                 </a>
             </li>
             <li>
-                <a href="./index.php?1=editer&2=editer&3=3d">
+                <a href="./index.php?1=editor&2=editor&3=3d">
                 <i class="fa fa-cube"></i>
                 <p>3D</p>
                 </a>
             </li>
         </ul>
-        <button class="editer_popup_cancel"><i class="fa fa-times"></i></button>
+        <button class="editor_popup_cancel"><i class="fa fa-times"></i></button>
     </div>
     <!-- popup end -->
     <!---------------- common parts start ---------------->
