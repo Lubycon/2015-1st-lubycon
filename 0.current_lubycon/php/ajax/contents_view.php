@@ -1,3 +1,3 @@
 <?php
-include('../contents/contents_view.php');
+include_once('../contents/contents_view.php');
 ?>

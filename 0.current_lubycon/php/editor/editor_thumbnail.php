@@ -4,7 +4,7 @@
 <header id="tnail_header">Thumbnail Image</header>
 <div id="tnail_preview">
     <?php
-    include('../php/layout/content_card.php');
+    include_once('../php/layout/content_card.php');
     ?>
 </div>
 <!--tnail_preview end-->
@@ -17,6 +17,6 @@
 </div>
 <!--tnail_work end-->
 <div class="buttons_pop">
-    <button class="next_bt" id="call_setting" style="position: absolute; z-index: 5;">Next</button>
+    <button class="next_bt" id="call_setting">Next</button>
     <button class="cancel_bt">Cancel</button>
 </div>

@@ -70,12 +70,12 @@
             <?php
             for($i=0;$i<30;$i++)
             {
-                include('php/layout/content_card.php');
+                include_once('php/layout/content_card.php');
             }
             ?>
         </ul>
     </section>  <!-- end contents box -->
     <?php
-        include('php/layout/pager.php');
+        include_once('php/layout/pager.php');
     ?>
 </section>  <!-- end contents section -->

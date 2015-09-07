@@ -10,8 +10,8 @@
 
 <section id="contents">
     <?php
-    include("php/layout/personal_layout.php");
-    include("php/layout/user_inform.php");
+    include_once("php/layout/personal_layout.php");
+    include_once("php/layout/user_inform.php");
     ?>
 
     <section id="insight_box">

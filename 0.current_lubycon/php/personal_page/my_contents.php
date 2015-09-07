@@ -2,8 +2,8 @@
     <?php
     for($i=0;$i<30;$i++)
     {
-        include('../layout/content_card.php');
+        include_once('../layout/content_card.php');
     }
-        include('../layout/pager.php');
+        include_once('../layout/pager.php');
     ?>
 </ul>

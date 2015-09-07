@@ -9,8 +9,8 @@
 
 <section id="contents">
     <?php
-    include("php/layout/personal_layout.php");
-    include("php/layout/user_inform.php");
+    include_once("php/layout/personal_layout.php");
+    include_once("php/layout/user_inform.php");
     ?>
     <!-- end contents box -->
     <div id="follower_bar">
@@ -24,7 +24,7 @@
                 <?php
                 for($i=0;$i<20;$i++)
                 {
-                    include('php/layout/follower_card.php');
+                    include_once('php/layout/follower_card.php');
                 }
                 ?>
             </ul>

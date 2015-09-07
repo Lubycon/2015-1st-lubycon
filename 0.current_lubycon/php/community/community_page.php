@@ -275,7 +275,7 @@
         <!-- end tap_item 2  -->
         <hr />
         <?php
-        include('php/layout/pager.php');
+        include_once('php/layout/pager.php');
         ?>
     </section>
     <!--end main_board section -->

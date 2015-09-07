@@ -10,6 +10,6 @@
     <div id="copyright_editor"></div>
 </div>
 <div class="buttons_pop">
-    <button class="next_bt" style="position: absolute; z-index: 5;">Upload</button>
+    <button class="next_bt">Upload</button>
     <button class="cancel_bt">Cancel</button>
 </div>

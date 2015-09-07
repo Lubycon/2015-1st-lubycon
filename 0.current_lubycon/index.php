@@ -206,12 +206,12 @@
     <?php
     if( empty($_GET['1']) == false ) 
     {
-        include("php/".$_GET['1']."/".$_GET['2'].".php");
+        include_once("php/".$_GET['1']."/".$_GET['2'].".php");
         //echo $_GET['1']."/".$_GET['2'].".html";
     }
     else
     {
-        include("index_body.php");
+        include_once("index_body.php");
     }
     ?>
     
