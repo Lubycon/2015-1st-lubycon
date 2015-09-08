@@ -404,6 +404,7 @@ body{
         .text_editor .select_box .sod_label 
         {
             margin-right: 11px;
+            font-weight: 200;
         }
         .text_editor .select_box .sod_select::before, .sod_select::after
         {
