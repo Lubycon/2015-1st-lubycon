@@ -77,7 +77,9 @@
             </div>
             <!-- end forum_search_box -->
 
-            <button id="write_bt" class="out">Write</button>
+            <a href="./index.php?1=community&2=community_write">
+                <span id="write_bt" class="out">Write</span>
+            </a>
 
         </div>
         <!-- end forum_option_box -->

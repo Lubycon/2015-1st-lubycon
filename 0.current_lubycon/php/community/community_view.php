@@ -10,11 +10,17 @@
     <section id="navsel">
         <nav id="lnb_nav">
             <ul>
-                <li class="selected_nav">Recent</li>
-                <li>Most Like</li>
-                <li>Most Comment</li>
+                <li class="forum">
+                    <a href="./index.php?1=community&2=community_page&3=forum">Forum</a>
+                </li>
+                <li class="tutorial">
+                    <a href="./index.php?1=community&2=community_page&3=tutorial">Tutorial</a>
+                </li>
+                <li class="qna">
+                    <a href="./index.php?1=community&2=community_page&3=qna">Q&amp;A</a>
+                </li>
             </ul>
-        </nav>  <!-- end lnb nav -->
+        </nav>
         <div class="search_option">
             <i class="fa fa-filter"></i>
             <select class="basic_filter">
@@ -128,7 +134,9 @@
                 </button>
             </div>  <!-- end forum_search_box -->
 
-            <button id="write_bt" class="out">Write</button>
+            <a href="./index.php?1=community&2=community_write">
+                <span id="write_bt" class="out">Write</span>
+            </a>
 
         </div>  <!-- end forum_option_box -->
     </section>

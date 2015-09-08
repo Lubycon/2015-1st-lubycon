@@ -14,11 +14,10 @@
     float: left;
     line-height: 35px;
     border: 1px solid #818181;
-    border-radius: 10px;
+    border-radius: 5px;
     margin-top: 15px;
     margin-bottom: 15px;
     box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.1);
-    overflow: hidden;
 }
 
 .select_box {
@@ -47,7 +46,7 @@
     width: 203px;
 }
 
-forum_search_box .select_box {
+#forum_search_box .select_box {
     float: right;
     color: #999;
     font-weight: 300;
@@ -74,6 +73,7 @@ forum_search_box .select_box {
 #write_bt {
     width: 150px;
     height: 35px;
+    line-height: 35px;
     margin-top: 15px;
     border-radius: 5px;
     border: none;
@@ -83,6 +83,8 @@ forum_search_box .select_box {
     box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.1);
     font-weight: 200;
     background: #48cfad;
+    text-align: center;
+    cursor:pointer;
 }
 /*main header end*/
 
