@@ -4,6 +4,7 @@ body {
     background: #fff;
     display: none;
     min-width: 1200px;
+    overflow-x:hidden;
     -webkit-text-size-adjust: none; /*hold font-size in moblie*/
 }
 
@@ -916,7 +917,6 @@ h1 /* main logo */ {
     max-width: 1600px;
     height: 50px;
     margin: 0px auto;
-    overflow:hidden;
 }
 
 .selected_nav{
