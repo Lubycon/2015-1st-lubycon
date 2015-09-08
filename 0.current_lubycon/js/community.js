@@ -45,4 +45,12 @@ $(function(){
     });
 });
 
+$(function () {
+    $('.tool_com').hover(function ()
+    {
+        $(this).children('.tooltip_bt').stop().fadeIn(300).css("display", "inline-block");
+    }, function () {
+        $(this).children('.tooltip_bt').stop().fadeOut(300);
+    });
+});
 /*--------------------------------community editor start-------------------------------*/
