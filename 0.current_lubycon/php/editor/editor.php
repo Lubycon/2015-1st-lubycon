@@ -1,5 +1,6 @@
 <link href="css/editor.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/editor.js"></script>
 <!-- editor css -->
 <div id="popup_wrap">
     <div id="next_pop_body"></div><!--go to thumbnail-->
