@@ -12,11 +12,13 @@
     <!--tnail_preview end-->
     <div id="tnail_work">
         <div id="work_inbody">
-            <img src="CH/img/main_img.png" />
+            <img src="../../ch/user_thumbnail/"/>
         </div>
         <!--work_inbody end-->
         <span id="change_img_bt">Change Image</span>
-        <input type="file" id="change_img_real" />
+        <form id="img_upload_form">
+            <input name="userfile" type="file" id="change_img_real"/>
+        </form>
     </div>
     <!--tnail_work end-->
 </div>
