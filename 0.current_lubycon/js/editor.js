@@ -413,14 +413,23 @@ $(function () {
 
         $.ajax({
             type: "POST",
-            url: "php/ajax/editor_ajax.php", //이페이지에서 중복체크를 한다
-            data: "check_id=" + check_id,//test.asp에 id 값을 보낸다
+            url: "php/ajax/editor_ajax.php",
+            data: "check_id=" + check_id,
             cache: false,
             success: function (data) {
-                $('#next_pop_body').html('').append(data).fadeIn(300).css('display', 'inline-block'); //해당 내용을 보여준다
+                /* call php data */
+                $('#next_pop_body').html('').append(data).fadeIn(300).css('display', 'inline-block');
+
+                /* remove contents card event */
+                $('#tnail_preview ul li .load_view').removeClass('load_view');
+                $('#tnail_preview ul li a').removeAttr('href');
+
+                /* js align center */
                 $('#next_pop_body').css('marginLeft', function () {
                     return $(this).width() / -2;//set width
                 });
+
+                /* select box call function */
                 $(".basic_filter").selectOrDie
                 ({
                     customClass: "custom",
@@ -428,6 +437,7 @@ $(function () {
                     size: 5
                 });
                 $('.dark_overlay').fadeIn(300);
+
             }
         });
     });
@@ -450,6 +460,50 @@ $(function () {
     $(function () {
         $(document).on('click', '#change_img_bt', function () {
             $('#change_img_real').click();
+        });
+
+        var form = $("#img_upload_form")[0];
+        var formData = new FormData(form);
+
+        $(document).on('change', '#change_img_real', function ()
+        {
+            $("#img_upload_form").submit(function (event) {
+                console.log('ajajx');
+                //disable the default form submission
+                event.preventDefault();
+
+                //grab all form data  
+                var formData = new FormData($(this)[0]);
+
+                $.ajax({
+                    url: 'formprocessing.php',
+                    type: 'POST',
+                    data: formData,
+                    async: false,
+                    cache: false,
+                    contentType: false,
+                    processData: false,
+                    success: function (returndata) {
+                        alert(returndata);
+                    }
+                });
+
+                return false;
+            });
+            /*
+            $.ajax({
+                type: "POST",
+                processData: false,
+                contentType: false,
+                url: "php/ajax/img_upload.php",
+                data: "submit_data=" + formData,
+                cache: false,
+                success: function (data) {
+                    console.log('good');
+                    console.log(data);
+                }
+            });
+            */
         });
     });
     /////////////////////////////////////////////////////////
