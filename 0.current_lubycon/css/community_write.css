@@ -18,18 +18,12 @@
     width:100%;
     background:#eeeeee;
     padding:20px 0px;
-    text-align: center;
+    text-align: center
 }
     .properties_box
     {
         margin:13px;
         text-align: left;
-        display: inline-block;
-    }
-    #file_up_com
-    {
-        display: block;
-        text-align: center;
     }
         .work_title
         {
@@ -59,56 +53,14 @@
     #main_work_space
     {
         width:1100px;
+        height:490px;
         background:#fff;
         border-radius: 3px;
         display: inline-block;
         vertical-align: top;
+        overflow:scroll;
     }
-
-    .tooltip_bt
-    {
-        min-width: 70px;
-        height: 20px;
-        line-height: 20px;
-
-        top:48px;
-        left:0px;
-        padding:3px;
-        
-        background:rgba(0,0,0,0.9);
-        border-radius: 3px;
-        color:#fff;
-        font-weight: 200;
-        font-size:12px;
-        box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.3);
-        
-        z-index: 1;  
-        cursor:default;
-        display: none;
-        position:absolute;
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /*---------------------------------no plug in text editor------------------------------*/
-        /*#write_tool_box
+        #write_tool_box
         {
             width:100%;
             height:60px;
@@ -144,6 +96,27 @@
 				color:#fff;
 				font-size:17px;
 			}
+        .tooltip_bt{
+            min-width: 70px;
+            height: 20px;
+            line-height: 20px;
+
+            top:48px;
+            left:0px;
+            padding:3px;
+            
+            background:rgba(0,0,0,0.9);
+            border-radius: 3px;
+            color:#fff;
+            font-weight: 200;
+            font-size:12px;
+            box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.3);
+            
+            z-index: 1;  
+            cursor:default;
+            display: none;
+            position:absolute;
+        }
 
 	#font_prop_com
 	{
@@ -167,6 +140,34 @@
 				margin-left: 3px;
 				margin-right: 3px;
 			}
+			
+			#font_prop_com .sod_select.custom.custom
+			{
+				background:#666666;
+				color:#fff;
+				border: none;
+			}
+
+	        #font_prop_com .sod_select.custom .sod_list_wrapper
+	        {
+	            background:#666666;
+	            color:#fff;
+	            border:none;
+	        }
+	        #font_prop_com .sod_select.custom.focus
+	        {
+	            box-shadow:none;
+	        }
+	        #font_prop_com .sod_select.custom .sod_option
+	        {
+	        	border-bottom:1px solid #444444;
+	        }
+			#font_prop_com .sod_select.custom .sod_option.active
+			{
+				background:#555555;
+				color:#ffffff;
+			}
+
 		#insert_text_window
 		{
 			width:1058px;
@@ -181,6 +182,12 @@
             border:1px solid #48cfad;
             box-shadow: 0px 0px 5px rgba(81, 203, 238, 1);
         }
+
+
+
+
+
+
     #file_import_bt
     {
         width:120px;
@@ -210,4 +217,4 @@
         	font-weight: 200;
         	text-overflow:ellipsis;
         	margin-left: 10px;
-        }*/
+        }
