@@ -53,13 +53,93 @@
     #main_work_space
     {
         width:1100px;
-        height:490px;
         background:#fff;
         border-radius: 3px;
         display: inline-block;
         vertical-align: top;
         overflow:scroll;
     }
+    .note-editor
+    {
+        width:1098px;
+        border:none;
+        border-radius: 3px;
+    }
+        .note-toolbar
+        {
+            background:#444;
+            height:50px;
+            line-height: 50px;
+        }
+        .note-editor .note-editing-area
+        {
+            min-height:300px;
+        }
+    
+
+
+
+
+
+
+
+
+    .tooltip_bt{
+        min-width: 70px;
+        height: 20px;
+        line-height: 20px;
+
+        top:48px;
+        left:0px;
+        padding:3px;
+        
+        background:rgba(0,0,0,0.9);
+        border-radius: 3px;
+        color:#fff;
+        font-weight: 200;
+        font-size:12px;
+        box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.3);
+        
+        z-index: 1;  
+        cursor:default;
+        display: none;
+        position:absolute;
+    }
+
+
+
+    #file_import_bt
+    {
+        width:120px;
+        height:35px;
+        line-height: 35px;
+        border-radius: 3px;
+        background:#48cfad;
+        color:#fff;
+        font-size: 17px;
+        font-weight: 200;
+        display: inline-block;
+        text-align:center;
+        cursor:pointer;
+    }
+        #file_import_com
+        {
+            display:none;
+        }
+        #file_text_com
+        {
+            width:300px;
+            height:35px;
+            background: #ffffff;
+            border:none;
+            border-radius: 3px;
+            color:#aaaaaa;
+            font-weight: 200;
+            text-overflow:ellipsis;
+            margin-left: 10px;
+        }
+
+    /*
         #write_tool_box
         {
             width:100%;
@@ -95,29 +175,9 @@
 			{
 				color:#fff;
 				font-size:17px;
-			}
-        .tooltip_bt{
-            min-width: 70px;
-            height: 20px;
-            line-height: 20px;
-
-            top:48px;
-            left:0px;
-            padding:3px;
-            
-            background:rgba(0,0,0,0.9);
-            border-radius: 3px;
-            color:#fff;
-            font-weight: 200;
-            font-size:12px;
-            box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.3);
-            
-            z-index: 1;  
-            cursor:default;
-            display: none;
-            position:absolute;
-        }
-
+			}*/
+        
+    /*
 	#font_prop_com
 	{
 		margin-left:5px;
@@ -181,40 +241,9 @@
         {
             border:1px solid #48cfad;
             box-shadow: 0px 0px 5px rgba(81, 203, 238, 1);
-        }
+        }*/
 
 
 
 
 
-
-    #file_import_bt
-    {
-        width:120px;
-        height:35px;
-        line-height: 35px;
-        border-radius: 3px;
-        background:#48cfad;
-        color:#fff;
-        font-size: 17px;
-        font-weight: 200;
-        display: inline-block;
-        text-align:center;
-        cursor:pointer;
-    }
-        #file_import_com
-        {
-            display:none;
-        }
-        #file_text_com
-        {
-        	width:300px;
-        	height:35px;
-        	background: #ffffff;
-        	border:none;
-        	border-radius: 3px;
-        	color:#aaaaaa;
-        	font-weight: 200;
-        	text-overflow:ellipsis;
-        	margin-left: 10px;
-        }
