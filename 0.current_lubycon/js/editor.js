@@ -457,55 +457,43 @@ $(function () {
     /////////////////////////////////////////////////////////
     //      editor change thumbnail start
     /////////////////////////////////////////////////////////
-    $(function () {
+    $(function ()
+    {
         $(document).on('click', '#change_img_bt', function () {
             $('#change_img_real').click();
         });
-
-        var form = $("#img_upload_form")[0];
-        var formData = new FormData(form);
-
         $(document).on('change', '#change_img_real', function ()
         {
-            $("#img_upload_form").submit(function (event) {
-                console.log('ajajx');
-                //disable the default form submission
-                event.preventDefault();
-
-                //grab all form data  
-                var formData = new FormData($(this)[0]);
-
-                $.ajax({
-                    url: 'formprocessing.php',
-                    type: 'POST',
-                    data: formData,
-                    async: false,
-                    cache: false,
-                    contentType: false,
-                    processData: false,
-                    success: function (returndata) {
-                        alert(returndata);
-                    }
-                });
-
-                return false;
-            });
-            /*
-            $.ajax({
-                type: "POST",
-                processData: false,
-                contentType: false,
-                url: "php/ajax/img_upload.php",
-                data: "submit_data=" + formData,
-                cache: false,
-                success: function (data) {
-                    console.log('good');
-                    console.log(data);
-                }
-            });
-            */
+            uploadFile();
         });
     });
+
+    function uploadFile()
+    {
+        $('#work_inbody').html("Sending... Please wait...");
+        var form = $("form")[0];
+        var formData = new FormData(form);
+        $.ajax(
+        {
+            url: "php/ajax/upload_img.php",
+            processData: false,
+            contentType: false,
+            data: formData,
+            type: "POST",
+            cache: false,
+            success: function (args)
+            {
+                $('#work_inbody').html("<img src='./php/ajax/upload/" + args + "'/>");
+                $('#form1').trigger("reset");
+            },
+            error: function (args)
+            {
+                $('#work_inbody').html("File upload failed.");
+                $('#work_inbody').append("!!!");
+                $('#form1').trigger("reset");
+            },
+        })
+    }
     /////////////////////////////////////////////////////////
     //      editor change thumbnail start
     /////////////////////////////////////////////////////////
