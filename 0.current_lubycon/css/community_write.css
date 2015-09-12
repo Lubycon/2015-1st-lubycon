@@ -75,6 +75,45 @@
         {
             min-height:300px;
         }
+        
+        .modal
+        {
+            position: fixed;
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+            z-index:5;
+            display: none;
+            outline: 0;
+            overflow: hidden;
+        }
+            .modal-dialog
+            {
+                width:600px;
+                margin:30px auto;
+            }
+            .modal-content
+            {
+                position: relative;
+                outline: 0;
+            }
+                .modal-body
+                {
+                    position: relative;
+                    outline: 0;
+                }
+                .panel-heading.note-toolbar .dropdown-menu
+                {
+                    z-index: 2
+                }
+        a[data-event="formatBlock"] h1
+        {
+            position:relative;
+            left:0px;
+            top:0px;
+            height:auto;
+        }
     
 
 

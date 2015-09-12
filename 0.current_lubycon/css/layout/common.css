@@ -34,8 +34,8 @@ a {
 }
 
 * {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 1em;
+    font-family: 'Source Sans Pro';
+    /*font-size: 1em;*/
     font-weight: 400;
     outline: 0;
 }
