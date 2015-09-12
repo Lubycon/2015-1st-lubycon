@@ -34,7 +34,7 @@
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 </head>
-<body id="bodyer" ondragstart="return false" onselectstart="return false">
+<body id="bodyer">
     <!-- popup start -->
     <div class="dark_overlay"></div>
 
