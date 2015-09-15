@@ -53,4 +53,5 @@ $(function () {
         $(this).children('.tooltip_bt').stop().fadeOut(300);
     });
 });
+
 /*--------------------------------community editor start-------------------------------*/
