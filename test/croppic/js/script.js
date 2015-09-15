@@ -1,0 +1,17 @@
+var croppicContaineroutputMinimal = {
+    uploadUrl: 'ajax/img_save_to_file.php',
+    cropUrl: 'ajax/img_crop_to_file.php',
+    modal: false,
+    doubleZoomControls: false,
+    rotateControls: false,
+    loaderHtml: '<div class="loader bubblingG"><span id="bubblingG_1"></span><span id="bubblingG_2"></span><span id="bubblingG_3"></span></div> ',
+    onBeforeImgUpload: function () { console.log('onBeforeImgUpload') },
+    onAfterImgUpload: function () { console.log('onAfterImgUpload') },
+    onImgDrag: function () { console.log('onImgDrag') },
+    onImgZoom: function () { console.log('onImgZoom') },
+    onBeforeImgCrop: function () { console.log('onBeforeImgCrop') },
+    onAfterImgCrop: function () { console.log('onAfterImgCrop') },
+    onReset: function () { console.log('onReset') },
+    onError: function (errormessage) { console.log('onError:' + errormessage) }
+}
+var cropContaineroutput = new Croppic('cropContainerMinimal', croppicContaineroutputMinimal);
