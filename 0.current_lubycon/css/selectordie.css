@@ -118,6 +118,10 @@
                 position: relative;
                 padding: 8px 5px;
                 list-style-type: none;
+                font-weight: 200;
+            }
+            .sod_select .sod_option:last-child {
+                margin-bottom: 3px;
             }
 
             
@@ -128,12 +132,16 @@
                 {
                     background: #48cfad;
                     color: #fff;
+                    font-weight: 200;
+                    border-radius: 3px;
+                    margin-left:3px;
+                    margin-right:3px;
                 }
 
             /*Make room for the check mark */
             .sod_select .sod_option.selected
                 {
-                    font-weight: 600;
+                    font-weight: 400;
                     padding-right: 10px;
                 }
 

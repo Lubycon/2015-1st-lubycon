@@ -4,6 +4,7 @@
 
 <link href="css/community_write.css" rel="stylesheet" type="text/css" />  <!-- community_view css -->
 <link href="css/community.css" rel="stylesheet" type="text/css" />  <!-- community css -->
+<script src="js/community.js" type="text/javascript"></script>
 
 
 

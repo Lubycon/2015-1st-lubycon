@@ -200,6 +200,7 @@ body{
         #file_info #files{
             width: 100%;
             display:none;
+            background: #555555;
         }
 
             #files #file_name
@@ -209,6 +210,8 @@ body{
                 line-height: 30px;
                 cursor: default;
                 background: #555555;
+                border-left: 1px solid #48cfad;
+                margin-left: 16px;
             }
 
                 #file_name p
@@ -230,9 +233,11 @@ body{
                 {
                     color:#48cfad;
                     font-size:14px;
-                    margin-left:10px;
+                    margin-left:-6px;
                     margin-right:10px;
                     display: inline;
+                    background:#555555;
+                    border-top:9px solid #555555;
                 }
 
             #files ul

@@ -20,8 +20,6 @@
         <li>2.Thumbnail</li>
         <li>></li>
         <li>3.Setting</li>
-        <li>></li>
-        <li>4.Preview</li>
     </ol>
     <button class="next_bt" id="call_thumb">Next</button>
 </nav>

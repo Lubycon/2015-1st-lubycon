@@ -483,6 +483,7 @@
         #file_info #files{
             width: 100%;
             display:none;
+            background:#555555;
         }
 
             #files #file_name
@@ -490,8 +491,10 @@
                 width: 100%;
                 height: 30px;
                 line-height: 30px;
-                cursor:default;
+                cursor: default;
                 background: #555555;
+                border-left: 1px solid #48cfad;
+                margin-left: 16px;
             }
 
                 #file_name p
@@ -513,9 +516,11 @@
                 {
                     color:#48cfad;
                     font-size:14px;
-                    margin-left:10px;
+                    margin-left:-6px;
                     margin-right:10px;
                     display: inline;
+                    background: #555555;
+                    border-top: 9px solid #555555;
                 }
 
             #files ul
@@ -529,7 +534,7 @@
             }
             #files ul li
             {
-                color:#fff;
+                color:#ffffff;
                 margin: 0px 5px 0px 15px;
                 border-left: 1px solid #48cfad;
                 padding: 3px 0px 3px 42px;

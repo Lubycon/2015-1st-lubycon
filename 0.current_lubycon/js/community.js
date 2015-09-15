@@ -54,4 +54,10 @@ $(function () {
     });
 });
 
+$(function(){
+    $('.note-codable').focus(function(){
+        $('.note-editing-area').css('border','1px solid #48cfad');
+    });
+});
+
 /*--------------------------------community editor start-------------------------------*/
