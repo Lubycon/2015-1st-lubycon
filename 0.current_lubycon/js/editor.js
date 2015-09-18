@@ -437,7 +437,6 @@ $(function () {
                     size: 5
                 });
                 $('.dark_overlay').fadeIn(300);
-
             }
         });
     });
@@ -496,6 +495,26 @@ $(function () {
     }
     /////////////////////////////////////////////////////////
     //      editor change thumbnail start
+    /////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////
+    //      editor edit price start
+    /////////////////////////////////////////////////////////
+    $(function(){
+        var price_name=$('#price_editor').find('.sod_label');
+        var price_list=$('#price_editor').find('.sod_label').text();//correct
+        
+        price_name.on('change',function(){
+            console.log(price_list);
+            if(price_list=='Paid'){
+                $('#price_input').removeAttr('disabled');
+            }
+            else{
+                $('#price_input').attr('disabled','disabled');
+            }
+        });
+    });
+    /////////////////////////////////////////////////////////
+    //      editor edit price end
     /////////////////////////////////////////////////////////
 
 

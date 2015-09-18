@@ -869,6 +869,7 @@ body{
                 #price_input[disabled]
                 {
                     background:#aaaaaa;
+                    cursor:not-allowed;
                 }
         #copyright_editor
         {

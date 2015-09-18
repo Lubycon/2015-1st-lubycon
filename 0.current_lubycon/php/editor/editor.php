@@ -3,7 +3,7 @@
 <script type="text/javascript" src="js/editor.js"></script>
 <!-- editor css -->
 <div id="popup_wrap">
-    <div id="next_pop_body"></div><!--go to thumbnail-->
+    <div id="next_pop_body" class="fadeInDown animated"></div><!--go to thumbnail-->
 </div>
 
 <div id="embed_popup">
