@@ -22,9 +22,9 @@
         </nav>  <!-- end lnb nav -->
 
         <div class="search_option">
-            <i class="fa fa-filter"></i>
+            <i class="fa fa-usd"></i>
             <select class="basic_filter">
-                <option value="Extension">Extension</option>
+                <option value="Extension">All</option>
                 <option value="Free">Free</option>
                 <option value="Not Free">Not Free</option>
             </select>
@@ -49,18 +49,18 @@
         <div id="open_cate">
             <div id="open_cate_inner">
                 <ul>
-                    <li>All</li>
-                    <li>Hollyday</li>
-                    <li>Animal</li>
-                    <li>Car</li>
-                    <li>Box</li>
-                    <li>Nature</li>
-                    <li>Mecanic</li>
-                    <li>Phone</li>
-                    <li>Bottle</li>
-                    <li>Calinder</li>
-                    <li>Book</li>
-                    <li>Simbol / Sign</li>
+                    <li class="open_cate_li" value="1">All</li>
+                    <li class="open_cate_li" value="2">Holiday</li>
+                    <li class="open_cate_li" value="3">Animal</li>
+                    <li class="open_cate_li" value="4">Car</li>
+                    <li class="open_cate_li" value="5">Box</li>
+                    <li class="open_cate_li" value="6">Nature</li>
+                    <li class="open_cate_li" value="7">Mecanic</li>
+                    <li class="open_cate_li" value="8">Phone</li>
+                    <li class="open_cate_li" value="9">Bottle</li>
+                    <li class="open_cate_li" value="10">Calinder</li>
+                    <li class="open_cate_li" value="11">Book</li>
+                    <li class="open_cate_li" value="12">Simbol / Sign</li>
                 </ul>
             </div>  <!-- end open cate inner -->
         </div>  <!-- end open cate -->

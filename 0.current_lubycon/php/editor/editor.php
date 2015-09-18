@@ -90,7 +90,7 @@
 
         <section id="editor_section">
             <p>
-                <input type="text" value="Your Contents Name" />
+                <input id="editor_content_name" type="text" value="Your Contents Name" />
             </p>
             <ul id="editor_preview_box">
             </ul>

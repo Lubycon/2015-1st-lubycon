@@ -1,6 +1,27 @@
 ﻿
 /*----------------------------editor start----------------------------*/
 /////////////////////////////////////////////////////////
+//      editor content_name start
+/////////////////////////////////////////////////////////
+$(function ()
+{
+    var editor_content_name = $('#editor_content_name');
+
+    editor_content_name.focus(function () {
+        if(editor_content_name.val() == 'Your Contents Name') {
+            editor_content_name.val('');
+        }
+    });
+    editor_content_name.blur(function () {
+        if (editor_content_name.val() == '') {
+            editor_content_name.val('Your Contents Name');
+        }
+    });
+});
+/////////////////////////////////////////////////////////
+//      editor content_name end
+/////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
 //      editor nav start
 /////////////////////////////////////////////////////////
 $(function () {

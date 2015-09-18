@@ -450,11 +450,13 @@ $(function () //contents page category
         if ($('#open_cate_inner').css('top') == '-85px')
         {
             $('#open_cate_inner').stop().animate({ top: 0 });
+            $('.open_cate_li').stop().fadeIn(800);
             $('#down_arrow').children().removeClass();
             $('#down_arrow').children().addClass('fa fa-angle-up');
         } else if ($('#open_cate_inner').css('top') == '0px')
         {
             $('#open_cate_inner').stop().animate({ top: -85 });
+            $('.open_cate_li').stop().fadeOut(300);
             $('#down_arrow').children().removeClass();
             $('#down_arrow').children().addClass('fa fa-angle-down');
         }

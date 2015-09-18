@@ -20,6 +20,7 @@
         </div>
         <!-- end contents disc -->
         <div class="contents_overlay load_view">
+            <i class="fa fa-search-plus"></i>
             <ul>
                 <li>
                     <i class="fa fa-eye"></i>
