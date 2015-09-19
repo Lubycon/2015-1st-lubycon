@@ -24,19 +24,19 @@
         <div class="search_option">
             <i class="fa fa-usd"></i>
             <select class="basic_filter">
-                <option value="Extension">All</option>
-                <option value="Free">Free</option>
-                <option value="Not Free">Not Free</option>
+                <option value="all">All</option>
+                <option value="free">Free</option>
+                <option value="not_Free">Not Free</option>
             </select>
         </div>  <!-- end select box -->
         <div class="search_option">
             <i class="fa fa-filter"></i>
             <select class="basic_filter">
-                <option value="Featured">Featured</option>
-                <option value="Recent">Recent</option>
-                <option value="Most Like">Most Like</option>
-                <option value="Most Download">Most Download</option>
-                <option value="Most Coment">Most Comment</option>
+                <option value="featured">Featured</option>
+                <option value="recent">Recent</option>
+                <option value="most_like">Most Like</option>
+                <option value="mst_download">Most Download</option>
+                <option value="most_coment">Most Comment</option>
             </select>
         </div>  <!-- end select box -->
     </section>  <!-- end section -->
