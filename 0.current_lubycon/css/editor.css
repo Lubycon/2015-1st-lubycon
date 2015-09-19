@@ -850,6 +850,9 @@ body{
                 box-shadow:none;
                 z-index:2;
             }
+            #price_editor .sod_select.custom .sod_label{
+                padding:0px;
+            }
             #price_editor .sod_select.custom.focus{
                 box-shadow:none;
             }
