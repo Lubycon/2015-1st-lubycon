@@ -139,6 +139,7 @@
                 border:1px solid #bbb;
                 border-top-left-radius: 3px;
                 border-bottom-left-radius: 3px;
+                resize:none;
             }
             .contents_view #comment_box #comment_bt{
                 float:left;

@@ -377,7 +377,7 @@
             <p class="setting_title">Delete Account</p>
             <form class="setting_form">
                 <p id="delete_desc">Deleting your account will delete all of your content and remove all data associated with it.</p>
-                <button id="delete_bt">I want delete my account</button>
+                <span id="delete_bt">I want delete my account</span>
             </form>
         </section>
         <input type="submit" value="Submit" id="submit_bt" />

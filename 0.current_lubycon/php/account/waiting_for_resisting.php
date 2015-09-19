@@ -27,13 +27,11 @@
 	<article id="thanks2">
 		<p>Thank you <font color="#48cfad">!</font></p>
 	</article>
-
 		<div id="circle">
 			<a href="index.html">
 				<img id="lubyicon" src="CH/img/logo/lubycon_logo_big.png" width="60" height="60" />
 				<p id="gotomain">Go to the main</p>
 			</a>
 		</div>
-	
 </body>
 </html>

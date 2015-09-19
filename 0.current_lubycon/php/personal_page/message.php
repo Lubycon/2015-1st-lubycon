@@ -65,7 +65,7 @@
         </figure>
         <div class="coming_soon_bt">
             <a href="javascript:history.back()">
-                <img src="CH/img/coming_soon/coming_soon_bt.png" />
+                <img src="CH/img/coming_soon/coming_soon_bt.svg" />
             </a>
         </div>
     </div>

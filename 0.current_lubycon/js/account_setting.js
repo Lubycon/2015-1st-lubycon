@@ -231,3 +231,25 @@ $(document).ready(function () {
 
     $('#file_hide').setPreview(opt);
 });
+
+////////////////////////////delete button interaction start
+$(function(){
+    $('#delete_bt').click(function(){
+        console.log('1');
+        $('#confirm_alert').css('display','inline-block');
+        $('#confirm_alert').attr("class","luby_alert zoomIn animated");
+        $('.dark_overlay').stop().fadeIn(100);
+    });
+
+
+
+    ////////cancel bt start/////////////////////////////////
+    $('.dark_overlay, .index_cancel_bt').click(function (){
+        $('.dark_overlay').stop().fadeOut(200);
+        $('#confirm_alert').stop().fadeOut(200);
+    });
+    //////////cancel bt end/////////////////////////////////
+});
+
+
+////////////////////////////delete button interaction end

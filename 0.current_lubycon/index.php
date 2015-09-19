@@ -37,6 +37,20 @@
 <body id="bodyer">
     <!-- popup start -->
     <div class="dark_overlay"></div>
+    
+    <div class="luby_alert" id="suc_alert">
+        <i id="suc_icon" class="fa fa-check-circle"></i>
+        <p>Success!</p>
+    </div><!--succese box-->
+    <div class="luby_alert" id="fail_alert">
+        <i id="fail_icon" class="fa fa-times"></i>
+        <p>Failed!</p>
+    </div><!--fail box-->
+    <div class="luby_alert" id="confirm_alert">
+        <p class="confirm_text">Are you sure?</p>
+        <button class="index_confirm_bt">Confirm</button>
+        <button class="index_cancel_bt">Cancel</button>
+    </div><!--confirm box-->
 
     <div class="editor_popup fadeInDown animated">
         <p>Which content will you upload?</p>

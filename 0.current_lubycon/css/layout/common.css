@@ -94,6 +94,79 @@ body{
     cursor: pointer;
 }
 
+    .luby_alert{
+        width: 500px;
+        height: 200px;
+        position: fixed;
+        display: none;
+        
+        left: 50%;
+        margin-left: -250px;
+        padding: 3px;
+        top: 25%;
+        text-align: center;
+        
+        background: #ffffff;
+        border: 1px solid #dddddd;
+        border-radius: 3px;
+        box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.7);
+        z-index: 20;
+        cursor:default;
+    }
+    
+        .luby_alert #suc_icon{
+            color:#48cfad;
+            font-size:70px;          
+            text-align:center;
+            display: block;
+            margin-top:34px;
+        }
+        .luby_alert #fail_icon{
+            color:#ec6446;
+            font-size:70px;        
+            text-align:center;
+            display: block;
+            margin-top:34px;
+        }
+        .luby_alert p{
+            color:#444444;
+            font-size: 36px;
+            font-weight: 200;
+            text-align: center;
+
+            margin-top:14px;
+        }
+        .luby_alert .confirm_text{
+            margin-top:45px;
+        }
+        .luby_alert .index_confirm_bt{
+            width:150px;
+            height:35px;
+
+            color:#ffffff;
+            font-weight: 200;
+            font-size:18px;
+
+            background:#48cfad;
+            border:none;
+            border-radius: 3px;
+            margin-top: 60px;
+            cursor:pointer;
+        }
+        .luby_alert .index_cancel_bt{
+            width:150px;
+            height:35px;
+
+            color:#ec6446;
+            font-weight: 200;
+            font-size:18px;
+
+            background:none;
+            border:none;
+            margin-top: 60px; 
+            cursor:pointer;                   
+        }
+
 .editor_popup {
     width: 540px;
     height: 175px;
@@ -956,7 +1029,7 @@ h1 /* main logo */ {
         float: left;
         padding: 0px 8px;
         font-size: 22px;
-        padding-top: 19px;
+        padding-top: 18.5px;
         cursor: pointer;
         letter-spacing: -1px;
     }

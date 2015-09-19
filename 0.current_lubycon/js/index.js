@@ -485,13 +485,14 @@ $(function () //contents page category
 /////////////////////////////////////////////////////////
 $(function ()
 {
-    $('.contents_card').hover(function ()
-    {
-        $(this).children('.contents_overlay').stop().fadeIn(300);
-    }, function ()
-    {
-        $(this).children('.contents_overlay').stop().fadeOut(300);
-    });
+    $(document).on({
+        mouseenter: function() {
+            $(this).children('.contents_overlay').stop().fadeIn(300);
+        },
+        mouseleave: function() {
+            $(this).children('.contents_overlay').stop().fadeOut(300)
+        }
+    }, '.contents_card');
 });
 /////////////////////////////////////////////////////////
 //      contents card hover overlay view end

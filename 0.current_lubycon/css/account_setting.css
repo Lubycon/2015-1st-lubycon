@@ -129,13 +129,14 @@
     }
     #delete_bt {
         border:none;
-        background:none;
-        background:#ea4126;
+        display:inline-block;
+        background:#ec6446;
         color:#fff;
         border-radius:2px;
         padding:8px 15px;
         margin-bottom:60px;
         font-weight: 200;
+        cursor:pointer;
     }
     #submit_bt{
         width:210px;
