@@ -142,8 +142,19 @@ body{
                 color:#646464 !important;
             }
 
+            #body_color_view
+            {
+                width:30px;
+                height:30px;
+                border-radius: 3px;
+                background:#ffffff;
+                margin:0px auto;
+                margin-top: 8px;
+            }
+
         
-.tooltip_bt{
+.tooltip_bt
+{
     min-width: 140px;
     height: 30px;
     line-height: 30px;
@@ -162,7 +173,10 @@ body{
     cursor:default;
     display: none;
 }
-
+    #body_color_tooltip
+    {
+        margin-top:20px;
+    }
 
 
 
@@ -518,14 +532,14 @@ body{
         margin: 0px 1px;
         box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.3);
     }
-    .textarea_editor .color_picker
+    .color_picker
     {
         display: inline-block;
         height: 15px;
         margin: 0px 7px;
         position:relative;
     }
-        .textarea_editor .color_picker .selected_color
+        .color_picker .selected_color
         {
             width: 15px;
             height: 15px;
@@ -536,7 +550,7 @@ body{
             cursor:pointer;
             box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.3);
         }
-        .textarea_editor .color_picker ul
+        .color_picker ul
         {
             position:absolute;
             top: 28px;
@@ -549,16 +563,16 @@ body{
             z-index: 2;
             cursor:default;
         }
-            .textarea_editor .color_picker ul li
+            .color_picker ul li
             {
-                width: 15px;
-                height:15px;
+                width: 15px !important;
+                height:15px !important;
                 border:1px solid #fff;
-                border-radius:50%;
-                text-indent:9999px;
+                border-radius:50% !important;
+                text-indent:9999px !important;
                 float:left;
-                margin:3px;
-                cursor:pointer;
+                margin:3px !important;
+                cursor:pointer !important;
             }
 
             .preview_img 

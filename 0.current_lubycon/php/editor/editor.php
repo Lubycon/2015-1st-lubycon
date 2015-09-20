@@ -50,6 +50,10 @@
                 <i class="fa fa-font"></i>
                 <span class="tooltip_bt" id="file_tooltip">Text tool</span><!--tooltip-->
             </li>
+            <li id="change_bd_color">
+                <div id="body_color_view"></div>
+                <span class="tooltip_bt" id="body_color_tooltip">Body color</span>
+            </li>
             <li id="embed_media">
                 <i class="fa fa-code"></i>
                 <span class="tooltip_bt" id="file_tooltip">Embed media</span><!--tooltip-->

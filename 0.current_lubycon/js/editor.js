@@ -108,6 +108,126 @@ $(function () {
     /////////////////////////////////////////////////////////
     //      editor nav end
     /////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////
+    //      body color start
+    /////////////////////////////////////////////////////////
+    $("#change_bd_color").click(function(){
+        var bd_color_picker =
+        '<div class="color_picker">' +
+            '<ul><!--color list-->' +
+                '<li class="colors">#fff</li><!--monotone-->' +
+                '<li>#aaaaaa</li>' +
+                '<li>#999999</li>' +
+                '<li>#777777</li>' +
+                '<li>#555555</li>' +
+                '<li>#333333</li>' +
+                '<li>#222222</li>' +
+                '<li>#000000</li>' +
+
+                '<li>#ffe8e8</li>' + '<!--red-->' +
+                '<li>#fdc8c8</li>' +
+                '<li>#fea3a3</li>' +
+                '<li>#fe7a7a</li>' +
+                '<li>#ff0000</li>' + '<!--middle-->' +
+                '<li>#db0101</li>' +
+                '<li>#b70202</li>' +
+                '<li>#920000</li>' +
+
+                '<li>#fff9e8</li>' + '<!--orange-->' +
+                '<li>#fdefc8</li>' +
+                '<li>#fee5a3</li>' +
+                '<li>#feda7a</li>' +
+                '<li>#ffba00</li>' + '<!--middle-->' +
+                '<li>#dba001</li>' +
+                '<li>#b78602</li>' +
+                '<li>#926b00</li>' +
+
+                '<li>#ffffe8</li>' + '<!--yellow-->' +
+                '<li>#fdfdc8</li>' +
+                '<li>#fefda3</li>' +
+                '<li>#fefc7a</li>' +
+                '<li>#ffff00</li>' + '<!--middle-->' +
+                '<li>#dbd901</li>' +
+                '<li>#b7b602</li>' +
+                '<li>#818201</li>' +
+
+                '<li>#efffe8</li>' + '<!--green-->' +
+                '<li>#d9fdc8</li>' +
+                '<li>#c2fea3</li>' +
+                '<li>#a7fe7a</li>' +
+                '<li>#00ff00</li>' + '<!--middle-->' +
+                '<li>#4adb01</li>' +
+                '<li>#3db702</li>' +
+                '<li>#2b8402</li>' +
+
+                '<li>#e8fffc</li>' + '<!--mint-->' +
+                '<li>#c8fdf5</li>' +
+                '<li>#a3feef</li>' +
+                '<li>#7afee6</li>' +
+                '<li>#00ffd5</li>' + '<!--middle-->' +
+                '<li>#48cfad</li>' +
+                '<li>#02b799</li>' +
+                '<li>#00927d</li>' +
+
+                '<li>#e8f8ff</li>' + '<!--sky blue-->' +
+                '<li>#c8eefd</li>' +
+                '<li>#a3e6fe</li>' +
+                '<li>#7adcfe</li>' +
+                '<li>#00baff</li>' + '<!--middle-->' +
+                '<li>#01a1db</li>' +
+                '<li>#0286b7</li>' +
+                '<li>#006892</li>' +
+
+                '<li>#e8ecff</li>' + '<!--blue-->' +
+                '<li>#c8d4fd</li>' +
+                '<li>#a3b9fe</li>' +
+                '<li>#7a9cfe</li>' +
+                '<li>#0000ff</li>' + '<!--middle-->' +
+                '<li>#0136db</li>' +
+                '<li>#022eb7</li>' +
+                '<li>#002192</li>' +
+
+                '<li>#f4e8ff</li>' + '<!--pupple-->' +
+                '<li>#e4c8fd</li>' +
+                '<li>#d0a3fe</li>' +
+                '<li>#ba7afe</li>' +
+                '<li>#8000ff</li>' + '<!--middle-->' +
+                '<li>#6e01db</li>' +
+                '<li>#5c02b7</li>' +
+                '<li>#4c0092</li>' +
+            '</ul>' +
+        '</div>';    
+        
+        $('#change_bd_color').append(bd_color_picker);
+    });
+    /////////////////////////////////////////////////////////
+    //      body color end
+    /////////////////////////////////////////////////////////
+     /////////////////////////////////////////////////////////
+    //      text color picker start
+    /////////////////////////////////////////////////////////
+    $(document).on('click', '.color_picker > ul > li', function () //change text color change
+    {
+        $("#editor_preview_box").css({ "background": $(this).text() });
+        $('#body_color_view').css({ "background": $(this).text() });
+        $(this).parent('ul').hide();
+    });
+
+
+    $(document).on('click', '#change_bd_color', function () //color picker toggle
+    {
+        $(this).find('ul').toggle();
+    });
+
+    $(document).on('click', '#change_bd_color', function () // color picker palete making
+    {
+        $('.color_picker > ul > li').each(function () {
+            $(this).css("background", $(this).text());
+        });
+    });
+    /////////////////////////////////////////////////////////
+    //      text color picker end
+    /////////////////////////////////////////////////////////
 
     /////////////////////////////////////////////////////////
     //      embed midea 
@@ -253,7 +373,7 @@ $(function () {
                             '<button class="align_right"><i class="fa fa-align-right"></i></button>' +
                         '</div>' +
                     '</div>' +
-                    '</li>'
+                '</li>'
 
         $('#editor_preview_box').append(text_editor);
         $(".basic").selectOrDie(); //seleter load script
@@ -382,7 +502,7 @@ $(function () {
     /////////////////////////////////////////////////////////
 
     /////////////////////////////////////////////////////////
-    //      color picker start
+    //      text color picker start
     /////////////////////////////////////////////////////////
     $(document).on('focus', '.editor_body_text', function () // text editor focus view
     {
@@ -418,7 +538,7 @@ $(function () {
         });
     });
     /////////////////////////////////////////////////////////
-    //      color picker end
+    //      text color picker end
     /////////////////////////////////////////////////////////
 
     /////////////////////////////////////////////////////////
