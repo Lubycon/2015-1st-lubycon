@@ -571,7 +571,16 @@ $(function ()
     $('.dark_overlay').click(function ()
     {
         $('.dark_overlay').stop().fadeOut(300);
-        $('#pop_up').stop().fadeOut(300).remove();
+        $('#pop_up').stop().fadeOut(500).queue(function(){
+            $('#pop_up').remove();
+        });
+    });
+    
+    $(document).on('click','.contents_box_total',function(){
+        $('.dark_overlay').stop().fadeOut(300);
+        $('#pop_up').stop().fadeOut(300).queue(function(){
+            $('#pop_up').remove();
+        });
     });
 });
 
@@ -1228,3 +1237,33 @@ $(function(){
     });
 });
 /*----------------------------followers end----------------------------*/
+/*----------------------------pager interaction start--------------------------*/
+$(function(){
+    var page_li = $(".page_list li");
+
+    $(".ten_page").hover(function(){
+        $(this).stop().animate({opacity:0.6},300);
+    },function(){
+        $(this).stop().animate({opacity:1},300);
+    });
+    
+    $(".one_page").hover(function(){
+        $(this).stop().animate({opacity:0.6},300);
+    },function(){
+        $(this).stop().animate({opacity:1},300);
+    });
+
+
+    page_li.hover(function(){
+        $(this).stop().animate({opacity:0.6},300);
+    },function(){
+        $(this).stop().animate({opacity:1},300);
+    })
+    
+    page_li.click(function(){
+        page_li.removeClass();
+        $(this).addClass("selected_pager");
+    })
+
+});
+/*----------------------------pager interaction end--------------------------*/
