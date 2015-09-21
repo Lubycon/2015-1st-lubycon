@@ -1,11 +1,16 @@
 $(function () {
     $(document).scroll(function () //community subject event
     {
-        if ($(document).scrollTop() > 260) {
-            $('#post_subject_area').css({ "position": "fixed", "top": "45px", "z-index": "2" })
-        } else {
-            $('#post_subject_area').css({ "position": "absolute", "top": "50px" });
+        if($(document).find('#post_subject_area'))
+        {
+            if ($(document).scrollTop() > 260) {
+                $('#post_subject_area').css({ "position": "fixed", "top": "45px", "z-index": "2" })
+            }
+            else {
+                $('#post_subject_area').css({ "position": "absolute", "top": "50px" });
+            }  
         }
+        
     });
 
     $(document).scroll(function () //community view banner
