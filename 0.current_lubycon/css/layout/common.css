@@ -570,6 +570,7 @@ h1 /* main logo */ {
     color: #fff;
     float: left;
     font-weight: 200;
+    margin:0px !important;
 }
 
 #main_gnb ul li i {
