@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link href="spectrum.css" type="text/css" rel="stylesheet" >
+	<script src="jquery-1.11.3.min.js" type="text/javascript"></script>
+	<script src="spectrum.js" type="text/javascript"></script>
+</head>
+<body>
+	<input type="text" id="shower1" value=""></input>
+	<input type="text" id="shower2" value="" readonly="true"></input>
+	<input type="text" id="shower3" value="" readonly="true"></input>
+	<input type="text" id="color_picker"></input>
+	<script>
+		$("#color_picker").spectrum({
+			color:"#48cfad",
+			preferredFormat: "rgb",
+			move: function(color){
+				var label = $("#shower1");
+				var label2 = $("#shower2");
+				var label3 = $("#shower3");
+				label.val(color.toHexString());
+				label2.val(color.toRgbString());
+				label3.val(color.toHslString());
+			}
+		});	
+		$("#shower1").change(function(){
+			$("#color_picker").spectrum("set", $("#shower1").val());
+		});
+	</script>
+	<style>
+		
+		body{
+			text-align: center;
+		}
+		
+
+		#shower1, #shower2, #shower3{
+			width:240px;
+			height:30px;
+			outline: none;
+			font-size:20px;
+
+			border:1px solid #444;
+			border-radius: 3px;
+			display: block;
+			color:#555555;
+			margin: 20px auto;
+		}
+
+		
+
+		.sp-container{/*-----------parent-----------*/
+		    background-color: #444444;
+		    border: solid 1px #555555;
+		    border-radius: 4px;
+		    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2);
+		}
+		.sp-picker-container{
+			border: solid 1px #555555;
+			border-radius: 4px;
+		}
+
+		.sp-replacer{/* Replacer (the little preview div that shows up instead of the <input>) */
+		    border: solid 1px #fff;
+		    background: #333;
+		    color: #eee;
+		    vertical-align: middle;
+		}
+		.sp-replacer:hover, .sp-replacer.sp-active{
+		    color: #fff;
+		}
+		.sp-replacer.sp-disabled{
+		    border-color: silver;
+		    color: silver;
+		}
+		.sp-preview{
+		    border: solid 1px #999;
+		}
+		.sp-input{/*--input window property in color picker--*/
+			background:#ffffff;
+			outline:none;
+		}
+		.sp-cancel{
+		    color: #ec6446 !important;
+		    font-size:14px;
+		    display: inline-block;
+		    cursor: pointer;
+		}
+		.sp-choose{
+			width: 70px;
+			height: 27px;
+			line-height: 27px;
+			display: inline-block;
+			cursor: pointer;
+
+			margin-top: 7px;
+			margin-left: 5px;
+
+			border:none;
+			border-radius: 3px;
+			background:#48cfad;
+
+			text-align: center;
+			font-size:15px;
+			color:#fff;
+		}
+			.sp-choose:hover{
+				opacity: 0.7;
+			}
+
+		.sp-alpha-handle{
+			border-radius: 3px;
+		}
+	</style>
+</body>
+</html>
