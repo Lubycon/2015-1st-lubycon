@@ -24,7 +24,12 @@
     {
         margin:13px;
         text-align: left;
+        display:inline-block;
     }
+        #uploader_com{
+            display:block;
+            text-align: center;
+        }
         .work_title
         {
             width:93px;

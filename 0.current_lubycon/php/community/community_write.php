@@ -61,7 +61,7 @@
             <p class="work_title">Link2</p>
             <input type="text" class="write_box_com" id="write_box_title" />
         </div><!--link2 end-->
-        <div class="properties_box">
+        <div class="properties_box" id="uploader_com">
             <p class="work_title">File Upload</p>
             <span id="file_import_bt">Find the file</span>
             <input type="file" id="file_import_com" />

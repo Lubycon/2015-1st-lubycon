@@ -464,6 +464,7 @@ body{
     {
         border:none;
         border-radius: 3px;
+        background: none;
         width:330px;
         max-width:1140px;
         min-width: 330px;

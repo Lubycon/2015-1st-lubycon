@@ -21,9 +21,26 @@
 				var label2 = $("#shower2");
 				var label3 = $("#shower3");
 				label.val(color.toHexString());
+				label.css("color",color.toHexString());
 				label2.val(color.toRgbString());
+				label2.css("color",color.toRgbString());
 				label3.val(color.toHslString());
+				label3.css("color",color.toHslString());
+			},
+			change: function(color){
+				var label = $("#shower1");
+				var label2 = $("#shower2");
+				var label3 = $("#shower3");
+				label.val(color.toHexString());
+				label.css("color",color.toHexString());
+				label2.val(color.toRgbString());
+				label2.css("color",color.toRgbString());
+				label3.val(color.toHslString());
+				label3.css("color",color.toHslString());
+				
+				$("body").css("background",color.toHexString());
 			}
+
 		});	
 		$("#shower1").change(function(){
 			$("#color_picker").spectrum("set", $("#shower1").val());
