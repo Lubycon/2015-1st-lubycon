@@ -567,22 +567,28 @@ $(function ()
             }
         });
     });
-
-    $('.dark_overlay').click(function ()
-    {
-        $('.dark_overlay').stop().fadeOut(300);
-        $('#pop_up').stop().fadeOut(500).queue(function(){
-            $('#pop_up').remove();
-        });
+    
+    $(document).on("click",".dark_overlay",function(){
+        $(".dark_overlay").stop().fadeOut(300);
+        $("#pop_up").stop().fadeOut(300).queue(function(){
+            $("#pop_up").remove();
+        })
     });
     
-    $(document).on('click','.contents_box_total',function(){
-        $('.dark_overlay').stop().fadeOut(300);
-        $('#pop_up').stop().fadeOut(300).queue(function(){
-            $('#pop_up').remove();
-        });
+
+    $(document).on("click","#bookmark_inner_bt",function(){//bookmark alert
+        if($(this).css("color") != "rgb(193, 193, 193)"){
+            console.log("success");
+            $("#bookmark_alert").css('display','inline-block');
+            $("#bookmark_alert").attr("class","luby_alert fadeIn animated");
+            setTimeout("hideAlert()",1500); 
+        };
     });
 });
+function hideAlert(){
+    $("#bookmark_alert").attr("class","luby_alert fadeOut animated");
+    $("#bookmark_alert").stop().fadeOut(1000);
+};
 
 /////////////////////////////////////////////////////////
 //      contents view load ajax end

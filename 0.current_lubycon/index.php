@@ -46,6 +46,10 @@
         <i id="fail_icon" class="fa fa-times"></i>
         <p>Failed!</p>
     </div><!--fail box-->
+    <div class="luby_alert" id="bookmark_alert">
+        <i id="star_icon" class="fa fa-star"></i>
+        <p>It's marked!</p>
+    </div><!--fail box-->
     <div class="luby_alert" id="confirm_alert">
         <p class="confirm_text">Are you sure?</p>
         <button class="index_confirm_bt">Confirm</button>

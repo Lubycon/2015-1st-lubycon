@@ -537,6 +537,28 @@ $(function () {
     /////////////////////////////////////////////////////////
     //      editor edit price end
     /////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////
+    //      editor edit body color picker start
+    /////////////////////////////////////////////////////////
+    $(document).ready(function(){
+        $(function(){
+            $("#body_color_picker").spectrum({
+                color:"#ffffff",
+                preferredFormat: "rgb",
+                move: function(color){
+                    var editor_body = $("#editor_preview_box");
+                    editor_body.css("background",color.toRgbString());
+                },
+                change: function(color){
+                    var editor_body = $("#editor_preview_box");
+                    editor_body.css("background",color.toRgbString());
+                }
+            });
+        });
+    })
+    /////////////////////////////////////////////////////////
+    //      editor edit body color picker end
+    /////////////////////////////////////////////////////////
 
 
 
