@@ -7,6 +7,9 @@ if($check_id == 'call_thumb')
 }else if($check_id == 'call_setting')
 {
     include_once('../editor/editor_setting.php');
+}else if($check_id == 'back_bt_editor')
+{
+	include_once('../editor/editor_thumbnail.php');
 }
 
 ?>

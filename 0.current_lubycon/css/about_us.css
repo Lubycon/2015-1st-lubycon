@@ -178,6 +178,7 @@
     height: 700px;
     position: relative;
     margin-bottom: -80px;
+    opacity:0;
 }
 
     #contact_body #contact_title

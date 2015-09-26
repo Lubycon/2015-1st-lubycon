@@ -39,15 +39,15 @@
     <div class="dark_overlay"></div>
     
     <div class="luby_alert" id="suc_alert">
-        <i id="suc_icon" class="fa fa-check-circle"></i>
+        <i id="suc_icon" class="fa fa-check-circle rotateIn animated"></i>
         <p>Success!</p>
     </div><!--succese box-->
     <div class="luby_alert" id="fail_alert">
-        <i id="fail_icon" class="fa fa-times"></i>
+        <i id="fail_icon" class="fa fa-times tada animated"></i>
         <p>Failed!</p>
     </div><!--fail box-->
     <div class="luby_alert" id="bookmark_alert">
-        <i id="star_icon" class="fa fa-star"></i>
+        <i id="star_icon" class="fa fa-star bounce animated"></i>
         <p>It's marked!</p>
     </div><!--fail box-->
     <div class="luby_alert" id="confirm_alert">

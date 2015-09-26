@@ -237,7 +237,7 @@ $(function(){
     $('#delete_bt').click(function(){
         console.log('1');
         $('#confirm_alert').css('display','inline-block');
-        $('#confirm_alert').attr("class","luby_alert zoomIn animated");
+        $('#confirm_alert').attr("class","luby_alert flipInX animated");
         $('.dark_overlay').stop().fadeIn(100);
     });
 
@@ -248,8 +248,17 @@ $(function(){
         $('.dark_overlay').stop().fadeOut(200);
         $('#confirm_alert').stop().fadeOut(200);
     });
+    $(".index_confirm_bt").click(function(){
+        $("#confirm_alert").css("display","none");
+        $("#suc_alert").css("display","inline-block");
+        $("#suc_alert").attr("class","luby_alert zoomIn animated");
+        setTimeout("removeAlert()",1500);
+    })
     //////////cancel bt end/////////////////////////////////
 });
-
+function removeAlert(){
+    $("#suc_alert").fadeOut(500);
+    $(".dark_overlay").fadeOut(500);
+}
 
 ////////////////////////////delete button interaction end

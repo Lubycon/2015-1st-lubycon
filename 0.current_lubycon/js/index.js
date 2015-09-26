@@ -1,4 +1,23 @@
 ﻿/*----------------------------common js----------------------------*/
+/////////////////////////////////////////////////////////
+//      debuging tool start
+/////////////////////////////////////////////////////////
+/*$(document).ready(function(){
+    $(function(){//property check
+        $("*").click(function(){
+            console.log("------------------------------------------------------------------------")
+            console.log($(this))
+            console.log("width : " + $(this).width());
+            console.log("height : " + $(this).height());
+            console.log("window_scollTop : " + $(window).scrollTop());
+            console.log("object_scollTop : " + $(this).scrollTop());
+        });
+    });
+});*/
+/////////////////////////////////////////////////////////
+//      debuging tool end
+/////////////////////////////////////////////////////////
+
 
 /////////////////////////////////////////////////////////
 //      ready to body fadein event start
@@ -1132,7 +1151,7 @@ $(function () { /* designers page subnav selcect */
 //      about us animation event start
 /////////////////////////////////////////////////////////
 $(window).load(function(){
-    $("#descript_lubycon").addClass("bounceIn animated");
+    $("#descript_lubycon").addClass("zoomIn animated");
     
     $(function(){
         $(document).scroll(function () { //account setting move banner
@@ -1149,13 +1168,10 @@ $(window).load(function(){
                 setTimeout("callTeam4()",600);
                 setTimeout("callTeam5()",800);
             }
+            if($(window).scrollTop()>=2137){
+                callContact();
+            }
         });    
-    });
-
-    $(function(){//scrollbar checkit!!!!!!!
-        $(window).click(function(){
-            console.log($(window).scrollTop());
-        });
     });
 });
 ///////////animation for Icon methods start
@@ -1186,6 +1202,11 @@ function callTeam5(){
     $("#zepot").addClass("bounceIn animated").stop().animate({opacity:100},200);
 }
 ///////////animation for Employees methods end
+///////////animation for Contact Us start
+function callContact(){
+    $("#contact_body").addClass("zoomIn animated").stop().animate({opacity:100},200);
+}
+///////////animation for Contact Us end
 /////////////////////////////////////////////////////////
 //      about us animation event end
 /////////////////////////////////////////////////////////
