@@ -338,6 +338,9 @@ body{
     }
     #editor_section p input
     {
+        min-width: 310px !important;
+        max-width: 550px !important;
+
         background:none;
         border:none;
         border-radius: 5px;
@@ -347,6 +350,7 @@ body{
         line-height: 60px;
         padding: 5px;
         color: #ffffff;
+        text-overflow: ellipsis;
         float: left;
     }
         #editor_section p input:hover
@@ -397,6 +401,8 @@ body{
     {
         border-radius: 5px;
         padding:10px;
+        background: none;
+        border: none;
     }
 
     /* selector */

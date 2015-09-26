@@ -1128,9 +1128,70 @@ $(function () { /* designers page subnav selcect */
 /*----------------------------personal page----------------------------*/
 
 /*----------------------------about us----------------------------*/
+/////////////////////////////////////////////////////////
+//      about us animation event start
+/////////////////////////////////////////////////////////
+$(window).load(function(){
+    $("#descript_lubycon").addClass("bounceIn animated");
+    
+    $(function(){
+        $(document).scroll(function () { //account setting move banner
+            if($(window).scrollTop()>=360){
+               callIcon1();
+               setTimeout("callIcon2()",200);
+               setTimeout("callIcon3()",400);
+            }//if end
+            if($(window).scrollTop()>=1156){
+                /////////animation
+                callTeam1();
+                setTimeout("callTeam2()",200);
+                setTimeout("callTeam3()",400);
+                setTimeout("callTeam4()",600);
+                setTimeout("callTeam5()",800);
+            }
+        });    
+    });
+
+    $(function(){//scrollbar checkit!!!!!!!
+        $(window).click(function(){
+            console.log($(window).scrollTop());
+        });
+    });
+});
+///////////animation for Icon methods start
+function callIcon1(){
+    $("#icon1").addClass("zoomIn animated").stop().animate({opacity:100},200);
+};
+function callIcon2(){
+    $("#icon2").addClass("zoomIn animated").stop().animate({opacity:100},200);
+};
+function callIcon3(){
+    $("#icon3").addClass("zoomIn animated").stop().animate({opacity:100},200);
+};
+///////////animation for Icon methods end
+///////////animation for Employees methods start
+function callTeam1(){
+    $("#ceo").addClass("bounceIn animated").stop().animate({opacity:100},200);
+};
+function callTeam2(){
+    $("#dart").addClass("bounceIn animated").stop().animate({opacity:100},200);
+}
+function callTeam3(){
+    $("#ssaru").addClass("bounceIn animated").stop().animate({opacity:100},200);
+}
+function callTeam4(){
+    $("#simon").addClass("bounceIn animated").stop().animate({opacity:100},200);
+}
+function callTeam5(){
+    $("#zepot").addClass("bounceIn animated").stop().animate({opacity:100},200);
+}
+///////////animation for Employees methods end
+/////////////////////////////////////////////////////////
+//      about us animation event end
+/////////////////////////////////////////////////////////
 
 /////////////////////////////////////////////////////////
-//      about us hover event
+//      about us hover event start
 /////////////////////////////////////////////////////////
 $(function(){
     $('#mailbtn').hover(
@@ -1154,7 +1215,7 @@ $(function(){
     );
 });
 /////////////////////////////////////////////////////////
-//      about us hover event
+//      about us hover event end
 /////////////////////////////////////////////////////////
 
 
