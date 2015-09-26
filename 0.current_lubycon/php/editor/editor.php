@@ -1,6 +1,8 @@
+<link href="css/spectrum.css" rel="stylesheet" type="text/css" />
 <link href="css/editor.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="js/jquery-ui.min.js"></script>
 <script type="text/javascript" src="js/editor.js"></script>
+<script type="text/javascript" src="js/spectrum.js"></script>
 <!-- editor css -->
 <div id="popup_wrap">
     <div id="next_pop_body" class="fadeInDown animated"></div><!--go to thumbnail-->
@@ -51,7 +53,7 @@
                 <span class="tooltip_bt" id="file_tooltip">Text tool</span><!--tooltip-->
             </li>
             <li id="change_bd_color">
-                <div id="body_color_view"></div>
+                <input type="text" id="body_color_picker"></input>
                 <span class="tooltip_bt" id="body_color_tooltip">Body color</span>
             </li>
             <li id="embed_media">

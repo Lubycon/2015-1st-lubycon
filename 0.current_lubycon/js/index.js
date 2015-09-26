@@ -1,4 +1,23 @@
 ﻿/*----------------------------common js----------------------------*/
+/////////////////////////////////////////////////////////
+//      debuging tool start
+/////////////////////////////////////////////////////////
+/*$(document).ready(function(){
+    $(function(){//property check
+        $("*").click(function(){
+            console.log("------------------------------------------------------------------------")
+            console.log($(this))
+            console.log("width : " + $(this).width());
+            console.log("height : " + $(this).height());
+            console.log("window_scollTop : " + $(window).scrollTop());
+            console.log("object_scollTop : " + $(this).scrollTop());
+        });
+    });
+});*/
+/////////////////////////////////////////////////////////
+//      debuging tool end
+/////////////////////////////////////////////////////////
+
 
 /////////////////////////////////////////////////////////
 //      ready to body fadein event start
@@ -567,22 +586,28 @@ $(function ()
             }
         });
     });
-
-    $('.dark_overlay').click(function ()
-    {
-        $('.dark_overlay').stop().fadeOut(300);
-        $('#pop_up').stop().fadeOut(500).queue(function(){
-            $('#pop_up').remove();
-        });
+    
+    $(document).on("click",".dark_overlay",function(){
+        $(".dark_overlay").stop().fadeOut(300);
+        $("#pop_up").stop().fadeOut(300).queue(function(){
+            $("#pop_up").remove();
+        })
     });
     
-    $(document).on('click','.contents_box_total',function(){
-        $('.dark_overlay').stop().fadeOut(300);
-        $('#pop_up').stop().fadeOut(300).queue(function(){
-            $('#pop_up').remove();
-        });
+
+    $(document).on("click","#bookmark_inner_bt",function(){//bookmark alert
+        if($(this).css("color") != "rgb(193, 193, 193)"){
+            console.log("success");
+            $("#bookmark_alert").css('display','inline-block');
+            $("#bookmark_alert").attr("class","luby_alert fadeIn animated");
+            setTimeout("hideAlert()",1500); 
+        };
     });
 });
+function hideAlert(){
+    $("#bookmark_alert").attr("class","luby_alert fadeOut animated");
+    $("#bookmark_alert").stop().fadeOut(1000);
+};
 
 /////////////////////////////////////////////////////////
 //      contents view load ajax end
@@ -1122,9 +1147,72 @@ $(function () { /* designers page subnav selcect */
 /*----------------------------personal page----------------------------*/
 
 /*----------------------------about us----------------------------*/
+/////////////////////////////////////////////////////////
+//      about us animation event start
+/////////////////////////////////////////////////////////
+$(window).load(function(){
+    $("#descript_lubycon").addClass("zoomIn animated");
+    
+    $(function(){
+        $(document).scroll(function () { //account setting move banner
+            if($(window).scrollTop()>=360){
+               callIcon1();
+               setTimeout("callIcon2()",200);
+               setTimeout("callIcon3()",400);
+            }//if end
+            if($(window).scrollTop()>=1156){
+                /////////animation
+                callTeam1();
+                setTimeout("callTeam2()",200);
+                setTimeout("callTeam3()",400);
+                setTimeout("callTeam4()",600);
+                setTimeout("callTeam5()",800);
+            }
+            if($(window).scrollTop()>=2137){
+                callContact();
+            }
+        });    
+    });
+});
+///////////animation for Icon methods start
+function callIcon1(){
+    $("#icon1").addClass("zoomIn animated").stop().animate({opacity:100},200);
+};
+function callIcon2(){
+    $("#icon2").addClass("zoomIn animated").stop().animate({opacity:100},200);
+};
+function callIcon3(){
+    $("#icon3").addClass("zoomIn animated").stop().animate({opacity:100},200);
+};
+///////////animation for Icon methods end
+///////////animation for Employees methods start
+function callTeam1(){
+    $("#ceo").addClass("bounceIn animated").stop().animate({opacity:100},200);
+};
+function callTeam2(){
+    $("#dart").addClass("bounceIn animated").stop().animate({opacity:100},200);
+}
+function callTeam3(){
+    $("#ssaru").addClass("bounceIn animated").stop().animate({opacity:100},200);
+}
+function callTeam4(){
+    $("#simon").addClass("bounceIn animated").stop().animate({opacity:100},200);
+}
+function callTeam5(){
+    $("#zepot").addClass("bounceIn animated").stop().animate({opacity:100},200);
+}
+///////////animation for Employees methods end
+///////////animation for Contact Us start
+function callContact(){
+    $("#contact_body").addClass("zoomIn animated").stop().animate({opacity:100},200);
+}
+///////////animation for Contact Us end
+/////////////////////////////////////////////////////////
+//      about us animation event end
+/////////////////////////////////////////////////////////
 
 /////////////////////////////////////////////////////////
-//      about us hover event
+//      about us hover event start
 /////////////////////////////////////////////////////////
 $(function(){
     $('#mailbtn').hover(
@@ -1148,7 +1236,7 @@ $(function(){
     );
 });
 /////////////////////////////////////////////////////////
-//      about us hover event
+//      about us hover event end
 /////////////////////////////////////////////////////////
 
 

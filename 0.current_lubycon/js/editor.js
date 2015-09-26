@@ -18,6 +18,26 @@ $(function ()
         }
     });
 });
+//////////text input auto resize start-------/////////
+function Expander() {
+    this.start = function () {
+        $("#editor_content_name").keydown(function(e) {
+            this.style.width = 0;
+            var newWidth = this.scrollWidth + 5;
+            
+            if( this.scrollWidth >= this.clientWidth ){
+                newWidth += 5;
+                this.style.width = newWidth + 'px';
+            }
+        });
+    }
+}
+
+$(function() {
+    window.app = new Expander();
+    window.app.start();
+});
+//////////text input auto resize end-------/////////
 /////////////////////////////////////////////////////////
 //      editor content_name end
 /////////////////////////////////////////////////////////
@@ -337,7 +357,7 @@ $(function () {
     $(document).on('mouseleave', '.text_editor', function () // textarea delete bt hover
     {
         $(this).find('.con_delete_bt').stop().fadeOut(150);
-        $(this).children('.contents_div').css({ "border": "1px solid #fff" });
+        $(this).children('.contents_div').css({ "border": "none" });
     });
 
 
@@ -349,7 +369,7 @@ $(function () {
     $(document).on('mouseleave', '.preview_img', function () // preview_img delete bt hover
     {
         $(this).find('.con_delete_bt').stop().fadeOut(150);
-        $(this).children('.contents_div').css({ "border": "1px solid #fff" });
+        $(this).children('.contents_div').css({ "border": "none" });
     });
 
 
@@ -359,7 +379,7 @@ $(function () {
     });
     $(document).on('mouseleave', '.embed_contents', function () { // embed contents delete bt hover
         $(this).children('.con_delete_bt').stop().fadeOut(150);
-        $(this).css({ "border": "1px solid #fff" });
+        $(this).css({ "border": "none" });
     });
 
     /////////////////////////////////////////////////////////
@@ -386,8 +406,13 @@ $(function () {
     /////////////////////////////////////////////////////////
     $(document).on('focus', '.editor_body_text', function () // text editor focus view
     {
-        $(this).next('.textarea_editor').stop().fadeIn(150);
+        $(this).next('.textarea_editor').stop().fadeIn(200);
+        $(this).parent(".contents_div").css("background","rgba(255,255,255,0.1)");
     });
+    $(document).on("blur",".editor_body_text", function(){
+        $(this).next(".textarea_editor").stop().fadeOut(200);
+        $(this).parent(".contents_div").css("background","none");
+    })
 
     $(document).on('click', '.color_picker > ul > li', function () //change text color change
     {
@@ -401,7 +426,7 @@ $(function () {
             var subject = $(".text_editor");
 
             if (e.target.id != subject.attr('id') && !subject.has(e.target).length) {
-                $('.textarea_editor').stop().fadeOut(150);
+                $('.textarea_editor').stop().fadeOut(200);
             }
         });
     });
@@ -470,6 +495,9 @@ $(function () {
         $('.dark_overlay').stop().fadeOut(300);
         $('#next_pop_body').stop().fadeOut(300).html('');
     })
+    $(document).on("click","#back_bt_editor", function(){
+        //please add function for go back(ajax);
+    });
 
     /////////////////////////////////////////////////////////
     //      editor next contents call ajax end
@@ -536,6 +564,28 @@ $(function () {
     });
     /////////////////////////////////////////////////////////
     //      editor edit price end
+    /////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////
+    //      editor edit body color picker start
+    /////////////////////////////////////////////////////////
+    $(document).ready(function(){
+        $(function(){
+            $("#body_color_picker").spectrum({
+                color:"#ffffff",
+                preferredFormat: "rgb",
+                move: function(color){
+                    var editor_body = $("#editor_preview_box");
+                    editor_body.css("background",color.toRgbString());
+                },
+                change: function(color){
+                    var editor_body = $("#editor_preview_box");
+                    editor_body.css("background",color.toRgbString());
+                }
+            });
+        });
+    })
+    /////////////////////////////////////////////////////////
+    //      editor edit body color picker end
     /////////////////////////////////////////////////////////
 
 

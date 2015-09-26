@@ -66,7 +66,7 @@
 <!--total_set end-->
 <div class="buttons_pop">
     <button class="final_upload_bt" id="upload_final">Upload</button>
-    <button class="cancel_bt">Cancel</button>
+    <button class="cancel_bt" id="back_bt_editor">Back</button>
 </div>
 
 <!-- multi select box css -->

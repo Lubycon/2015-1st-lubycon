@@ -62,19 +62,19 @@
         <p class="emp_position">C.E.O</p>
     </div>
     <ul>
-        <li class="employee">
+        <li class="employee" id="ssaru">
             <p class="emp_name">SsaRu</p>
             <p class="emp_position">Engineer</p>
         </li>
-        <li class="employee">
+        <li class="employee" id="zepot">
             <p class="emp_name">Daniel Zepot</p>
             <p class="emp_position">Engineer</p>
         </li>
-        <li class="employee">
+        <li class="employee" id="dart">
             <p class="emp_name">Dart</p>
             <p class="emp_position">Designer</p>
         </li>
-        <li class="employee">
+        <li class="employee" id="simon">
             <p class="emp_name">Simon Joseph</p>
             <p class="emp_position">Designer</p>
         </li>

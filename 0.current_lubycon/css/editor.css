@@ -153,8 +153,7 @@ body{
             }
 
         
-.tooltip_bt
-{
+.tooltip_bt{
     min-width: 140px;
     height: 30px;
     line-height: 30px;
@@ -173,10 +172,6 @@ body{
     cursor:default;
     display: none;
 }
-    #body_color_tooltip
-    {
-        margin-top:20px;
-    }
 
 
 
@@ -343,6 +338,9 @@ body{
     }
     #editor_section p input
     {
+        min-width: 310px !important;
+        max-width: 550px !important;
+
         background:none;
         border:none;
         border-radius: 5px;
@@ -352,6 +350,7 @@ body{
         line-height: 60px;
         padding: 5px;
         color: #ffffff;
+        text-overflow: ellipsis;
         float: left;
     }
         #editor_section p input:hover
@@ -402,6 +401,8 @@ body{
     {
         border-radius: 5px;
         padding:10px;
+        background: none;
+        border: none;
     }
 
     /* selector */
@@ -466,7 +467,7 @@ body{
         border-radius: 3px;
         background: none;
         width:330px;
-        max-width:1140px;
+        max-width: 965px;
         min-width: 330px;
         height: 17px;
         max-height:300px;
@@ -937,3 +938,71 @@ body{
       
 }
 /* editor setting end*/
+
+
+/*spectrum color picker*/
+.sp-container{/*-----------parent-----------*/
+    background-color: #444444 !important;
+    border: solid 1px #555555 !important;
+    border-radius: 4px !important;
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2) !important;
+}
+.sp-picker-container{
+    border: solid 1px #555555 !important;
+    border-radius: 4px !important;
+}
+
+.sp-replacer{/* Replacer (the little preview div that shows up instead of the <input>) */
+    border: none;
+    background: none;
+    color: #eee !important;
+    vertical-align: middle !important;
+}
+.sp-replacer:hover, .sp-replacer.sp-active{
+    color: #fff !important;
+}
+.sp-replacer.sp-disabled{
+    border-color: silver !important;
+    color: silver !important;
+}
+.sp-preview{
+    border: solid 1px #999 !important;
+    border-radius: 3px;
+    margin-right: 0px !important;
+    margin:0px auto !important;
+}
+.sp-input{/*--input window property in color picker--*/
+    background:#ffffff !important;
+    outline:none !important;
+}
+.sp-cancel{
+    color: #ec6446 !important;
+    font-size:14px !important;
+    display: inline-block !important;
+    cursor: pointer !important;
+}
+.sp-choose{
+    width: 70px !important;
+    height: 27px !important;
+    line-height: 27px !important;
+    display: inline-block !important;
+    cursor: pointer !important;
+
+    margin-top: 7px !important;
+    margin-left: 5px !important;
+
+    border:none !important;
+    border-radius: 3px !important;
+    background:#48cfad !important;
+
+    text-align: center !important;
+    font-size:15px !important;
+    color:#fff !important;
+}
+    .sp-choose:hover{
+        opacity: 0.7;
+    }
+
+.sp-alpha-handle{
+    border-radius: 3px !important;
+}
