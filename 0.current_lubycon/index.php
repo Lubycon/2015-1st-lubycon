@@ -146,15 +146,18 @@
             </div>  <!-- end signin -->
                 <div id="login_box" class="bounceInDown animated">
                     <div id="login_box_header">SIGN IN</div>
-                    <div id="login_input">
-                        <input type="text" id="login_id" value="E-mail" /><i id="email_icon" class="fa fa-user"></i>
-                        <input type="text" id="login_pass" value="Password" /><i id="pass_icon" class="fa fa-unlock-alt"></i>
-                    </div>  <!-- end login_input div -->
+                    <form id="main_login">
+                        <div id="login_input">
+                                <input type="text" id="login_id" value="E-mail" name="email" /><i id="email_icon" class="fa fa-user"></i>
+                                <input type="text" id="login_pass" value="Password" name="password" /><i id="pass_icon" class="fa fa-unlock-alt"></i>
+                        </div> <!-- end login_input div --> 
+                        <input id="login_lubycon" type="button" value="Go"><!--submit bt-->
+                    </form><!--end login_input form-->
+                    <a href="./php/account/forgot_password.php" target="_self"><p id="forgot_pass">Forgot your password?</p></a> 
                     <div id="login_submit">
-                        <button id="login_facebook"><i class="fa fa-facebook"></i>Facebook</button>
-                        <button id="login_google"><i class="fa fa-google-plus"></i>Google</button>
+                        <button id="login_facebook"><i class="fa fa-facebook"></i></button>
+                        <button id="login_google"><i class="fa fa-google-plus"></i></button>
                     </div>     <!-- end login_submit div -->
-                    <a href="./php/account/forgot_password.php" target="_self"><p id="forgot_pass">Forgot your password?</p></a>  
                     <p id="create_acc">Create An Account</p>          
                 </div>  <!-- end login_box div -->
         </div>
@@ -227,7 +230,7 @@
         include_once("index_body.php");
     }
     ?>
-    <footer id="footer"></footer>   <!--end footer-->
+    <footer id="footer" class="fixed_foot"></footer>   <!--end footer-->
 </body>
 
 </html>

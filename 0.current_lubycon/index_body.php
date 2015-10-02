@@ -1,6 +1,6 @@
 <figure id="index_figure">
     <h2>Connect Your Creativity With The World</h2>
-    <button id="figure_signin">SIGN IN</button>
+    <button id="figure_signin">BUTTON</button>
 </figure>
 <!-- end main_figure -->
 

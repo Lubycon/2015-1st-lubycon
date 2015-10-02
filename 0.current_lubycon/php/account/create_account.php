@@ -261,11 +261,12 @@
                          <option value="Zaire">Zaire</option>
                          <option value="Zambia">Zambia</option>
                          <option value="Zimbabwe">Zimbabwe</option>
-                     </select>
-                 </div>
-
+                    </select>
+               </div>
+               
+               <p id="document_desc">You should read documents below before check.</p>
                <div class="term_check_box">
-                    <a href="#" class="document">
+                    <a href="../document/Important/term_of_service.pdf" class="document" target="_blank"><!--link for document-->
                          <p>
                               <img src="ch/img/pdf_icon.png" width="25" height="30" alt="terms of service" />
                          </p>
@@ -277,7 +278,7 @@
                     </span>
                </div>
                <div class="term_check_box">
-                    <a href="#" class="document">
+                    <a href="../document/Important/private_policy.pdf" class="document" target="_blank"><!--link for document-->
                          <p>
                               <img src="ch/img/pdf_icon.png" width="25" height="30" alt="terms of service" />
                          </p>
