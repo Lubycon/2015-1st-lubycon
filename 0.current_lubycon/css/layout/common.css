@@ -330,6 +330,16 @@ body{
     line-height: 13px;
 }
 
+
+
+#document_desc{
+    font-size: 12px;
+    color: #48cfad;
+    margin-left: 8px;
+    margin-bottom: -15px;
+}
+
+
 #create_account_area #account_box .term_check_box {
     width: 402px;
     height: 65px;
@@ -733,9 +743,9 @@ h1 /* main logo */ {
     position: absolute;
     display: none;
     width: 276px;
-    height: 365px;
     top: 57px;
     left: -127px;
+    padding-bottom: 18px;
     background: #464646;
     border-radius: 5px;
     box-shadow: 0px 1px 1px 1px rgba(0,0,0,0.4);
@@ -754,6 +764,9 @@ h1 /* main logo */ {
         color: #fff;
     }
 
+#main_login{
+    text-align: center;
+}
 
 #login_input {
     width: 242px;
@@ -782,21 +795,42 @@ h1 /* main logo */ {
     font-size: 17px;
 }
 
+#login_lubycon{
+    width: 240px;
+    height: 40px;
+    line-height: 40px;
+    
+    margin: 0px auto;
+    margin-top: -10px;
+    border-radius: 2px;
+    border:none;
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2);
+    
+    background: #48cfad;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 200;
+    
+    cursor: pointer;
+}
+
 #login_submit {
     position: relative;
-    width: 240px;
-    height: 90px;
+    width: 244px;
     margin: 0px auto;
     overflow: hidden;
+    text-align: right;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 #signin_bt #login_box #login_facebook, #login_google {
-    width: 240px;
-    height: 36px;
-    line-height: 36px;
+    width: 38px;
+    height: 38px;
+    line-height: 38px;
     border: none;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin: 5px 2px;
     padding: 0px;
     text-align: center;
     color: #fff;
@@ -818,7 +852,6 @@ h1 /* main logo */ {
 #signin_bt #login_box .fa-facebook, .fa-google-plus {
     color: #fff;
     width: 38px;
-    height: 37px;
     line-height: 39px;
     text-align: center;
     float: left;
@@ -840,7 +873,7 @@ h1 /* main logo */ {
 
 
 #forgot_pass {
-    width: 256px;
+    width: 259px;
     height: 22px;
     line-height: 22px;
     color: #fff;
@@ -848,8 +881,8 @@ h1 /* main logo */ {
     font-weight: 200;
     border-radius: 2px;
     cursor: pointer;
-    display: inline;
-    margin-left: 124px;
+    display: block;
+    text-align: right;
 }
 
     #forgot_pass:hover {
@@ -863,10 +896,9 @@ h1 /* main logo */ {
     line-height: 40px;
     
     margin: 0px auto;
-    margin-top: 13px;
     border-radius: 2px;
     
-    background: #48cfad;
+    background: #aaaaaa;
     text-align: center;
     color: #fff;
     font-size: 14px;
@@ -1409,7 +1441,8 @@ h1 /* main logo */ {
 /* pager */
 #pager_box{
     text-align: center;
-    margin-top: 50px
+    margin-top: 50px;
+    margin-bottom: 90px;
 }
 
 .selected_pager{
@@ -1638,9 +1671,18 @@ h1 /* main logo */ {
 
 #footer {
     width: 100%;
-    height: 200px;
+    height: 100px;
     background: #222;
     margin-top: 80px;
+    z-index: 4;
+}
+.fixed_foot{
+    position: fixed;
+    top: 87%;
+}
+.relative_foot{
+    position: relative;
+    top:0;
 }
 
 
@@ -1660,4 +1702,8 @@ h1 /* main logo */ {
     float: right;
     margin-top: 10px;
     cursor: default;
+    transition: all 0.2s;
 }
+#beta_version:hover{
+    transform: scale(1.2,1.2);
+};

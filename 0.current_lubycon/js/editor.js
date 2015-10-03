@@ -495,6 +495,9 @@ $(function () {
         $('.dark_overlay').stop().fadeOut(300);
         $('#next_pop_body').stop().fadeOut(300).html('');
     })
+    $(document).on("click","#back_bt_editor", function(){
+        //please add function for go back(ajax);
+    });
 
     /////////////////////////////////////////////////////////
     //      editor next contents call ajax end

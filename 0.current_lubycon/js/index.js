@@ -1,4 +1,21 @@
 ﻿/*----------------------------common js----------------------------*/
+/////////////////////////////////////////////////////////
+//      debuging tool start
+/////////////////////////////////////////////////////////
+/*$(document).ready(function(){
+    $(function(){//property check
+        $("*").click(function(){
+            console.log("------------------------------------------------------------------------")
+            console.log("window_scrollTop : " + $(window).scrollTop());
+            console.log("document_height : " + $(document).height());
+            console.log("window_height : " + $(window).height());
+        });
+    });
+});*/
+/////////////////////////////////////////////////////////
+//      debuging tool end
+/////////////////////////////////////////////////////////
+
 
 /////////////////////////////////////////////////////////
 //      ready to body fadein event start
@@ -123,7 +140,6 @@ $(function () //sign in toggle event
         $('#login_box').stop().fadeIn(150);
         $('#login_box').attr("class","bounceInDown animated");
         $("#login_box").css("display","block");
-        $("#login_id").focus();
     });
 
     $('#sign_out').click(function () //logout
@@ -140,7 +156,7 @@ $(document).ready(function () // signin box click toggle
         var subject = $("#signin_bt");
 
         if (e.target.id != subject.attr('id') && !subject.has(e.target).length) {
-            $("#login_box").fadeOut(400);
+            $("#login_box").stop().fadeOut(400);
         }
     });
 });
@@ -205,6 +221,37 @@ $(function () {
 /////////////////////////////////////////////////////////
 //      before sign in input shiny end
 /////////////////////////////////////////////////////////
+$(function(){
+    facebook = $("#login_facebook");
+    google = $("#login_google");
+
+    facebook.hover(function(){
+        facebook.stop().animate({width:194},250);
+    },function(){
+        facebook.stop().animate({width:38},250);
+    });
+
+    google.hover(function(){
+        google.stop().animate({width:194},250);
+    },function(){
+        google.stop().animate({width:38},250);
+    });
+});
+/////////////////////////////////////////////////////////
+//      sign in logic start
+/////////////////////////////////////////////////////////
+$(document).ready(function(){
+    var id_user = $("#login_id").val();
+    var id_DB = "bboydart91@gmail.com"//boolean
+    var pass_user = $("#login_pass").val();
+    var pass_DB = "bboydart91"//boolean
+
+    //ajax
+});
+/////////////////////////////////////////////////////////
+//      sign in logic end
+/////////////////////////////////////////////////////////
+
 
 /////////////////////////////////////////////////////////
 //      create account bt popup event start (ajax)
@@ -1132,14 +1179,14 @@ $(function () { /* designers page subnav selcect */
 //      about us animation event start
 /////////////////////////////////////////////////////////
 $(window).load(function(){
-    $("#descript_lubycon").addClass("bounceIn animated");
+    $("#descript_lubycon").addClass("zoomIn animated");
     
     $(function(){
         $(document).scroll(function () { //account setting move banner
             if($(window).scrollTop()>=360){
                callIcon1();
-               setTimeout("callIcon2()",200);
-               setTimeout("callIcon3()",400);
+               setTimeout("callIcon2()",250);
+               setTimeout("callIcon3()",500);
             }//if end
             if($(window).scrollTop()>=1156){
                 /////////animation
@@ -1149,13 +1196,10 @@ $(window).load(function(){
                 setTimeout("callTeam4()",600);
                 setTimeout("callTeam5()",800);
             }
+            if($(window).scrollTop()>=1993){
+                callContact();
+            }
         });    
-    });
-
-    $(function(){//scrollbar checkit!!!!!!!
-        $(window).click(function(){
-            console.log($(window).scrollTop());
-        });
     });
 });
 ///////////animation for Icon methods start
@@ -1186,6 +1230,11 @@ function callTeam5(){
     $("#zepot").addClass("bounceIn animated").stop().animate({opacity:100},200);
 }
 ///////////animation for Employees methods end
+///////////animation for Contact Us start
+function callContact(){
+    $("#contact_body").addClass("zoomIn animated").stop().animate({opacity:100},200);
+}
+///////////animation for Contact Us end
 /////////////////////////////////////////////////////////
 //      about us animation event end
 /////////////////////////////////////////////////////////
@@ -1334,3 +1383,13 @@ $(function(){
 
 });
 /*----------------------------pager interaction end--------------------------*/
+/*-----------------------------footer start----------------------------------*/
+$(window).scroll(function() {
+    if ($(window).scrollTop() == $(document).height() - $(window).height()){
+        $("#footer").attr("class","relative_foot");
+    }
+    else{
+        $("#footer").attr("class","fixed_foot fadeIn animated");         
+    };
+});
+/*-----------------------------footer end----------------------------------*/
