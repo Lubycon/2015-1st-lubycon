@@ -146,10 +146,10 @@
             </div>  <!-- end signin -->
                 <div id="login_box" class="bounceInDown animated">
                     <div id="login_box_header">SIGN IN</div>
-                    <form id="main_login">
+                    <form id="main_login" name="main_login" method="post">
                         <div id="login_input">
-                                <input type="text" id="login_id" value="E-mail" name="email" /><i id="email_icon" class="fa fa-user"></i>
-                                <input type="text" id="login_pass" value="Password" name="password" /><i id="pass_icon" class="fa fa-unlock-alt"></i>
+                                <input type="text" id="login_id" name="login_id" value="E-mail"/><i id="email_icon" class="fa fa-user"></i>
+                                <input type="text" id="login_pass" name="login_pass" value="Password" /><i id="pass_icon" class="fa fa-unlock-alt"></i>
                         </div> <!-- end login_input div --> 
                         <input id="login_lubycon" type="button" value="Go"><!--submit bt-->
                     </form><!--end login_input form-->

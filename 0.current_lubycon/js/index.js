@@ -91,6 +91,11 @@ $(function () //add hover animation for every buttons
     {
          $(this).stop().animate({ opacity: 1 }, 200);
     });
+    $("input[type=button]").hover(function(){
+        $(this).stop().animate({ opacity: 0.8}, 200);
+    }, function(){
+        $(this).stop().animate({ opacity: 1 }, 200);
+    });
 });
 
 /////////////////////////////////////////////////////////
@@ -238,18 +243,38 @@ $(function(){
     });
 });
 /////////////////////////////////////////////////////////
-//      sign in logic start
+//      sign in ajax start
 /////////////////////////////////////////////////////////
 $(document).ready(function(){
-    var id_user = $("#login_id").val();
-    var id_DB = "bboydart91@gmail.com"//boolean
-    var pass_user = $("#login_pass").val();
-    var pass_DB = "bboydart91"//boolean
-
-    //ajax
-});
+    $("#login_lubycon").click(function(){
+        var form_data = {
+            user_id: $("#login_id").val(),
+            user_pw: $("#login_pass").val(),
+            is_ajax: 1
+        };
+        $.ajax({
+            type: "POST",
+            url: "php/ajax/login_check.php",
+            cache: false,
+            data: form_data,//user_id, user_pw, is_ajax
+            success: function(response) {
+                if(response == true) {
+                    console.log("true!");
+                }
+                else {
+                    console.log("false!");  
+                    console.log(form_data); 
+                }
+            },
+            error: function(response) {
+                console.log("ajax error");
+            }
+        });
+        return false;
+    });
+});    //ajax
 /////////////////////////////////////////////////////////
-//      sign in logic end
+//      sign in ajax end
 /////////////////////////////////////////////////////////
 
 
