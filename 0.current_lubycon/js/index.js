@@ -447,7 +447,7 @@ $(function(){
 
 $(function()  //slider change 
 {
-	$('#font_bt').click(function()
+	$('#raster_bt').click(function()
 	{
 		$('#slider1').stop().fadeIn(150);
 		$('#slider2').hide();

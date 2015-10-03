@@ -60,9 +60,9 @@
         <p>Which content will you upload?</p>
         <ul>
             <li>
-                <a href="./index.php?1=editor&2=editor&3=font">
+                <a href="./index.php?1=editor&2=editor&3=raster">
                 <i class="fa fa-font"></i>
-                <p>Font</p>
+                <p>Raster</p>
                 </a>
             </li>
             <li>
@@ -97,7 +97,7 @@
                     Contents
                     <ul class="sub">
                         <li>
-                            <a href="./index.php?1=contents&2=contents_page&3=font"><i class="fa fa-font fa-1x"></i><p>Font</p></a>
+                            <a href="./index.php?1=contents&2=contents_page&3=raster"><i class="fa fa-font fa-1x"></i><p>Raster</p></a>
                         </li>
                         <li>
                             <a href="./index.php?1=contents&2=contents_page&3=vector"><i class="fa fa-square fa-1x"></i><p>Vector</p></a>

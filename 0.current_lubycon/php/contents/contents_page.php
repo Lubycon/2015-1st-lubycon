@@ -9,8 +9,8 @@
                 <li class="all" >
                     <a href="./index.php?1=contents&2=contents_page&3=all">All</a>
                 </li>
-                <li class="font">
-                    <a href="./index.php?1=contents&2=contents_page&3=font">Font</a>
+                <li class="raster">
+                    <a href="./index.php?1=contents&2=contents_page&3=raster">Raster</a>
                 </li>
                 <li class="vector">
                     <a href="./index.php?1=contents&2=contents_page&3=vector">Vector</a>
