@@ -167,8 +167,8 @@
         <!-- after sign in -->
         <div id="after_signin">
             <span class="partition">|</span>
-            <figure><img src="ch/img/designer_img.png" alt="profile img" /></figure>
-            <span id="user_id">Daniel_zeppppp</span>
+            <figure><img src="ch/img/no_img/no_img_user1.jpg" alt="profile img" /></figure>
+            <span id="user_id">Admin_User</span>
             <i class="fa fa-angle-down"></i>
             <ul>
                 <li><a href="./index.php?1=personal_page&2=personal_page&3=main&4=my_contents">My Contents</a></li>

@@ -1,20 +1,20 @@
 <li>
     <div class="contents_card">
         <div class="contents_pic">
-            <img src="ch/img/slider/slider2/9.png" class="load_view" alt="contents thumbnail"/>
+            <img src="CH/img/no_img/no_img.jpg" class="load_view" alt="contents thumbnail"/>
         </div>
         <!-- end contents pic -->
         <div class="contents_disc">
             <div class="contents_sub">
-                <h4 class="contents_title load_view">Holly shit</h4>
+                <h4 class="contents_title load_view">Content_name</h4>
                 <h5>Free</h5>
             </div>
             <a href="./index.php?1=personal_page&2=personal_page&3=main">
-                <img src="ch/img/designer_img.png" alt="artist photo" />
+                <img src="ch/img/no_img/no_img_user1.jpg" alt="artist photo" />
             </a>
             <span class="by">by</span>
             <a href="./index.php?1=personal_page&2=personal_page&3=main">
-                <span class="name">Daniel Zepp</span>
+                <span class="name">Admin_User</span>
             </a>
             <i class="bookmark_bt fa fa-star"></i>
         </div>

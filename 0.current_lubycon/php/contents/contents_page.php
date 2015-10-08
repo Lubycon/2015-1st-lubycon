@@ -1,5 +1,5 @@
 <figure id="main_figure">
-    <h2>ALL CONTENTS</h2>
+    <h2>CONTENTS</h2>
 </figure>	<!-- end main_figure -->
 <link href="css/contents_page.css" rel="stylesheet" type="text/css" />  <!-- contents page css -->
 <section id="contents">

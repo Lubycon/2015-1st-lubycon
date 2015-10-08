@@ -54,10 +54,10 @@
         <aside id="post_banner">
             <div id="profile_pic">
                 <figure id="img_mask">
-                    <img src="ch/img/designer_img.png">
+                    <img src="ch/img/no_img/no_img_user1.jpg">
                 </figure>
             </div>
-            <h4>Daniel ZEPP</h4>
+            <h4>Admin_User</h4>
             <h5 class="designer_job">Web Master</h5>
             <h6><i class="fa fa-home"></i>Seoul, South Korea</h6>
             <button id="designer_follow"><i class="fa fa-user-plus"></i></button>
@@ -86,7 +86,7 @@
 
                 <div class="comment_div">
                     <figure class="comment_pic">
-                        <img src="ch/img/designer_img.png">
+                        <img src="ch/img/no_img/no_img_user2.jpg">
                     </figure>
                     <h4>Pretty Woman</h4>
                     <p class="comment_contents">LOL That looks fuckin nice.</p>
@@ -94,7 +94,7 @@
                 </div>
                 <div class="comment_div">
                     <figure class="comment_pic">
-                        <img src="ch/img/designer_img.png">
+                        <img src="ch/img/no_img/no_img_user3.jpg">
                     </figure>
                     <h4>ABC MART</h4>
                     <p class="comment_contents">The mint color is REALLY lovely. Everybody knows that. right guys?</p>
@@ -102,7 +102,7 @@
                 </div>
                 <div class="comment_div">
                     <figure class="comment_pic">
-                        <img src="ch/img/designer_img.png">
+                        <img src="ch/img/no_img/no_img_user4.jpg">
                     </figure>
                     <h4>Genius DART</h4>
                     <p class="comment_contents">This page is look so good. but It's test page I think.</p>

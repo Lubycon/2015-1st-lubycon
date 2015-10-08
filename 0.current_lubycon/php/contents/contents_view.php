@@ -132,9 +132,9 @@
 
                 <div class="designer_info">
                     <figure>
-                        <img src="ch/img/designer_img.png">
+                        <img src="ch/img/no_img/no_img_user1.jpg">
                     </figure>
-                    <h4>Daniel ZEPP</h4>
+                    <h4>Admin_User</h4>
                     <h5><i class="fa fa-home"></i>Seoul, South Korea</h5>
                 </div>
                 <button id="designer_chat"><i class="fa fa-envelope-o"></i>Message</button>
