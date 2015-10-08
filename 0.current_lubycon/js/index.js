@@ -4,7 +4,7 @@
 /////////////////////////////////////////////////////////
 /*$(document).ready(function(){
     $(function(){//property check
-        $("*").click(function(){
+        $(window).click(function(){
             console.log("------------------------------------------------------------------------")
             console.log("window_scrollTop : " + $(window).scrollTop());
             console.log("document_height : " + $(document).height());
@@ -573,11 +573,10 @@ $(function ()
 /////////////////////////////////////////////////////////
 //      contents card bookmark toggle start
 /////////////////////////////////////////////////////////
-$(function () {
+$(function(){
     var toggle_count = 0;
-    $(document).on('click', ".bookmark_bt,#bookmark_inner_bt", function ()
-        {
-        switch (toggle_count) {
+    $(document).on('click', ".bookmark_bt,#bookmark_inner_bt", function(){
+        switch (toggle_count){
             case 0:
                 $(this).css('color', '#ffbe54');
                 toggle_count = 1;
@@ -1410,7 +1409,7 @@ $(function(){
 /*----------------------------pager interaction end--------------------------*/
 /*-----------------------------footer start----------------------------------*/
 $(window).scroll(function() {
-    if ($(window).scrollTop() == $(document).height() - $(window).height()){
+    if ($(window).scrollTop() == $(document).height() - $(window).height()){//footer height 180px
         $("#footer").attr("class","relative_foot");
     }
     else{
