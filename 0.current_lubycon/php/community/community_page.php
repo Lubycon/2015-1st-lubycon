@@ -21,42 +21,44 @@
             </ul>
         </nav>
         <!-- end lnb nav -->
-        <div class="search_option">
-            <i class="fa fa-filter"></i>
-            <select class="basic_filter">
-                <option value="English">English</option>
-                <option value="Korean">Korean</option>
-                <option value="Japanese">Japanese</option>
-                <option value="Chinese">Chinese</option>
-                <option value="French">French</option>
-            </select>
-        </div>
-        <div class="search_option">
-            <i class="fa fa-filter"></i>
-            <select class="basic_filter">
-                <option value="Featured">Featured</option>
-                <option value="Recent">Recent</option>
-                <option value="Most Like">Most Like</option>
-                <option value="Most Download">Most Download</option>
-                <option value="Most Coment">Most Comment</option>
-            </select>
-        </div>  <!-- end select box -->
         <!-- end select box -->
     </section>
     <section id="nav_guide">
+    
         <div class="subnav_box">
             <div class="contents_bt">
                 <span class="global_icon"><i class="fa fa-bars"></i></span>
                 <span class="subnav_selected">20 Contents</span>
                 <ul class="subnav_list">
-                    <li>20 Contents</li>
+                    <li class="selected_li">20 Contents</li>
                     <li>30 Contents</li>
                     <li>40 Contents</li>
                     <li>50 Contents</li>
                 </ul>
             </div>
-        </div>
-
+            <div class="contents_bt">
+                <span class="global_icon"><i class="fa fa-globe"></i></span>
+                <span class="subnav_selected">English</span>
+                <ul class="subnav_list">
+                    <li class="selected_li">English</li>
+                    <li>Korean</li>
+                    <li>Japanese</li>
+                    <li>Chinese</li>
+                    <li>French</li>
+                </ul>
+            </div>
+            <div class="contents_bt">
+                <span class="global_icon"><i class="fa fa-filter"></i></span>
+                <span class="subnav_selected">Featured</span>
+                <ul class="subnav_list">
+                    <li class="selected_li">Featured</li>
+                    <li>Recent</li>
+                    <li>Most Like</li>
+                    <li>Most Download</li>
+                    <li>Most Comment</li>
+                </ul>
+            </div>
+        </div><!--subnav_box end-->
     </section>
     <!-- end nav_guide -->
     <section>
@@ -88,7 +90,7 @@
     <section id="main_board">
         <div class="tab_item" id="table1">
             <table>
-                <thead>
+                <thead id="table_head">
                     <th class="table_blank"></th>
                     <!-- space -->
                     <th class="table_number">No.</th>

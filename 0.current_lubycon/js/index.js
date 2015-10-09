@@ -216,10 +216,10 @@ $(function () //e-mail and password value reset start
 //      before sign in input shiny start
 /////////////////////////////////////////////////////////
 $(function () {
-    $('#email_id').focus(function () {
+    $('#email_id_find').focus(function () {
         $('#email_input label').css('color', '#48cfad');
     });
-    $('#email_id').blur(function () {
+    $('#email_id_find').blur(function () {
         $('#email_input label').css('color', '#838282');
     });
 });
@@ -232,14 +232,18 @@ $(function(){
 
     facebook.hover(function(){
         facebook.stop().animate({width:194},250);
+        facebook.find("span").text("with Facebook");
     },function(){
         facebook.stop().animate({width:38},250);
+        facebook.find("span").empty();
     });
 
     google.hover(function(){
         google.stop().animate({width:194},250);
+        google.find("span").text("with Google");
     },function(){
         google.stop().animate({width:38},250);
+        google.find("span").empty();
     });
 });
 /////////////////////////////////////////////////////////
@@ -1126,44 +1130,32 @@ $(function form_check (fo)
 //      personal page subnav hover and ajax
 /////////////////////////////////////////////////////////
 $(function () { /* designers page subnav selcect */
-    /*$('.contents_bt').mouseenter(function () {
-        $('.subnav_list').stop().slideDown(300);
-        $('.contents_bt').css('background', '#464646');
-    });
-    $('.contents_bt').mouseleave(function () {
-        $('.subnav_list').stop().slideUp(300);
-        $('.contents_bt').css('background', '#222');
-    });*/
     var toggle_count = 0;
-    $(".contents_bt").click(function(){
-        switch(toggle_count){
-            case 0 :
-                $(".subnav_list").stop().fadeIn(300);
-                $(".contents_bt").css("background","#444444");
-                toggle_count = 1;
-                console.log(toggle_count);
-            break;
+    $(".contents_bt").each(function(){
+        $(this).click(function(){
+            switch(toggle_count){
+                case 0 :
+                    $(this).find($(".subnav_list")).stop().fadeIn(300);
+                    $(this).css("background","#444444");
+                    toggle_count = 1;
+                    console.log(toggle_count);
+                break;
 
-            case 1 :
-                $(".subnav_list").stop().fadeOut(300);
-                $(".contents_bt").css("background","#222222");
-                toggle_count = 0;
-                console.log(toggle_count);
-            break;
-        }
-    })
-    /*
-    $('.subnav_list li').click(function () {
-        $('.subnav_selected').text($(this).text());
-        $('.subnav_list').stop().slideUp(300);
+                case 1 :
+                    $(this).find($(".subnav_list")).stop().fadeOut(300);
+                    $(this).css("background","#222222");
+                    toggle_count = 0;
+                    console.log(toggle_count);
+                break;
+            }
+        })
     });
-    */
+
     $('document').ready(function () {
         if ($('.personal').attr('class') == 'personal')
         {
             var id = four_param;
-        $.ajax(
-            {
+            $.ajax({
                 type: "POST",
                 url: "php/ajax/subnav.php", //이페이지에서 중복체크를 한다
                 data: 'id='+id,//test.asp에 id 값을 보낸다
@@ -1179,15 +1171,15 @@ $(function () { /* designers page subnav selcect */
                         size: 5
                     });
                 }
-        });
-        }
+            });
+        }//if end
     });
 
-    $(".subnav_list li").click(function () {
-        $('.subnav_selected').text($(this).text());
+    $(".subnav_list li").click(function (){
+        $(this).parent().prev('.subnav_selected').text($(this).text());
         $('.subnav_list').stop().slideUp(300);
 
-        if($(".subnav_selected").text()==$(this).text()){
+        if($(this).parent().prev(".subnav_selected").text()==$(this).text()){
             $(".subnav_list li").removeClass("selected_li");
             $(this).addClass("selected_li");
         }
@@ -1195,24 +1187,23 @@ $(function () { /* designers page subnav selcect */
         var id = $(this).attr('id');
         console.log(id);
 
-        $.ajax(
-            {
-                type: "POST",
-                url: "php/ajax/subnav.php", //이페이지에서 중복체크를 한다
-                data: "id=" + id,//test.asp에 id 값을 보낸다
-                cache: false,
-                success: function (data) {
-                    //$('#bodyer').hide().append(data).fadeIn(300); //해당 내용을 보여준다
-                    $('#contents_box').html('');
-                    $('#contents_box').append(data);
-                    $(".basic_filter").selectOrDie
-                    ({
-                        customClass: "custom",
-                        customID: "custom",
-                        size: 5
-                    });
-                }
-            });
+        $.ajax({
+            type: "POST",
+            url: "php/ajax/subnav.php", //이페이지에서 중복체크를 한다
+            data: "id=" + id,//test.asp에 id 값을 보낸다
+            cache: false,
+            success: function (data) {
+                //$('#bodyer').hide().append(data).fadeIn(300); //해당 내용을 보여준다
+                $('#contents_box').html('');
+                $('#contents_box').append(data);
+                $(".basic_filter").selectOrDie
+                ({
+                    customClass: "custom",
+                    customID: "custom",
+                    size: 5
+                });
+            }
+        });
     });
 });
 

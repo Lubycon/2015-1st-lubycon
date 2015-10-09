@@ -80,7 +80,7 @@
             </article>  <!-- end post_contents -->
 
             <article id="comment_box">
-                <p id="comment_count">12 Comments</p>
+                <p id="comment_count"><span class="comment_counter">12</span> Comments</p>
                 <textarea id="comment_text">You Must Sign in First</textarea>
                 <button id="comment_bt"><i class="fa fa-comments"></i></button>
 
@@ -88,25 +88,25 @@
                     <figure class="comment_pic">
                         <img src="ch/img/no_img/no_img_user2.jpg">
                     </figure>
-                    <h4>Pretty Woman</h4>
-                    <p class="comment_contents">LOL That looks fuckin nice.</p>
-                    <p class="comment_time">5 minute ago</p>
+                    <h4>Admin_User</h4>
+                    <p class="comment_contents">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p class="comment_time"><span class="comment_time_counter">5</span> minute ago</p>
                 </div>
                 <div class="comment_div">
                     <figure class="comment_pic">
                         <img src="ch/img/no_img/no_img_user3.jpg">
                     </figure>
-                    <h4>ABC MART</h4>
-                    <p class="comment_contents">The mint color is REALLY lovely. Everybody knows that. right guys?</p>
-                    <p class="comment_time">10 minute ago</p>
+                    <h4>Admin_User</h4>
+                    <p class="comment_contents">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p class="comment_time"><span class="comment_time_counter">10</span> minute ago</p>
                 </div>
                 <div class="comment_div">
                     <figure class="comment_pic">
                         <img src="ch/img/no_img/no_img_user4.jpg">
                     </figure>
-                    <h4>Genius DART</h4>
-                    <p class="comment_contents">This page is look so good. but It's test page I think.</p>
-                    <p class="comment_time">13 minute ago</p>
+                    <h4>Admin_User</h4>
+                    <p class="comment_contents">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p class="comment_time"><span class="comment_time_counter">13</span> minute ago</p>
                 </div>
 
                 <div id="comment_more_box">

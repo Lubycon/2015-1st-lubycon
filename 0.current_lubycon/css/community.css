@@ -17,7 +17,7 @@
     border-radius: 5px;
     margin-top: 15px;
     margin-bottom: 15px;
-    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.1);
 }
 
 .select_box {
@@ -44,6 +44,7 @@
     border: none;
     color: #999;
     width: 203px;
+    font-weight: 200;
 }
 
 #forum_search_box .select_box {
@@ -80,7 +81,7 @@
     color: #fff;
     font-size: 17px;
     float: right;
-    box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.1);
     font-weight: 200;
     background: #48cfad;
     text-align: center;
@@ -101,10 +102,11 @@
     vertical-align: middle;
 }
 
-    .tab_item table thead {
+    .tab_item table #table_head {
         background: #737373;
         color: #fff;
         text-align: center;
+        cursor: default !important;
     }
 
     .tab_item table th {
@@ -139,23 +141,23 @@
     color: #545454;
 }
 
-.table_subject {
+td.table_subject {
     padding-left: 20px;
     cursor:pointer;
     color:#333333;
 }
-    .table_subject:hover
+    td.table_subject:hover
     {
         text-decoration: underline;
     }
 
-.table_writer {
+td.table_writer {
     width: 130px;
     text-align: center;
     color: #545454;
     cursor:pointer;
 }
-    .table_writer:hover
+    td.table_writer:hover
         {
             text-decoration: underline;
         }

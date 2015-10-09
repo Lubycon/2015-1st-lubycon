@@ -155,8 +155,8 @@
                     </form><!--end login_input form-->
                     <a href="./php/account/forgot_password.php" target="_self"><p id="forgot_pass">Forgot your password?</p></a> 
                     <div id="login_submit">
-                        <button id="login_facebook"><i class="fa fa-facebook"></i></button>
-                        <button id="login_google"><i class="fa fa-google-plus"></i></button>
+                        <button id="login_facebook"><i class="fa fa-facebook"></i><span></span></button>
+                        <button id="login_google"><i class="fa fa-google-plus"></i><span></span></button>
                     </div>     <!-- end login_submit div -->
                     <p id="create_acc">Create An Account</p>          
                 </div>  <!-- end login_box div -->

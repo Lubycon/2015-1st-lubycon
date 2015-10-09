@@ -85,36 +85,33 @@
     </nav>
     <!--end slide lnb-->
     <?php
-    for( $i=1 ; $i<4 ; $i++ ) //loop slider making
-    {
-        echo 
-        '<div id="slider'.$i.'" style="width: 980px; height: 363px;">
-        <div class="slides" u="slides">';
-            for( $j=1 ; $j<4 ; $j++ ) //loop slide page
-            {
-       echo'<div>
-                <ul>';
-                    for( $k=1 ; $k<11 ; $k++ ) //loop slide img call
-                    {
-                    echo '<li class="load_view">
-                                <img src="ch/img/slider/slider'.$i.'/'.$k.'.png" alt="thumbnail_photo_'.$k.'">
-                          </li>';
-                    }
-           echo'</ul>
+        for( $i=1 ; $i<4 ; $i++ ){ //loop slider making
+            echo 
+            '<div id="slider'.$i.'" style="width: 980px; height: 363px;">
+            <div class="slides" u="slides">';
+                for( $j=1 ; $j<4 ; $j++ ){ //loop slide page  
+           echo'<div>
+                    <ul>';
+                        for( $k=1 ; $k<11 ; $k++ ){ //loop slide img call
+                        echo '<li class="load_view">
+                                    <img src="ch/img/slider/slider'.$i.'/'.$k.'.png" alt="thumbnail_photo_'.$k.'">
+                              </li>';
+                        }
+               echo'</ul>
+                </div>';
+                }
+       echo'</div>
+            <div u="navigator" class="slider_pager">
+                <div u="prototype"></div>
+            </div>
+            <span u="arrowleft" class="slider_arrow_left">
+                <i class="fa fa-angle-left"></i>
+            </span>
+            <span u="arrowright" class="slider_arrow_right">
+                <i class="fa fa-angle-right"></i>
+            </span>
             </div>';
-            }
-   echo'</div>
-        <div u="navigator" class="slider_pager">
-            <div u="prototype"></div>
-        </div>
-        <span u="arrowleft" class="slider_arrow_left">
-            <i class="fa fa-angle-left"></i>
-        </span>
-        <span u="arrowright" class="slider_arrow_right">
-            <i class="fa fa-angle-right"></i>
-        </span>
-        </div>';
-    }
+        }
     ?>
     <!-- end slider div -->
 </section>
