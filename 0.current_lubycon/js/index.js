@@ -2,7 +2,7 @@
 /////////////////////////////////////////////////////////
 //      debuging tool start
 /////////////////////////////////////////////////////////
-/*$(document).ready(function(){
+$(document).ready(function(){
     $(function(){//property check
         $(window).click(function(){
             console.log("------------------------------------------------------------------------")
@@ -11,7 +11,7 @@
             console.log("window_height : " + $(window).height());
         });
     });
-});*/
+});
 /////////////////////////////////////////////////////////
 //      debuging tool end
 /////////////////////////////////////////////////////////
@@ -41,9 +41,9 @@ $(function () //window fadein effect
 $(function () //gnb hober event
 {
     $('.bigsub').hover(function () {
-        $(this).children().stop().fadeIn(300);
+        $(this).children("ul").stop().fadeIn(300);
     }, function () {
-        $(this).children().stop().fadeOut(300);
+        $(this).children("ul").stop().fadeOut(300);
     });
 });
 
@@ -77,6 +77,17 @@ $(function () //selcted change
 /////////////////////////////////////////////////////////
 //      gloval navigation button hover event end
 /////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+//      main figure sticky start
+/////////////////////////////////////////////////////////
+$(function(){
+
+});
+
+/////////////////////////////////////////////////////////
+//      main figure sticky end
+/////////////////////////////////////////////////////////
+
 
 /////////////////////////////////////////////////////////
 //      add hover animation for every buttons start
@@ -515,46 +526,7 @@ $(function()	// triple bt on event
 
 
 /*----------------------------contents page----------------------------*/
-/////////////////////////////////////////////////////////
-//      category bar select menu end
-/////////////////////////////////////////////////////////
 
-
-$(function () //contents page category
-{
-    $('#cate_bt').click(function () {
-        if ($('#open_cate_inner').css('top') == '-85px')
-        {
-            $('#open_cate_inner').stop().animate({ top: 0 });
-            $('.open_cate_li').stop().fadeIn(800);
-            $('#down_arrow').children().removeClass();
-            $('#down_arrow').children().addClass('fa fa-angle-up');
-        } else if ($('#open_cate_inner').css('top') == '0px')
-        {
-            $('#open_cate_inner').stop().animate({ top: -85 });
-            $('.open_cate_li').stop().fadeOut(300);
-            $('#down_arrow').children().removeClass();
-            $('#down_arrow').children().addClass('fa fa-angle-down');
-        }
-    });
-
-    $(document).ready(function () { // signin box click toggle
-        $(document).click(function (e) {
-            var subject = $("#category");
-
-            if (e.target.id != subject.attr('id') && !subject.has(e.target).length) {
-                $('#open_cate_inner').stop().animate({ top: -85 });
-                $('#down_arrow').children().removeClass();
-                $('#down_arrow').children().addClass('fa fa-angle-down');
-            }
-        });
-    });
-});
-
-
-/////////////////////////////////////////////////////////
-//      category bar select menu end
-/////////////////////////////////////////////////////////
 
 /////////////////////////////////////////////////////////
 //      contents card hover overlay view start
@@ -1130,20 +1102,24 @@ $(function form_check (fo)
 //      personal page subnav hover and ajax
 /////////////////////////////////////////////////////////
 $(function () { /* designers page subnav selcect */
-    var toggle_count = 0;
     $(".contents_bt").each(function(){
+        var toggle_count = 0;
+       
         $(this).click(function(){
+            console.log(toggle_count);
             switch(toggle_count){
                 case 0 :
                     $(this).find($(".subnav_list")).stop().fadeIn(300);
-                    $(this).css("background","#444444");
+                    $(this).css("background","#333333");
+                    $(this).find($(".subnav_arrow")).children("i").attr("class","fa fa-caret-up");
                     toggle_count = 1;
                     console.log(toggle_count);
                 break;
 
                 case 1 :
                     $(this).find($(".subnav_list")).stop().fadeOut(300);
-                    $(this).css("background","#222222");
+                    $(this).css("background","#444444");
+                    $(this).find($(".subnav_arrow")).children("i").attr("class","fa fa-caret-down");
                     toggle_count = 0;
                     console.log(toggle_count);
                 break;
@@ -1176,10 +1152,10 @@ $(function () { /* designers page subnav selcect */
     });
 
     $(".subnav_list li").click(function (){
-        $(this).parent().prev('.subnav_selected').text($(this).text());
-        $('.subnav_list').stop().slideUp(300);
+        $(this).parent().prev().prev('.subnav_selected').text($(this).text());
+        $('.subnav_list').stop().fadeOut(300);
 
-        if($(this).parent().prev(".subnav_selected").text()==$(this).text()){
+        if($(this).parent().prev().prev(".subnav_selected").text()==$(this).text()){
             $(".subnav_list li").removeClass("selected_li");
             $(this).addClass("selected_li");
         }

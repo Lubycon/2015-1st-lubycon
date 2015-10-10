@@ -11,7 +11,8 @@
 	$members = array('user1'=>array('pw'=>'pw1', 'name'=>'한놈'),
 			'user2'=>array('pw'=>'pw2', 'name'=>'두시기'),
 	        'user3'=>array('pw'=>'pw3', 'name'=>'석삼'));
-	 
+	//you should change $members to mySQL later
+	
 	if(!$is_ajax) exit;
 	if(!isset($members[$user_id])) exit;
 	if($members[$user_id]['pw'] != $user_pw) exit;

@@ -13,22 +13,24 @@
 }
 
 
-#work_space
-{
+#work_space{
     width:100%;
     background:#eeeeee;
     padding:20px 0px;
     text-align: center
 }
-    .properties_box
-    {
+#work_inner{
+    width: 1248px;
+    display: inline-block;
+    text-align: left;
+}
+    .properties_box{
         margin:13px;
         text-align: left;
         display:inline-block;
     }
         #uploader_com{
             display:block;
-            text-align: center;
         }
         .work_title
         {

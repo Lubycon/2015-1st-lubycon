@@ -13,7 +13,9 @@
     text-align: center;
 }
 */
-    
+#main_search_bar{
+    display: block !important;
+} 
 
     #index_figure button {
         border: 1px solid #fff;

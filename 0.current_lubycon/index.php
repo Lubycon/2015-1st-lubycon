@@ -18,10 +18,9 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" /> <!--icon font-->
 
     <link href="css/layout/normalize.css" rel="stylesheet" type="text/css" />  <!-- web normalize -->
-    <link href="css/layout/common.css" rel="stylesheet" type="text/css" />  <!-- common css -->
-    <link href="css/index.css" rel="stylesheet" type="text/css" />  <!-- index file css -->
+    <link href="css/layout/common.css" rel="stylesheet" type="text/css" />  <!-- common css -->  
     <link href="css/selectordie.css" rel="stylesheet" type="text/css" /> <!-- selector decoration css -->
-    <link href="css/layout/animate.css" rel="stylesheet" type="text/css" />
+    <link href="css/layout/animate.css" rel="stylesheet" type="text/css" /><!--animation for objects-->
     <link href="css/slider.css" rel="stylesheet" type="text/css">
 
     <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script> <!-- jquery library -->
@@ -49,7 +48,11 @@
     <div class="luby_alert" id="bookmark_alert">
         <i id="star_icon" class="fa fa-star bounce animated"></i>
         <p>It's marked!</p>
-    </div><!--fail box-->
+    </div><!--bookmark box-->
+    <div class="luby_alert" id="like_alert">
+        <i id="like_icon" class="fa fa-heart"></i>
+        <p>Like :)</p>
+    </div>
     <div class="luby_alert" id="confirm_alert">
         <p class="confirm_text">Are you sure?</p>
         <button class="index_confirm_bt">Confirm</button>
@@ -94,7 +97,9 @@
         <nav id="main_gnb">
             <ul id="gnb">
                 <li class="bigsub">
-                    Contents
+                    <a href="./index.php?1=contents&2=contents_page&3=all" class="bigsub_link">
+                        Contents
+                    </a>
                     <ul class="sub">
                         <li>
                             <a href="./index.php?1=contents&2=contents_page&3=raster"><i class="fa fa-font fa-1x"></i><p>Raster</p></a>

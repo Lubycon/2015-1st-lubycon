@@ -1,3 +1,4 @@
+<link href="css/index.css" rel="stylesheet" type="text/css" />  <!-- index file css -->
 <figure id="index_figure">
     <h2>Connect Your Creativity With The World</h2>
     <button id="figure_signin">BUTTON</button>

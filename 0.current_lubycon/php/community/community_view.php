@@ -21,17 +21,6 @@
                 </li>
             </ul>
         </nav>
-        <div class="search_option">
-            <i class="fa fa-filter"></i>
-            <select class="basic_filter">
-                <option value="English">English</option>
-                <option value="Korean">Korean</option>
-                <option value="Japanese">Japanese</option>
-                <option value="Chinese">Chinese</option>
-                <option value="French">French</option>
-            </select>
-
-        </div>  <!-- end select box -->
     </section>
 
     <section id="post_subject_area">
@@ -144,7 +133,7 @@
     <section id="main_board">
         <div class="tab_item" id="table1">
             <table>
-                <thead>
+                <thead id="table_head">
                 <th class="table_blank"></th>	<!-- space -->
                 <th class="table_number">No.</th>
                 <th class="table_subject">SUBJECT</th>

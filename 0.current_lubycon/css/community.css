@@ -74,10 +74,10 @@
 #write_bt {
     width: 150px;
     height: 35px;
-    line-height: 35px;
+    line-height: 36px;
     margin-top: 15px;
+    border: 1px solid #37be9c;/*48cfad - 1*/
     border-radius: 5px;
-    border: none;
     color: #fff;
     font-size: 17px;
     float: right;
