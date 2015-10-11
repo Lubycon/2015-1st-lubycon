@@ -235,7 +235,7 @@
         include_once("index_body.php");
     }
     ?>
-    <footer id="footer" class="fixed_foot"></footer>   <!--end footer-->
+    <footer id="footer" class="relative_foot"></footer>   <!--end footer-->
 </body>
 
 </html>

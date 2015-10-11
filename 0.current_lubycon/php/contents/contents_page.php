@@ -67,6 +67,20 @@
                     <li>Most Comment</li>
                 </ul>
             </div>
+
+            <div id="sub_search_bar">
+                <div class="select_box">
+                    <select class="basic">
+                        <option value="Title">Title</option>
+                        <option value="Designer">Designer</option>
+                        <option value="Tag">Tag</option>
+                    </select>
+                </div>
+                <input type="text" id="sub_search_text" value="Enter the Keyword" />
+                <button id="sub_search_btn">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
         </div><!--subnav_box end-->
     </section>
     <section id="contents_box">

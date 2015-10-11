@@ -61,12 +61,7 @@
                     <li>50 Contents</li>
                 </ul>
             </div>
-        </div><!--subnav_box end-->
-    </section>
-    <!-- end nav_guide -->
-    <section class="main_wrap">
-        <div id="forum_option_box">
-            <div id="forum_search_box">
+            <div id="sub_search_bar">
                 <div class="select_box">
                     <select class="basic">
                         <option value="Title">Title</option>
@@ -74,14 +69,17 @@
                         <option value="Writer">Writer</option>
                     </select>
                 </div>
-                <input type="text" id="forum_search_text" value="Enter the Keyword" />
-
-                <button id="forum_search_btn">
+                <input type="text" id="sub_search_text" value="Enter the Keyword" />
+                <button id="sub_search_btn">
                     <i class="fa fa-search"></i>
                 </button>
             </div>
+        </div><!--subnav_box end-->
+    </section>
+    <!-- end nav_guide -->
+    <section class="main_wrap">
+        <div id="forum_option_box">
             <!-- end forum_search_box -->
-
             <a href="./index.php?1=community&2=community_write">
                 <span id="write_bt" class="out">Write</span>
             </a>

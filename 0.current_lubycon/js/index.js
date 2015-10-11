@@ -156,6 +156,7 @@ $(function () //sign in toggle event
         $('#login_box').stop().fadeIn(150);
         $('#login_box').attr("class","bounceInDown animated");
         $("#login_box").css("display","block");
+        $("#login_box").focus();
     });
 
     $('#sign_out').click(function () //logout
@@ -242,18 +243,18 @@ $(function(){
     google = $("#login_google");
 
     facebook.hover(function(){
-        facebook.stop().animate({width:194},250);
+        facebook.stop().animate({width:194},300);
         facebook.find("span").text("with Facebook");
     },function(){
-        facebook.stop().animate({width:38},250);
+        facebook.stop().animate({width:38},300);
         facebook.find("span").empty();
     });
 
     google.hover(function(){
-        google.stop().animate({width:194},250);
+        google.stop().animate({width:194},300);
         google.find("span").text("with Google");
     },function(){
-        google.stop().animate({width:38},250);
+        google.stop().animate({width:38},300);
         google.find("span").empty();
     });
 });
@@ -403,7 +404,7 @@ $(function () { //add contents button start
 
 $(function () { //search box click value reset start
     var search_box = $('#main_search_text');
-    var search_box2 = $('#forum_search_text');
+    var search_box2 = $('#sub_search_text');
 
     search_box.focus(function(){
         if (search_box.val() == 'Enter the Keyword') {
@@ -419,11 +420,13 @@ $(function () { //search box click value reset start
     search_box2.focus(function(){
         if(search_box2.val()=='Enter the Keyword'){
             search_box2.val('')
+            $("#sub_search_bar").stop().animate({width:350},200);
         }
     });
     search_box2.blur(function(){
         if(search_box2.val()==''){
             search_box2.val('Enter the Keyword');
+            $("#sub_search_bar").stop().animate({width:295},200);
         }
     });
 });//search box click value reset end
@@ -1102,7 +1105,7 @@ $(function form_check (fo)
 //      personal page subnav hover and ajax
 /////////////////////////////////////////////////////////
 /*-----------------------------subnav sticky start---------------------------*/
-$(document).scroll(function () //community subject sticky event
+$(document).scroll(function ()
     {
         if($(document).find("#nav_guide"))
         {
@@ -1124,7 +1127,7 @@ $(document).scroll(function () //community subject sticky event
         
     });
 /*------------------------------subnav sticky end----------------------------*/
-$(function () { /* designers page subnav selcect */
+$(function () {
     $(".contents_bt").each(function(){
         var toggle_count = 0;
        
@@ -1421,13 +1424,14 @@ $(function(){
 
 });
 /*----------------------------pager interaction end--------------------------*/
-/*-----------------------------footer start----------------------------------*/
-$(window).scroll(function() {
-    if ($(window).scrollTop() == $(document).height() - $(window).height()){//footer height 180px
+/*-----------------------------footer sticky start----------------------------------*/
+/*$(window).scroll(function() {
+    if ($(window).scrollTop() <= $(document).height() - $(window).height()){//footer height 180px
         $("#footer").attr("class","relative_foot");
     }
     else{
-        $("#footer").attr("class","fixed_foot fadeIn animated");         
+        $("#footer").attr("class","fixed_foot fadeIn animated");
+        $("#footer").css("top","50px");         
     };
-});
-/*-----------------------------footer end----------------------------------*/
+});*/
+/*-----------------------------footer sticky end----------------------------------*/
