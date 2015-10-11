@@ -4,7 +4,7 @@ $(function () {
         if($(document).find('#post_subject_area'))
         {
             if ($(document).scrollTop() > 206) {
-                $('#post_subject_area').css({ "position": "fixed", "top": "45px", "z-index": "2" })
+                $('#post_subject_area').css({ "position": "fixed", "top": "50px", "z-index": "2" })
             }
             else {
                 $('#post_subject_area').css({ "position": "absolute", "top": "50px" });

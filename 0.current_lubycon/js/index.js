@@ -1101,6 +1101,29 @@ $(function form_check (fo)
 /////////////////////////////////////////////////////////
 //      personal page subnav hover and ajax
 /////////////////////////////////////////////////////////
+/*-----------------------------subnav sticky start---------------------------*/
+$(document).scroll(function () //community subject sticky event
+    {
+        if($(document).find("#nav_guide"))
+        {
+            if ($(document).scrollTop() > 184) {
+                $("#nav_guide").css({ "position": "fixed", "top": "50px", "z-index": "2" })
+                $("#nav_guide").next().css({"top": "50px"});
+                $("#nav_guide").next().next().css({"top": "50px"});
+            }
+            else {
+                $("#nav_guide").css({ "position": "relative", "top": "0px" });
+                $("#nav_guide").next().css({"top": "0px"});
+                $("#nav_guide").next().next().css({"top": "0px"});
+            }  
+        }
+        else{
+            console.log("");
+            return true;
+        }
+        
+    });
+/*------------------------------subnav sticky end----------------------------*/
 $(function () { /* designers page subnav selcect */
     $(".contents_bt").each(function(){
         var toggle_count = 0;
