@@ -21,17 +21,6 @@
                 </li>
             </ul>
         </nav>
-        <div class="search_option">
-            <i class="fa fa-filter"></i>
-            <select class="basic_filter">
-                <option value="English">English</option>
-                <option value="Korean">Korean</option>
-                <option value="Japanese">Japanese</option>
-                <option value="Chinese">Chinese</option>
-                <option value="French">French</option>
-            </select>
-
-        </div>  <!-- end select box -->
     </section>
 
     <section id="post_subject_area">
@@ -54,10 +43,10 @@
         <aside id="post_banner">
             <div id="profile_pic">
                 <figure id="img_mask">
-                    <img src="ch/img/designer_img.png">
+                    <img src="ch/img/no_img/no_img_user1.jpg">
                 </figure>
             </div>
-            <h4>Daniel ZEPP</h4>
+            <h4>Admin_User</h4>
             <h5 class="designer_job">Web Master</h5>
             <h6><i class="fa fa-home"></i>Seoul, South Korea</h6>
             <button id="designer_follow"><i class="fa fa-user-plus"></i></button>
@@ -80,33 +69,33 @@
             </article>  <!-- end post_contents -->
 
             <article id="comment_box">
-                <p id="comment_count">12 Comments</p>
+                <p id="comment_count"><span class="comment_counter">12</span> Comments</p>
                 <textarea id="comment_text">You Must Sign in First</textarea>
                 <button id="comment_bt"><i class="fa fa-comments"></i></button>
 
                 <div class="comment_div">
                     <figure class="comment_pic">
-                        <img src="ch/img/designer_img.png">
+                        <img src="ch/img/no_img/no_img_user2.jpg">
                     </figure>
-                    <h4>Pretty Woman</h4>
-                    <p class="comment_contents">LOL That looks fuckin nice.</p>
-                    <p class="comment_time">5 minute ago</p>
+                    <h4>Admin_User</h4>
+                    <p class="comment_contents">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p class="comment_time"><span class="comment_time_counter">5</span> minute ago</p>
                 </div>
                 <div class="comment_div">
                     <figure class="comment_pic">
-                        <img src="ch/img/designer_img.png">
+                        <img src="ch/img/no_img/no_img_user3.jpg">
                     </figure>
-                    <h4>ABC MART</h4>
-                    <p class="comment_contents">The mint color is REALLY lovely. Everybody knows that. right guys?</p>
-                    <p class="comment_time">10 minute ago</p>
+                    <h4>Admin_User</h4>
+                    <p class="comment_contents">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p class="comment_time"><span class="comment_time_counter">10</span> minute ago</p>
                 </div>
                 <div class="comment_div">
                     <figure class="comment_pic">
-                        <img src="ch/img/designer_img.png">
+                        <img src="ch/img/no_img/no_img_user4.jpg">
                     </figure>
-                    <h4>Genius DART</h4>
-                    <p class="comment_contents">This page is look so good. but It's test page I think.</p>
-                    <p class="comment_time">13 minute ago</p>
+                    <h4>Admin_User</h4>
+                    <p class="comment_contents">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p class="comment_time"><span class="comment_time_counter">13</span> minute ago</p>
                 </div>
 
                 <div id="comment_more_box">
@@ -144,7 +133,7 @@
     <section id="main_board">
         <div class="tab_item" id="table1">
             <table>
-                <thead>
+                <thead id="table_head">
                 <th class="table_blank"></th>	<!-- space -->
                 <th class="table_number">No.</th>
                 <th class="table_subject">SUBJECT</th>

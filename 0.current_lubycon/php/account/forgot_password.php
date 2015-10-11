@@ -27,7 +27,7 @@
         </header>
         <section id="email_input">
             <p>Enter the email address you used for your LUBYCON ID</p>
-            <label>E-mail</label><input id="email_id" type="text" />
+            <label>E-mail</label><input id="email_id_find" type="text" />
         </section>
         <input type="submit" id="find_submit" value="Find password" disabled/>
         <p id="return_main"><a href="../../index.php">Return to main page</a></p>

@@ -19,7 +19,7 @@
         <div class="contents_box_total">
             <div class="con_left">
                 <header>
-                    <h3 id="contents_title">Vans flower Shoes</h3>
+                    <h3 id="contents_title">Lolem Ipsum</h3>
                     <h4 id="contents_price">Free</h4>
                     <div id="bookmark">
                         <i id="bookmark_inner_bt" class="fa fa-star"></i>
@@ -82,46 +82,46 @@
                     </div>
                     
                     <div id="comment_list">
-                        <p id="comment_count">12 Comments</p>
+                        <p id="comment_count"><span class="comment_counter">12</span> Comments</p>
                         <div class="comment_div">
                             <figure class="comment_pic">
-                                <img src="ch/img/designer_img.png">
+                                <img src="ch/img/no_img/no_img_user1.jpg">
                             </figure>
-                            <h4>Pretty Woman</h4>
-                            <p class="comment_contents">what the funk? kkk nice pic zepp</p>
-                            <p class="comment_time">5 minute ago</p>
+                            <h4>Admin_User</h4>
+                            <p class="comment_contents">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <p class="comment_time"><span class="comment_time_counter">5</span> minute ago</p>
                         </div>
                         <div class="comment_div">
                             <figure class="comment_pic">
-                                <img src="ch/img/designer_img.png">
+                                <img src="ch/img//no_img/no_img_user1.jpg">
                             </figure>
-                            <h4>ABC MART</h4>
-                            <p class="comment_contents">i love vans daniel thanx upload photo</p>
-                            <p class="comment_time">10 minute ago</p>
+                            <h4>Admin_User</h4>
+                            <p class="comment_contents">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <p class="comment_time"><span class="comment_time_counter">10</span> minute ago</p>
                         </div>
                         <div class="comment_div">
                             <figure class="comment_pic">
-                                <img src="ch/img/designer_img.png">
+                                <img src="ch/img//no_img/no_img_user1.jpg">
                             </figure>
-                            <h4>idiot ZEPOT</h4>
-                            <p class="comment_contents">what the fucking shoes ruber smell?? piss off</p>
-                            <p class="comment_time">13 minute ago</p>
+                            <h4>Admin_User</h4>
+                            <p class="comment_contents">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <p class="comment_time"><span class="comment_time_counter">13</span> minute ago</p>
                         </div>
                         <div class="comment_div">
                             <figure class="comment_pic">
-                                <img src="ch/img/designer_img.png">
+                                <img src="ch/img//no_img/no_img_user1.jpg">
                             </figure>
-                            <h4>idiot ZEPOT</h4>
-                            <p class="comment_contents">what the fucking shoes ruber smell?? piss off</p>
-                            <p class="comment_time">13 minute ago</p>
+                            <h4>Admin_User</h4>
+                            <p class="comment_contents">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <p class="comment_time"><span class="comment_time_counter">13</span> minute ago</p>
                         </div>
                         <div class="comment_div">
                             <figure class="comment_pic">
-                                <img src="ch/img/designer_img.png">
+                                <img src="ch/img//no_img/no_img_user1.jpg">
                             </figure>
-                            <h4>idiot ZEPOT</h4>
-                            <p class="comment_contents">what the fucking shoes ruber smell?? piss off</p>
-                            <p class="comment_time">13 minute ago</p>
+                            <h4>Admin_User</h4>
+                            <p class="comment_contents">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <p class="comment_time"><span class="comment_time_counter">13</span> minute ago</p>
                         </div>
                     </div><!--end comment_list-->
                 </article>
@@ -132,9 +132,9 @@
 
                 <div class="designer_info">
                     <figure>
-                        <img src="ch/img/designer_img.png">
+                        <img src="ch/img/no_img/no_img_user1.jpg">
                     </figure>
-                    <h4>Daniel ZEPP</h4>
+                    <h4>Admin_User</h4>
                     <h5><i class="fa fa-home"></i>Seoul, South Korea</h5>
                 </div>
                 <button id="designer_chat"><i class="fa fa-envelope-o"></i>Message</button>

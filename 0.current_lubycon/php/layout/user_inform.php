@@ -2,11 +2,11 @@
         <div id="information_inbody">
             <section id="personal_info">
                 <figure id="personal_photo">
-                    <img src="ch/img/designer_img.png" alt="Designer_photo" />
+                    <img src="ch/img/no_img/no_img_user1.jpg" alt="Designer_photo" />
                 </figure>
                 
                 <div id="basic_info_box">
-                    <span id="personal_name">Daniel Zepp</span>
+                    <span id="personal_name">Admin_User</span>
                     <span id="personal_job">Front End Engineer</span>
                     <p id="personal_legion"><i class="fa fa-home"></i>Seoul, Korea</p>
                     <p id="personal_language"><i class="fa fa-language"></i>English, Korean</p>

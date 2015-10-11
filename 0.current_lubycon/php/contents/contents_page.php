@@ -1,5 +1,5 @@
 <figure id="main_figure">
-    <h2>ALL CONTENTS</h2>
+    <h2>CONTENTS</h2>
 </figure>	<!-- end main_figure -->
 <link href="css/contents_page.css" rel="stylesheet" type="text/css" />  <!-- contents page css -->
 <section id="contents">
@@ -9,8 +9,8 @@
                 <li class="all" >
                     <a href="./index.php?1=contents&2=contents_page&3=all">All</a>
                 </li>
-                <li class="font">
-                    <a href="./index.php?1=contents&2=contents_page&3=font">Font</a>
+                <li class="raster">
+                    <a href="./index.php?1=contents&2=contents_page&3=raster">Raster</a>
                 </li>
                 <li class="vector">
                     <a href="./index.php?1=contents&2=contents_page&3=vector">Vector</a>
@@ -20,51 +20,55 @@
                 </li>
             </ul>
         </nav>  <!-- end lnb nav -->
-
-        <div class="search_option">
-            <i class="fa fa-usd"></i>
-            <select class="basic_filter">
-                <option value="all">All</option>
-                <option value="free">Free</option>
-                <option value="not_Free">Not Free</option>
-            </select>
-        </div>  <!-- end select box -->
-        <div class="search_option">
-            <i class="fa fa-filter"></i>
-            <select class="basic_filter">
-                <option value="featured">Featured</option>
-                <option value="recent">Recent</option>
-                <option value="most_like">Most Like</option>
-                <option value="mst_download">Most Download</option>
-                <option value="most_coment">Most Comment</option>
-            </select>
-        </div>  <!-- end select box -->
     </section>  <!-- end section -->
 
-    <section id="category">
-        <div id="cate_bt">
-            <h3>CATEGORY</h3>
-            <p id="down_arrow"><i class="fa fa-angle-down"></i></p>
-        </div>
-        <div id="open_cate">
-            <div id="open_cate_inner">
-                <ul>
-                    <li class="open_cate_li" value="1">All</li>
-                    <li class="open_cate_li" value="2">Holiday</li>
-                    <li class="open_cate_li" value="3">Animal</li>
-                    <li class="open_cate_li" value="4">Car</li>
-                    <li class="open_cate_li" value="5">Box</li>
-                    <li class="open_cate_li" value="6">Nature</li>
-                    <li class="open_cate_li" value="7">Mecanic</li>
-                    <li class="open_cate_li" value="8">Phone</li>
-                    <li class="open_cate_li" value="9">Bottle</li>
-                    <li class="open_cate_li" value="10">Calinder</li>
-                    <li class="open_cate_li" value="11">Book</li>
-                    <li class="open_cate_li" value="12">Simbol / Sign</li>
+    <section id="nav_guide">
+        <div class="subnav_box">
+            <div class="contents_bt" id="category_bt">
+                <span class="global_icon"><i class="fa fa-filter"></i></span>
+                <span class="subnav_selected">All categories</span>
+                <span class="subnav_arrow"><i class="fa fa-caret-down"></i></span>
+                <ul class="subnav_list" id="category_list">
+                    <li class="selected_li">All categories</li>
+                    <li>A</li>
+                    <li>B</li>
+                    <li>C</li>
+                    <li>D</li>
+                    <li>E</li>
+                    <li>F</li>
+                    <li>G</li>
+                    <li>H</li>
+                    <li>I</li>
+                    <li>J</li>
+                    <li>K</li>
+                    <li>L</li>
                 </ul>
-            </div>  <!-- end open cate inner -->
-        </div>  <!-- end open cate -->
-    </section>  <!-- end category -->
+            </div><!--category end-->
+            <div class="contents_bt">
+                <span class="global_icon"><i class="fa fa-usd"></i></span>
+                <span class="subnav_selected">All</span>
+                <span class="subnav_arrow"><i class="fa fa-caret-down"></i></span>
+                <ul class="subnav_list">
+                    <li class="selected_li">All</li>
+                    <li>Free</li>
+                    <li>Free for personal</li>
+                    <li>Paid</li>
+                </ul>
+            </div><!--pay selector end-->
+            <div class="contents_bt">
+                <span class="global_icon"><i class="fa fa-filter"></i></span>
+                <span class="subnav_selected">Featured</span>
+                <span class="subnav_arrow"><i class="fa fa-caret-down"></i></span>
+                <ul class="subnav_list">
+                    <li class="selected_li">Featured</li>
+                    <li>Recent</li>
+                    <li>Most Like</li>
+                    <li>Most Download</li>
+                    <li>Most Comment</li>
+                </ul>
+            </div>
+        </div><!--subnav_box end-->
+    </section>
     <section id="contents_box">
         <ul>
             <?php

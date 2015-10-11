@@ -1,3 +1,4 @@
+<link href="css/index.css" rel="stylesheet" type="text/css" />  <!-- index file css -->
 <figure id="index_figure">
     <h2>Connect Your Creativity With The World</h2>
     <button id="figure_signin">BUTTON</button>
@@ -72,11 +73,11 @@
 
 <section id="slide_section">
     <nav id="slide_lnb">
-        <input id="font_bt" type="radio" name="tap" checked="checked" />
+        <input id="raster_bt" type="radio" name="tap" checked="checked" />
         <input id="vector_bt" type="radio" name="tap" />
         <input id="3d_bt" type="radio" name="tap" />
         <nav>
-            <label for="font_bt" class="la_bt clicked">FONT</label>
+            <label for="raster_bt" class="la_bt clicked">RASTER</label>
             <label for="vector_bt" class="la_bt">VECTOR</label>
             <label for="3d_bt" class="la_bt">3D DESIGN</label>
             <p class="down_triangle"></p>
@@ -85,36 +86,33 @@
     </nav>
     <!--end slide lnb-->
     <?php
-    for( $i=1 ; $i<4 ; $i++ ) //loop slider making
-    {
-        echo 
-        '<div id="slider'.$i.'" style="width: 980px; height: 363px;">
-        <div class="slides" u="slides">';
-            for( $j=1 ; $j<4 ; $j++ ) //loop slide page
-            {
-       echo'<div>
-                <ul>';
-                    for( $k=1 ; $k<11 ; $k++ ) //loop slide img call
-                    {
-                    echo '<li class="load_view">
-                                <img src="ch/img/slider/slider'.$i.'/'.$k.'.png" alt="thumbnail_photo_'.$k.'">
-                          </li>';
-                    }
-           echo'</ul>
+        for( $i=1 ; $i<4 ; $i++ ){ //loop slider making
+            echo 
+            '<div id="slider'.$i.'" style="width: 980px; height: 363px;">
+            <div class="slides" u="slides">';
+                for( $j=1 ; $j<4 ; $j++ ){ //loop slide page  
+           echo'<div>
+                    <ul>';
+                        for( $k=1 ; $k<11 ; $k++ ){ //loop slide img call
+                        echo '<li class="load_view">
+                                    <img src="ch/img/slider/slider'.$i.'/'.$k.'.png" alt="thumbnail_photo_'.$k.'">
+                              </li>';
+                        }
+               echo'</ul>
+                </div>';
+                }
+       echo'</div>
+            <div u="navigator" class="slider_pager">
+                <div u="prototype"></div>
+            </div>
+            <span u="arrowleft" class="slider_arrow_left">
+                <i class="fa fa-angle-left"></i>
+            </span>
+            <span u="arrowright" class="slider_arrow_right">
+                <i class="fa fa-angle-right"></i>
+            </span>
             </div>';
-            }
-   echo'</div>
-        <div u="navigator" class="slider_pager">
-            <div u="prototype"></div>
-        </div>
-        <span u="arrowleft" class="slider_arrow_left">
-            <i class="fa fa-angle-left"></i>
-        </span>
-        <span u="arrowright" class="slider_arrow_right">
-            <i class="fa fa-angle-right"></i>
-        </span>
-        </div>';
-    }
+        }
     ?>
     <!-- end slider div -->
 </section>

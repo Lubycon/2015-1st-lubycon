@@ -203,6 +203,7 @@
         margin-left: 58px;
         color: #444444;
         font-size: 15px;
+        font-weight: 200;
     }
     .contents_view #comment_box #comment_list .comment_div .comment_time{
         position:absolute;

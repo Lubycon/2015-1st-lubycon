@@ -2,16 +2,16 @@
 /////////////////////////////////////////////////////////
 //      debuging tool start
 /////////////////////////////////////////////////////////
-/*$(document).ready(function(){
+$(document).ready(function(){
     $(function(){//property check
-        $("*").click(function(){
+        $(window).click(function(){
             console.log("------------------------------------------------------------------------")
             console.log("window_scrollTop : " + $(window).scrollTop());
             console.log("document_height : " + $(document).height());
             console.log("window_height : " + $(window).height());
         });
     });
-});*/
+});
 /////////////////////////////////////////////////////////
 //      debuging tool end
 /////////////////////////////////////////////////////////
@@ -41,9 +41,9 @@ $(function () //window fadein effect
 $(function () //gnb hober event
 {
     $('.bigsub').hover(function () {
-        $(this).children().stop().fadeIn(300);
+        $(this).children("ul").stop().fadeIn(300);
     }, function () {
-        $(this).children().stop().fadeOut(300);
+        $(this).children("ul").stop().fadeOut(300);
     });
 });
 
@@ -77,6 +77,17 @@ $(function () //selcted change
 /////////////////////////////////////////////////////////
 //      gloval navigation button hover event end
 /////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+//      main figure sticky start
+/////////////////////////////////////////////////////////
+$(function(){
+
+});
+
+/////////////////////////////////////////////////////////
+//      main figure sticky end
+/////////////////////////////////////////////////////////
+
 
 /////////////////////////////////////////////////////////
 //      add hover animation for every buttons start
@@ -90,6 +101,11 @@ $(function () //add hover animation for every buttons
     }, function ()
     {
          $(this).stop().animate({ opacity: 1 }, 200);
+    });
+    $("input[type=button]").hover(function(){
+        $(this).stop().animate({ opacity: 0.8}, 200);
+    }, function(){
+        $(this).stop().animate({ opacity: 1 }, 200);
     });
 });
 
@@ -211,10 +227,10 @@ $(function () //e-mail and password value reset start
 //      before sign in input shiny start
 /////////////////////////////////////////////////////////
 $(function () {
-    $('#email_id').focus(function () {
+    $('#email_id_find').focus(function () {
         $('#email_input label').css('color', '#48cfad');
     });
-    $('#email_id').blur(function () {
+    $('#email_id_find').blur(function () {
         $('#email_input label').css('color', '#838282');
     });
 });
@@ -227,29 +243,53 @@ $(function(){
 
     facebook.hover(function(){
         facebook.stop().animate({width:194},250);
+        facebook.find("span").text("with Facebook");
     },function(){
         facebook.stop().animate({width:38},250);
+        facebook.find("span").empty();
     });
 
     google.hover(function(){
         google.stop().animate({width:194},250);
+        google.find("span").text("with Google");
     },function(){
         google.stop().animate({width:38},250);
+        google.find("span").empty();
     });
 });
 /////////////////////////////////////////////////////////
-//      sign in logic start
+//      sign in ajax start
 /////////////////////////////////////////////////////////
 $(document).ready(function(){
-    var id_user = $("#login_id").val();
-    var id_DB = "bboydart91@gmail.com"//boolean
-    var pass_user = $("#login_pass").val();
-    var pass_DB = "bboydart91"//boolean
-
-    //ajax
-});
+    $("#login_lubycon").click(function(){
+        var form_data = {
+            user_id: $("#login_id").val(),
+            user_pw: $("#login_pass").val(),
+            is_ajax: 1
+        };
+        $.ajax({
+            type: "POST",
+            url: "php/ajax/login_check.php",
+            cache: false,
+            data: form_data,//user_id, user_pw, is_ajax
+            success: function(response) {
+                if(response == true) {
+                    console.log("true!");
+                }
+                else {
+                    console.log("false!");  
+                    console.log(form_data); 
+                }
+            },
+            error: function(response) {
+                console.log("ajax error");
+            }
+        });
+        return false;
+    });
+});    //ajax
 /////////////////////////////////////////////////////////
-//      sign in logic end
+//      sign in ajax end
 /////////////////////////////////////////////////////////
 
 
@@ -422,7 +462,7 @@ $(function(){
 
 $(function()  //slider change 
 {
-	$('#font_bt').click(function()
+	$('#raster_bt').click(function()
 	{
 		$('#slider1').stop().fadeIn(150);
 		$('#slider2').hide();
@@ -486,46 +526,7 @@ $(function()	// triple bt on event
 
 
 /*----------------------------contents page----------------------------*/
-/////////////////////////////////////////////////////////
-//      category bar select menu end
-/////////////////////////////////////////////////////////
 
-
-$(function () //contents page category
-{
-    $('#cate_bt').click(function () {
-        if ($('#open_cate_inner').css('top') == '-85px')
-        {
-            $('#open_cate_inner').stop().animate({ top: 0 });
-            $('.open_cate_li').stop().fadeIn(800);
-            $('#down_arrow').children().removeClass();
-            $('#down_arrow').children().addClass('fa fa-angle-up');
-        } else if ($('#open_cate_inner').css('top') == '0px')
-        {
-            $('#open_cate_inner').stop().animate({ top: -85 });
-            $('.open_cate_li').stop().fadeOut(300);
-            $('#down_arrow').children().removeClass();
-            $('#down_arrow').children().addClass('fa fa-angle-down');
-        }
-    });
-
-    $(document).ready(function () { // signin box click toggle
-        $(document).click(function (e) {
-            var subject = $("#category");
-
-            if (e.target.id != subject.attr('id') && !subject.has(e.target).length) {
-                $('#open_cate_inner').stop().animate({ top: -85 });
-                $('#down_arrow').children().removeClass();
-                $('#down_arrow').children().addClass('fa fa-angle-down');
-            }
-        });
-    });
-});
-
-
-/////////////////////////////////////////////////////////
-//      category bar select menu end
-/////////////////////////////////////////////////////////
 
 /////////////////////////////////////////////////////////
 //      contents card hover overlay view start
@@ -548,11 +549,10 @@ $(function ()
 /////////////////////////////////////////////////////////
 //      contents card bookmark toggle start
 /////////////////////////////////////////////////////////
-$(function () {
+$(function(){
     var toggle_count = 0;
-    $(document).on('click', ".bookmark_bt,#bookmark_inner_bt", function ()
-        {
-        switch (toggle_count) {
+    $(document).on('click', ".bookmark_bt,#bookmark_inner_bt", function(){
+        switch (toggle_count){
             case 0:
                 $(this).css('color', '#ffbe54');
                 toggle_count = 1;
@@ -1102,26 +1102,36 @@ $(function form_check (fo)
 //      personal page subnav hover and ajax
 /////////////////////////////////////////////////////////
 $(function () { /* designers page subnav selcect */
-    $('.contents_bt').mouseenter(function () {
-        $('.subnav_list').stop().slideDown(300);
-        $('.contents_bt').css('background', '#464646');
+    $(".contents_bt").each(function(){
+        var toggle_count = 0;
+       
+        $(this).click(function(){
+            console.log(toggle_count);
+            switch(toggle_count){
+                case 0 :
+                    $(this).find($(".subnav_list")).stop().fadeIn(300);
+                    $(this).css("background","#333333");
+                    $(this).find($(".subnav_arrow")).children("i").attr("class","fa fa-caret-up");
+                    toggle_count = 1;
+                    console.log(toggle_count);
+                break;
+
+                case 1 :
+                    $(this).find($(".subnav_list")).stop().fadeOut(300);
+                    $(this).css("background","#444444");
+                    $(this).find($(".subnav_arrow")).children("i").attr("class","fa fa-caret-down");
+                    toggle_count = 0;
+                    console.log(toggle_count);
+                break;
+            }
+        })
     });
-    $('.contents_bt').mouseleave(function () {
-        $('.subnav_list').stop().slideUp(300);
-        $('.contents_bt').css('background', '#222');
-    });
-    /*
-    $('.subnav_list li').click(function () {
-        $('.subnav_selected').text($(this).text());
-        $('.subnav_list').stop().slideUp(300);
-    });
-    */
+
     $('document').ready(function () {
         if ($('.personal').attr('class') == 'personal')
         {
             var id = four_param;
-        $.ajax(
-            {
+            $.ajax({
                 type: "POST",
                 url: "php/ajax/subnav.php", //이페이지에서 중복체크를 한다
                 data: 'id='+id,//test.asp에 id 값을 보낸다
@@ -1137,34 +1147,39 @@ $(function () { /* designers page subnav selcect */
                         size: 5
                     });
                 }
-        });
-        }
+            });
+        }//if end
     });
 
-    $(".subnav_list li").click(function () {
-        $('.subnav_selected').text($(this).text());
-        $('.subnav_list').stop().slideUp(300);
+    $(".subnav_list li").click(function (){
+        $(this).parent().prev().prev('.subnav_selected').text($(this).text());
+        $('.subnav_list').stop().fadeOut(300);
+
+        if($(this).parent().prev().prev(".subnav_selected").text()==$(this).text()){
+            $(".subnav_list li").removeClass("selected_li");
+            $(this).addClass("selected_li");
+        }
+        
         var id = $(this).attr('id');
         console.log(id);
 
-        $.ajax(
-            {
-                type: "POST",
-                url: "php/ajax/subnav.php", //이페이지에서 중복체크를 한다
-                data: "id=" + id,//test.asp에 id 값을 보낸다
-                cache: false,
-                success: function (data) {
-                    //$('#bodyer').hide().append(data).fadeIn(300); //해당 내용을 보여준다
-                    $('#contents_box').html('');
-                    $('#contents_box').append(data);
-                    $(".basic_filter").selectOrDie
-                    ({
-                        customClass: "custom",
-                        customID: "custom",
-                        size: 5
-                    });
-                }
-            });
+        $.ajax({
+            type: "POST",
+            url: "php/ajax/subnav.php", //이페이지에서 중복체크를 한다
+            data: "id=" + id,//test.asp에 id 값을 보낸다
+            cache: false,
+            success: function (data) {
+                //$('#bodyer').hide().append(data).fadeIn(300); //해당 내용을 보여준다
+                $('#contents_box').html('');
+                $('#contents_box').append(data);
+                $(".basic_filter").selectOrDie
+                ({
+                    customClass: "custom",
+                    customID: "custom",
+                    size: 5
+                });
+            }
+        });
     });
 });
 
@@ -1385,7 +1400,7 @@ $(function(){
 /*----------------------------pager interaction end--------------------------*/
 /*-----------------------------footer start----------------------------------*/
 $(window).scroll(function() {
-    if ($(window).scrollTop() == $(document).height() - $(window).height()){
+    if ($(window).scrollTop() == $(document).height() - $(window).height()){//footer height 180px
         $("#footer").attr("class","relative_foot");
     }
     else{

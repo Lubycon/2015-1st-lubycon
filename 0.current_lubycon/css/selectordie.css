@@ -72,12 +72,10 @@
             display: none;
             height: auto;
             width: 121px;
-            margin: 0 0 0 -7px;
+            margin: 4px 0 0 -7px;
             background: #ffffff;
             border: 1px solid #a1a1a1;
-            border-top: none;
-            border-bottom-left-radius:5px;
-            border-bottom-right-radius:5px;
+            border-radius: 5px;
             overflow:hidden;
             color: #444444;
             z-index: 2;
@@ -103,7 +101,7 @@
         {
             display: block;
             overflow-y: auto;
-            padding: 0;
+            padding: 3px;
             margin: 0;
         }
 
@@ -121,7 +119,7 @@
                 font-weight: 200;
             }
             .sod_select .sod_option:last-child {
-                margin-bottom: 3px;
+                
             }
 
             
@@ -134,8 +132,6 @@
                     color: #fff;
                     font-weight: 200;
                     border-radius: 3px;
-                    margin-left:3px;
-                    margin-right:3px;
                 }
 
             /*Make room for the check mark */

@@ -18,10 +18,9 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" /> <!--icon font-->
 
     <link href="css/layout/normalize.css" rel="stylesheet" type="text/css" />  <!-- web normalize -->
-    <link href="css/layout/common.css" rel="stylesheet" type="text/css" />  <!-- common css -->
-    <link href="css/index.css" rel="stylesheet" type="text/css" />  <!-- index file css -->
+    <link href="css/layout/common.css" rel="stylesheet" type="text/css" />  <!-- common css -->  
     <link href="css/selectordie.css" rel="stylesheet" type="text/css" /> <!-- selector decoration css -->
-    <link href="css/layout/animate.css" rel="stylesheet" type="text/css" />
+    <link href="css/layout/animate.css" rel="stylesheet" type="text/css" /><!--animation for objects-->
     <link href="css/slider.css" rel="stylesheet" type="text/css">
 
     <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script> <!-- jquery library -->
@@ -49,7 +48,11 @@
     <div class="luby_alert" id="bookmark_alert">
         <i id="star_icon" class="fa fa-star bounce animated"></i>
         <p>It's marked!</p>
-    </div><!--fail box-->
+    </div><!--bookmark box-->
+    <div class="luby_alert" id="like_alert">
+        <i id="like_icon" class="fa fa-heart"></i>
+        <p>Like :)</p>
+    </div>
     <div class="luby_alert" id="confirm_alert">
         <p class="confirm_text">Are you sure?</p>
         <button class="index_confirm_bt">Confirm</button>
@@ -60,9 +63,9 @@
         <p>Which content will you upload?</p>
         <ul>
             <li>
-                <a href="./index.php?1=editor&2=editor&3=font">
+                <a href="./index.php?1=editor&2=editor&3=raster">
                 <i class="fa fa-font"></i>
-                <p>Font</p>
+                <p>Raster</p>
                 </a>
             </li>
             <li>
@@ -94,10 +97,12 @@
         <nav id="main_gnb">
             <ul id="gnb">
                 <li class="bigsub">
-                    Contents
+                    <a href="./index.php?1=contents&2=contents_page&3=all" class="bigsub_link">
+                        Contents
+                    </a>
                     <ul class="sub">
                         <li>
-                            <a href="./index.php?1=contents&2=contents_page&3=font"><i class="fa fa-font fa-1x"></i><p>Font</p></a>
+                            <a href="./index.php?1=contents&2=contents_page&3=raster"><i class="fa fa-font fa-1x"></i><p>Raster</p></a>
                         </li>
                         <li>
                             <a href="./index.php?1=contents&2=contents_page&3=vector"><i class="fa fa-square fa-1x"></i><p>Vector</p></a>
@@ -146,17 +151,17 @@
             </div>  <!-- end signin -->
                 <div id="login_box" class="bounceInDown animated">
                     <div id="login_box_header">SIGN IN</div>
-                    <form id="main_login">
+                    <form id="main_login" name="main_login" method="post">
                         <div id="login_input">
-                                <input type="text" id="login_id" value="E-mail" name="email" /><i id="email_icon" class="fa fa-user"></i>
-                                <input type="text" id="login_pass" value="Password" name="password" /><i id="pass_icon" class="fa fa-unlock-alt"></i>
+                                <input type="text" id="login_id" name="login_id" value="E-mail"/><i id="email_icon" class="fa fa-user"></i>
+                                <input type="text" id="login_pass" name="login_pass" value="Password" /><i id="pass_icon" class="fa fa-unlock-alt"></i>
                         </div> <!-- end login_input div --> 
                         <input id="login_lubycon" type="button" value="Go"><!--submit bt-->
                     </form><!--end login_input form-->
                     <a href="./php/account/forgot_password.php" target="_self"><p id="forgot_pass">Forgot your password?</p></a> 
                     <div id="login_submit">
-                        <button id="login_facebook"><i class="fa fa-facebook"></i></button>
-                        <button id="login_google"><i class="fa fa-google-plus"></i></button>
+                        <button id="login_facebook"><i class="fa fa-facebook"></i><span></span></button>
+                        <button id="login_google"><i class="fa fa-google-plus"></i><span></span></button>
                     </div>     <!-- end login_submit div -->
                     <p id="create_acc">Create An Account</p>          
                 </div>  <!-- end login_box div -->
@@ -167,8 +172,8 @@
         <!-- after sign in -->
         <div id="after_signin">
             <span class="partition">|</span>
-            <figure><img src="ch/img/designer_img.png" alt="profile img" /></figure>
-            <span id="user_id">Daniel_zeppppp</span>
+            <figure><img src="ch/img/no_img/no_img_user1.jpg" alt="profile img" /></figure>
+            <span id="user_id">Admin_User</span>
             <i class="fa fa-angle-down"></i>
             <ul>
                 <li><a href="./index.php?1=personal_page&2=personal_page&3=main&4=my_contents">My Contents</a></li>
