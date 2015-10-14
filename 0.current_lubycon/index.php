@@ -65,7 +65,7 @@
             <li>
                 <a href="./index.php?1=editor&2=editor&3=raster">
                 <i class="fa fa-font"></i>
-                <p>Raster</p>
+                <p>Artwork</p>
                 </a>
             </li>
             <li>
@@ -102,7 +102,7 @@
                     </a>
                     <ul class="sub">
                         <li>
-                            <a href="./index.php?1=contents&2=contents_page&3=raster"><i class="fa fa-font fa-1x"></i><p>Raster</p></a>
+                            <a href="./index.php?1=contents&2=contents_page&3=artwork"><i class="fa fa-font fa-1x"></i><p>Artwork</p></a>
                         </li>
                         <li>
                             <a href="./index.php?1=contents&2=contents_page&3=vector"><i class="fa fa-square fa-1x"></i><p>Vector</p></a>

@@ -73,11 +73,11 @@
 
 <section id="slide_section">
     <nav id="slide_lnb">
-        <input id="raster_bt" type="radio" name="tap" checked="checked" />
+        <input id="artwork_bt" type="radio" name="tap" checked="checked" />
         <input id="vector_bt" type="radio" name="tap" />
         <input id="3d_bt" type="radio" name="tap" />
         <nav>
-            <label for="raster_bt" class="la_bt clicked">RASTER</label>
+            <label for="artwork_bt" class="la_bt clicked">ARTWORK</label>
             <label for="vector_bt" class="la_bt">VECTOR</label>
             <label for="3d_bt" class="la_bt">3D DESIGN</label>
             <p class="down_triangle"></p>
