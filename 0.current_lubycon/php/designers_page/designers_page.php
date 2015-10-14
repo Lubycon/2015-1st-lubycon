@@ -56,7 +56,7 @@
                     <td></td>
                     <td>South America</td>
                     <td>
-                        <img src="ch/img/designer_img.png" /></td>
+                        <img src="ch/img/no_img/no_img_user1.jpg" /></td>
                     <td class="rank_name">coco</td>
                     <td class="rank_like">15665</td>
                     <td class="rank_art">5251</td>
@@ -67,7 +67,7 @@
                     <td><i class="fa fa-caret-up"></i></td>
                     <td>South Korea</td>
                     <td>
-                        <img src="ch/img/designer_img.png" /></td>
+                        <img src="ch/img/no_img/no_img_user1.jpg" /></td>
                     <td class="rank_name">Daniel Zepp</td>
                     <td class="rank_like">5655</td>
                     <td class="rank_art">13516</td>
@@ -77,7 +77,7 @@
                     <td><i class="fa fa-caret-down"></i></td>
                     <td>South Korea</td>
                     <td>
-                        <img src="ch/img/designer_img.png" /></td>
+                        <img src="ch/img/no_img/no_img_user1.jpg" /></td>
                     <td class="rank_name">bboy Dart</td>
                     <td class="rank_like">2305</td>
                     <td class="rank_art">4156</td>

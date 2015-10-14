@@ -8,8 +8,8 @@
     <meta name="description" content="free sources" />
     <meta name="author" content="Daniel ZEPOT" />
     <meta name="robots" content="index" />
-    <meta name="copyright" content="copyrights 2015 ZEPOT" />
-    <meta name="keywords" content="font ,vector, 3D design, community, designers, engineer, 3D printer, Illustration, Lubycon" />
+    <meta name="copyright" content="copyrights 2015 LUBYCON" />
+    <meta name="keywords" content="design, font ,vector, 3D design, community, designers, engineer, 3D printer, Illustration, Lubycon" />
 
     <title>LUBYCON</title>
 
@@ -36,7 +36,7 @@
 <body id="bodyer">
     <!-- popup start -->
     <div class="dark_overlay"></div>
-    
+    <!-----------------------------------------------------alert boxes-------------------------------------------------->
     <div class="luby_alert" id="suc_alert">
         <i id="suc_icon" class="fa fa-check-circle rotateIn animated"></i>
         <p>Success!</p>
@@ -58,12 +58,12 @@
         <button class="index_confirm_bt">Confirm</button>
         <button class="index_cancel_bt">Cancel</button>
     </div><!--confirm box-->
-
+    <!-----------------------------------------------------alert boxes-------------------------------------------------->
     <div class="editor_popup fadeInDown animated">
         <p>Which content will you upload?</p>
         <ul>
             <li>
-                <a href="./index.php?1=editor&2=editor&3=raster">
+                <a href="./index.php?1=editor&2=editor&3=artwork">
                 <i class="fa fa-font"></i>
                 <p>Artwork</p>
                 </a>
@@ -91,7 +91,7 @@
             <a href="./index.php">
                 <img src="CH/img/logo/lubycon_logo.svg" width="176" height="40" alt="Lubycon logo" />
             </a>
-            <span id="beta_version">BETA</span>
+            <span id="beta_version">BETA</span><!--beta mark-->
         </h1><!--LUBYCON LOGO-->
 
         <nav id="main_gnb">
@@ -126,7 +126,7 @@
                             <a href="./index.php?1=community&2=community_page&3=qna"><i class="fa fa-question fa-1x"></i><p>Q&amp;A</p></a>
                         </li>
                         <li>
-                            <a href="./index.php?1=designers_page&2=designers_page&3=all"><i class="fa fa-star fa-1x"></i><p>Ranking</p></a>
+                            <a href="./index.php?1=designers_page&2=designers_page&3=all"><i class="fa fa-trophy fa-1x"></i><p>Ranking</p></a>
                         </li>
                     </ul>	<!--end Community menu-->
                 </li>
@@ -225,15 +225,12 @@
     <!---------------- search bar end ---------------->
     <!---------------- common parts end ---------------->
     <?php
-    if( empty($_GET['1']) == false ) 
-    {
-        include_once("php/".$_GET['1']."/".$_GET['2'].".php");
-        //echo $_GET['1']."/".$_GET['2'].".html";
-    }
-    else
-    {
-        include_once("index_body.php");
-    }
+        if( empty($_GET['1']) == false ) {
+            include_once("php/".$_GET['1']."/".$_GET['2'].".php");
+        }
+        else{
+            include_once("index_body.php");
+        }
     ?>
     <footer id="footer" class="relative_foot"></footer>   <!--end footer-->
 </body>

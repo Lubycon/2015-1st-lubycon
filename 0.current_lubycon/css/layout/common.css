@@ -193,7 +193,7 @@ body{
     }
 
     .editor_popup ul {
-        width: 516px;
+        width: 520px;
         margin: 0px auto;
     }
 
@@ -1060,7 +1060,6 @@ h1 /* main logo */ {
 
 #navsel {
     width: 99%;
-    max-width: 1600px;
     height: 50px;
     margin: 0px auto;
     position: relative;
@@ -1103,7 +1102,6 @@ h1 /* main logo */ {
 
 .subnav_box {
     width:100%;
-    max-width: 1600px;
     margin: 0px auto;
     display: block;
     position: relative;
