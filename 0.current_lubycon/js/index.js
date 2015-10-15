@@ -2,16 +2,18 @@
 /////////////////////////////////////////////////////////
 //      debuging tool start
 /////////////////////////////////////////////////////////
-$(document).ready(function(){
+/*$(document).ready(function(){
     $(function(){//property check
-        $(window).click(function(){
+        $(window).click(function(e){
             console.log("------------------------------------------------------------------------")
             console.log("window_scrollTop : " + $(window).scrollTop());
             console.log("document_height : " + $(document).height());
             console.log("window_height : " + $(window).height());
+            console.log("class : " + $(event.target).attr('class'));
+            console.log("id : " + event.target.id);
         });
     });
-});
+});*/
 /////////////////////////////////////////////////////////
 //      debuging tool end
 /////////////////////////////////////////////////////////
@@ -264,8 +266,8 @@ $(function(){
 $(document).ready(function(){
     $("#login_lubycon").click(function(){
         var form_data = {
-            user_id: $("#login_id").val(),
-            user_pw: $("#login_pass").val(),
+            user_id: $("#login_id").val(),//input id
+            user_pw: $("#login_pass").val(),//input pw
             is_ajax: 1
         };
         $.ajax({
@@ -465,7 +467,7 @@ $(function(){
 
 $(function()  //slider change 
 {
-	$('#raster_bt').click(function()
+	$('#artwork_bt').click(function()
 	{
 		$('#slider1').stop().fadeIn(150);
 		$('#slider2').hide();
@@ -1149,9 +1151,10 @@ $(function () {
                     toggle_count = 0;
                     console.log(toggle_count);
                 break;
-            }
-        })
-    });
+            };
+        });
+    });    
+
 
     $('document').ready(function () {
         if ($('.personal').attr('class') == 'personal')
