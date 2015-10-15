@@ -26,7 +26,12 @@
     <section id="nav_guide">
         <div class="subnav_box">
             <?php
-                include_once('php/sub_nav/category_artwork.php');
+                $current_url = $_GET["3"];
+                switch($current_url){
+                    case "artwork" : include_once("php/sub_nav/category_artwork.php"); break;
+                    case "vector" : include_once("php/sub_nav/category_vector.php"); break;
+                    case "3d" : include_once("php/sub_nav/category_3d.php"); break;
+                }
             ?>
             <div class="contents_bt">
                 <span class="global_icon"><i class="fa fa-usd"></i></span>
