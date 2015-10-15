@@ -163,13 +163,13 @@
         width: 1260px;
         height: 270px;
         margin:0px auto;
+        position: relative;
     }
         #designer_photo
         {
             width: 280px;
             position: relative;
             top:-53px;
-            margin-left: 20px;
             float: left;
         }
 
@@ -235,7 +235,7 @@
             position: relative;
             float: left;
             top: 80px;
-            margin-left: 80px;
+            margin-left: 70px;
         }
 
         #interview
@@ -244,6 +244,7 @@
             height: 40px;
             line-height: 40px;
             top: 215px;
+            right:20px;
             
             border-radius:3px;
             background:#48cfad;
@@ -253,9 +254,9 @@
             color:#fff;
             text-align: center;
             
-            position:relative;
-            overflow:hidden;
-            cursor:pointer;
+            position: absolute;
+            overflow: hidden;
+            cursor: pointer;
         }
             #interview i
             {

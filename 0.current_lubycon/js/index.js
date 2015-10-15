@@ -628,14 +628,15 @@ $(function ()
     });
     
 
-    $(document).on("click","#bookmark_inner_bt",function(){//bookmark alert
+    $(document).on("click",".bookmark_bt,#bookmark_inner_bt",function(){
         if($(this).css("color") != "rgb(193, 193, 193)"){
             console.log("success");
             $("#bookmark_alert").css('display','inline-block');
             $("#bookmark_alert").attr("class","luby_alert fadeIn animated");
             setTimeout("hideAlert()",1500); 
         };
-    });
+    });//bookmark alert
+    
 });
 function hideAlert(){
     $("#bookmark_alert").attr("class","luby_alert fadeOut animated");
@@ -1123,7 +1124,6 @@ $(document).scroll(function ()
             }  
         }
         else{
-            console.log("");
             return true;
         }
         
@@ -1151,9 +1151,9 @@ $(function () {
                     toggle_count = 0;
                     console.log(toggle_count);
                 break;
-            };
-        });
-    });    
+            };//switch end
+        });//click end
+    });//each end
 
 
     $('document').ready(function () {
