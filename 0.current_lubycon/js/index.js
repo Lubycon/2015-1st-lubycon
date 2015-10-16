@@ -1223,7 +1223,7 @@ $(function () {
 //      about us animation event start
 /////////////////////////////////////////////////////////
 $(window).load(function(){
-    $("#descript_lubycon").addClass("zoomIn animated");
+    $("#descript_lubycon").addClass("fadeIn animated");
     
     $(function(){
         $(document).scroll(function () { //account setting move banner
@@ -1235,10 +1235,10 @@ $(window).load(function(){
             if($(window).scrollTop()>=1156){
                 /////////animation
                 callTeam1();
-                setTimeout("callTeam2()",200);
-                setTimeout("callTeam3()",400);
-                setTimeout("callTeam4()",600);
-                setTimeout("callTeam5()",800);
+                setTimeout("callTeam2()",150);
+                setTimeout("callTeam3()",300);
+                setTimeout("callTeam4()",450);
+                setTimeout("callTeam5()",600);
             }
             if($(window).scrollTop()>=1993){
                 callContact();
@@ -1248,35 +1248,35 @@ $(window).load(function(){
 });
 ///////////animation for Icon methods start
 function callIcon1(){
-    $("#icon1").addClass("zoomIn animated").stop().animate({opacity:100},200);
+    $("#icon1").addClass("fadeIn animated").stop().animate({opacity:100},200);
 };
 function callIcon2(){
-    $("#icon2").addClass("zoomIn animated").stop().animate({opacity:100},200);
+    $("#icon2").addClass("fadeIn animated").stop().animate({opacity:100},200);
 };
 function callIcon3(){
-    $("#icon3").addClass("zoomIn animated").stop().animate({opacity:100},200);
+    $("#icon3").addClass("fadeIn animated").stop().animate({opacity:100},200);
 };
 ///////////animation for Icon methods end
 ///////////animation for Employees methods start
 function callTeam1(){
-    $("#ceo").addClass("bounceIn animated").stop().animate({opacity:100},200);
+    $("#ceo").addClass("fadeIn animated").stop().animate({opacity:100},200);
 };
 function callTeam2(){
-    $("#dart").addClass("bounceIn animated").stop().animate({opacity:100},200);
+    $("#dart").addClass("fadeIn animated").stop().animate({opacity:100},200);
 }
 function callTeam3(){
-    $("#ssaru").addClass("bounceIn animated").stop().animate({opacity:100},200);
+    $("#ssaru").addClass("fadeIn animated").stop().animate({opacity:100},200);
 }
 function callTeam4(){
-    $("#simon").addClass("bounceIn animated").stop().animate({opacity:100},200);
+    $("#simon").addClass("fadeIn animated").stop().animate({opacity:100},200);
 }
 function callTeam5(){
-    $("#zepot").addClass("bounceIn animated").stop().animate({opacity:100},200);
+    $("#zepot").addClass("fadeIn animated").stop().animate({opacity:100},200);
 }
 ///////////animation for Employees methods end
 ///////////animation for Contact Us start
 function callContact(){
-    $("#contact_body").addClass("zoomIn animated").stop().animate({opacity:100},200);
+    $("#contact_body").addClass("fadeIn animated").stop().animate({opacity:100},200);
 }
 ///////////animation for Contact Us end
 /////////////////////////////////////////////////////////

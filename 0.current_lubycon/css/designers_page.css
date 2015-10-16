@@ -34,10 +34,10 @@
         .rank_updown{
             width:20px;
         }
-            .fa-caret-up{
+            .rankup{
                 color:#ec6446;
             }
-            .fa-caret-down{
+            .rankdown{
                 color:#009fe3;
             }
 
@@ -51,6 +51,13 @@
             padding-left:40px;
             text-align:left;
         }
+            .rank_name:hover{
+                text-decoration: underline;
+            }
+            #rankers .rank_name:hover{
+                cursor: pointer;
+                background: #eeeeee;
+            }
         .rank_like{
             width:70px;
             color:#555555;

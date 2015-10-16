@@ -674,6 +674,9 @@ h1 /* main logo */ {
         font-size: 23px;
         vertical-align: middle;
     }
+    #after_signin a{
+        display:inline-block;
+    }
 
     #after_signin ul {
         width: 100%;

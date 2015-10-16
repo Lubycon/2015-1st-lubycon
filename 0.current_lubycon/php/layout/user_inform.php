@@ -7,9 +7,9 @@
                 
                 <div id="basic_info_box">
                     <span id="personal_name">Admin_User</span>
-                    <span id="personal_job">Front End Engineer</span>
-                    <p id="personal_legion"><i class="fa fa-home"></i>Seoul, Korea</p>
-                    <p id="personal_language"><i class="fa fa-language"></i>English, Korean</p>
+                    <span id="personal_job">Job</span>
+                    <p id="personal_legion"><i class="fa fa-home"></i>City, Counrty</p>
+                    <p id="personal_language"><i class="fa fa-language"></i>Language1, Language2</p>
                 </div>
                 <div id="descript_box">
                     <p id="personal_des">
@@ -34,10 +34,10 @@
             </section>
             <section id="personal_score">
                 <ul>
-                    <li><i class="fa fa-eye"></i><p>123</p></li>
-                    <li><i class="fa fa-heart"></i><p>111123</p></li>
-                    <li><i class="fa fa-download"></i><p>123</p></li>
-                    <li><i class="fa fa-user-plus"></i><p>123</p></li>
+                    <li><i class="fa fa-eye"></i><p>00000</p></li>
+                    <li><i class="fa fa-heart"></i><p>00000</p></li>
+                    <li><i class="fa fa-download"></i><p>00000</p></li>
+                    <li><i class="fa fa-user-plus"></i><p>00000</p></li>
                 </ul>
                 <button id="personal_messeage"><i class="fa fa-envelope-o"></i><p>Messeage</p></button>
                 <button id="personal_follow"><i class="fa fa-user-plus"></i><p>Follow</p></button>

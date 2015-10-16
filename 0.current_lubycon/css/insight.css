@@ -1,7 +1,4 @@
 ﻿@charset "utf-8";
-.contents_bt{display:none;}
-/* hide sub menu */
-
 
 #insight_box
 {
@@ -102,15 +99,18 @@
 #tooltip
 {
     width:150px;
-    height:50px;
+    height:42px;
     background:rgba(0,0,0,0.8);
 
+    border: 1px solid #000000;
     border-radius: 5px;
     padding:10px;
 
     position: absolute;
-    display: none;
+    display: block;
     overflow:hidden;
+
+    box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.5);
 }
     .value_text
     {

@@ -116,17 +116,17 @@
                 <li class="bigsub">
                     Community
                     <ul class="sub">
-                        <li>
+                        <li><!--ranking-->
+                            <a href="./index.php?1=designers_page&2=designers_page&3=all"><i class="fa fa-trophy fa-1x"></i><p>Ranking</p></a>
+                        </li>
+                        <li><!--forum-->
                             <a href="./index.php?1=community&2=community_page&3=forum"><i class="fa fa-comments-o fa-1x"></i><p>Forum</p></a>
                         </li>
-                        <li>
+                        <li><!--tutorial-->
                             <a href="./index.php?1=community&2=community_page&3=tutorial"><i class="fa fa-book fa-1x"></i><p>Tutorial</p></a>
                         </li>
-                        <li>
+                        <li><!--Q&A-->
                             <a href="./index.php?1=community&2=community_page&3=qna"><i class="fa fa-question fa-1x"></i><p>Q&amp;A</p></a>
-                        </li>
-                        <li>
-                            <a href="./index.php?1=designers_page&2=designers_page&3=all"><i class="fa fa-trophy fa-1x"></i><p>Ranking</p></a>
                         </li>
                     </ul>	<!--end Community menu-->
                 </li>
@@ -171,13 +171,15 @@
 
         <!-- after sign in -->
         <div id="after_signin">
-            <span class="partition">|</span>
-            <figure><img src="ch/img/no_img/no_img_user1.jpg" alt="profile img" /></figure>
-            <span id="user_id">Admin_User</span>
-            <i class="fa fa-angle-down"></i>
+            <a href="./index.php?1=personal_page&2=personal_page&3=main&4=my_contents">
+                <span class="partition">|</span>
+                <figure><img src="ch/img/no_img/no_img_user1.jpg" alt="profile_img" /></figure>
+                <span id="user_id">Admin_User</span>
+                <i class="fa fa-angle-down"></i>
+            </a>
             <ul>
                 <li><a href="./index.php?1=personal_page&2=personal_page&3=main&4=my_contents">My Contents</a></li>
-                <li><a href="./index.php?1=personal_page&2=personal_page&3=main&4=message">Message</a></li>
+                <li style="display:none;"><a href="./index.php?1=personal_page&2=personal_page&3=main&4=message">Message</a></li>
                 <li><a href="./index.php?1=personal_page&2=personal_page&3=main&4=bookmarks">Bookmarks</a></li>
                 <li><a href="./index.php?1=personal_page&2=personal_page&3=main&4=account_setting">Account Setting</a></li>
                 <li id="sign_out">Sign Out</li>
