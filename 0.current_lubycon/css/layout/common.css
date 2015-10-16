@@ -1119,7 +1119,7 @@ h1 /* main logo */ {
     color: #fff;
     font-size: 18px;
     font-weight: 200;
-    background: #444;
+    background: #555555;
     text-align: center;
     
     margin: 7px 5px;
@@ -1376,8 +1376,7 @@ h1 /* main logo */ {
     {
         width: 150px;
         height: 150px;
-        margin-bottom: 70px;
-        margin-right: 40px;
+        margin: 20px 40px 60px 10px;
         vertical-align: middle;
         text-align: center;
         display: inline-block;
@@ -1386,14 +1385,13 @@ h1 /* main logo */ {
         #personal_photo img
         {
             height:150px;
-            border:6px solid #48cfad;
-            border-radius: 3px;
+            border-radius: 5px;
         }
 
         #basic_info_box
         {
             display:inline-block;
-            margin-top:20px;
+            margin-top:12px;
             margin-bottom:20px;
         }
             #personal_name

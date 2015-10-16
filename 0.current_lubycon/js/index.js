@@ -633,7 +633,11 @@ $(function ()
             console.log("success");
             $("#bookmark_alert").css('display','inline-block');
             $("#bookmark_alert").attr("class","luby_alert fadeIn animated");
-            setTimeout("hideAlert()",1500); 
+            setTimeout("hideAlert()",1500);
+            return false; 
+        }
+        else{
+            return true;
         };
     });//bookmark alert
     
@@ -1141,18 +1145,34 @@ $(function () {
                     $(this).css("background","#333333");
                     $(this).find($(".subnav_arrow")).children("i").attr("class","fa fa-caret-up");
                     toggle_count = 1;
-                    console.log(toggle_count);
+                    return false;
                 break;
 
                 case 1 :
                     $(this).find($(".subnav_list")).stop().fadeOut(300);
-                    $(this).css("background","#444444");
+                    $(this).css("background","#555555");
                     $(this).find($(".subnav_arrow")).children("i").attr("class","fa fa-caret-down");
                     toggle_count = 0;
-                    console.log(toggle_count);
+                    return false;
                 break;
             };//switch end
         });//click end
+        //-------------------------------selectbox fadeOut event-----------------------------//
+        $(this).mouseleave(function(){
+            $(document).click(function (e) {
+                if (!$(event.target).hasClass("contents_bt")) {
+                    $(this).find($(".subnav_list")).stop().fadeOut(300);
+                    $(".contents_bt").css("background","#555555");
+                    $(this).find($(".subnav_arrow")).children("i").attr("class","fa fa-caret-down");
+                    toggle_count = 0;
+                    return false;
+                }//if end
+                else{
+                    return true;
+                }//else end
+            });//click end
+        });//mouseleave end
+        //-------------------------------selectbox fadeOut event-----------------------------//
     });//each end
 
 

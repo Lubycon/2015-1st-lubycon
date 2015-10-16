@@ -21,13 +21,24 @@
         border-bottom:1px solid #ddd;
     }
     #top_rank{
-        background:#48cfad;
-        color:#fff;
+        background: #48cfad;
+        color: #fff;
     }
         #top_rank .fa-trophy {
-            color:#ffbe54;
-            font-size:32px;
+            color: #ffbe54;
+            font-size: 32px;
         }
+        #top_rank .rank_name a{
+            color: #ffffff;
+        }
+        #top_rank .rank_like{
+            color: #ffffff;
+        }
+        #top_rank .rank_art{
+            color: #ffffff;
+        }
+
+
         .rank_number{
             width:50px;
         }
@@ -50,10 +61,7 @@
         .rank_name{
             padding-left:40px;
             text-align:left;
-        }
-            .rank_name:hover{
-                text-decoration: underline;
-            }
+        }   
             #rankers .rank_name:hover{
                 cursor: pointer;
                 background: #eeeeee;

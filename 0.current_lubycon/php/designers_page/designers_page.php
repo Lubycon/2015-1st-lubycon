@@ -58,14 +58,14 @@
                     <td>
                         <img src="ch/img/no_img/no_img_user1.jpg" /></td>
                     <td class="rank_name">
-                        <a href="./index.php?1=personal_page&2=personal_page&3=main&4=my_contents">Admin</a>
+                        <a href="./index.php?1=personal_page&2=personal_page&3=main&4=my_contents">Admin_User</a>
                     </td>
                     <td class="rank_like">00000</td>
                     <td class="rank_art">00000</td>
                 </tr>
                 
                 <?php
-                    for($i=1;$i<=20;$i++){
+                    for($i=1; $i<=20; $i++){
                         if($i%2!=0){
                             echo 
                             "<tr id='rankers'>

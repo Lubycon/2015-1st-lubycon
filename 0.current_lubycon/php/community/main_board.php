@@ -12,17 +12,18 @@
                 </thead>
             <tbody>
                 <?php
-                    for($i=0;$i<20;$i++)
+                    for($i=20; $i>=1; $i--)
                     {
-                        echo'<tr>
-                                <td class="table_blank"><i class="fa fa-circle"></i></td>   <!-- space -->
-                                <td class="table_number">125</td>   <!-- number -->
-                                <td class="table_subject"><a href="./index.php?1=community&2=community_view">Lorem Ipsum [1]</a></td>   <!-- subject -->
-                                <td class="table_writer">Admin_User</td>    <!-- writer -->
-                                <td class="table_like">000</td> <!-- like -->
-                                <td class="table_view">0000</td>    <!-- view -->
-                                <td class="table_date">yy.mm.dd</td>    <!-- date -->
-                            </tr>';
+                        echo
+                        "<tr>
+                            <td class='table_blank'><i class='fa fa-circle'></i></td>   <!-- space -->
+                            <td class='table_number'>{$i}</td>   <!-- number -->
+                            <td class='table_subject'><a href='./index.php?1=community&2=community_view'>Lorem Ipsum [1]</a></td>   <!-- subject -->
+                            <td class='table_writer'>Admin_User</td>    <!-- writer -->
+                            <td class='table_like'>000</td> <!-- like -->
+                            <td class='table_view'>0000</td>    <!-- view -->
+                            <td class='table_date'>yy.mm.dd</td>    <!-- date -->
+                        </tr>";
                     };//for end
                 ?>
             </tbody>
