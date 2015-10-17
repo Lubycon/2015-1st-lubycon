@@ -9,8 +9,8 @@
                 <li class="all" >
                     <a href="./index.php?1=contents&2=contents_page&3=all">All</a>
                 </li>
-                <li class="raster">
-                    <a href="./index.php?1=contents&2=contents_page&3=raster">Raster</a>
+                <li class="artwork">
+                    <a href="./index.php?1=contents&2=contents_page&3=artwork">Artwork</a>
                 </li>
                 <li class="vector">
                     <a href="./index.php?1=contents&2=contents_page&3=vector">Vector</a>
@@ -22,28 +22,17 @@
         </nav>  <!-- end lnb nav -->
     </section>  <!-- end section -->
 
+
     <section id="nav_guide">
         <div class="subnav_box">
-            <div class="contents_bt" id="category_bt">
-                <span class="global_icon"><i class="fa fa-filter"></i></span>
-                <span class="subnav_selected">All categories</span>
-                <span class="subnav_arrow"><i class="fa fa-caret-down"></i></span>
-                <ul class="subnav_list" id="category_list">
-                    <li class="selected_li">All categories</li>
-                    <li>A</li>
-                    <li>B</li>
-                    <li>C</li>
-                    <li>D</li>
-                    <li>E</li>
-                    <li>F</li>
-                    <li>G</li>
-                    <li>H</li>
-                    <li>I</li>
-                    <li>J</li>
-                    <li>K</li>
-                    <li>L</li>
-                </ul>
-            </div><!--category end-->
+            <?php
+                $current_url = $_GET["3"];
+                switch($current_url){
+                    case "artwork" : include_once("php/sub_nav/category_artwork.php"); break;
+                    case "vector" : include_once("php/sub_nav/category_vector.php"); break;
+                    case "3d" : include_once("php/sub_nav/category_3d.php"); break;
+                }
+            ?>
             <div class="contents_bt">
                 <span class="global_icon"><i class="fa fa-usd"></i></span>
                 <span class="subnav_selected">All</span>
@@ -66,6 +55,20 @@
                     <li>Most Download</li>
                     <li>Most Comment</li>
                 </ul>
+            </div>
+
+            <div id="sub_search_bar">
+                <div class="select_box">
+                    <select class="basic">
+                        <option value="Title">Title</option>
+                        <option value="Designer">Designer</option>
+                        <option value="Tag">Tag</option>
+                    </select>
+                </div>
+                <input type="text" id="sub_search_text" value="Enter the Keyword" />
+                <button id="sub_search_btn">
+                    <i class="fa fa-search"></i>
+                </button>
             </div>
         </div><!--subnav_box end-->
     </section>

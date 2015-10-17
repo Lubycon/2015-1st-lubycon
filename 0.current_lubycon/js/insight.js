@@ -365,45 +365,45 @@ vis.selectAll("svg")
             
             $('.value_text').html(function() {
                 if(cv==0){/////////////////////////////////////////////////////////////////// you should change to switch later//
-                    return "<font size='18'>" + "2015-January" + "</font>" + "<br>" + "Contents : <font color='#48cfad'>" + upload_data[0].value + "</font>";
+                    return "2015-January" + "<br>" + "Contents : <font color='#48cfad'>" + upload_data[0].value + "</font>";
                 }
                 else if(cv==1){
-                    return "<font size='18'>" + "2015-February" + "</font>" + "<br>" + "Contents : <font color='#48cfad'>" + upload_data[1].value + "</font>";
+                    return "2015-February" + "<br>" + "Contents : <font color='#48cfad'>" + upload_data[1].value + "</font>";
                 }
                 else if(cv==2){
-                    return "<font size='18'>" + "2015-March" + "</font>" + "<br>" + "Contents : <font color='#48cfad'>" + upload_data[2].value + "</font>";
+                    return "2015-March" + "<br>" + "Contents : <font color='#48cfad'>" + upload_data[2].value + "</font>";
                 }
                 else if(cv==3){
-                    return "<font size='18'>" + "2015-April" + "</font>" + "<br>" + "Contents : <font color='#48cfad'>" + upload_data[3].value + "</font>";
+                    return "2015-April" + "<br>" + "Contents : <font color='#48cfad'>" + upload_data[3].value + "</font>";
                 }
                 else if(cv==4){
-                    return "<font size='18'>" + "2015-May" + "</font>" + "<br>" + "Contents : <font color='#48cfad'>" + upload_data[4].value + "</font>";
+                    return "2015-May" + "<br>" + "Contents : <font color='#48cfad'>" + upload_data[4].value + "</font>";
                 }
                 else if(cv==5){
-                    return "<font size='18'>" + "2015-June" + "</font>" + "<br>" + "Contents : <font color='#48cfad'>" + upload_data[5].value + "</font>";
+                    return "2015-June" + "<br>" + "Contents : <font color='#48cfad'>" + upload_data[5].value + "</font>";
                 }
                 else if(cv==6){
-                    return "<font size='18'>" + "2015-July" + "</font>" + "<br>" + "Contents : <font color='#48cfad'>" + upload_data[6].value + "</font>";
+                    return "2015-July" + "<br>" + "Contents : <font color='#48cfad'>" + upload_data[6].value + "</font>";
                 }
                 else if(cv==7){
-                    return "<font size='18'>" + "2015-August" + "</font>" + "<br>" + "Contents : <font color='#48cfad'>" + upload_data[7].value + "</font>";
+                    return "2015-August" + "<br>" + "Contents : <font color='#48cfad'>" + upload_data[7].value + "</font>";
                 }
                 else if(cv==8){
-                    return "<font size='18'>" + "2015-September" + "</font>" + "<br>" + "Contents : <font color='#48cfad'>" + upload_data[8].value + "</font>";
+                    return "2015-September" + "<br>" + "Contents : <font color='#48cfad'>" + upload_data[8].value + "</font>";
                 }
                 else if(cv==9){
-                    return "<font size='18'>" + "2015-October" + "</font>" + "<br>" + "Contents : <font color='#48cfad'>" + upload_data[9].value + "</font>";
+                    return "2015-October" + "<br>" + "Contents : <font color='#48cfad'>" + upload_data[9].value + "</font>";
                 }
                 else if(cv==10){
-                    return "<font size='18'>" + "2015-November" + "</font>" + "<br>" + "Contents : <font color='#48cfad'>" + upload_data[10].value + "</font>";
+                    return "2015-November" + "<br>" + "Contents : <font color='#48cfad'>" + upload_data[10].value + "</font>";
                 }
                 else if(cv==11){
-                    return "<font size='18'>" + "2015-December" + "</font>" + "<br>" + "Contents : <font color='#48cfad'>" + upload_data[11].value + "</font>";
+                    return "2015-December" + "<br>" + "Contents : <font color='#48cfad'>" + upload_data[11].value + "</font>";
                 }
             });
 
-        var tooltipX = $(this).offset().left + 10;///circle X = tooltip_X
-        var tooltipY = $(this).offset().top + 10;////circle Y = tooltip_Y
+        var tooltipX = $(this).offset().left + 15;///circle X = tooltip_X
+        var tooltipY = $(this).offset().top - 655;////circle Y = tooltip_Y
 
         $('#tooltip').css('top',tooltipY);
         $('#tooltip').css('left',tooltipX);
@@ -451,45 +451,45 @@ vis2.selectAll("svg")
             
             $('.value_text').html(function() {
                 if(cv==0){/////////////////////////////////////////////////////////////////// you should change to switch later//
-                    return "<font size='18'>" + "2015-January" + "</font>" + "<br>" + "Contents : <font color='#ffbe54'>" + download_data[0].value + "</font>";
+                    return "2015-January" + "<br>" + "Contents : <font color='#ffbe54'>" + download_data[0].value + "</font>";
                 }
                 else if(cv==1){
-                    return "<font size='18'>" + "2015-February" + "</font>" + "<br>" + "Contents : <font color='#ffbe54'>" + download_data[1].value + "</font>";
+                    return "2015-February" + "<br>" + "Contents : <font color='#ffbe54'>" + download_data[1].value + "</font>";
                 }
                 else if(cv==2){
-                    return "<font size='18'>" + "2015-March" + "</font>" + "<br>" + "Contents : <font color='#ffbe54'>" + download_data[2].value + "</font>";
+                    return "2015-March" + "<br>" + "Contents : <font color='#ffbe54'>" + download_data[2].value + "</font>";
                 }
                 else if(cv==3){
-                    return "<font size='18'>" + "2015-April" + "</font>" + "<br>" + "Contents : <font color='#ffbe54'>" + download_data[3].value + "</font>";
+                    return "2015-April" + "<br>" + "Contents : <font color='#ffbe54'>" + download_data[3].value + "</font>";
                 }
                 else if(cv==4){
-                    return "<font size='18'>" + "2015-May" + "</font>" + "<br>" + "Contents : <font color='#ffbe54'>" + download_data[4].value + "</font>";
+                    return "2015-May" + "<br>" + "Contents : <font color='#ffbe54'>" + download_data[4].value + "</font>";
                 }
                 else if(cv==5){
-                    return "<font size='18'>" + "2015-June" + "</font>" + "<br>" + "Contents : <font color='#ffbe54'>" + download_data[5].value + "</font>";
+                    return "2015-June" + "<br>" + "Contents : <font color='#ffbe54'>" + download_data[5].value + "</font>";
                 }
                 else if(cv==6){
-                    return "<font size='18'>" + "2015-July" + "</font>" + "<br>" + "Contents : <font color='#ffbe54'>" + download_data[6].value + "</font>";
+                    return "2015-July" + "<br>" + "Contents : <font color='#ffbe54'>" + download_data[6].value + "</font>";
                 }
                 else if(cv==7){
-                    return "<font size='18'>" + "2015-August" + "</font>" + "<br>" + "Contents : <font color='#ffbe54'>" + download_data[7].value + "</font>";
+                    return "2015-August" + "<br>" + "Contents : <font color='#ffbe54'>" + download_data[7].value + "</font>";
                 }
                 else if(cv==8){
-                    return "<font size='18'>" + "2015-September" + "</font>" + "<br>" + "Contents : <font color='#ffbe54'>" + download_data[8].value + "</font>";
+                    return "2015-September" + "<br>" + "Contents : <font color='#ffbe54'>" + download_data[8].value + "</font>";
                 }
                 else if(cv==9){
-                    return "<font size='18'>" + "2015-October" + "</font>" + "<br>" + "Contents : <font color='#ffbe54'>" + download_data[9].value + "</font>";
+                    return "2015-October" + "<br>" + "Contents : <font color='#ffbe54'>" + download_data[9].value + "</font>";
                 }
                 else if(cv==10){
-                    return "<font size='18'>" + "2015-November" + "</font>" + "<br>" + "Contents : <font color='#ffbe54'>" + download_data[10].value + "</font>";
+                    return "2015-November" + "<br>" + "Contents : <font color='#ffbe54'>" + download_data[10].value + "</font>";
                 }
                 else if(cv==11){
-                    return "<font size='18'>" + "2015-December" + "</font>" + "<br>" + "Contents : <font color='#ffbe54'>" + download_data[11].value + "</font>";
+                    return "2015-December" + "<br>" + "Contents : <font color='#ffbe54'>" + download_data[11].value + "</font>";
                 }
             });
 
-        var tooltipX = $(this).offset().left + 10;///circle X = tooltip_X
-        var tooltipY = $(this).offset().top + 10;////circle Y = tooltip_Y
+        var tooltipX = $(this).offset().left + 15;///circle X = tooltip_X
+        var tooltipY = $(this).offset().top - 655;////circle Y = tooltip_Y
 
         $('#tooltip').css('top',tooltipY);
         $('#tooltip').css('left',tooltipX);
@@ -538,45 +538,45 @@ vis3.selectAll("svg")
             
             $('.value_text').html(function() {
                 if(cv==0){/////////////////////////////////////////////////////////////////// you should change to switch later//
-                    return "<font size='18'>" + "2015-January" + "</font>" + "<br>" + "Contents : <font color='#488ccb'>" + like_data[0].value + "</font>";
+                    return "2015-January" + "<br>" + "Contents : <font color='#488ccb'>" + like_data[0].value + "</font>";
                 }
                 else if(cv==1){
-                    return "<font size='18'>" + "2015-February" + "</font>" + "<br>" + "Contents : <font color='#488ccb'>" + like_data[1].value + "</font>";
+                    return "2015-February"  + "<br>" + "Contents : <font color='#488ccb'>" + like_data[1].value + "</font>";
                 }
                 else if(cv==2){
-                    return "<font size='18'>" + "2015-March" + "</font>" + "<br>" + "Contents : <font color='#488ccb'>" + like_data[2].value + "</font>";
+                    return "2015-March" + "<br>" + "Contents : <font color='#488ccb'>" + like_data[2].value + "</font>";
                 }
                 else if(cv==3){
-                    return "<font size='18'>" + "2015-April" + "</font>" + "<br>" + "Contents : <font color='#488ccb'>" + like_data[3].value + "</font>";
+                    return "2015-April" + "<br>" + "Contents : <font color='#488ccb'>" + like_data[3].value + "</font>";
                 }
                 else if(cv==4){
-                    return "<font size='18'>" + "2015-May" + "</font>" + "<br>" + "Contents : <font color='#488ccb'>" + like_data[4].value + "</font>";
+                    return "2015-May" + "<br>" + "Contents : <font color='#488ccb'>" + like_data[4].value + "</font>";
                 }
                 else if(cv==5){
-                    return "<font size='18'>" + "2015-June" + "</font>" + "<br>" + "Contents : <font color='#488ccb'>" + like_data[5].value + "</font>";
+                    return "2015-June" + "<br>" + "Contents : <font color='#488ccb'>" + like_data[5].value + "</font>";
                 }
                 else if(cv==6){
-                    return "<font size='18'>" + "2015-July" + "</font>" + "<br>" + "Contents : <font color='#488ccb'>" + like_data[6].value + "</font>";
+                    return "2015-July" + "<br>" + "Contents : <font color='#488ccb'>" + like_data[6].value + "</font>";
                 }
                 else if(cv==7){
-                    return "<font size='18'>" + "2015-August" + "</font>" + "<br>" + "Contents : <font color='#488ccb'>" + like_data[7].value + "</font>";
+                    return "2015-August" + "<br>" + "Contents : <font color='#488ccb'>" + like_data[7].value + "</font>";
                 }
                 else if(cv==8){
-                    return "<font size='18'>" + "2015-September" + "</font>" + "<br>" + "Contents : <font color='#488ccb'>" + like_data[8].value + "</font>";
+                    return "2015-September" + "<br>" + "Contents : <font color='#488ccb'>" + like_data[8].value + "</font>";
                 }
                 else if(cv==9){
-                    return "<font size='18'>" + "2015-October" + "</font>" + "<br>" + "Contents : <font color='#488ccb'>" + like_data[9].value + "</font>";
+                    return "2015-October" + "<br>" + "Contents : <font color='#488ccb'>" + like_data[9].value + "</font>";
                 }
                 else if(cv==10){
-                    return "<font size='18'>" + "2015-November" + "</font>" + "<br>" + "Contents : <font color='#488ccb'>" + like_data[10].value + "</font>";
+                    return "2015-November" + "<br>" + "Contents : <font color='#488ccb'>" + like_data[10].value + "</font>";
                 }
                 else if(cv==11){
-                    return "<font size='18'>" + "2015-December" + "</font>" + "<br>" + "Contents : <font color='#488ccb'>" + like_data[11].value + "</font>";
+                    return "2015-December" + "<br>" + "Contents : <font color='#488ccb'>" + like_data[11].value + "</font>";
                 }
             });
 
-        var tooltipX = $(this).offset().left + 10;///circle X = tooltip_X
-        var tooltipY = $(this).offset().top + 10;////circle Y = tooltip_Y
+        var tooltipX = $(this).offset().left + 15;///circle X = tooltip_X
+        var tooltipY = $(this).offset().top - 655;////circle Y = tooltip_Y
 
         $('#tooltip').css('top',tooltipY);
         $('#tooltip').css('left',tooltipX);

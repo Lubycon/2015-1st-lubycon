@@ -7,70 +7,7 @@
     margin: 0px auto;
 }
 
-#forum_search_box {
-    width: 350px;
-    height: 35px;
-    background: #fff;
-    float: left;
-    line-height: 35px;
-    border: 1px solid #818181;
-    border-radius: 5px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.1);
-    overflow-x: hidden;
-}
 
-.select_box {
-    float: left;
-    color: #999;
-    font-weight: 300;
-    border-radius: 5px;
-}
-
-    .select_box .sod_select {
-        border-radius: 10px;
-        width: 105px;
-    }
-
-    .select_box .sod_list_wrapper {
-        width: 97px;
-        margin: 0px;
-        border-radius: 5px;
-        margin-top: 2px;
-        border: 1px solid #a1a1a1;
-    }
-
-#forum_search_text {
-    border: none;
-    color: #999;
-    width: 203px;
-    font-weight: 200;
-}
-
-#forum_search_box .select_box {
-    float: right;
-    color: #999;
-    font-weight: 300;
-    float: left;
-}
-
-#forum_search_btn {
-    float: right;
-    position: relative;
-    width: 40px;
-    height: 35px;
-    border: none;
-    background: #48cfad;
-}
-
-    #forum_search_btn .fa-search {
-        color: #fff;
-        font-size: 17px;
-        vertical-align: middle;
-        margin-top: -7px;
-        -webkit-text-stroke: 1px #48cfad;
-    }
 
 #write_bt {
     width: 150px;

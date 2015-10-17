@@ -19,7 +19,7 @@
         <div class="contents_box_total">
             <div class="con_left">
                 <header>
-                    <h3 id="contents_title">Lolem Ipsum</h3>
+                    <h3 id="contents_title">Lorem Ipsum</h3>
                     <h4 id="contents_price">Free</h4>
                     <div id="bookmark">
                         <i id="bookmark_inner_bt" class="fa fa-star"></i>

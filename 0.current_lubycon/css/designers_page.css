@@ -7,8 +7,11 @@
     text-align:center;
 }
     #designers_rank_table img {
-        width:50px;
-        height:50px;
+        width:45px;
+        height:45px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        border-radius: 50%;
     }
     #designers_rank_table th {
         height:60px;
@@ -18,23 +21,34 @@
         border-bottom:1px solid #ddd;
     }
     #top_rank{
-        background:#48cfad;
-        color:#fff;
+        background: #48cfad;
+        color: #fff;
     }
         #top_rank .fa-trophy {
-            color:#ffbe54;
-            font-size:32px;
+            color: #ffbe54;
+            font-size: 32px;
         }
+        #top_rank .rank_name a{
+            color: #ffffff;
+        }
+        #top_rank .rank_like{
+            color: #ffffff;
+        }
+        #top_rank .rank_follow{
+            color: #ffffff;
+        }
+
+
         .rank_number{
             width:50px;
         }
         .rank_updown{
             width:20px;
         }
-            .fa-caret-up{
+            .rankup{
                 color:#ec6446;
             }
-            .fa-caret-down{
+            .rankdown{
                 color:#009fe3;
             }
 
@@ -47,7 +61,11 @@
         .rank_name{
             padding-left:40px;
             text-align:left;
-        }
+        }   
+            #rankers .rank_name:hover{
+                cursor: pointer;
+                background: #eeeeee;
+            }
         .rank_like{
             width:70px;
             color:#555555;
@@ -56,11 +74,11 @@
                 color:#ec6446;
                 font-size:22px;
             }
-        .rank_art{
+        .rank_follow{
             width:50px;
             color:#555555;
         }
-            .rank_art .fa-user-plus {
+            .rank_follow .fa-user-plus {
                 color:#444;
                 font-size:22px;
             }

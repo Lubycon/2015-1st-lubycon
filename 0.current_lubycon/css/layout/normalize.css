@@ -311,6 +311,7 @@ input[type="submit"] {
 button[disabled],
 html input[disabled] {
   cursor: default;
+  background: #eeeeee;
 }
 
 /**

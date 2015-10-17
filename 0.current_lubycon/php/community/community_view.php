@@ -1,4 +1,4 @@
-﻿<figure id="main_figure">
+<figure id="main_figure">
     <h2>COMMUNITY</h2>
 </figure>	<!-- end main_figure -->
 
@@ -23,17 +23,17 @@
         </nav>
     </section>
 
-    <section id="post_subject_area">
+    <section id="nav_guide">
         <p id="post_subject">
-            Weed Is Now Allowed on All Flights Within Oregon
+            Lorem Ipsum
         </p>
     </section>  <!-- end nav_guide -->
     <section id="post_writer_box">
         <div id="post_writer_box_inner">
-            <p class="post_writer_date">15.03.24 15:31</p>
+            <p class="post_writer_date">yy.mm.dd hh:mm</p>
             <ul>
-                <li><i class="fa fa-heart"></i>12</li>
-                <li><i class="fa fa-eye"></i>150</li>
+                <li><i class="fa fa-heart"></i>000</li>
+                <li><i class="fa fa-eye"></i>000</li>
             </ul>
         </div>
     </section>
@@ -47,15 +47,26 @@
                 </figure>
             </div>
             <h4>Admin_User</h4>
-            <h5 class="designer_job">Web Master</h5>
-            <h6><i class="fa fa-home"></i>Seoul, South Korea</h6>
+            <h5 class="designer_job">Job name</h5>
+            <h6><i class="fa fa-home"></i>City, Country</h6>
             <button id="designer_follow"><i class="fa fa-user-plus"></i></button>
         </aside>    <!-- end post_banner -->
 
         <section id="post_section">
             <article id="post_contents">
                 <p>
-                    According to new laws in effect from July 1,passengers are now allowed to bring recreational marijuana onto a flight, with exceptions of course. The new regulation is confined within the boundaries of Oregon only; the flight departure and arrival must remain in the state. Once the traveler is found with the drug, TSA will notify the local police and check that the weight is up to or under an ounce, the carrier is over the legal age of 21 to possess, and that the boarding pass proves in-state travel – interstate flights remain a federal crime for now, even to neighboring Washington where recreational weed has been legalised.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Cras commodo lacus at lacus bibendum imperdiet.
+                            Quisque in accumsan turpis. Nullam non lacus nec enim convallis iaculis.
+                                    Vivamus a sodales sapien. Curabitur suscipit ullamcorper enim, quis hendrerit nunc tempus eu.
+                                    Nunc porttitor mauris sapien, quis molestie quam placerat sit amet.
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Cras commodo lacus at lacus bibendum imperdiet.
+                                    Quisque in accumsan turpis. Nullam non lacus nec enim convallis iaculis.
+                                    Vivamus a sodales sapien. Curabitur suscipit ullamcorper enim, quis hendrerit nunc tempus eu.
+                                    Nunc porttitor mauris sapien, quis molestie quam placerat sit amet.
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 </p>
                 <button id="con_like_bt"><i class="fa fa-heart"></i></button>
                 <div id="share_box">
@@ -63,8 +74,8 @@
                     <button id="share_google"><i class="fa fa-google-plus"></i></button>
                 </div>
                 <div id="post_edit_box">
-                    <button class="out">DELETE</button>
-                    <button class="out">MODIFIED</button>
+                    <button class="out">Delete</button>
+                    <button class="out">Modified</button>
                 </div>
             </article>  <!-- end post_contents -->
 
@@ -105,137 +116,7 @@
         </section>  <!-- end post_section -->
 
     </section>  <!-- end post_box -->
-
-    <section>
-        <div id="forum_option_box">
-            <div id="forum_search_box">
-                <div class="select_box">
-                    <select class="basic">
-                        <option value="Title">Title</option>
-                        <option value="Subject">Subject</option>
-                        <option value="Writer">Writer</option>
-                    </select>
-                </div>
-                <input type="text" id="forum_search_text" value="Enter the Keyword" />
-
-                <button id="forum_search_btn">
-                    <i class="fa fa-search"></i>
-                </button>
-            </div>  <!-- end forum_search_box -->
-
-            <a href="./index.php?1=community&2=community_write">
-                <span id="write_bt" class="out">Write</span>
-            </a>
-
-        </div>  <!-- end forum_option_box -->
-    </section>
-
-    <section id="main_board">
-        <div class="tab_item" id="table1">
-            <table>
-                <thead id="table_head">
-                <th class="table_blank"></th>	<!-- space -->
-                <th class="table_number">No.</th>
-                <th class="table_subject">SUBJECT</th>
-                <th class="table_writer">WRITER</th>
-                <th class="table_like"><i class="fa fa-heart"></i></th>	<!-- heart icon -->
-                <th class="table_view"><i class="fa fa-eye"></i></th> <!-- eye icon -->
-                <th class="table_date">DATE</th>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="table_blank"><i class="fa fa-circle"></i></td>	<!-- space -->
-                        <td class="table_number">125</td>	<!-- number -->
-                        <td class="table_subject">Lubycon opens on may [1]</td>	<!-- subject -->
-                        <td class="table_writer">John Snow</td>	<!-- writer -->
-                        <td class="table_like">123</td>	<!-- like -->
-                        <td class="table_view">4512</td>	<!-- view -->
-                        <td class="table_date">15.05.24</td>	<!-- date -->
-                    </tr>	<!-- 1 -->
-                    <tr>
-                        <td class="table_blank"><i class="fa fa-circle"></i></td>	<!-- space -->
-                        <td class="table_number">125</td>	<!-- number -->
-                        <td class="table_subject">Lubycon opens on may [1]</td>	<!-- subject -->
-                        <td class="table_writer">John Snow</td>	<!-- writer -->
-                        <td class="table_like">123</td>	<!-- like -->
-                        <td class="table_view">4512</td>	<!-- view -->
-                        <td class="table_date">15.05.24</td>	<!-- date -->
-                    </tr>	<!-- 2 -->
-                    <tr>
-                        <td class="table_blank"><i class="fa fa-circle"></i></td>	<!-- space -->
-                        <td class="table_number">125</td>	<!-- number -->
-                        <td class="table_subject">Lubycon opens on may [1]</td>	<!-- subject -->
-                        <td class="table_writer">John Snow</td>	<!-- writer -->
-                        <td class="table_like">123</td>	<!-- like -->
-                        <td class="table_view">4512</td>	<!-- view -->
-                        <td class="table_date">15.05.24</td>	<!-- date -->
-                    </tr>	<!-- 3 -->
-                    <tr>
-                        <td class="table_blank"><i class="fa fa-circle"></i></td>	<!-- space -->
-                        <td class="table_number">125</td>	<!-- number -->
-                        <td class="table_subject">Lubycon opens on may [1]</td>	<!-- subject -->
-                        <td class="table_writer">John Snow</td>	<!-- writer -->
-                        <td class="table_like">123</td>	<!-- like -->
-                        <td class="table_view">4512</td>	<!-- view -->
-                        <td class="table_date">15.05.24</td>	<!-- date -->
-                    </tr>	<!-- 4 -->
-                    <tr>
-                        <td class="table_blank"><i class="fa fa-circle"></i></td>	<!-- space -->
-                        <td class="table_number">125</td>	<!-- number -->
-                        <td class="table_subject">Lubycon opens on may [1]</td>	<!-- subject -->
-                        <td class="table_writer">John Snow</td>	<!-- writer -->
-                        <td class="table_like">123</td>	<!-- like -->
-                        <td class="table_view">4512</td>	<!-- view -->
-                        <td class="table_date">15.05.24</td>	<!-- date -->
-                    </tr>	<!-- 5 -->
-                    <tr>
-                        <td class="table_blank"><i class="fa fa-circle"></i></td>	<!-- space -->
-                        <td class="table_number">125</td>	<!-- number -->
-                        <td class="table_subject">Lubycon opens on may [1]</td>	<!-- subject -->
-                        <td class="table_writer">John Snow</td>	<!-- writer -->
-                        <td class="table_like">123</td>	<!-- like -->
-                        <td class="table_view">4512</td>	<!-- view -->
-                        <td class="table_date">15.05.24</td>	<!-- date -->
-                    </tr>	<!-- 6 -->
-                    <tr>
-                        <td class="table_blank"><i class="fa fa-circle"></i></td>	<!-- space -->
-                        <td class="table_number">125</td>	<!-- number -->
-                        <td class="table_subject">Lubycon opens on may [1]</td>	<!-- subject -->
-                        <td class="table_writer">John Snow</td>	<!-- writer -->
-                        <td class="table_like">123</td>	<!-- like -->
-                        <td class="table_view">4512</td>	<!-- view -->
-                        <td class="table_date">15.05.24</td>	<!-- date -->
-                    </tr>	<!-- 7 -->
-                    <tr>
-                        <td class="table_blank"><i class="fa fa-circle"></i></td>	<!-- space -->
-                        <td class="table_number">125</td>	<!-- number -->
-                        <td class="table_subject">Lubycon opens on may [1]</td>	<!-- subject -->
-                        <td class="table_writer">John Snow</td>	<!-- writer -->
-                        <td class="table_like">123</td>	<!-- like -->
-                        <td class="table_view">4512</td>	<!-- view -->
-                        <td class="table_date">15.05.24</td>	<!-- date -->
-                    </tr>	<!-- 8 -->
-                    <tr>
-                        <td class="table_blank"><i class="fa fa-circle"></i></td>	<!-- space -->
-                        <td class="table_number">125</td>	<!-- number -->
-                        <td class="table_subject">Lubycon opens on may [1]</td>	<!-- subject -->
-                        <td class="table_writer">John Snow</td>	<!-- writer -->
-                        <td class="table_like">123</td>	<!-- like -->
-                        <td class="table_view">4512</td>	<!-- view -->
-                        <td class="table_date">15.05.24</td>	<!-- date -->
-                    </tr>	<!-- 9 -->
-                    <tr>
-                        <td class="table_blank"><i class="fa fa-circle"></i></td>	<!-- space -->
-                        <td class="table_number">125</td>	<!-- number -->
-                        <td class="table_subject">Lubycon opens on may [1]</td>	<!-- subject -->
-                        <td class="table_writer">John Snow</td>	<!-- writer -->
-                        <td class="table_like">123</td>	<!-- like -->
-                        <td class="table_view">4512</td>	<!-- view -->
-                        <td class="table_date">15.05.24</td>	<!-- date -->
-                    </tr>	<!-- 10 -->
-                </tbody>
-            </table>
-        </div>	 <!-- end tap_item 2  -->
-        <hr />
-    </section>  <!--end main_board section -->
+    <?php
+        include("main_board.php");
+    ?><!--end main_board section -->
 </section>  <!-- end contents section -->

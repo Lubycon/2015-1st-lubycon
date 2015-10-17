@@ -2,16 +2,23 @@
 /////////////////////////////////////////////////////////
 //      debuging tool start
 /////////////////////////////////////////////////////////
-$(document).ready(function(){
+/*$(document).ready(function(){
     $(function(){//property check
-        $(window).click(function(){
+        $(window).click(function(e){
             console.log("------------------------------------------------------------------------")
             console.log("window_scrollTop : " + $(window).scrollTop());
             console.log("document_height : " + $(document).height());
             console.log("window_height : " + $(window).height());
+            console.log("class : " + $(event.target).attr('class'));
+            console.log("id : " + event.target.id);
         });
     });
-});
+});*/
+/*$(document).on('keypress', function(e) {
+    if (e.which == 13) {// 13 == enter key@ascii
+        alert("you pressed enter key");
+    };
+});*/
 /////////////////////////////////////////////////////////
 //      debuging tool end
 /////////////////////////////////////////////////////////
@@ -156,6 +163,7 @@ $(function () //sign in toggle event
         $('#login_box').stop().fadeIn(150);
         $('#login_box').attr("class","bounceInDown animated");
         $("#login_box").css("display","block");
+        $("#login_box").focus();
     });
 
     $('#sign_out').click(function () //logout
@@ -242,18 +250,18 @@ $(function(){
     google = $("#login_google");
 
     facebook.hover(function(){
-        facebook.stop().animate({width:194},250);
+        facebook.stop().animate({width:194},300);
         facebook.find("span").text("with Facebook");
     },function(){
-        facebook.stop().animate({width:38},250);
+        facebook.stop().animate({width:38},300);
         facebook.find("span").empty();
     });
 
     google.hover(function(){
-        google.stop().animate({width:194},250);
+        google.stop().animate({width:194},300);
         google.find("span").text("with Google");
     },function(){
-        google.stop().animate({width:38},250);
+        google.stop().animate({width:38},300);
         google.find("span").empty();
     });
 });
@@ -261,10 +269,18 @@ $(function(){
 //      sign in ajax start
 /////////////////////////////////////////////////////////
 $(document).ready(function(){
+    $("#login_input").on('keypress', function(e) {
+        console.log("keypress_true");
+        if(e.which == 13) {// 13 == enter key@ascii
+            console.log("if true");
+            $("#login_lubycon").click();
+        };//if end
+    });//keypress end
+
     $("#login_lubycon").click(function(){
         var form_data = {
-            user_id: $("#login_id").val(),
-            user_pw: $("#login_pass").val(),
+            user_id: $("#login_id").val(),//input id
+            user_pw: $("#login_pass").val(),//input pw
             is_ajax: 1
         };
         $.ajax({
@@ -277,8 +293,7 @@ $(document).ready(function(){
                     console.log("true!");
                 }
                 else {
-                    console.log("false!");  
-                    console.log(form_data); 
+                    console.log("false!");   
                 }
             },
             error: function(response) {
@@ -403,7 +418,21 @@ $(function () { //add contents button start
 
 $(function () { //search box click value reset start
     var search_box = $('#main_search_text');
-    var search_box2 = $('#forum_search_text');
+    var search_box2 = $('#sub_search_text');
+    var search_bt = $('#main_search_btn');
+    var search_bt2 = $('#sub_search_btn');
+
+    search_box.on('keypress', function(e) {
+        console.log("keypress_true");
+        if(e.which == 13) {// 13 == enter key@ascii
+            console.log("if true");
+            search_bt.click();
+        };//if end
+    });//keypress end
+
+    search_bt.click(function(){
+        console.log("clicked");
+    });
 
     search_box.focus(function(){
         if (search_box.val() == 'Enter the Keyword') {
@@ -416,14 +445,28 @@ $(function () { //search box click value reset start
         }
     });
 
+    search_box2.on('keypress', function(e) {
+        console.log("keypress_true");
+        if(e.which == 13) {// 13 == enter key@ascii
+            console.log("if true");
+            search_bt.click();
+        };//if end
+    });//keypress end
+
+    search_bt2.click(function(){
+        console.log("clicked");
+    });
+
     search_box2.focus(function(){
         if(search_box2.val()=='Enter the Keyword'){
             search_box2.val('')
+            $("#sub_search_bar").stop().animate({width:350},200);
         }
     });
     search_box2.blur(function(){
         if(search_box2.val()==''){
             search_box2.val('Enter the Keyword');
+            $("#sub_search_bar").stop().animate({width:295},200);
         }
     });
 });//search box click value reset end
@@ -462,7 +505,7 @@ $(function(){
 
 $(function()  //slider change 
 {
-	$('#raster_bt').click(function()
+	$('#artwork_bt').click(function()
 	{
 		$('#slider1').stop().fadeIn(150);
 		$('#slider2').hide();
@@ -623,14 +666,19 @@ $(function ()
     });
     
 
-    $(document).on("click","#bookmark_inner_bt",function(){//bookmark alert
+    $(document).on("click",".bookmark_bt,#bookmark_inner_bt",function(){
         if($(this).css("color") != "rgb(193, 193, 193)"){
             console.log("success");
             $("#bookmark_alert").css('display','inline-block');
             $("#bookmark_alert").attr("class","luby_alert fadeIn animated");
-            setTimeout("hideAlert()",1500); 
+            setTimeout("hideAlert()",1500);
+            return false; 
+        }
+        else{
+            return true;
         };
-    });
+    });//bookmark alert
+    
 });
 function hideAlert(){
     $("#bookmark_alert").attr("class","luby_alert fadeOut animated");
@@ -1102,7 +1150,7 @@ $(function form_check (fo)
 //      personal page subnav hover and ajax
 /////////////////////////////////////////////////////////
 /*-----------------------------subnav sticky start---------------------------*/
-$(document).scroll(function () //community subject sticky event
+$(document).scroll(function ()
     {
         if($(document).find("#nav_guide"))
         {
@@ -1118,13 +1166,12 @@ $(document).scroll(function () //community subject sticky event
             }  
         }
         else{
-            console.log("");
             return true;
         }
         
     });
 /*------------------------------subnav sticky end----------------------------*/
-$(function () { /* designers page subnav selcect */
+$(function () {
     $(".contents_bt").each(function(){
         var toggle_count = 0;
        
@@ -1136,19 +1183,36 @@ $(function () { /* designers page subnav selcect */
                     $(this).css("background","#333333");
                     $(this).find($(".subnav_arrow")).children("i").attr("class","fa fa-caret-up");
                     toggle_count = 1;
-                    console.log(toggle_count);
+                    return false;
                 break;
 
                 case 1 :
                     $(this).find($(".subnav_list")).stop().fadeOut(300);
-                    $(this).css("background","#444444");
+                    $(this).css("background","#555555");
                     $(this).find($(".subnav_arrow")).children("i").attr("class","fa fa-caret-down");
                     toggle_count = 0;
-                    console.log(toggle_count);
+                    return false;
                 break;
-            }
-        })
-    });
+            };//switch end
+        });//click end
+        //-------------------------------selectbox fadeOut event-----------------------------//
+        $(this).mouseleave(function(){
+            $(document).click(function (e) {
+                if (!$(event.target).hasClass("contents_bt")) {
+                    $(this).find($(".subnav_list")).stop().fadeOut(300);
+                    $(".contents_bt").css("background","#555555");
+                    $(this).find($(".subnav_arrow")).children("i").attr("class","fa fa-caret-down");
+                    toggle_count = 0;
+                    return true;
+                }//if end
+                else{
+                    return true;
+                }//else end
+            });//click end
+        });//mouseleave end
+        //-------------------------------selectbox fadeOut event-----------------------------//
+    });//each end
+
 
     $('document').ready(function () {
         if ($('.personal').attr('class') == 'personal')
@@ -1217,7 +1281,7 @@ $(function () { /* designers page subnav selcect */
 //      about us animation event start
 /////////////////////////////////////////////////////////
 $(window).load(function(){
-    $("#descript_lubycon").addClass("zoomIn animated");
+    $("#descript_lubycon").addClass("fadeIn animated");
     
     $(function(){
         $(document).scroll(function () { //account setting move banner
@@ -1229,10 +1293,10 @@ $(window).load(function(){
             if($(window).scrollTop()>=1156){
                 /////////animation
                 callTeam1();
-                setTimeout("callTeam2()",200);
-                setTimeout("callTeam3()",400);
-                setTimeout("callTeam4()",600);
-                setTimeout("callTeam5()",800);
+                setTimeout("callTeam2()",150);
+                setTimeout("callTeam3()",300);
+                setTimeout("callTeam4()",450);
+                setTimeout("callTeam5()",600);
             }
             if($(window).scrollTop()>=1993){
                 callContact();
@@ -1242,35 +1306,35 @@ $(window).load(function(){
 });
 ///////////animation for Icon methods start
 function callIcon1(){
-    $("#icon1").addClass("zoomIn animated").stop().animate({opacity:100},200);
+    $("#icon1").addClass("fadeIn animated").stop().animate({opacity:100},200);
 };
 function callIcon2(){
-    $("#icon2").addClass("zoomIn animated").stop().animate({opacity:100},200);
+    $("#icon2").addClass("fadeIn animated").stop().animate({opacity:100},200);
 };
 function callIcon3(){
-    $("#icon3").addClass("zoomIn animated").stop().animate({opacity:100},200);
+    $("#icon3").addClass("fadeIn animated").stop().animate({opacity:100},200);
 };
 ///////////animation for Icon methods end
 ///////////animation for Employees methods start
 function callTeam1(){
-    $("#ceo").addClass("bounceIn animated").stop().animate({opacity:100},200);
+    $("#ceo").addClass("fadeIn animated").stop().animate({opacity:100},200);
 };
 function callTeam2(){
-    $("#dart").addClass("bounceIn animated").stop().animate({opacity:100},200);
+    $("#dart").addClass("fadeIn animated").stop().animate({opacity:100},200);
 }
 function callTeam3(){
-    $("#ssaru").addClass("bounceIn animated").stop().animate({opacity:100},200);
+    $("#ssaru").addClass("fadeIn animated").stop().animate({opacity:100},200);
 }
 function callTeam4(){
-    $("#simon").addClass("bounceIn animated").stop().animate({opacity:100},200);
+    $("#simon").addClass("fadeIn animated").stop().animate({opacity:100},200);
 }
 function callTeam5(){
-    $("#zepot").addClass("bounceIn animated").stop().animate({opacity:100},200);
+    $("#zepot").addClass("fadeIn animated").stop().animate({opacity:100},200);
 }
 ///////////animation for Employees methods end
 ///////////animation for Contact Us start
 function callContact(){
-    $("#contact_body").addClass("zoomIn animated").stop().animate({opacity:100},200);
+    $("#contact_body").addClass("fadeIn animated").stop().animate({opacity:100},200);
 }
 ///////////animation for Contact Us end
 /////////////////////////////////////////////////////////
@@ -1421,13 +1485,14 @@ $(function(){
 
 });
 /*----------------------------pager interaction end--------------------------*/
-/*-----------------------------footer start----------------------------------*/
-$(window).scroll(function() {
-    if ($(window).scrollTop() == $(document).height() - $(window).height()){//footer height 180px
+/*-----------------------------footer sticky start----------------------------------*/
+/*$(window).scroll(function() {
+    if ($(window).scrollTop() <= $(document).height() - $(window).height()){//footer height 180px
         $("#footer").attr("class","relative_foot");
     }
     else{
-        $("#footer").attr("class","fixed_foot fadeIn animated");         
+        $("#footer").attr("class","fixed_foot fadeIn animated");
+        $("#footer").css("top","50px");         
     };
-});
-/*-----------------------------footer end----------------------------------*/
+});*/
+/*-----------------------------footer sticky end----------------------------------*/
