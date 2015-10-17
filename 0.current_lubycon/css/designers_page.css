@@ -34,7 +34,7 @@
         #top_rank .rank_like{
             color: #ffffff;
         }
-        #top_rank .rank_art{
+        #top_rank .rank_follow{
             color: #ffffff;
         }
 
@@ -74,11 +74,11 @@
                 color:#ec6446;
                 font-size:22px;
             }
-        .rank_art{
+        .rank_follow{
             width:50px;
             color:#555555;
         }
-            .rank_art .fa-user-plus {
+            .rank_follow .fa-user-plus {
                 color:#444;
                 font-size:22px;
             }

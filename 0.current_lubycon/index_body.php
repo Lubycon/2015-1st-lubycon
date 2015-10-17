@@ -151,46 +151,9 @@
     <article class="designer_title">HOT TOPICS IN <font color="#48cfad">AUGUST</font></article>
     <ul>
         <?php
-        for( $i=0 ; $i<5 ; $i++ )   
-            {
-                echo 
-        '<li class="forum_card">
-        <!-- card list start-->
-            <div class="f_card_body">
-                <!--card start-->
-                <a href="./index.php?1=community&2=community_view">
-                    <!--link start-->
-                    <aside class="side_bar"><i class="fa fa-circle"></i></aside>
-                    <div class="f_card_header">
-                        <article class="f_card_title">Lorem Ipsum</article>
-                        <div class="f_card_counters">
-                            <div class="forum_comment"><i class="fa fa-comment"></i>32K</div>
-                            <div class="forum_like"><i class="fa fa-heart"></i>32K</div>
-                        </div>
-                    </div>
-                    <article class="f_card_content">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                    Cras commodo lacus at lacus bibendum imperdiet.<br />
-                            Quisque in accumsan turpis. Nullam non lacus nec enim convallis iaculis.
-                                    Vivamus a sodales sapien. Curabitur suscipit ullamcorper enim, quis hendrerit nunc tempus eu.
-                                    Nunc porttitor mauris sapien, quis molestie quam placerat sit amet.
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                    Cras commodo lacus at lacus bibendum imperdiet.
-                                    Quisque in accumsan turpis. Nullam non lacus nec enim convallis iaculis.
-                                    Vivamus a sodales sapien. Curabitur suscipit ullamcorper enim, quis hendrerit nunc tempus eu.
-                                    Nunc porttitor mauris sapien, quis molestie quam placerat sit amet.
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        </p>
-                    </article>
-                </a>
-                <!--link end-->
-            </div>
-            <!--card end-->
-        </li>
-        <!--card list end-->';
-        }
+            for( $i=0 ; $i<5 ; $i++ ){
+                include("php/layout/index_forum.php");
+            };
         ?>
     </ul>
 </section>

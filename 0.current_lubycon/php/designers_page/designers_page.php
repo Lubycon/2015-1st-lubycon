@@ -7,15 +7,6 @@
 <!-- contents page css -->
 <section id="contents">
     <section id="navsel">
-        <div class="search_option">
-            <i class="fa fa-filter"></i>
-            <select class="basic_filter">
-                <option value="all">All</option>
-                <option value="mostDownload">Most Download</option>
-                <option value="mostFollow">Most Follow</option>
-                <option value="mostLike">Most Like</option>
-            </select>
-        </div>
         <!-- end lnb nav -->
     </section>
     <section id="nav_guide">
@@ -36,10 +27,32 @@
                 </ul>
             </div>
         </div>
+        <div class="contents_bt">
+            <span class="global_icon"><i class="fa fa-filter"></i></span>
+            <span class="subnav_selected">All</span>
+            <span class="subnav_arrow"><i class="fa fa-caret-down"></i></span>
+            <ul class="subnav_list">
+                <li class="selected_li">All</li>
+                <li>Most Like</li>
+                <li>Most Download</li>
+                <li>Most Comment</li>
+            </ul>
+        </div>
 
     </section>
     <!-- end nav_guide -->
     <section>
+        <?php
+            $top_country = "Country";
+            $top_username = "Admin_User";
+            $top_like = 0;
+            $top_follow = 0;//designer of the month
+
+            $rank_country = "Country";
+            $rank_username = "Admin_User";
+            $rank_like = 0;
+            $rank_follow = 0;
+        ?>
         <table id="designers_rank_table">
             <thead>
                 <th class="rank_number"></th>
@@ -48,20 +61,22 @@
                 <th class="rank_photo"></th>
                 <th class="rank_name"></th>
                 <th class="rank_like"><i class="fa fa-heart"></i></th>
-                <th class="rank_art"><i class="fa fa-user-plus"></i></th>
+                <th class="rank_follow"><i class="fa fa-user-plus"></i></th>
             </thead>
             <tbody>
                 <tr id="top_rank">
                     <td><i class="fa fa-trophy"></i></td>
                     <td></td>
-                    <td>Country</td>
+                    <td><?=$top_country?></td>
                     <td>
                         <img src="ch/img/no_img/no_img_user1.jpg" /></td>
                     <td class="rank_name">
-                        <a href="./index.php?1=personal_page&2=personal_page&3=main&4=my_contents">Admin_User</a>
+                        <a href="./index.php?1=personal_page&2=personal_page&3=main&4=my_contents">
+                            <?=$top_username?>
+                        </a>
                     </td>
-                    <td class="rank_like">00000</td>
-                    <td class="rank_art">00000</td>
+                    <td class="rank_like"><?=$top_like?></td>
+                    <td class="rank_follow"><?=$top_follow?></td>
                 </tr>
                 
                 <?php
@@ -71,14 +86,16 @@
                             "<tr id='rankers'>
                                 <td>{$i}</td>
                                 <td><i class='fa fa-caret-up rankup'></i></td>
-                                <td>Country</td>
+                                <td>{$rank_country}</td>
                                 <td>
                                     <img src='ch/img/no_img/no_img_user1.jpg' /></td>
                                 <td class='rank_name'>
-                                    <a href='./index.php?1=personal_page&2=personal_page&3=main&4=my_contents'>Admin_User</a>
+                                    <a href='./index.php?1=personal_page&2=personal_page&3=main&4=my_contents'>
+                                        {$rank_username}
+                                    </a>
                                 </td>
-                                <td class='rank_like'>00000</td>
-                                <td class='rank_art'>00000</td>
+                                <td class='rank_like'>{$rank_like}</td>
+                                <td class='rank_follow'>{$rank_follow}</td>
                             </tr>";
                         }//if end
                         elseif($i%2==0){
@@ -86,14 +103,16 @@
                             "<tr id='rankers'>
                                 <td>{$i}</td>
                                 <td><i class='fa fa-caret-down rankdown'></i></td>
-                                <td>Country</td>
+                                <td>{$rank_country}</td>
                                 <td>
                                     <img src='ch/img/no_img/no_img_user1.jpg' /></td>
                                 <td class='rank_name'>
-                                    <a href='./index.php?1=personal_page&2=personal_page&3=main&4=my_contents'>Admin_User</a>
+                                    <a href='./index.php?1=personal_page&2=personal_page&3=main&4=my_contents'>
+                                        {$rank_username}
+                                    </a>
                                 </td>
-                                <td class='rank_like'>00000</td>
-                                <td class='rank_art'>00000</td>
+                                <td class='rank_like'>{$rank_like}</td>
+                                <td class='rank_follow'>{$rank_follow}</td>
                             </tr>";
                         }//elseif end
                     }//for end

@@ -14,6 +14,11 @@
         });
     });
 });*/
+/*$(document).on('keypress', function(e) {
+    if (e.which == 13) {// 13 == enter key@ascii
+        alert("you pressed enter key");
+    };
+});*/
 /////////////////////////////////////////////////////////
 //      debuging tool end
 /////////////////////////////////////////////////////////
@@ -264,6 +269,14 @@ $(function(){
 //      sign in ajax start
 /////////////////////////////////////////////////////////
 $(document).ready(function(){
+    $("#login_input").on('keypress', function(e) {
+        console.log("keypress_true");
+        if(e.which == 13) {// 13 == enter key@ascii
+            console.log("if true");
+            $("#login_lubycon").click();
+        };//if end
+    });//keypress end
+
     $("#login_lubycon").click(function(){
         var form_data = {
             user_id: $("#login_id").val(),//input id
@@ -280,8 +293,7 @@ $(document).ready(function(){
                     console.log("true!");
                 }
                 else {
-                    console.log("false!");  
-                    console.log(form_data); 
+                    console.log("false!");   
                 }
             },
             error: function(response) {
@@ -407,6 +419,20 @@ $(function () { //add contents button start
 $(function () { //search box click value reset start
     var search_box = $('#main_search_text');
     var search_box2 = $('#sub_search_text');
+    var search_bt = $('#main_search_btn');
+    var search_bt2 = $('#sub_search_btn');
+
+    search_box.on('keypress', function(e) {
+        console.log("keypress_true");
+        if(e.which == 13) {// 13 == enter key@ascii
+            console.log("if true");
+            search_bt.click();
+        };//if end
+    });//keypress end
+
+    search_bt.click(function(){
+        console.log("clicked");
+    });
 
     search_box.focus(function(){
         if (search_box.val() == 'Enter the Keyword') {
@@ -417,6 +443,18 @@ $(function () { //search box click value reset start
         if (search_box.val() == '') {
             search_box.val('Enter the Keyword');
         }
+    });
+
+    search_box2.on('keypress', function(e) {
+        console.log("keypress_true");
+        if(e.which == 13) {// 13 == enter key@ascii
+            console.log("if true");
+            search_bt.click();
+        };//if end
+    });//keypress end
+
+    search_bt2.click(function(){
+        console.log("clicked");
     });
 
     search_box2.focus(function(){
@@ -1165,7 +1203,7 @@ $(function () {
                     $(".contents_bt").css("background","#555555");
                     $(this).find($(".subnav_arrow")).children("i").attr("class","fa fa-caret-down");
                     toggle_count = 0;
-                    return false;
+                    return true;
                 }//if end
                 else{
                     return true;
