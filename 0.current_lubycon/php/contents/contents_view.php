@@ -89,13 +89,12 @@
                     <article id="comment_box">
                         <div id="comment_writer">
                             <div id="comment_text_box">
-                                <textarea id="comment_text">You Must Sign in First</textarea>
+                                <textarea id="comment_text">hello world</textarea>
                                 <button id="comment_bt">
                                     <i class="fa fa-comments"></i>
                                 </button>
                             </div>
                         </div>
-                        
                         <div id="comment_list">
                             <p id="comment_count"><span class="comment_counter">12</span> Comments</p>
                             <div class="comment_div">
