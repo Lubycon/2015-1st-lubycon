@@ -34,8 +34,12 @@
                 }
             ?>
             <span id="contents_subject">
-                <h3 id="contents_title">Lorem Ipsum</h3>
-                <h4 id="contents_price">Free</h4>
+                <?php 
+                    $title = "Lorem Ipsum";
+                    $price = "Free";
+                ?>
+                <h3 id="contents_title"><?=$title?></h3>
+                <h4 id="contents_price"><?=$price?></h4>
             </span>
             
             <div class="contents_bt">
@@ -97,57 +101,34 @@
                         </div>
                         <div id="comment_list">
                             <p id="comment_count"><span class="comment_counter">12</span> Comments</p>
-                            <div class="comment_div">
-                                <figure class="comment_pic">
-                                    <img src="ch/img/no_img/no_img_user1.jpg">
-                                </figure>
-                                <h4>Admin_User</h4>
-                                <p class="comment_contents">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                <p class="comment_time"><span class="comment_time_counter">5</span> minute ago</p>
-                            </div>
-                            <div class="comment_div">
-                                <figure class="comment_pic">
-                                    <img src="ch/img//no_img/no_img_user1.jpg">
-                                </figure>
-                                <h4>Admin_User</h4>
-                                <p class="comment_contents">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                <p class="comment_time"><span class="comment_time_counter">10</span> minute ago</p>
-                            </div>
-                            <div class="comment_div">
-                                <figure class="comment_pic">
-                                    <img src="ch/img//no_img/no_img_user1.jpg">
-                                </figure>
-                                <h4>Admin_User</h4>
-                                <p class="comment_contents">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                <p class="comment_time"><span class="comment_time_counter">13</span> minute ago</p>
-                            </div>
-                            <div class="comment_div">
-                                <figure class="comment_pic">
-                                    <img src="ch/img//no_img/no_img_user1.jpg">
-                                </figure>
-                                <h4>Admin_User</h4>
-                                <p class="comment_contents">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                <p class="comment_time"><span class="comment_time_counter">13</span> minute ago</p>
-                            </div>
-                            <div class="comment_div">
-                                <figure class="comment_pic">
-                                    <img src="ch/img//no_img/no_img_user1.jpg">
-                                </figure>
-                                <h4>Admin_User</h4>
-                                <p class="comment_contents">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                <p class="comment_time"><span class="comment_time_counter">13</span> minute ago</p>
-                            </div>
+                            <?php
+                                for($i=1; $i<=10; $i++){
+                                    include("php/layout/comment.php");
+                                };
+                            ?>
                         </div><!--end comment_list-->
                     </article>
                 </div><!--end con_left-->
 
                 <div class="con_right">
+                    <?php 
+                        $username = "Admin_User";
+                        $userjob = "Job";
+                        $usercity = "City";
+                        $usercountry = "Country";
+
+                        $file_descript = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.";
+                        
+                        $file_view = 0;
+                        $file_down = 0;
+                        $file_like = 0;                        
+                    ?>
                     <div class="designer_info">
                         <figure>
                             <img src="ch/img/no_img/no_img_user1.jpg">
                         </figure>
-                        <h4>Admin_User</h4>
-                        <h5><i class="fa fa-home"></i>Seoul, South Korea</h5>
+                        <h4><?=$username?></h4>
+                        <h5><i class="fa fa-home"></i><?=$usercity?>, <?=$usercountry?></h5>
                     </div>
                     <button id="content_down"><i class="fa fa-download"></i></button>
                     <div id="file_info">
@@ -173,17 +154,17 @@
                         <ul>
                             <li><i class="fa fa-eye"></i></li>
                             <li>Views</li>
-                            <li class="contents_view_score">0000</li>
+                            <li class="contents_view_score"><?=$file_view?></li>
                         </ul>
                         <ul>
                             <li><i class="fa fa-download"></i></li>
                             <li>Downloads</li>
-                            <li class="contents_view_score">0000</li>
+                            <li class="contents_view_score"><?=$file_down?></li>
                         </ul>
                         <ul>
                             <li><i class="fa fa-heart"></i></li>
                             <li>Likes</li>
-                            <li class="contents_view_score">0000</li>
+                            <li class="contents_view_score"><?=$file_like?></li>
                         </ul>
                     </div>
 
@@ -196,7 +177,7 @@
                     </ul>
 
                     <article id="file_descript">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                        <?=$file_descript?>
                     </article>
                 </div><!--end con_right-->
             </div><!--end content_box_total-->

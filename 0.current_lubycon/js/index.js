@@ -2,18 +2,18 @@
 /////////////////////////////////////////////////////////
 //      debuging tool start
 /////////////////////////////////////////////////////////
-/*$(document).ready(function(){
+$(document).ready(function(){
     $(function(){//property check
         $(window).click(function(e){
             console.log("------------------------------------------------------------------------")
-            console.log("window_scrollTop : " + $(window).scrollTop());
-            console.log("document_height : " + $(document).height());
-            console.log("window_height : " + $(window).height());
+            console.log("document_scrollTop : " + $(document).scrollTop());
+            console.log("document.height : " + $(document).height());
+            console.log("window.height : " + $(window).height());
             console.log("class : " + $(event.target).attr('class'));
             console.log("id : " + event.target.id);
         });
     });
-});*/
+});
 /*$(document).on('keypress', function(e) {
     if (e.which == 13) {// 13 == enter key@ascii
         alert("you pressed enter key");
@@ -603,11 +603,11 @@ $(document).scroll(function ()
         else {
             $(".con_right").css({ "position": "absolute", "top": "0" });
             $("#floating_bt").css({ "position": "absolute", "top": "0"});
-        }  
+        };
     }
     else{
         return true;
-    } 
+    }; 
 });
 /////////////////////////////////////////////////////////
 //      contents view con_right sticky end
