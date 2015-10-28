@@ -497,6 +497,7 @@ body{
     z-index: 3;
     top: 0px;
     border-bottom: 1px solid #111;
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.5);
 }
 
 h1 /* main logo */ {
@@ -1048,6 +1049,7 @@ h1 /* main logo */ {
     height:135px;
     line-height: 135px;
     margin-top: 50px;
+    box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.5);
 }
     #main_figure h2 {
         color: #fff;
@@ -1101,6 +1103,7 @@ h1 /* main logo */ {
     color: #fff;
     cursor: default;
     position: relative;
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.5);
     z-index: 2;
 }
 

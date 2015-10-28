@@ -2,18 +2,18 @@
 /////////////////////////////////////////////////////////
 //      debuging tool start
 /////////////////////////////////////////////////////////
-/*$(document).ready(function(){
+$(document).ready(function(){
     $(function(){//property check
         $(window).click(function(e){
             console.log("------------------------------------------------------------------------")
-            console.log("window_scrollTop : " + $(window).scrollTop());
-            console.log("document_height : " + $(document).height());
-            console.log("window_height : " + $(window).height());
+            console.log("document_scrollTop : " + $(document).scrollTop());
+            console.log("document.height : " + $(document).height());
+            console.log("window.height : " + $(window).height());
             console.log("class : " + $(event.target).attr('class'));
             console.log("id : " + event.target.id);
         });
     });
-});*/
+});
 /*$(document).on('keypress', function(e) {
     if (e.which == 13) {// 13 == enter key@ascii
         alert("you pressed enter key");
@@ -588,10 +588,35 @@ $(function ()
 /////////////////////////////////////////////////////////
 //      contents card hover overlay view end
 /////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+//      contents view con_right sticky start
+/////////////////////////////////////////////////////////
 
+$(document).scroll(function ()
+{
+    if($(document).find(".con_right"))
+    {
+        if ($(document).scrollTop() > 184) {
+            $(".con_right").css({ "position": "fixed", "top": "100px" });
+            $("#floating_bt").css({ "position": "fixed", "top": "100px" });
+        }
+        else {
+            $(".con_right").css({ "position": "absolute", "top": "0" });
+            $("#floating_bt").css({ "position": "absolute", "top": "0"});
+        };
+    }
+    else{
+        return true;
+    }; 
+});
+/////////////////////////////////////////////////////////
+//      contents view con_right sticky end
+/////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////
 //      contents card bookmark toggle start
 /////////////////////////////////////////////////////////
+
+
 $(function(){
     var toggle_count = 0;
     $(document).on('click', ".bookmark_bt,#bookmark_inner_bt", function(){
@@ -644,28 +669,6 @@ $(function () {
 /////////////////////////////////////////////////////////
 $(function ()
 {
-    $(document).on('click','.load_view',function ()
-    {
-        $.ajax({
-            type: "POST",
-            url: "php/ajax/contents_view.php", //이페이지에서 중복체크를 한다
-            //data: "id=" + id,//test.asp에 id 값을 보낸다
-            cache: false,
-            success: function (data) {
-                $('#bodyer').hide().append(data).fadeIn(300); //해당 내용을 보여준다
-                $('.dark_overlay').fadeIn(300);
-            }
-        });
-    });
-    
-    $(document).on("click",".dark_overlay",function(){
-        $(".dark_overlay").stop().fadeOut(300);
-        $("#pop_up").stop().fadeOut(300).queue(function(){
-            $("#pop_up").remove();
-        })
-    });
-    
-
     $(document).on("click",".bookmark_bt,#bookmark_inner_bt",function(){
         if($(this).css("color") != "rgb(193, 193, 193)"){
             console.log("success");
@@ -1151,25 +1154,24 @@ $(function form_check (fo)
 /////////////////////////////////////////////////////////
 /*-----------------------------subnav sticky start---------------------------*/
 $(document).scroll(function ()
+{
+    if($(document).find("#nav_guide"))
     {
-        if($(document).find("#nav_guide"))
-        {
-            if ($(document).scrollTop() > 184) {
-                $("#nav_guide").css({ "position": "fixed", "top": "50px", "z-index": "2" })
-                $("#nav_guide").next().css({"top": "50px"});
-                $("#nav_guide").next().next().css({"top": "50px"});
-            }
-            else {
-                $("#nav_guide").css({ "position": "relative", "top": "0px" });
-                $("#nav_guide").next().css({"top": "0px"});
-                $("#nav_guide").next().next().css({"top": "0px"});
-            }  
+        if ($(document).scrollTop() > 184) {
+            $("#nav_guide").css({ "position": "fixed", "top": "50px", "z-index": "2" })
+            $("#nav_guide").next().css({"top": "50px"});
+            $("#nav_guide").next().next().css({"top": "50px"});
         }
-        else{
-            return true;
-        }
-        
-    });
+        else {
+            $("#nav_guide").css({ "position": "relative", "top": "0px" });
+            $("#nav_guide").next().css({"top": "0px"});
+            $("#nav_guide").next().next().css({"top": "0px"});
+        }  
+    }
+    else{
+        return true;
+    }  
+});
 /*------------------------------subnav sticky end----------------------------*/
 $(function () {
     $(".contents_bt").each(function(){
