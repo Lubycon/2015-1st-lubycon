@@ -1186,12 +1186,12 @@ h1 /* main logo */ {
     background: #333333;
     margin-top: 2px;
     box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.5);
-    overflow-y: scroll;
     padding: 5px;
 }
     #category_list{
         min-width: 226px;
         max-height: 300px;
+        overflow-y: scroll;
     }
 
 

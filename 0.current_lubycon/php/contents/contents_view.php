@@ -86,9 +86,19 @@
                         <div id="bookmark"><i id="bookmark_inner_bt" class="fa fa-star"></i></div>
                         <div id="con_like_bt"><i class="fa fa-heart"></i></div>
                     </div>
-                    <figure class="contents_img">
-                        <img class="inner_img" src="ch/img/contents/contents.jpg" />
-                    </figure>
+                    <?php 
+                        $current_url = $_GET["3"];
+                        if($current_url=="3d"){
+                            echo 
+                            "<iframe id='webgl_viewer' name='webgl' src='webGL/file_viewer/viewer.html' frameborder='0' marginwidth='0' marginheight='0' scrolling='no' style='margin-bottom:-5px'>
+                   </iframe>";
+                        }
+                        else{
+                            echo "<figure class='contents_img'>
+                                    <img class='inner_img' src='ch/img/contents/contents.jpg' />
+                                </figure>";
+                        };
+                    ?>
                     
                     <article id="comment_box">
                         <div id="comment_writer">
