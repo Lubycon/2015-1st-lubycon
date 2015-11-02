@@ -64,7 +64,7 @@ function running() {
 	renderer = new THREE.WebGLRenderer();
 	renderer.setPixelRatio(window.devicePixelRatio);//pixel ratio setting
 	renderer.setSize(window.innerWidth, window.innerHeight);
-	renderer.setClearColor(0x222222, 1);//background color
+	renderer.setClearColor(0x262626, 1);//background color
 	gl.appendChild(renderer.domElement);
 
 	controls = new THREE.OrbitControls(camera);//mouse control on

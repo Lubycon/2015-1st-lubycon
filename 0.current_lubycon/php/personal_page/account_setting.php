@@ -42,7 +42,10 @@
         <section id="basic_info_section" class="setting_card">
             <p class="setting_title">Basic Info</p>
             <form class="setting_form">
-                <label>Profile Photo</label><input type="text" id="file_text" readonly /><span id="file_bt">Find the file</span><input type="file" id="file_hide" accept="image/*" />
+                <label>Profile Photo</label>
+                <input type="text" id="file_text" disabled="disabled" />
+                <span id="file_bt">Find the file</span>
+                <input type="file" id="file_hide" accept="image/*" />
                 <br />
                 <img id="img_preview" />
                 <label>Occupation / Job</label>

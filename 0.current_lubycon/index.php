@@ -4,6 +4,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Pragma" content="no-cache" />
     <meta name="subject" content="Lubycon" />
     <meta name="description" content="free sources" />
     <meta name="author" content="Daniel ZEPOT" />

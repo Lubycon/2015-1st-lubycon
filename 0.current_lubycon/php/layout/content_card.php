@@ -28,11 +28,13 @@
         </div>
         <!-- end contents disc -->
         <div class="contents_overlay load_view">
-            <?php $current_url = $_GET["3"];
+            <?php 
+                $current_url = $_GET["3"];
                 switch($current_url){
                     case "artwork" : echo "<a href='./index.php?1=contents&2=contents_view&3=artwork'>"; break;
                     case "vector" : echo "<a href='./index.php?1=contents&2=contents_view&3=vector'>"; break;
                     case "3d" : echo "<a href='./index.php?1=contents&2=contents_view&3=3d'>"; break;
+                    default : echo "<a href='./index.php?1=contents&2=contents_view'>"; break;
                 };
             ?>
                 <i class="fa fa-search-plus"></i>

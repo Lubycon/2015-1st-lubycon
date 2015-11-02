@@ -2,7 +2,7 @@
 /////////////////////////////////////////////////////////
 //      debuging tool start
 /////////////////////////////////////////////////////////
-$(document).ready(function(){
+/*$(document).ready(function(){
     $(function(){//property check
         $(window).click(function(e){
             console.log("------------------------------------------------------------------------")
@@ -13,7 +13,7 @@ $(document).ready(function(){
             console.log("id : " + event.target.id);
         });
     });
-});
+});*/
 /*$(document).on('keypress', function(e) {
     if (e.which == 13) {// 13 == enter key@ascii
         alert("you pressed enter key");
@@ -667,13 +667,13 @@ $(function () {
 /////////////////////////////////////////////////////////
 //      contents view load ajax start
 /////////////////////////////////////////////////////////
-$(function ()
-{
+$(function (){
     $(document).on("click",".bookmark_bt,#bookmark_inner_bt",function(){
         if($(this).css("color") != "rgb(193, 193, 193)"){
             console.log("success");
             $("#bookmark_alert").css('display','inline-block');
             $("#bookmark_alert").attr("class","luby_alert fadeIn animated");
+            $("#star_icon").attr("class","fa fa-star bounce animated");
             setTimeout("hideAlert()",1500);
             return false; 
         }
@@ -685,6 +685,7 @@ $(function ()
 });
 function hideAlert(){
     $("#bookmark_alert").attr("class","luby_alert fadeOut animated");
+    $("#star_icon").attr("class","fa fa-star");
     $("#bookmark_alert").stop().fadeOut(1000);
 };
 
