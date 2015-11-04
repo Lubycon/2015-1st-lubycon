@@ -665,7 +665,7 @@ $(function () {
 /////////////////////////////////////////////////////////
 
 /////////////////////////////////////////////////////////
-//      contents view load ajax start
+//      alert event start
 /////////////////////////////////////////////////////////
 $(function (){
     $(document).on("click",".bookmark_bt,#bookmark_inner_bt",function(){
@@ -680,17 +680,42 @@ $(function (){
         else{
             return true;
         };
-    });//bookmark alert
-    
+    });//bookmark alert   
 });
+//like alert start
+$(function(){
+    $(document).on("click",".like_bt,.like_bt_active",function(){
+        if($(this).hasClass("like_bt")){
+            console.log("like!");
+            $(this).attr("class","like_bt_active");
+            $("#like_alert").css('display','inline-block');
+            $("#like_alert").attr("class","luby_alert fadeIn animated");
+            setTimeout("hideAlert2()",1500);
+        }
+        else if($(this).hasClass("like_bt_active")){
+            console.log("unlike");
+            $(this).attr("class","like_bt");
+        }
+        else{
+            return true;
+        };//if end
+    });//on end
+});//function end
+
+//like alert end
+
 function hideAlert(){
     $("#bookmark_alert").attr("class","luby_alert fadeOut animated");
     $("#star_icon").attr("class","fa fa-star");
     $("#bookmark_alert").stop().fadeOut(1000);
 };
+function hideAlert2(){
+    $("#like_alert").attr("class","luby_alert fadeOut animated");
+    $("#like_alert").stop().fadeOut(1000);
+};
 
 /////////////////////////////////////////////////////////
-//      contents view load ajax end
+//      alert event end
 /////////////////////////////////////////////////////////
 /*----------------------------contents page----------------------------*/
 

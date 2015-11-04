@@ -84,7 +84,7 @@
                 <div class="con_left">
                     <div id="floating_bt">
                         <div id="bookmark"><i id="bookmark_inner_bt" class="fa fa-star"></i></div>
-                        <div id="con_like_bt"><i class="fa fa-heart"></i></div>
+                        <div id="con_like_bt" class="like_bt"><i class="fa fa-heart"></i></div>
                     </div>
                     <?php 
                         $current_url = $_GET["3"];
