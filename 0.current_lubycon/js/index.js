@@ -615,23 +615,25 @@ $(document).scroll(function ()
 /////////////////////////////////////////////////////////
 //      contents card bookmark toggle start
 /////////////////////////////////////////////////////////
-
-
 $(function(){
-    var toggle_count = 0;
-    $(document).on('click', ".bookmark_bt,#bookmark_inner_bt", function(){
-        switch (toggle_count){
-            case 0:
+    $(".bookmark_bt,#bookmark_inner_bt").each(function(){
+        var bookmark_count = 0;
+        $(this).click(function(){
+            switch(bookmark_count){
+                case 0:
                 $(this).css('color', '#ffbe54');
-                toggle_count = 1;
+                bookmark_count = 1;
+                console.log(bookmark_count);
                 break;
 
             case 1:
                 $(this).css('color', '#c1c1c1');
-                toggle_count = 0;
+                bookmark_count = 0;
+                console.log(bookmark_count);
                 break;
-        }
-    });
+            }//switch end
+        });//click end
+    });//each end
 });
 /////////////////////////////////////////////////////////
 //      contents card bookmark toggle end
