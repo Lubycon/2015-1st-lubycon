@@ -20,12 +20,14 @@ $(function () {
     $(document).scroll(function () //community view banner
     {
         if($(document).find("#post_banner")){
-            if ($(document).scrollTop() > 279 && $(document).scrollTop() < $('#comment_more_box').offset().top - 430) {
-                $('#post_banner').css({ "position": "fixed", "top": "100px" });
-            } else if ($(document).scrollTop() < 349) {
-                $('#post_banner').css({ "position": "absolute", "top": "0" + "px" });
-            } else if ($(document).scrollTop() > $('#comment_more_box').offset().top - 570) {
-                $('#post_banner').css({ "position": "absolute", "top": $('#comment_more_box').offset().top - 730 + "px" });
+            if ($(document).scrollTop() > 254 && $(document).scrollTop() < $('#comment_box').offset().top-403) {
+                $('#post_banner').css({ "position": "fixed", "top": "106px" });
+            } else if($(document).scrollTop() < 304) {
+                console.log("if2");
+                $('#post_banner').css({ "position": "absolute", "top": "0px" });
+            } else if ($(document).scrollTop() >= $("#post_contents").height()-$("post_banner").height()-245) {
+                console.log("if3");
+                $('#post_banner').css({ "position": "absolute", "top": $('#comment_box').offset().top - 758 + "px" });
             };
         }
         else{

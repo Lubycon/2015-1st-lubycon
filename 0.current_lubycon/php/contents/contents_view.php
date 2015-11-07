@@ -117,6 +117,9 @@
                                 };
                             ?>
                         </div><!--end comment_list-->
+                        <div id="comment_more_box">
+                            <button id="comment_more_bt"><i class="fa fa-angle-down"></i></button>
+                        </div>
                     </article>
                 </div><!--end con_left-->
 

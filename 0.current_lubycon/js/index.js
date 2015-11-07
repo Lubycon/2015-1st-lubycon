@@ -2,7 +2,7 @@
 /////////////////////////////////////////////////////////
 //      debuging tool start
 /////////////////////////////////////////////////////////
-/*$(document).ready(function(){
+$(document).ready(function(){
     $(function(){//property check
         $(window).click(function(e){
             console.log("------------------------------------------------------------------------")
@@ -13,7 +13,7 @@
             console.log("id : " + event.target.id);
         });
     });
-});*/
+});
 /*$(document).on('keypress', function(e) {
     if (e.which == 13) {// 13 == enter key@ascii
         alert("you pressed enter key");
