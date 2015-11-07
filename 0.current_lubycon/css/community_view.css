@@ -156,25 +156,7 @@
         font-weight: 200;
     }
 
-#con_like_bt {
-    width: 80px;
-    height: 80px;
-    border: none;
-    border-radius: 50%;
-    background: #c1c1c1;
-    display: block;
-    margin: 0px auto;
-    margin-top: 50px;
-}
-    #con_like_bt:active{
-        background:#ec6446;
-    }
-    #con_like_bt i {
-        color: #fff;
-        font-size: 32px;
-        vertical-align: middle;
-        margin-top: 5px;
-    }
+
 
 #share_box {
     display: block;

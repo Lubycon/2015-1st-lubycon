@@ -68,7 +68,7 @@
                                     Nunc porttitor mauris sapien, quis molestie quam placerat sit amet.
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 </p>
-                <button id="con_like_bt"><i class="fa fa-heart"></i></button>
+                <div class="like_bt"><i class="fa fa-heart"></i></div>
                 <div id="share_box">
                     <button id="share_face"><i class="fa fa-facebook"></i></button>
                     <button id="share_google"><i class="fa fa-google-plus"></i></button>

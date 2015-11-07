@@ -615,23 +615,25 @@ $(document).scroll(function ()
 /////////////////////////////////////////////////////////
 //      contents card bookmark toggle start
 /////////////////////////////////////////////////////////
-
-
 $(function(){
-    var toggle_count = 0;
-    $(document).on('click', ".bookmark_bt,#bookmark_inner_bt", function(){
-        switch (toggle_count){
-            case 0:
+    $(".bookmark_bt,#bookmark_inner_bt").each(function(){
+        var bookmark_count = 0;
+        $(this).click(function(){
+            switch(bookmark_count){
+                case 0:
                 $(this).css('color', '#ffbe54');
-                toggle_count = 1;
+                bookmark_count = 1;
+                console.log(bookmark_count);
                 break;
 
             case 1:
                 $(this).css('color', '#c1c1c1');
-                toggle_count = 0;
+                bookmark_count = 0;
+                console.log(bookmark_count);
                 break;
-        }
-    });
+            }//switch end
+        });//click end
+    });//each end
 });
 /////////////////////////////////////////////////////////
 //      contents card bookmark toggle end
@@ -665,7 +667,7 @@ $(function () {
 /////////////////////////////////////////////////////////
 
 /////////////////////////////////////////////////////////
-//      contents view load ajax start
+//      alert event start
 /////////////////////////////////////////////////////////
 $(function (){
     $(document).on("click",".bookmark_bt,#bookmark_inner_bt",function(){
@@ -680,17 +682,42 @@ $(function (){
         else{
             return true;
         };
-    });//bookmark alert
-    
+    });//bookmark alert   
 });
+//like alert start
+$(function(){
+    $(document).on("click",".like_bt,.like_bt_active",function(){
+        if($(this).hasClass("like_bt")){
+            console.log("like!");
+            $(this).attr("class","like_bt_active");
+            $("#like_alert").css('display','inline-block');
+            $("#like_alert").attr("class","luby_alert fadeIn animated");
+            setTimeout("hideAlert2()",1500);
+        }
+        else if($(this).hasClass("like_bt_active")){
+            console.log("unlike");
+            $(this).attr("class","like_bt");
+        }
+        else{
+            return true;
+        };//if end
+    });//on end
+});//function end
+
+//like alert end
+
 function hideAlert(){
     $("#bookmark_alert").attr("class","luby_alert fadeOut animated");
     $("#star_icon").attr("class","fa fa-star");
     $("#bookmark_alert").stop().fadeOut(1000);
 };
+function hideAlert2(){
+    $("#like_alert").attr("class","luby_alert fadeOut animated");
+    $("#like_alert").stop().fadeOut(1000);
+};
 
 /////////////////////////////////////////////////////////
-//      contents view load ajax end
+//      alert event end
 /////////////////////////////////////////////////////////
 /*----------------------------contents page----------------------------*/
 

@@ -1728,6 +1728,11 @@ h1 /* main logo */ {
         display: none;
         cursor: pointer;
     }
+        .contents_overlay a{
+            position: absolute;
+            width: 100%;
+            z-index:2;
+        }
         .contents_overlay .fa-search-plus{
             color:#ffffff;
             display: block;
@@ -1819,6 +1824,43 @@ h1 /* main logo */ {
             float:right;
             cursor: pointer;
         }
+.like_bt {
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    border: none;
+    border-radius: 50%;
+    background: #c1c1c1;
+    display: block;
+    margin: 0px auto;
+    margin-top: 50px;
+    text-align: center;
+    cursor:pointer;
+}
+    .like_bt i {
+        color: #fff;
+        font-size: 32px;
+        vertical-align: middle;
+    }
+.like_bt_active{
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    border: none;
+    border-radius: 50%;
+    background: #ec6446;
+    display: block;
+    margin: 0px auto;
+    margin-top: 50px;
+    text-align: center;
+    cursor:pointer;
+}
+    .like_bt_active i{
+        color:#fff;
+        font-size: 32px;
+        vertical-align: middle;
+    }
+    
 /* contents card */
 
 #footer {
