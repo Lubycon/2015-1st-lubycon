@@ -17,7 +17,7 @@
                     $username = "Admin_User";
                     $like_num = 0;
                     $view_num = 0;
-                    $content_date = "00.00.00";
+                    $content_date = "00.00.00";//yy.mm.dd
 
                     for($i=20; $i>=1; $i--)
                     {
