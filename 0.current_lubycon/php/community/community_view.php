@@ -59,7 +59,7 @@
     </section>  <!-- end nav_guide -->
     <section id="post_writer_box">
         <div id="post_writer_box_inner">
-            <p class="post_writer_date"><?=$year?>.<?=$Nov?>.<?=$day?> <?=$hour?>:<?=$second?></p>
+            <p class="post_writer_date"><?=$year?>.<?=$month?>.<?=$day?> <?=$hour?>:<?=$second?></p>
             <ul>
                 <li><i class="fa fa-heart"></i><?=$post_like?></li>
                 <li><i class="fa fa-eye"></i><?=$post_view?></li>
@@ -83,8 +83,29 @@
                     <button class="out">Modified</button>
                 </div>
             </article>  <!-- end post_contents -->
+            <article id="comment_box">
+                <div id="comment_writer">
+                    <div id="comment_text_box">
+                        <textarea id="comment_text">hello world</textarea>
+                        <button id="comment_bt">
+                            <i class="fa fa-comments"></i>
+                        </button>
+                    </div>
+                </div>
+                <div id="comment_list">
+                    <p id="comment_count"><span class="comment_counter">12</span> Comments</p>
+                    <?php
+                        for($i=1; $i<=10; $i++){
+                            include("php/layout/comment.php");
+                        };
+                    ?>
+                </div><!--end comment_list-->
+                <div id="comment_more_box">
+                    <button id="comment_more_bt"><i class="fa fa-angle-down"></i></button>
+                </div>
+            </article><!-- end comment_box -->
         </section>  <!-- end post_section -->
-         <aside id="post_banner">
+        <aside id="post_banner">
             <div id="profile_pic">
                 <figure id="img_mask">
                     <img src="ch/img/no_img/no_img_user1.jpg">
@@ -95,29 +116,6 @@
             <h6><i class="fa fa-home"></i><?=$usercity?>, <?=$usercountry?></h6>
             <button id="designer_follow"><i class="fa fa-user-plus"></i></button>
         </aside>    <!-- end post_banner -->
-
-        <article id="comment_box">
-            <div id="comment_writer">
-                <div id="comment_text_box">
-                    <textarea id="comment_text">hello world</textarea>
-                    <button id="comment_bt">
-                        <i class="fa fa-comments"></i>
-                    </button>
-                </div>
-            </div>
-            <div id="comment_list">
-                <p id="comment_count"><span class="comment_counter">12</span> Comments</p>
-                <?php
-                    for($i=1; $i<=10; $i++){
-                        include("php/layout/comment.php");
-                    };
-                ?>
-            </div><!--end comment_list-->
-            <div id="comment_more_box">
-                <button id="comment_more_bt"><i class="fa fa-angle-down"></i></button>
-            </div>
-        </article><!-- end comment_box -->
-
     </section>  <!-- end post_box -->
     <?php
         include("main_board.php");

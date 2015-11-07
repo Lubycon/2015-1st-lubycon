@@ -1186,7 +1186,7 @@ $(document).scroll(function ()
     if($(document).find("#nav_guide"))
     {
         if ($(document).scrollTop() > 184) {
-            $("#nav_guide").css({ "position": "fixed", "top": "50px", "z-index": "2" })
+            $("#nav_guide").css({ "position": "fixed", "top": "50px", "z-index": "2" });
             $("#nav_guide").next().css({"top": "50px"});
             $("#nav_guide").next().next().css({"top": "50px"});
         }

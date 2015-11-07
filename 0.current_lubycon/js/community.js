@@ -17,25 +17,21 @@ $(function () {
         
     });
 
-    $(document).scroll(function () //community view banner
+    $(document).scroll(function ()
     {
-        if($(document).find("#post_banner")){
-            if ($(document).scrollTop() > 254 && $(document).scrollTop() < $('#comment_box').offset().top-403) {
-                $('#post_banner').css({ "position": "fixed", "top": "106px" });
-            } else if($(document).scrollTop() < 304) {
-                console.log("if2");
-                $('#post_banner').css({ "position": "absolute", "top": "0px" });
-            } else if ($(document).scrollTop() >= $("#post_contents").height()-$("post_banner").height()-245) {
-                console.log("if3");
-                $('#post_banner').css({ "position": "absolute", "top": $('#comment_box').offset().top - 758 + "px" });
+        if($(document).find("#post_banner"))
+        {
+            if ($(document).scrollTop() > 184) {
+                $("#post_banner").css({ "position": "fixed", "top": "100px" });
+            }
+            else {
+                $("#post_banner").css({ "position": "absolute", "top": "0" });
             };
         }
         else{
-            console.log("");
             return true;
-        }
-        //console.log($('#comment_more_box').offset().top - 757);       
-    });    
+        }; 
+    });   
 });
 /*--------------------------------community editor start-------------------------------*/
 $(function(){

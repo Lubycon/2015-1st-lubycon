@@ -25,11 +25,11 @@
     line-height:30px;
     background: #e6e6e6;
     text-align: center;
-    margin-bottom: 45px;
     box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.5);
 }
     #post_writer_box_inner{
-        width:1200px;
+        width: 100%;
+        min-width:1200px;
         position:relative;
         margin:0px auto;
         overflow:hidden;
@@ -42,6 +42,7 @@
             position:absolute;
             right:0px;
             top:0px;
+            margin-right: 5px;
             
         }
             #post_writer_box ul li {
@@ -63,14 +64,15 @@
 
 #post_section {
     width: 100%;
+    padding-right:310px;
 }
 
 #post_contents {
-    width: 958px;
+    width: 100%;
+    min-width: 960px;
     margin: 0px auto;
     border: 1px solid #cccccc;
-    padding: 20px;
-    padding-left: 200px;
+    padding: 30px 330px 20px 25px;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -143,8 +145,8 @@
 
 
 #comment_box{
-    margin-top: 45px;
     position: relative;
+    padding-right: 310px;
 }
 #comment_box #comment_writer{
     text-align: center;
@@ -267,12 +269,12 @@
     position:absolute;
 
     width: 310px;
+    height: 100%;
     top: 0px;
     right: 0px;
 
     border:1px solid #cccccc;
-    background:#ffffff;
-    padding:15px 10px;   
+    background:#ffffff;  
     text-align:center;
 
     box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.2);
@@ -281,23 +283,14 @@
 
 #profile_pic
 {
-    width:177px;
-    height:143px;
-
-    border-bottom: 10px solid #48cfad;
-
-    margin-top:-15px;
-    margin-left:-10px;
-    padding-top:25px;
-    padding-bottom: 17px;
+    width:100%;
+    margin-top: 15px;
 }
     #img_mask
     {
-        width:130px;
-        height: 130px;
+        width:80px;
+        height: 80px;
         margin: 0px auto;
-        
-        border: 3px solid #48cfad;
         border-radius: 50%;
         overflow: hidden;
     }
@@ -305,19 +298,22 @@
             width: 100%;
         }
     #post_banner h4{
-        font-size:22px;
+        font-size:24px;
         margin-top:3px;
-        color:#333333;
+        color:#555555;
+        font-weight: 200;
     }
     #post_banner h5{
-        font-size:16px;
-        color:#333333;
-        margin-top: 5px;
+        font-size:15px;
+        font-weight: 200;
+        color:#555555;
+        text-align: center;
     }
     #post_banner h6{
-        font-size:14px;
-        margin-top:10px;
-        color:#777777;
+        font-size:15px;
+        font-weight: 200;
+        color:#555555;
+        text-align: center;
     }
         #post_banner h6 i{
             color:#777777;
