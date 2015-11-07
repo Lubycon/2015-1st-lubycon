@@ -289,11 +289,14 @@ $(document).ready(function(){
             cache: false,
             data: form_data,//user_id, user_pw, is_ajax
             success: function(response) {
-                if(response == true) {
-                    console.log("true!");
-                }
-                else {
-                    console.log("false!");   
+                console.log(response);
+                if(response==="true"){
+                    $('#after_signin').show();
+                    $('#addcontent_bt').show();
+                    $('#signin_bt').hide();
+
+                }else{
+                    alert('fuck');
                 }
             },
             error: function(response) {
