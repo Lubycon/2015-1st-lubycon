@@ -4,7 +4,7 @@ $(function () {
         if($(document).find('#post_subject_area'))
         {
             if ($(document).scrollTop() > 206) {
-                $('#post_subject_area').css({ "position": "fixed", "top": "50px", "z-index": "2" })
+                $('#post_subject_area').css({ "position": "fixed", "top": "50px", "z-index": "2" });
             }
             else {
                 $('#post_subject_area').css({ "position": "absolute", "top": "50px" });
@@ -19,9 +19,11 @@ $(function () {
 
     $(document).scroll(function ()
     {
+        var scrollend = $("#post_box").height() + 30 - $("#post_banner").height();
         if($(document).find("#post_banner"))
-        {
-            if ($(document).scrollTop() > 184) {
+        { 
+            console.log(scrollend);
+            if ($(document).scrollTop() > 214 && $(document).scrollTop() < 1152) {//변수로 바꿔야
                 $("#post_banner").css({ "position": "fixed", "top": "100px" });
             }
             else {

@@ -74,10 +74,6 @@
                     <?=$post_content?>
                 </p>
                 <div class="like_bt"><i class="fa fa-heart"></i></div>
-                <div id="share_box">
-                    <button id="share_face"><i class="fa fa-facebook"></i></button>
-                    <button id="share_google"><i class="fa fa-google-plus"></i></button>
-                </div>
                 <div id="post_edit_box">
                     <button class="out">Delete</button>
                     <button class="out">Modified</button>
@@ -115,6 +111,10 @@
             <h5 class="designer_job"><?=$userjob?></h5>
             <h6><i class="fa fa-home"></i><?=$usercity?>, <?=$usercountry?></h6>
             <button id="designer_follow"><i class="fa fa-user-plus"></i></button>
+            <div id="share_box">
+                <button id="share_face"><i class="fa fa-facebook"></i></button>
+                <button id="share_google"><i class="fa fa-google-plus"></i></button>
+            </div>
         </aside>    <!-- end post_banner -->
     </section>  <!-- end post_box -->
     <?php
