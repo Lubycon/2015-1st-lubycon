@@ -125,7 +125,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ajax", "ajax", "{A5A8174F-E
 	ProjectSection(SolutionItems) = preProject
 		php\ajax\contents_view.php = php\ajax\contents_view.php
 		php\ajax\create_account_popup.php = php\ajax\create_account_popup.php
+		php\ajax\Database.php = php\ajax\Database.php
 		php\ajax\editor_ajax.php = php\ajax\editor_ajax.php
+		php\ajax\overlap_check.php = php\ajax\overlap_check.php
 		php\ajax\subnav.php = php\ajax\subnav.php
 		php\ajax\upload_img.php = php\ajax\upload_img.php
 	EndProjectSection

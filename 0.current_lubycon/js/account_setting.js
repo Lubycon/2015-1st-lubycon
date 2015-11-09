@@ -73,7 +73,7 @@ $(function () //account setting script
     });
     
 
-
+    /* 안씀
     $('#pass ,#repeat_pass, #repeat_pass_again').blur(function () //change pass border color
     {
 
@@ -121,7 +121,7 @@ $(function () //account setting script
         });
 
     });
-
+    */
 
 
     $('#lang_plus').click(function () //clone language div and change id

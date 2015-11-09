@@ -736,78 +736,78 @@ $(function form_check (fo)
     /////////////////////////////////////////////////////////
     //      e-mail check start
     /////////////////////////////////////////////////////////
-
+    
     var email_com;
+    $(document).on("keydown keyup click blur ready change", function ()
+    {
+        $('#email_id').on("keydown keyup click blur ready change", function () 
+        {
+            var current_id = '#' + $(this).attr('id');
+            var value = $(this).val();
+        if ($(this).val() == '') { //blank
+                $(this).css({ 'border-left': '2px solid #D5D5D5', 'width': '190px' });
+                $(this).next().removeClass();
 
-    $('#email_id').on("keydown keyup click blur ready change", function () 
-    { 
-        var current_id = '#' + $(this).attr('id');
-        var value = $(this).val();
-    if ($(this).val() == '') { //blank
-            $(this).css({ 'border-left': '2px solid #D5D5D5', 'width': '190px' });
+                $('#email_check').text('').show();
+                email_com = false;
+        } else if (regex.test($(this).val()) === false) {
+
+            $(this).css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
             $(this).next().removeClass();
+            $(this).next().addClass('fa fa-times');
 
-            $('#email_check').text('').show();
+            $('#email_check').text('wrong email adress').show();
+            email_com = false
+        } 
+        else { //complite
 
-            email_com = false;
-    } else if (regex.test($(this).val()) === false) {
+            //enter to AJAX Logic by SsaRu
+            $.ajax({
+                type:"POST",
+                url:"php/ajax/overlap_check.php",
+                data:'data='+ value +'&'+ 'id=email',
+                cache: false,
+                success: function(data)
+                {
+                    if(data == ''){ //void value
+                        console.log('DB return value empty');
+                        console.log(data);
+                        $(current_id).css({ 'border-left': '2px solid #D5D5D5', 'width': '190px' });
+                        $(current_id).next().removeClass();
+                        $('#email_check').text('').show();
+                        email_com = false;
+                    }
+                    else if(data == 1){ //overlapping
+                        console.log('DB return value overlapping');
+                        console.log(data);
+                        $(current_id).css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
+                        $(current_id).next().removeClass();
+                        $(current_id).next().addClass('fa fa-times');
 
-        $(this).css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
-        $(this).next().removeClass();
-        $(this).next().addClass('fa fa-times');
+                        $('#email_check').text('Overlapping').show();
+                        email_com = false;
+                    }
+                    else if(data == 0){ //Non-overlapping
+                        console.log('DB return value non-overlapping');
+                        console.log(data);
+                        $(current_id).css({ 'border-left': '5px solid #8ec89a', 'width': '187px' });
+                        $(current_id).next().removeClass();
+                        $(current_id).next().addClass('fa fa-check');
+                        $(current_id).val($(current_id).val().toLowerCase()); // lowercase and uppercase same
+                        $('#email_check').text('').show();
 
-        $('#email_check').text('wrong email adress').show();
+                        email_com = true;
+                    }
+                    else{
+                        console.log("return value error");
+                        console.log(data);
 
-        email_com = false
-    } 
-    else { //complite
-
-        //enter to AJAX Logic by SsaRu
-        $.ajax({
-            type:"POST",
-            url:"./php/overlap_check.php",
-            data:'data='+ value +'&'+ 'id=email',
-            cache: false,
-            success: function(data)
-            {
-                if(data == ''){ //void value
-                    console.log('DB return value empty');
-                    console.log(data);
-                    $(current_id).css({ 'border-left': '2px solid #D5D5D5', 'width': '190px' });
-                    $(current_id).next().removeClass();
-                    $('#email_check').text('').show();
-                    email_com = false;
+                        email_com = false;
+                    }
                 }
-                else if(data == 1){ //overlapping
-                    console.log('DB return value overlapping');
-                    console.log(data);
-                    $(current_id).css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
-                    $(current_id).next().removeClass();
-                    $(current_id).next().addClass('fa fa-times');
-
-                    $('#email_check').text('Overlapping').show();
-                    email_com = false;
-                }
-                else if(data == 0){ //Non-overlapping
-                    console.log('DB return value non-overlapping');
-                    console.log(data);
-                    $(current_id).css({ 'border-left': '5px solid #8ec89a', 'width': '187px' });
-                    $(current_id).next().removeClass();
-                    $(current_id).next().addClass('fa fa-check');
-                    $(current_id).val($(current_id).val().toLowerCase()); // lowercase and uppercase same
-                    $('#email_check').text('').show();
-
-                    email_com = true;
-                }
-                else{
-                    console.log("return value error");
-                    console.log(data);
-
-                    email_com = false;
-                }
-            }
-        })
-    }
+            })
+        }
+        });
     });
     /////////////////////////////////////////////////////////
     //      e-mail check end
@@ -821,26 +821,25 @@ $(function form_check (fo)
     /////////////////////////////////////////////////////////
     //      password check end
     /////////////////////////////////////////////////////////
+    $(document).on("keydown keyup click blur ready change", function () {
+        $('#pass_id').on("keydown keyup click blur ready change", function () {
+            //console.log($(this).val().match('null') == null == false)
+            //console.log(regx.test($(this).val()));
+            if ($(this).val() == '') { //blank
+                $(this).css({ 'border-left': '2px solid #D5D5D5', 'width': '190px' });
+                $(this).next().removeClass();
 
-    $('#pass_id').on("keydown keyup click blur ready change", function () 
-    {
-        //console.log($(this).val().match('null') == null == false)
-        //console.log(regx.test($(this).val()));
-        if ($(this).val() == '') { //blank
-            $(this).css({ 'border-left': '2px solid #D5D5D5', 'width': '190px' });
-            $(this).next().removeClass();
+                $('#pass_check').text('').show();
 
-            $('#pass_check').text('').show();
+            } else if ($(this).val().match(/[^0-9]/g) == null) //문자한개필요
+            {
+                $(this).css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
+                $(this).next().removeClass();
+                $(this).next().addClass('fa fa-times');
 
-        } else if ($(this).val().match(/[^0-9]/g) == null) //문자한개필요
-        {
-            $(this).css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
-            $(this).next().removeClass();
-            $(this).next().addClass('fa fa-times');
+                $('#pass_check').text('you must use least one alpabet').show();
 
-            $('#pass_check').text('you must use least one alpabet').show();
-
-        } /*else if ($(this).val().match(regx)) //특수문자 불가
+            } /*else if ($(this).val().match(regx)) //특수문자 불가
         {
             $(this).css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
             $(this).next().removeClass();
@@ -882,8 +881,7 @@ $(function form_check (fo)
 
             console.log($(this).val());
 
-            if ($(this).val() == $('#re_pass_id').val())
-            {
+            if ($(this).val() == $('#re_pass_id').val()) {
                 $('#re_pass_id').css({ 'border-left': '5px solid #8ec89a', 'width': '187px' });
                 $('#re_pass_id').next().removeClass();
                 $('#re_pass_id').next().addClass('fa fa-check');
@@ -893,58 +891,59 @@ $(function form_check (fo)
             };
         };
 
-        // Repeat 3 words
-        var val = $(this).val();
-        var ch = '';
-        var cnt = 0;
-        for (var i = 0 ; i < val.length ; i++) {
-            if (ch == val.charAt(i)) {
-                cnt++;
+            // Repeat 3 words
+            var val = $(this).val();
+            var ch = '';
+            var cnt = 0;
+            for (var i = 0 ; i < val.length ; i++) {
+                if (ch == val.charAt(i)) {
+                    cnt++;
 
-                if (cnt > 2) {
-                    $(this).css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
-                    $(this).next().removeClass();
-                    $(this).next().addClass('fa fa-times');
+                    if (cnt > 2) {
+                        $(this).css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
+                        $(this).next().removeClass();
+                        $(this).next().addClass('fa fa-times');
 
-                    $('#pass_check').text('Repeat 3 words').show();
-                    break;
+                        $('#pass_check').text('Repeat 3 words').show();
+                        break;
+                    }
                 }
+                else {
+                    ch = val.charAt(i);
+                    cnt = 1;
+                }
+            };
+        });
+        var pass_com;
+        $('#re_pass_id').on("keydown keyup click blur ready change", function () // repeat pass check
+        {
+            if ($(this).val() == '') { //blank
+                $(this).css({ 'border-left': '2px solid #D5D5D5', 'width': '190px' });
+                $(this).next().removeClass();
+
+                pass_com = false;
+
+                $('#pass_check').text('').show();
+            } else if ($(this).val() != $('#pass_id').val()) { //not same
+                $(this).css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
+                $(this).next().removeClass();
+                $(this).next().addClass('fa fa-times');
+
+                pass_com = false;
+
+                $('#re_pass_check').text('It`s not same').show();
+
+            } else if ($(this).val() == $('#pass_id').val()) { //complite
+                $(this).css({ 'border-left': '5px solid #8ec89a', 'width': '187px' });
+                $(this).next().removeClass();
+                $(this).next().addClass('fa fa-check');
+
+                $('#re_pass_check').text('').show();
+                pass_com = true;
+
             }
-            else {
-                ch = val.charAt(i);
-                cnt = 1;
-            }
-        };
-    });
-    var pass_com;
-    $('#re_pass_id').on("keydown keyup click blur ready change", function () // repeat pass check
-    {
-        if ($(this).val() == '') { //blank
-            $(this).css({ 'border-left': '2px solid #D5D5D5', 'width': '190px' });
-            $(this).next().removeClass();
 
-            pass_com = false;
-
-            $('#pass_check').text('').show();
-        }else if ($(this).val() != $('#pass_id').val()) { //not same
-            $(this).css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
-            $(this).next().removeClass();
-            $(this).next().addClass('fa fa-times');
-
-            pass_com = false;
-
-            $('#re_pass_check').text('It`s not same').show();
-
-        } else if ($(this).val() == $('#pass_id').val()) { //complite
-            $(this).css({ 'border-left': '5px solid #8ec89a', 'width': '187px' });
-            $(this).next().removeClass();
-            $(this).next().addClass('fa fa-check');
-
-            $('#re_pass_check').text('').show();
-            pass_com = true;
-
-        }
-        
+        });
     });
     /////////////////////////////////////////////////////////
     //      password check end
@@ -957,31 +956,33 @@ $(function form_check (fo)
     //      now pass check start
     /////////////////////////////////////////////////////////
     var now_pass_com;
-    $('#now_pass_id').on("keydown keyup click blur ready change", function () //account setting page now password check
-    {
-        if ($(this).val() == '') { //blank
-            $(this).css({ 'border-left': '2px solid #D5D5D5', 'width': '190px' });
-            $(this).next().removeClass();
+    $(document).on("keydown keyup click blur ready change", function () {
+        $('#now_pass_id').on("keydown keyup click blur ready change", function () //account setting page now password check
+        {
+            if ($(this).val() == '') { //blank
+                $(this).css({ 'border-left': '2px solid #D5D5D5', 'width': '190px' });
+                $(this).next().removeClass();
 
-            $('#now_pass_check').text('').show();
+                $('#now_pass_check').text('').show();
 
-            now_pass_com = false;
-        } else if ($(this).val() != 'idiotdart') { //not same
-            $(this).css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
-            $(this).next().removeClass();
-            $(this).next().addClass('fa fa-times');
+                now_pass_com = false;
+            } else if ($(this).val() != 'idiotdart') { //not same
+                $(this).css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
+                $(this).next().removeClass();
+                $(this).next().addClass('fa fa-times');
 
-            $('#now_pass_check').text('Wrong your password').show();
+                $('#now_pass_check').text('Wrong your password').show();
 
-            now_pass_com = false;
-        } else if ($(this).val() == 'idiotdart') { //complite
-            $(this).css({ 'border-left': '5px solid #8ec89a', 'width': '187px' });
-            $(this).next().removeClass();
-            $(this).next().addClass('fa fa-check');
+                now_pass_com = false;
+            } else if ($(this).val() == 'idiotdart') { //complite
+                $(this).css({ 'border-left': '5px solid #8ec89a', 'width': '187px' });
+                $(this).next().removeClass();
+                $(this).next().addClass('fa fa-check');
 
-            $('#now_pass_check').text('').show();
-            now_pass_com = true;
-        }
+                $('#now_pass_check').text('').show();
+                now_pass_com = true;
+            }
+        });
     });
     /////////////////////////////////////////////////////////
     //      now pass check end
@@ -997,103 +998,104 @@ $(function form_check (fo)
     /////////////////////////////////////////////////////////
 
     var nick_com;
-    $('#nick_id').on("keydown keyup click blur ready change", function () 
-    {
-        var value = $(this).val();
-        var current_id = '#' + $(this).attr('id');
-        //console.log(jQuery.inArray($('#nick_id').val(), nick_array));
-        if ($(this).val() == '') { //blank
-            $(this).css({ 'border-left': '2px solid #D5D5D5', 'width': '190px' });
-            $(this).next().removeClass();
+    $(document).on("keydown keyup click blur ready change", function () {
+        $('#nick_id').on("keydown keyup click blur ready change", function () {
+            var value = $(this).val();
+            var current_id = '#' + $(this).attr('id');
+            //console.log(jQuery.inArray($('#nick_id').val(), nick_array));
+            if ($(this).val() == '') { //blank
+                $(this).css({ 'border-left': '2px solid #D5D5D5', 'width': '190px' });
+                $(this).next().removeClass();
 
-            nick_com = false;
+                nick_com = false;
 
-            $('#nick_check').text('').show();
+                $('#nick_check').text('').show();
 
-        } else if (jQuery.inArray($(this).val(),abuse_name) >= 0) { //abuse names
-            $(this).css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
-            $(this).next().removeClass();
-            $(this).next().addClass('fa fa-times');
+            } else if (jQuery.inArray($(this).val(), abuse_name) >= 0) { //abuse names
+                $(this).css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
+                $(this).next().removeClass();
+                $(this).next().addClass('fa fa-times');
 
-            nick_com = false;
+                nick_com = false;
 
-            $('#nick_check').text('abuse name').show();
+                $('#nick_check').text('abuse name').show();
 
-            //console.log(jQuery.inArray($('#nick_id').val(), abuse_name))
+                //console.log(jQuery.inArray($('#nick_id').val(), abuse_name))
 
-        } else if (!nick_check.test($(this).val())) //영어,숫자 외 불가
-        {
-            $(this).css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
-            $(this).next().removeClass();
-            $(this).next().addClass('fa fa-times');
+            } else if (!nick_check.test($(this).val())) //영어,숫자 외 불가
+            {
+                $(this).css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
+                $(this).next().removeClass();
+                $(this).next().addClass('fa fa-times');
 
-            $('#nick_check').text('you can write only english and number').show();
+                $('#nick_check').text('you can write only english and number').show();
 
-            nick_com = false;
+                nick_com = false;
 
-        } else if ($(this).val().match(space) || $(this).val().match('null') == null == false) //공백 불가
-        {
-            $(this).css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
-            $(this).next().removeClass();
-            $(this).next().addClass('fa fa-times');
+            } else if ($(this).val().match(space) || $(this).val().match('null') == null == false) //공백 불가
+            {
+                $(this).css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
+                $(this).next().removeClass();
+                $(this).next().addClass('fa fa-times');
 
-            $('#nick_check').text('you can not write null').show();
+                $('#nick_check').text('you can not write null').show();
 
-            nick_com = false;
+                nick_com = false;
 
-        } else { //complite
+            } else { //complite
 
-            //enter to AJAX Logic by SsaRu
-            $.ajax({
-                type:"POST",
-                url:"./php/overlap_check.php",
-                data:'data=' + value + '&' + 'id=nick',
-                cache: false,
-                success: function(data){
-                    if(data == "")  //void value
-                    {
-                        console.log("DB return value empty");
-                        
-                        $(current_id).css({ 'border-left': '2px solid #D5D5D5', 'width': '190px' });
-                        $(current_id).next().removeClass();
-                        nick_com = false;
+                //enter to AJAX Logic by SsaRu
+                $.ajax({
+                    type: "POST",
+                    url: "php/ajax/overlap_check.php",
+                    data: 'data=' + value + '&' + 'id=nick',
+                    cache: false,
+                    success: function (data) {
+                        if (data == "")  //void value
+                        {
+                            console.log("DB return value empty");
 
-                        $('#nick_check').text('').show();
-                        
+                            $(current_id).css({ 'border-left': '2px solid #D5D5D5', 'width': '190px' });
+                            $(current_id).next().removeClass();
+                            nick_com = false;
+
+                            $('#nick_check').text('').show();
+
+                        }
+                        else if (data == 1)  //overlapping
+                        {
+                            console.log('DB return value overlapping');
+
+                            $(current_id).css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
+                            $(current_id).next().removeClass();
+                            $(current_id).next().addClass('fa fa-times');
+
+                            $('#nick_check').text('Overlapping')
+                            nick_com = false;
+
+                        }
+                        else if (data == 0)  //non-overlapping
+                        {
+                            console.log('DB return value Non-overlapping');
+
+                            $(current_id).css({ 'border-left': '5px solid #8ec89a', 'width': '187px' });
+                            $(current_id).next().removeClass();
+                            $(current_id).next().addClass('fa fa-check');
+                            $(current_id).val($(current_id).val().toLowerCase()); // lowercase and uppercase same
+
+                            $('#nick_check').text('').show();
+                            nick_com = true;
+                        }
+                        else    //exception processing
+                        {
+                            console.log("DB return value error");
+                            console.log(data);
+                            nick_com = false;
+                        }
                     }
-                    else if(data == 1)  //overlapping
-                    {
-                        console.log('DB return value overlapping');
-
-                        $(current_id).css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
-                        $(current_id).next().removeClass();
-                        $(current_id).next().addClass('fa fa-times');
-                       
-                        $('#nick_check').text('Overlapping')
-                        nick_com = false;
-
-                    }
-                    else if(data == 0)  //non-overlapping
-                    {
-                        console.log('DB return value Non-overlapping');
-
-                        $(current_id).css({ 'border-left': '5px solid #8ec89a', 'width': '187px' });
-                        $(current_id).next().removeClass();
-                        $(current_id).next().addClass('fa fa-check');
-                        $(current_id).val($(current_id).val().toLowerCase()); // lowercase and uppercase same
-
-                        $('#nick_check').text('').show();
-                        nick_com = true;
-                    }
-                    else    //exception processing
-                    {
-                        console.log("DB return value error");
-                        console.log(data);
-                        nick_com = false;
-                    }
-                }
-            });
-        }
+                });
+            }
+        });
     });
 
     /////////////////////////////////////////////////////////
