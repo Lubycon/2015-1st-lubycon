@@ -4,7 +4,7 @@ $(function () {
         if($(document).find('#post_subject_area'))
         {
             if ($(document).scrollTop() > 206) {
-                $('#post_subject_area').css({ "position": "fixed", "top": "50px", "z-index": "2" })
+                $('#post_subject_area').css({ "position": "fixed", "top": "50px", "z-index": "2" });
             }
             else {
                 $('#post_subject_area').css({ "position": "absolute", "top": "50px" });
@@ -17,23 +17,23 @@ $(function () {
         
     });
 
-    $(document).scroll(function () //community view banner
+    $(document).scroll(function ()
     {
-        if($(document).find("#post_banner")){
-            if ($(document).scrollTop() > 279 && $(document).scrollTop() < $('#comment_more_box').offset().top - 430) {
-                $('#post_banner').css({ "position": "fixed", "top": "100px" });
-            } else if ($(document).scrollTop() < 349) {
-                $('#post_banner').css({ "position": "absolute", "top": "0" + "px" });
-            } else if ($(document).scrollTop() > $('#comment_more_box').offset().top - 570) {
-                $('#post_banner').css({ "position": "absolute", "top": $('#comment_more_box').offset().top - 730 + "px" });
+        var scrollend = $("#post_box").height() + 30 - $("#post_banner").height();
+        if($(document).find("#post_banner"))
+        { 
+            console.log(scrollend);
+            if ($(document).scrollTop() > 214 && $(document).scrollTop() < 1152) {//변수로 바꿔야
+                $("#post_banner").css({ "position": "fixed", "top": "100px" });
+            }
+            else {
+                $("#post_banner").css({ "position": "absolute", "top": "0" });
             };
         }
         else{
-            console.log("");
             return true;
-        }
-        //console.log($('#comment_more_box').offset().top - 757);       
-    });    
+        }; 
+    });   
 });
 /*--------------------------------community editor start-------------------------------*/
 $(function(){

@@ -2,7 +2,7 @@
 /////////////////////////////////////////////////////////
 //      debuging tool start
 /////////////////////////////////////////////////////////
-/*$(document).ready(function(){
+$(document).ready(function(){
     $(function(){//property check
         $(window).click(function(e){
             console.log("------------------------------------------------------------------------")
@@ -13,7 +13,7 @@
             console.log("id : " + event.target.id);
         });
     });
-});*/
+});
 /*$(document).on('keypress', function(e) {
     if (e.which == 13) {// 13 == enter key@ascii
         alert("you pressed enter key");
@@ -289,11 +289,14 @@ $(document).ready(function(){
             cache: false,
             data: form_data,//user_id, user_pw, is_ajax
             success: function(response) {
-                if(response == true) {
-                    console.log("true!");
-                }
-                else {
-                    console.log("false!");   
+                console.log(response);
+                if(response==="true"){
+                    $('#after_signin').show();
+                    $('#addcontent_bt').show();
+                    $('#signin_bt').hide();
+
+                }else{
+                    alert('fuck');
                 }
             },
             error: function(response) {
@@ -1188,7 +1191,7 @@ $(document).scroll(function ()
     if($(document).find("#nav_guide"))
     {
         if ($(document).scrollTop() > 184) {
-            $("#nav_guide").css({ "position": "fixed", "top": "50px", "z-index": "2" })
+            $("#nav_guide").css({ "position": "fixed", "top": "50px", "z-index": "2" });
             $("#nav_guide").next().css({"top": "50px"});
             $("#nav_guide").next().next().css({"top": "50px"});
         }

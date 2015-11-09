@@ -25,11 +25,12 @@
     line-height:30px;
     background: #e6e6e6;
     text-align: center;
-    margin-bottom: 45px;
     box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.5);
+    position: relative;
 }
     #post_writer_box_inner{
-        width:1200px;
+        width: 100%;
+        min-width:1200px;
         position:relative;
         margin:0px auto;
         overflow:hidden;
@@ -42,6 +43,7 @@
             position:absolute;
             right:0px;
             top:0px;
+            margin-right: 5px;
             
         }
             #post_writer_box ul li {
@@ -55,101 +57,26 @@
             }
 
 #post_box {
-    width: 1200px;
+    min-width: 1200px;
+    width: 100%;
     margin: 0px auto;
     position:relative;
 }
 
-#post_banner {
-    position:absolute;
-
-    width: 155px;
-    top:0px;
-
-    border:1px solid #cccccc;
-    border-radius: 3px;
-    background:#ffffff;
-    padding:15px 10px;   
-    text-align:center;
-
-    box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.2);
-    overflow:hidden;
-}
-
-#profile_pic
-{
-    width:177px;
-    height:143px;
-
-    border-bottom: 10px solid #48cfad;
-
-    margin-top:-15px;
-    margin-left:-10px;
-    padding-top:25px;
-    padding-bottom: 17px;
-}
-    #img_mask
-    {
-        width:130px;
-        height: 130px;
-        margin: 0px auto;
-        
-        border: 3px solid #48cfad;
-        border-radius: 50%;
-        overflow: hidden;
-    }
-        #img_mask img {
-            width: 100%;
-        }
-    #post_banner h4{
-        font-size:22px;
-        margin-top:3px;
-        color:#333333;
-    }
-    #post_banner h5{
-        font-size:16px;
-        color:#333333;
-        margin-top: 5px;
-    }
-    #post_banner h6{
-        font-size:14px;
-        margin-top:10px;
-        color:#777777;
-    }
-        #post_banner h6 i{
-            color:#777777;
-            font-size: 22px;
-            margin-right: 5px;
-            margin-top: -5px;
-            margin-left: -5px;
-        }
-        #post_banner #designer_follow{
-            width:40px;
-            height:40px;
-            border:none;
-            border-radius:50%;
-            background:#48cfad;
-            margin-top:15px;
-        }
-            #post_banner #designer_follow i {
-                font-size:22px;
-                color:#fff;
-                margin-left:3px;
-            }
-
-
 #post_section {
-    width: 1000px;
-    float: left;
+    width: 100%;
+    padding-right:310px;
 }
 
 #post_contents {
-    width: 958px;
+    width: 100%;
+    min-width: 960px;
     margin: 0px auto;
-    margin-left:200px;
-    border: 1px solid #c4c4c4;
-    border-radius:3px;
-    padding: 20px;
+    border: 1px solid #cccccc;
+    padding: 30px 330px 20px 25px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
 }
     #post_contents p {
         font-size:18px;
@@ -161,16 +88,15 @@
 #share_box {
     display: block;
     height: 30px;
-    padding-left: 847px;
+    text-align: center;
 }
 
     #share_box button {
-        width: 50px;
-        height: 30px;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
         border: none;
-        border-radius: 3px;
-        margin-left: 5px;
-        float: left;
+        border-radius: 50%;
     }
     #share_box i {
         color: #fff;
@@ -182,17 +108,15 @@
 
         #share_box #share_face i {
             font-size: 20px;
-            margin-top: 3px;
         }
 
     #share_box #share_google {
         background: #ec6446;
+        vertical-align: top;
     }
 
         #share_box #share_google i {
             font-size: 20px;
-            margin-top: -4px;
-            margin-left: 3px;
         }
 
   
@@ -216,112 +140,84 @@
     #post_edit_box button:hover {
         background:#48cfad;
     }
-#comment_box {
-    width: 1000px;
-    height: 500px;
-    margin: 0px auto;
-    margin-top: 50px;
-    margin-left:200px;
+
+
+#comment_box{
+    position: relative;
+    padding-right: 310px;
+}
+#comment_box #comment_writer{
+    text-align: center;
 }
 
-    #comment_box #comment_count {
-        color: #8d8d8d;
-        text-align: right;
-        margin-top: 10px;
-        font-size:15px;
-    }
+#post_banner {
+    position:absolute;
 
-    #comment_box #comment_text {
-        float: left;
-        height: 66px;
-        width: 908px;
-        min-width: 908px;
-        max-width: 908px;
-        min-height: 66px;
-        max-height: 66px;
-        margin: 0px;
-        padding: 6px;
-        line-height: 20px;
-    }
+    width: 310px;
+    height: 100%;
+    top: 0px;
+    right: 0px;
 
-    #comment_box #comment_bt {
-        float: left;
-        width: 78px;
+    border:1px solid #cccccc;
+    background:#ffffff;  
+    text-align:center;
+
+    box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.2);
+    overflow:hidden;
+}
+
+#profile_pic
+{
+    width:100%;
+    margin-top: 15px;
+}
+    #img_mask
+    {
+        width:80px;
         height: 80px;
-        border: none;
-        margin: 0px;
-        padding: 0px;
-        background: #488ccb;
+        margin: 0px auto;
+        border-radius: 50%;
+        overflow: hidden;
     }
-
-        #comment_box #comment_bt i {
-            color: #fff;
-            font-size: 48px;
+        #img_mask img {
+            width: 100%;
         }
-
-    #comment_box .comment_div {
-        position: relative;
-        border-top: 1px solid #DADADA;
-        float: left;
-        margin-top: 20px;
-        padding-top: 20px;
-        width: 100%;
+    #post_banner h4{
+        font-size:24px;
+        margin-top:3px;
+        color:#555555;
+        font-weight: 200;
     }
-
-        #comment_box .comment_div .comment_pic {
-            float: left;
-            width: 50px;
-            height: 50px;
-            margin-right: 15px;
-            
-            border:2px solid #48cfad;
-            border-radius: 50%;
-            overflow: hidden;
+    #post_banner h5{
+        font-size:15px;
+        font-weight: 200;
+        color:#555555;
+        text-align: center;
+    }
+    #post_banner h6{
+        font-size:15px;
+        font-weight: 200;
+        color:#555555;
+        text-align: center;
+    }
+        #post_banner h6 i{
+            color:#777777;
+            font-size: 22px;
+            margin-right: 5px;
+            margin-top: -5px;
+            margin-left: -5px;
         }
-
-            #comment_box .comment_div .comment_pic img {
-                width: 50px;
-                height: 50px;
+        #post_banner #designer_follow{
+            width:40px;
+            height:40px;
+            border:none;
+            border-radius:50%;
+            background:#48cfad;
+            margin-top:15px;
+        }
+            #post_banner #designer_follow i {
+                font-size:22px;
+                color:#fff;
+                margin-left:3px;
             }
 
-        #comment_box .comment_div h4 {
-            line-height: 20px;
-            margin-bottom: 6px;
-            font-size: 19px;
-        }
-
-        #comment_box .comment_div .comment_contents {
-            line-height: 19px;
-            margin-left: 58px;
-            font-size:15px;
-            color:#444444;
-            font-weight: 200;
-        }
-
-        #comment_box .comment_div .comment_time {
-            position: absolute;
-            top: 8px;
-            right: 0px;
-            color: #7c7c7c;
-            font-size: 13px;
-        }
-
-#comment_more_box {
-    width: 100%;
-    margin: 0px auto;
-    text-align: center;
-    border-top: 1px solid #a1a1a1;
-    margin-top: 40px;
-    padding-top: 10px;
-    float: left;
-}
-
-#comment_more_bt {
-    border: none;
-    background: none;
-}
-
-    #comment_more_bt i {
-        font-size: 30px;
-        color: #7f7f7f;
-    }

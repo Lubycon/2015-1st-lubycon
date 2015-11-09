@@ -1,5 +1,12 @@
 <?php
+	// include DB class
+	require_once '../database/database_class.php';
 
+	// Object instance
+	$database = new DBConnect;
+	$database -> DBInsert();
+
+	// get data
 	if(!isset($_POST['is_ajax'])) exit;
 	if(!isset($_POST['user_id'])) exit;
 	if(!isset($_POST['user_pw'])) exit;
@@ -8,6 +15,29 @@
 	$user_id = $_POST['user_id'];
 	$user_pw = $_POST['user_pw'];
 
+	//Confirm return value. It's Okay
+	/*
+	echo $user_id;
+	echo $user_pw;
+	*/
+
+	// Sign In check
+	$database->query = "select exists(select * from luby_user where user_email='".$user_id."' and user_pass='".$user_pw."')";
+	$database->DBQuestion();
+	$result = $database->result->fetch_array();
+
+	if($result[0]){
+		setcookie('user_id', $user_id);
+		setcookie('user_name', $members[$user_id]['name']);
+
+		$database->DBOut();
+		echo "true";
+	}else{
+		$database->DBOut();
+		echo "false";
+	}
+
+	/*
 	$members = array('user1'=>array('pw'=>'pw1', 'name'=>'한놈'),
 			'user2'=>array('pw'=>'pw2', 'name'=>'두시기'),
 	        'user3'=>array('pw'=>'pw3', 'name'=>'석삼'));
@@ -20,5 +50,6 @@
 	setcookie('user_id',$user_id);
 	setcookie('user_name',$members[$user_id]['name']);
 	
-	echo true;	
+	echo true;
+	*/	
 ?>
