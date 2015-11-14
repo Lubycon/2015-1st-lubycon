@@ -595,22 +595,29 @@ $(function ()
 //      contents view con_right sticky start
 /////////////////////////////////////////////////////////
 
-$(document).scroll(function ()
-{
-    if($(document).find(".con_right"))
-    {
-        if ($(document).scrollTop() > 184) {
+$(document).scroll(function (){
+    var scrollend = $("#footer").offset().top - $(window).height();
+    var banner_position = 
+    $("#footer").offset().top 
+    - $(".con_right").height() 
+    - $("#navsel").height() 
+    - $("#main_figure").height(); 
+
+    if($(document).find(".con_right")){ 
+        if ($(document).scrollTop() > 214 && $(document).scrollTop() < scrollend){
             $(".con_right").css({ "position": "fixed", "top": "100px" });
-            $("#floating_bt").css({ "position": "fixed", "top": "100px" });
+        }
+        else if($(document).scrollTop() > scrollend){
+            $(".con_right").css({ "position": "absolute", "top": banner_position + "px" });
+            $(".con_right").css({ "height" : $(window).height() + "px"})
         }
         else {
-            $(".con_right").css({ "position": "absolute", "top": "0" });
-            $("#floating_bt").css({ "position": "absolute", "top": "0"});
+            $(".con_right").css({ "position": "absolute", "top": "0px" });
         };
     }
     else{
         return true;
-    }; 
+    };
 });
 /////////////////////////////////////////////////////////
 //      contents view con_right sticky end

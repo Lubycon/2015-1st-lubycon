@@ -16,19 +16,22 @@ $(function () {
         }
     });
 
-    $(document).scroll(function ()
-    {
-        var scrollend = $("#post_box").height() + 30 - $("#post_banner").height();
-        var position_end = $("#main_board").offset().top - $(window).height();
+    $(document).scroll(function (){
+        var scrollend = $("#post_banner").parent().next().offset().top - $(window).height();
+        var banner_position = 
+        $("#post_banner").parent().next().offset().top 
+        - $("#post_banner").height() 
+        - $("#navsel").height() 
+        - $("#main_figure").height() 
+        -30; 
 
-        if($(document).find("#post_banner"))
-        { 
-            console.log(scrollend);
-            if ($(document).scrollTop() > 214 && $(document).scrollTop() < position_end){//변수로 바꿔야
+        if($(document).find("#post_banner")){ 
+            if ($(document).scrollTop() > 214 && $(document).scrollTop() < scrollend){
                 $("#post_banner").css({ "position": "fixed", "top": "100px" });
             }
-            else if($(document).scrollTop() > 1152){
-                $("#post_banner").css({ "position": "absolute", "top": position_end + "px" });
+            else if($(document).scrollTop() > scrollend){
+                $("#post_banner").css({ "position": "absolute", "top": banner_position + "px" });
+                $("#post_banner").css({ "height" : $(window).height() + "px"})
             }
             else {
                 $("#post_banner").css({ "position": "absolute", "top": "0px" });
