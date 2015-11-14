@@ -27,6 +27,7 @@
     text-align: center;
     box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.5);
     position: relative;
+    z-index: 1;
 }
     #post_writer_box_inner{
         width: 100%;
@@ -151,11 +152,9 @@
 }
 
 #post_banner {
-    position:absolute;
-
+    position: absolute;
     width: 310px;
     height: 100%;
-    top: 0px;
     right: 0px;
 
     border:1px solid #cccccc;

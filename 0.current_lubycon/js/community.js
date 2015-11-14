@@ -14,25 +14,29 @@ $(function () {
             console.log("");
             return true;
         }
-        
     });
 
     $(document).scroll(function ()
     {
         var scrollend = $("#post_box").height() + 30 - $("#post_banner").height();
+        var position_end = $("#main_board").offset().top - $(window).height();
+
         if($(document).find("#post_banner"))
         { 
             console.log(scrollend);
-            if ($(document).scrollTop() > 214 && $(document).scrollTop() < 1152) {//변수로 바꿔야
+            if ($(document).scrollTop() > 214 && $(document).scrollTop() < position_end){//변수로 바꿔야
                 $("#post_banner").css({ "position": "fixed", "top": "100px" });
             }
+            else if($(document).scrollTop() > 1152){
+                $("#post_banner").css({ "position": "absolute", "top": position_end + "px" });
+            }
             else {
-                $("#post_banner").css({ "position": "absolute", "top": "0" });
+                $("#post_banner").css({ "position": "absolute", "top": "0px" });
             };
         }
         else{
             return true;
-        }; 
+        };
     });   
 });
 /*--------------------------------community editor start-------------------------------*/
