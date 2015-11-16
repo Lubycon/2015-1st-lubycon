@@ -29,7 +29,7 @@
 
 /* main board */
 #main_board {
-    width: 1200px;
+    width: 100%;
     margin: 0px auto;
     clear: both;
     position: relative;
@@ -39,6 +39,7 @@
 .tab_item table {
     width: 1200px;
     height: 365px;
+    margin: 0px auto;
     vertical-align: middle;
 }
 

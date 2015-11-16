@@ -155,17 +155,71 @@ var like_data = [
     }
 ];
 //like data
+//followers data
+var follow_data = [
+    {
+        "value": 30,
+        "month": 1,
+    }, 
+    {
+        "value": 50,
+        "month": 2,
+    }, 
+    {
+        "value": 50,
+        "month": 3,
+    }, 
+    {
+        "value": 30,
+        "month": 4,
+    }, 
+    {
+        "value": 38,
+        "month": 5,
+    }, 
+    {
+        "value": 27,
+        "month": 6,
+    },
+    {
+        "value": 15,
+        "month": 7,
+    },
+    {
+        "value": 23,
+        "month": 8,
+    },
+    {
+        "value": 55,
+        "month": 9,
+    },
+    {
+        "value": 23,
+        "month": 10,
+    },
+    {
+        "value": 26,
+        "month": 11,
+    },
+    {
+        "value": 37,
+        "month": 12,
+    }
+];
+//followers data
 
 
 var max_uv = d3.max(upload_data.map(function(d) { return d.value; }));//maximun value in upload data
 var max_dv = d3.max(download_data.map(function(d) { return d.value;}));//maximun value in download data
 var max_lv = d3.max(like_data.map(function(d) { return d.value;}));//maximun value in like data
+var max_fv = d3.max(follow_data.map(function(d) { return d.value;}));//maximun value in follower data
 //////////////////data ready////////////////////////
 
 //////////////////chart ready///////////////////////
 var vis = d3.select('#graph1'),
     vis2 = d3.select('#graph2'),
     vis3 = d3.select('#graph3'),
+    vis4 = d3.select('#graph4'),
     
     WIDTH = 480,
     HEIGHT = 200,
@@ -180,6 +234,7 @@ var vis = d3.select('#graph1'),
     yScale = d3.scale.linear().domain([0,max_uv*1.2]).range([HEIGHT - MARGINS.top, MARGINS.bottom]),
     yScale2 = d3.scale.linear().domain([0,max_dv*1.2]).range([HEIGHT - MARGINS.top, MARGINS.bottom]),
     yScale3 = d3.scale.linear().domain([0,max_lv*1.2]).range([HEIGHT - MARGINS.top, MARGINS.bottom]),
+    yScale4 = d3.scale.linear().domain([0,max_fv*1.2]).range([HEIGHT - MARGINS.top, MARGINS.bottom]),
 
     xAxis = d3.svg.axis()
             .scale(xScale),
@@ -192,6 +247,9 @@ var vis = d3.select('#graph1'),
             .orient("left");
     yAxis3 = d3.svg.axis()
             .scale(yScale3)
+            .orient("left");
+    yAxis4 = d3.svg.axis()
+            .scale(yScale4)
             .orient("left");
 //////////////////chart ready///////////////////////
 //////////////////make guide line///////////////////
@@ -222,6 +280,15 @@ vis3.append("g")
     .attr("class","axis")
     .attr("transform","translate("+(MARGINS.left)+",0)")
     .call(yAxis3);
+
+vis4.append("g")
+    .attr("class","axis")
+    .attr("transform","translate(0,"+(HEIGHT-MARGINS.bottom)+")")
+    .call(xAxis);
+vis4.append("g")
+    .attr("class","axis")
+    .attr("transform","translate("+(MARGINS.left)+",0)")
+    .call(yAxis4);
 
 //////////////////make guide line//////////////////
 
@@ -286,6 +353,25 @@ var areaGen3 = d3.svg.area()
         return yScale3(d.value);
     })
     .interpolate("linear");
+////////////////////////////////////////
+var lineGen4 = d3.svg.line()
+    .x(function(d){
+        return xScale(d.month);
+    })
+    .y(function(d){
+        return yScale4(d.value);
+    })
+    .interpolate("linear");
+
+var areaGen4 = d3.svg.area()
+    .x(function(d){
+        return xScale(d.month);
+    })
+    .y0(HEIGHT-MARGINS.bottom)
+    .y1(function(d){
+        return yScale4(d.value);
+    })
+    .interpolate("linear");
 //////////////////graph line ready//////////////////
 //////////////////draw graph line///////////////////
 //graph1 draw start
@@ -334,6 +420,21 @@ vis3.append('svg:path')
     .attr('fill','#488ccb')
     .attr('opacity','0.5');
 //graph3 draw end
+//graph4 draw start
+vis4.append('svg:path')
+    .attr('d', lineGen4(follow_data))
+    .attr('class','follow_graph_line')
+    .attr('stroke','#ec6446')
+    .attr('stroke-width','1')
+    .attr('fill','none');
+
+vis4.append('svg:path')
+    .attr('d', areaGen4(follow_data))
+    .attr('class','follow_graph_area')
+    .attr('stroke-width','0')
+    .attr('fill','#ec6446')
+    .attr('opacity','0.5');
+//graph4 draw end
 //////////////////draw graph line///////////////////
 //////////////////datapoint start/////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////GRAPH1 start
@@ -595,4 +696,90 @@ vis3.selectAll("svg")
 
     });
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////GRAPH3 end
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////GRAPH4 start
+vis4.selectAll("svg")
+    .data(follow_data)
+    .enter().append("circle")
+    .attr('class', 'datapoint')
+    .attr('cx', function(d,i) { return xScale(d.month); })
+    .attr('cy', function(d,i) { return yScale3(d.value); })
+    .attr('r', 4)
+    .attr('index', function(d,i){ return i})
+    .attr('fill', 'white')
+    .attr('stroke', '#ec6446')
+    .attr('stroke-width', '1')
+    
+    .on('mouseover', function(){//mouse_over event
+        d3.select(this).transition()//animation for circle
+            .delay(0)
+            .duration(300)
+            .attr('r',6);                     
+
+
+            var value_both = d3.select('div.value');
+            value_both.selectAll("p")
+                .data(follow_data)
+                .enter();            
+            
+            var cv = $(this).attr('index');//circles index(jQuery)
+            
+            $('.value_text').html(function() {
+                if(cv==0){/////////////////////////////////////////////////////////////////// you should change to switch later//
+                    return "2015-January" + "<br>" + "Contents : <font color='#ec6446'>" + follow_data[0].value + "</font>";
+                }
+                else if(cv==1){
+                    return "2015-February"  + "<br>" + "Contents : <font color='#ec6446'>" + follow_data[1].value + "</font>";
+                }
+                else if(cv==2){
+                    return "2015-March" + "<br>" + "Contents : <font color='#ec6446'>" + follow_data[2].value + "</font>";
+                }
+                else if(cv==3){
+                    return "2015-April" + "<br>" + "Contents : <font color='#ec6446'>" + follow_data[3].value + "</font>";
+                }
+                else if(cv==4){
+                    return "2015-May" + "<br>" + "Contents : <font color='#ec6446'>" + follow_data[4].value + "</font>";
+                }
+                else if(cv==5){
+                    return "2015-June" + "<br>" + "Contents : <font color='#ec6446'>" + follow_data[5].value + "</font>";
+                }
+                else if(cv==6){
+                    return "2015-July" + "<br>" + "Contents : <font color='#ec6446'>" + follow_data[6].value + "</font>";
+                }
+                else if(cv==7){
+                    return "2015-August" + "<br>" + "Contents : <font color='#ec6446'>" + follow_data[7].value + "</font>";
+                }
+                else if(cv==8){
+                    return "2015-September" + "<br>" + "Contents : <font color='#ec6446'>" + follow_data[8].value + "</font>";
+                }
+                else if(cv==9){
+                    return "2015-October" + "<br>" + "Contents : <font color='#ec6446'>" + follow_data[9].value + "</font>";
+                }
+                else if(cv==10){
+                    return "2015-November" + "<br>" + "Contents : <font color='#ec6446'>" + follow_data[10].value + "</font>";
+                }
+                else if(cv==11){
+                    return "2015-December" + "<br>" + "Contents : <font color='#ec6446'>" + follow_data[11].value + "</font>";
+                }
+            });
+
+        var tooltipX = $(this).offset().left + 15;///circle X = tooltip_X
+        var tooltipY = $(this).offset().top - 655;////circle Y = tooltip_Y
+
+        $('#tooltip').css('top',tooltipY);
+        $('#tooltip').css('left',tooltipX);
+
+        $('#tooltip').stop().fadeIn(200);
+    })
+
+    
+    .on('mouseout', function(){//mouse_out event
+         d3.select(this).transition()
+            .delay(0)
+            .duration(500)
+            .attr('r',4);
+
+        $('#tooltip').stop().fadeOut(200);
+
+    });
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////GRAPH4 end
 //////////////////datapoint end///////////////////////

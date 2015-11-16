@@ -40,6 +40,14 @@
                 <svg id="graph3" width="500" height="200"></svg><!--graph3-->
             </div>
 
+            <div class="graph_box">
+                <div class="graph_title">
+                    <i class="fa fa-users" id="follow_icon"></i>
+                    <p class="graph_title_text">FOLLOW</p>      
+                </div>
+                <svg id="graph4" width="500" height="200"></svg><!--graph3-->
+            </div>
+
             <div id="tooltip">
                 <!--tooltip start-->
                 <div class="value">

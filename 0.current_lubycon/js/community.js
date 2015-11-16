@@ -23,7 +23,7 @@ $(function () {
         - $("#post_banner").height() 
         - $("#navsel").height() 
         - $("#main_figure").height() 
-        -30; 
+        -30;
 
         if($(document).find("#post_banner")){ 
             if ($(document).scrollTop() > 214 && $(document).scrollTop() < scrollend){

@@ -91,17 +91,17 @@
             '<div id="slider'.$i.'" style="width: 980px; height: 363px;">
             <div class="slides" u="slides">';
                 for( $j=1 ; $j<4 ; $j++ ){ //loop slide page  
-           echo'<div>
+            echo'<div>
                     <ul>';
                         for( $k=1 ; $k<11 ; $k++ ){ //loop slide img call
                         echo '<li class="load_view">
                                     <img src="ch/img/slider/slider'.$i.'/'.$k.'.png" alt="thumbnail_photo_'.$k.'">
                               </li>';
                         }
-               echo'</ul>
+                echo'</ul>
                 </div>';
                 }
-       echo'</div>
+        echo'</div>
             <div u="navigator" class="slider_pager">
                 <div u="prototype"></div>
             </div>

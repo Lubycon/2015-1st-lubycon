@@ -1,7 +1,6 @@
 ﻿@charset "utf-8";
 
-#insight_box
-{
+#insight_box{
     width:100%;
     max-width:1600px;
     min-width:1200px;
@@ -11,25 +10,23 @@
     margin-bottom:50px;
 }
 
-#graph_ul
-{
+#graph_ul{
     width:100%;
     margin:0px auto;
     text-align: center;
 }
 
-.graph_box
-{
-    width:900px;
-    height:200px;
+.graph_box{
+    width: 640px;
+    height: 200px;
     position: relative;
     display: block;
     margin:20px auto;
     border:1px solid #333;
-    border-radius: 3px;
+    border-radius: 10px;
+    overflow: hidden;
 }
-    .graph_title
-    {
+    .graph_title{
         width:140px;
         height: 100%;
         line-height: 40px;
@@ -37,8 +34,7 @@
         text-align: center;
         float: left;
     }
-        .graph_title i
-        {
+        .graph_title i{
             width:70px;
             height:70px;
             line-height: 70px;
@@ -51,25 +47,26 @@
             font-weight: 200;
 
         }
-            #upload_icon
-            {
+            #upload_icon{
                 background: #48cfad;
                 -webkit-text-stroke:1px #48cfad;
             }
-            #down_icon
-            {
+            #down_icon{
                 background: #ffbe54;
                 -webkit-text-stroke:1px #ffbe54;
             }
-            #like_icon
-            {
+            #like_icon{
                 background: #488ccb;
                 -webkit-text-stroke:1px #488ccb;
                 font-size:40px;
                 line-height:77px;
             }
-        .graph_title_text
-        {
+            #follow_icon{
+                background: #ec6446;
+                -webkit-text-stroke: 1px #ec6446;
+                font-size: 40px;
+            }
+        .graph_title_text{
             display:block;
             color:#ffffff;
             font-size:20px;
@@ -77,27 +74,23 @@
         }
     
 
-    #graph1,#graph2,#graph3
-    {
+    #graph1,#graph2,#graph3{
         display:block;
     }
 
-        .axis path
-        {
+        .axis path{
             fill: none;
             stroke: #555555;
             shape-rendering: cripsEdges;
         }
-        .axis text
-        {
+        .axis text{
             font-family: Lato;
             font-size: 13px;
             display:none;
         }
 
 
-#tooltip
-{
+#tooltip{
     width:150px;
     height:42px;
     background:rgba(0,0,0,0.8);
@@ -112,8 +105,7 @@
 
     box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.5);
 }
-    .value_text
-    {
+    .value_text{
         color:#ffffff;
         font-size:17px;
         font-weight: 200;
