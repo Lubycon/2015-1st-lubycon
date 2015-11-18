@@ -775,7 +775,7 @@ $(function form_check (fo)
             $.ajax({
                 type:"POST",
                 url:"php/ajax/overlap_check.php",
-                data:'data='+ value +'&'+ 'id=email',
+                data:'data='+ value +'&'+ 'id=email', 
                 cache: false,
                 success: function(data)
                 {
