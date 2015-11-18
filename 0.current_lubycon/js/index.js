@@ -604,7 +604,7 @@ $(document).scroll(function (){
     - $("#main_figure").height(); 
 
     if($(document).find(".con_right")){ 
-        if ($(document).scrollTop() > 214 && $(document).scrollTop() < scrollend){
+        if ($(document).scrollTop() > 184 && $(document).scrollTop() < scrollend){
             $(".con_right").css({ "position": "fixed", "top": "100px" });
         }
         else if($(document).scrollTop() > scrollend){

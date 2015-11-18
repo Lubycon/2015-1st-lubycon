@@ -48,9 +48,9 @@ a {
 /* class */
 /*-------------------------------------------------------scroll bar start*/
 /*chrome*/
-::-webkit-scrollbar {
+/*::-webkit-scrollbar {
     display:none;
-}
+}*/
 /*::-webkit-scrollbar-button {}
 ::-webkit-scrollbar-track {}
 ::-webkit-scrollbar-track-piece {}
@@ -479,8 +479,9 @@ body{
     border-radius: 50%;
     line-height: 25px;
     vertical-align: middle;
+    margin-top: 6px;
     text-align: center;
-    background: #ffbe54;
+    background: #ec6446;
     color: #fff;
     margin-left: 25px;
     position: absolute;

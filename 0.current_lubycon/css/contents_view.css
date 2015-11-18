@@ -66,7 +66,7 @@
     display: inline-block;
     margin-top: 10px;
     position: absolute;
-    right: 0;
+    right: 16px;
 }
 
     .share_sns{
@@ -84,6 +84,7 @@
         .share_sns i {
             font-size: 15px;
             vertical-align: middle;
+            margin-top: -3px;
         }
     .share_face{
         background:#3b5998;
