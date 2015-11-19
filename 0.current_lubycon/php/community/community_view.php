@@ -104,7 +104,7 @@
         <aside id="post_banner">
             <div id="profile_pic">
                 <figure id="img_mask">
-                    <img src="ch/img/no_img/no_img_user1.jpg">
+                    <img src="./ch/img/no_img/no_img_user1.jpg">
                 </figure>
             </div>
             <h4><?=$username?></h4>

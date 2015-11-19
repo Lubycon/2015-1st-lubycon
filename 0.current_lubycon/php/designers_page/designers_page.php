@@ -13,7 +13,7 @@
         <div class="subnav_box">
             <div class="contents_bt">
                 <span class="global_icon">
-                    <img src="ch/img/grobal_icon.png" width="24" height="24" /></span>
+                    <img src="./ch/img/grobal_icon.png" width="24" height="24" /></span>
                 <span class="subnav_selected">All Continents</span>
                 <span class="subnav_arrow"><i class="fa fa-caret-down"></i></span>
                 <ul class="subnav_list">
@@ -69,7 +69,7 @@
                     <td></td>
                     <td><?=$top_country?></td>
                     <td>
-                        <img src="ch/img/no_img/no_img_user1.jpg" /></td>
+                        <img src="./ch/img/no_img/no_img_user1.jpg" /></td>
                     <td class="rank_name">
                         <a href="./index.php?1=personal_page&2=personal_page&3=main&4=my_contents">
                             <?=$top_username?>

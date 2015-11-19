@@ -1038,7 +1038,7 @@ h1 /* main logo */ {
 /* any page layouts */
 
 #main_figure,#index_figure {
-    background: url(../../CH/img/main_img.png) 0% 47% no-repeat;
+    background: url(../../ch/img/main_img.png) 0% 47% no-repeat;
     background-size: 100%;
     width: 100%;
     text-align: center;

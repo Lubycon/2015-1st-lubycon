@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -11,7 +11,7 @@
     <meta name="copyright" content="copyrights 2015 ZEPOT" />
     <meta name="keywords" content="font ,vector, 3D design, community, designers, engineer, 3D printer, Illustration, Lubycon" />
 	
-	<link rel="shortcut icon" href="CH/img/logo/lubycon.ico" />  <!-- favicon -->
+	<link rel="shortcut icon" href="./ch/img/logo/lubycon.ico" />  <!-- favicon -->
 	<link rel="stylesheet" href="css/waiting_for_resisting.css">
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
 	<link href='http://fonts.googleapis.com/css?family=Source Sans Pro:200,400' rel='stylesheet' type='text/css'>
@@ -29,7 +29,7 @@
 	</article>
 		<div id="circle">
 			<a href="index.html">
-				<img id="lubyicon" src="CH/img/logo/lubycon_logo_big.png" width="60" height="60" />
+				<img id="lubyicon" src="./ch/img/logo/lubycon_logo_big.png" width="60" height="60" />
 				<p id="gotomain">Go to the main</p>
 			</a>
 		</div>

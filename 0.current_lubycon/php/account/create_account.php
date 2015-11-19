@@ -268,7 +268,7 @@
                <div class="term_check_box">
                     <a href="../document/Important/term_of_service.pdf" class="document" target="_blank"><!--link for document-->
                          <p>
-                              <img src="ch/img/pdf_icon.png" width="25" height="30" alt="terms of service" />
+                              <img src="./ch/img/pdf_icon.png" width="25" height="30" alt="terms of service" />
                          </p>
                          <p class="term_title">Terms of service.pdf</p>
                     </a>
@@ -280,7 +280,7 @@
                <div class="term_check_box">
                     <a href="../document/Important/private_policy.pdf" class="document" target="_blank"><!--link for document-->
                          <p>
-                              <img src="ch/img/pdf_icon.png" width="25" height="30" alt="terms of service" />
+                              <img src="./ch/img/pdf_icon.png" width="25" height="30" alt="terms of service" />
                          </p>
                          <p class="term_title">Private policy.pdf</p>
                     </a>

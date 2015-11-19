@@ -9,7 +9,7 @@
     ?><!--you should change to mySQL later-->
     <div class="contents_card">
         <div class="contents_pic">
-            <img src="CH/img/no_img/no_img.jpg" class="load_view" alt="contents thumbnail"/>
+            <img src="./ch/img/no_img/no_img.jpg" class="load_view" alt="contents thumbnail"/>
         </div>
         <!-- end contents pic -->
         <div class="contents_disc">
@@ -18,7 +18,7 @@
                 <h5><?=$price?></h5>
             </div>
             <a href="./index.php?1=personal_page&2=personal_page&3=main">
-                <img src="ch/img/no_img/no_img_user1.jpg" alt="artist photo" />
+                <img src="./ch/img/no_img/no_img_user1.jpg" alt="artist photo" />
             </a>
             <span class="by">by</span>
             <a href="./index.php?1=personal_page&2=personal_page&3=main">

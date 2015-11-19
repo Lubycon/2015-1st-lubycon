@@ -5,7 +5,7 @@
                 <ul>
                     <li class="seleced_msg">
                         <figure class="user_pic">
-                            <img src="ch/img/designer_img.png" />
+                            <img src="./ch/img/designer_img.png" />
                         </figure>
                         <h4>Daniel_zepp</h4>
                         <h5>hi deneis i'm zepot</h5>
@@ -13,7 +13,7 @@
                     </li>
                     <li>
                         <figure class="user_pic">
-                            <img src="ch/img/designer_img.png" />
+                            <img src="./ch/img/designer_img.png" />
                         </figure>
                         <h4>Daniel_zepp</h4>
                         <h5>hi deneis i'm zepot</h5>
@@ -30,7 +30,7 @@
                 <div id="msg_area">
                     <div class="msg_box">
                         <div class="receive_msg_box">
-                            <figure><img src="ch/img/designer_img.png" /></figure>
+                            <figure><img src="./ch/img/designer_img.png" /></figure>
                             <span class="receive_msg">hi deniels i'm zepot i wanna get some article hahahah<br />hi deneis i'm zepot i wanna get some article hahahah<br />hi deneis i'm zepot i wanna get some article hahahah<br /></span>
                             <span class="receive_time">23:56</span>
                         </div>
@@ -53,7 +53,7 @@
                 <p class="message_sub_menu">Followers</p>
                 <ul>
                     <li>
-                        <figure><img src="ch/img/designer_img.png" /></figure>
+                        <figure><img src="./ch/img/designer_img.png" /></figure>
                         <h4>Daniel_zepp</h4>
                     </li>
                 </ul>
@@ -61,11 +61,11 @@
         </section>-->
     <div class="coming_soon">
         <figure class="coming_soon_img">
-            <img src="CH/img/coming_soon/coming_soon_logo.png" />
+            <img src="./ch/img/coming_soon/coming_soon_logo.png" />
         </figure>
         <div class="coming_soon_bt">
             <a href="javascript:history.back()">
-                <img src="CH/img/coming_soon/coming_soon_bt.svg" />
+                <img src="./ch/img/coming_soon/coming_soon_bt.svg" />
             </a>
         </div>
     </div>

@@ -14,7 +14,7 @@
 
     <title>LUBYCON</title>
 
-    <link rel="shortcut icon" href="CH/img/logo/lubycon.ico" /> <!-- favicon -->
+    <link rel="shortcut icon" href="./ch/img/logo/lubycon.ico" /> <!-- favicon -->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source Sans Pro:200,400" type="text/css" />	<!--google web font-->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" /> <!--icon font-->
 
@@ -90,7 +90,7 @@
     <header id="main_header">
         <h1>
             <a href="./index.php">
-                <img src="CH/img/logo/lubycon_logo.svg" width="176" height="40" alt="Lubycon logo" />
+                <img src="./ch/img/logo/lubycon_logo.svg" width="176" height="40" alt="Lubycon logo" />
             </a>
             <span id="beta_version">BETA</span><!--beta mark-->
         </h1><!--LUBYCON LOGO-->
@@ -174,7 +174,7 @@
         <div id="after_signin">
             <a href="./index.php?1=personal_page&2=personal_page&3=main&4=my_contents">
                 <span class="partition">|</span>
-                <figure><img src="ch/img/no_img/no_img_user1.jpg" alt="profile_img" /></figure>
+                <figure><img src="./ch/img/no_img/no_img_user1.jpg" alt="profile_img" /></figure>
                 <span id="user_id">Admin_User</span>
                 <i class="fa fa-angle-down"></i>
             </a>
