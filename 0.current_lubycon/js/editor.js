@@ -45,7 +45,7 @@ $(function() {
 //      editor nav start
 /////////////////////////////////////////////////////////
 $(function () {
-    $('#editor_aside ol li').hover(function () //aside li mouse hover event
+    $('#editor_aside ol li').hover(function () //aside tools mouse hover event
     {
         $(this).css({ "background": "#666666" });
         $(this).children('i').css({ "color": "#48cfad" });

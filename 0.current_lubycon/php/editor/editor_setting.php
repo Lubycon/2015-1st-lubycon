@@ -6,7 +6,7 @@
 	    	<p class="setting_title">Categories (max 3 categorys)</p>
 	    	<div class="set_con">
                 <form>
-                    <select data-placeholder="Choose your contents categorys" style="width:100%;" multiple class="chosen-select" tabindex="8">
+                    <select data-placeholder="Choise your contents categories" style="width:100%;" class="chosen-select" multiple tabindex="8">
                         <option>Car</option>
                         <option>People</option>
                         <option>Book</option>
@@ -25,7 +25,7 @@
 	    	<p class="setting_title">Tags</p>
             <div class="set_con">
                 <form>
-                    <select data-placeholder="Choose your contents categorys" style="width:100%;" multiple class="chosen-select" tabindex="8">
+                    <select data-placeholder="Choose your contents categorys" style="width:100%;" class="chosen-select" multiple tabindex="8">
                         <option>Car</option>
                         <option>People</option>
                         <option>Book</option>
