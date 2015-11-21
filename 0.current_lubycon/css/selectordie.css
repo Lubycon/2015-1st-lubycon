@@ -137,7 +137,8 @@
             /*Make room for the check mark */
             .sod_select .sod_option.selected
                 {
-                    font-weight: 400;
+                    font-weight: 200;
+                    color: #48cfad;
                     padding-right: 10px;
                 }
 

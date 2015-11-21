@@ -34,7 +34,7 @@
                     case "artwork" : echo "<a href='./index.php?1=contents&2=contents_view&3=artwork'>"; break;
                     case "vector" : echo "<a href='./index.php?1=contents&2=contents_view&3=vector'>"; break;
                     case "3d" : echo "<a href='./index.php?1=contents&2=contents_view&3=3d'>"; break;
-                    default : echo "<a href='./index.php?1=contents&2=contents_view'>"; break;
+                    default : echo "<a href='./index.php?1=contents&2=contents_view&3=all'>"; break;
                 };
             ?>
                 <i class="fa fa-search-plus"></i>

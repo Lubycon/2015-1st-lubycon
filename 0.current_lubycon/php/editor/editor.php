@@ -27,59 +27,61 @@
 </nav>
 <section id="editor_inbody">
     <aside id="editor_aside">
-        <ol>
-            <li id="editor_upload_file">
-                <i class="fa fa-cloud-upload"></i>
-                <span class="tooltip_bt" id="file_tooltip">Upload file to server</span><!--tooltip-->
-            </li><!--upload file bt-->
-            <li id="editor_preview_upload">
-                <i class="fa fa-picture-o"></i>
-                <span class="tooltip_bt" id="image_tooltip">Upload preview image</span><!--tooltip-->
-            </li><!--upload preview img bt-->
-        </ol>
-        
-        
-        
-        <input type="file" id="upload_file_input"/>
-        <input type="file" name="images[]" id="preview_upload_input" accept="image/*" multiple />
-        
-        <ol>
-            <li id="img_crop" class="img_crop_notallow">
-                <i class="fa fa-crop"></i>
-                <span class="tooltip_bt" id="file_tooltip">Image crop tool</span><!--tooltip-->
-            </li>
-            <li id="add_text">
-                <i class="fa fa-font"></i>
-                <span class="tooltip_bt" id="file_tooltip">Text tool</span><!--tooltip-->
-            </li>
-            <li id="change_bd_color">
-                <input type="text" id="body_color_picker"></input>
-                <span class="tooltip_bt" id="body_color_tooltip">Body color</span>
-            </li>
-            <li id="embed_media">
-                <i class="fa fa-code"></i>
-                <span class="tooltip_bt" id="file_tooltip">Embed media</span><!--tooltip-->
-            </li>
-        </ol>
-        
+        <div id="editor_aside_wrap">
+            <ol>
+                <li id="editor_upload_file">
+                    <i class="fa fa-cloud-upload"></i>
+                    <span class="tooltip_bt" id="file_tooltip">Upload file to server</span><!--tooltip-->
+                </li><!--upload file bt-->
+                <li id="editor_preview_upload">
+                    <i class="fa fa-picture-o"></i>
+                    <span class="tooltip_bt" id="image_tooltip">Upload preview image</span><!--tooltip-->
+                </li><!--upload preview img bt-->
+            </ol>
+            
+            
+            
+            <input type="file" id="upload_file_input"/>
+            <input type="file" name="images[]" id="preview_upload_input" accept="image/*" multiple />
+            
+            <ol>
+                <li id="img_crop" class="img_crop_notallow">
+                    <i class="fa fa-crop"></i>
+                    <span class="tooltip_bt" id="file_tooltip">Image crop tool</span><!--tooltip-->
+                </li>
+                <li id="add_text">
+                    <i class="fa fa-font"></i>
+                    <span class="tooltip_bt" id="file_tooltip">Text tool</span><!--tooltip-->
+                </li>
+                <li id="change_bd_color">
+                    <input type="text" id="body_color_picker"></input>
+                    <span class="tooltip_bt" id="body_color_tooltip">Body color</span>
+                </li>
+                <li id="embed_media">
+                    <i class="fa fa-code"></i>
+                    <span class="tooltip_bt" id="file_tooltip">Embed media</span><!--tooltip-->
+                </li>
+            </ol>
+            
 
-        <div id="file_info">
-            <header id="info_header">File info<i class="fa fa-angle-down" id="info_toggle"></i></header>
-            <section id="files">
-                <article id="file_name"><i class="fa fa-chevron-circle-down"></i>
-                    <p><i class="fa fa-folder"></i>Lorem ipsum.zip</p>
-                </article>
-                <ul>
-                    <li><i class="fa fa-file"></i>ipsum.psd</li>
-                    <li><i class="fa fa-file"></i>ipsum.ai</li>
-                    <li><i class="fa fa-file"></i>ipsum.html</li>
-                    <li><i class="fa fa-file"></i>ipsum.css</li>
-                    <li><i class="fa fa-circle"></i><i class="fa fa-file"></i>ipsum.js</li>
-                </ul>
-            </section>
-            <footer id="storage">
-                <p>1.2 MB</p>
-            </footer>
+            <div id="file_info">
+                <header id="info_header">File info<i class="fa fa-angle-down" id="info_toggle"></i></header>
+                <section id="files">
+                    <article id="file_name"><i class="fa fa-chevron-circle-down"></i>
+                        <p><i class="fa fa-folder"></i>Lorem ipsum.zip</p>
+                    </article>
+                    <ul>
+                        <li><i class="fa fa-file"></i>ipsum.psd</li>
+                        <li><i class="fa fa-file"></i>ipsum.ai</li>
+                        <li><i class="fa fa-file"></i>ipsum.html</li>
+                        <li><i class="fa fa-file"></i>ipsum.css</li>
+                        <li><i class="fa fa-circle"></i><i class="fa fa-file"></i>ipsum.js</li>
+                    </ul>
+                </section>
+                <footer id="storage">
+                    <p>1.2 MB</p>
+                </footer>
+            </div>
         </div>
     </aside>
     <section id="editor_body">

@@ -5,7 +5,7 @@
     <ul class="subnav_list" id="category_list">
         <li class="selected_li">All categories</li>
         <span class="spline"><p>3</p><hr></span>
-        <li>3D scans</li>
+        <li>3D Scans</li>
         <span class="spline"><p>A</p><hr></span>
         <li>Architecture</li>
         <li>Art</li>

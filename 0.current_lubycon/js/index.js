@@ -1201,11 +1201,13 @@ $(document).scroll(function ()
             $("#nav_guide").css({ "position": "fixed", "top": "50px", "z-index": "2" });
             $("#nav_guide").next().css({"top": "50px"});
             $("#nav_guide").next().next().css({"top": "50px"});
+            $("#floating_bt").css({"position" : "fixed", "top" : "100px"});
         }
         else {
             $("#nav_guide").css({ "position": "relative", "top": "0px" });
             $("#nav_guide").next().css({"top": "0px"});
             $("#nav_guide").next().next().css({"top": "0px"});
+            $("#floating_bt").css({"position" : "absolute", "top" : "0px"});
         }  
     }
     else{
@@ -1284,7 +1286,7 @@ $(function () {
         $(this).parent().prev().prev('.subnav_selected').text($(this).text());
         $('.subnav_list').stop().fadeOut(300);
 
-        if($(this).parent().prev().prev(".subnav_selected").text()==$(this).text()){
+        if($(this).parent().prev().prev(".subnav_selected").text() == $(this).text()){
             $(".subnav_list li").removeClass("selected_li");
             $(this).addClass("selected_li");
         }
