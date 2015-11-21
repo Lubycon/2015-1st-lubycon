@@ -295,8 +295,11 @@ $(document).ready(function(){
                     $('#addcontent_bt').show();
                     $('#signin_bt').hide();
 
-                }else{
-                    alert('fuck');
+                }else if(response==="false"){
+                    setInterval(function(){
+                        $("#login_box").attr("class","shake animated");
+                    },10);
+                    return;
                 }
             },
             error: function(response) {
