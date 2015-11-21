@@ -387,7 +387,7 @@ vis.append('svg:path')
     .attr('class','up_graph_area')
     .attr('stroke-width','0')
     .attr('fill','#48cfad')
-    .attr('opacity','0.5');
+    .attr('opacity','1');
 
 //graph1 draw end
 //graph2 draw start    
@@ -403,7 +403,7 @@ vis2.append('svg:path')
     .attr('class','down_graph_area')
     .attr('stroke-width','0')
     .attr('fill','#ffbe54')
-    .attr('opacity','0.5');
+    .attr('opacity','1');
 //graph2 draw end
 //graph3 draw start
 vis3.append('svg:path')
@@ -418,7 +418,7 @@ vis3.append('svg:path')
     .attr('class','like_graph_area')
     .attr('stroke-width','0')
     .attr('fill','#488ccb')
-    .attr('opacity','0.5');
+    .attr('opacity','1');
 //graph3 draw end
 //graph4 draw start
 vis4.append('svg:path')
@@ -433,7 +433,7 @@ vis4.append('svg:path')
     .attr('class','follow_graph_area')
     .attr('stroke-width','0')
     .attr('fill','#ec6446')
-    .attr('opacity','0.5');
+    .attr('opacity','1');
 //graph4 draw end
 //////////////////draw graph line///////////////////
 //////////////////datapoint start/////////////////////

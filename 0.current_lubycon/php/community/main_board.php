@@ -19,14 +19,15 @@
                     $view_num = 0;
                     $content_date = "00.00.00";//yy.mm.dd
 
-                    for($i=20; $i>=1; $i--)
-                    {
+                    $current_url = $_GET["3"];
+
+                    for($i=20; $i>=1; $i--){
                         echo
                         "<tr>
-                            <td class='table_blank'><i class='fa fa-circle'></i></td>   <!-- space -->
+                            <td class='table_blank'><i class='fa fa-circle' id='{$current_url}_circle'></i></td>   <!-- space -->
                             <td class='table_number'>{$i}</td>   <!-- number -->
                             <td class='table_subject'>
-                                <a href='./index.php?1=community&2=community_view'>
+                                <a href='./index.php?1=community&2=community_view&3={$current_url}'>
                                     {$subject} [{$comment_num}]
                                 </a>
                             </td>   <!-- subject -->
