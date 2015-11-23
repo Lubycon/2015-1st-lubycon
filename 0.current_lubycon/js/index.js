@@ -2,6 +2,7 @@
 /////////////////////////////////////////////////////////
 //      debuging tool start
 /////////////////////////////////////////////////////////
+/*
 $(document).ready(function(){
     $(function(){//property check
         $(window).click(function(e){
@@ -13,7 +14,7 @@ $(document).ready(function(){
             console.log("id : " + event.target.id);
         });
     });
-});
+});*/
 /*$(document).on('keypress', function(e) {
     if (e.which == 13) {// 13 == enter key@ascii
         alert("you pressed enter key");
@@ -831,8 +832,8 @@ $(function form_check (fo)
     /////////////////////////////////////////////////////////
     //      password check end
     /////////////////////////////////////////////////////////
-    $(document).on("keydown keyup click blur ready change", function () {
-        $('#pass_id').on("keydown keyup click blur ready change", function () {
+    $(document).on("blur", function () {
+        $('#pass_id').on("blur", function () {
             //console.log($(this).val().match('null') == null == false)
             //console.log(regx.test($(this).val()));
             if ($(this).val() == '') { //blank
@@ -925,7 +926,7 @@ $(function form_check (fo)
             };
         });
         var pass_com;
-        $('#re_pass_id').on("keydown keyup click blur ready change", function () // repeat pass check
+        $('#re_pass_id').on("blur", function () // repeat pass check
         {
             if ($(this).val() == '') { //blank
                 $(this).css({ 'border-left': '2px solid #D5D5D5', 'width': '190px' });
@@ -966,8 +967,8 @@ $(function form_check (fo)
     //      now pass check start
     /////////////////////////////////////////////////////////
     var now_pass_com;
-    $(document).on("keydown keyup click blur ready change", function () {
-        $('#now_pass_id').on("keydown keyup click blur ready change", function () //account setting page now password check
+    $(document).on("blur", function () {
+        $('#now_pass_id').on("blur", function () //account setting page now password check
         {
             if ($(this).val() == '') { //blank
                 $(this).css({ 'border-left': '2px solid #D5D5D5', 'width': '190px' });
@@ -1008,8 +1009,8 @@ $(function form_check (fo)
     /////////////////////////////////////////////////////////
 
     var nick_com;
-    $(document).on("keydown keyup click blur ready change", function () {
-        $('#nick_id').on("keydown keyup click blur ready change", function () {
+    $(document).on("blur", function () {
+        $('#nick_id').on("blur", function () {
             var value = $(this).val();
             var current_id = '#' + $(this).attr('id');
             //console.log(jQuery.inArray($('#nick_id').val(), nick_array));
@@ -1049,6 +1050,16 @@ $(function form_check (fo)
                 $(this).next().addClass('fa fa-times');
 
                 $('#nick_check').text('you can not write null').show();
+
+                nick_com = false;
+
+            }else if (!nick_check.test($('#nick_id').val())) //영어,숫자 외 불가
+            {
+                $('#nick_id').css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
+                $('#nick_id').next().removeClass();
+                $('#nick_id').next().addClass('fa fa-times');
+
+                $('#nick_check').text('you can write only english and number').show();
 
                 nick_com = false;
 
@@ -1122,12 +1133,8 @@ $(function form_check (fo)
 
     $(document).click(function () 
     {
-        //console.log(email_com == true)
-        //console.log(pass_com == true)
-        //console.log(nick_com == true)
-        //console.log($('.check_box:checked').length == 2)
-
-        //console.log(!!('#nick_id').match(nick_check));
+        
+        /*
         if ( email_com && nick_com && pass_com && $('.check_box:checked').length == 2)
         {
             $('.account_submit').removeAttr('disabled');
@@ -1136,11 +1143,17 @@ $(function form_check (fo)
             $('.account_submit').attr('disabled', 'disabled');
             $('.account_submit').css('background', '#c1c1c1');
         }
+        */
     });
 
     $(document).on("keydown keyup click blur ready mouseenter", function () //submit able event
     {
-        //console.log($('.check_box:checked').length == 2);
+        console.log(email_com == true);
+        console.log(pass_com == true);
+        console.log(nick_com == true);
+        console.log($('.check_box:checked').length == 2);
+        console.log(!!('#nick_id').match(nick_check));
+
         if (email_com && nick_com && pass_com && $('.check_box:checked').length == 2) {
             $('.account_submit').removeAttr('disabled');
             $('.account_submit').css('background', '#47bf7e');
@@ -1149,16 +1162,7 @@ $(function form_check (fo)
             $('.account_submit').css('background', '#c1c1c1');
         }
 
-        if (!nick_check.test($('#nick_id').val())) //영어,숫자 외 불가
-        {
-            $('#nick_id').css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
-            $('#nick_id').next().removeClass();
-            $('#nick_id').next().addClass('fa fa-times');
-
-            $('#nick_check').text('you can write only english and number').show();
-
-            nick_com = false;
-        }
+        
         if (!$('#now_pass_id').attr('disabled')) { //account setting page submit bt disable event
             if (now_pass_com && pass_com) {
                 $('#submit_bt').removeAttr('disabled');
@@ -1169,7 +1173,7 @@ $(function form_check (fo)
             };
         }
 
-        if (email_com && $('.find_submit').attr('class') == 'find_submit')
+        if (email_com && $('.find_submit').attr('class') == 'find_submit') //account setting
         {
             $('.find_submit').removeAttr('disabled');
             $('.find_submit').css('background', '#48cfad');

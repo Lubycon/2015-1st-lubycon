@@ -132,6 +132,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ajax", "ajax", "{A5A8174F-E
 		php\ajax\upload_img.php = php\ajax\upload_img.php
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "database", "database", "{47A72F42-267F-46A1-83F9-784BC9FB8B66}"
+	ProjectSection(SolutionItems) = preProject
+		php\database\database_class.php = php\database\database_class.php
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -151,5 +156,6 @@ Global
 		{79EDE1A8-A22F-45A4-8EBB-14D24588F03D} = {89F53E10-E9B7-495E-82C7-F2122711B934}
 		{95A2715A-1E5C-45E2-A385-A4B1032CE2F9} = {DAEE0839-5F41-492F-95AB-58A345B7C2AE}
 		{A5A8174F-E088-43E5-BDAE-1CF2E3FCFFAE} = {DAEE0839-5F41-492F-95AB-58A345B7C2AE}
+		{47A72F42-267F-46A1-83F9-784BC9FB8B66} = {DAEE0839-5F41-492F-95AB-58A345B7C2AE}
 	EndGlobalSection
 EndGlobal
