@@ -69,6 +69,8 @@ $(function () //account setting script
             $('#now_pass_id , #pass_id ,#re_pass_id').attr('disabled', 'disabled');
             $('#Change_pass').text('Change Password');
             $('#Change_pass').css({ 'background': '#48CFAD ', 'margin-left': '75px' });
+            $('#now_pass_id , #pass_id ,#re_pass_id').val('').css({ 'border-left': '2px solid #D5D5D5', 'width': '190px' }).next().removeClass();
+            $('#pass_check, #now_pass_check').text('').show();
         }
     });
     

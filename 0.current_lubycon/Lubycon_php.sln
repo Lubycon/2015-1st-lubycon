@@ -85,6 +85,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "css", "css", "{89F53E10-E9B
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "js", "js", "{F4657569-6E1C-48D8-8BE1-96250A2CB5CA}"
 	ProjectSection(SolutionItems) = preProject
+		js\account.js = js\account.js
 		js\account_setting.js = js\account_setting.js
 		js\community.js = js\community.js
 		js\d3.min.js = js\d3.min.js

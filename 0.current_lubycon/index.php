@@ -29,6 +29,7 @@
     <script type="text/javascript" src="js/selectordie.demo.js"></script> <!-- selector decoration js -->
     <script type="text/javascript" src="js/slider.js"></script><!--slider plugin-->
     <script type="text/javascript" src="js/index.js"></script> <!-- index file js -->
+    <script type="text/javascript" src="js/account.js"></script> <!-- account file js -->
 
     <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -144,7 +145,7 @@
         </nav>	<!--end main_gnb-->
 
         <!-- before sign in -->
-        <div id="signin_bt">
+        <div id="signin_bt" style="display:block;">
             <div id="signin">
                 <span class="partition">|</span>
                 <p class="signicon"><i class="fa fa-unlock-alt fa-lg"></i></p>
