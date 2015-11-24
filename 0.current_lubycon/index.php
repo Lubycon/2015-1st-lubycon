@@ -14,7 +14,7 @@
 
     <title>LUBYCON</title>
 
-    <link rel="shortcut icon" href="CH/img/logo/lubycon.ico" /> <!-- favicon -->
+    <link rel="shortcut icon" href="./ch/img/logo/lubycon.ico" /> <!-- favicon -->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source Sans Pro:200,400" type="text/css" />	<!--google web font-->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" /> <!--icon font-->
 
@@ -29,6 +29,7 @@
     <script type="text/javascript" src="js/selectordie.demo.js"></script> <!-- selector decoration js -->
     <script type="text/javascript" src="js/slider.js"></script><!--slider plugin-->
     <script type="text/javascript" src="js/index.js"></script> <!-- index file js -->
+    <script type="text/javascript" src="js/account.js"></script> <!-- account file js -->
 
     <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -90,7 +91,7 @@
     <header id="main_header">
         <h1>
             <a href="./index.php">
-                <img src="CH/img/logo/lubycon_logo.svg" width="176" height="40" alt="Lubycon logo" />
+                <img src="./ch/img/logo/lubycon_logo.svg" width="176" height="40" alt="Lubycon logo" />
             </a>
             <span id="beta_version">BETA</span><!--beta mark-->
         </h1><!--LUBYCON LOGO-->
@@ -144,7 +145,7 @@
         </nav>	<!--end main_gnb-->
 
         <!-- before sign in -->
-        <div id="signin_bt">
+        <div id="signin_bt" style="display:block;">
             <div id="signin">
                 <span class="partition">|</span>
                 <p class="signicon"><i class="fa fa-unlock-alt fa-lg"></i></p>
@@ -174,7 +175,7 @@
         <div id="after_signin">
             <a href="./index.php?1=personal_page&2=personal_page&3=main&4=my_contents">
                 <span class="partition">|</span>
-                <figure><img src="ch/img/no_img/no_img_user1.jpg" alt="profile_img" /></figure>
+                <figure><img src="./ch/img/no_img/no_img_user1.jpg" alt="profile_img" /></figure>
                 <span id="user_id">Admin_User</span>
                 <i class="fa fa-angle-down"></i>
             </a>

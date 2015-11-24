@@ -1,4 +1,4 @@
-﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -9,7 +9,7 @@
 		<tbody>
 			<tr id="mail_lubycon_logo">
 				<td>
-					<img src="../CH/img/resist_mail/mail_header.png" class="mail_header" >
+					<img src="../ch/img/resist_mail/mail_header.png" class="mail_header" >
 				</td>
 			</tr>
         	<tr id="mail_hello">
@@ -35,7 +35,7 @@
             <tr id="confirm_bt">
                 <td align="center">
                 	<a href="#">
-                		<img src="../CH/img/resist_mail/mail_bt.png">
+                		<img src="../ch/img/resist_mail/mail_bt.png">
                     </a>
                 </td>
             </tr>

@@ -130,7 +130,7 @@
                     ?>
                     <div class="designer_info">
                         <figure>
-                            <img src="ch/img/no_img/no_img_user1.jpg">
+                            <img src="./ch/img/no_img/no_img_user1.jpg">
                         </figure>
                         <h4><?=$username?></h4>
                         <h5><i class="fa fa-home"></i><?=$usercity?>, <?=$usercountry?></h5>

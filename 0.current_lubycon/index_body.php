@@ -95,7 +95,16 @@
                     <ul>';
                         for( $k=1 ; $k<11 ; $k++ ){ //loop slide img call
                         echo '<li class="load_view">
-                                    <img src="ch/img/slider/slider'.$i.'/'.$k.'.png" alt="thumbnail_photo_'.$k.'">
+                                <a href="./index.php?1=contents&2=contents_view&3=';
+                                switch($i){
+                                    case "1" : echo "artwork"; break;
+                                    case "2" : echo "vector"; break;
+                                    case "3" : echo "3d"; break;
+                                    default : echo ""; break;
+                                };
+                                echo '">
+                                <img src="./ch/img/slider/slider'.$i.'/'.$k.'.png" alt="thumbnail_photo_'.$k.'">
+                                </a>
                               </li>';
                         }
                 echo'</ul>
