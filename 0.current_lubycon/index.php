@@ -145,7 +145,7 @@
         </nav>	<!--end main_gnb-->
 
         <!-- before sign in -->
-        <div id="signin_bt" style="display:block;">
+        <div id="signin_bt">
             <div id="signin">
                 <span class="partition">|</span>
                 <p class="signicon"><i class="fa fa-unlock-alt fa-lg"></i></p>
