@@ -290,17 +290,26 @@ $(document).ready(function(){
             cache: false,
             data: form_data,//user_id, user_pw, is_ajax
             success: function(response) {
+                react = response;
                 console.log(response);
-                if(response==="true"){
+                if(react==="true"){
                     $('#after_signin').show();
                     $('#addcontent_bt').show();
                     $('#signin_bt').hide();
+                    react="waiting";
+                    console.log(react);
 
-                }else if(response==="false"){
+                }else if(react==="false"){
                     setInterval(function(){
                         $("#login_box").attr("class","shake animated");
                     },10);
+                    react="waiting";
+                    console.log(react);
                     return;
+                }
+                else{
+                    console.log(react);
+                    console.log("exception");
                 }
             },
             error: function(response) {
