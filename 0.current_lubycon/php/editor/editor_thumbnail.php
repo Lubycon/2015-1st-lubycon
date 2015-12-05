@@ -1,4 +1,12 @@
 <script src="js/jquery.form.min.js"></script>
+<?php   
+        //it's follow contents_card.php infomation
+        $username = "Admin_User";
+        $contents_name = "Contents_name";
+        $price = "Free";
+        $contents_thumbnail_url = "./ch/img/no_img/no_img_user1.jpg"; // it's need to change ajax
+?>
+
 
 <button class="editor_popup_cancel"><i class="fa fa-times"></i></button>
 <header id="tnail_header">Thumbnail Image</header>

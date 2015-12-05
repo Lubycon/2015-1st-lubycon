@@ -1,3 +1,9 @@
+<?php
+    $contents_cate;
+    $contents_tag;
+    $contents_desc = "write your contents description";
+    $contents_price_setting;
+?>
 <button class="editor_popup_cancel"><i class="fa fa-times"></i></button>
 <header id="setting_header">Settings</header>
 <div id="total_set">
@@ -6,6 +12,7 @@
 	    	<p class="setting_title">Categories (max 3 categorys)</p>
 	    	<div class="set_con">
                 <form>
+                    <!-- need save user select category max value = 3 -->
                     <select data-placeholder="Choise your contents categories" style="width:100%;" class="chosen-select" multiple tabindex="8">
                         <option>Car</option>
                         <option>People</option>
@@ -25,6 +32,7 @@
 	    	<p class="setting_title">Tags</p>
             <div class="set_con">
                 <form>
+                    <!-- need to save user select tag max value = infinite -->
                     <select data-placeholder="Choose your contents categorys" style="width:100%;" class="chosen-select" multiple tabindex="8">
                         <option>Car</option>
                         <option>People</option>
@@ -42,7 +50,7 @@
 	    </div>
 	    <div id="des_editor">
 	    	<p class="setting_title">Description</p>
-	    	<textarea id="setting_des_text"></textarea>
+	    	<textarea id="setting_des_text"><?=$contents_desc?></textarea>
 	    </div>
 	</div>
 	<!--left_set end-->
@@ -50,10 +58,12 @@
 	    <div id="price_editor">
 	    	<p class="setting_title">Price</p>
 	    	<select class="basic_filter">
+                <!-- need to save user select obtion -->
                 <option value="Free">Free</option>
                 <option value="FFA">Free for personal use</option>
                 <option value="Paid">Paid</option>
             </select>
+            <!-- need to save contents price value -->
             <input type="text" id="price_input" disabled="disabled" />
 	    </div>
 	    <div id="copyright_editor">
@@ -65,6 +75,7 @@
 </div>
 <!--total_set end-->
 <div class="buttons_pop">
+    <!-- need to submit to here -->
     <button class="final_upload_bt" id="upload_final">Upload</button>
     <button class="cancel_bt" id="back_bt_editor">Back</button>
 </div>

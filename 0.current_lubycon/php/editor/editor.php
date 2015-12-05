@@ -4,6 +4,23 @@
 <script type="text/javascript" src="js/editor.js"></script>
 <script type="text/javascript" src="js/spectrum.js"></script>
 <!-- editor css -->
+
+<?php
+//php variable setting
+    //$upload_file = user upload file (i guess only ziped file)
+    //$upload_preview_file = user upload preview image files (user can multiple images)
+    //$upload_preview_url = user upload preview image url (for easy call)
+    
+    $uploaded_file_name = "Lorem ipsum.zip";
+    $uploaded_file_inside_list = array("ipsum.psd","ipsum.jpg","ipsum.ai","idotdart.bboy");
+    $uploaded_file_size = "1.2TB";
+
+    $contents_subject = "Your Contents Name";
+    $contents_article;
+?>
+
+
+
 <div id="popup_wrap">
     <div id="next_pop_body" class="fadeInDown animated"></div><!--go to thumbnail-->
 </div>
@@ -29,6 +46,7 @@
     <aside id="editor_aside">
         <div id="editor_aside_wrap">
             <ol>
+            <!--need php and ajax to file upload and return infomation-->
                 <li id="editor_upload_file">
                     <i class="fa fa-cloud-upload"></i>
                     <span class="tooltip_bt" id="file_tooltip">Upload file to server</span><!--tooltip-->
@@ -38,9 +56,7 @@
                     <span class="tooltip_bt" id="image_tooltip">Upload preview image</span><!--tooltip-->
                 </li><!--upload preview img bt-->
             </ol>
-            
-            
-            
+
             <input type="file" id="upload_file_input"/>
             <input type="file" name="images[]" id="preview_upload_input" accept="image/*" multiple />
             
@@ -63,23 +79,24 @@
                 </li>
             </ol>
             
-
+            <!-- need ajax show uploaded file zip and inside zip files-->
             <div id="file_info">
                 <header id="info_header">File info<i class="fa fa-angle-down" id="info_toggle"></i></header>
                 <section id="files">
                     <article id="file_name"><i class="fa fa-chevron-circle-down"></i>
-                        <p><i class="fa fa-folder"></i>Lorem ipsum.zip</p>
+                        <p><i class="fa fa-folder"></i><?=$uploaded_file_name?></p>
                     </article>
                     <ul>
-                        <li><i class="fa fa-file"></i>ipsum.psd</li>
-                        <li><i class="fa fa-file"></i>ipsum.ai</li>
-                        <li><i class="fa fa-file"></i>ipsum.html</li>
-                        <li><i class="fa fa-file"></i>ipsum.css</li>
-                        <li><i class="fa fa-circle"></i><i class="fa fa-file"></i>ipsum.js</li>
+                        <?php
+                            for( $i = 0 ; $i < count($uploaded_file_inside_list) ; $i++ )
+                            {
+                                echo "<li>".$uploaded_file_inside_list[$i]."</li>";
+                            }
+                        ?>
                     </ul>
                 </section>
                 <footer id="storage">
-                    <p>1.2 MB</p>
+                    <p><?=$uploaded_file_size?></p>
                 </footer>
             </div>
         </div>
@@ -97,11 +114,15 @@
         <!-- drag able script aply code -->
 
         <section id="editor_section">
-            <p>
-                <input id="editor_content_name" type="text" value="Your Contents Name" />
-            </p>
-            <ul id="editor_preview_box">
-            </ul>
+            <form action="" method="post">
+                <p>
+                    <input id="editor_content_name" type="text" value="<?=$contents_subject?>" name="contents_subject" />
+                </p>
+                <?php
+                //here is contents_article need save here area's html and css code
+                echo '<ul id="editor_preview_box"></ul>';
+                ?>
+            </form>
         </section>
     </section>
 </section>

@@ -3,6 +3,7 @@
         $username = "Admin_User";
         $contents_name = "Contents_name";
         $price = "Free";
+        $contents_thumbnail_url = "./ch/img/no_img/no_img_user1.jpg";
         $like_num = 0;
         $view_num = 0;
         $comment_num = 0;
@@ -18,7 +19,7 @@
                 <h5><?=$price?></h5>
             </div>
             <a href="./index.php?1=personal_page&2=personal_page&3=main">
-                <img src="./ch/img/no_img/no_img_user1.jpg" alt="artist photo" />
+                <img src="<?=$contents_thumbnail_url?>" alt="artist photo" />
             </a>
             <span class="by">by</span>
             <a href="./index.php?1=personal_page&2=personal_page&3=main">
