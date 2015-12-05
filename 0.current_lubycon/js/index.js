@@ -161,7 +161,6 @@ $(function () //language change bt slide and change
 $(function () //sign in toggle event
 {
     $('#signin_bt').click(function () {
-        $('#login_box').stop().fadeIn(150);
         $('#login_box').attr("class","bounceInDown animated");
         $("#login_box").css("display","block");
         $("#login_box").focus();
@@ -271,9 +270,7 @@ $(function(){
 /////////////////////////////////////////////////////////
 $(document).ready(function(){
     $("#login_input").on('keypress', function(e) {
-        console.log("keypress_true");
         if(e.which == 13) {// 13 == enter key@ascii
-            console.log("if true");
             $("#login_lubycon").click();
         };//if end
     });//keypress end
@@ -284,6 +281,8 @@ $(document).ready(function(){
             user_pw: $("#login_pass").val(),//input pw
             is_ajax: 1
         };
+        react="wating";
+        console.log(react);
         $.ajax({
             type: "POST",
             url: "php/ajax/login_check.php",
@@ -298,14 +297,13 @@ $(document).ready(function(){
                     $('#signin_bt').hide();
                     react="waiting";
                     console.log(react);
-
                 }else if(react==="false"){
-                    setInterval(function(){
+                    setTimeout(function(){
                         $("#login_box").attr("class","shake animated");
                     },10);
                     react="waiting";
                     console.log(react);
-                    return;
+                    return false;
                 }
                 else{
                     console.log(react);
@@ -316,7 +314,6 @@ $(document).ready(function(){
                 console.log("ajax error");
             }
         });
-        return false;
     });
 });    //ajax
 /////////////////////////////////////////////////////////
