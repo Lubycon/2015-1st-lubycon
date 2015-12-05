@@ -22,8 +22,7 @@
     <link href="css/layout/common.css" rel="stylesheet" type="text/css" />  <!-- common css -->  
     <link href="css/selectordie.css" rel="stylesheet" type="text/css" /> <!-- selector decoration css -->
     <link href="css/layout/animate.css" rel="stylesheet" type="text/css" /><!--animation for objects-->
-    <link href="css/slider.css" rel="stylesheet" type="text/css">
-    <link href="/path/to/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />
+    <link href="css/slider.css" rel="stylesheet" type="text/css" /><!--slider css-->
 
     <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script> <!-- jquery library -->
     <script type="text/javascript" src="js/selectordie.min.js"></script> <!-- selector decoration js -->
