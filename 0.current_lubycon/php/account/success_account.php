@@ -12,15 +12,15 @@
     <meta name="keywords" content="font ,vector, 3D design, community, designers, engineer, 3D printer, Illustration, Lubycon" />
 	
 	<link rel="shortcut icon" href="./ch/img/logo/lubycon.ico" />  <!-- favicon -->
-	<link rel="stylesheet" href="css/success_account.css">
+	<link rel="stylesheet" href="../../css/success_account.css">
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
 	<link href='http://fonts.googleapis.com/css?family=Source Sans Pro:200,400' rel='stylesheet' type='text/css'>
 
-	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script> <!-- jquery library -->
-    <script type="text/javascript" src="js/success_account.js"></script>
+	<script type="text/javascript" src="../../js/jquery-1.11.3.min.js"></script> <!-- jquery library -->
+    <script type="text/javascript" src="../../js/success_account.js"></script>
 
 </head>
-<body ondragstart="return false" onselectstart="return false">
+<body>
 	<article id="thanks">
 		<p>Welcome !</p>
 	</article>

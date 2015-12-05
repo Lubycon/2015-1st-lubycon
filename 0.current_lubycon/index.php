@@ -23,6 +23,7 @@
     <link href="css/selectordie.css" rel="stylesheet" type="text/css" /> <!-- selector decoration css -->
     <link href="css/layout/animate.css" rel="stylesheet" type="text/css" /><!--animation for objects-->
     <link href="css/slider.css" rel="stylesheet" type="text/css">
+    <link href="/path/to/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />
 
     <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script> <!-- jquery library -->
     <script type="text/javascript" src="js/selectordie.min.js"></script> <!-- selector decoration js -->
@@ -30,6 +31,7 @@
     <script type="text/javascript" src="js/slider.js"></script><!--slider plugin-->
     <script type="text/javascript" src="js/index.js"></script> <!-- index file js -->
     <script type="text/javascript" src="js/account.js"></script> <!-- account file js -->
+    
 
     <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>

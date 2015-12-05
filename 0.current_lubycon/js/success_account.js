@@ -1,4 +1,4 @@
-
+var timer = 0;
 $(function(){
 	////////////////////////////////////////////first animation start
 	$("#thanks").animate({opacity:1},1000);//1s
@@ -24,13 +24,18 @@ $(function(){
 
 
 function go_index(){
-	location.href = "index.html";
+	//location.replace("../../index.php");
+	location.href = "../../index.php";//just use for debuging
 };
 
 
 
 function remove_rect(){
-	$(".timer_rect:last").removeClass("timer_rect")
+	$(".timer_rect:last").removeClass("timer_rect");
+	timer++;
+	if(timer==2){
+		clearInterval(timer);
+	}
 };
 
 

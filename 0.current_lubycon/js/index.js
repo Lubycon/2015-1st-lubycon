@@ -611,7 +611,8 @@ $(document).scroll(function (){
     $("#footer").offset().top 
     - $(".con_right").height() 
     - $("#navsel").height() 
-    - $("#main_figure").height(); 
+    - $("#main_figure").height();
+    var bookmark_position = $("#comment_box").offset().top - $(".con_right").height();
 
     if($(document).find(".con_right")){ 
         if ($(document).scrollTop() > 184 && $(document).scrollTop() < scrollend){
@@ -619,10 +620,11 @@ $(document).scroll(function (){
         }
         else if($(document).scrollTop() > scrollend){
             $(".con_right").css({ "position": "absolute", "top": banner_position + "px" });
-            $(".con_right").css({ "height" : $(window).height() + "px"})
+            $(".con_right").css({ "height" : $(window).height() + "px"});
         }
         else {
             $(".con_right").css({ "position": "absolute", "top": "0px" });
+            $("#floating_bt").css({ "position": "absolute", "top": "100px"});
         };
     }
     else{
