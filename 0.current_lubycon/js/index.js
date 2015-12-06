@@ -637,7 +637,6 @@ $(document).scroll(function (){
     - $(".con_right").height() 
     - $("#navsel").height() 
     - $("#main_figure").height();
-    var bookmark_position = $("#comment_box").offset().top - $(".con_right").height();
 
     if($(document).find(".con_right")){ 
         if ($(document).scrollTop() > 184 && $(document).scrollTop() < scrollend){
