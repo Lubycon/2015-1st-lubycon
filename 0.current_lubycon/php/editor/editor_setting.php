@@ -1,19 +1,12 @@
-<?php
-    $contents_cate;
-    $contents_tag;
-    $contents_desc = "write your contents description";
-    $contents_price_setting;
-?>
-<button class="editor_popup_cancel"><i class="fa fa-times"></i></button>
+<button type="button" class="editor_popup_cancel"><i class="fa fa-times"></i></button>
 <header id="setting_header">Settings</header>
 <div id="total_set">
 	<div id="left_set">
 	    <div id="cate_editor">
 	    	<p class="setting_title">Categories (max 3 categorys)</p>
 	    	<div class="set_con">
-                <form>
                     <!-- need save user select category max value = 3 -->
-                    <select data-placeholder="Choise your contents categories" style="width:100%;" class="chosen-select" multiple tabindex="8">
+                    <select data-placeholder="Choise your contents categories" style="width:100%;" class="chosen-select" multiple tabindex="8" name="user_selected_category[]">
                         <option>Car</option>
                         <option>People</option>
                         <option>Book</option>
@@ -25,15 +18,13 @@
                         <option>Font</option>
                         <option>3D Contents</option>
                     </select>
-                </form>
 	    	</div>
 	    </div>
 	    <div id="tag_editor">
 	    	<p class="setting_title">Tags</p>
             <div class="set_con">
-                <form>
                     <!-- need to save user select tag max value = infinite -->
-                    <select data-placeholder="Choose your contents categorys" style="width:100%;" class="chosen-select" multiple tabindex="8">
+                    <select data-placeholder="Choose your contents categorys" style="width:100%;" class="chosen-select" multiple tabindex="8" name="user_selected_tag[]">
                         <option>Car</option>
                         <option>People</option>
                         <option>Book</option>
@@ -45,19 +36,18 @@
                         <option>Font</option>
                         <option>3D Contents</option>
                     </select>
-                </form>
 	    	</div>
 	    </div>
 	    <div id="des_editor">
 	    	<p class="setting_title">Description</p>
-	    	<textarea id="setting_des_text"><?=$contents_desc?></textarea>
+	    	<textarea id="setting_des_text" name="setting_desc"><?=$contents_desc?></textarea>
 	    </div>
 	</div>
 	<!--left_set end-->
 	<div id="right_set">
 	    <div id="price_editor">
 	    	<p class="setting_title">Price</p>
-	    	<select class="basic_filter">
+	    	<select class="basic_filter" name="setting_price_option">
                 <!-- need to save user select obtion -->
                 <option value="Free">Free</option>
                 <option value="FFA">Free for personal use</option>
@@ -76,8 +66,8 @@
 <!--total_set end-->
 <div class="buttons_pop">
     <!-- need to submit to here -->
-    <button class="final_upload_bt" id="upload_final">Upload</button>
-    <button class="cancel_bt" id="back_bt_editor">Back</button>
+    <input type="submit" class="final_upload_bt" id="upload_final" value="Upload" />
+    <button type="button" class="cancel_bt" id="back_bt_editor">Back</button>
 </div>
 
 <!-- multi select box css -->

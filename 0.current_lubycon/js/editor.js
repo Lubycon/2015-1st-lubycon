@@ -44,6 +44,33 @@ $(function() {
 /////////////////////////////////////////////////////////
 //      editor nav start
 /////////////////////////////////////////////////////////
+
+
+function editor_gnv_select(gnv_sel)
+{
+    $("#editor_gnv ol li").removeClass();
+    switch (gnv_sel)
+    {
+        case "edit":
+            $("#editor_gnv ol li:nth-child(1)").addClass("editor_selected_gnv");
+            break;
+        case "call_thumb":
+            $("#editor_gnv ol li:nth-child(3)").addClass("editor_selected_gnv");
+            break;
+        case "call_setting":
+            $("#editor_gnv ol li:nth-child(5)").addClass("editor_selected_gnv");
+            break;
+        default :
+            $("#editor_gnv ol li:nth-child(1)").addClass("editor_selected_gnv");
+            break;
+    }
+};
+/* gnv function
+$(document).ready(function () {
+    editor_gnv_select("setting");
+});
+*/
+
 $(function () {
     $('#editor_aside ol li').hover(function () //aside tools mouse hover event
     {
@@ -117,7 +144,7 @@ $(function () {
                 var template = '<li class="preview_img">' +
                                '<div id="contents_div" class="contents_div">' +
                                '<img src="' + e.target.result + '">' +
-                               '<button class="con_delete_bt"><i class="fa fa-times"></i></button>' +
+                               '<button type="button" class="con_delete_bt"><i class="fa fa-times"></i></button>' +
                                '</div>' +
                                '</li>'
 
@@ -144,7 +171,7 @@ $(function () {
         var embed_midea =
             '<li class="embed_contents">' +
             $('#embed_textarea').val() +
-            '<button class="con_delete_bt"><i class="fa fa-times"></i></button>' +
+            '<button type="button" class="con_delete_bt"><i class="fa fa-times"></i></button>' +
             '</li>'
 
         $('#editor_preview_box').append(embed_midea);
@@ -164,8 +191,8 @@ $(function () {
         var text_editor =
             '<li class="text_editor">' +
                     '<div id="text_contents_div" class="contents_div">' +
-                        '<button class="con_delete_bt"><i class="fa fa-times"></i></button>' +
-                        '<textarea class="editor_body_text"></textarea>' +
+                        '<button type="button" class="con_delete_bt"><i class="fa fa-times"></i></button>' +
+                        '<textarea class="editor_body_text" name="contents_article[]"></textarea>' +
                         '<div class="textarea_editor">' +
                             '<div class="select_box">' +
                                 '<select class="basic">' +
@@ -179,10 +206,10 @@ $(function () {
                                     '<option value="72pt">72pt</option>' +
                                 '</select>' +
                             '</div>' +
-                            '<button class="text_bold"><i class="fa fa-bold"></i></button>' +
-                            '<button class="text_italic"><i class="fa fa-italic"></i></button>' +
-                            '<button class="text_underline"><i class="fa fa-underline"></i></button>' +
-                            '<button class="text_strike"><i class="fa fa-strikethrough"></i></button>' +
+                            '<button type="button" class="text_bold"><i class="fa fa-bold"></i></button>' +
+                            '<button type="button" class="text_italic"><i class="fa fa-italic"></i></button>' +
+                            '<button type="button" class="text_underline"><i class="fa fa-underline"></i></button>' +
+                            '<button type="button" class="text_strike"><i class="fa fa-strikethrough"></i></button>' +
                             '<div class="color_picker">' +
                                 '<div class="selected_color"></div>' +
                                 '<ul><!--color list-->' +
@@ -268,9 +295,9 @@ $(function () {
                                     '<li>#4c0092</li>' +
                                 '</ul>' +
                             '</div>' +
-                            '<button class="align_left"><i class="fa fa-align-left"></i></button>' +
-                            '<button class="align_center"><i class="fa fa-align-center"></i></button>' +
-                            '<button class="align_right"><i class="fa fa-align-right"></i></button>' +
+                            '<button type="button" class="align_left"><i class="fa fa-align-left"></i></button>' +
+                            '<button type="button" class="align_center"><i class="fa fa-align-center"></i></button>' +
+                            '<button type="button" class="align_right"><i class="fa fa-align-right"></i></button>' +
                         '</div>' +
                     '</div>' +
                 '</li>'
@@ -457,6 +484,8 @@ $(function () {
         var check_id = $(this).attr('id');
         console.log(check_id);
 
+        editor_gnv_select(check_id);
+
         $.ajax({
             type: "POST",
             url: "php/ajax/editor_ajax.php",
@@ -483,6 +512,10 @@ $(function () {
                     size: 5
                 });
                 $('.dark_overlay').fadeIn(300);
+
+                /* change card title to user type text */
+                $(".contents_title").text($("#editor_content_name").val());
+
             }
         });
     });
@@ -490,10 +523,12 @@ $(function () {
     $('.dark_overlay').click(function () {
         $('.dark_overlay').stop().fadeOut(300);
         $('#next_pop_body').stop().fadeOut(300).html('');
+        editor_gnv_select("edit");
     });
     $(document).on('click', '.cancel_bt, .editor_popup_cancel', function () {
         $('.dark_overlay').stop().fadeOut(300);
         $('#next_pop_body').stop().fadeOut(300).html('');
+        editor_gnv_select("edit");
     })
     $(document).on("click","#back_bt_editor", function(){
         //please add function for go back(ajax);

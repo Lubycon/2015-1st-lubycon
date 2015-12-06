@@ -14,13 +14,11 @@
     $uploaded_file_name = "Lorem ipsum.zip";
     $uploaded_file_inside_list = array("ipsum.psd","ipsum.jpg","ipsum.ai","idotdart.bboy");
     $uploaded_file_size = "1.2TB";
-
-    $contents_subject = "Your Contents Name";
-    $contents_article;
 ?>
 
 
 
+<form method="post" action="./php/editor/test.php">
 <div id="popup_wrap">
     <div id="next_pop_body" class="fadeInDown animated"></div><!--go to thumbnail-->
 </div>
@@ -28,9 +26,9 @@
 <div id="embed_popup">
     <p>Embed Media</p>
     <textarea id="embed_textarea"></textarea>
-    <button class="mic_next_bt">Embed</button>
-    <button class="cancel_bt">Cancel</button>
-    <button class="editor_popup_cancel"><i class="fa fa-times"></i></button>
+    <button type="button" class="mic_next_bt">Embed</button>
+    <button type="button" class="cancel_bt">Cancel</button>
+    <button type="button" class="editor_popup_cancel"><i class="fa fa-times"></i></button>
 </div>
 <nav id="editor_gnv">
     <ol>
@@ -40,7 +38,7 @@
         <li>></li>
         <li>3.Setting</li>
     </ol>
-    <button class="next_bt" id="call_thumb">Next</button>
+    <button type="button" class="next_bt" id="call_thumb">Next</button>
 </nav>
 <section id="editor_inbody">
     <aside id="editor_aside">
@@ -114,15 +112,14 @@
         <!-- drag able script aply code -->
 
         <section id="editor_section">
-            <form action="" method="post">
                 <p>
-                    <input id="editor_content_name" type="text" value="<?=$contents_subject?>" name="contents_subject" />
+                    <input id="editor_content_name" type="text" value="Your Contents name" name="contents_subject" />
                 </p>
                 <?php
                 //here is contents_article need save here area's html and css code
                 echo '<ul id="editor_preview_box"></ul>';
                 ?>
-            </form>
         </section>
     </section>
 </section>
+</form>

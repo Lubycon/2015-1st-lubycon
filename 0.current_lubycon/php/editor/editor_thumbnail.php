@@ -8,7 +8,7 @@
 ?>
 
 
-<button class="editor_popup_cancel"><i class="fa fa-times"></i></button>
+<button type="button" class="editor_popup_cancel"><i class="fa fa-times"></i></button>
 <header id="tnail_header">Thumbnail Image</header>
 <div id="work_space">
     <div id="tnail_preview">
@@ -31,6 +31,6 @@
     <!--tnail_work end-->
 </div>
 <div class="buttons_pop">
-    <button class="next_bt" id="call_setting">Next</button>
-    <button class="cancel_bt" id="tnail_cancel">Cancel</button>
+    <button type="button" class="next_bt" id="call_setting">Next</button>
+    <button type="button" class="cancel_bt" id="tnail_cancel">Cancel</button>
 </div>
