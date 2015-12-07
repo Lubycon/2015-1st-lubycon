@@ -265,7 +265,7 @@ $(document).on("blur", function () {
 
 //----------------------------end creat account password logic----------------------------
 
-var abuse_name = new Array('sex', 'bitch', 'pussy', 'cunt', 'fuck', 'fucking','dart');
+var abuse_name = new Array('sex', 'bitch', 'pussy', 'cunt', 'fuck', 'fucking','zepot');
 
 //----------------------------creat account nick name logic----------------------------
 /////////////////////////////////////////////////////////
