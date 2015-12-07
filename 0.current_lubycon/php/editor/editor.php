@@ -83,7 +83,7 @@
                 <header id="info_header">File info<i class="fa fa-angle-down" id="info_toggle"></i></header>
                 <section id="files">
                     <article id="file_name"><i class="fa fa-chevron-circle-down"></i>
-                        <p><i class="fa fa-folder"></i><?=$uploaded_file_name?></p>
+                        <p id="file_info_filename"><i class="fa fa-folder"></i><?=$uploaded_file_name?></p>
                     </article>
                     <ul>
                         <?php

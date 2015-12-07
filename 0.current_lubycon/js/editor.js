@@ -131,7 +131,7 @@ $(function () {
 
     function upload_File_ajax()
     {
-        var form = $("form")[0];
+        var form = $("#editor_form")[0];
         var formData = new FormData(form);
         $.ajax
         ({
@@ -144,6 +144,10 @@ $(function () {
             success: function (args)
             {
                 console.log('upload succece');
+                //console.log(args); arg is uploaded file name
+                $("#file_info_filename").text(args);
+                alert(args.size);
+                file_info_slidedown();
             },
             error: function (args)
             {
