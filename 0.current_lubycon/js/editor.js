@@ -119,6 +119,42 @@ $(function () {
         $('#upload_file_input').click();
     });
 
+
+    //ajax start
+    $(function ()
+    {
+        $('#upload_file_input').change(function ()
+        {
+            upload_File_ajax();
+        });
+    });
+
+    function upload_File_ajax()
+    {
+        var form = $("form")[0];
+        var formData = new FormData(form);
+        $.ajax
+        ({
+            url: "php/ajax/editor_fileupload.php",
+            processData: false,
+            contentType: false,
+            data: formData,
+            type: "POST",
+            cache: false,
+            success: function (args)
+            {
+                console.log('upload succece');
+            },
+            error: function (args)
+            {
+                console.log('upload fail');
+                $('#editor_form').trigger("reset");
+            },
+        })
+    }
+
+
+
     /////////////////////////////////////////////////////////
     //      editor_upload_file end
     /////////////////////////////////////////////////////////
@@ -482,7 +518,7 @@ $(function () {
     /////////////////////////////////////////////////////////
     $(document).on('click', '.next_bt', function () {
         var check_id = $(this).attr('id');
-        console.log(check_id);
+        //console.log(check_id);
 
         editor_gnv_select(check_id);
 
