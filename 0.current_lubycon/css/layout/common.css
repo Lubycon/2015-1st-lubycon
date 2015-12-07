@@ -1820,7 +1820,7 @@ h1 /* main logo */ {
             color:#444444;
         }
         .contents_disc .bookmark_bt{
-            color:#c1c1c1;
+            color:#cccccc;
             font-size:30px;
             margin-top:11px;
             float:right;
@@ -1832,7 +1832,7 @@ h1 /* main logo */ {
     line-height: 80px;
     border: none;
     border-radius: 50%;
-    background: #c1c1c1;
+    background: none;
     display: block;
     margin: 0px auto;
     margin-top: 50px;
@@ -1840,7 +1840,7 @@ h1 /* main logo */ {
     cursor:pointer;
 }
     .like_bt i {
-        color: #fff;
+        color: #cccccc;
         font-size: 32px;
         vertical-align: middle;
     }
@@ -1850,7 +1850,7 @@ h1 /* main logo */ {
     line-height: 80px;
     border: none;
     border-radius: 50%;
-    background: #ec6446;
+    background: none;
     display: block;
     margin: 0px auto;
     margin-top: 50px;
@@ -1858,7 +1858,7 @@ h1 /* main logo */ {
     cursor:pointer;
 }
     .like_bt_active i{
-        color:#fff;
+        color:#ec6446 !important;
         font-size: 32px;
         vertical-align: middle;
     }

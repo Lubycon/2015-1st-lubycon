@@ -110,50 +110,52 @@
 
     #floating_bt{
         position: absolute;
-        margin-top: 18px;
-        right: 280px;
+        background: rgba(0,0,0,0.5);
+        border-radius: 3px;
+        margin-top: 9px;
+        right: 320px;
         z-index: 1;
+        overflow: hidden;
+        display:none;
     }
         .contents_view #bookmark{
-            width:60px;
-            height:60px;
-            line-height: 59px;
-            background:#1f2e43;
+            width:40px;
+            height:40px;
+            line-height: 39px;
             top:0px;
-            border-radius: 50%;
+            border: none;
+            display: inline-block;
             text-align: center;
-            box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.3);
+            vertical-align: top;
             z-index: 1;
         }
             .contents_view #bookmark #bookmark_inner_bt{
-                font-size: 30px;
+                font-size: 26px;
+                margin-left: 4px;
                 vertical-align:middle;
-                color:#c1c1c1;
+                color:#cccccc;
                 cursor:pointer;
             }
 
         #con_like_bt{
-            width:60px;
-            height:60px;
-            line-height: 57px;
+            width:40px;
+            height:40px;
+            line-height:40px;
             
             border:none;
-            display:block;
+            display:inline-block;
+            border-radius: 0px !important;
             
-            border-radius:50%;
             text-align:center;
             margin:0px auto;
-            margin-top:10px;
-            box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.3);
             z-index: 1;
             cursor: pointer;
 
         }
             #con_like_bt i {
-                color:#fff;
-                font-size:25px;
+                color:#cccccc;
+                font-size:20px;
                 vertical-align:middle;
-                margin-top:7px;
             }
 
 

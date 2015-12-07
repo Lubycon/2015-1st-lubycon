@@ -73,7 +73,7 @@
                 <p>
                     <?=$post_content?>
                 </p>
-                <div class="like_bt"><i class="fa fa-heart"></i></div>
+                <div id="com_like_bt" class="like_bt"><i class="fa fa-heart"></i></div>
                 <div id="post_edit_box">
                     <button class="out">Delete</button>
                     <button class="out">Modified</button>

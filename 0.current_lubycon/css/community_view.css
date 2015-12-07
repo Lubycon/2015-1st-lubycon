@@ -83,6 +83,13 @@
         font-size:18px;
         font-weight: 200;
     }
+    #post_contents #com_like_bt{
+        background: #eeeeee;
+    }
+        #post_contents #com_like_bt i{
+            font-size: 40px;
+            margin-top: 3px;
+        }
 
 
 

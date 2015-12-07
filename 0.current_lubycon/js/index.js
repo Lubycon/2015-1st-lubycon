@@ -38,33 +38,6 @@ $(function () //window fadein effect
 /////////////////////////////////////////////////////////
 //      ready to body fadein event end
 /////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////
-//      smoothly scrolling event start(javscript)
-/////////////////////////////////////////////////////////
-if(window.addEventListener){
-    window.addEventListener('DOMMouseScroll', wheel, false);
-    window.onmousewheel = document.onmousewheel = wheel;
-}
-function wheel(event) {
-    var delta = 0;
-    if (event.wheelDelta) delta = event.wheelDelta / 120;
-    else if (event.detail) delta = -event.detail / 3;
-
-    handle(delta);
-    if (event.preventDefault) event.preventDefault();
-    event.returnValue = false;
-}
-function handle(delta) {
-    var time = 100;//scroll time
-    var distance = 400;//scroll distance
-    
-    $('html, body').stop().animate({
-        scrollTop: $(window).scrollTop() - (distance * delta)
-    }, time );
-}
-/////////////////////////////////////////////////////////
-//      smoothly scrolling event end(javascript)
-/////////////////////////////////////////////////////////
 
 /////////////////////////////////////////////////////////
 //      gloval navigation button hover event start
@@ -152,25 +125,20 @@ $(function () //add hover animation for every buttons
 
 $(function () //language change bt slide and change
 {
-	$('.lang_selected').mouseenter(function()
-	{
+	$('.lang_selected').mouseenter(function(){
 		$('.lang_list').stop().slideDown(300);
 	});
-	$('#lang_select_bt').mouseleave(function()
-	{
+	$('#lang_select_bt').mouseleave(function(){
 		$('.lang_list').stop().slideUp(300);
 	});
-	$('.lang_list li').click(function()
-	{
+	$('.lang_list li').click(function(){
 		$('.lang_selected').text($(this).text());
 		$('.lang_list').stop().slideUp(300);
 	});
-	$('.lang_list li').hover(function()
-    {
+	$('.lang_list li').hover(function(){
         $(this).css('color','#fff')
     },
-    function()
-    {
+    function(){
         $(this).css('color','#929292')
     });
 });
@@ -626,6 +594,40 @@ $(function ()
 /////////////////////////////////////////////////////////
 //      contents card hover overlay view end
 /////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+//      contents view con_left hovering start
+/////////////////////////////////////////////////////////
+$(function(){
+    if($(".con_left").length != 0){
+        bt_hover_action();
+        bt_scroll_action();
+    }
+    else{
+        return;
+    }
+});
+function bt_hover_action(){
+    $(".con_left").hover(function(){
+        $("#floating_bt").stop().fadeIn(200);
+    },function(){
+        $("#floating_bt").stop().fadeOut(200);
+    });
+}
+function bt_scroll_action(){
+    $(document).scroll(function(){
+        if($("#floating_bt").offset().top > $("#comment_box").offset().top - 50){
+            $("#floating_bt").stop().fadeOut(100);
+        }
+        else{
+            $("#floating_bt").stop().fadeIn(100);
+            return;
+        }
+    });
+}
+/////////////////////////////////////////////////////////
+//      contents view con_left hovering end
+/////////////////////////////////////////////////////////
+
 /////////////////////////////////////////////////////////
 //      contents view con_right sticky start
 /////////////////////////////////////////////////////////
