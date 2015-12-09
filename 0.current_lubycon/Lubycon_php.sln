@@ -47,6 +47,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "editor", "editor", "{3FC225
 		php\editor\editor.php = php\editor\editor.php
 		php\editor\editor_setting.php = php\editor\editor_setting.php
 		php\editor\editor_thumbnail.php = php\editor\editor_thumbnail.php
+		php\editor\test.php = php\editor\test.php
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "personal_page", "personal_page", "{5528D5D6-2249-4D2D-917F-4B4987AE93D2}"
@@ -128,6 +129,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ajax", "ajax", "{A5A8174F-E
 		php\ajax\create_account_popup.php = php\ajax\create_account_popup.php
 		php\ajax\Database.php = php\ajax\Database.php
 		php\ajax\editor_ajax.php = php\ajax\editor_ajax.php
+		php\ajax\editor_fileupload.php = php\ajax\editor_fileupload.php
 		php\ajax\overlap_check.php = php\ajax\overlap_check.php
 		php\ajax\subnav.php = php\ajax\subnav.php
 		php\ajax\upload_img.php = php\ajax\upload_img.php

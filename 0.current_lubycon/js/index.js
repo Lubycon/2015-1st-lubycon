@@ -690,26 +690,34 @@ $(function(){
 /////////////////////////////////////////////////////////
 //      contents view file_info toggle start
 /////////////////////////////////////////////////////////
-$(function () {
-    var toggle_count = 0;
+var toggle_count = 0;
 
+$(function () {
     $(document).on('click', '#info_header', function ()
     {
         switch (toggle_count) {
             case 0:
-                $("#files").stop().slideDown(300);
-                $("#info_toggle").attr('class', 'fa fa-angle-up');
-                toggle_count = 1;
+                file_info_slidedown();
                 break;
 
             case 1:
-                $("#files").stop().slideUp(300);
-                $("#info_toggle").attr('class', 'fa fa-angle-down');
-                toggle_count = 0;
+                file_info_slideup();
                 break;
         };
     });
 });
+
+function file_info_slidedown() {
+    $("#files").stop().slideDown(300);
+    $("#info_toggle").attr('class', 'fa fa-angle-up');
+    toggle_count = 1;
+};
+function file_info_slideup() {
+    $("#files").stop().slideUp(300);
+    $("#info_toggle").attr('class', 'fa fa-angle-down');
+    toggle_count = 0;
+};
+
 /////////////////////////////////////////////////////////
 //      contents view file_info toggle end
 /////////////////////////////////////////////////////////

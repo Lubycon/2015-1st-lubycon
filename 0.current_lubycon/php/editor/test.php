@@ -5,6 +5,10 @@
     $sel_tag = $_POST['user_selected_tag'];
     //
 
+
+    
+
+
     echo "contents_subject = " . $_POST['contents_subject'];
     if($con_article)
     {

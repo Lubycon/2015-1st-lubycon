@@ -1,6 +1,7 @@
 <link href="css/spectrum.css" rel="stylesheet" type="text/css" />
 <link href="css/editor.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/jquery.form.min.js"></script>
 <script type="text/javascript" src="js/editor.js"></script>
 <script type="text/javascript" src="js/spectrum.js"></script>
 <!-- editor css -->
@@ -18,7 +19,7 @@
 
 
 
-<form method="post" action="./php/editor/test.php">
+<form id="editor_form" enctype="multipart/form-data" method="post" action="./php/editor/test.php">
 <div id="popup_wrap">
     <div id="next_pop_body" class="fadeInDown animated"></div><!--go to thumbnail-->
 </div>
@@ -55,8 +56,8 @@
                 </li><!--upload preview img bt-->
             </ol>
 
-            <input type="file" id="upload_file_input"/>
-            <input type="file" name="images[]" id="preview_upload_input" accept="image/*" multiple />
+            <input type="file" id="upload_file_input" name="upload_file"/>
+            <input type="file" id="preview_upload_input" name="images[]" accept="image/*" multiple />
             
             <ol>
                 <li id="img_crop" class="img_crop_notallow">
@@ -82,7 +83,7 @@
                 <header id="info_header">File info<i class="fa fa-angle-down" id="info_toggle"></i></header>
                 <section id="files">
                     <article id="file_name"><i class="fa fa-chevron-circle-down"></i>
-                        <p><i class="fa fa-folder"></i><?=$uploaded_file_name?></p>
+                        <p id="file_info_filename"><i class="fa fa-folder"></i><?=$uploaded_file_name?></p>
                     </article>
                     <ul>
                         <?php

@@ -1,7 +1,7 @@
 <section id="create_account_area">
      <p id="account_title">Create An Account</p>
      <div id="account_box">
-          <form id="account_idpass" name="form" action="./php/registration.php" method="post">
+          <form id="account_idpass" name="form" action="./php/account/registration.php" method="post">
                <label>E-mail</label><input type="text" name="email" id="email_id" /><i></i>
                <p id="email_check" class="form_check"></p>
                <label>Password</label><input type="password" name="pass" id="pass_id" /><i></i>
