@@ -23,19 +23,23 @@
     ?>
     <div id="information_inbody">
         <section id="personal_info">
-            <figure id="personal_photo">
-                <img src="./ch/img/no_img/no_img_user1.jpg" alt="Designer_photo" />
-            </figure>
-            
-            <div id="basic_info_box">
-                <span id="personal_name"><?=$username?></span>
-                <span id="personal_job"><?=$userjob?></span>
-                <p id="personal_legion"><i class="fa fa-home"></i>
-                    <?=$usercity?>, <?=$usercountry?>
-                </p>
-                <p id="personal_language"><i class="fa fa-language"></i>
-                    <?=$language1?>, <?=$language2?>
-                </p>
+            <div id="personal_info_wrap">
+                <figure id="personal_photo">
+                    <img src="./ch/img/no_img/no_img_user1.jpg" alt="Designer_photo" />
+                </figure>
+                
+                <div id="basic_info_box">
+                    <span id="personal_name"><?=$username?></span>
+                    <p id="personal_job"><i class="fa fa-suitcase" id="job_icon"></i>
+                        <?=$userjob?>
+                    </p>
+                    <p id="personal_legion"><i class="fa fa-home" id="home_icon"></i>
+                        <?=$usercity?>, <?=$usercountry?>
+                    </p>
+                    <p id="personal_language"><i class="fa fa-language" id="language_icon"></i>
+                        <?=$language1?>, <?=$language2?>
+                    </p>
+                </div>
             </div>
             <div id="descript_box">
                 <p id="personal_des">
@@ -46,16 +50,16 @@
         <section id="personal_contact">
             <ul>
                 <li class="personal_num">
-                    <i class="fa fa-mobile"></i><span class="in_num">
+                    <i class="fa fa-mobile" id="mobile_icon"></i><span class="in_num">
                     <?=$country_code?>-<?=$user_mob?></span>
                 </li>
                 <li class="personal_num">
-                    <i class="fa fa-fax"></i><span class="in_num">
+                    <i class="fa fa-fax" id="fax_icon"></i><span class="in_num">
                     <?=$country_code?>-<?=$user_fax?>
                 </span>
                 </li>
                 <li class="personal_num">
-                    <i class="fa fa-desktop"></i><span class="in_num">
+                    <i class="fa fa-desktop" id="desktop_icon"></i><span class="in_num">
                     <a href="<?=$user_web?>">
                         <?=$user_web?>
                     </a></span>
