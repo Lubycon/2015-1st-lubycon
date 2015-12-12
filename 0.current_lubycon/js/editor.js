@@ -140,16 +140,17 @@ $(function () {
             contentType: false,
             data: formData,
             type: "POST",
+            dataType: 'json',
             cache: false,
-            success: function (args)
+            success: function (data)
             {
                 console.log('upload succece');
                 //console.log(args); arg is uploaded file name
-                $("#file_info_filename").text(args);
-                alert(args.size);
+                $("#file_info_filename").text(data["filename"]);
+                $("#file_info_filesize").text(data["filesize"]+"byte");
                 file_info_slidedown();
             },
-            error: function (args)
+            error: function (data)
             {
                 console.log('upload fail');
                 $('#editor_form').trigger("reset");

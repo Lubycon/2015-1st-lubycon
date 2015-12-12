@@ -12,9 +12,9 @@
     //$upload_preview_file = user upload preview image files (user can multiple images)
     //$upload_preview_url = user upload preview image url (for easy call)
     
-    $uploaded_file_name = "Lorem ipsum.zip";
-    $uploaded_file_inside_list = array("ipsum.psd","ipsum.jpg","ipsum.ai","idotdart.bboy");
-    $uploaded_file_size = "1.2TB";
+    $uploaded_file_name;
+    $uploaded_file_inside_list = "Nothing Uploaded";
+    $uploaded_file_size;
 ?>
 
 
@@ -83,19 +83,19 @@
                 <header id="info_header">File info<i class="fa fa-angle-down" id="info_toggle"></i></header>
                 <section id="files">
                     <article id="file_name"><i class="fa fa-chevron-circle-down"></i>
-                        <p id="file_info_filename"><i class="fa fa-folder"></i><?=$uploaded_file_name?></p>
+                        <p id="file_info_filename"><i class="fa fa-folder"></i>Nothing Uploaded</p>
                     </article>
                     <ul>
                         <?php
-                            for( $i = 0 ; $i < count($uploaded_file_inside_list) ; $i++ )
-                            {
-                                echo "<li>".$uploaded_file_inside_list[$i]."</li>";
-                            }
+                            //for( $i = 0 ; $i < count($uploaded_file_inside_list) ; $i++ )
+                            //{
+                            //    echo "<li>".$uploaded_file_inside_list[$i]."</li>";
+                            //}
                         ?>
                     </ul>
                 </section>
                 <footer id="storage">
-                    <p><?=$uploaded_file_size?></p>
+                    <p id="file_info_filesize"><?=$uploaded_file_size?></p>
                 </footer>
             </div>
         </div>

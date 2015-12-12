@@ -1,4 +1,4 @@
-<?php
+ <?php
 //file upload to ajax source
     if(!file_exists("upload")) 
     {
@@ -15,7 +15,11 @@
      {
       chmod("$target", 0666);
       sleep(1);
-      echo $file_name;
+      //echo $file_name;
+      //echo filesize($target)."byte";
+
+      $file_info = array(filename => $file_name , filesize => filesize($target));
+      echo json_encode($file_info);
      }
     }
 //
