@@ -56,7 +56,7 @@
                 </li><!--upload preview img bt-->
             </ol>
 
-            <input type="file" id="upload_file_input" name="upload_file"/>
+            <input type="file" id="upload_file_input" name="upload_file" accept="application/zip"/>
             <input type="file" id="preview_upload_input" name="images[]" accept="image/*" multiple />
             
             <ol>
@@ -85,7 +85,7 @@
                     <article id="file_name"><i class="fa fa-chevron-circle-down"></i>
                         <p id="file_info_filename"><i class="fa fa-folder"></i>Nothing Uploaded</p>
                     </article>
-                    <ul>
+                    <ul id="file_info_fileinside">
                         <?php
                             //for( $i = 0 ; $i < count($uploaded_file_inside_list) ; $i++ )
                             //{

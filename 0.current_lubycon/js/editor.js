@@ -146,9 +146,14 @@ $(function () {
             {
                 console.log('upload succece');
                 //console.log(args); arg is uploaded file name
-                $("#file_info_filename").text(data["filename"]);
-                $("#file_info_filesize").text(data["filesize"]+"byte");
-                file_info_slidedown();
+                $("#file_info_filename").text(data["filename"]); //uploaed file name
+                $("#file_info_filesize").text(data["filesize"] + "byte"); //uploaded file size
+                $("#file_info_fileinside").html(""); //reset box
+                for (var i = 0; i < data["zip_inside"].length ; i++) { //uploaded zip inside data
+                    var for_array = "<li>" + data["zip_inside"][i] + "</li>";
+                    $("#file_info_fileinside").append(for_array);
+                };
+                file_info_slidedown(); //file_info slide_down function
             },
             error: function (data)
             {
