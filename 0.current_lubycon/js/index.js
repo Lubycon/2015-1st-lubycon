@@ -599,29 +599,30 @@ $(function ()
 /////////////////////////////////////////////////////////
 $(function(){
     if($(".con_left").length != 0){
-        bt_hover_action();
-        bt_scroll_action();
+        floating_bt_action();
     }
     else{
         return;
     }
 });
-function bt_hover_action(){
+function floating_bt_action(){
     $(".con_left").hover(function(){
         $("#floating_bt").stop().fadeIn(200);
+        $(document).scroll(function(){
+            if($("#floating_bt").offset().top > $("#comment_box").offset().top - 50){
+                $("#floating_bt").stop().fadeOut(200);
+            }
+            else{
+                $("#floating_bt").stop().fadeIn(200);
+                return;
+            }
+        });
     },function(){
         $("#floating_bt").stop().fadeOut(200);
-    });
-}
-function bt_scroll_action(){
-    $(document).scroll(function(){
-        if($("#floating_bt").offset().top > $("#comment_box").offset().top - 50){
-            $("#floating_bt").stop().fadeOut(100);
-        }
-        else{
-            $("#floating_bt").stop().fadeIn(100);
+        $(document).scroll(function(){
+            $("#floating_bt").stop().fadeOut(200);
             return;
-        }
+        });
     });
 }
 /////////////////////////////////////////////////////////
