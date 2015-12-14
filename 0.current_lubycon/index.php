@@ -120,7 +120,7 @@
                     Community
                     <ul class="sub">
                         <li><!--ranking-->
-                            <a href="./index.php?1=designers_page&2=designers_page&3=all"><i class="fa fa-trophy fa-1x"></i><p>Ranking</p></a>
+                            <a href="./index.php?1=artists_page&2=artists_page&3=all"><i class="fa fa-trophy fa-1x"></i><p>Artists</p></a>
                         </li>
                         <li><!--forum-->
                             <a href="./index.php?1=community&2=community_page&3=forum"><i class="fa fa-comments-o fa-1x"></i><p>Forum</p></a>
@@ -175,7 +175,6 @@
         <!-- after sign in -->
         <div id="after_signin">
             <a href="./index.php?1=personal_page&2=personal_page&3=main&4=my_contents">
-                <span class="partition">|</span>
                 <figure><img src="./ch/img/no_img/no_img_user1.jpg" alt="profile_img" /></figure>
                 <span id="user_id">Admin_User</span>
                 <i class="fa fa-angle-down"></i>
@@ -221,7 +220,7 @@
             <select class="basic">
                 <option value="All">All</option>
                 <option value="Contents">Contents</option>
-                <option value="Designer">Designer</option>
+                <option value="Designer">Artists</option>
                 <option value="Community">Community</option>
             </select>
         </div>
