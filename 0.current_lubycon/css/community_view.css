@@ -94,17 +94,19 @@
 
 
 #share_box {
+    width: 100%;
     display: block;
-    height: 30px;
     text-align: center;
 }
 
-    #share_box button {
-        width: 40px;
+    #share_box .share_bt {
+        width: 50%;
         height: 40px;
+        display: inline-block;
         line-height: 40px;
+        text-align: center;
         border: none;
-        border-radius: 50%;
+        margin: 0px;
     }
     #share_box i {
         color: #fff;
@@ -165,7 +167,7 @@
     top: 0px;
     right: 0px;
 
-    border:1px solid #cccccc;
+    border-left: 1px solid #cccccc;
     background:#ffffff;  
     text-align:center;
 
@@ -218,7 +220,6 @@
             width:40px;
             height:40px;
             border:none;
-            border-radius:50%;
             background:#48cfad;
             margin-top:15px;
         }

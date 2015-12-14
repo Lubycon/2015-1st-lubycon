@@ -532,7 +532,7 @@ h1 /* main logo */ {
 
 .menu_bar {
     width: 1px;
-    background: #8e8e8e;
+    background: #222222;/*It will not display*/
     height: 30px;
     margin-top: 10px;
 }
@@ -722,12 +722,6 @@ h1 /* main logo */ {
     font-weight: 200;
 }
 
-.partition {
-    font-size: 31px;
-    color: #8e8e8e;
-    float: left;
-    line-height: 44px;
-}
 
 #signin_bt .signicon {
     color: #fff;
@@ -861,7 +855,7 @@ h1 /* main logo */ {
     }
 
 
-#signin_bt #login_box .fa-facebook, .fa-google-plus {
+#login_box .fa-facebook, #login_box .fa-google-plus {
     color: #fff;
     width: 38px;
     line-height: 39px;
