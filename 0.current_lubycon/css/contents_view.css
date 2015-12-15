@@ -197,14 +197,14 @@
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
     }
-    #contents_aside .designer_info figure{
+    #contents_aside .designer_info #user_img{
         width:80px;
         height:80px;
         margin: 0px auto;
         border-radius: 50%;
         overflow:hidden;
     }
-    #contents_aside .designer_info figure img{
+    #contents_aside .designer_info #user_img img{
         width:100%;
     }
     #contents_aside .designer_info h4{

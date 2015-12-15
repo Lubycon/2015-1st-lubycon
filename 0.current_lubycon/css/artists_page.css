@@ -24,18 +24,21 @@
 
 #user_view_main{
     height: 1200px;
+    padding-right: 0px;
+    padding-left: 310px;
 }
-#contents_aside{
+#user_view_aside{
     width:310px;
     height: 100%;
     
     display: inline-block;
     position: absolute;
     top:0;
-    right:0;
+    left:0;
     
     background: #ffffff;
-    border-left: 1px solid #dddddd;    
+    border-right: 1px solid #dddddd;
+    border-left: 0px;    
 }
 
     #user_view_aside .designer_info{
