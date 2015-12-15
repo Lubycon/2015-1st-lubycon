@@ -68,7 +68,7 @@
     </section>
 
     <section id="post_box">
-        <section id="post_section">
+        <section id="post_section" class="con_main">
             <article id="post_contents">
                 <p>
                     <?=$post_content?>
@@ -100,8 +100,8 @@
                     <button id="comment_more_bt"><i class="fa fa-angle-down"></i></button>
                 </div>
             </article><!-- end comment_box -->
-        </section>  <!-- end post_section -->
-        <aside id="post_banner">
+        </section><!-- end post_section -->
+        <aside id="post_banner" class="con_aside">
             <div id="profile_pic">
                 <figure id="img_mask">
                     <img src="./ch/img/no_img/no_img_user1.jpg">

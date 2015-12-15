@@ -50,90 +50,58 @@
                 <i class="fa fa-search"></i>
             </button>
         </div>
-
     </section>
     <!-- end nav_guide -->
-    <section>
-        <?php
-            $top_country = "Country";
-            $top_username = "Admin_User";
-            $top_like = 0;
-            $top_follow = 0;//designer of the month
+    <section class="user_view">
+        <div class="user_box_total">
+            <div id="user_view_main" class="con_main">
 
-            $rank_country = "Country";
-            $rank_username = "Admin_User";
-            $rank_like = 0;
-            $rank_follow = 0;
-        ?>
-        <table id="designers_rank_table">
-            <thead>
-                <th class="rank_number"></th>
-                <th class="rank_updown"></th>
-                <th class="rank_contry"></th>
-                <th class="rank_photo"></th>
-                <th class="rank_name"></th>
-                <th class="rank_like"><i class="fa fa-heart"></i></th>
-                <th class="rank_follow"><i class="fa fa-user-plus"></i></th>
-            </thead>
-            <tbody>
-                <tr id="top_rank">
-                    <td><i class="fa fa-trophy"></i></td>
-                    <td></td>
-                    <td><?=$top_country?></td>
-                    <td>
-                        <img src="./ch/img/no_img/no_img_user1.jpg" /></td>
-                    <td class="rank_name">
-                        <a href="./index.php?1=personal_page&2=personal_page&3=main&4=my_contents">
-                            <?=$top_username?>
-                        </a>
-                    </td>
-                    <td class="rank_like"><?=$top_like?></td>
-                    <td class="rank_follow"><?=$top_follow?></td>
-                </tr>
-                
-                <?php
-                    for($i=1; $i<=20; $i++){
-                        if($i%2!=0){
-                            echo 
-                            "<tr id='rankers'>
-                                <td>{$i}</td>
-                                <td><i class='fa fa-caret-up rankup'></i></td>
-                                <td>{$rank_country}</td>
-                                <td>
-                                    <img src='ch/img/no_img/no_img_user1.jpg' /></td>
-                                <td class='rank_name'>
-                                    <a href='./index.php?1=personal_page&2=personal_page&3=main&4=my_contents'>
-                                        {$rank_username}
-                                    </a>
-                                </td>
-                                <td class='rank_like'>{$rank_like}</td>
-                                <td class='rank_follow'>{$rank_follow}</td>
-                            </tr>";
-                        }//if end
-                        elseif($i%2==0){
-                            echo 
-                            "<tr id='rankers'>
-                                <td>{$i}</td>
-                                <td><i class='fa fa-caret-down rankdown'></i></td>
-                                <td>{$rank_country}</td>
-                                <td>
-                                    <img src='ch/img/no_img/no_img_user1.jpg' /></td>
-                                <td class='rank_name'>
-                                    <a href='./index.php?1=personal_page&2=personal_page&3=main&4=my_contents'>
-                                        {$rank_username}
-                                    </a>
-                                </td>
-                                <td class='rank_like'>{$rank_like}</td>
-                                <td class='rank_follow'>{$rank_follow}</td>
-                            </tr>";
-                        }//elseif end
-                    }//for end
+            </div>
+            <div id="user_view_aside" class="con_aside">
+                <?php 
+                    $username = "Admin_User";
+                    $userjob = "Job";
+                    $usercity = "City";
+                    $usercountry = "Country";
+
+                    $file_descript = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.";
+                    
+                    $file_view = 0;
+                    $file_down = 0;
+                    $file_like = 0;                        
                 ?>
-            </tbody>
-        </table>
-        <?php
-            include_once('php/layout/pager.php');
-        ?>
+                <div class="designer_info">
+                    <figure>
+                        <img src="./ch/img/no_img/no_img_user1.jpg">
+                    </figure>
+                    <h4><?=$username?></h4>
+                    <h5><i class="fa fa-home"></i><?=$usercity?>, <?=$usercountry?></h5>
+                </div>
+                <button id="content_down"><i class="fa fa-download"></i></button>
+
+                <div id="contents_score">
+                    <ul>
+                        <li><i class="fa fa-eye"></i></li>
+                        <li>Views</li>
+                        <li class="contents_view_score"><?=$file_view?></li>
+                    </ul>
+                    <ul>
+                        <li><i class="fa fa-download"></i></li>
+                        <li>Downloads</li>
+                        <li class="contents_view_score"><?=$file_down?></li>
+                    </ul>
+                    <ul>
+                        <li><i class="fa fa-heart"></i></li>
+                        <li>Likes</li>
+                        <li class="contents_view_score"><?=$file_like?></li>
+                    </ul>
+                </div>
+
+                <article id="file_descript">
+                    <?=$file_descript?>
+                </article>
+            </div><!--end con_right-->
+        </div>
     </section>
 </section>
 <!-- end contents section -->

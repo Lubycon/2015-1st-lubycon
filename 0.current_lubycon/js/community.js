@@ -40,7 +40,7 @@ $(function () {
         else{
             return true;
         };
-    });   
+    });
 });
 /*--------------------------------community editor start-------------------------------*/
 $(function(){
