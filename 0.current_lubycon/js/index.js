@@ -598,7 +598,7 @@ $(function ()
 //      contents view con_left hovering start
 /////////////////////////////////////////////////////////
 $(function(){
-    if($(".con_left").length != 0){
+    if($("#contents_main").length != 0){
         floating_bt_action();
     }
     else{
@@ -606,7 +606,7 @@ $(function(){
     }
 });
 function floating_bt_action(){
-    $(".con_left").hover(function(){
+    $("#contents_main").hover(function(){
         $("#floating_bt").stop().fadeIn(200);
         $(document).scroll(function(){
             if($("#floating_bt").offset().top > $("#comment_box").offset().top - 50){
@@ -637,20 +637,20 @@ $(document).scroll(function (){
     var scrollend = $("#footer").offset().top - $(window).height();
     var banner_position = 
     $("#footer").offset().top 
-    - $(".con_right").height() 
+    - $(".con_aside").height() 
     - $("#navsel").height() 
     - $("#main_figure").height();
 
-    if($(document).find(".con_right")){ 
+    if($(document).find(".con_aside")){ 
         if ($(document).scrollTop() > 184 && $(document).scrollTop() < scrollend){
-            $(".con_right").css({ "position": "fixed", "top": "100px" });
+            $(".con_aside").css({ "position": "fixed", "top": "100px" });
         }
         else if($(document).scrollTop() > scrollend){
-            $(".con_right").css({ "position": "absolute", "top": banner_position + "px" });
-            $(".con_right").css({ "height" : $(window).height() + "px"});
+            $(".con_aside").css({ "position": "absolute", "top": banner_position + "px" });
+            $(".con_aside").css({ "height" : $(window).height() + "px"});
         }
         else {
-            $(".con_right").css({ "position": "absolute", "top": "0px" });
+            $(".con_aside").css({ "position": "absolute", "top": "0px" });
             $("#floating_bt").css({ "position": "absolute", "top": "100px"});
         };
     }

@@ -73,7 +73,7 @@
     <section id="contents_box">
         <section class="contents_view">
             <div class="contents_box_total">
-                <div class="con_left">
+                <div id="contents_main" class="con_main">
                     <div id="floating_bt">
                         <div id="bookmark"><i id="bookmark_inner_bt" class="fa fa-star"></i></div>
                         <div id="con_like_bt" class="like_bt"><i class="fa fa-heart"></i></div>
@@ -113,9 +113,9 @@
                             <button id="comment_more_bt"><i class="fa fa-angle-down"></i></button>
                         </div>
                     </article>
-                </div><!--end con_left-->
+                </div><!--end con_main-->
 
-                <div class="con_right">
+                <div id="contents_aside" class="con_aside">
                     <?php 
                         $username = "Admin_User";
                         $userjob = "Job";
@@ -184,7 +184,7 @@
                     <article id="file_descript">
                         <?=$file_descript?>
                     </article>
-                </div><!--end con_right-->
+                </div><!--end con_aside-->
             </div><!--end content_box_total-->
         </section><!--end content_view-->
     </section>  <!-- end contents box -->
