@@ -129,7 +129,7 @@
                         $file_like = 0;                        
                     ?>
                     <div class="designer_info">
-                        <figure>
+                        <figure id="user_img">
                             <img src="./ch/img/no_img/no_img_user1.jpg">
                         </figure>
                         <h4><?=$username?></h4>

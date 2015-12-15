@@ -74,7 +74,7 @@
     min-width: 960px;
     margin: 0px auto;
     border: 1px solid #cccccc;
-    padding: 30px 330px 20px 25px;
+    padding: 30px;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -106,7 +106,7 @@
         line-height: 40px;
         text-align: center;
         border: none;
-        margin: 0px;
+        margin: 0px -2px 0px -2px;
     }
     #share_box i {
         color: #fff;
@@ -154,7 +154,6 @@
 
 #comment_box{
     position: relative;
-    padding-right: 310px;
 }
 #comment_box #comment_writer{
     text-align: center;
@@ -217,8 +216,9 @@
             margin-left: -5px;
         }
         #post_banner #designer_follow{
-            width:40px;
+            width: 100%;
             height:40px;
+            line-height: 43px;
             border:none;
             background:#48cfad;
             margin-top:15px;

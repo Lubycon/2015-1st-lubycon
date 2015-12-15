@@ -1711,6 +1711,7 @@ h1 /* main logo */ {
     .con_main{
         width: 100%;
         min-width:960px;
+        background: #fefefe;
         height:auto;
         display: inline-block;
         overflow:hidden;
@@ -1729,7 +1730,6 @@ h1 /* main logo */ {
         display: inline-block;
         position: absolute;
         top:0;
-        right:0;
         
         background: #ffffff;
         border-left: 1px solid #dddddd;    
