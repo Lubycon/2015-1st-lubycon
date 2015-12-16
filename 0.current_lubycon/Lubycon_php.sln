@@ -130,6 +130,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ajax", "ajax", "{A5A8174F-E
 		php\ajax\Database.php = php\ajax\Database.php
 		php\ajax\editor_ajax.php = php\ajax\editor_ajax.php
 		php\ajax\editor_fileupload.php = php\ajax\editor_fileupload.php
+		php\ajax\editor_thumbupload.php = php\ajax\editor_thumbupload.php
 		php\ajax\overlap_check.php = php\ajax\overlap_check.php
 		php\ajax\subnav.php = php\ajax\subnav.php
 		php\ajax\upload_img.php = php\ajax\upload_img.php

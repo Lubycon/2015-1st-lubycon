@@ -1,9 +1,15 @@
 <link href="css/spectrum.css" rel="stylesheet" type="text/css" />
 <link href="css/editor.css" rel="stylesheet" type="text/css" />
+<link href="css/summernote.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css" />
+
 <script type="text/javascript" src="js/jquery-ui.min.js"></script>
 <script type="text/javascript" src="js/jquery.form.min.js"></script>
 <script type="text/javascript" src="js/editor.js"></script>
 <script type="text/javascript" src="js/spectrum.js"></script>
+<script type="text/javascript" src="js/summernote.js"></script>
+<script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.0.1/js/bootstrap.min.js"></script>
+
 <!-- editor css -->
 
 <?php
@@ -107,7 +113,9 @@
             $(function () {
                 $("#editor_preview_box").sortable({
                     revert: true
+                    cancel: ".disabled"
                 });
+                $( "#editor_preview_box li" ).disableSelection();
             });
         </script>
         <!-- drag able script aply code -->
@@ -116,10 +124,8 @@
                 <p>
                     <input id="editor_content_name" type="text" value="Your Contents name" name="contents_subject" />
                 </p>
-                <?php
-                //here is contents_article need save here area's html and css code
-                echo '<ul id="editor_preview_box"></ul>';
-                ?>
+                <!--here is contents_article need save here area's html and css code-->
+                <ul id="editor_preview_box"></ul>;
         </section>
     </section>
 </section>
