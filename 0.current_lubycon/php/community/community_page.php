@@ -9,13 +9,13 @@
     <section id="navsel">
         <nav id="lnb_nav">
             <ul>
-                <li class="forum">
+                <li class="nav_menu" id="forum">
                     <a href="./index.php?1=community&2=community_page&3=forum">Forum</a>
                 </li>
-                <li class="tutorial">
+                <li class="nav_menu" id="tutorial">
                     <a href="./index.php?1=community&2=community_page&3=tutorial">Tutorial</a>
                 </li>
-                <li class="qna">
+                <li class="nav_menu" id="qna">
                     <a href="./index.php?1=community&2=community_page&3=qna">Q&amp;A</a>
                 </li>
             </ul>

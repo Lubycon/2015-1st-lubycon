@@ -39,6 +39,7 @@ $(function () //window fadein effect
 //      ready to body fadein event end
 /////////////////////////////////////////////////////////
 
+
 /////////////////////////////////////////////////////////
 //      gloval navigation button hover event start
 //      get parameter change selected nav color
@@ -75,9 +76,11 @@ var four_param = getUrlParameter('4');
 
 $(function () //selcted change
 {
-    $('#lnb_nav ul').children('.' + third_param).addClass('selected_nav');
-
-})
+    $('#lnb_nav ul').children('#' + third_param).addClass('selected_nav');
+    $(".selected_nav").children("a").click(function(){
+        return false;//disabled anchor tag
+    });
+});
 
        
 /////////////////////////////////////////////////////////
@@ -571,9 +574,7 @@ $(function()	// triple bt on event
 /////////////////////////////////////////////////////////
 //      index page triple bt event end
 /////////////////////////////////////////////////////////
-/*----------------------------index page slider----------------------------*/
-
-
+/*----------------------------index page slider end----------------------------*/
 /*----------------------------contents page----------------------------*/
 
 
