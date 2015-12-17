@@ -235,120 +235,21 @@ $(function () {
 
     $('#add_text').click(function () {
         var text_editor =
-            '<li class="text_editor">' +
-                    '<div id="text_contents_div" class="contents_div">' +
-                        '<button type="button" class="con_delete_bt"><i class="fa fa-times"></i></button>' +
-                        '<textarea class="editor_body_text" name="contents_article[]"></textarea>' +
-                        '<div class="textarea_editor">' +
-                            '<div class="select_box">' +
-                                '<select class="basic">' +
-                                    '<option value="14pt">14pt</option>' +
-                                    '<option value="18pt">18pt</option>' +
-                                    '<option value="24pt">24pt</option>' +
-                                    '<option value="30pt">30pt</option>' +
-                                    '<option value="36pt">36pt</option>' +
-                                    '<option value="48pt">48pt</option>' +
-                                    '<option value="60pt">60pt</option>' +
-                                    '<option value="72pt">72pt</option>' +
-                                '</select>' +
-                            '</div>' +
-                            '<button type="button" class="text_bold"><i class="fa fa-bold"></i></button>' +
-                            '<button type="button" class="text_italic"><i class="fa fa-italic"></i></button>' +
-                            '<button type="button" class="text_underline"><i class="fa fa-underline"></i></button>' +
-                            '<button type="button" class="text_strike"><i class="fa fa-strikethrough"></i></button>' +
-                            '<div class="color_picker">' +
-                                '<div class="selected_color"></div>' +
-                                '<ul><!--color list-->' +
-                                    '<li class="colors">#fff</li><!--monotone-->' +
-                                    '<li>#aaaaaa</li>' +
-                                    '<li>#999999</li>' +
-                                    '<li>#777777</li>' +
-                                    '<li>#555555</li>' +
-                                    '<li>#333333</li>' +
-                                    '<li>#222222</li>' +
-                                    '<li>#000000</li>' +
-
-                                    '<li>#ffe8e8</li>' + '<!--red-->' +
-                                    '<li>#fdc8c8</li>' +
-                                    '<li>#fea3a3</li>' +
-                                    '<li>#fe7a7a</li>' +
-                                    '<li>#ff0000</li>' + '<!--middle-->' +
-                                    '<li>#db0101</li>' +
-                                    '<li>#b70202</li>' +
-                                    '<li>#920000</li>' +
-
-                                    '<li>#fff9e8</li>' + '<!--orange-->' +
-                                    '<li>#fdefc8</li>' +
-                                    '<li>#fee5a3</li>' +
-                                    '<li>#feda7a</li>' +
-                                    '<li>#ffba00</li>' + '<!--middle-->' +
-                                    '<li>#dba001</li>' +
-                                    '<li>#b78602</li>' +
-                                    '<li>#926b00</li>' +
-
-                                    '<li>#ffffe8</li>' + '<!--yellow-->' +
-                                    '<li>#fdfdc8</li>' +
-                                    '<li>#fefda3</li>' +
-                                    '<li>#fefc7a</li>' +
-                                    '<li>#ffff00</li>' + '<!--middle-->' +
-                                    '<li>#dbd901</li>' +
-                                    '<li>#b7b602</li>' +
-                                    '<li>#818201</li>' +
-
-                                    '<li>#efffe8</li>' + '<!--green-->' +
-                                    '<li>#d9fdc8</li>' +
-                                    '<li>#c2fea3</li>' +
-                                    '<li>#a7fe7a</li>' +
-                                    '<li>#00ff00</li>' + '<!--middle-->' +
-                                    '<li>#4adb01</li>' +
-                                    '<li>#3db702</li>' +
-                                    '<li>#2b8402</li>' +
-
-                                    '<li>#e8fffc</li>' + '<!--mint-->' +
-                                    '<li>#c8fdf5</li>' +
-                                    '<li>#a3feef</li>' +
-                                    '<li>#7afee6</li>' +
-                                    '<li>#00ffd5</li>' + '<!--middle-->' +
-                                    '<li>#48cfad</li>' +
-                                    '<li>#02b799</li>' +
-                                    '<li>#00927d</li>' +
-
-                                    '<li>#e8f8ff</li>' + '<!--sky blue-->' +
-                                    '<li>#c8eefd</li>' +
-                                    '<li>#a3e6fe</li>' +
-                                    '<li>#7adcfe</li>' +
-                                    '<li>#00baff</li>' + '<!--middle-->' +
-                                    '<li>#01a1db</li>' +
-                                    '<li>#0286b7</li>' +
-                                    '<li>#006892</li>' +
-
-                                    '<li>#e8ecff</li>' + '<!--blue-->' +
-                                    '<li>#c8d4fd</li>' +
-                                    '<li>#a3b9fe</li>' +
-                                    '<li>#7a9cfe</li>' +
-                                    '<li>#0000ff</li>' + '<!--middle-->' +
-                                    '<li>#0136db</li>' +
-                                    '<li>#022eb7</li>' +
-                                    '<li>#002192</li>' +
-
-                                    '<li>#f4e8ff</li>' + '<!--pupple-->' +
-                                    '<li>#e4c8fd</li>' +
-                                    '<li>#d0a3fe</li>' +
-                                    '<li>#ba7afe</li>' +
-                                    '<li>#8000ff</li>' + '<!--middle-->' +
-                                    '<li>#6e01db</li>' +
-                                    '<li>#5c02b7</li>' +
-                                    '<li>#4c0092</li>' +
-                                '</ul>' +
-                            '</div>' +
-                            '<button type="button" class="align_left"><i class="fa fa-align-left"></i></button>' +
-                            '<button type="button" class="align_center"><i class="fa fa-align-center"></i></button>' +
-                            '<button type="button" class="align_right"><i class="fa fa-align-right"></i></button>' +
-                        '</div>' +
-                    '</div>' +
-                '</li>'
+            '<li class="text_editor disabled">' +
+                '<form class="text_editor" action="textarea.html" method="get">' +
+                  '<div class="form-group">' +
+                    '<button type="button" class="con_delete_bt"><i class="fa fa-times"></i></button>' +
+                    '<button type="button" class="con_move_bt"><i class="fa fa-arrows"></i></button>' +
+                    '<textarea name="text" class="summernote" id="contents" title="Contents"></textarea>' +
+                  '</div>' +
+                '</form>'
+            '<li>';
+                        
 
         $('#editor_preview_box').append(text_editor);
+        $('.summernote').summernote({
+            height: 200
+        });
         $(".basic").selectOrDie(); //seleter load script
     });
 
@@ -357,79 +258,17 @@ $(function () {
     /////////////////////////////////////////////////////////
 
     /////////////////////////////////////////////////////////
-    //      text editor tools start
-    /////////////////////////////////////////////////////////
-
-
-    $(document).on('change', '.select_box', function () //change font size
-    {
-        $(this).parent('.textarea_editor').prev('.editor_body_text').css({ 'font-size': $(this).find('option:selected').text() });
-    });
-
-    $(document).on('click', '.text_bold', function () //change font weight
-    {
-        if ($(this).parent('.textarea_editor').prev('.editor_body_text').css("font-weight") == "400") {
-            $(this).parent('.textarea_editor').prev('.editor_body_text').css({ 'font-weight': '600' });
-        } else {
-            $(this).parent('.textarea_editor').prev('.editor_body_text').css({ 'font-weight': '400' });
-        }
-    });
-
-    $(document).on('click', '.text_italic', function () //change font italic
-    {
-        if ($(this).parent('.textarea_editor').prev('.editor_body_text').css('font-style') == 'normal') {
-            $(this).parent('.textarea_editor').prev('.editor_body_text').css({ 'font-style': 'italic' });
-        } else {
-            $(this).parent('.textarea_editor').prev('.editor_body_text').css({ 'font-style': 'normal' });
-        }
-    });
-    $(document).on('click', '.text_strike', function () //change font strike
-    {
-        if ($(this).parent('.textarea_editor').prev('.editor_body_text').css('text-decoration') == 'none' ||
-            $(this).parent('.textarea_editor').prev('.editor_body_text').css('text-decoration') == 'underline') {
-            $(this).parent('.textarea_editor').prev('.editor_body_text').css({ 'text-decoration': 'line-through' });
-        } else {
-            $(this).parent('.textarea_editor').prev('.editor_body_text').css({ 'text-decoration': 'none' });
-        }
-    });
-    $(document).on('click', '.text_underline', function () //change font underline
-    {
-        if ($(this).parent('.textarea_editor').prev('.editor_body_text').css('text-decoration') == 'none' ||
-            $(this).parent('.textarea_editor').prev('.editor_body_text').css('text-decoration') == 'line-through') {
-            $(this).parent('.textarea_editor').prev('.editor_body_text').css({ 'text-decoration': 'underline' });
-        } else {
-            $(this).parent('.textarea_editor').prev('.editor_body_text').css({ 'text-decoration': 'none' });
-        }
-    });
-
-    $(document).on('click', '.align_left', function () //change txt align left
-    {
-        $(this).parent('.textarea_editor').prev('.editor_body_text').css({ 'text-align': 'left' });
-    });
-    $(document).on('click', '.align_center', function () //change txt align center
-    {
-        $(this).parent('.textarea_editor').prev('.editor_body_text').css({ 'text-align': 'center' });
-    });
-    $(document).on('click', '.align_right', function () //change txt align right
-    {
-        $(this).parent('.textarea_editor').prev('.editor_body_text').css({ 'text-align': 'right' });
-    });
-    /////////////////////////////////////////////////////////
-    //      text editor tools end
-    /////////////////////////////////////////////////////////
-
-    /////////////////////////////////////////////////////////
     //      delete bt hover start
     /////////////////////////////////////////////////////////
 
     $(document).on('mouseenter', '.text_editor', function () // textarea delete bt hover
     {
-        $(this).find('.con_delete_bt').stop().fadeIn(150);
+        $(this).find('.con_delete_bt , .con_move_bt').stop().fadeIn(150);
         $(this).children('.contents_div').css({ "border": "1px solid #d1d1d1" });
     });
     $(document).on('mouseleave', '.text_editor', function () // textarea delete bt hover
     {
-        $(this).find('.con_delete_bt').stop().fadeOut(150);
+        $(this).find('.con_delete_bt, .con_move_bt').stop().fadeOut(150);
         $(this).children('.contents_div').css({ "border": "none" });
     });
 
@@ -465,9 +304,19 @@ $(function () {
 
     $(document).on('click', '.con_delete_bt', function () //text area delete event
     {
-        $(this).parents('.text_editor').fadeOut(200, function () { $(this).remove(); });
+        $(this).parents('.text_editor').fadeOut(200, function () { $(this).destroy(); });
         $(this).parents('.embed_contents').fadeOut(200, function () { $(this).remove(); });
         $(this).parents('.preview_img').fadeOut(200, function () { $(this).remove(); });
+    });
+    $(document).on('mouseenter', '.con_move_bt', function () //text area delete event
+    {
+        $(this).parents('.text_editor').removeClass("disabled");
+        $("#editor_preview_box").sortable({ cancel: ".disabled" });
+    });
+    $(document).on('mouseup', '.con_move_bt', function () //text area delete event
+    {
+        $('.text_editor').addClass("disabled");
+        $("#editor_preview_box li").disableSelection();
     });
 
     /////////////////////////////////////////////////////////
@@ -600,11 +449,11 @@ $(function () {
     function uploadFile()
     {
         $('#work_inbody').html("Sending... Please wait...");
-        var form = $("form")[0];
+        var form = $("#thumb_form")[0];
         var formData = new FormData(form);
         $.ajax(
         {
-            url: "php/ajax/upload_img.php",
+            url: "php/ajax/editor_thumbupload.php",
             processData: false,
             contentType: false,
             data: formData,
@@ -612,7 +461,9 @@ $(function () {
             cache: false,
             success: function (args)
             {
-                $('#work_inbody').html("<img src='./php/ajax/upload/" + args + "'/>");
+                $('#work_inbody').html("<img src='./php/ajax/thumb_upload/" + args + "'/>");
+                $('.contents_pic img').attr('src', './php/ajax/thumb_upload/' + args + '');
+                $('.contents_title').text($("#editor_content_name").val());
                 $('#form1').trigger("reset");
             },
             error: function (args)

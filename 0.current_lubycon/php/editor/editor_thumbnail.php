@@ -24,7 +24,7 @@
         </div>
         <!--work_inbody end-->
         <span id="change_img_bt">Change Image</span>
-        <form id="form1" name="form1">
+        <form id="thumb_form" name="thumb_form">
             <input type="file" id="change_img_real" name="formfile">
         </form>
     </div>

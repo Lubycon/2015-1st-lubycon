@@ -325,14 +325,13 @@ body{
     border-radius: 5px;
     display: inline-block;
     vertical-align: top;
-    text-align:center;
     margin:50px;
 
     max-width:1100px;
     min-width:630px;
     
 }
-    #editor_section p 
+    #editor_section > p 
     {
         height:80px;
         line-height:70px;
@@ -386,11 +385,12 @@ body{
         }
 
     .text_editor
-    {
+    {  
+    }
+
+
+    .form-group {
         position:relative;
-        padding:25px 0px;
-        min-height: 110px;
-        cursor:move;   
     }
 
     .contents_div
@@ -408,62 +408,7 @@ body{
         border: none;
     }
 
-    /* selector */
-    .text_editor .select_box
-    {
-        float: none !important;
-        display: inline-block;
-        margin-right:7px;
-    }
-    .text_editor .select_box .sod_select
-    {
-        background:#444;
-        color:#fff;
-        width: 53px;
-        height: 23px;
-        padding-top: 3px;
-        padding-bottom:0px;
-        border-radius:3px;
-    }
-        .text_editor .select_box .sod_label 
-        {
-            margin-right: 11px;
-            font-weight: 200;
-        }
-        .text_editor .select_box .sod_select::before, .sod_select::after
-        {
-            right: 5px;
-            top: 7px;
-            font-size: 10px;
-        }
-        .text_editor .select_box .sod_select .sod_list_wrapper
-        {
-            width: 53px;
-            margin: -2px 0px 0px 0px;
-            background: #333;
-            border:none;
-            color:#fff;
-        }
-        .text_editor .select_box .sod_select .sod_option
-        {
-            height: 22px;
-            padding: 3px 5px;
-            font-weight: 200;
-        }
-            .text_editor .select_box .sod_select .sod_option.selected::before 
-            {
-                display:none;
-            }
-            .sod_select .sod_option.selected
-            {
-                color:#48cfad;
-            }
-            .sod_select .sod_option.active
-            {
-                color:#444444;
-                font-weight: 400 !important;
-            }
-    /* selector */
+    
     .editor_body_text
     {
         border:none;
@@ -505,8 +450,9 @@ body{
         box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.3);
 
         position:absolute;
-        top:-13px;
-        right:-12px;
+        top:50px;
+        right:5px;
+        z-index:2;
         
         display:none;
     }
