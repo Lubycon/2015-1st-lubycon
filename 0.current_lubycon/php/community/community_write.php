@@ -1,4 +1,4 @@
-<figure id="main_figure">
+﻿<figure id="main_figure">
     <h2>COMMUNITY</h2>
 </figure><!-- end main_figure -->
 

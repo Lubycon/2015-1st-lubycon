@@ -7,7 +7,8 @@
     <meta http-equiv="Pragma" content="no-cache" />
     <meta name="subject" content="Lubycon" />
     <meta name="description" content="free sources" />
-    <meta name="author" content="Daniel ZEPOT" />
+    <meta name="developer" content="Daniel ZEPOT" />
+    <meta name="designer" content="Dart" />
     <meta name="robots" content="index" />
     <meta name="copyright" content="copyrights 2015 LUBYCON" />
     <meta name="keywords" content="design, font ,vector, 3D design, community, designers, engineer, 3D printer, Illustration, Lubycon" />
@@ -84,7 +85,7 @@
                 </a>
             </li>
         </ul>
-        <button class="editor_popup_cancel"><i class="fa fa-times"></i></button>
+        <button class="editor_popup_cancel animate_scale"><i class="fa fa-times"></i></button>
     </div>
     <!-- popup end -->
     <!---------------- common parts start ---------------->

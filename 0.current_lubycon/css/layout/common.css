@@ -224,12 +224,12 @@ body{
     right: -15px;
     width: 30px;
     height: 30px;
-    line-height: 30px;
-    background: #777777;
+    line-height: 29px;
+    background: rgba(100,100,100,0.7);
     border: none;
     border-radius: 50%;
     vertical-align: middle;
-    box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.3);
+    box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.8);
 }
 
     .editor_popup_cancel i {
@@ -2048,6 +2048,86 @@ h1 /* main logo */ {
         #comment_more_bt i{
             font-size: 25px;
         }
+/*artists card start*/
+.artists_card{
+    position:relative;
+    width:240px;
+    height:280px;
+    background:#fff;
+    overflow:hidden;
+    border-radius:3px;
+    float:left;
+    margin: 10px 10px;
+    padding-top: 10px;
+    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.3);
+}
+    .artist_top_info{
+        position: relative;
+    }
+        .artist_pic{
+            width: 90px;
+            height: 90px;
+            overflow: hidden;
+            border-radius: 50%;
+
+            margin: 0px auto;
+            margin-top: 30px;
+        }
+            .artist_pic img{
+                height:100%;
+            }
+        .artist_location{
+            width: 30px;
+            height: 30px;
+            position : absolute;
+            overflow: hidden;
+            border-radius: 50%;
+            top: 67px;
+            right: 73px;
+        }
+            .artist_location img{
+                height: 100%;
+            }
+    .artist_mid_info{
+        position: relative;
+        margin-top: 45px;
+    }
+        .artist_name{
+            text-align: center;
+            color: #444444;
+            font-size: 18px;
+        }
+        .artist_job{
+            text-align: center;
+            color: #48cfad;
+            font-size: 16px;
+            margin-top: 2px;
+        }
+            .artist_job i{
+                color: #444444;
+                margin-right: 10px;
+            }
+    .artist_bot_info{
+        position: relative;
+        margin-top: 17px;
+    }
+        .view_profile_bt{
+            width: 180px;
+            height: 43px;
+            line-height: 43px;
+            background: #48cfad;
+            border-radius: 3px;
+            text-align: center;
+            margin: 0px auto;
+            color: #ffffff;
+            font-weight: 200;
+        }
+            .view_profile_bt i{
+                margin-right: 10px;
+            }
+
+/*artist card end*/
+
 
 #footer {
     width: 100%;
