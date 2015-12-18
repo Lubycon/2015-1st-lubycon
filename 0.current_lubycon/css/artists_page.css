@@ -5,12 +5,12 @@
 }
 
 
-.user_view{
+#user_view{
     position: relative;
     width:100%;
     top:0px;
 }
-    .user_box_total
+    #user_box_total
     {
         width:100%;
         min-width:1200px;
@@ -23,7 +23,6 @@
     }
 
 #user_view_main{
-    height: 1200px;
     padding-right: 0px;
     padding-left: 310px;
 }

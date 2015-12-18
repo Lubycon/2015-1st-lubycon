@@ -2048,6 +2048,84 @@ h1 /* main logo */ {
         #comment_more_bt i{
             font-size: 25px;
         }
+/*artists card start*/
+.artists_card{
+    position:relative;
+    width:200px;
+    height:240px;
+    background:#fff;
+    overflow:hidden;
+    border-radius:3px;
+    float:left;
+    margin: 10px 10px;
+    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.3);
+}
+    .artist_top_info{
+        position: relative;
+    }
+        .artist_pic{
+            width: 90px;
+            height: 90px;
+            overflow: hidden;
+            border-radius: 50%;
+
+            margin: 0px auto;
+            margin-top: 30px;
+        }
+            .artist_pic img{
+                height:100%;
+            }
+        .artist_location{
+            width: 30px;
+            height: 30px;
+            position : absolute;
+            overflow: hidden;
+            border-radius: 50%;
+            top: 67px;
+            right: 52px;
+        }
+            .artist_location img{
+                height: 100%;
+            }
+    .artist_mid_info{
+        position: relative;
+        margin-top: 15px;
+    }
+        .artist_name{
+            text-align: center;
+            color: #444444;
+            font-size: 24px;
+        }
+        .artist_job{
+            text-align: center;
+            color: #48cfad;
+            font-size: 14px;
+        }
+            .artist_job i{
+                color: #444444;
+                margin-right: 10px;
+            }
+    .artist_bot_info{
+        position: relative;
+        margin-top: 15px;
+    }
+        .view_profile_bt{
+            width: 180px;
+            height: 37px;
+            line-height: 37px;
+            background: #48cfad;
+            border-radius: 3px;
+            text-align: center;
+            margin: 0px auto;
+            color: #ffffff;
+            font-weight: 200;
+        }
+            .view_profile_bt i{
+                margin-right: 10px;
+            }
+
+/*artist card end*/
+
 
 #footer {
     width: 100%;
