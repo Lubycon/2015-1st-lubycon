@@ -99,27 +99,30 @@ $(function(){
 
 
 /////////////////////////////////////////////////////////
-//      add hover animation for every buttons start
+//      add hover animations start
 /////////////////////////////////////////////////////////
 
-$(function () //add hover animation for every buttons
-{
-    $('button').hover(function()
-    {
-        $(this).stop().animate({ opacity: 0.8 }, 200);
-    }, function ()
-    {
-         $(this).stop().animate({ opacity: 1 }, 200);
-    });
-    $("input[type=button]").hover(function(){
-        $(this).stop().animate({ opacity: 0.8}, 200);
+$(function(){   
+    $('.animate_scale').hover(function(e){
+        console.log($(this).width());
+        console.log($(this).height());
+        $(this).animate({ width: "+=3", height: "+=3", right: "-=1.5", top: "-=1.5" }, 150);
     }, function(){
-        $(this).stop().animate({ opacity: 1 }, 200);
+         $(this).animate({ width: "-=3", height: "-=3", right: "+=1.5", top: "+=1.5" }, 150);
     });
-});
+});//scale animation end
+$(function(){
+    $(".animate_opacity").hover(function(e){
+        $(this).animate({ opacity: 0.5 },200);
+    },function(){
+        $(this).animate({ opacity: 1 },200);
+    });
+});//opacity animation end
+
+
 
 /////////////////////////////////////////////////////////
-//      add hover animation for every buttons end
+//      add hover animations end
 /////////////////////////////////////////////////////////
 
 /////////////////////////////////////////////////////////

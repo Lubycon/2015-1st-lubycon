@@ -224,12 +224,12 @@ body{
     right: -15px;
     width: 30px;
     height: 30px;
-    line-height: 30px;
-    background: #777777;
+    line-height: 29px;
+    background: rgba(100,100,100,0.7);
     border: none;
     border-radius: 50%;
     vertical-align: middle;
-    box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.3);
+    box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.8);
 }
 
     .editor_popup_cancel i {

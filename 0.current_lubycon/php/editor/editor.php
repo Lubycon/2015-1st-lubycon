@@ -1,14 +1,14 @@
 <link href="css/spectrum.css" rel="stylesheet" type="text/css" />
 <link href="css/editor.css" rel="stylesheet" type="text/css" />
 <link href="css/summernote.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
 
 <script type="text/javascript" src="js/jquery-ui.min.js"></script>
 <script type="text/javascript" src="js/jquery.form.min.js"></script>
 <script type="text/javascript" src="js/editor.js"></script>
 <script type="text/javascript" src="js/spectrum.js"></script>
 <script type="text/javascript" src="js/summernote.js"></script>
-<script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.0.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
 
 <!-- editor css -->
 
