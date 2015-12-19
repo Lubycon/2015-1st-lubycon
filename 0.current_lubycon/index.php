@@ -175,11 +175,9 @@
 
         <!-- after sign in -->
         <div id="after_signin">
-            <a href="./index.php?1=personal_page&2=personal_page&3=main&4=my_contents">
                 <figure><img src="./ch/img/no_img/no_img_user1.jpg" alt="profile_img" /></figure>
                 <span id="user_id">Admin_User</span>
                 <i class="fa fa-angle-down"></i>
-            </a>
             <ul>
                 <li><a href="./index.php?1=personal_page&2=personal_page&3=main&4=my_contents">My Contents</a></li>
                 <li style="display:none;"><a href="./index.php?1=personal_page&2=personal_page&3=main&4=message">Message</a></li>

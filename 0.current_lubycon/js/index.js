@@ -370,12 +370,21 @@ $(function () { //create account bt popup event start
 
 $(function() //after signin child hover show and hide
 {
-	$('#after_signin').hover(function ()
-	{
-	    $('#after_signin > ul').stop().fadeIn();
-	}, function ()
-	{
-	    $('#after_signin > ul').stop().fadeOut();
+    var toggle_count = 0;
+	$('#after_signin').click(function (){
+        switch(toggle_count){
+            case 0 : 
+                $('#after_signin > ul').stop().fadeIn(200);
+                toggle_count = 1;
+            break;
+            case 1 : 
+                $('#after_signin > ul').stop().fadeOut(200);
+                toggle_count = 0;
+            break;
+            default: 
+                return false;
+            break;
+        } 
 	});
 
 	$('#sign_out').click(function () // sign out
@@ -695,18 +704,21 @@ $(function(){
 /////////////////////////////////////////////////////////
 //      contents view file_info toggle start
 /////////////////////////////////////////////////////////
-var toggle_count = 0;
+
 
 $(function () {
+    var toggle_count = 0;
     $(document).on('click', '#info_header', function ()
     {
         switch (toggle_count) {
             case 0:
                 file_info_slidedown();
+                toggle_count = 1;
                 break;
 
             case 1:
                 file_info_slideup();
+                toggle_count = 0;
                 break;
         };
     });
@@ -1127,6 +1139,30 @@ $(function(){
 
 });
 /*----------------------------pager interaction end--------------------------*/
+/*----------------------------artist card menu toggle start--------------------------*/
+$(function(){
+    if($(document).find(".artist_card")){
+        $(".artist_menu").each(function(){
+            var toggle_count = 0;
+            $(this).click(function(){
+                switch(toggle_count){
+                    case 0:
+                    $(this).children(".artist_menu_list").fadeIn(200);
+                    toggle_count = 1;
+                    console.log(toggle_count);
+                    break;
+
+                case 1:
+                    $(this).children(".artist_menu_list").fadeOut(200);
+                    toggle_count = 0;
+                    console.log(toggle_count);
+                    break;
+                }//switch end
+            });//click end
+        });//each end
+    };//if end
+});
+/*----------------------------artist card menu toggle end--------------------------*/
 /*-----------------------------footer sticky start----------------------------------*/
 /*$(window).scroll(function() {
     if ($(window).scrollTop() <= $(document).height() - $(window).height()){//footer height 180px

@@ -1,4 +1,4 @@
-<li>
+<li class="artist_card_wrap">
     <?php
         $username = "Admin_User";
         $user_img_url = "./ch/img/no_img/no_img_user1.jpg";
@@ -6,6 +6,17 @@
         $userjob = "Job";
     ?><!--you should change to mySQL later-->
     <div class="artists_card">
+        <div class="artist_menu">
+            <i class="fa fa-bars artist_menu_icon"></i>
+            <div class="artist_menu_list">
+                <ul>
+                    <li><i class="fa fa-eye"></i>View Contents</li>
+                    <li><i class="fa fa-bar-chart"></i>View Insight</li>
+                    <li><i class="fa fa-user-plus"></i>Follow</li>
+                    <li><i class="fa fa-fa fa-envelope-o"></i>Message to artist</li>
+                </ul>
+            </div>
+        </div>
         <div class="artist_top_info">
             <div class="artist_pic">
                 <img src="<?=$user_img_url?>" alt="user_pic"/>
