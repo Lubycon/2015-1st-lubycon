@@ -2037,8 +2037,13 @@ h1 /* main logo */ {
             font-size: 25px;
         }
 /*artists card start*/
-.artist_card_wrap{
+#artist_card_wrap{
+    max-width: 1330px;
+    margin: 0px auto;
+}
+.artist_card_in{
     display: inline-block;
+    margin: 1%;
 }
 
 .artists_card{

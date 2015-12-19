@@ -55,11 +55,11 @@
     <section id="user_view">
         <section id="user_box_total">
             <div id="user_view_main" class="con_main">
-                <ul>
+                <ul id="artist_card_wrap">
                     <?php
-                    for($i=0;$i<30;$i++){
-                        include('php/layout/artist_card.php');
-                    }
+                        for($i=0;$i<30;$i++){
+                            include('php/layout/artist_card.php');
+                        }
                     ?>
                 </ul>
             </div>

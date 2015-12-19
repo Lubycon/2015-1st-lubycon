@@ -1,4 +1,4 @@
-<li class="artist_card_wrap">
+<li class="artist_card_in">
     <?php
         $username = "Admin_User";
         $user_img_url = "./ch/img/no_img/no_img_user1.jpg";

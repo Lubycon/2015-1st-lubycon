@@ -803,9 +803,8 @@ function hideAlert2(){
 /*-----------------------------subnav sticky start---------------------------*/
 $(document).scroll(function ()
 {
-    if($(document).find("#nav_guide"))
-    {
-        if ($(document).scrollTop() > 184) {
+    if($("#nav_guide").length != 0){
+        if ($(document).scrollTop() > 184){
             $("#main_header").css({"box-shadow": "0px 0px 0px 0px rgba(0,0,0,0.5)"});
             $("#nav_guide").css({ "position": "fixed", "top": "50px", "z-index": "2" });
             $("#nav_guide").next().css({"top": "50px"});
@@ -1141,7 +1140,7 @@ $(function(){
 /*----------------------------pager interaction end--------------------------*/
 /*----------------------------artist card menu toggle start--------------------------*/
 $(function(){
-    if($(document).find(".artist_card")){
+    if($(".artist_card"),length != 0){
         $(".artist_menu").each(function(){
             var toggle_count = 0;
             $(this).click(function(){
