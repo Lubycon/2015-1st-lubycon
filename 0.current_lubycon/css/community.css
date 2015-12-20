@@ -25,6 +25,11 @@
     text-align: center;
     cursor:pointer;
 }
+
+#main_wrap{
+    background: #fefefe;
+}
+
 /*main header end*/
 
 /* main board */
@@ -33,7 +38,7 @@
     margin: 0px auto;
     clear: both;
     position: relative;
-    background: #ffffff;
+    background: #fefefe;
 }
 
 .tab_item table {

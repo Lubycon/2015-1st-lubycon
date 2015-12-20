@@ -1140,7 +1140,7 @@ $(function(){
 /*----------------------------pager interaction end--------------------------*/
 /*----------------------------artist card menu toggle start--------------------------*/
 $(function(){
-    if($(".artist_card"),length != 0){
+    if($(".artists_card").length != 0){
         $(".artist_menu").each(function(){
             var toggle_count = 0;
             $(this).click(function(){
