@@ -393,11 +393,12 @@ $(document).on("blur", "#nick_id", function () {
 
 $(document).on("click blur", '#create_account_area', function () //submit able event
 {
-    console.log('email');console.log(email_com == true);
-    console.log('pass'); console.log(pass_com == true);
-    console.log('nick'); console.log(nick_com == true);
-    console.log('checkbox'); console.log($('.check_box:checked').length == 2);
-        console.log(!!('#nick_id').match(nick_check));
+    //console.log('email');console.log(email_com == true);
+    //console.log('pass'); console.log(pass_com == true);
+    //console.log('nick'); console.log(nick_com == true);
+    //console.log('checkbox'); 
+    //console.log($('.check_box:checked').length == 2);
+    //console.log(!!('#nick_id').match(nick_check));
 
         if (email_com && nick_com && pass_com && $('.check_box:checked').length == 2) { //account setting submit to able
             $('.account_submit').removeAttr('disabled');

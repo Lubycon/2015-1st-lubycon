@@ -274,7 +274,7 @@
                     </a>
                     <span class="check_zone">
                          <p>I agree</p>
-                         <input type="checkbox" class="check_box" id="check1"/><label for="check1"></label>
+                         <input type="checkbox" class="check_box" id="check1"/><label class="check_label" for="check1"></label>
                     </span>
                </div>
                <div class="term_check_box">
