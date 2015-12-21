@@ -54,6 +54,47 @@
     <!-- end nav_guide -->
     <section id="user_view">
         <section id="user_box_total">
+            <div id="user_view_aside" class="con_aside">
+                <?php 
+                    $username = "Admin_User";
+                    $userjob = "Job";
+                    $usercity = "City";
+                    $usercountry = "Country";
+                    $language1 = "language1";
+                    $language2 = "language2";
+                    
+                ?>
+                <i id="myinfo_setting" class="fa fa-gear"></i>
+                <div id="myinfo_menu_list">
+                    <ul>
+                        <li><i class="fa fa-eye"></i>View Contents</li>
+                        <li><i class="fa fa-bar-chart"></i>View Insight</li>
+                        <li><i class="fa fa-user-plus"></i>Follow</li>
+                        <li><i class="fa fa-fa fa-envelope-o"></i>Message to artist</li>
+                    </ul>
+                </div>
+                <div id="myinfo_main">
+                    <figure>
+                        <img src="./ch/img/no_img/no_img_user1.jpg">
+                    </figure>
+                    <h4><?=$username?></h4>
+                </div>
+                <div id="myinfo_sub">
+                    <article class="myinfo_wrap" id="myinfo_job">
+                        <i class="fa fa-suitcase"></i>
+                        <p class="myinfo_name" id="job_name"><?=$userjob?></p>
+                    </article>
+                    <article class="myinfo_wrap" id="myinfo_location">
+                        <i class="fa fa-home"></i>
+                        <p class="myinfo_name" id="location_name"><?=$usercity?>, <?=$usercountry?></p>
+                    </article>
+                    <article class="myinfo_wrap" id="myinfo_language">
+                        <i class="fa fa-language"></i>
+                        <p class="myinfo_name" id="language_name"><?=$language1?>, <?=$language2?></p>
+                    </article>
+                </div>
+                <button id="my_page_bt">My Page</button>
+            </div><!--end con_aside-->
             <div id="user_view_main" class="con_main">
                 <ul id="artist_card_wrap">
                     <?php
@@ -62,51 +103,7 @@
                         }
                     ?>
                 </ul>
-            </div>
-            <div id="user_view_aside" class="con_aside">
-                <?php 
-                    $username = "Admin_User";
-                    $userjob = "Job";
-                    $usercity = "City";
-                    $usercountry = "Country";
-
-                    $file_descript = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.";
-                    
-                    $file_view = 0;
-                    $file_down = 0;
-                    $file_like = 0;                        
-                ?>
-                <div class="designer_info">
-                    <figure>
-                        <img src="./ch/img/no_img/no_img_user1.jpg">
-                    </figure>
-                    <h4><?=$username?></h4>
-                    <h5><i class="fa fa-home"></i><?=$usercity?>, <?=$usercountry?></h5>
-                </div>
-                <button id="content_down"><i class="fa fa-download"></i></button>
-
-                <div id="contents_score">
-                    <ul>
-                        <li><i class="fa fa-eye"></i></li>
-                        <li>Views</li>
-                        <li class="contents_view_score"><?=$file_view?></li>
-                    </ul>
-                    <ul>
-                        <li><i class="fa fa-download"></i></li>
-                        <li>Downloads</li>
-                        <li class="contents_view_score"><?=$file_down?></li>
-                    </ul>
-                    <ul>
-                        <li><i class="fa fa-heart"></i></li>
-                        <li>Likes</li>
-                        <li class="contents_view_score"><?=$file_like?></li>
-                    </ul>
-                </div>
-
-                <article id="file_descript">
-                    <?=$file_descript?>
-                </article>
-            </div><!--end con_right-->
+            </div><!--end con_main-->
         </section><!--end user_box_total-->
     </section><!--end user_view-->
 </section>

@@ -1154,6 +1154,27 @@ $(function(){
 
 });
 /*----------------------------pager interaction end--------------------------*/
+/*--------------------my info setting in artist_page toggle start------------*/
+$(function(){
+    if($("#myinfo_setting").length != 0){
+        var my_toggle_count = 0;
+        $("#myinfo_setting").click(function(){
+            switch(my_toggle_count){
+                case 0:
+                $("#myinfo_menu_list").fadeIn(200);
+                my_toggle_count = 1;
+                console.log("my" + my_toggle_count);
+                break;
+            case 1:
+                $("#myinfo_menu_list").fadeOut(200);
+                my_toggle_count = 0;
+                console.log("my" + my_toggle_count);
+                break;
+            }//switch end
+        });//click end
+    };//if end
+});
+/*--------------------my info setting in artist_page toggle end----------------------*/
 /*----------------------------artist card menu toggle start--------------------------*/
 $(function(){
     if($(".artists_card").length != 0){
@@ -1166,7 +1187,6 @@ $(function(){
                     toggle_count = 1;
                     console.log(toggle_count);
                     break;
-
                 case 1:
                     $(this).children(".artist_menu_list").fadeOut(200);
                     toggle_count = 0;
