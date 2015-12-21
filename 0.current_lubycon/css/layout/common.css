@@ -1358,6 +1358,8 @@ h1 /* main logo */ {
 
     background:#ffffff;
     box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     border-left: 1px solid #aaaaaa;
     border-right: 1px solid #aaaaaa;
     
@@ -1452,6 +1454,8 @@ h1 /* main logo */ {
             height: 107px;
             padding: 22px 10px 10px 20px;
             box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
         }
             #personal_des{
                 font-size:16px;
@@ -1465,6 +1469,8 @@ h1 /* main logo */ {
     background:#ffffff;
     position:relative;
     box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     overflow: hidden;
     float: left;
     padding:10px;
@@ -1473,6 +1479,8 @@ h1 /* main logo */ {
 #personal_contact ul{
     padding: 20px 0px;
     box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     text-align: center;
     background: #ffffff;
 }
@@ -1539,6 +1547,8 @@ h1 /* main logo */ {
     border-left: 1px solid #aaaaaa;
     border-right: 1px solid #aaaaaa;
     box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     float: left;
 }
     #personal_score ul li{
@@ -2146,22 +2156,35 @@ h1 /* main logo */ {
                 margin-right: 10px;
             }
     .artist_bot_info{
+        width: 220px;
         position: relative;
-        margin-top: 23px;
+        margin: 0px auto;
+        margin-top: 28px;
+        padding: 14px 2px 0px 2px;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        border-top: 1px solid #aaaaaa;
     }
-        .view_profile_bt{
-            width: 180px;
-            height: 43px;
-            line-height: 43px;
-            background: #48cfad;
-            border-radius: 3px;
-            text-align: center;
-            margin: 0px auto;
-            color: #ffffff;
-            font-weight: 200;
+        .contents_count{
+            display: inline-block;
+            color: #aaaaaa;
+            float: left;
+            font-size: 13px;
         }
-            .view_profile_bt i{
-                margin-right: 10px;
+            .count_num{
+                display: inline-block;
+                color: #48cfad;
+                font-size: 17px !important;
+            }
+        .view_profile_bt{
+            display: inline-block;
+            background: none;
+            color: #444444;
+            float: right;
+        }
+            .view_profile_bt a{
+                color: #444444;
             }
 
 /*artist card end*/

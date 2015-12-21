@@ -4,6 +4,7 @@
         $user_img_url = "./ch/img/no_img/no_img_user1.jpg";
         $user_location_img = "./ch/img/flag_icons/United-States-Of-America.png";
         $userjob = "Job";
+        $contents_count = 256;
     ?><!--you should change to mySQL later-->
     <div class="artists_card">
         <div class="artist_menu">
@@ -30,7 +31,11 @@
             <p class="artist_job"><i class="fa fa-suitcase"></i><?=$userjob?></p><!--job-->
         </div>
         <div class="artist_bot_info">
-            <div class="view_profile_bt"><i class="fa fa-search-plus"></i>View Profile</div>
+            <article class="contents_count">
+                <p class="count_num"><?=$contents_count?></p>
+                Contents
+            </article>
+            <p class="view_profile_bt"><a href="#">VIEW MORE</a></p>
         </div>
         
     </div>
