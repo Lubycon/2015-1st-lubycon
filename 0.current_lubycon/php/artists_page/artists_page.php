@@ -97,6 +97,9 @@
             </div><!--end con_aside-->
             <div id="user_view_main" class="con_main">
                 <ul id="artist_card_wrap">
+                    <li id="best_artist_wrap">
+                        <p>ARTIST_OF_THE_MONTH(designing...)</p>
+                    </li>
                     <?php
                         for($i=0;$i<30;$i++){
                             include('php/layout/artist_card.php');
