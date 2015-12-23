@@ -110,9 +110,11 @@
         
         <!-- drag able script aply code -->
         <script>
-            $(function () {
-                $("#editor_preview_box").sortable({
-                    revert: true
+            $(function () 
+            {
+                $("#editor_preview_box").sortable
+                ({
+                    revert: true,
                     cancel: ".disabled"
                 });
                 $( "#editor_preview_box li" ).disableSelection();
@@ -125,7 +127,7 @@
                     <input id="editor_content_name" type="text" value="Your Contents name" name="contents_subject" />
                 </p>
                 <!--here is contents_article need save here area's html and css code-->
-                <ul id="editor_preview_box"></ul>;
+                <ul id="editor_preview_box"></ul>
         </section>
     </section>
 </section>
