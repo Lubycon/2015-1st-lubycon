@@ -27,7 +27,7 @@
     <button type="button" class="cancel_bt" id="tnail_cancel">Cancel</button>
 </div>
 <script>
-    $(".contents_pic").attr("id", "cropContainerMinimal");
+    $(".contents_card").append('<div id="cropContainerMinimal"></div>');
 
     var croppicContaineroutputMinimal = {
         uploadUrl: 'img_save_to_file.php',
