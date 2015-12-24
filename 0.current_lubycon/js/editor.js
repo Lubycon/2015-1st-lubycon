@@ -149,10 +149,17 @@ $(function () {
                 $("#file_info_filename").text(data["filename"]); //uploaed file name
                 $("#file_info_filesize").text(data["filesize"] + "byte"); //uploaded file size
                 $("#file_info_fileinside").html(""); //reset box
-                for (var i = 0; i < data["zip_inside"].length ; i++) { //uploaded zip inside data
+                for (var i = 0; i < data["zip_inside"].length; i++) { //uploaded zip inside data
                     var for_array = "<li>" + data["zip_inside"][i] + "</li>";
                     $("#file_info_fileinside").append(for_array);
+                    
+                    if( i >= 10 )
+                    {
+                        $("#file_info_fileinside").append("<li>..........</li>");
+                        break;
+                    };
                 };
+                $("#file_info_fileinside").append("<li>uploaded zip file in " + data["zip_inside"].length + " files</li>");
                 file_info_slidedown(); //file_info slide_down function
             },
             error: function (data)
@@ -236,20 +243,18 @@ $(function () {
     $('#add_text').click(function () {
         var text_editor =
             '<li class="text_editor disabled">' +
-                '<form class="text_editor" action="textarea.html" method="get">' +
                   '<div class="form-group">' +
                     '<button type="button" class="con_delete_bt"><i class="fa fa-times"></i></button>' +
                     '<button type="button" class="con_move_bt"><i class="fa fa-arrows"></i></button>' +
-                    '<textarea name="text" class="summernote" id="contents" title="Contents"></textarea>' +
+                    '<textarea name="text_editor" class="summernote" id="contents" title="Contents"></textarea>' +
                   '</div>' +
-                '</form>'
             '<li>';
                         
 
         $('#editor_preview_box').append(text_editor);
         $('.summernote').summernote({
             height: 200
-        });
+        }); 
         $(".basic").selectOrDie(); //seleter load script
     });
 
@@ -482,8 +487,5 @@ $(function () {
     /////////////////////////////////////////////////////////
     //      editor edit body color picker end
     /////////////////////////////////////////////////////////
-
-
-
 });
 /*----------------------------editor end----------------------------*/
