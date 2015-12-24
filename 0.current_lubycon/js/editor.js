@@ -243,20 +243,18 @@ $(function () {
     $('#add_text').click(function () {
         var text_editor =
             '<li class="text_editor disabled">' +
-                '<form class="text_editor" action="textarea.html" method="get">' +
                   '<div class="form-group">' +
                     '<button type="button" class="con_delete_bt"><i class="fa fa-times"></i></button>' +
                     '<button type="button" class="con_move_bt"><i class="fa fa-arrows"></i></button>' +
-                    '<textarea name="text" class="summernote" id="contents" title="Contents"></textarea>' +
+                    '<textarea name="text_editor" class="summernote" id="contents" title="Contents"></textarea>' +
                   '</div>' +
-                '</form>'
             '<li>';
                         
 
         $('#editor_preview_box').append(text_editor);
         $('.summernote').summernote({
             height: 200
-        });
+        }); 
         $(".basic").selectOrDie(); //seleter load script
     });
 
@@ -489,8 +487,5 @@ $(function () {
     /////////////////////////////////////////////////////////
     //      editor edit body color picker end
     /////////////////////////////////////////////////////////
-
-
-
 });
 /*----------------------------editor end----------------------------*/

@@ -1,4 +1,8 @@
 <?php
+    $text_editor = $_POST['text_editor'];
+
+    echo "text_editor = ". $text_editor;
+
     // it's for multiple select box
     $sel_cate = $_POST['user_selected_category'];
     $sel_tag = $_POST['user_selected_tag'];
