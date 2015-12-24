@@ -179,7 +179,7 @@ $(document).ready(function () // signin box click toggle
         event = event || window.event//for IE
         var subject = $("#signin_bt");
 
-        if (e.target.id != subject.attr('id') && !subject.has(e.target).length) {
+        if (event.target.id != subject.attr('id') && !subject.has(event.target).length) {
             $("#login_box").stop().fadeOut(400);
         }
     });
