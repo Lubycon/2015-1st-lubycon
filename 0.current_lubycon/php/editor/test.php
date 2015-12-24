@@ -1,23 +1,19 @@
 <?php
-    $con_article = $_POST['contents_article'];
     // it's for multiple select box
     $sel_cate = $_POST['user_selected_category'];
     $sel_tag = $_POST['user_selected_tag'];
     //
 
-
-    
-
-
     echo "contents_subject = " . $_POST['contents_subject'];
-    if($con_article)
+    
+    /*if($con_article)
     {
         for($k=0 ; $k< count($con_article); $k++)
         {
             echo "<br/>contents article".$k."=";
             echo $con_article[$k];
         };
-    };
+    };*/
 
     if($sel_cate)
     {

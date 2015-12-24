@@ -5883,7 +5883,7 @@ a.list-group-item-danger, button.list-group-item-danger {
 
     .panel-default > .panel-heading {
         color: #333;
-        background-color: #f5f5f5;
+        background-color: transparent;
         border-color: #ddd;
     }
 

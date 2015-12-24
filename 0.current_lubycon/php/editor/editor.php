@@ -54,7 +54,7 @@
             <!--need php and ajax to file upload and return infomation-->
                 <li id="editor_upload_file">
                     <i class="fa fa-cloud-upload"></i>
-                    <span class="tooltip_bt" id="file_tooltip">Upload file to server</span><!--tooltip-->
+                    <span class="tooltip_bt" id="file_tooltip">Upload file to server<br/>(allow only zip file)</span><!--tooltip-->
                 </li><!--upload file bt-->
                 <li id="editor_preview_upload">
                     <i class="fa fa-picture-o"></i>
