@@ -1906,7 +1906,7 @@ h1 /* main logo */ {
 /* contents card */
 /* comment */
 
-#comment_box{
+#comment_box {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -1914,46 +1914,68 @@ h1 /* main logo */ {
     border-radius: 5px;
     background:#fff;
     overflow: hidden;
-    margin: 15px;
+    margin: 40px;
 }
-#comment_box #comment_writer{
-    width: 100%;
-    height: 78px;
-    background: #222222;
-    padding: 20px 0px;
-    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.3);
-}
-    #comment_box #comment_count{
-        width:97%;
-        color:#444444;
-        text-align:right;
-        font-size: 18px;
-        margin-top:10px;
-        margin-right: 4px;
-     }
+#comment_my_pic {
+    width:50px;
+    height:50px;
+    margin-right: 9px;
+    display: inline-block;
+    border-radius: 3px;
+    vertical-align: top;
+    box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.5);
 
-     #comment_box #comment_text_box{
+    overflow:hidden;
+}
+    #comment_my_pic img{
+        width: 50px;
+        height: 50px;
+    }
+#comment_box #comment_writer {
+    width: 100%;
+    background: #444444;
+    padding: 10px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.3);
+}
+    #comment_box #comment_count {
+        width: 100%;
+        color:#aaaaaa;
+        text-align:right;
+        font-size: 15px;
+        padding: 17px;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+     }
+        #comment_count #comment_counter {
+            color: #48cfad;
+            font-size: 20px;
+        }
+
+     #comment_box #comment_text_box {
         width:100%;
-        max-width:920px;
-        height:78px;
         display: inline-block;
         position: relative;
+        margin-top: 4px;
      }
         #comment_box #comment_text
         {
-            width: 100%;
-            height: 70px;
-
-            min-height:70px;
+            width: 80%;
             max-width: 830px;
-            max-height:68px;
+            height: 50px;
 
             margin:0px;
-            padding: 4px;
+            padding: 10px;
             line-height: 20px;
 
             border:1px solid #111;
             border-radius: 3px;
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
             resize:none;
         }
             #comment_box #comment_text:focus{
@@ -1961,21 +1983,20 @@ h1 /* main logo */ {
                 box-shadow: 0px 0px 5px rgba(81, 203, 238, 1);
             }
         #comment_box #comment_bt{
-            width:70px;
-            height:70px;
-            border:none;
-            margin:0px;
-            padding:0px;
-            right:15px;
-            top:40px;
-            background:#48cfad;
-            border-radius: 50%;
-            box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.5);
-            position: absolute;
+            width: 70px;
+            height: 33px;
+            vertical-align: bottom;
+            border: none;
+            margin: 0px 0px 2px 7px;
+            padding: 0px;
+            background: #777777;
+            border-radius: 3px;
+            box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+            display: inline-block;
         }
         #comment_box #comment_bt i{
             color:#fff;
-            font-size:48px;
+            font-size:20px;
         }
 
 #comment_list
@@ -1995,12 +2016,11 @@ h1 /* main logo */ {
         box-sizing: border-box;
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
-        margin-top: 20px;
-        padding: 10px;
+        padding: 15px 10px;
         width: 100%;
     }
             #comment_list .comment_div:last-child{
-            border-bottom: 1px solid #dddddd;
+            border-bottom: 1px solid #eeeeee;
             padding-bottom: 13px;
         }
 
@@ -2008,10 +2028,10 @@ h1 /* main logo */ {
             float:left;
             width:50px;
             height:50px;
-            margin-right:8px;
+            margin-right: 18px;
             margin-left: 8px;
+            border-radius: 3px;
 
-            border-radius: 50%;
             overflow:hidden;
         }
             #comment_box #comment_list .comment_div .comment_pic img{
@@ -2021,22 +2041,21 @@ h1 /* main logo */ {
 
         #comment_box #comment_list .comment_div h4{
             line-height:20px;
-            margin-top:-4px;
             margin-bottom:6px;
             font-size:19px;
+            color: #444444;
         }
         #comment_box #comment_list .comment_div .comment_contents{
             line-height:19px;
             margin-left: 58px;
-            color: #444444;
+            color: #555555;
             font-size: 15px;
-            font-weight: 200;
         }
         #comment_box #comment_list .comment_div .comment_time{
             position:absolute;
             top:8px;
-            right:0px;
-            color:#7c7c7c;
+            right: 20px;
+            color:#777777;
             font-size:13px;
         }
 
