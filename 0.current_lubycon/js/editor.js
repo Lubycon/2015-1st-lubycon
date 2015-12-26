@@ -410,7 +410,6 @@ $(function () {
 
                 /* change card title to user type text */
                 $(".contents_title").text($("#editor_content_name").val());
-
             }
         });
     });
@@ -435,45 +434,9 @@ $(function () {
     /////////////////////////////////////////////////////////
     //      editor change thumbnail start
     /////////////////////////////////////////////////////////
-    $(function ()
-    {
-        $(document).on('click', '#change_img_bt', function () {
-            $('#change_img_real').click();
-        });
-        $(document).on('change', '#change_img_real', function ()
-        {
-            uploadFile();
-        });
-    });
+    
 
-    function uploadFile()
-    {
-        $('#work_inbody').html("Sending... Please wait...");
-        var form = $("#thumb_form")[0];
-        var formData = new FormData(form);
-        $.ajax(
-        {
-            url: "php/ajax/editor_thumbupload.php",
-            processData: false,
-            contentType: false,
-            data: formData,
-            type: "POST",
-            cache: false,
-            success: function (args)
-            {
-                $('#work_inbody').html("<img src='./php/ajax/thumb_upload/" + args + "'/>");
-                $('.contents_pic img').attr('src', './php/ajax/thumb_upload/' + args + '');
-                $('.contents_title').text($("#editor_content_name").val());
-                $('#form1').trigger("reset");
-            },
-            error: function (args)
-            {
-                $('#work_inbody').html("File upload failed.");
-                $('#work_inbody').append("!!!");
-                $('#form1').trigger("reset");
-            },
-        })
-    }
+
     /////////////////////////////////////////////////////////
     //      editor change thumbnail start
     /////////////////////////////////////////////////////////

@@ -157,7 +157,7 @@
 
 <section id="community_pre">
     <!--community preview start-->
-    <article class="designer_title">HOT TOPICS IN <font color="#48cfad">AUGUST</font></article>
+    <article class="designer_title">HOT TOPICS IN <font color="#48cfad">DECEMBER</font></article>
     <ul>
         <?php
             for( $i=0 ; $i<5 ; $i++ ){

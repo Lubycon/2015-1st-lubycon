@@ -40,7 +40,7 @@
      }
 
 
-      $file_info = array(filename => $file_name , "filesize" => filesize($target) , "zip_inside" => $zip_inside_array);
+      $file_info = array("filename" => $file_name , "filesize" => filesize($target) , "zip_inside" => $zip_inside_array);
       echo json_encode($file_info);
      }
 ?>

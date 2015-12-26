@@ -175,10 +175,11 @@ $(function () //sign in toggle event
 
 $(document).ready(function () // signin box click toggle
 {
-    $(document).click(function (e) {
+    $(document).click(function (event) {
+        event = event || window.event//for IE
         var subject = $("#signin_bt");
 
-        if (e.target.id != subject.attr('id') && !subject.has(e.target).length) {
+        if (event.target.id != subject.attr('id') && !subject.has(event.target).length) {
             $("#login_box").stop().fadeOut(400);
         }
     });
@@ -866,7 +867,8 @@ $(function () {
         });//click end
         //-------------------------------selectbox fadeOut event-----------------------------//
         $(this).mouseleave(function(){
-            $(document).click(function (e) {
+            $(document).click(function (event) {
+                event = event || window.event//for IE
                 if (!$(event.target).hasClass("contents_bt")) {
                     $(this).find($(".subnav_list")).stop().fadeOut(300);
                     $(".contents_bt").css("background","#555555");
@@ -1173,7 +1175,8 @@ $(function(){
             }//switch end
         });//click end
         $("#myinfo_setting").mouseleave(function(){
-            $(document).click(function (e) {
+            $(document).click(function (event) {
+                event = event || window.event//for IE
                 if ($(event.target).attr("id") != "myinfo_setting") {
                     //console.log($(event.target).attr("id"));
                     $(this).find($("#myinfo_menu_list")).stop().fadeOut(200);
@@ -1194,7 +1197,8 @@ $(function(){
     if($(".artists_card").length != 0){
         $(".artist_menu").each(function(){
             var toggle_count = 0;
-            $(this).click(function (e){
+            $(this).click(function (event){
+                event = event || window.event//for IE
                 switch(toggle_count){
                     case 0:
                     $(this).children(".artist_menu_list").stop().fadeIn(200);
@@ -1209,7 +1213,8 @@ $(function(){
                 }//switch end
             });//click end
             $(this).mouseleave(function(){
-                $(document).click(function (e) {
+                $(document).click(function (event) {
+                    event = event || window.event//for IE
                     if (!$(event.target).hasClass("artist_menu_icon")) {
                         //console.log($(event.target).attr("class"));
                         $(this).find($(".artist_menu_list")).stop().fadeOut(200);

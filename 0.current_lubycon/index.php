@@ -149,7 +149,6 @@
         <!-- before sign in -->
         <div id="signin_bt">
             <div id="signin">
-                <span class="partition">|</span>
                 <p class="signicon"><i class="fa fa-unlock-alt fa-lg"></i></p>
                 <p class="signin">SIGN IN</p>
             </div>  <!-- end signin -->
