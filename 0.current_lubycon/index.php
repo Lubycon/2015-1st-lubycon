@@ -157,7 +157,7 @@
                     <form id="main_login" name="main_login" method="post">
                         <div id="login_input">
                                 <input type="text" id="login_id" name="login_id" value="E-mail"/><i id="email_icon" class="fa fa-user"></i>
-                                <input type="text" id="login_pass" name="login_pass" value="Password" /><i id="pass_icon" class="fa fa-unlock-alt"></i>
+                                <input type="password" id="login_pass" name="login_pass" value="Password" /><i id="pass_icon" class="fa fa-unlock-alt"></i>
                         </div> <!-- end login_input div --> 
                         <input id="login_lubycon" type="button" value="Go"><!--submit bt-->
                     </form><!--end login_input form-->

@@ -2,7 +2,7 @@ DELIMITER $$
 
 DROP PROCEDURE IF EXISTS OverlapCheck $$
 
-CREATE PROCEDURE OverlapCheck()
+CREATE PROCEDURE OverlapCheck(IN )
 
 BEGIN
 

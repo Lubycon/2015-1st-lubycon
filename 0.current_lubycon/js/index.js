@@ -281,34 +281,33 @@ $(document).ready(function(){
             user_pw: $("#login_pass").val(),//input pw
             is_ajax: 1
         };
-        react="wating";
-        console.log(react);
+        console.log("response wating");
         $.ajax({
             type: "POST",
             url: "php/ajax/login_check.php",
             cache: false,
             data: form_data,//user_id, user_pw, is_ajax
-            success: function(response) {
-                react = response;
-                console.log(response);
-                if(react==="true"){
+            success: function(data) {
+                console.log(data);
+                if(data == "true"){
                     $('#after_signin').show();
                     $('#addcontent_bt').show();
                     $('#signin_bt').hide();
-                    react="waiting";
-                    console.log(react);
-                }else if(react==="false"){
+                    console.log(data);
+                    return;
+                }else if(data == "false"){
                     setTimeout(function(){
                         $("#login_box").attr("class","shake animated");
                     },10);
-                    react="waiting";
-                    console.log(react);
-                    return false;
+                    console.log(data);
+                    return;
                 }
                 else{
                     console.log(react);
                     console.log("exception");
+                    return;
                 }
+                return;
             },
             error: function(response) {
                 console.log("ajax error");

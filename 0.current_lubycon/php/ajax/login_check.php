@@ -26,9 +26,12 @@
 	$database->DBQuestion();
 	$result = $database->result->fetch_array();
 
+echo $user_pw;
+
+/*
 	if($result[0]){
-		setcookie('user_id', $user_id);
-		setcookie('user_name', $members[$user_id]['name']);
+		//setcookie('user_id', $user_id);
+		//setcookie('user_name', $members[$user_id]['name']);
 
 		$database->DBOut();
 		echo "true";
@@ -36,7 +39,7 @@
 		$database->DBOut();
 		echo "false";
 	}
-
+*/
 	/*
 	$members = array('user1'=>array('pw'=>'pw1', 'name'=>'한놈'),
 			'user2'=>array('pw'=>'pw2', 'name'=>'두시기'),
