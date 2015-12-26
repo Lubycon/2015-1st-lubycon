@@ -13,7 +13,7 @@
     <meta name="copyright" content="copyrights 2015 LUBYCON" />
     <meta name="keywords" content="design, font ,vector, 3D design, community, designers, engineer, 3D printer, Illustration, Lubycon" />
 
-    <title>LUBYCON</title>
+    <title>Lubycon</title>
 
     <link rel="shortcut icon" href="./ch/img/logo/lubycon.ico" /> <!-- favicon -->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source Sans Pro:200,400" type="text/css" />	<!--google web font-->
