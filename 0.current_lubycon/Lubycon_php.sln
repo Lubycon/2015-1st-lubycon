@@ -136,8 +136,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ajax", "ajax", "{A5A8174F-E
 		php\ajax\editor_ajax.php = php\ajax\editor_ajax.php
 		php\ajax\editor_fileupload.php = php\ajax\editor_fileupload.php
 		php\ajax\editor_thumbupload.php = php\ajax\editor_thumbupload.php
-		php\ajax\img_crop_to_file.php = php\ajax\img_crop_to_file.php
-		php\ajax\img_save_to_file.php = php\ajax\img_save_to_file.php
+		img_crop_to_file.php = img_crop_to_file.php
+		img_save_to_file.php = img_save_to_file.php
 		php\ajax\overlap_check.php = php\ajax\overlap_check.php
 		php\ajax\subnav.php = php\ajax\subnav.php
 		php\ajax\upload_img.php = php\ajax\upload_img.php
@@ -146,6 +146,12 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "database", "database", "{47A72F42-267F-46A1-83F9-784BC9FB8B66}"
 	ProjectSection(SolutionItems) = preProject
 		php\database\database_class.php = php\database\database_class.php
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "artists_page", "artists_page", "{15C9771D-A4D8-4999-BB4D-670E36973F1D}"
+	ProjectSection(SolutionItems) = preProject
+		php\artists_page\artists_page.php = php\artists_page\artists_page.php
+		php\artists_page\user_ranking.php = php\artists_page\user_ranking.php
 	EndProjectSection
 EndProject
 Global
@@ -168,5 +174,6 @@ Global
 		{95A2715A-1E5C-45E2-A385-A4B1032CE2F9} = {DAEE0839-5F41-492F-95AB-58A345B7C2AE}
 		{A5A8174F-E088-43E5-BDAE-1CF2E3FCFFAE} = {DAEE0839-5F41-492F-95AB-58A345B7C2AE}
 		{47A72F42-267F-46A1-83F9-784BC9FB8B66} = {DAEE0839-5F41-492F-95AB-58A345B7C2AE}
+		{15C9771D-A4D8-4999-BB4D-670E36973F1D} = {DAEE0839-5F41-492F-95AB-58A345B7C2AE}
 	EndGlobalSection
 EndGlobal

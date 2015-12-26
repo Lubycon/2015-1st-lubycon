@@ -1,3 +1,5 @@
+USE lubycon;
+
 INSERT INTO `luby_country` SET `country_name` = 'Afghanistan', `country_tel_one` = '+93';
 INSERT INTO `luby_country` SET `country_name` = 'Albania', `country_tel_one` = '+355';
 INSERT INTO `luby_country` SET `country_name` = 'Algeria', `country_tel_one` = '+213';

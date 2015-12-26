@@ -38,7 +38,7 @@ $(document).on("blur", "#email_id", function () {
         //enter to AJAX Logic by SsaRu
         $.ajax({
             type: "POST",
-            url: "php/ajax/overlap_check.php",
+            url: "php/account/overlap_check.php",
             data: 'data=' + value + '&' + 'id=email',
             cache: false,
             success: function (data) {
@@ -336,7 +336,7 @@ $(document).on("blur", "#nick_id", function () {
         //enter to AJAX Logic by SsaRu
         $.ajax({
             type: "POST",
-            url: "php/ajax/overlap_check.php",
+            url: "php/account/overlap_check.php",
             data: 'data=' + value + '&' + 'id=nick',
             cache: false,
             success: function (data) {

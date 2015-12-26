@@ -13,7 +13,7 @@
     <meta name="copyright" content="copyrights 2015 LUBYCON" />
     <meta name="keywords" content="design, font ,vector, 3D design, community, designers, engineer, 3D printer, Illustration, Lubycon" />
 
-    <title>LUBYCON</title>
+    <title>Lubycon</title>
 
     <link rel="shortcut icon" href="./ch/img/logo/lubycon.ico" /> <!-- favicon -->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source Sans Pro:200,400" type="text/css" />	<!--google web font-->
@@ -157,7 +157,7 @@
                     <form id="main_login" name="main_login" method="post">
                         <div id="login_input">
                                 <input type="text" id="login_id" name="login_id" value="E-mail"/><i id="email_icon" class="fa fa-user"></i>
-                                <input type="text" id="login_pass" name="login_pass" value="Password" /><i id="pass_icon" class="fa fa-unlock-alt"></i>
+                                <input type="password" id="login_pass" name="login_pass" value="Password" /><i id="pass_icon" class="fa fa-unlock-alt"></i>
                         </div> <!-- end login_input div --> 
                         <input id="login_lubycon" type="button" value="Go"><!--submit bt-->
                     </form><!--end login_input form-->
@@ -221,6 +221,7 @@
                 <option value="Designer">Artists</option>
                 <option value="Community">Community</option>
             </select>
+            <span class="subnav_arrow"><i class="fa fa-caret-down"></i></span>
         </div>
         <!-- end select_box -->
     </div>

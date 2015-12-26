@@ -68,6 +68,7 @@
                         <option value="Subject">Subject</option>
                         <option value="Writer">Writer</option>
                     </select>
+                <span class="subnav_arrow"><i class="fa fa-caret-down"></i></span>
                 </div>
                 <input type="text" id="sub_search_text" value="Enter the Keyword" />
                 <button id="sub_search_btn">
