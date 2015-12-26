@@ -221,6 +221,7 @@
                 <option value="Designer">Artists</option>
                 <option value="Community">Community</option>
             </select>
+            <span class="subnav_arrow"><i class="fa fa-caret-down"></i></span>
         </div>
         <!-- end select_box -->
     </div>

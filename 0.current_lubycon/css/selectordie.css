@@ -51,7 +51,7 @@
         cursor: pointer;
     }
 
-    /* Down arrows */
+    /* Down arrows 
     .sod_select:before,
     .sod_select:after
         {
@@ -61,7 +61,7 @@
             top: 13px;
             font-size: 13px;
         }
-
+    */
 
     /* Options list wrapper */
     .sod_select .sod_list_wrapper

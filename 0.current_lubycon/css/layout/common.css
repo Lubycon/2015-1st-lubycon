@@ -978,6 +978,7 @@ h1 /* main logo */ {
     float: right;
     color: #999;
     font-weight: 300;
+    position:relative;
 }
 
 #main_search_btn {
@@ -1280,6 +1281,7 @@ h1 /* main logo */ {
     color: #ffffff;
     font-weight: 300;
     float: left;
+    position:relative;
 }
     #sub_search_bar .select_box .sod_label
     {
