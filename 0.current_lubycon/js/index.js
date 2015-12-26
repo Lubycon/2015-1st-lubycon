@@ -658,7 +658,30 @@ function floating_bt_action(){
 /////////////////////////////////////////////////////////
 //      contents view con_left hovering end
 /////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+//      comment write box auto height start
+/////////////////////////////////////////////////////////
+function Expander() {
+    this.start = function () {
+        $("#comment_text").keydown(function(event) {
+            this.style.height = 0;
+            var newHeight = this.scrollHeight + 5;
+            
+            if( this.scrollHeight >= this.clientHeight ){
+                newHeight += 5;
+                this.style.height= newHeight + 'px';
+            }//if end
+        });//keydown end
+    }//function end
+}//expander function end
 
+$(function() {
+    window.app = new Expander();
+    window.app.start();
+});
+/////////////////////////////////////////////////////////
+//      comment write box auto height end
+/////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////
 //      contents view con_right sticky start
 /////////////////////////////////////////////////////////

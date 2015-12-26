@@ -64,6 +64,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "css", "css", "{89F53E10-E9B
 	ProjectSection(SolutionItems) = preProject
 		css\about_us.css = css\about_us.css
 		css\account_setting.css = css\account_setting.css
+		css\bootstrap.min.css = css\bootstrap.min.css
 		css\community.css = css\community.css
 		css\community_view.css = css\community_view.css
 		css\contents_page.css = css\contents_page.css
@@ -83,6 +84,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "css", "css", "{89F53E10-E9B
 		css\selectordie.css = css\selectordie.css
 		css\slider.css = css\slider.css
 		css\success_account.css = css\success_account.css
+		css\summernote.css = css\summernote.css
 		css\waiting_for_resisting.css = css\waiting_for_resisting.css
 	EndProjectSection
 EndProject

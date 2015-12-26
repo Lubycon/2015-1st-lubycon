@@ -40,7 +40,7 @@
 	    </div>
 	    <div id="des_editor">
 	    	<p class="setting_title">Description</p>
-	    	<textarea id="setting_des_text" name="setting_desc"><?=$contents_desc?></textarea>
+	    	<textarea id="setting_des_text" name="setting_desc"></textarea>
 	    </div>
 	</div>
 	<!--left_set end-->

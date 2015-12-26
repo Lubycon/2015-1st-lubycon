@@ -95,14 +95,17 @@
                     <article id="comment_box">
                         <div id="comment_writer">
                             <div id="comment_text_box">
-                                <textarea id="comment_text">hello world</textarea>
+                                <figure id="comment_my_pic">
+                                    <img src="ch/img/no_img/no_img_user1.jpg">
+                                </figure>
+                                <textarea id="comment_text"></textarea>
                                 <button id="comment_bt">
                                     <i class="fa fa-comments"></i>
                                 </button>
                             </div>
                         </div>
                         <div id="comment_list">
-                            <p id="comment_count"><span class="comment_counter">12</span> Comments</p>
+                            <p id="comment_count"><span id="comment_counter">10</span> Comments</p>
                             <?php
                                 for($i=1; $i<=10; $i++){
                                     include("php/layout/comment.php");
