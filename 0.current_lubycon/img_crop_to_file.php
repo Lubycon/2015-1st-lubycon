@@ -19,6 +19,7 @@ $cropH = $_POST['cropH'];
 $angle = $_POST['rotation'];
 
 $jpeg_quality = 100;
+$png_quality = 100;
 
 $output_filename = "temp/croppedImg_".rand();
 
@@ -57,7 +58,6 @@ if(!is_writable(dirname($output_filename))){
 	    "message" => 'Can`t write cropped File'
     );	
 }else{
-
     // resize the original image to size of editor
     $resizedImage = imagecreatetruecolor($imgW, $imgH);
 	imagecopyresampled($resizedImage, $source_image, 0, 0, 0, 0, $imgW, $imgH, $imgInitW, $imgInitH);

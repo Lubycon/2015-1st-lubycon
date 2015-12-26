@@ -1,7 +1,4 @@
-<script src="js/jquery.form.min.js"></script>
-
 <link href="css/croppic.css" rel="stylesheet">
-<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
 <script src="js/croppic.min.js"></script>
 
 <?php   

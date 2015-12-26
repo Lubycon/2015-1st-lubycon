@@ -9,14 +9,11 @@
 
 
 #croppic {
-    width: 253px; /* MANDATORY */
-    height: 215px; /* MANDATORY */
+    width: 260px; /* MANDATORY */
+    height: 260px; /* MANDATORY */
     position: relative; /* MANDATORY */
-    margin: 50px 70px 20px;
-    border: 3px solid #FFF;
     box-sizing: content-box;
     -moz-box-sizing: content-box;
-    border-radius: 2px;
     background-image: url(../img/placeholder.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -25,9 +22,9 @@
 
 #cropContainerMinimal {
     width: 253px;
-    height: 215px;
+    height: 220px;
     position:absolute;
-    top:0;
+    top:-2px;
     left:-1px;
     z-index:2;
     overflow:hidden;
