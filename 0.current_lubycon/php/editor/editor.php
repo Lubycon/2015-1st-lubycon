@@ -26,8 +26,8 @@
 
 
 <form id="editor_form" enctype="multipart/form-data" method="post" action="./php/editor/test.php">
-<div id="popup_wrap">
-    <div id="next_pop_body" class="fadeInDown animated"></div><!--go to thumbnail-->
+<!--<div id="popup_wrap">
+    <div id="next_pop_body" class="fadeInDown animated"></div>
 </div>
 
 <div id="embed_popup">
@@ -46,20 +46,43 @@
         <li>3.Setting</li>
     </ol>
     <button type="button" class="next_bt" id="call_thumb">Next</button>
-</nav>
+</nav>-->
 <section id="editor_inbody">
-    <aside id="editor_aside">
-        <div id="editor_aside_wrap">
+    <section id="editor_body">
+        
+        <!-- drag able script aply code -->
+        <script>
+            $(function () 
+            {
+                $("#editor_preview_box").sortable
+                ({
+                    revert: true,
+                    cancel: ".disabled"
+                });
+                $( "#editor_preview_box li" ).disableSelection();
+            });
+        </script>
+        <!-- drag able script aply code -->
+
+        <section id="editor_section" class="con_main">
+                <p>
+                    <input id="editor_content_name" type="text" value="Your Contents name" name="contents_subject" />
+                </p>
+                <!--here is contents_article need save here area's html and css code-->
+                <ul id="editor_preview_box"></ul>
+        </section><!--editor_section end-->
+    </section><!--editor_body end-->
+    <aside id="editor_aside" class="con_aside">
+        <!--<div id="editor_aside_wrap">
             <ol>
-            <!--need php and ajax to file upload and return infomation-->
                 <li id="editor_upload_file">
                     <i class="fa fa-cloud-upload"></i>
-                    <span class="tooltip_bt" id="file_tooltip">Upload file to server<br/>(allow only zip file)</span><!--tooltip-->
-                </li><!--upload file bt-->
+                    <span class="tooltip_bt" id="file_tooltip">Upload file to server<br/>(allow only zip file)</span>
+                </li>
                 <li id="editor_preview_upload">
                     <i class="fa fa-picture-o"></i>
-                    <span class="tooltip_bt" id="image_tooltip">Upload preview image</span><!--tooltip-->
-                </li><!--upload preview img bt-->
+                    <span class="tooltip_bt" id="image_tooltip">Upload preview image</span>
+                </li>
             </ol>
 
             <input type="file" id="upload_file_input" name="upload_file" accept="application/zip"/>
@@ -68,11 +91,11 @@
             <ol>
                 <li id="img_crop" class="img_crop_notallow">
                     <i class="fa fa-crop"></i>
-                    <span class="tooltip_bt" id="file_tooltip">Image crop tool</span><!--tooltip-->
+                    <span class="tooltip_bt" id="file_tooltip">Image crop tool</span>
                 </li>
                 <li id="add_text">
                     <i class="fa fa-font"></i>
-                    <span class="tooltip_bt" id="file_tooltip">Text tool</span><!--tooltip-->
+                    <span class="tooltip_bt" id="file_tooltip">Text tool</span>
                 </li>
                 <li id="change_bd_color">
                     <input type="text" id="body_color_picker"></input>
@@ -80,9 +103,10 @@
                 </li>
                 <li id="embed_media">
                     <i class="fa fa-code"></i>
-                    <span class="tooltip_bt" id="file_tooltip">Embed media</span><!--tooltip-->
+                    <span class="tooltip_bt" id="file_tooltip">Embed media</span>
                 </li>
             </ol>
+        </div>-->
             
             <!-- need ajax show uploaded file zip and inside zip files-->
             <div id="file_info">
@@ -105,30 +129,6 @@
                 </footer>
             </div>
         </div>
-    </aside>
-    <section id="editor_body">
-        
-        <!-- drag able script aply code -->
-        <script>
-            $(function () 
-            {
-                $("#editor_preview_box").sortable
-                ({
-                    revert: true,
-                    cancel: ".disabled"
-                });
-                $( "#editor_preview_box li" ).disableSelection();
-            });
-        </script>
-        <!-- drag able script aply code -->
-
-        <section id="editor_section">
-                <p>
-                    <input id="editor_content_name" type="text" value="Your Contents name" name="contents_subject" />
-                </p>
-                <!--here is contents_article need save here area's html and css code-->
-                <ul id="editor_preview_box"></ul>
-        </section>
-    </section>
-</section>
+    </aside><!--editor_aside end-->
+</section><!--editor_inbody_end-->
 </form>

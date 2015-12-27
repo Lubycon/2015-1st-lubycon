@@ -693,7 +693,7 @@ $(document).scroll(function (){
     - $("#navsel").height() 
     - $("#main_figure").height();
 
-    if($(document).find(".con_aside")){ 
+    if($(document).find(".con_aside") && $(".con_aside").attr("id") != "editor_aside"{ 
         if ($(document).scrollTop() > 184 && $(document).scrollTop() < scrollend){
             $(".con_aside").css({ "position": "fixed", "top": "100px" });
         }
