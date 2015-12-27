@@ -243,18 +243,9 @@ $(function () {
     /////////////////////////////////////////////////////////
 
 
-    $('#add_text').click(function () {
-        var text_editor =
-            '<li class="text_editor disabled">' +
-                  '<div class="form-group">' +
-                    '<textarea name="text_editor" class="summernote" id="contents" title="Contents"></textarea>' +
-                  '</div>' +
-            '<li>';
-                        
-
-        $('#editor_preview_box').append(text_editor);
-
-        $('.summernote').summernote({
+    $(document).ready(function () {
+        console.log("summernote is ready");
+        $('#summernote').summernote({
             height: 250 // set editor height
             /*
             onblur: function (e) {

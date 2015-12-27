@@ -33,7 +33,6 @@
     <div id="next_pop_body" class="fadeInDown animated"></div><!--go to thumbnail-->
 <!--<div id="popup_wrap">
     <div id="next_pop_body" class="fadeInDown animated"></div>
->>>>>>> d2c97bb1cd533e9e96773521fd61b54d51021657
 </div>
 
 <div id="embed_popup">
@@ -55,30 +54,23 @@
 </nav>-->
 <section id="editor_inbody">
     <section id="editor_body">
-        
-        <!-- drag able script aply code -->
-        <script>
-            $(function () 
-            {
-                $("#editor_preview_box").sortable
-                ({
-                    revert: true,
-                    cancel: ".disabled"
-                });
-                $( "#editor_preview_box li" ).disableSelection();
-            });
-        </script>
-        <!-- drag able script aply code -->
-
         <section id="editor_section" class="con_main">
-                <p>
-                    <input id="editor_content_name" type="text" value="Your Contents name" name="contents_subject" />
-                </p>
-                <!--here is contents_article need save here area's html and css code-->
-                <ul id="editor_preview_box"></ul>
+            <textarea name="text_editor" id="summernote" title="Contents"></textarea>
+            <!--summernote-->
         </section><!--editor_section end-->
     </section><!--editor_body end-->
     <aside id="editor_aside" class="con_aside">
+        <p>
+            <input id="editor_content_name" type="text" value="Your Contents name" name="contents_subject" />
+        </p>
+        <ol>
+            <li id="editor_upload_file">
+                <i class="fa fa-cloud-upload"></i>
+                <span class="tooltip_bt" id="file_tooltip">Upload file to server<br/>(allow only zip file)</span>
+            </li>
+        </ol>
+        <input type="file" id="upload_file_input" name="upload_file" accept="application/zip"/>
+        <input type="submit" class="final_upload_bt" id="upload_final" value="submit" />
         <!--<div id="editor_aside_wrap">
             <ol>
                 <li id="editor_upload_file">
