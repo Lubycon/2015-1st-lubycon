@@ -14,6 +14,7 @@
 
 <?php
 //php variable setting
+    $contents_cate = $_GET["3"];
     //$upload_file = user upload file (i guess only ziped file)
     //$upload_preview_file = user upload preview image files (user can multiple images)
     //$upload_preview_url = user upload preview image url (for easy call)
@@ -21,11 +22,13 @@
     $uploaded_file_name;
     $uploaded_file_inside_list = "Nothing Uploaded";
     $uploaded_file_size;
+
 ?>
 
 
 
 <form id="editor_form" enctype="multipart/form-data" method="post" action="./php/editor/test.php">
+<input type="hidden" name="contents_cate_name" value="<?=$contents_cate?>" />
 <div id="popup_wrap">
     <div id="next_pop_body" class="fadeInDown animated"></div><!--go to thumbnail-->
 </div>

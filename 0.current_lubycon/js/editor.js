@@ -90,6 +90,7 @@ $(function () {
     /////////////////////////////////////////////////////////
     //      img crop start
     /////////////////////////////////////////////////////////
+    /*
     $(document).on('click', '.preview_img', function () {
         if ($(this).css('border') == '1px solid rgb(255, 255, 255)') {
             $(this).css({ "background": "rgb(255, 255, 255)" }); //css reset
@@ -106,7 +107,7 @@ $(function () {
             $('#img_crop').addClass('img_crop_notallow'); //img crop bt disable
         }
     });
-
+    */
     /////////////////////////////////////////////////////////
     //      img crop end
     /////////////////////////////////////////////////////////
@@ -114,13 +115,13 @@ $(function () {
     /////////////////////////////////////////////////////////
     //      editor_upload_file start
     /////////////////////////////////////////////////////////
-
+    
     $('#editor_upload_file').click(function () { //upload file window open
         $('#upload_file_input').click();
     });
 
-
-    //ajax start
+    /*
+    ajax start
     $(function ()
     {
         $('#upload_file_input').change(function ()
@@ -169,7 +170,7 @@ $(function () {
             },
         })
     }
-
+    */
 
 
     /////////////////////////////////////////////////////////
@@ -180,7 +181,7 @@ $(function () {
     //      preview img start 
     /////////////////////////////////////////////////////////
 
-
+    /*
     $('#editor_preview_upload').click(function () { //preview image window open
         $('#preview_upload_input').click();
     });
@@ -205,6 +206,7 @@ $(function () {
             };
         });
     });
+    */
     /////////////////////////////////////////////////////////
     //      editor nav end
     /////////////////////////////////////////////////////////
@@ -212,7 +214,7 @@ $(function () {
     /////////////////////////////////////////////////////////
     //      embed midea 
     /////////////////////////////////////////////////////////
-
+    /*
     $('#embed_media').click(function () { // embed code window load
         $('.dark_overlay').stop().fadeIn(100);
         $('#embed_popup').stop().fadeIn(100);
@@ -231,7 +233,7 @@ $(function () {
         $('#embed_popup').hide();
         $('.dark_overlay').hide();
     });
-
+    */
     /////////////////////////////////////////////////////////
     //      embed midea 
     /////////////////////////////////////////////////////////
@@ -240,24 +242,31 @@ $(function () {
     //      add text 
     /////////////////////////////////////////////////////////
 
+
     $('#add_text').click(function () {
         var text_editor =
             '<li class="text_editor disabled">' +
                   '<div class="form-group">' +
-                    '<button type="button" class="con_delete_bt"><i class="fa fa-times"></i></button>' +
-                    '<button type="button" class="con_move_bt"><i class="fa fa-arrows"></i></button>' +
                     '<textarea name="text_editor" class="summernote" id="contents" title="Contents"></textarea>' +
                   '</div>' +
             '<li>';
                         
 
         $('#editor_preview_box').append(text_editor);
-        $('.summernote').summernote({
-            height: 200
-        }); 
-        $(".basic").selectOrDie(); //seleter load script
-    });
 
+        $('.summernote').summernote({
+            height: 250 // set editor height
+            /*
+            onblur: function (e) {
+                $('#summercontent').html($('.summernote').code());
+                console.log('1');
+            },
+            minHeight: 100, // set minimum height of editor
+            maxHeight: null, // set maximum height of editor
+            lang: 'ko-KR' // default: 'en-US'
+            */
+        });
+    });
     /////////////////////////////////////////////////////////
     //      add text end
     /////////////////////////////////////////////////////////
@@ -265,7 +274,7 @@ $(function () {
     /////////////////////////////////////////////////////////
     //      delete bt hover start
     /////////////////////////////////////////////////////////
-
+    /*
     $(document).on('mouseenter', '.text_editor', function () // textarea delete bt hover
     {
         $(this).find('.con_delete_bt , .con_move_bt').stop().fadeIn(150);
@@ -298,7 +307,7 @@ $(function () {
         $(this).children('.con_delete_bt').stop().fadeOut(150);
         $(this).css({ "border": "none" });
     });
-
+    */
     /////////////////////////////////////////////////////////
     //      delete bt hover end
     /////////////////////////////////////////////////////////
@@ -306,7 +315,7 @@ $(function () {
     /////////////////////////////////////////////////////////
     //      contents delete btn start
     /////////////////////////////////////////////////////////
-
+    /*
     $(document).on('click', '.con_delete_bt', function () //text area delete event
     {
         $(this).parents('.text_editor').fadeOut(200, function () { $(this).destroy(); });
@@ -323,7 +332,7 @@ $(function () {
         $('.text_editor').addClass("disabled");
         $("#editor_preview_box li").disableSelection();
     });
-
+    */
     /////////////////////////////////////////////////////////
     //      contents delete btn end
     /////////////////////////////////////////////////////////

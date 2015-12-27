@@ -1,4 +1,38 @@
 <?php
+    echo "-------------zip file upload--------------<br/>";
+    $set_date = date("YmdHis");
+    $con_cate = $_POST['contents_cate_name'];
+    $uploaddir = '../../../contents_data/' . $con_cate . "/" . $set_date . "/" ;
+    $uploadfile = $uploaddir . basename($_FILES['upload_file']['name']);
+
+    if( mkdir($uploaddir,0070) )
+    {
+        echo "directory was make<br/>";
+        if (move_uploaded_file($_FILES['upload_file']['tmp_name'], $uploadfile)) 
+        {
+            echo "zip file upload succece<br/>";
+            echo "upload path : localhost/contensts_data/". $con_cate . "/" . $set_date . "/" . basename($_FILES['upload_file']['name']) . "<br/>";
+        } else {
+            print "zip file upload failed<br/>";
+        }
+    }else
+    {
+        echo "make directory fail";
+    };
+    echo "-------------zip file upload--------------<br/>";
+
+
+
+
+
+
+
+
+
+
+
+
+
     $text_editor = $_POST['text_editor'];
 
     echo "text_editor = ". $text_editor;
