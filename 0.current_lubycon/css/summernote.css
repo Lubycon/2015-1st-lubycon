@@ -144,6 +144,7 @@
 .note-popover .popover-content, .panel-heading.note-toolbar {
     padding: 0 0 5px 5px;
     margin: 0;
+    text-align: center;
 }
 
     .note-popover .popover-content > .btn-group, .panel-heading.note-toolbar > .btn-group {

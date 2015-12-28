@@ -60,17 +60,32 @@
         </section><!--editor_section end-->
     </section><!--editor_body end-->
     <aside id="editor_aside" class="con_aside">
-        <p>
-            <input id="editor_content_name" type="text" value="Your Contents name" name="contents_subject" />
-        </p>
-        <ol>
-            <li id="editor_upload_file">
-                <i class="fa fa-cloud-upload"></i>
+        <nav id="editor_aside_tab">
+            <ul>
+                <li class="tab_body selected_tab" id="file_tab">File</li>
+                <li class="tab_body" id="thumbnail_tab">Thumbnail</li>
+                <li class="tab_body" id="setting_tab">Setting</li>
+            </ul>
+        </nav>
+        <section class="tab_section" id="edit_tab_section">
+            <p id="contents_name">
+                Content name
+                <input id="editor_content_name" type="text" value="input text..." name="contents_subject" />
+            </p>
+            <div id="editor_upload_file">
+                <i class="fa fa-cloud-upload"></i>Upload
                 <span class="tooltip_bt" id="file_tooltip">Upload file to server<br/>(allow only zip file)</span>
-            </li>
-        </ol>
-        <input type="file" id="upload_file_input" name="upload_file" accept="application/zip"/>
-        <input type="submit" class="final_upload_bt" id="upload_final" value="submit" />
+            </div>
+            <input type="file" id="upload_file_input" name="upload_file" accept="application/zip"/>
+            <input type="submit" class="final_upload_bt" id="upload_final" value="submit" />
+        </section>
+        <section class="tab_section" id="thumbnail_tab_section">
+            
+        </section>
+        <section class="tab_section" id="setting_tab_section">
+            
+        </section>
+        
         <!--<div id="editor_aside_wrap">
             <ol>
                 <li id="editor_upload_file">

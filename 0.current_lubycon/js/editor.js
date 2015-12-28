@@ -1,20 +1,60 @@
 ﻿
 /*----------------------------editor start----------------------------*/
 /////////////////////////////////////////////////////////
+//      editor aside tab start
+/////////////////////////////////////////////////////////
+$(function () {
+    $(".tab_body").click(function(event){
+        if(!$(this).hasClass("selected_tab")){
+            console.log("if pass");
+            $(".tab_body").removeClass("selected_tab");
+            $(this).addClass("selected_tab");
+            switch(event.target.id){
+                case "file_tab" :
+                    $("#edit_tab_section").show();
+                    $("#thumbnail_tab_section").hide();
+                    $("#setting_tab_section").hide();
+                break;
+                case "thumbnail_tab" :
+                    $("#edit_tab_section").hide();
+                    $("#thumbnail_tab_section").show();
+                    $("#setting_tab_section").hide();
+                break;
+                case "setting_tab" :
+                    $("#edit_tab_section").hide();
+                    $("#thumbnail_tab_section").hide();
+                    $("#setting_tab_section").show();
+                break;
+            }
+        }else{
+            return;
+        }
+    });
+});
+
+/////////////////////////////////////////////////////////
+//      editor aside tab end
+/////////////////////////////////////////////////////////
+
+
+
+
+
+
+/////////////////////////////////////////////////////////
 //      editor content_name start
 /////////////////////////////////////////////////////////
-$(function ()
-{
-    var editor_content_name = $('#editor_content_name');
+$(function () {
+    var editor_content_name = $("#editor_content_name");
 
     editor_content_name.focus(function () {
-        if(editor_content_name.val() == 'Your Contents Name') {
+        if (editor_content_name.val() == 'input text...') {
             editor_content_name.val('');
         }
     });
     editor_content_name.blur(function () {
         if (editor_content_name.val() == '') {
-            editor_content_name.val('Your Contents Name');
+            editor_content_name.val('input text...');
         }
     });
 });
@@ -246,7 +286,7 @@ $(function () {
     $(document).ready(function () {
         console.log("summernote is ready");
         $('#summernote').summernote({
-            height: 250 // set editor height
+            height: $(window).height() - 100 // set editor height
             /*
             onblur: function (e) {
                 $('#summercontent').html($('.summernote').code());
@@ -486,6 +526,18 @@ $(function () {
     })
     /////////////////////////////////////////////////////////
     //      editor edit body color picker end
+    /////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////
+    //      editor editor toolbar start
+    /////////////////////////////////////////////////////////
+    $(document).ready(function(){
+        var device_height = $(window).height();
+        $(".panel-heading").height = device_height;
+        $("#editor_section").height = device_height;
+        $(".note-editor.note-frame .note-editing-area").height = device_height;
+    });
+    ////////////////////////////////////////////////////////
+    //      editor editor toobar end
     /////////////////////////////////////////////////////////
 });
 /*----------------------------editor end----------------------------*/

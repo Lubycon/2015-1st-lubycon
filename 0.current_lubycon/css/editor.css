@@ -1,6 +1,6 @@
 ﻿@charset "utf-8";
 body{
-    background:#333333;
+    background:#222222;
 }
 #main_search_bar
 {
@@ -63,7 +63,6 @@ body{
     top:50px;
 }
 
-
 #editor_body
 {
     width:100%;
@@ -72,8 +71,85 @@ body{
     display: block;
 }
 
+.panel-default > .panel-heading {
+    width: 40px;
+    height:100%;
+    position: fixed;
+    padding: 5px !important;
+    border-radius: 0px !important;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+    top: 50px;
+    left: 0;
+    border-right: 1px solid #222222 !important;
+    background-color: #333333 !important;
+}/*toolbar body*/
 
+.note-editor.note-frame {
+    padding-left: 45px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;    
+}/*edit window*/
 
+.note-popover .popover-content > .btn-group, .panel-heading.note-toolbar > .btn-group {
+    margin: 5px 0px !important;
+    float: none !important;
+    padding-bottom: 5px !important;
+    border-bottom: 1px solid #555555;
+}
+    .note-popover .popover-content > .btn-group, .panel-heading.note-toolbar > .btn-group:last-child {
+        border-bottom: none !important
+    }
+.btn-group > .btn-group {
+    margin: 0px !important;
+    float: none !important;
+}
+
+.btn-group-vertical > .btn, .btn-group > .btn {
+    background: #333333;
+    border-radius: 4px !important;
+    border: none !important;
+    color: #ffffff;
+    float: none !important;
+    width: 37px;
+    height: 37px;
+    margin: 0px !important;   
+}
+    .btn-group-vertical > .btn, .btn-group > .btn:hover {
+        background: #444444;
+        color: #ffffff;
+    }
+    .btn-default.active, .btn-default:active, .open > .dropdown-toggle.btn-default {
+        background-color: #222222 !important;
+        box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.6);
+        border: none !important;
+        color: #ffffff !important;
+    }
+    .btn-default.focus, .btn-default:focus {
+        background-color: #333333 !important;
+        color: #ffffff !important;
+    }
+    .note-popover .popover-content .note-color .dropdown-toggle, .panel-heading.note-toolbar .note-color .dropdown-toggle {
+        width: 37px !important;
+    }
+.dropdown-menu {
+    background-color: rgba(0,0,0,0.8) !important;
+}
+    .dropdown-menu > li > a {
+        color: #ffffff !important;
+    }
+        .dropdown-menu > li > a:focus, .dropdown-menu > li > a:hover {
+            background: rgba(100,100,100,0.8) !important;
+            color: #ffffff !important;
+        }
+.note-editor.note-frame .note-statusbar{
+    background-color: #222222 !important;
+    border-radius: 0px !important;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+}
+    .note-editor.note-frame .note-statusbar .note-resizebar .note-icon-bar {
+        border-top: 1px solid #666666 !important;
+    }
 
 #editor_aside
 {
@@ -82,72 +158,123 @@ body{
     position: fixed;
     width: 250px;
     background: #333333;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
     border-left: 1px solid #222222;
 }
-#editor_aside_wrap{
-    position: relative;
-}
-    #editor_aside ol 
-    {
-        display: inline-block;
-        margin-left:20px;
+    #editor_aside_wrap {
+        position: relative;
     }
-        
-        #editor_aside ol li 
-        {
-            width:45px;
-            height:45px;
-            line-height:50px;
-            border-radius:3px;
-            background: #555555;
-            box-shadow:0px 2px 2px 0px rgba(0,0,0,0.3);
-            
-            margin:0px 2px;
-            text-align:center;
-            vertical-align:middle;
-            
-            color:#333333;
-            cursor:pointer;
-            font-weight: 200;
-            position:relative;
-            display:inline-block;
+#editor_aside_tab{
+    background: #2a2a2a;
+}
+    .tab_body {
+        width: 70px;
+        height: 30px;
+        line-height: 30px;
+        margin: 0;
+        padding: 5px;
+        display: inline-block;
+        background: #2a2a2a;
+        font-size: 15px;
+        color: #aaaaaa;
+        cursor: pointer;
+    }
+    .tab_body:hover {
+        opacity: 0.8;
+    }
+        .selected_tab {
+            color: #48cfad;
+            background: #333333;
+            box-shadow: -1px -5px 5px 0px rgba(0,0,0,0.5);
         }
-            #editor_aside ol li i {
-                margin-top: 8px;
-                font-size: 20px;
-                width: 45px;
-                color: #333333;
-            }
-            #upload_file_input
-            {
-                visibility:hidden;
-                position:absolute;
-            }
-            #preview_upload_input
-            {
-                visibility:hidden;
-                position:absolute;
-            }
-            .img_crop_notallow 
-            {
-                background:#ddd !important;
-                color:#2f2f2f !important;
-                cursor:not-allowed !important;
-            }
-            .img_crop_notallow  i
-            {
-                color:#646464 !important;
-            }
 
-            #body_color_view
-            {
-                width:30px;
-                height:30px;
-                border-radius: 3px;
-                background:#ffffff;
-                margin:0px auto;
-                margin-top: 8px;
-            }
+.tab_section {
+    background: #333333;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+#file_tab_section {
+    
+}
+    #contents_name
+    {
+        color: #cccccc;
+        text-align: left;
+    }
+    #contents_name input
+    {
+        width: 100%;
+
+        background: #222222;
+        border:none;
+        border-radius: 5px;
+        font-size: 15px;
+        font-weight: 200;
+        margin-top: 5px;
+        padding: 8px;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.5);
+        color: #ffffff;
+        text-overflow: ellipsis;
+    }
+        #editor_aside p input:focus
+        {
+            border:1px solid #48cfad;
+            box-shadow: 0px 0px 5px rgba(81, 203, 238, 1);;
+        }
+    #editor_aside #editor_upload_file{
+        width: 200px;
+        height: 50px;
+        line-height: 50px;
+        border-radius: 100px;
+        background: #555555;
+        box-shadow: -2px 0px 5px 0px rgba(0,0,0,0.5);
+        font-size: 17px;
+        font-weight: 200;
+        color: #dddddd;
+        margin: 0px auto;
+        margin-top: 20px;
+        cursor: pointer;
+    }
+    #editor_aside #editor_upload_file:hover{
+        opacity: 0.8;
+    }
+        #editor_upload_file .fa-cloud-upload{
+            color: #dddddd;
+            font-size: 20px;
+            margin-right: 10px;
+        }
+        #upload_file_input {
+            visibility:hidden;
+            position:absolute;
+        }
+        #preview_upload_input {
+            visibility:hidden;
+            position:absolute;
+        }
+        .img_crop_notallow {
+            background:#ddd !important;
+            color:#2f2f2f !important;
+            cursor:not-allowed !important;
+        }
+        .img_crop_notallow  i {
+            color:#646464 !important;
+        }
+
+        #body_color_view {
+            width:30px;
+            height:30px;
+            border-radius: 3px;
+            background:#ffffff;
+            margin:0px auto;
+            margin-top: 8px;
+        }
 
         
 .tooltip_bt{
@@ -316,42 +443,9 @@ body{
 {
     width:100%;
     min-width:650px;
-    min-height:650px;
     padding-right: 250px;
     
 }
-    #editor_section > p 
-    {
-        height:80px;
-        line-height:70px;
-        background:#444444;
-    }
-    #editor_section p input
-    {
-        min-width: 310px !important;
-        max-width: 550px !important;
-
-        background:none;
-        border:none;
-        border-radius: 5px;
-        margin: 5px 30px 5px 20px;
-        font-size: 35px;
-        font-weight: 200;
-        line-height: 60px;
-        padding: 5px;
-        color: #ffffff;
-        text-overflow: ellipsis;
-        float: left;
-    }
-        #editor_section p input:hover
-        {
-            background:#666666;
-        }
-        #editor_section p input:focus
-        {
-            background:#666666
-        }
-
     #editor_preview_box
     {
         min-width:630px;
@@ -705,8 +799,7 @@ body{
 /* Thumbnail end*/
 /* editor setting start*/
 
-#setting_header
-{
+#setting_header {
     display: block;
     position:relative;
     width:635px;
@@ -717,14 +810,12 @@ body{
     font-size:25px;
     color:#444;
 }
-#total_set
-{
+#total_set {
     padding:5px;
     height:360px;
     text-align: left;
 }
-    #left_set
-    {
+    #left_set {
         width:480px;
         height:330px;
         display: inline-block;
@@ -735,20 +826,13 @@ body{
         vertical-align: top;
         padding:10px;
     }
-        #cate_editor
-        {
-
+        #cate_editor {
         }
-        #tag_editor
-        {
-
+        #tag_editor {
         }
-        #des_editor
-        {
-
+        #des_editor{
         }
-            #setting_des_text
-            {
+            #setting_des_text {
                 width:470px;
                 height:100px;
                 border:none;
@@ -756,13 +840,11 @@ body{
                 padding:5px;
                 resize:none;
             }
-                #setting_des_text:focus
-                {
+                #setting_des_text:focus {
                     border:1px solid #48cfad;
                     box-shadow: 0px 0px 5px rgba(81, 203, 238, 1); 
                 }
-    #right_set
-    {
+    #right_set {
         width:480px;
         height:330px;
         display: inline-block;
@@ -772,21 +854,20 @@ body{
         border-radius: 5px;
         padding:10px;
     }
-        #price_editor
-        {
+        #price_editor {
 
         }
-            #price_editor .sod_select.custom.custom{
+            #price_editor .sod_select.custom.custom {
                 width:170px;
                 background:#fff;
             }
 
-            #price_editor .sod_select.custom .sod_list_wrapper{
+            #price_editor .sod_select.custom .sod_list_wrapper {
                 width:170px;
                 box-shadow:none;
                 z-index:2;
             }
-            #price_editor .sod_select.custom .sod_label{
+            #price_editor .sod_select.custom .sod_label {
                 padding:0px;
             }
             #price_editor .sod_select.custom.focus{
