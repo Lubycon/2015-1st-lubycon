@@ -37,8 +37,8 @@
         }
 
     .note-editor.note-frame {
-        border: 1px solid #a9a9a9;
-        background:transparent;
+        border: none;
+        background: #ffffff;
     }
 
         .note-editor.note-frame.codeview .note-editing-area .note-editable {
@@ -233,8 +233,9 @@
             }
 
     .note-popover .popover-content .note-para .dropdown-menu, .panel-heading.note-toolbar .note-para .dropdown-menu {
-        min-width: 216px;
+        min-width: 155px;
         padding: 5px;
+        text-align: center;
     }
 
         .note-popover .popover-content .note-para .dropdown-menu > div:first-child, .panel-heading.note-toolbar .note-para .dropdown-menu > div:first-child {

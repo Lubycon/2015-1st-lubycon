@@ -77,13 +77,123 @@
                 <span class="tooltip_bt" id="file_tooltip">Upload file to server<br/>(allow only zip file)</span>
             </div>
             <input type="file" id="upload_file_input" name="upload_file" accept="application/zip"/>
-            <input type="submit" class="final_upload_bt" id="upload_final" value="submit" />
+            <input type="submit" class="final_upload_bt" id="upload_final" value="Submit" />
         </section>
         <section class="tab_section" id="thumbnail_tab_section">
-            
+            <link href="css/croppic.css" rel="stylesheet">
+            <script src="js/croppic.min.js"></script>
+
+            <?php   
+                //it's follow contents_card.php infomation
+                $username = "Admin_User";
+                $contents_name = "Contents_name";
+                $price = "Free";
+                $contents_thumbnail_url = "./ch/img/no_img/no_img_user1.jpg"; // it's need to change ajax
+            ?>
+            <header id="tnail_header">Thumbnail Image</header>
+            <div id="work_space">
+                <div id="tnail_preview">
+                    <ul>
+                        <?php
+                            @include_once('../layout/content_card.php');
+                        ?>
+                    </ul>
+                </div>
+            </div>
+            <div class="buttons_pop">
+                <button type="button" class="next_bt" id="call_setting">OK</button>
+                <button type="button" class="cancel_bt" id="tnail_cancel">Cancel</button>
+            </div>
+            <script>
+                $(".contents_card").append('<div id="cropContainerMinimal"></div>');
+
+                var croppicContaineroutputMinimal = {
+                    uploadUrl: 'img_save_to_file.php',
+                    cropUrl: 'img_crop_to_file.php',
+                    modal: false,
+                    doubleZoomControls: false,
+                    rotateControls: false,
+                    loaderHtml: '<div class="loader bubblingG"><span id="bubblingG_1"></span><span id="bubblingG_2"></span><span id="bubblingG_3"></span></div> ',
+                    onBeforeImgUpload: function () { console.log('onBeforeImgUpload') },
+                    onAfterImgUpload: function () { console.log('onAfterImgUpload') },
+                    onImgDrag: function () { console.log('onImgDrag') },
+                    onImgZoom: function () { console.log('onImgZoom') },
+                    onBeforeImgCrop: function () { console.log('onBeforeImgCrop') },
+                    onAfterImgCrop: function () { console.log('onAfterImgCrop') },
+                    onReset: function () { console.log('onReset') },
+                    onError: function (errormessage) { console.log('onError:' + errormessage) }
+                }
+                var cropContaineroutput = new Croppic('cropContainerMinimal', croppicContaineroutputMinimal);
+            </script>
         </section>
         <section class="tab_section" id="setting_tab_section">
-            
+            <div id="top_set" class="setting_group">
+                <div id="cate_editor">
+                    <p class="setting_title">Categories (max 3 categorys)</p>
+                    <div class="set_con">
+                            <!-- need save user select category max value = 3 -->
+                            <select data-placeholder="Choise your contents categories" style="width:100%;" class="chosen-select" multiple tabindex="8" name="user_selected_category[]">
+                                <option>Car</option>
+                                <option>People</option>
+                                <option>Book</option>
+                                <option>Stuff</option>
+                                <option>Contry</option>
+                                <option>Animal</option>
+                                <option>Nature</option>
+                                <option>Article</option>
+                                <option>Font</option>
+                                <option>3D Contents</option>
+                            </select>
+                    </div>
+                </div>
+                <div id="tag_editor">
+                    <p class="setting_title">Tags</p>
+                    <div class="set_con">
+                            <!-- need to save user select tag max value = infinite -->
+                            <select data-placeholder="Choose your contents categorys" style="width:100%;" class="chosen-select" multiple tabindex="8" name="user_selected_tag[]">
+                                <option>Car</option>
+                                <option>People</option>
+                                <option>Book</option>
+                                <option>Stuff</option>
+                                <option>Contry</option>
+                                <option>Animal</option>
+                                <option>Nature</option>
+                                <option>Article</option>
+                                <option>Font</option>
+                                <option>3D Contents</option>
+                            </select>
+                    </div>
+                </div>
+                <div id="des_editor">
+                    <p class="setting_title">Description</p>
+                    <textarea id="setting_des_text" name="setting_desc"></textarea>
+                </div>
+            </div><!--top_set end-->
+            <div id="bottom_set" class="setting_group">
+                <div id="copyright_editor">
+                    <p class="setting_title">Common Copyrights</p>
+                    <div class="set_con"></div>
+                </div>
+            </div><!--bottom_set end-->
+
+            <!-- multi select box css -->
+            <link rel="stylesheet" href="css/chosen_prism.css">
+            <link rel="stylesheet" href="css/chosen.css">
+            <!-- multi select box css -->
+            <!-- multi select box js -->
+            <script src="js/chosen.jquery.js" type="text/javascript"></script>
+            <script src="js/chosen.prism.js" type="text/javascript"></script>
+            <script type="text/javascript">
+                var config = {
+                    '.chosen-select': {},
+                    '.chosen-select-deselect': { allow_single_deselect: true },
+                    '.chosen-select' : {max_selected_options: 3}
+                }
+                for (var selector in config) {
+                    $(selector).chosen(config[selector]);
+                }
+            </script>
+            <!-- multi select box js -->
         </section>
         
         <!--<div id="editor_aside_wrap">

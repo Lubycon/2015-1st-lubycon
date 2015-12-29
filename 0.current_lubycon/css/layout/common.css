@@ -728,10 +728,10 @@ h1 /* main logo */ {
     line-height: 50px;
 }
 
-#signin_bt #login_box {
-    position: absolute;
-    display: none;
-    width: 276px;
+
+#login_box {
+    position: relative;
+    width: 300px;
     top: 57px;
     right: 0px;
     padding-bottom: 18px;
@@ -743,7 +743,7 @@ h1 /* main logo */ {
     cursor: default;
 }
 
-    #signin_bt #login_box #login_box_header {
+    #login_box #login_box_header {
         width: 100%;
         height: 40px;
         padding-top: 10px;
@@ -815,7 +815,7 @@ h1 /* main logo */ {
     margin-bottom: 5px;
 }
 
-#signin_bt #login_box #login_facebook, #login_google {
+#login_box #login_facebook, #login_google {
     width: 38px;
     height: 38px;
     line-height: 38px;
@@ -829,18 +829,18 @@ h1 /* main logo */ {
     box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2);
 }
 
-#signin_bt #login_box #login_facebook {
+#login_box #login_facebook {
     background: #3b5998;
     vertical-align: top;
 }
-    #signin_bt #login_box #login_facebook span{
+    #login_box #login_facebook span{
         font-weight: 200;
     }
 
-#signin_bt #login_box #login_google {
+#login_box #login_google {
     background: #ec6446;
 }
-    #signin_bt #login_box #login_google span{
+    #login_box #login_google span{
         font-weight: 200;
     }
 
@@ -853,14 +853,14 @@ h1 /* main logo */ {
     float: left;
 }
 
-#signin_bt #login_box .fa-facebook {
+#login_box .fa-facebook {
     font-size: 20px;
     top: 4px;
     left: 25px;
     background: #03326c;
 }
 
-#signin_bt #login_box .fa-google-plus {
+#login_box .fa-google-plus {
     font-size: 20px;
     background: #b44931;
 }

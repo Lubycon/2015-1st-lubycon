@@ -59,7 +59,7 @@ $(function () {
     });
 });
 //////////text input auto resize start-------/////////
-function Expander() {
+/*function Expander() {
     this.start = function () {
         $("#editor_content_name").keydown(function(e) {
             this.style.width = 0;
@@ -76,7 +76,7 @@ function Expander() {
 $(function() {
     window.app = new Expander();
     window.app.start();
-});
+});*/
 //////////text input auto resize end-------/////////
 /////////////////////////////////////////////////////////
 //      editor content_name end
@@ -286,18 +286,31 @@ $(function () {
     $(document).ready(function () {
         console.log("summernote is ready");
         $('#summernote').summernote({
-            height: $(window).height() - 100 // set editor height
+            height: $(window).height() + 100,
+            minHeight: null,
+            maxHeight: null,
+            focus: true,
+            placeholder: 'make your preview image on here',
+            toolbar: [
+                // [groupName, [list of button]]
+                ['style',['style']],
+                ['fontsize', ['fontname', 'fontsize']],
+                ['style', ['bold', 'italic', 'underline', 'strikethrough', 'clear']],              
+                ['color', ['color']],
+                ['para', ['paragraph']],
+                ['insert', ['picture', 'video', 'link', 'table', 'hr']],
+                ['misc', ['fullscreen', 'help']],
+            ],
+            fontNames: ['Arial', 'Arial Black', 'Comic Sans MS', 'Source Sans Pro'],
             /*
             onblur: function (e) {
                 $('#summercontent').html($('.summernote').code());
                 console.log('1');
             },
-            minHeight: 100, // set minimum height of editor
-            maxHeight: null, // set maximum height of editor
             lang: 'ko-KR' // default: 'en-US'
             */
-        });
-    });
+        });//summernote end
+    });//function end
     /////////////////////////////////////////////////////////
     //      add text end
     /////////////////////////////////////////////////////////

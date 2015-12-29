@@ -5063,7 +5063,7 @@
         return ui.buttonGroup([
           ui.button({
             className: 'dropdown-toggle',
-            contents: '<span class="note-current-fontname"/> ' + ui.icon(options.icons.caret, 'span'),
+            contents: '<span class="note-current-fontname"><i class="fa fa-font"></i></span>' + ui.icon(options.icons.caret, 'span'),
             tooltip: lang.font.name,
             data: {
               toggle: 'dropdown'
@@ -5112,17 +5112,18 @@
               callback: function ($button) {
                 var $recentColor = $button.find('.note-recent-color');
                 $recentColor.css({
-                  'background-color': 'yellow'
+                  'background-color': '#ffffff',
+                  'color': '#000000'
                 });
 
                 $button.data('value', {
-                  backColor: 'yellow'
+                  backColor: '#ffffff'
                 });
               }
             }),
             ui.button({
               className: 'dropdown-toggle',
-              contents: ui.icon(options.icons.caret, 'span'),
+              contents: ui.icon(options.icons.caret, 'span') + '<i class="fa fa-plus"></i>',
               tooltip: lang.color.more,
               data: {
                 toggle: 'dropdown'

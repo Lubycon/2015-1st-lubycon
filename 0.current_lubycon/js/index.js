@@ -159,29 +159,11 @@ $(function () //language change bt slide and change
 
 $(function () //sign in toggle event
 {
-    $('#signin_bt').click(function () {
-        $('#login_box').attr("class","bounceInDown animated");
-        $("#login_box").css("display","block");
-        $("#login_box").focus();
-    });
-
     $('#sign_out').click(function () //logout
     {
         $("#after_signin").hide();
         $("#signin_bt").show();
         $("#addcontent_bt").hide();
-    });
-});
-
-$(document).ready(function () // signin box click toggle
-{
-    $(document).click(function (event) {
-        event = event || window.event//for IE
-        var subject = $("#signin_bt");
-
-        if (event.target.id != subject.attr('id') && !subject.has(event.target).length) {
-            $("#login_box").stop().fadeOut(400);
-        }
     });
 });
 
