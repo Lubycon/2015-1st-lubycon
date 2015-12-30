@@ -301,7 +301,8 @@ $(function () {
                 ['insert', ['picture', 'video', 'link', 'table', 'hr']],
                 ['misc', ['fullscreen', 'help']],
             ],
-            fontNames: ['Arial', 'Arial Black', 'Comic Sans MS', 'Source Sans Pro'],
+            fontNames: ['Arial', 'Arial Black', 'Comic Sans MS', 'Source Sans Pro']
+
             /*
             onblur: function (e) {
                 $('#summercontent').html($('.summernote').code());
@@ -311,6 +312,10 @@ $(function () {
             */
         });//summernote end
     });//function end
+
+    var postForm = function () { // summernote submit event
+        var content = $('textarea[name="content"]').html($('#summernote').code());
+    }
     /////////////////////////////////////////////////////////
     //      add text end
     /////////////////////////////////////////////////////////

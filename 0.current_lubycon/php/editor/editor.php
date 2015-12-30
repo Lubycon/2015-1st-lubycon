@@ -77,7 +77,7 @@
                 <span class="tooltip_bt" id="file_tooltip">Upload file to server<br/>(allow only zip file)</span>
             </div>
             <input type="file" id="upload_file_input" name="upload_file" accept="application/zip"/>
-            <input type="submit" class="final_upload_bt" id="upload_final" value="Submit" />
+            <input type="submit" class="final_upload_bt" id="upload_final" value="Submit" onsubmit="return postForm()"/>
         </section>
         <section class="tab_section" id="thumbnail_tab_section">
             <link href="css/croppic.css" rel="stylesheet">

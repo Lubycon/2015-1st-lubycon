@@ -26,34 +26,7 @@
     echo "<br/><br/>-------------zip file upload--------------<br/>";
 
     
-    echo "<br/>-------------text editor html--------------<br/><br/>";
 
-    $text_editor = $_POST['text_editor'];
-    /*
-    $textuploaddir = '/var/www/uploads/';
-    $textuploadfile = $textuploaddir . basename($_FILES['userfile']['name']);
-
-    echo '<pre>';
-    if (move_uploaded_file($_FILES['userfile']['tmp_name'], $uploadfile)) {
-        echo "파일이 유효하고, 성공적으로 업로드 되었습니다.\n";
-    } else {
-        print "파일 업로드 공격의 가능성이 있습니다!\n";
-    }
-
-    echo '자세한 디버깅 정보입니다:';
-    print_r($_FILES);
-
-    print "</pre>";
-    */
-    echo "text_editor = ". $text_editor;
-    
-    echo "<br/><br/>-------------text editor html--------------<br/>";
-
-
-    // it's for multiple select box
-    //$sel_cate = $_POST['user_selected_category'];
-    //$sel_tag = $_POST['user_selected_tag'];
-    //
     
     echo "<br/>-------------contents subject name--------------<br/><br/>";
 
@@ -68,7 +41,12 @@
             echo $con_article[$k];
         };
     };*/
-    /*
+    
+    // it's for multiple select box
+    $sel_cate = $_POST['user_selected_category'];
+    $sel_tag = $_POST['user_selected_tag'];
+    //
+    echo "<br/><br/>-------------user seleced categories--------------<br/>";
     if($sel_cate)
     {
         echo "<br/>user selectd categories = ";
@@ -77,6 +55,9 @@
             echo $sel_cate[$i] . " ";
         };
     };
+    echo "<br/><br/>-------------user seleced categories--------------<br/>";
+
+    echo "<br/><br/>-------------user seleced tags--------------<br/>";
     if($sel_tag)
     {
         echo "<br/>user selectd tags = ";
@@ -85,8 +66,29 @@
             echo $sel_tag[$j] . " ";
         };
     };
+    
+    echo "<br/><br/>-------------user seleced tags--------------<br/>";
+    
+    echo "<br/><br/>-------------contents description--------------<br/>";
 
     echo "<br/>setting_desc = " . $_POST['setting_desc'];
+
+    echo "<br/><br/>-------------contents description--------------<br/>";
+    /*
     echo "<br/>setting_price_option = " . $_POST['setting_price_option'];
     */
+    
+    echo "<br/>-------------text editor html--------------<br/><br/>";
+
+    $text_editor = $_POST['text_editor'];
+
+    echo "text_editor = ". $text_editor;
+
+    echo $_POST['files'];
+    
+    //echo htmlspecialchars($_POST['text_editor']);
+    
+    echo "<br/><br/>-------------text editor html--------------<br/>";
+
+    print_r($_POST);
 ?>
