@@ -77,7 +77,7 @@
                 <span class="tooltip_bt" id="file_tooltip">Upload file to server<br/>(allow only zip file)</span>
             </div>
             <input type="file" id="upload_file_input" name="upload_file" accept="application/zip"/>
-            <input type="submit" class="final_upload_bt" id="upload_final" value="Submit" onsubmit="return postForm()"/>
+            <input type="submit" class="final_upload_bt" id="upload_final" value="SUBMIT" onsubmit="return postForm()"/>
         </section>
         <section class="tab_section" id="thumbnail_tab_section">
             <link href="css/croppic.css" rel="stylesheet">
@@ -170,10 +170,32 @@
                 </div>
             </div><!--top_set end-->
             <div id="bottom_set" class="setting_group">
-                <div id="copyright_editor">
-                    <p class="setting_title">Common Copyrights</p>
-                    <div class="set_con"></div>
-                </div>
+                <div id="cc_editor">
+                    <p class="setting_title">Creative Commons</p>
+                    <div class="set_con" id="cc_box">
+                        <ul>
+                            <li class="cc_icon" id="cc_by">
+                                <img src="./ch/img/creative_commons/png/by_w.png" />
+                                <span class="tooltip_bt cc_tooltip" id="by_tooltip">
+                                    Attribution
+                                </span>
+                            </li>
+                            <li class="cc_icon" id="cc_nc">
+                                <img src="./ch/img/creative_commons/png/nc_w.png" />
+                                <span class="tooltip_bt cc_tooltip" id="nc_tooltip">
+                                    Non-Commercial
+                                </span>
+                            </li>
+                            <li class="cc_icon" id="cc_nd">
+                                <img src="./ch/img/creative_commons/png/nd_w.png" />
+                                <span class="tooltip_bt cc_tooltip" id="nb_tooltip">
+                                    Non-Derivative
+                                </span>
+                            </li>
+                        </ul>
+                    </div><!--cc_box end-->
+                    <p id="modify_cc">modify</p>
+                </div><!--cc_editor end-->
             </div><!--bottom_set end-->
 
             <!-- multi select box css -->

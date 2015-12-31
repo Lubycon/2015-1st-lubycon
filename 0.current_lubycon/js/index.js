@@ -823,21 +823,21 @@ function hideAlert2(){
 //      personal page subnav hover and ajax
 /////////////////////////////////////////////////////////
 /*-----------------------------subnav sticky start---------------------------*/
-$(document).scroll(function ()
-{
+$(document).scroll(function (){
     if($("#nav_guide").length != 0){
+        var nav_guide = $("#nav_guide");
         if ($(document).scrollTop() > 184){
             $("#main_header").css({"box-shadow": "0px 0px 0px 0px rgba(0,0,0,0.5)"});
-            $("#nav_guide").css({ "position": "fixed", "top": "50px", "z-index": "2" });
-            $("#nav_guide").next().css({"top": "50px"});
-            $("#nav_guide").next().next().css({"top": "50px"});
+            nav_guide.css({ "position": "fixed", "top": "50px", "z-index": "2", "box-shadow": "0px 3px 7px rgba(0,0,0,0.3)" });
+            nav_guide.next().css({"top": "50px"});
+            nav_guide.next().next().css({"top": "50px"});
             $("#floating_bt").css({"position" : "fixed", "top" : "100px"});
         }
         else {
             $("#main_header").css({"box-shadow": "0px 2px 4px 0px rgba(0,0,0,0.5)"});
-            $("#nav_guide").css({ "position": "relative", "top": "0px" });
-            $("#nav_guide").next().css({"top": "0px"});
-            $("#nav_guide").next().next().css({"top": "0px"});
+            nav_guide.css({ "position": "relative", "top": "0px", "box-shadow": "0px 0px 0px rgba(0,0,0,0.3)" });
+            nav_guide.next().css({"top": "0px"});
+            nav_guide.next().next().css({"top": "0px"});
             $("#floating_bt").css({"position" : "absolute", "top" : "0px"});
         }  
     }

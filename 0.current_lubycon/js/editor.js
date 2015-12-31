@@ -6,7 +6,6 @@
 $(function () {
     $(".tab_body").click(function(event){
         if(!$(this).hasClass("selected_tab")){
-            console.log("if pass");
             $(".tab_body").removeClass("selected_tab");
             $(this).addClass("selected_tab");
             switch(event.target.id){
@@ -25,12 +24,12 @@ $(function () {
                     $("#thumbnail_tab_section").hide();
                     $("#setting_tab_section").show();
                 break;
-            }
+            }//switch end
         }else{
             return;
-        }
-    });
-});
+        }//if,else end
+    });//click end
+});//function end
 
 /////////////////////////////////////////////////////////
 //      editor aside tab end
@@ -86,8 +85,7 @@ $(function() {
 /////////////////////////////////////////////////////////
 
 
-function editor_gnv_select(gnv_sel)
-{
+function editor_gnv_select(gnv_sel) {
     $("#editor_gnv ol li").removeClass();
     switch (gnv_sel)
     {
@@ -112,17 +110,18 @@ $(document).ready(function () {
 */
 
 $(function () {
-    $('#editor_aside ol li').hover(function () //aside tools mouse hover event
-    {
-        $(this).css({ "background": "#666666" });
-        $(this).children('i').css({ "color": "#48cfad" });
-        $(this).children('.tooltip_bt').stop().fadeIn(300).css("display", "inline-block");
-    }, function () {
-        $(this).css({ "background": "#555" });
-        $(this).children('i').css({ "color": "#333333" });
-        $(this).children('.tooltip_bt').stop().fadeOut(300);
+    //tooltip start
+    $(document).ready(function(){
+        var tip_parent = $(document).find(".tooltip_bt").parent();
 
+        tip_parent.hover(function() {
+            $(this).children(".tooltip_bt").stop().fadeIn(300);
+
+        }, function() {
+            $(this).children(".tooltip_bt").stop().fadeOut(300);
+        });
     });
+    //tooltip end
 
     /////////////////////////////////////////////////////////
     //      editor nav end
@@ -290,7 +289,7 @@ $(function () {
             minHeight: null,
             maxHeight: null,
             focus: true,
-            placeholder: 'make your preview image on here',
+            placeholder: '...make your preview image on here...',
             toolbar: [
                 // [groupName, [list of button]]
                 ['style',['style']],

@@ -205,7 +205,9 @@ body{
         .selected_tab {
             color: #48cfad;
             background: #333333;
-            box-shadow: -1px -5px 5px 0px rgba(0,0,0,0.5);
+            box-shadow: 0px -5px 5px 0px rgba(0,0,0,0.5);
+            padding-bottom: 2px;
+            border-bottom: 2px solid #48cfad;
         }
 
 .tab_section {
@@ -262,9 +264,6 @@ body{
         margin: 0px auto;
         margin-top: 20px;
         cursor: pointer;
-    }
-    #editor_aside #editor_upload_file:hover {
-        opacity: 0.8;
     }
     #editor_aside #editor_upload_file:hover {
         opacity: 0.8;
@@ -416,84 +415,6 @@ body{
         width: 100%;
         background: none;
     }
-        #top_set {
-            color: #aaaaaa;
-        }
-            #cate_editor {
-            }
-            #tag_editor {
-            }
-            #des_editor{
-            }
-                #setting_des_text {
-                    width: 100%;
-                    min-width: 230px;
-                    max-height: 230px;
-
-                    background: #222222;
-                    border:none;
-                    border-radius: 5px;
-                    font-size: 15px;
-                    font-weight: 200;
-                    margin-top: 5px;
-                    padding: 8px;
-                    box-sizing: border-box;
-                    -webkit-box-sizing: border-box;
-                    -moz-box-sizing: border-box;
-                    box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.5);
-                    color: #ffffff;
-                    text-overflow: ellipsis;
-                    resize: vertical;
-                }
-                    #setting_des_text:focus {
-                        border:1px solid #48cfad;
-                        box-shadow: 0px 0px 5px rgba(81, 203, 238, 1); 
-                    }
-
-        #bottom_set {
-            
-        }
-            #price_editor {
-
-            }
-                #price_editor .sod_select.custom.custom {
-                    width:170px;
-                    background:#fff;
-                }
-
-                #price_editor .sod_select.custom .sod_list_wrapper {
-                    width:170px;
-                    box-shadow:none;
-                    z-index:2;
-                }
-                #price_editor .sod_select.custom .sod_label {
-                    padding:0px;
-                }
-                #price_editor .sod_select.custom.focus{
-                    box-shadow:none;
-                }
-                #price_input
-                {
-                    width:200px;
-                    height:31px;
-                    border-radius: 3px;
-                    border:none;
-                    margin-left:10px;
-                }
-                    #price_input:focus
-                    {
-                        border:1px solid #48cfad;
-                        box-shadow: 0px 0px 5px rgba(81, 203, 238, 1); 
-                    }
-                    #price_input[disabled]
-                    {
-                        background:#aaaaaa;
-                        cursor:not-allowed;
-                    }
-            #copyright_editor {
-
-            }
-
     .setting_title {
         color: #cccccc;
         text-align: left;
@@ -508,7 +429,7 @@ body{
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
     }
-        .chosen-container {
+    .chosen-container {
             width: 100% !important;
         }
             .chosen-container-multi .chosen-choices {
@@ -521,20 +442,99 @@ body{
                         width: 100% !important;
                     }
 
+    #top_set {
+        color: #aaaaaa;
+    }
+        #cate_editor {
+        }
+        #tag_editor {
+        }
+        #des_editor{
+        }
+            #setting_des_text {
+                width: 100%;
+                min-width: 230px;
+                max-height: 230px;
+
+                background: #222222;
+                border:none;
+                border-radius: 5px;
+                font-size: 15px;
+                font-weight: 200;
+                margin-top: 5px;
+                padding: 8px;
+                box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.5);
+                color: #ffffff;
+                text-overflow: ellipsis;
+                resize: vertical;
+            }
+                #setting_des_text:focus {
+                    border:1px solid #48cfad;
+                    box-shadow: 0px 0px 5px rgba(81, 203, 238, 1); 
+                }
+
+    #bottom_set {
+        
+    }
+        #cc_editor {
+
+        }
+        #cc_box {
+            box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.5);
+        }
+            #cc_box ul {
+                display: inline-block;
+                position: relative;
+                padding: 10px;
+                box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+            }
+                .cc_icon {
+                    display: inline-block;
+                    position: relative;
+                    width: 30px;
+                    height: 30px;
+                    margin: 5px 10px 0px 10px;
+                }
+                    .cc_icon img {
+                        width:100%;
+                    }
+                    .cc_tooltip {
+                        top: 35px;
+                        left: -47px;
+                    }
+        #cc_editor #modify_cc {
+            text-align: right;
+            padding-right: 5px;
+            color: #48cfad;
+            font-size: 12px;
+            cursor: pointer;
+        }
+        #cc_editor #modify_cc:hover {
+            opacity: 0.8;
+        }
+    
+        
+
+
+
     #upload_final {
-        width:85px;
-        height:35px;
+        width:100%;
+        height:100px;
         
         border:none;
-        border-radius: 3px;
         
-        position: relative;
+        position: absolute;
         padding: 0px;
-        margin-top: 20px;
-        margin-left: 7px;
+        bottom: 50px;
+        left: 0;
         
         color:#fff;
-        font-size:1em;
+        font-size: 20px;
         font-weight: 200;
         background:#48cfad;
         box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2);
@@ -543,13 +543,13 @@ body{
     /* editor setting end*/
         
 .tooltip_bt{
-    min-width: 140px;
+    min-width: 120px;
     line-height: 30px;
+    position: absolute;
 
-    top:58px;
     padding:3px;
     
-    background:rgba(0,0,0,0.7);
+    background:rgba(0,0,0,0.9);
     border: 1px solid #000000;
     border-radius: 3px;
     color:#fff;
