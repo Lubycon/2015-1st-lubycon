@@ -85,12 +85,12 @@ body{
 .dark_overlay {
     background: rgba(0,0,0,0.8);
     width: 100%;
-    height: 100%;
-    position: fixed;
-    z-index: 5;
+    height: 100px;
+    position: absolute;
+    z-index: 1;
     top: 0;
     left: 0;
-    display: none;
+    display: inline-block;
     cursor: pointer;
 }
 
@@ -1032,9 +1032,10 @@ h1 /* main logo */ {
     height: 350px;
 }
 #main_figure {
-    height:135px;
-    line-height: 135px;
+    height:100px;
+    line-height: 100px;
     margin-top: 50px;
+    position: relative;
     box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.5);
 }
     #main_figure h2 {
@@ -1042,6 +1043,8 @@ h1 /* main logo */ {
         font-size: 40px;
         font-weight: 200;
         letter-spacing: 15px;
+        position: relative;
+        z-index: 2;
     }
     #index_figure h2 {
         padding-top: 100px;
@@ -1331,279 +1334,9 @@ h1 /* main logo */ {
 
 /* any page layouts*/
 
-/* user inform */
+/* personal aside start */
 
-#information_body
-{
-    width:100%;
-    height:250px;
-    background:#ffffff;
-    border-bottom: 1px solid #aaaaaa;
-
-    margin:0px auto;
-    position: relative;
-    overflow: hidden;
-}
-    #information_inbody
-    {
-        display:inline-block;
-        margin:0px auto;
-    }
-
-
-
-#personal_info
-{
-    width:540px;
-    height:250px;
-    
-    position:relative;
-    overflow: hidden;
-
-    background:#ffffff;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    border-left: 1px solid #aaaaaa;
-    border-right: 1px solid #aaaaaa;
-    
-    float: left;
-}
-#personal_info_wrap{
-    margin-top: 5px;
-    background: #ffffff;
-}
-    #personal_photo
-    {
-        width: 120px;
-        height: 120px;
-        margin: 5px 20px 5px 5px;
-        background: #ffffff;
-        vertical-align: middle;
-        text-align: center;
-        display: inline-block;
-        float: left;
-        border-radius: 50%;
-        overflow: hidden;
-    }
-        #personal_photo img
-        {
-            height:120px;
-            border-radius: 50%;
-        }
-
-        #basic_info_box
-        {
-            display:inline-block;
-            background: #ffffff;
-            margin-top: 12px;
-            margin-bottom: 10px;
-        }
-            #personal_name
-            {
-                font-size:50px;
-                display:inline-block;
-                color:#48cfad;
-            }
-            #personal_job
-            {
-                font-size: 19px;
-                color: #444444;
-                display: block;
-            }
-                #personal_job #job_icon{
-                    font-size: 18px;
-                    margin-right: 6px;
-                    vertical-align: middle;
-                    color: #444444;
-                }
-            #personal_legion
-            {
-
-                font-size: 15px;
-                color: #444444;
-                margin-top: 5px;
-                font-weight: 200;
-                display: inline-block;
-                margin-right: 30px;
-            }
-                #personal_legion #home_icon
-                {
-                    font-size: 18px;
-                    margin-right: 6px;
-                    vertical-align: middle;
-                    margin-top: -3px;
-                    color:#444444;
-                }
-            #personal_language
-            {
-                font-size:15px;
-                color: #444444;
-                margin-top: 5px;
-                font-weight:200;
-                display: inline-block;
-            }
-                #personal_language #language_icon
-                {
-                    font-size: 16px;
-                    vertical-align: middle;
-                    margin-right: 8px;
-                    margin-top: -3px;
-                    margin-left: 3px;
-                    color:#444444;
-                }
-        #descript_box{
-            background: #ffffff;
-            width: 97%;
-            height: 107px;
-            padding: 22px 10px 10px 20px;
-            box-sizing: border-box;
-            -webkit-box-sizing: border-box;
-            -moz-box-sizing: border-box;
-        }
-            #personal_des{
-                font-size:16px;
-                color:#444444;
-                font-weight:200;
-            }
-   
-#personal_contact{
-    width:300px;
-    height:250px;
-    background:#ffffff;
-    position:relative;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    overflow: hidden;
-    float: left;
-    padding:10px;
-}
-
-#personal_contact ul{
-    padding: 20px 0px;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    text-align: center;
-    background: #ffffff;
-}
-    .personal_num{
-        height:40px;
-        line-height: 40px;      
-        margin: 30px 0px;   
-    }
-    .personal_num:first-child{
-        margin: 0px;
-    }
-    .personal_num:last-child{
-        margin-bottom: 0px;
-    }
-        .personal_num i{
-            width: 30px;
-            
-            text-align: center;
-            line-height: 40px;
-            
-            background: #ffffff;
-            color:#444444;
-            
-            float: left;
-        }
-            #mobile_icon{
-                font-size:40px;                
-            }
-            
-            #fax_icon{
-                font-size:22px;
-            }
-            #desktop_icon{
-                font-size:22px;
-            }
-
-        .in_num{
-            height:20px;
-            vertical-align: top;
-            font-weight: 200;
-            color: #444444;
-            font-size:20px; 
-        }
-            .in_num a{
-                color:#444444;
-                font-weight: 200;
-                font-size:20px;
-            }
-            .in_num a:hover{
-                color:#48cfad;
-                text-decoration: underline;
-            }
-
-
-
-
-
-#personal_score{
-    width:294px;
-    height:250px;
-    background:#ffffff;
-    position:relative;
-    padding:15px 10px;
-    border-left: 1px solid #aaaaaa;
-    border-right: 1px solid #aaaaaa;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    float: left;
-}
-    #personal_score ul li{
-        height:40px;
-        line-height:40px;
-    }
-    #personal_score ul li i{
-        float:left;
-        line-height:40px;
-        color:#555555;
-        font-size:25px;
-        margin-left:10px;
-        
-    }
-    #personal_score ul li p {
-        text-align:right;
-        color:#555555;
-        font-size:23px;
-        font-weight: 200;
-    }
-    #personal_score button{
-        width:130px;
-        height:35px;
-        border:none;
-        border-radius:2px;
-        float:left;
-        margin-left: 3px;
-        margin-right: 3px;
-        margin-top:10px;
-    }
-        #personal_score button i {
-            float:left;
-            line-height:35px;
-            color:#ffffff;
-            margin-left:5px;
-            margin-top: -1px;
-        }
-        #personal_score button p {
-            text-align:center;
-            line-height:35px;
-            color:#ffffff;
-            margin-top: -1px;
-            font-weight: 200;
-        }
-    #personal_score #personal_messeage {
-        background:#9a9a9a;
-    }
-    #personal_score #personal_follow {
-        background:#48cfad;
-    }
-/* user infrom */
+/* personal aside end */
 
 /* pager */
 #pager_box{
@@ -1718,6 +1451,18 @@ h1 /* main logo */ {
     text-align:left;
 }
 
+.con_wrap
+    {
+        width:100%;
+        min-width:1200px;
+        display:block;
+        position:relative;
+        margin:0px auto;
+        text-align: center;
+        cursor: default;
+        overflow-y: hidden;
+    }
+
     .con_main{
         width: 100%;
         min-width:960px;
@@ -1742,7 +1487,8 @@ h1 /* main logo */ {
         top:0;
         
         background: #ffffff;
-        border-left: 1px solid #dddddd;    
+        border-left: 1px solid #dddddd;
+        z-index: 1;    
     }
 
 .contents_card{
@@ -2142,10 +1888,10 @@ h1 /* main logo */ {
                     margin-left: 7px;
                     font-size: 17px;
                 }
-    .artist_top_info{
+    .artist_top_info {
         position: relative;
     }
-        .artist_pic{
+        .artist_pic {
             width: 90px;
             height: 90px;
             overflow: hidden;
@@ -2157,7 +1903,7 @@ h1 /* main logo */ {
             .artist_pic img{
                 height:100%;
             }
-        .artist_location{
+        .artist_location {
             width: 30px;
             height: 30px;
             position : absolute;
@@ -2166,14 +1912,14 @@ h1 /* main logo */ {
             top: 67px;
             right: 73px;
         }
-            .artist_location img{
+            .artist_location img {
                 height: 100%;
             }
-    .artist_mid_info{
+    .artist_mid_info {
         position: relative;
         margin-top: 38px;
     }
-        .artist_name{
+        .artist_name {
             text-align: center;
             color: #444444;
             font-size: 18px;
@@ -2184,11 +1930,11 @@ h1 /* main logo */ {
             font-size: 16px;
             margin-top: 2px;
         }
-            .artist_job i{
+            .artist_job i {
                 color: #444444;
                 margin-right: 10px;
             }
-    .artist_bot_info{
+    .artist_bot_info {
         width: 220px;
         position: relative;
         margin: 0px auto;
@@ -2199,25 +1945,28 @@ h1 /* main logo */ {
         -moz-box-sizing: border-box;
         border-top: 1px solid #aaaaaa;
     }
-        .contents_count{
+        .contents_count {
             display: inline-block;
             color: #aaaaaa;
             float: left;
             font-size: 13px;
         }
-            .count_num{
+            .count_num {
                 display: inline-block;
                 color: #48cfad;
                 font-size: 17px !important;
             }
-        .view_profile_bt{
+        .view_profile_bt {
             display: inline-block;
             background: none;
             color: #444444;
             float: right;
         }
-            .view_profile_bt a{
+            .view_profile_bt a {
                 color: #444444;
+            }
+            .view_profile_bt a:hover {
+                opacity: 0.8;
             }
 
 /*artist card end*/

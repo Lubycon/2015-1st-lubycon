@@ -39,7 +39,6 @@
 </head>
 <body id="bodyer">
     <!-- popup start -->
-    <div class="dark_overlay"></div>
     <!-----------------------------------------------------alert boxes-------------------------------------------------->
     <div class="luby_alert" id="suc_alert">
         <i id="suc_icon" class="fa fa-check-circle rotateIn animated"></i>
@@ -164,10 +163,11 @@
                 <span id="user_id">Admin_User</span>
                 <i class="fa fa-angle-down"></i>
             <ul>
+                <li><a href="./index.php?1=personal_page&2=personal_page&3=main&4=dashboard">Dashboard</a></li>
                 <li><a href="./index.php?1=personal_page&2=personal_page&3=main&4=my_contents">My Contents</a></li>
-                <li style="display:none;"><a href="./index.php?1=personal_page&2=personal_page&3=main&4=message">Message</a></li>
                 <li><a href="./index.php?1=personal_page&2=personal_page&3=main&4=bookmarks">Bookmarks</a></li>
                 <li><a href="./index.php?1=personal_page&2=personal_page&3=main&4=account_setting">Account Setting</a></li>
+                <li style="display:none;"><a href="./index.php?1=personal_page&2=personal_page&3=main&4=message">Message</a></li>
                 <li id="sign_out">Sign Out</li>
             </ul>
         </div>

@@ -86,16 +86,7 @@ $(function () //selcted change
 /////////////////////////////////////////////////////////
 //      gloval navigation button hover event end
 /////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////
-//      main figure sticky start
-/////////////////////////////////////////////////////////
-$(function(){
 
-});
-
-/////////////////////////////////////////////////////////
-//      main figure sticky end
-/////////////////////////////////////////////////////////
 
 
 /////////////////////////////////////////////////////////
@@ -512,6 +503,91 @@ $(function(){
 /////////////////////////////////////////////////////////
 //      main figure animate end
 /////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+//      containers sticky start
+/////////////////////////////////////////////////////////
+
+$(document).scroll(function () {
+    var sticky_start = $("#main_header").height() + $("#main_figure").height();
+    if($("#navsel").length == 0){
+            sticky_start -= 50;
+    }else{
+        sticky_start;
+    }
+    var scrollend = $("#footer").offset().top - $(window).height();
+    var banner_position = 
+    $("#footer").offset().top 
+    - $(".con_aside").height() 
+    - $("#navsel").height() 
+    - $("#main_figure").height();
+
+    if($(document).find(".con_aside") && $(".con_aside").attr("id") != "editor_aside"){ 
+        if ($(document).scrollTop() > sticky_start && $(document).scrollTop() < scrollend){
+            $(".con_aside").css({ "position": "fixed", "top": "100px" });
+        }
+        else if($(document).scrollTop() > scrollend){
+            $(".con_aside").css({ "position": "absolute", "top": banner_position + "px" });
+            $(".con_aside").css({ "height" : $(window).height() + "px"});
+        }
+        else {
+            $(".con_aside").css({ "position": "absolute", "top": "0px" });
+            $("#floating_bt").css({ "position": "absolute", "top": "100px"});
+        };
+    }
+    else{
+        return true;
+    };
+});
+/////////////////////////////////////////////////////////
+//      containers sticky end
+/////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+//      main figure sticky start
+/////////////////////////////////////////////////////////
+$(function(){
+
+});
+/////////////////////////////////////////////////////////
+//      main figure sticky end
+/////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+//      nav_guide sticky start
+/////////////////////////////////////////////////////////
+$(document).scroll(function (){
+    if($("#nav_guide").length != 0){
+        var nav_guide = $("#nav_guide");
+        var sticky_start = $("#main_header").height() + $("#main_figure").height();
+        var contents_y = nav_guide.height();
+        if($("#navsel").length == 0){
+            sticky_start -= 50;
+        }else{
+            sticky_start;
+        }
+
+        
+        if ($(document).scrollTop() > sticky_start){
+            $("#main_header").css({"box-shadow": "0px 0px 0px 0px rgba(0,0,0,0.5)"});
+            nav_guide.css({ "position": "fixed", "top": "50px", "z-index": "2", "box-shadow": "0px 3px 7px rgba(0,0,0,0.3)" });
+            nav_guide.next().css({"top": contents_y});
+            nav_guide.next().next().css({"top": contents_y});
+            $("#floating_bt").css({"position" : "fixed", "top" : "100px"});
+        }
+        else {
+            $("#main_header").css({"box-shadow": "0px 2px 4px 0px rgba(0,0,0,0.5)"});
+            nav_guide.css({ "position": "relative", "top": "0px", "box-shadow": "0px 0px 0px rgba(0,0,0,0.3)" });
+            nav_guide.next().css({"top": "0px"});
+            nav_guide.next().next().css({"top": "0px"});
+            $("#floating_bt").css({"position" : "absolute", "top" : "0px"});
+        }  
+    }
+    else{
+        return true;
+    }  
+});
+/////////////////////////////////////////////////////////
+//      nav_guide sticky end
+/////////////////////////////////////////////////////////
+
 
 /*----------------------------common js----------------------------*/
 
@@ -663,39 +739,7 @@ $(function() {
 /////////////////////////////////////////////////////////
 //      comment write box auto height end
 /////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////
-//      contents view con_right sticky start
-/////////////////////////////////////////////////////////
 
-$(document).scroll(function ()
-    {
-    var scrollend = $("#footer").offset().top - $(window).height();
-    var banner_position = 
-    $("#footer").offset().top 
-    - $(".con_aside").height() 
-    - $("#navsel").height() 
-    - $("#main_figure").height();
-
-    if($(document).find(".con_aside") && $(".con_aside").attr("id") != "editor_aside"){ 
-        if ($(document).scrollTop() > 184 && $(document).scrollTop() < scrollend){
-            $(".con_aside").css({ "position": "fixed", "top": "100px" });
-        }
-        else if($(document).scrollTop() > scrollend){
-            $(".con_aside").css({ "position": "absolute", "top": banner_position + "px" });
-            $(".con_aside").css({ "height" : $(window).height() + "px"});
-        }
-        else {
-            $(".con_aside").css({ "position": "absolute", "top": "0px" });
-            $("#floating_bt").css({ "position": "absolute", "top": "100px"});
-        };
-    }
-    else{
-        return true;
-    };
-});
-/////////////////////////////////////////////////////////
-//      contents view con_right sticky end
-/////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////
 //      contents card bookmark toggle start
 /////////////////////////////////////////////////////////
@@ -722,7 +766,6 @@ $(function(){
 /////////////////////////////////////////////////////////
 //      contents card bookmark toggle end
 /////////////////////////////////////////////////////////
-
 /////////////////////////////////////////////////////////
 //      contents view file_info toggle start
 /////////////////////////////////////////////////////////
@@ -822,30 +865,6 @@ function hideAlert2(){
 /////////////////////////////////////////////////////////
 //      personal page subnav hover and ajax
 /////////////////////////////////////////////////////////
-/*-----------------------------subnav sticky start---------------------------*/
-$(document).scroll(function (){
-    if($("#nav_guide").length != 0){
-        var nav_guide = $("#nav_guide");
-        if ($(document).scrollTop() > 184){
-            $("#main_header").css({"box-shadow": "0px 0px 0px 0px rgba(0,0,0,0.5)"});
-            nav_guide.css({ "position": "fixed", "top": "50px", "z-index": "2", "box-shadow": "0px 3px 7px rgba(0,0,0,0.3)" });
-            nav_guide.next().css({"top": "50px"});
-            nav_guide.next().next().css({"top": "50px"});
-            $("#floating_bt").css({"position" : "fixed", "top" : "100px"});
-        }
-        else {
-            $("#main_header").css({"box-shadow": "0px 2px 4px 0px rgba(0,0,0,0.5)"});
-            nav_guide.css({ "position": "relative", "top": "0px", "box-shadow": "0px 0px 0px rgba(0,0,0,0.3)" });
-            nav_guide.next().css({"top": "0px"});
-            nav_guide.next().next().css({"top": "0px"});
-            $("#floating_bt").css({"position" : "absolute", "top" : "0px"});
-        }  
-    }
-    else{
-        return true;
-    }  
-});
-/*------------------------------subnav sticky end----------------------------*/
 $(function () {
     $(".contents_bt").each(function(){
         var toggle_count = 0;
@@ -891,12 +910,11 @@ $(function () {
 
 
     $('document').ready(function () {
-        if ($('.personal').attr('class') == 'personal')
-        {
+        if ($('.personal').attr('class') == 'personal con_main') {
             var id = four_param;
             $.ajax({
                 type: "POST",
-                url: "php/ajax/subnav.php", //이페이지에서 중복체크를 한다
+                url: "php/ajax/subnav_check.php", //이페이지에서 중복체크를 한다
                 data: 'id='+id,//test.asp에 id 값을 보낸다
                 cache: false,
                 success: function (data) {
@@ -914,21 +932,20 @@ $(function () {
         }//if end
     });
 
-    $(".subnav_list li").click(function (){
-        $(this).parent().prev().prev('.subnav_selected').text($(this).text());
-        $('.subnav_list').stop().fadeOut(300);
-
-        if($(this).parent().prev().prev(".subnav_selected").text() == $(this).text()){
-            $(".subnav_list li").removeClass("selected_li");
-            $(this).addClass("selected_li");
-        }
+    $("#subnav li").click(function (){
+        if(!$(this).hasClass("selected_subnav")){
+            $("#subnav li").removeClass("selected_subnav");
+            $(this).addClass("selected_subnav");
+        }else{
+            return;
+        }//if,else end
         
         var id = $(this).attr('id');
         console.log(id);
 
         $.ajax({
             type: "POST",
-            url: "php/ajax/subnav.php", //이페이지에서 중복체크를 한다
+            url: "php/ajax/subnav_check.php", //이페이지에서 중복체크를 한다
             data: "id=" + id,//test.asp에 id 값을 보낸다
             cache: false,
             success: function (data) {

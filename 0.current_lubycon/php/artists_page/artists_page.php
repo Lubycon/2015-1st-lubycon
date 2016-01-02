@@ -1,4 +1,5 @@
 <figure id="main_figure">
+    <div class="dark_overlay"></div>
     <h2>ARTISTS</h2>
 </figure>
 <!-- end main_figure -->
@@ -6,9 +7,6 @@
 <link href="css/artists_page.css" rel="stylesheet" type="text/css" />
 <!-- contents page css -->
 <section id="contents">
-    <section id="navsel">
-        <!-- end lnb nav -->
-    </section>
     <section id="nav_guide">
         <div class="subnav_box">
             <div class="contents_bt">
@@ -54,7 +52,7 @@
     </section>
     <!-- end nav_guide -->
     <section id="user_view">
-        <section id="user_box_total">
+        <section class="con_wrap">
             <div id="user_view_aside" class="con_aside">
                 <?php 
                     $username = "Admin_User";

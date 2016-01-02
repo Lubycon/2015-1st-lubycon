@@ -23,17 +23,7 @@
     width:100%;
     top:0px;
 }
-    .contents_box_total
-    {
-        width:100%;
-        min-width:1200px;
-        display:block;
-        position:relative;
-        margin:0px auto;
-        text-align: center;
-        cursor: default;
-        overflow-y: hidden;
-    }
+
 #contents_subject{
     display: inline-block;
     margin: 0px auto;
@@ -228,7 +218,7 @@
 
 
 
-    #content_down{
+    #content_down {
         width:110px;
         height:55px;
         background:#48cfad;
@@ -245,6 +235,9 @@
             -webkit-text-stroke: 1px #48cfad;
 
         }
+    #content_down:hover {
+        opacity: 0.8;
+    }
 
 
     #file_descript{

@@ -1,41 +1,12 @@
 ﻿@charset "utf-8";
 
-#accont_setting_box{
-    width:1200px;
-    margin:0px auto;
-    margin-top:15px;
-    position:relative;
+.con_main {
+    padding-left: 275px !important;
 }
-#account_aside{
-    width:280px;
-    border:1px solid #dadada;
-    border-bottom:none;
-    margin-right:20px;
-    position:absolute;
-    top:0px;
-
-}
-    #account_aside li {
-        width:255px;
-        height:45px;
-        line-height:45px;
-        padding-left:25px;
-        color:#777777;
-        border-bottom:1px solid #dddddd;
-        cursor: pointer;
-    }
-    #account_aside li:hover{
-        background:#e6e6e6;
-    }
-    .selected_account{
-        border-left:2px solid #48cfad;
-        width:253px !important;
-        color:#48cfad !important;
-    }
 
 #account_section{
-    width: 857px;
-    margin-left: 300px;
+    width: 100%;
+    text-align: left;
 }
     .setting_card{
         width:100%;

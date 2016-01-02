@@ -73,7 +73,7 @@
 
     <section id="contents_box">
         <section class="contents_view">
-            <div class="contents_box_total">
+            <div class="con_wrap">
                 <div id="contents_main" class="con_main">
                     <div id="floating_bt">
                         <div id="bookmark"><i id="bookmark_inner_bt" class="fa fa-star"></i></div>

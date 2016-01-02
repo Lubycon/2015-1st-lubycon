@@ -3,11 +3,13 @@ $id = $_POST['id'];
 //echo $id;
 switch($id)
 {
+    case 'dashboard':include_once('../personal_page/dashboard.php'); break;
     case 'my_contents':include_once('../personal_page/my_contents.php'); break;
-    case 'message':include_once('../personal_page/message.php'); break;
+    case 'my_forum':include_once('../personal_page/my_forum.php'); break;
+    case 'insight':include_once('../personal_page/insight.php'); break;
     case 'bookmark':include_once('../personal_page/bookmark.php'); break;
     case 'account_setting':include_once('../personal_page/account_setting.php'); break;
-    default:echo '404 not found';
+    default:echo $id + '404 not found';
 }
 
 //include_once('../account/create_account.php');

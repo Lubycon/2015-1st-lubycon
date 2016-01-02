@@ -1,4 +1,5 @@
 <figure id="main_figure">
+    <div class="dark_overlay"></div>
     <h2>COMMUNITY</h2>
 </figure>
 <!-- end main_figure -->
