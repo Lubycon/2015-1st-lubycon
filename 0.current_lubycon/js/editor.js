@@ -103,6 +103,94 @@ $(function(){
 //      show cc_selector end
 /////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////
+//      cc_selector start
+/////////////////////////////////////////////////////////
+$(function(){
+    cc_checked();
+    $("input:radio[name='cc_info']").click(function (event){
+        event = event || window.event;
+        switch(event.target.id){
+            case "cc_radio" :
+            console.log("1");
+                $("#cc_checkboxes").stop().slideDown(400);
+                cc_check_detector();
+                cc_checked();
+            break;
+            case "cp_radio" :
+            console.log("2");
+                $("#cc_checkboxes").stop().slideUp(400);
+                $(".cc_icon").hide();
+            break;
+        }
+    });  
+});
+function cc_check_detector(){
+    $("#cc_main").show();
+    $("#cc_by").show();
+    if($("#dollar_check").is(":checked")){
+        $("#cc_nc").show();
+        $("#cc_nc").css("display","inline-block");
+    }
+    else{
+        $("#cc_nc").hide();
+    };//cc_nc end
+    if($("#equal_check").is(":checked")){
+        $("#cc_nd").show();
+        $("#cc_nd").css("display","inline-block");
+    }
+    else{
+        $("#cc_nd").hide();
+    };//cc_nc end
+    if($("#share_check").is(":checked")){
+        $("#cc_share").show();
+        $("#cc_share").css("display","inline-block");
+    }
+    else{
+        $("#cc_share").hide();
+    };//cc_nc end
+};
+
+function cc_checked(){
+    $("input:checkbox[name='cc_check']").change(function(){
+        if($("#dollar_check").is(":checked")){
+            $("#cc_nc").show();
+            $("#cc_nc").css("display","inline-block");
+        }
+        else{
+            $("#cc_nc").hide();
+        }//cc_nc end
+    });
+    $("input:checkbox[name='cc_check']").change(function(){
+        if($("#equal_check").is(":checked")){
+            $("#cc_nd").show();
+            $("#cc_nd").css("display","inline-block");
+            if($("#share").is(":checked")){
+                $("#share_check").attr("checked",false);
+                $("#cc_share").hide();
+            }
+        }
+        else{
+            $("#cc_nd").hide();
+        }//cc_nc end
+    });
+    $("input:checkbox[name='cc_check']").change(function(){
+        if($("#share_check").is(":checked")){
+            $("#cc_share").show();
+            $("#cc_share").css("display","inline-block");
+            if($("#equal_check").is(":checked")){
+                $("#equal_check").attr("checked",false);
+                $("#cc_nd").hide();
+            }
+        }
+        else{
+            $("#cc_share").hide();
+        }//cc_nc end
+    });
+};
+/////////////////////////////////////////////////////////
+//      cc_selector end
+/////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
 //      editor nav start
 /////////////////////////////////////////////////////////
 

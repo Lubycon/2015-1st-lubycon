@@ -198,13 +198,19 @@
                                     Non-Derivative
                                 </span>
                             </li><!--non derivation-->
+                            <li class="cc_icon" id="cc_share">
+                                <img src="./ch/img/creative_commons/png/share_w.png" />
+                                <span class="tooltip_bt cc_tooltip" id="share_tooltip">
+                                    Share Alike
+                                </span>
+                            </li><!--non derivation-->
                         </ul>
                     </div><!--cc_box end-->
                     <p id="modify_cc">modify</p>
                     <div id="cc_selector_box">
                         <div id="cc_sector" class="cc_section">
                             <div class="cc_title_wrap">
-                                <input class="license_selector" type="radio" name="cc_info" value="cc_enable" checked="true">
+                                <input id="cc_radio" class="license_selector" type="radio" name="cc_info" value="cc_enable" checked="true">
                                 <span class="cc_title">Creative Commons License</span>
                             </div>
                             <ul id="cc_checkboxes">
@@ -228,7 +234,7 @@
                         </div><!--cc sector end-->
                         <div id="copyrights_sector" class="cc_section">
                             <div class="cc_title_wrap">
-                                <input class="license_selector" type="radio" name="cc_info" value="cc_disable">
+                                <input id="cp_radio" class="license_selector" type="radio" name="cc_info" value="cc_disable">
                                 <span class="cc_title">NO USAGE WITHOUT OWNER’S PERMISSION</span>
                             </div>
                         </div><!--cr sector end-->

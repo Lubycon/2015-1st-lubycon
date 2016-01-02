@@ -496,9 +496,12 @@ body{
                 .cc_icon {
                     display: inline-block;
                     position: relative;
-                    width: 30px;
-                    height: 30px;
+                    width: 29px;
+                    height: 29px;
                     margin: 5px 5px 0px 5px;
+                }
+                #cc_share {
+                    display: none;
                 }
                     .cc_icon img {
                         width:100%;
@@ -519,7 +522,7 @@ body{
         }
 
         #cc_selector_box {
-            display: block;
+            display: none;
             position: absolute;
             width: 600px;
             padding: 10px;

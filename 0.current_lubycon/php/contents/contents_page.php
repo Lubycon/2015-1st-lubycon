@@ -1,5 +1,5 @@
 <figure id="main_figure">
-    <div class="dark_overlay"></div>
+    <div class="dark_overlay_small"></div>
     <h2>CONTENTS</h2>
 </figure>	<!-- end main_figure -->
 <link href="css/contents_page.css" rel="stylesheet" type="text/css" />  <!-- contents page css -->

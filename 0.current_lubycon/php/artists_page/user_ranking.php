@@ -1,4 +1,5 @@
 <figure id="main_figure">
+    <div class="dark_overlay_small"></div>
     <h2>ARTISTS</h2>
 </figure>
 <!-- end main_figure -->

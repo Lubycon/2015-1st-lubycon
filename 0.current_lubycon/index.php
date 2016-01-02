@@ -38,6 +38,7 @@
     <![endif]-->
 </head>
 <body id="bodyer">
+    <div class="dark_overlay"></div>
     <!-- popup start -->
     <!-----------------------------------------------------alert boxes-------------------------------------------------->
     <div class="luby_alert" id="suc_alert">
