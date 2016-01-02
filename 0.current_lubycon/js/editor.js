@@ -81,6 +81,28 @@ $(function() {
 //      editor content_name end
 /////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////
+//      show cc_selector start
+/////////////////////////////////////////////////////////
+$(function(){
+    var toggle_count = 0;
+    $(document).on('click','#modify_cc', function(){
+        switch(toggle_count){
+            case 0:
+                $(this).next("#cc_selector_box").fadeIn(200);
+                toggle_count = 1;
+            break;
+
+            case 1:
+                $(this).next("#cc_selector_box").fadeOut(200);
+                toggle_count = 0;
+            break;
+        };
+    });
+});
+/////////////////////////////////////////////////////////
+//      show cc_selector end
+/////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
 //      editor nav start
 /////////////////////////////////////////////////////////
 

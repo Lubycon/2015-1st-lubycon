@@ -171,30 +171,68 @@
             </div><!--top_set end-->
             <div id="bottom_set" class="setting_group">
                 <div id="cc_editor">
-                    <p class="setting_title">Creative Commons</p>
+                    <p class="setting_title">License</p>
                     <div class="set_con" id="cc_box">
                         <ul>
+                            <li class="cc_icon" id="cc_main">
+                                <img src="./ch/img/creative_commons/png/cc_w.png" />
+                                <span class="tooltip_bt cc_tooltip" id="by_tooltip">
+                                   Creative Commons License
+                                </span>
+                            </li><!--cc icon-->
                             <li class="cc_icon" id="cc_by">
                                 <img src="./ch/img/creative_commons/png/by_w.png" />
                                 <span class="tooltip_bt cc_tooltip" id="by_tooltip">
                                     Attribution
                                 </span>
-                            </li>
+                            </li><!-- default icon-->
                             <li class="cc_icon" id="cc_nc">
                                 <img src="./ch/img/creative_commons/png/nc_w.png" />
                                 <span class="tooltip_bt cc_tooltip" id="nc_tooltip">
                                     Non-Commercial
                                 </span>
-                            </li>
+                            </li><!--non commercial-->
                             <li class="cc_icon" id="cc_nd">
                                 <img src="./ch/img/creative_commons/png/nd_w.png" />
                                 <span class="tooltip_bt cc_tooltip" id="nb_tooltip">
                                     Non-Derivative
                                 </span>
-                            </li>
+                            </li><!--non derivation-->
                         </ul>
                     </div><!--cc_box end-->
                     <p id="modify_cc">modify</p>
+                    <div id="cc_selector_box">
+                        <div id="cc_sector" class="cc_section">
+                            <div class="cc_title_wrap">
+                                <input class="license_selector" type="radio" name="cc_info" value="cc_enable" checked="true">
+                                <span class="cc_title">Creative Commons License</span>
+                            </div>
+                            <ul id="cc_checkboxes">
+                                <li class="checkbox_wrap">
+                                    <input id="human_check" class="cc_selector" type="checkbox" name="cc_check" value="0" checked="true" disabled="true">
+                                    <span class="cc_desc">Free to share and adapt with appropriate credit</span>
+                                </li>
+                                <li class="checkbox_wrap">
+                                    <input id="dollar_check" class="cc_selector" type="checkbox" name="cc_check" value="1" checked="true">
+                                    <span class="cc_desc">Not allowed for commercial purpose</span>
+                                </li>
+                                <li class="checkbox_wrap">
+                                    <input id="equal_check" class="cc_selector" type="checkbox" name="cc_check" value="2" checked="true">
+                                    <span class="cc_desc">You may not distribute the modified material</span>
+                                </li>
+                                <li class="checkbox_wrap">
+                                    <input id="share_check" class="cc_selector" type="checkbox" name="cc_check" value="3">
+                                    <span class="cc_desc">Free to share including the modified material under the same license as original</span>
+                                </li>                             
+                            </ul>
+                        </div><!--cc sector end-->
+                        <div id="copyrights_sector" class="cc_section">
+                            <div class="cc_title_wrap">
+                                <input class="license_selector" type="radio" name="cc_info" value="cc_disable">
+                                <span class="cc_title">NO USAGE WITHOUT OWNER’S PERMISSION</span>
+                            </div>
+                        </div><!--cr sector end-->
+                    </div><!--cc_selector_box end-->
                 </div><!--cc_editor end-->
             </div><!--bottom_set end-->
 

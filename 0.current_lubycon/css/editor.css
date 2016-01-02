@@ -498,7 +498,7 @@ body{
                     position: relative;
                     width: 30px;
                     height: 30px;
-                    margin: 5px 10px 0px 10px;
+                    margin: 5px 5px 0px 5px;
                 }
                     .cc_icon img {
                         width:100%;
@@ -517,8 +517,61 @@ body{
         #cc_editor #modify_cc:hover {
             opacity: 0.8;
         }
-    
-        
+
+        #cc_selector_box {
+            display: block;
+            position: absolute;
+            width: 600px;
+            padding: 10px;
+            top: 70px;
+            right: 258px; 
+            background: #444444;
+            border: 1px solid #222222;
+            border-radius: 3px;
+            box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.7);
+        }
+            .cc_section {
+                text-align: left;
+                background: #222222;
+                border-radius: 5px;
+                box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.5);
+                overflow: hidden;
+            }
+                .cc_title_wrap {
+                    background: #555555;
+                    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.5);
+                    padding: 10px;
+                }
+                .cc_title {
+                    color: #ffffff;
+                    font-size: 22px;
+                    font-weight: 200;
+                    margin-left: 10px;
+                }
+                .license_selector {
+                    margin: 0px !important;
+                }
+                .cc_selector {
+                    margin: 0px !important;
+                }
+                .cc_desc {
+                    color: #ffffff;
+                    margin-left: 20px;
+                    font-weight: 200;
+                }
+                #cc_checkboxes {
+                    width: 100%;
+                    display: block;
+                    padding: 5px 5px 5px 30px;
+                    text-align: left;
+                    box-sizing: border-box;
+                    -webkit-box-sizing: border-box;
+                    -moz-box-sizing: border-box;
+                }
+                    .checkbox_wrap {
+                        display: block;
+                        margin: 8px 0px;
+                    }
 
 
 
