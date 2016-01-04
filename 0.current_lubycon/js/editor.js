@@ -160,27 +160,19 @@ function cc_checked(){
             $("#cc_nc").hide();
         }//cc_nc end
     });
-    $("input:checkbox[name='cc_check']").change(function(){
+    $("input:radio[name='cc_check']").change(function(){
         if($("#equal_check").is(":checked")){
             $("#cc_nd").show();
             $("#cc_nd").css("display","inline-block");
-            if($("#share").is(":checked")){
-                $("#share_check").attr("checked",false);
-                $("#cc_share").hide();
-            }
         }
         else{
             $("#cc_nd").hide();
         }//cc_nc end
     });
-    $("input:checkbox[name='cc_check']").change(function(){
+    $("input:radio[name='cc_check']").change(function(){
         if($("#share_check").is(":checked")){
             $("#cc_share").show();
             $("#cc_share").css("display","inline-block");
-            if($("#equal_check").is(":checked")){
-                $("#equal_check").attr("checked",false);
-                $("#cc_nd").hide();
-            }
         }
         else{
             $("#cc_share").hide();
@@ -193,12 +185,9 @@ function cc_checked(){
 /////////////////////////////////////////////////////////
 //      editor nav start
 /////////////////////////////////////////////////////////
-
-
 function editor_gnv_select(gnv_sel) {
     $("#editor_gnv ol li").removeClass();
-    switch (gnv_sel)
-    {
+    switch (gnv_sel){
         case "edit":
             $("#editor_gnv ol li:nth-child(1)").addClass("editor_selected_gnv");
             break;
@@ -220,22 +209,6 @@ $(document).ready(function () {
 */
 
 $(function () {
-    //tooltip start
-    $(document).ready(function(){
-        var tip_parent = $(document).find(".tooltip_bt").parent();
-
-        tip_parent.hover(function() {
-            $(this).children(".tooltip_bt").stop().fadeIn(300);
-
-        }, function() {
-            $(this).children(".tooltip_bt").stop().fadeOut(300);
-        });
-    });
-    //tooltip end
-
-    /////////////////////////////////////////////////////////
-    //      editor nav end
-    /////////////////////////////////////////////////////////
     /////////////////////////////////////////////////////////
     //      img crop start
     /////////////////////////////////////////////////////////

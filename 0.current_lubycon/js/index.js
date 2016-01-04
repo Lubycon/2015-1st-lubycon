@@ -110,7 +110,19 @@ $(function(){
     });
 });//opacity animation end
 
+//tooltip start
+$(function(){
+   $(document).ready(function(){
+        var tip_parent = $(document).find(".tooltip_bt").prev();
 
+        tip_parent.hover(function() {
+            $(this).next(".tooltip_bt").stop().fadeIn(300);
+        }, function() {
+            $(this).next(".tooltip_bt").stop().fadeOut(300);
+        });
+    });
+});
+//tooltip end
 
 /////////////////////////////////////////////////////////
 //      add hover animations end

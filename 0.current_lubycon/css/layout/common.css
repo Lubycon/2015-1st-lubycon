@@ -694,7 +694,7 @@ h1 /* main logo */ {
         box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.5);
         display: none;
         background: rgba(0,0,0,0.8);
-        border: 1px solid #333333;
+        border: 1px solid #000000;
         border-radius: 5px;
         overflow: hidden;
     }
@@ -1980,6 +1980,36 @@ h1 /* main logo */ {
             }
 
 /*artist card end*/
+/*tooltip start*/
+.tooltip_bt{
+    min-width: 120px;
+    line-height: 30px;
+    position: absolute;
+
+    padding: 3px;
+    
+    background:rgba(0,0,0,0.9);
+    border: 1px solid #000000;
+    border-radius: 3px;
+    box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.5);
+    
+    color:#fff;
+    font-weight: 200;
+    font-size:14px;
+    text-align: center;
+    white-space: nowrap;
+    
+    
+    z-index: 1;  
+    cursor:default;
+    display: none;
+}
+    .tooltip_long{
+        padding: 3px 10px;
+    }
+
+
+
 
 
 #footer {

@@ -74,8 +74,8 @@
             </p>
             <div id="editor_upload_file">
                 <i class="fa fa-cloud-upload"></i>Upload
-                <span class="tooltip_bt" id="file_tooltip">Upload file to server<br/>(allow only zip file)</span>
             </div>
+            <span class="tooltip_bt" id="file_tooltip">Upload file to server<br/>(allow only zip file)</span><!--tooltip for upload-->
             <input type="file" id="upload_file_input" name="upload_file" accept="application/zip"/>
             <input type="submit" class="final_upload_bt" id="upload_final" value="SUBMIT" onsubmit="return postForm()"/>
         </section>
@@ -176,7 +176,7 @@
                         <ul>
                             <li class="cc_icon" id="cc_main">
                                 <img src="./ch/img/creative_commons/png/cc_w.png" />
-                                <span class="tooltip_bt cc_tooltip" id="by_tooltip">
+                                <span class="tooltip_bt tooltip_long cc_tooltip" id="cc_tooltip">
                                    Creative Commons License
                                 </span>
                             </li><!--cc icon-->
@@ -208,36 +208,39 @@
                     </div><!--cc_box end-->
                     <p id="modify_cc">modify</p>
                     <div id="cc_selector_box">
-                        <div id="cc_sector" class="cc_section">
-                            <div class="cc_title_wrap">
-                                <input id="cc_radio" class="license_selector" type="radio" name="cc_info" value="cc_enable" checked="true">
-                                <span class="cc_title">Creative Commons License</span>
-                            </div>
-                            <ul id="cc_checkboxes">
-                                <li class="checkbox_wrap">
-                                    <input id="human_check" class="cc_selector" type="checkbox" name="cc_check" value="0" checked="true" disabled="true">
-                                    <span class="cc_desc">Free to share and adapt with appropriate credit</span>
-                                </li>
-                                <li class="checkbox_wrap">
-                                    <input id="dollar_check" class="cc_selector" type="checkbox" name="cc_check" value="1" checked="true">
-                                    <span class="cc_desc">Not allowed for commercial purpose</span>
-                                </li>
-                                <li class="checkbox_wrap">
-                                    <input id="equal_check" class="cc_selector" type="checkbox" name="cc_check" value="2" checked="true">
-                                    <span class="cc_desc">You may not distribute the modified material</span>
-                                </li>
-                                <li class="checkbox_wrap">
-                                    <input id="share_check" class="cc_selector" type="checkbox" name="cc_check" value="3">
-                                    <span class="cc_desc">Free to share including the modified material under the same license as original</span>
-                                </li>                             
-                            </ul>
-                        </div><!--cc sector end-->
-                        <div id="copyrights_sector" class="cc_section">
-                            <div class="cc_title_wrap">
-                                <input id="cp_radio" class="license_selector" type="radio" name="cc_info" value="cc_disable">
-                                <span class="cc_title">NO USAGE WITHOUT OWNER’S PERMISSION</span>
-                            </div>
-                        </div><!--cr sector end-->
+                        <div id="cc_selector_wrap">
+                            <div id="cc_sector" class="cc_section">
+                                <div class="cc_title_wrap">
+                                    <input id="cc_radio" class="license_selector" type="radio" name="cc_info" value="cc_enable" checked="true">
+                                    <span class="cc_title">Creative Commons License</span>
+                                </div>
+                                <ul id="cc_checkboxes">
+                                    <li class="checkbox_wrap">
+                                        <input id="human_check" class="cc_selector" type="checkbox" name="cc_check" value="0" checked="true" disabled="true">
+                                        <span class="cc_desc">Free to share and adapt with appropriate credit</span>
+                                    </li>
+                                    <li class="checkbox_wrap">
+                                        <input id="dollar_check" class="cc_selector" type="checkbox" name="cc_check" value="1" checked="true">
+                                        <span class="cc_desc">Not allowed for commercial purpose</span>
+                                    </li>
+                                    <li class="checkbox_wrap">
+                                        <input id="equal_check" class="cc_selector" type="radio" name="cc_check" value="2" checked="true">
+                                        <span class="cc_desc">You may not distribute the modified material</span>
+                                    </li>
+                                    <li class="checkbox_wrap">
+                                        <input id="share_check" class="cc_selector" type="radio" name="cc_check" value="3">
+                                        <span class="cc_desc">Free to share including the modified material under the same license as original</span>
+                                    </li>                             
+                                </ul>
+                            </div><!--cc sector end-->
+                            <div id="copyrights_sector" class="cc_section">
+                                <div class="cc_title_wrap">
+                                    <input id="cp_radio" class="license_selector" type="radio" name="cc_info" value="cc_disable">
+                                    <span class="cc_title">NO USAGE WITHOUT OWNER’S PERMISSION</span>
+                                </div>
+                            </div><!--cr sector end-->
+                        </div><!--cc_selector_wrap end-->
+                        <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" id="goto_cc">Learn more...</a><!--cc link-->
                     </div><!--cc_selector_box end-->
                 </div><!--cc_editor end-->
             </div><!--bottom_set end-->
