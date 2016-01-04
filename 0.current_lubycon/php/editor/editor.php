@@ -174,36 +174,38 @@
                     <p class="setting_title">License</p>
                     <div class="set_con" id="cc_box">
                         <ul>
-                            <li class="cc_icon" id="cc_main">
-                                <img src="./ch/img/creative_commons/png/cc_w.png" />
-                                <span class="tooltip_bt tooltip_long cc_tooltip" id="cc_tooltip">
-                                   Creative Commons License
-                                </span>
-                            </li><!--cc icon-->
-                            <li class="cc_icon" id="cc_by">
-                                <img src="./ch/img/creative_commons/png/by_w.png" />
-                                <span class="tooltip_bt cc_tooltip" id="by_tooltip">
-                                    Attribution
-                                </span>
-                            </li><!-- default icon-->
-                            <li class="cc_icon" id="cc_nc">
-                                <img src="./ch/img/creative_commons/png/nc_w.png" />
-                                <span class="tooltip_bt cc_tooltip" id="nc_tooltip">
-                                    Non-Commercial
-                                </span>
-                            </li><!--non commercial-->
-                            <li class="cc_icon" id="cc_nd">
-                                <img src="./ch/img/creative_commons/png/nd_w.png" />
-                                <span class="tooltip_bt cc_tooltip" id="nb_tooltip">
-                                    Non-Derivative
-                                </span>
-                            </li><!--non derivation-->
-                            <li class="cc_icon" id="cc_share">
-                                <img src="./ch/img/creative_commons/png/share_w.png" />
-                                <span class="tooltip_bt cc_tooltip" id="share_tooltip">
-                                    Share Alike
-                                </span>
-                            </li><!--non derivation-->
+                            <a href="#" id="cc_desc_link" target="_brank">
+                                <li class="cc_icon" id="cc_main">
+                                    <img src="./ch/img/creative_commons/png/cc_w.png" />
+                                    <span class="tooltip_bt tooltip_long cc_tooltip" id="cc_tooltip">
+                                       Creative Commons License
+                                    </span>
+                                </li><!--cc icon-->
+                                <li class="cc_icon" id="cc_by">
+                                    <img src="./ch/img/creative_commons/png/by_w.png" />
+                                    <span class="tooltip_bt cc_tooltip" id="by_tooltip">
+                                        Attribution
+                                    </span>
+                                </li><!-- default icon-->
+                                <li class="cc_icon" id="cc_nc">
+                                    <img src="./ch/img/creative_commons/png/nc_w.png" />
+                                    <span class="tooltip_bt cc_tooltip" id="nc_tooltip">
+                                        Non-Commercial
+                                    </span>
+                                </li><!--non commercial-->
+                                <li class="cc_icon" id="cc_nd">
+                                    <img src="./ch/img/creative_commons/png/nd_w.png" />
+                                    <span class="tooltip_bt cc_tooltip" id="nb_tooltip">
+                                        Non-Derivative
+                                    </span>
+                                </li><!--non derivation-->
+                                <li class="cc_icon" id="cc_share">
+                                    <img src="./ch/img/creative_commons/png/share_w.png" />
+                                    <span class="tooltip_bt cc_tooltip" id="share_tooltip">
+                                        Share Alike
+                                    </span>
+                                </li><!--non derivation-->
+                            </a>
                         </ul>
                     </div><!--cc_box end-->
                     <p id="modify_cc">modify</p>
@@ -216,19 +218,19 @@
                                 </div>
                                 <ul id="cc_checkboxes">
                                     <li class="checkbox_wrap">
-                                        <input id="human_check" class="cc_selector" type="checkbox" name="cc_check" value="0" checked="true" disabled="true">
+                                        <input id="by" class="cc_selector" type="checkbox" name="cc_check" value="by" checked="true" disabled="true">
                                         <span class="cc_desc">Free to share and adapt with appropriate credit</span>
                                     </li>
                                     <li class="checkbox_wrap">
-                                        <input id="dollar_check" class="cc_selector" type="checkbox" name="cc_check" value="1" checked="true">
+                                        <input id="nc" class="cc_selector" type="checkbox" name="cc_check" value="nc" checked="true">
                                         <span class="cc_desc">Not allowed for commercial purpose</span>
                                     </li>
                                     <li class="checkbox_wrap">
-                                        <input id="equal_check" class="cc_selector" type="radio" name="cc_check" value="2" checked="true">
+                                        <input id="nd" class="cc_selector" type="checkbox" name="cc_check" value="nd" checked="true">
                                         <span class="cc_desc">You may not distribute the modified material</span>
                                     </li>
                                     <li class="checkbox_wrap">
-                                        <input id="share_check" class="cc_selector" type="radio" name="cc_check" value="3">
+                                        <input id="sa" class="cc_selector" type="checkbox" name="cc_check" value="sa">
                                         <span class="cc_desc">Free to share including the modified material under the same license as original</span>
                                     </li>                             
                                 </ul>
@@ -240,7 +242,7 @@
                                 </div>
                             </div><!--cr sector end-->
                         </div><!--cc_selector_wrap end-->
-                        <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" id="goto_cc">Learn more...</a><!--cc link-->
+                        <a href="#" target="_blank" id="goto_cc">Learn more...</a><!--cc link-->
                     </div><!--cc_selector_box end-->
                 </div><!--cc_editor end-->
             </div><!--bottom_set end-->

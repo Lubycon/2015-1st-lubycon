@@ -111,37 +111,37 @@ $(function(){
         event = event || window.event;
         switch(event.target.id){
             case "cc_radio" :
-            console.log("1");
                 $("#cc_checkboxes").stop().slideDown(400);
+                cc_datacheck();
                 cc_check_detector();
                 cc_checked();
             break;
             case "cp_radio" :
-            console.log("2");
                 $("#cc_checkboxes").stop().slideUp(400);
                 $(".cc_icon").hide();
             break;
         }
     });  
 });
+
 function cc_check_detector(){
     $("#cc_main").show();
     $("#cc_by").show();
-    if($("#dollar_check").is(":checked")){
+    if($("#nc").is(":checked")){
         $("#cc_nc").show();
         $("#cc_nc").css("display","inline-block");
     }
     else{
         $("#cc_nc").hide();
     };//cc_nc end
-    if($("#equal_check").is(":checked")){
+    if($("#nd").is(":checked")){
         $("#cc_nd").show();
         $("#cc_nd").css("display","inline-block");
     }
     else{
         $("#cc_nd").hide();
     };//cc_nc end
-    if($("#share_check").is(":checked")){
+    if($("#sa").is(":checked")){
         $("#cc_share").show();
         $("#cc_share").css("display","inline-block");
     }
@@ -152,7 +152,7 @@ function cc_check_detector(){
 
 function cc_checked(){
     $("input:checkbox[name='cc_check']").change(function(){
-        if($("#dollar_check").is(":checked")){
+        if($("#nc").is(":checked")){
             $("#cc_nc").show();
             $("#cc_nc").css("display","inline-block");
         }
@@ -160,8 +160,8 @@ function cc_checked(){
             $("#cc_nc").hide();
         }//cc_nc end
     });
-    $("input:radio[name='cc_check']").change(function(){
-        if($("#equal_check").is(":checked")){
+    $("input:checkbox[name='cc_check']").change(function(){
+        if($("#nd").is(":checked")){
             $("#cc_nd").show();
             $("#cc_nd").css("display","inline-block");
         }
@@ -169,8 +169,8 @@ function cc_checked(){
             $("#cc_nd").hide();
         }//cc_nc end
     });
-    $("input:radio[name='cc_check']").change(function(){
-        if($("#share_check").is(":checked")){
+    $("input:checkbox[name='cc_check']").change(function(){
+        if($("#sa").is(":checked")){
             $("#cc_share").show();
             $("#cc_share").css("display","inline-block");
         }
@@ -179,6 +179,18 @@ function cc_checked(){
         }//cc_nc end
     });
 };
+
+$(function(){
+    $("input:checkbox[name='cc_check']").click(function(){
+        var checked_databox = [];
+        $("input:checkbox[name='cc_check']:checked").each(function() {  
+            var checked_data = checked_databox.push($(this).val());
+            var cc_url_sub = checked_databox.join("-");
+            var cc_url = "http://creativecommons.org/licenses/" + cc_url_sub + "/4.0";
+            $("#cc_desc_link").attr("href", cc_url);
+        });
+    })
+})
 /////////////////////////////////////////////////////////
 //      cc_selector end
 /////////////////////////////////////////////////////////
