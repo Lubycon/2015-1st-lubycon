@@ -112,7 +112,6 @@ $(function(){
         switch(event.target.id){
             case "cc_radio" :
                 $("#cc_checkboxes").stop().slideDown(400);
-                cc_datacheck();
                 cc_check_detector();
                 cc_checked();
             break;
@@ -186,6 +185,7 @@ $(function(){
         $("input:checkbox[name='cc_check']:checked").each(function() {  
             var checked_data = checked_databox.push($(this).val());
             var cc_url_sub = checked_databox.join("-");
+            console.log(cc_url_sub);
             var cc_url = "http://creativecommons.org/licenses/" + cc_url_sub + "/4.0";
             $("#cc_desc_link").attr("href", cc_url);
         });
