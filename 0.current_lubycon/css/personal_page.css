@@ -84,4 +84,122 @@
 	padding-right: 0;
 	padding-left: 250px;
 }
+/*------------dash board start------------------*/
+#dashboard_wrap {
+	width:100%;
+    max-width: 1438px;
+    margin:0px auto;
+    margin-top:40px;
+    text-align: center;
+}
+
+.dash_card {
+	position:relative;
+    width:200px;
+    height:240px;
+    background:#fff;
+    border-radius:3px;
+    float:left;
+    margin: 15px;
+    box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.3);
+}
+.dash_card_long {
+	width: 432px;
+}
+.dash_card_wrap {
+	box-shadow: none;
+}
+.info_card {
+	height: 112px;
+	margin: 7px 0px;
+	box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.3);
+	border-radius: 3px;
+}
+.contact_card {
+	height: 70px;
+	margin: 7px 0px;
+	box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.3);
+	border-radius: 3px;
+}
+	/*---------profile card start--------*/
+	.artist_pic {
+
+	}
+	.artist_location {
+		top: 98px;
+		right: 57px;
+	}
+		#artist_location img {
+			background-position: center;
+		}
+	.artist_name {
+		font-size: 24px;
+		font-weight: 200;
+		margin-top: 26px;
+	}
+	#sns_bt_wrap {
+		margin-top: 27px;
+		height: 36px;
+	}
+		.sns_bt {
+			width: 67px;
+			height: 100%;
+			line-height: 36px;
+			margin: 0px -2px;
+			display: inline-block;
+			cursor: pointer;
+		}
+		.sns_bt:hover {
+			opacity: 0.8;
+		}
+		#facebook_bt {
+			background: #003366;
+			color: #ffffff;
+		}
+		#twitter_bt {
+			background: #00aced;
+			color: #ffffff;
+		}
+		#google_bt {
+			background: #dc4e41;
+			color: #ffffff;
+		}
+	/*---------profile card end--------*/
+	/*---------job card start--------*/
+	#job_icon_wrap {
+		background: #bd8cbf;
+		height: 70px;
+	}
+		#job_title {
+			position: absolute;
+			font-weight: 200;
+			font-size: 13px;
+			color: #ffffff;
+			text-align: left;
+			padding-left: 5px;
+			padding-top: 5px;
+		}
+		#job_icon {
+			color: #ffffff;
+			font-size: 40px;
+			margin: 14px auto;
+		}
+		.artist_job {
+			height: 42px;
+			line-height: 37px;
+			color: #444444;
+			font-size: 20px;
+		}
+	/*---------job card end--------*/
+	
+
+
+
+
+
+
+
+
+
+
 

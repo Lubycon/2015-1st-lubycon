@@ -27,6 +27,7 @@ $(document).ready(function(){
             success: function(data) {
                 console.log(data);
                 if(data == "true"){
+                    go_index();
                     $('#after_signin').show();
                     $('#addcontent_bt').show();
                     $('#signin_bt').hide();
@@ -40,7 +41,6 @@ $(document).ready(function(){
                     return;
                 }
                 else{
-                    console.log(react);
                     console.log("exception");
                     return;
                 }
@@ -52,6 +52,10 @@ $(document).ready(function(){
         });
     });
 });    //ajax
+function go_index(){
+    //location.replace("../../index.php");
+    location.href = "index.php";//just use for debuging
+};
 /////////////////////////////////////////////////////////
 //      sign in ajax end
 /////////////////////////////////////////////////////////
