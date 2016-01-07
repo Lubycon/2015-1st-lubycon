@@ -11,7 +11,7 @@ $(document).ready(function(){
             $("#login_lubycon").click();
         };//if end
     });//keypress end
-
+    /*
     $("#login_lubycon").click(function(){
         var form_data = {
             user_id: $("#login_id").val(),//input id
@@ -51,6 +51,7 @@ $(document).ready(function(){
             }
         });
     });
+*/
 });    //ajax
 /////////////////////////////////////////////////////////
 //      sign in ajax end

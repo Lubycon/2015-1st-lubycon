@@ -33,12 +33,12 @@
         <p id="intro_p">SIGN IN</p>
     </header>
     <div id="login_box">
-        <form id="main_login" name="main_login" method="post">
+        <form id="main_login" name="main_login" method="post" action="login_check.php">
             <div id="login_input">
                     <input type="text" id="login_id" name="login_id" value="E-mail"/><i id="email_icon" class="fa fa-user"></i>
                     <input type="password" id="login_pass" name="login_pass" value="Password" /><i id="pass_icon" class="fa fa-key"></i>
             </div> <!-- end login_input div --> 
-            <div id="login_lubycon"><i class="fa fa-unlock-alt"></i></div><!--submit bt-->
+            <button type="submit" id="login_lubycon"><i class="fa fa-unlock-alt"></i></button><!--submit bt-->
         </form><!--end login_input form-->
         <div id="login_submit">
             <button id="login_facebook"><i class="fa fa-facebook"></i><span>Facebook</span></button>

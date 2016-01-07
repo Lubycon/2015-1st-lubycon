@@ -82,13 +82,15 @@
 
     $text_editor = $_POST['text_editor'];
 
-    echo "text_editor = ". $text_editor;
+    //echo "text_editor = ". $text_editor;
 
-    echo $_POST['files'];
+    //echo $_FILES['file'];
     
     //echo htmlspecialchars($_POST['text_editor']);
+
+    echo $_POST['text_editor'];
     
     echo "<br/><br/>-------------text editor html--------------<br/>";
 
-    print_r($_POST);
+    //print_r($_POST);
 ?>
