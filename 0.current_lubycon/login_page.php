@@ -15,27 +15,37 @@
     <link rel="shortcut icon" href="./ch/img/logo/lubycon.ico" />  <!-- favicon -->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
     <link href="css/layout/normalize.css" rel="stylesheet" type="text/css" />  <!-- web normalize -->
-    <link href="css/layout/common.css" rel="stylesheet" type="text/css" /> 
+    <link href="css/selectordie.css" rel="stylesheet" type="text/css" /> <!-- selector decoration css -->
+    <link href="css/layout/animate.css" rel="stylesheet" type="text/css" /><!--animation for objects-->
+    <link href="css/login_page.css" rel="stylesheet" type="text/css" /> 
     <link href='http://fonts.googleapis.com/css?family=Source Sans Pro:200,400' rel='stylesheet' type='text/css'>
 
     <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script> <!-- jquery library -->
+    <script type="text/javascript" src="js/selectordie.min.js"></script> <!-- selector decoration js -->
+    <script type="text/javascript" src="js/selectordie.demo.js"></script> <!-- selector decoration js -->
+    <script type="text/javascript" src="js/login_page.js"></script> <!--login_page interation js-->
+    <script type="text/javascript" src="js/account.js"></script> <!-- account file js -->
 </head>
 <body id="bodyer">
+    <div class="dark_overlay"></div>
+    <header id="intro_wrap">
+        <figure id="logo_lubycon"></figure>
+        <p id="intro_p">SIGN IN</p>
+    </header>
     <div id="login_box">
-        <div id="login_box_header">SIGN IN</div>
         <form id="main_login" name="main_login" method="post">
             <div id="login_input">
                     <input type="text" id="login_id" name="login_id" value="E-mail"/><i id="email_icon" class="fa fa-user"></i>
-                    <input type="password" id="login_pass" name="login_pass" value="Password" /><i id="pass_icon" class="fa fa-unlock-alt"></i>
+                    <input type="password" id="login_pass" name="login_pass" value="Password" /><i id="pass_icon" class="fa fa-key"></i>
             </div> <!-- end login_input div --> 
-            <input id="login_lubycon" type="button" value="Go"><!--submit bt-->
+            <div id="login_lubycon"><i class="fa fa-unlock-alt"></i></div><!--submit bt-->
         </form><!--end login_input form-->
-        <a href="./php/account/forgot_password.php" target="_self"><p id="forgot_pass">Forgot your password?</p></a> 
         <div id="login_submit">
-            <button id="login_facebook"><i class="fa fa-facebook"></i><span></span></button>
-            <button id="login_google"><i class="fa fa-google-plus"></i><span></span></button>
+            <button id="login_facebook"><i class="fa fa-facebook"></i><span>Facebook</span></button>
+            <button id="login_google"><i class="fa fa-google-plus"></i><span>Google+</span></button>
         </div>     <!-- end login_submit div -->
-        <p id="create_acc">Create An Account</p>          
+        <p id="create_acc">Create An Account</p>           
     </div>  <!-- end login_box div -->
+    <a href="./php/account/forgot_password.php" target="_self"><p id="forgot_pass">Forgot your password?</p></a>
 </body>
 </html>
