@@ -1,3 +1,4 @@
+<script type="text/javascript" src="js/luby_clock.js" ></script>
 <?php
     $username = "Admin_User";
     $user_img_url = "./ch/img/no_img/no_img_user1.jpg";
@@ -51,32 +52,62 @@
                 <p class="artist_job"><?=$userjob?></p>
             </div><!--job card end-->
             <div class="info_card" id="language_card">
-                <p id="personal_language"><i class="fa fa-language" id="language_icon"></i>
-                    <?=$language1?>, <?=$language2?>
-                </p>
+                <div id="language_title">
+                    <i class="fa fa-language" id="language_icon"></i>
+                    <span>Language</span>
+                </div>
+                <div id="language_wrap">
+                    <p class="personal_language" id="language1"><?=$language1?></p>
+                    <p class="personal_language" id="language2"><?=$language2?></p>
+                </div>
             </div><!--language card end-->
         </li>   
         <li class="dash_card dash_card_wrap" id="contact_card_wrap" >
             <div class="contact_card" id="mobile_card">
-                <p class="personal_num">
-                    <i class="fa fa-mobile" id="mobile_icon"></i><span class="in_num">
-                    <?=$country_code?>-<?=$user_mob?></span>
-                </p>
+                <div class="contact_title" id="mobile_title">
+                    <i class="fa fa-mobile"></i>
+                    <span>Mobile</span>
+                </div>
+                <div class="in_num" id="mobile_num"><?=$country_code?>-<?=$user_mob?></div>
             </div><!--mobile end-->
             <div class="contact_card" id="web_card">
-                <p class="personal_num">
-                    <i class="fa fa-desktop" id="desktop_icon"></i>
-                    <span class="in_num"><a href="<?=$user_web?>"><?=$user_web?></a></span>
+                <p class="contact_title" id="web_title">
+                    <i class="fa fa-link"></i>
+                    <span>Website</span>
                 </p>
+                <div class="in_num" id="web_num"><?=$user_web?></div>
             </div><!--website end-->
             <div class="contact_card" id="email_card">
-                <p class="personal_num">
-                    <?=$user_mail?>
-                </p>
+                <div class="contact_title" id="email_title">
+                    <i class="fa fa-envelope-o"></i>
+                    <span>E-mail</span>
+                </div>
+                <div class="in_num" id="email_num"><?=$user_mail?></div>
             </div><!--email end-->
         </li><!--contact card end-->
         <li class="dash_card dash_card_long"></li>
-        <li class="dash_card dash_card_long" id="time_card"></li>
+        <li class="dash_card dash_card_long" id="time_card">
+            <div class="time_wrap" id="usertime">
+                <p class="timename" id="usertime_name"><?=$username?>&nbsp;Time</p>
+                <div class="clock_wrap">
+                    <div class="ampm" id="user_ampm"></div><!--pm or am-->
+                    <div class="clock" id="userclock"></div>
+                </div>
+                <div class="time_location" id="user_location">
+                    <?=$usercity?>,<?=$usercountry?>
+                </div>
+            </div>
+            <div class="time_wrap" id="localtime">
+                <p class="timename" id="localtime_name">Local time</p>
+                <div class="clock_wrap">
+                    <div class="ampm" id="local_ampm"></div><!--pm or am-->
+                    <div class="clock" id="localclock"></div>
+                </div>
+                <div class="time_location" id="local_location">
+                    <?=$localcity?>,<?=$localcountry?>
+                </div>
+            </div>
+        </li>
         <li class="dash_card dash_card_long" id="insight_card"></li>
     </ul>
 </div>
