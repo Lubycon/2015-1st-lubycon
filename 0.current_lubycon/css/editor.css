@@ -305,15 +305,13 @@ body{
     #work_space {
         margin:0px auto;
         display: inline-block;
-        left:50%;
+        margin-left: -11px;
     }
     #tnail_header {
         color: #aaaaaa;
         margin-bottom: 10px;
     }
     #tnail_preview {
-        width: 200px;
-        height: 200px;
         background:#222222;
     }
         .contents_card {

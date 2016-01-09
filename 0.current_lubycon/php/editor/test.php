@@ -47,7 +47,7 @@
     $sel_tag = $_POST['user_selected_tag'];
     //
     echo "<br/><br/>-------------user seleced categories--------------<br/>";
-    if($sel_cate)
+    if($sel_cate) 
     {
         echo "<br/>user selectd categories = ";
         for($i=0 ; $i< count($sel_cate); $i++)
@@ -74,23 +74,14 @@
     echo "<br/>setting_desc = " . $_POST['setting_desc'];
 
     echo "<br/><br/>-------------contents description--------------<br/>";
-    /*
-    echo "<br/>setting_price_option = " . $_POST['setting_price_option'];
-    */
-    
+
     echo "<br/>-------------text editor html--------------<br/><br/>";
 
-    $text_editor = $_POST['text_editor'];
-
-    //echo "text_editor = ". $text_editor;
-
-    //echo $_FILES['file'];
+    $text_editor = $_POST['file'];
     
-    //echo htmlspecialchars($_POST['text_editor']);
-
-    echo $_POST['text_editor'];
+    echo htmlspecialchars($_POST['text_editor']);
     
     echo "<br/><br/>-------------text editor html--------------<br/>";
 
-    //print_r($_POST);
+    print_r($_POST);
 ?>

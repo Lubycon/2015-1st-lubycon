@@ -51,6 +51,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "editor", "editor", "{3FC225
 		php\editor\editor.php = php\editor\editor.php
 		php\editor\editor_setting.php = php\editor\editor_setting.php
 		php\editor\editor_thumbnail.php = php\editor\editor_thumbnail.php
+		php\editor\imageUpload.php = php\editor\imageUpload.php
 		php\editor\test.php = php\editor\test.php
 	EndProjectSection
 EndProject

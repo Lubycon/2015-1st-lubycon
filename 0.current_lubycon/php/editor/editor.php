@@ -95,7 +95,7 @@
                 <div id="tnail_preview">
                     <ul>
                         <?php
-                            @include_once('../layout/content_card.php');
+                            include_once('php/layout/content_card.php');
                         ?>
                     </ul>
                 </div>
@@ -105,7 +105,7 @@
                 <button type="button" class="cancel_bt" id="tnail_cancel">Cancel</button>
             </div>
             <script>
-                $(".contents_card").append('<div id="cropContainerMinimal"></div>');
+                $("#tnail_preview").append('<div id="cropContainerMinimal"></div>');
 
                 var croppicContaineroutputMinimal = {
                     uploadUrl: 'img_save_to_file.php',

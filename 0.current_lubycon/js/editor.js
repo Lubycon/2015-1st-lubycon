@@ -8,13 +8,16 @@ $(function () {
         if(!$(this).hasClass("selected_tab")){
             $(".tab_body").removeClass("selected_tab");
             $(this).addClass("selected_tab");
+
+            console.log(event.target.id);
+
             switch(event.target.id){
                 case "file_tab" :
                     $("#edit_tab_section").show();
                     $("#thumbnail_tab_section").hide();
                     $("#setting_tab_section").hide();
                 break;
-                case "thumbnail_tab" :
+                case "thumbnail_tab":
                     $("#edit_tab_section").hide();
                     $("#thumbnail_tab_section").show();
                     $("#setting_tab_section").hide();
@@ -392,16 +395,19 @@ $(function () {
                 ['misc', ['fullscreen', 'help']],
             ],
             fontNames: ['Arial', 'Arial Black', 'Comic Sans MS', 'Source Sans Pro'],
-
-            callbacks: {
-                onImageUpload: function (files, editor, welEditable) {
-
-                    for (var i = files.length - 1; i >= 0; i--) {
+            callbacks:
+            {
+                onImageUpload: function (files, editor, welEditable)
+                {
+                    for ( var i = files.length - 1 ; i >= 0 ; i-- )
+                    {
                         sendFile(files[i], this);
+                        console.log(files[i]);
                     }
                 }
             }
-        });//summernote end
+        });
+
         function sendFile(file, el)
         {
             var form_data = new FormData();
@@ -409,19 +415,21 @@ $(function () {
             $.ajax({
                 data: form_data,
                 type: "POST",
-                url: './imageUpload.php',
+                url: './php/editor/imageUpload.php',
                 cache: false,
-            contentType: false,
-            processData: false,
-            success: function(url) {
-                $(el).summernote('editor.insertImage', url);
-            }
+                contentType: false,
+                processData: false,
+                success: function (url)
+                {
+                    $(el).summernote('editor.insertImage', url);
+                }
             });
         }
-
-    var postForm = function () { // summernote submit event
-        var content = $('textarea[name="content"]').html($('#summernote').code());
-    }
+        //summernote end
+        var postForm = function ()
+        { // summernote submit event
+            var content = $('textarea[name="content"]').html($('#summernote').code());
+        }
     /////////////////////////////////////////////////////////
     //      add text end
     /////////////////////////////////////////////////////////
