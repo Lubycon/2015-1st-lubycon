@@ -41,8 +41,6 @@
                 </div>
             </div> 
         </li><!--profile card end-->
-        <li class="dash_card dash_card_long" id="recent_card"></li><!--recent card end-->
-        <li class="dash_card" id="best_card"></li><!--best card end-->
         <li class="dash_card dash_card_wrap" id="job_language_wrap">
             <div class="info_card" id="job_card">
                 <figure id="job_icon_wrap">
@@ -85,6 +83,8 @@
                 <div class="in_num" id="email_num"><?=$user_mail?></div>
             </div><!--email end-->
         </li><!--contact card end-->
+        <li class="dash_card" id="best_card"></li><!--best card end-->
+        <li class="dash_card dash_card_long" id="recent_card"></li><!--recent card end-->   
         <li class="dash_card dash_card_long"></li>
         <li class="dash_card dash_card_long" id="time_card">
             <div class="time_wrap" id="usertime">
@@ -94,7 +94,7 @@
                     <div class="clock" id="userclock"></div>
                 </div>
                 <div class="time_location" id="user_location">
-                    <?=$usercity?>,<?=$usercountry?>
+                    <?=$usercity?>, <?=$usercountry?>
                 </div>
             </div>
             <div class="time_wrap" id="localtime">
@@ -104,7 +104,7 @@
                     <div class="clock" id="localclock"></div>
                 </div>
                 <div class="time_location" id="local_location">
-                    <?=$localcity?>,<?=$localcountry?>
+                    <?=$localcity?>, <?=$localcountry?>
                 </div>
             </div>
         </li>

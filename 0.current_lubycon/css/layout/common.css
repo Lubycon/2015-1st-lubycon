@@ -2,7 +2,7 @@
 /*CSS RESET*/
 body {
     background: #fff;
-    display: none;
+    display: block;
     min-width: 1200px;
     overflow-x:hidden;
     -webkit-text-size-adjust: none; /*hold font-size in moblie*/
@@ -1052,7 +1052,7 @@ h1 /* main logo */ {
     .con_main{
         width: 100%;
         min-width:960px;
-        background: #fefefe;
+        background: #ffffff;
         height:auto;
         display: inline-block;
         overflow:hidden;
@@ -1593,18 +1593,12 @@ h1 /* main logo */ {
 #footer {
     width: 100%;
     height: 100px;
-    background: #222;
+    position: absolute;
+    background: #222222;
+    margin-top: 50px;
     z-index: 4;
 }
-.fixed_foot{
-    position: fixed;
-    top: 90%;
-    margin-top: 60px;
-}
-.relative_foot{
-    position: relative;
-    top:50px;
-}
+
 
 
 

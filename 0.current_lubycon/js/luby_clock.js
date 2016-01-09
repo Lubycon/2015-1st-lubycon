@@ -34,19 +34,20 @@ function checkTime(i) {
 };
 
 function blinkColon() {
-	var colon = $(".colon");
+
 	var colon_count = 0;
 
-    setInterval(function(){
+    var blink_time = setInterval(function(){
+        var colon = $(".colon");
     	if(colon_count == 0){
     		colon.css("visibility","hidden");
     		colon_count = 1;
-    		console.log(colon_count);
+    		//console.log(colon_count);
     	}
     	else if(colon_count == 1){
     		colon_count = 0;
     		colon.css("visibility","visible");
-    		console.log(colon_count);
+    		//console.log(colon_count);
     	}
     },500);
 };

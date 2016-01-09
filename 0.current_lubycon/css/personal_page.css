@@ -87,15 +87,20 @@
 /*------------dash board start------------------*/
 #dashboard_wrap {
 	width:100%;
-    max-width: 1438px;
-    margin: 40px auto;
+    max-width: 1160px;
+    margin: 0px auto;
+    padding: 50px 0px;
     text-align: center;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
 }
 
 .dash_card {
 	display: inline-block;
 	position:relative;
 	vertical-align: top;
+	overflow: hidden;
     width:200px;
     height:240px;
     background:#fff;
@@ -109,6 +114,7 @@
 }
 .dash_card_wrap {
 	box-shadow: none;
+	overflow: visible;
 }
 .info_card {
 	height: 112px;
