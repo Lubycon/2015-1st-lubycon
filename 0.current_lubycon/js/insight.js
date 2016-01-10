@@ -1,7 +1,24 @@
 
-var chart = AmCharts.makeChart("chartdiv", {
+/*-------------------------json loader start-------------------------------*/
+////////////import like data start
+var likedata = [];
+var likedata_loader = 
+$.getJSON("js/chart/data/likedata.json", function(data) {
+    $.each(data, function(i, v) {
+        //console.log("date :" + v["date"] +", "+ "value :" + v["value"]);
+        likedata.push({
+            date: v["date"],
+            value: v["value"]
+        });
+    });
+    console.log("loaded likedata");  
+});
+////////////import like data end
+/*-------------------------json loader end-------------------------------*/
+/*-------------------------make chart start-------------------------------*/
+var likeChart = AmCharts.makeChart("chartdiv", {
     "type": "serial",
-    "theme": "luby1",
+    "theme": "likeChart",
     "marginRight": 40,
     "marginLeft": 40,
     "autoMarginOffset": 20,
@@ -70,66 +87,19 @@ var chart = AmCharts.makeChart("chartdiv", {
         "minorGridEnabled": true
     },
     "export": {
-        "enabled": true
+        "enabled": false
     },
-    "dataProvider": [{
-        "date": "2012-07-27",
-        "value": 13
-    }, {
-        "date": "2012-07-28",
-        "value": 11
-    }, {
-        "date": "2012-07-29",
-        "value": 15
-    }, {
-        "date": "2012-07-30",
-        "value": 16
-    }, {
-        "date": "2012-07-31",
-        "value": 18
-    }, {
-        "date": "2012-08-01",
-        "value": 13
-    }, {
-        "date": "2012-08-02",
-        "value": 22
-    }, {
-        "date": "2012-08-03",
-        "value": 23
-    }, {
-        "date": "2012-08-04",
-        "value": 20
-    }, {
-        "date": "2012-08-05",
-        "value": 17
-    }, {
-        "date": "2012-08-06",
-        "value": 16
-    }, {
-        "date": "2012-08-07",
-        "value": 18
-    }, {
-        "date": "2012-08-08",
-        "value": 21
-    }, {
-        "date": "2012-08-09",
-        "value": 26
-    }, {
-        "date": "2012-08-10",
-        "value": 24
-    }, {
-        "date": "2012-08-11",
-        "value": 29
-    }, {
-        "date": "2012-08-12",
-        "value": 32
-    }]
+    "dataProvider": likedata
 });
+likeChart.addListener("rendered", zoomChart);
 
-chart.addListener("rendered", zoomChart);
+/*-------------------------make chart end-------------------------------*/
+
+
+
 
 zoomChart();
 
-function zoomChart() {
-    chart.zoomToIndexes(chart.dataProvider.length - 40, chart.dataProvider.length - 1);
+function zoomChart(){
+    likeChart.zoomToIndexes(likeChart.dataProvider.length - 40, likeChart.dataProvider.length - 1);
 }

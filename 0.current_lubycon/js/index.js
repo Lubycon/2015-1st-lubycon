@@ -348,24 +348,26 @@ $(document).scroll(function () {
     }else{
         sticky_start;
     }
-    var scrollend = $("#footer").offset().top - $(window).height();
+    var scrollend = $(document).height() - $(window).height();
     var banner_position = 
-    $("#footer").offset().top 
-    - $(".con_aside").height() 
+    $(".con_aside").height() 
     - $("#navsel").height() 
     - $("#main_figure").height();
+    var after_height = $(window).height() - 35 - 100;
 
     if($(document).find(".con_aside") && $(".con_aside").attr("id") != "editor_aside"){ 
         if ($(document).scrollTop() > sticky_start && $(document).scrollTop() < scrollend){
             $(".con_aside").css({ "position": "fixed", "top": "100px" });
+            console.log("sticky start");
         }
-        else if($(document).scrollTop() > scrollend){
-            $(".con_aside").css({ "position": "absolute", "top": banner_position + "px" });
-            $(".con_aside").css({ "height" : $(window).height() + "px"});
+        else if($(document).scrollTop() == scrollend){
+            $(".con_aside").css({ "height" : after_height + "px"});
+            console.log("sticky bottom end");
         }
         else {
             $(".con_aside").css({ "position": "absolute", "top": "0px" });
             $("#floating_bt").css({ "position": "absolute", "top": "100px"});
+            console.log("sticky top end");
         };
     }
     else{

@@ -1,25 +1,29 @@
 ﻿@charset "utf-8";
-#footer {
-    margin-top: 0;
-}
 
 #insight_box {
     width:100%;
-    min-width:1200px;
     position: relative;
 }
 .chart_wrap {
-    padding: 2%;
+    text-align: left;
+    padding: 40px 10px 50px 10px;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
 }
     .chart_title {
-        text-align: left;
+        display: inline-block;
+        text-align: center;
+        border-radius: 5px;
+        padding: 3px 5px;
         margin: 20px;
+        cursor: pointer;
     }
-        .chart_title i {
-            color: #ffffff;
+    .chart_title:hover {
+        background: rgba(255,255,255,0.3);
+    }
+        .chart_title .fa-heart {
+            color: #ec6446;
             margin-right: 10px;
             font-size: 22px;
         }
@@ -27,7 +31,13 @@
             color: #ffffff;
             font-weight: 200;
             font-size: 30px;
+            margin-right: 10px;
         }
+        .chart_title .fa-caret-down {
+            color: #ffffff;
+            font-size: 17px;
+        }
+        
 
 
     #graph1 {

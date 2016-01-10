@@ -4,6 +4,7 @@
 </figure>
 <!-- end main_figure -->
 <link href="css/personal_page.css" rel="stylesheet" type="text/css" />
+
 <!-- personal page css -->
 <section id="contents">
 	<section id="nav_guide">

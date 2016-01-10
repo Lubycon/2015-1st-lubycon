@@ -1,5 +1,5 @@
-AmCharts.themes.luby1 = {
-	themeName: "luby1",
+AmCharts.themes.likeChart = {
+	themeName: "likeChart",
 	AmChart: {
 		color: "#e7e7e7", backgroundColor: "#282828"
 	},
