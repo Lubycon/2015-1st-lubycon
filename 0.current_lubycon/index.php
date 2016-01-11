@@ -175,7 +175,7 @@
         </div>
         <!-- end after sign in -->
 
-        <button id="addcontent_bt"><i class="fa fa-plus"></i>Add Contents</button>
+        <button id="addcontent_bt" class="animate_width"><i class="fa fa-plus"></i>Add Contents</button>
 
         <!--end content button-->
         <div id="lang_select_bt">

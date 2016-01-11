@@ -366,17 +366,21 @@ h1 /* main logo */ {
 #addcontent_bt {
     position: relative;
     width: 130px;
-    height: 32px;
-    background: #48cfad;
-    border: none;
-    border-radius: 3px;
-    margin-top: 9px;
+    height: 36px;
+    background: none;
+    border: 2px solid #ffffff;
+    border-radius: 30px;
+    margin-top: 7px;
     float: right;
     margin-right: 10px;
     color: #ffffff;
     font-size: 15px;
     opacity: 1;
 }
+    #addcontent_bt:hover {
+        border: 2px solid #87ead1;
+        color: #87ead1;
+    }
 
     #addcontent_bt i {
         margin-right: 4px;

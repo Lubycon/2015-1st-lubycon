@@ -370,7 +370,6 @@ $(document).ready(function(){
 
     likeChart.addListener("rendered", zoomChart);
     viewChart.addListener("rendered", zoomChart);
-    viewChart.addListener("rendered", zoomChart);
     upChart.addListener("rendered", zoomChart);
     downChart.addListener("rendered", zoomChart);
 

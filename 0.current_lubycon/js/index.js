@@ -106,16 +106,21 @@ $(function () //selcted change
 /////////////////////////////////////////////////////////
 
 $(function(){   
-    $('.animate_scale').hover(function(e){
-        console.log($(this).width());
-        console.log($(this).height());
+    $('.animate_scale').hover(function (e){
         $(this).animate({ width: "+=3", height: "+=3", right: "-=1.5", top: "-=1.5" }, 150);
     }, function(){
          $(this).animate({ width: "-=3", height: "-=3", right: "+=1.5", top: "+=1.5" }, 150);
     });
 });//scale animation end
 $(function(){
-    $(".animate_opacity").hover(function(e){
+    $('.animate_width').hover(function (e){
+        $(this).animate({ width: "+=3", right: "-=1.5"}, 150);
+    }, function(){
+        $(this).animate({ width: "-=3", right: "+=1.5"},150);
+    })
+})
+$(function(){
+    $(".animate_opacity").hover(function (e){
         $(this).animate({ opacity: 0.5 },200);
     },function(){
         $(this).animate({ opacity: 1 },200);
@@ -225,12 +230,6 @@ $(function() //after signin child hover show and hide
 /////////////////////////////////////////////////////////
 
 $(function () { //add contents button start
-    $('#addcontent_bt').hover(function () {
-        $(this).stop().animate({ opacity: 0.9 }, 200);
-    }, function () {
-        $(this).stop().animate({ opacity: 1 }, 200);
-    });
-
     $('#addcontent_bt').click(function () {
         $('.dark_overlay').stop().fadeIn(100);
         $('.editor_popup').css("display","block");
@@ -809,6 +808,7 @@ $(function () {
                     customID: "custom",
                     size: 5
                 });
+                $(location).attr('href', 'http://localhost:8080/0.current_lubycon/index.php?1=personal_page&2=personal_page&3=main&4=' + id);
             }
         });
     });
