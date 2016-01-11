@@ -1,7 +1,9 @@
-<figure id="main_figure">
-    <div class="dark_overlay_small"></div>
-    <h2>CONTENTS</h2>
-</figure>	<!-- end main_figure -->
+<div class="main_figure_wrap">
+    <figure id="main_figure">
+        <div class="dark_overlay_small"></div>
+        <h2>CONTENTS</h2>
+    </figure>   <!-- end main_figure -->
+</div>
 <link href="css/contents_view.css" rel="stylesheet" type="text/css" /><!-- contents view css -->
 <section id="contents">
     <section id="navsel">

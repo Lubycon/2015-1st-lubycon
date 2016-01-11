@@ -1,7 +1,9 @@
-<figure id="main_figure">
-    <div class="dark_overlay_small"></div>
-    <h2>CONTENTS</h2>
-</figure>	<!-- end main_figure -->
+<div class="main_figure_wrap">
+    <figure id="main_figure">
+        <div class="dark_overlay_small"></div>
+        <h2>CONTENTS</h2>
+    </figure>	<!-- end main_figure -->
+</div>
 <link href="css/contents_page.css" rel="stylesheet" type="text/css" />  <!-- contents page css -->
 <section id="contents">
     <section id="navsel">
@@ -74,7 +76,7 @@
             </div>
         </div><!--subnav_box end-->
     </section>
-    <section id="contents_box">
+    <section id="contents_box" class="con_wrap">
         <ul>
             <?php
             for($i=0;$i<30;$i++)

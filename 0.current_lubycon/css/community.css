@@ -39,6 +39,7 @@
     clear: both;
     position: relative;
     background: #fefefe;
+    z-index: 2;
 }
 
 .tab_item table {
@@ -125,7 +126,7 @@ td.table_writer {
 
 .fa-heart {
     font-size: 12px;
-    color: #f32b64;
+    color: #ec6446;
 }
 
 .table_view {

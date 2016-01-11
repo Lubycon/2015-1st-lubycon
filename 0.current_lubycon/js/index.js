@@ -107,23 +107,23 @@ $(function () //selcted change
 
 $(function(){   
     $('.animate_scale').hover(function (e){
-        $(this).animate({ width: "+=3", height: "+=3", right: "-=1.5", top: "-=1.5" }, 150);
+        $(this).stop().animate({ width: "+=3", height: "+=3", right: "-=1.5", top: "-=1.5" }, 150);
     }, function(){
-         $(this).animate({ width: "-=3", height: "-=3", right: "+=1.5", top: "+=1.5" }, 150);
+         $(this).stop().nimate({ width: "-=3", height: "-=3", right: "+=1.5", top: "+=1.5" }, 150);
     });
 });//scale animation end
 $(function(){
     $('.animate_width').hover(function (e){
-        $(this).animate({ width: "+=3", right: "-=1.5"}, 150);
+        $(this).stop().animate({ width: "+=3", right: "-=1.5"}, 150);
     }, function(){
-        $(this).animate({ width: "-=3", right: "+=1.5"},150);
+        $(this).stop().animate({ width: "-=3", right: "+=1.5"},150);
     })
 })
 $(function(){
     $(".animate_opacity").hover(function (e){
-        $(this).animate({ opacity: 0.5 },200);
+        $(this).stop().animate({ opacity: 0.5 },200);
     },function(){
-        $(this).animate({ opacity: 1 },200);
+        $(this).stop().animate({ opacity: 1 },200);
     });
 });//opacity animation end
 
@@ -355,31 +355,30 @@ $(function(){
 /////////////////////////////////////////////////////////
 $(document).ready(function(){  
     $(document).scroll(function () {
-        var sticky_start = $("#main_header").height() + $("#main_figure").height();
+        var stickyStart = $("#main_header").height() + $("#main_figure").height();
         if($("#navsel").length == 0){
-                sticky_start -= 50;
+                stickyStart -= 50;
         }else{
-            sticky_start;
+            stickyStart;
         }
-        var scrollend = $(document).height() - $(window).height();
-        var banner_position = 
-        $(".con_aside").height() 
-        - $("#navsel").height() 
-        - $("#main_figure").height();
-        var after_height = $(window).height() - 100;
+        var scrollEnd = $(document).height() - $(window).height();
+        var bannerPosition = $(".con_aside").height() - $("#navsel").height();
+        var afterHeight = $(window).height() - 100;
 
         if($(document).find(".con_aside") && $(".con_aside").attr("id") != "editor_aside"){ 
-            if ($(document).scrollTop() > sticky_start && $(document).scrollTop() < scrollend){
+            
+            if ($(document).scrollTop() >= stickyStart && $(document).scrollTop() < scrollEnd){
                 $(".con_aside").css({ "position": "fixed", "top": "100px" });
                 console.log("sticky start");
             }
-            else if($(document).scrollTop() == scrollend){
-                $(".con_aside").css({ "height" : after_height + "px"});
+            else if($(document).scrollTop() == scrollEnd){
+                $(".con_aside").height = afterHeight;
+                $(".con_aside").css({"top": "50px"});
                 console.log("sticky bottom end");
             }
-            else {
+            else if($(document).scrollTop() < stickyStart){
                 $(".con_aside").css({ "position": "absolute", "top": "0px" });
-                $("#floating_bt").css({ "position": "absolute", "top": "100px"});
+                $("#floating_bt").css({ "position": "absolute", "top": "0px"});
                 console.log("sticky top end");
             };
         }
@@ -416,9 +415,9 @@ $(document).scroll(function (){
         }
 
         
-        if ($(document).scrollTop() > sticky_start){
+        if ($(document).scrollTop() >= sticky_start){
             $("#main_header").css({"box-shadow": "0px 0px 0px 0px rgba(0,0,0,0.5)"});
-            nav_guide.css({ "position": "fixed", "top": "50px", "z-index": "2", "box-shadow": "0px 3px 7px rgba(0,0,0,0.3)" });
+            nav_guide.css({ "position": "fixed", "top": "50px", "z-index": "4", "box-shadow": "0px 3px 7px rgba(0,0,0,0.3)" });
             nav_guide.next().css({"top": contents_y});
             nav_guide.next().next().css({"top": contents_y});
             $("#floating_bt").css({"position" : "fixed", "top" : "100px"});
@@ -808,7 +807,8 @@ $(function () {
                     customID: "custom",
                     size: 5
                 });
-                $(location).attr('href', 'http://localhost:8080/0.current_lubycon/index.php?1=personal_page&2=personal_page&3=main&4=' + id);
+                var hostURL = location.host;
+                location.href = 'http://' + hostURL + '/0.current_lubycon/index.php?1=personal_page&2=personal_page&3=main&4=' + id;
             }
         });
     });

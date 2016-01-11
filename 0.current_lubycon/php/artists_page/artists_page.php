@@ -1,7 +1,9 @@
-<figure id="main_figure">
-    <div class="dark_overlay_small"></div>
-    <h2>ARTISTS</h2>
-</figure>
+<div class="main_figure_wrap">
+    <figure id="main_figure">
+        <div class="dark_overlay_small"></div>
+        <h2>ARTISTS</h2>
+    </figure>   <!-- end main_figure -->
+</div>
 <!-- end main_figure -->
 
 <link href="css/artists_page.css" rel="stylesheet" type="text/css" />

@@ -19,43 +19,33 @@
     text-align: center;
 }
 
-#post_writer_box {
-    width: 100%;
-    height: 30px;
-    line-height:30px;
-    background: #e6e6e6;
-    text-align: center;
-    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.5);
-    position: relative;
-    z-index: 2;
+.written_date {
+    color: #aaaaaa;
+    font-size: 14px;
+    margin-left: 5px;
 }
-    #post_writer_box_inner{
-        width: 100%;
-        min-width:1200px;
-        position:relative;
-        margin:0px auto;
-        overflow:hidden;
+    #post_info{
+        position:absolute;
+        right: 25px;
+        top: 15px;
+        margin-right: 5px;
+        
     }
-        #post_writer_box .post_writer_date {
-            color: #777777;
-            font-size: 14px;
+        #post_info li {
+            float:left;
+            margin-left:15px;
+            color:#777777;
         }
-        #post_writer_box ul{
-            position:absolute;
-            right:0px;
-            top:0px;
-            margin-right: 5px;
-            
+        .count_icon{
+            margin-right: 12px;
+            color:#777777;
         }
-            #post_writer_box ul li {
-                float:left;
-                margin-left:10px;
-                color:#777777;
-            }
-            #post_writer_box ul li i{
-                margin-right:3px;
-                color:#777777;
-            }
+        #like_icon {
+
+        }
+        #view_icon {
+            color: #ffffff;
+        }
 
 #post_box {
     min-width: 1200px;
@@ -90,7 +80,12 @@
             font-size: 40px;
             margin-top: 3px;
         }
-
+    .like_bt_active {
+        background: #ec6446 !important;
+    }
+    .like_bt_active i{
+        color:#ffffff !important;
+    }
 
 
 #share_box {
@@ -135,21 +130,21 @@
     text-align: right;
     margin-top:10px;
 }
-    #post_edit_box button {
-        width:109px;
-        height:30px;
-        border:none;
-        border-radius:3px;
-        margin-left:10px;
-        color:#fff;
-        letter-spacing:0.5px;
+    #post_edit_box .post_edit_bt {
+        width: 109px;
+        height: 35px;
+        border: none;
+        border-radius: 100px;
+        margin-left: 10px;
+        color: #ffffff;
+        letter-spacing: 0.5px;
         font-weight: 200;
         font-size: 15px;
-        background: #666666;
+        background: #555555;
     }
-    #post_edit_box button:hover {
-        background:#48cfad;
-    }
+        #post_edit_box .post_edit_bt i {
+            margin-right: 5px;
+        } 
 
 
 #comment_box{

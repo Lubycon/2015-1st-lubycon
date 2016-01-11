@@ -1,7 +1,9 @@
-<figure id="main_figure">
-    <div class="dark_overlay_small"></div>
-    <h2>COMMUNITY</h2>
-</figure>	<!-- end main_figure -->
+<div class="main_figure_wrap">
+    <figure id="main_figure">
+        <div class="dark_overlay_small"></div>
+        <h2>COMMUNITY</h2>
+    </figure>
+</div>	<!-- end main_figure -->
 
 <link href="css/community_view.css" rel="stylesheet" type="text/css" />  <!-- community_view css -->
 <link href="css/community.css" rel="stylesheet" type="text/css" />  <!-- community css -->
@@ -28,8 +30,8 @@
         $year = 2015;
         $month = "Nov";
         $day = 7;
-        $hour = 00;
-        $second = 00;
+        $hour = 0;
+        $minute = 0;
 
         $post_like = 0;
         $post_view = 0;
@@ -56,19 +58,15 @@
     <section id="nav_guide">
         <p id="post_subject">
             <?=$post_subject?>
+            <span class="written_date"><?=$year?>.<?=$month?>.<?=$day?> <?=$hour?>:<?=$minute?></span>
         </p>
+        
+        <ul id="post_info">
+            <li><i id="like_icon" class="fa fa-heart count_icon"></i><?=$post_like?></li>
+            <li><i id="view_icon" class="fa fa-eye count_icon"></i><?=$post_view?></li>
+        </ul>
     </section>  <!-- end nav_guide -->
-    <section id="post_writer_box">
-        <div id="post_writer_box_inner">
-            <p class="post_writer_date"><?=$year?>.<?=$month?>.<?=$day?> <?=$hour?>:<?=$second?></p>
-            <ul>
-                <li><i class="fa fa-heart"></i><?=$post_like?></li>
-                <li><i class="fa fa-eye"></i><?=$post_view?></li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="post_box">
+    <section id="post_box" class="con_wrap">
         <section id="post_section" class="con_main">
             <article id="post_contents">
                 <p>
@@ -76,8 +74,8 @@
                 </p>
                 <div id="com_like_bt" class="like_bt"><i class="fa fa-heart"></i></div>
                 <div id="post_edit_box">
-                    <button class="out">Delete</button>
-                    <button class="out">Modified</button>
+                    <button class="post_edit_bt animate_opacity"><i class="fa fa-trash"></i>Delete</button>
+                    <button class="post_edit_bt animate_opacity"><i class="fa fa-repeat"></i>Modified</button>
                 </div>
             </article>  <!-- end post_contents -->
             <article id="comment_box">

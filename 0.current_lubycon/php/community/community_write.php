@@ -1,7 +1,9 @@
-﻿<figure id="main_figure">
-    <div class="dark_overlay_small"></div>
-    <h2>COMMUNITY</h2>
-</figure><!-- end main_figure -->
+﻿<div class="main_figure_wrap">
+    <figure id="main_figure">
+        <div class="dark_overlay_small"></div>
+        <h2>COMMUNITY</h2>
+    </figure>   <!-- end main_figure -->
+</div>
 
 <link href="css/community_write.css" rel="stylesheet" type="text/css" />  <!-- community_view css -->
 <link href="css/community.css" rel="stylesheet" type="text/css" />  <!-- community css -->

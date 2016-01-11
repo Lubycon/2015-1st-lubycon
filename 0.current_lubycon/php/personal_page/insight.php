@@ -6,7 +6,6 @@
 <!--graph script-->
 
 <div id="contents">
-    
     <div id="insight_box">
         <div class="chart_wrap">
             <div class="chart_title">
