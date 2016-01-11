@@ -36,8 +36,22 @@ $(document).ready(function(){
 /////////////////////////////////////////////////////////
 //      ready to body fadein event end
 /////////////////////////////////////////////////////////
-
-
+/////////////////////////////////////////////////////////
+//      get url function start
+/////////////////////////////////////////////////////////
+function GetURLParameter(sParam) {
+    var sPageURL = window.location.search.substring(1);
+    var sURLVariables = sPageURL.split('&');
+    for(var i = 0; i < sURLVariables.length; i++){
+        var sParameterName = sURLVariables[i].split('=');
+        if(sParameterName[0] == sParam){
+            return sParameterName[1];
+        }
+    }
+}
+/////////////////////////////////////////////////////////
+//      get url function end
+/////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////
 //      gloval navigation button hover event start
 //      get parameter change selected nav color
@@ -340,40 +354,42 @@ $(function(){
 /////////////////////////////////////////////////////////
 //      containers sticky start
 /////////////////////////////////////////////////////////
-
-$(document).scroll(function () {
-    var sticky_start = $("#main_header").height() + $("#main_figure").height();
-    if($("#navsel").length == 0){
-            sticky_start -= 50;
-    }else{
-        sticky_start;
-    }
-    var scrollend = $(document).height() - $(window).height();
-    var banner_position = 
-    $(".con_aside").height() 
-    - $("#navsel").height() 
-    - $("#main_figure").height();
-    var after_height = $(window).height() - 35 - 100;
-
-    if($(document).find(".con_aside") && $(".con_aside").attr("id") != "editor_aside"){ 
-        if ($(document).scrollTop() > sticky_start && $(document).scrollTop() < scrollend){
-            $(".con_aside").css({ "position": "fixed", "top": "100px" });
-            console.log("sticky start");
+$(document).ready(function(){  
+    $(document).scroll(function () {
+        var sticky_start = $("#main_header").height() + $("#main_figure").height();
+        if($("#navsel").length == 0){
+                sticky_start -= 50;
+        }else{
+            sticky_start;
         }
-        else if($(document).scrollTop() == scrollend){
-            $(".con_aside").css({ "height" : after_height + "px"});
-            console.log("sticky bottom end");
+        var scrollend = $(document).height() - $(window).height();
+        var banner_position = 
+        $(".con_aside").height() 
+        - $("#navsel").height() 
+        - $("#main_figure").height();
+        var after_height = $(window).height() - 100;
+
+        if($(document).find(".con_aside") && $(".con_aside").attr("id") != "editor_aside"){ 
+            if ($(document).scrollTop() > sticky_start && $(document).scrollTop() < scrollend){
+                $(".con_aside").css({ "position": "fixed", "top": "100px" });
+                console.log("sticky start");
+            }
+            else if($(document).scrollTop() == scrollend){
+                $(".con_aside").css({ "height" : after_height + "px"});
+                console.log("sticky bottom end");
+            }
+            else {
+                $(".con_aside").css({ "position": "absolute", "top": "0px" });
+                $("#floating_bt").css({ "position": "absolute", "top": "100px"});
+                console.log("sticky top end");
+            };
         }
-        else {
-            $(".con_aside").css({ "position": "absolute", "top": "0px" });
-            $("#floating_bt").css({ "position": "absolute", "top": "100px"});
-            console.log("sticky top end");
+        else{
+            return true;
         };
-    }
-    else{
-        return true;
-    };
+    });
 });
+
 /////////////////////////////////////////////////////////
 //      containers sticky end
 /////////////////////////////////////////////////////////
@@ -763,21 +779,20 @@ $(function () {
                         customID: "custom",
                         size: 5
                     });
+                    if($('document').find(".subnav_li")){
+                        var gotURL = GetURLParameter('4');
+                        var urltxt = "#" + gotURL.toString();
+                        $(".subnav_li").attr("class","subnav_li");
+                        $(urltxt).addClass("selected_subnav");
+                    }
                 }
             });
         }//if end
     });
 
-    $("#subnav li").click(function (){
-        if(!$(this).hasClass("selected_subnav")){
-            $("#subnav li").removeClass("selected_subnav");
-            $(this).addClass("selected_subnav");
-        }else{
-            return;
-        }//if,else end
-        
+    $("#subnav li").click(function (){       
         var id = $(this).attr('id');
-        console.log(id);
+        //console.log(id);
 
         $.ajax({
             type: "POST",

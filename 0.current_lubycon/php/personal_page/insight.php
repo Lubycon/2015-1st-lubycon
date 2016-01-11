@@ -1,23 +1,35 @@
 <script src="js/chart/amcharts.js" type="text/javascript"></script>
 <script src="js/chart/serial.js" type="text/javascript"></script>
 <script src="js/chart/lubytheme.js" type="text/javascript"></script>
+
 <!--graph script-->
 
 <div id="contents">
+    
     <div id="insight_box">
-        <div class="chart_wrap" id="graph1">
+        <div class="chart_wrap">
             <div class="chart_title">
-                <i class="fa fa-heart"></i>
-                <span>Like</span>
-                <i class="fa fa-caret-down"></i>
+                <i id="chart_icon" class="fa fa-heart"></i>
+                <span id="chart_name">Like</span>
+                <i id="toggle_arrow" class="fa fa-caret-down"></i>
             </div>
-            <div id="chart_selector"></div><!--select chart-->
-            <div id="chartdiv" style="width: 100%; height: 450px;"></div>
+            <div id="chart_selector">
+                <ul>
+                    <li id="showlike" class="chart_list"><i class="fa fa-heart"></i>Like</li>
+                    <li id="showview" class="chart_list"><i class="fa fa-eye"></i>View</li>
+                    <li id="showupload" class="chart_list"><i class="fa fa-cloud-upload"></i>Uploaded</li>
+                    <li id="showdownload" class="chart_list"><i class="fa fa-cloud-download"></i>Downloaded</li>
+                </ul>
+            </div><!--select chart-->
+            <div class="chartboxes" id="chartdiv1" style="width: 100%; height: 450px;"></div>
+            <div class="chartboxes" id="chartdiv2" style="width: 100%; height: 450px;"></div>
+            <div class="chartboxes" id="chartdiv3" style="width: 100%; height: 450px;"></div>
+            <div class="chartboxes" id="chartdiv4" style="width: 100%; height: 450px;"></div> 
         </div>
-        
+        <script type="text/javascript" src="js/insight.js"></script>
         <link href="css/insight.css" rel="stylesheet" type="text/css" />
         <!-- personal page css -->
-        <script type="text/javascript" src="js/insight.js"></script>
+        
         <!--graph script-->
     </div>
     <!-- end contents box -->

@@ -166,6 +166,7 @@
             <ul>
                 <li><a href="./index.php?1=personal_page&2=personal_page&3=main&4=dashboard">Dashboard</a></li>
                 <li><a href="./index.php?1=personal_page&2=personal_page&3=main&4=my_contents">My Contents</a></li>
+                <li><a href="./index.php?1=personal_page&2=personal_page&3=main&4=insight">Insight</a></li>
                 <li><a href="./index.php?1=personal_page&2=personal_page&3=main&4=bookmarks">Bookmarks</a></li>
                 <li><a href="./index.php?1=personal_page&2=personal_page&3=main&4=account_setting">Account Setting</a></li>
                 <li style="display:none;"><a href="./index.php?1=personal_page&2=personal_page&3=main&4=message">Message</a></li>

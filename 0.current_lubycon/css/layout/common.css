@@ -399,6 +399,7 @@ h1 /* main logo */ {
 
 #after_signin {
     position: relative;
+    z-index: 4;
     height: 50px;
     float: right;
     margin-right: 50px;
