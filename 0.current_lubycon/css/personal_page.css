@@ -101,15 +101,15 @@
 	position:relative;
 	vertical-align: top;
 	overflow: hidden;
-    width:200px;
-    height:240px;
+    width:220px;
+    height:260px;
     background:#fff;
     border-radius:3px;
     margin: 15px;
     box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.3);
 }
 .dash_card_long {
-	width: 432px;
+	width: 452px;
 	overflow: hidden;
 }
 .dash_card_wrap {
@@ -147,6 +147,9 @@
 		margin-top: 26px;
 	}
 	#sns_bt_wrap {
+		display: inline-block;
+		border-radius: 5px;
+		overflow: hidden;
 		margin-top: 27px;
 		height: 36px;
 	}

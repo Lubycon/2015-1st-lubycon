@@ -630,6 +630,7 @@ h1 /* main logo */ {
 }
 #index_figure {
     height: 350px;
+    box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.5);
 }
 #main_figure {
     height:100px;
@@ -647,6 +648,7 @@ h1 /* main logo */ {
         z-index: 2;
     }
     #index_figure h2 {
+        display: none;
         padding-top: 137px;
         color: #fff;
         font-size: 46px;
