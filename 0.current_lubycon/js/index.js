@@ -769,11 +769,11 @@ $(function(){
 $(function () {
     $('document').ready(function () {
         if ($('.personal').attr('class') == 'personal con_main') {
-            var id = four_param;
+            var id = third_param;
             $.ajax({
                 type: "POST",
                 url: "php/ajax/subnav_check.php", //이페이지에서 중복체크를 한다
-                data: 'id='+id,//test.asp에 id 값을 보낸다
+                data: 'id=' + id,//test.asp에 id 값을 보낸다
                 cache: false,
                 success: function (data) {
                     //$('#bodyer').hide().append(data).fadeIn(300); //해당 내용을 보여준다
@@ -785,16 +785,15 @@ $(function () {
                         customID: "custom",
                         size: 5
                     });
-                    if($('document').find(".subnav_li")){
-                        var gotURL = GetURLParameter('4');
-                        var urltxt = "#" + gotURL.toString();
-                        $(".subnav_li").attr("class","subnav_li");
+                    if ($('document').find(".subnav_li")) {
+                        var urltxt = "#" + third_param.toString();
+                        $(".subnav_li").attr("class", "subnav_li");
                         $(urltxt).addClass("selected_subnav");
                     }
                 }
             });
         }//if end
-    });
+    });;;;;;
 
     $("#subnav li").click(function (){       
         var id = $(this).attr('id');
@@ -816,7 +815,7 @@ $(function () {
                     size: 5
                 });
                 var hostURL = location.host;
-                location.href = 'http://' + hostURL + '/0.current_lubycon/index.php?1=personal_page&2=personal_page&3=main&4=' + id;
+                location.href = 'http://' + hostURL + '/0.current_lubycon/index.php?1=personal_page&2=personal_page&3=' + id;
             }
         });
     });
