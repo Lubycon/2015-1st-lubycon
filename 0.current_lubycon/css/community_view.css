@@ -62,6 +62,19 @@
     margin: 0px auto;
     position:relative;
 }
+#post_banner {
+    position: absolute;
+    width: 310px;
+    height: 100%;
+    top: 0px;
+    right: 0px;
+
+    border-right: 1px solid #222222;
+    text-align:center;
+
+    overflow:hidden;
+}
+
 
     #post_banner #author_main{
         margin-top: 30px;
@@ -84,9 +97,10 @@
             width:100%;
         }
         #author_main h4{
+            font-weight: 200;
             height:30px;
             font-size:26px;
-            color:#444444;
+            color:#eeeeee;
             margin-top: 20px;
             text-align: center;
         }
@@ -102,15 +116,17 @@
             margin:5px 0px;
         }
             .author_wrap i{
-                color: #444444;
+                color: #eeeeee;
                 display: inline-block;
                 float: left;
             }
             .author_wrap .author_name{
-                color: #555555;
+                font-weight: 200;
+                color: #eeeeee;
                 display: inline-block !important;
             }
                 #job_name{
+                    font-weight: 200;
                     color: #48cfad;
                 }
 
@@ -224,73 +240,6 @@
 #comment_box #comment_writer{
     text-align: center;
 }
-
-#post_banner {
-    position: absolute;
-    width: 310px;
-    height: 100%;
-    top: 0px;
-    right: 0px;
-
-    border-left: 1px solid #cccccc;
-    background:#ffffff;  
-    text-align:center;
-
-    overflow:hidden;
-}
-
-#profile_pic
-{
-    width:100%;
-    margin-top: 15px;
-}
-    #img_mask
-    {
-        width:80px;
-        height: 80px;
-        margin: 0px auto;
-        border-radius: 50%;
-        overflow: hidden;
-    }
-        #img_mask img {
-            width: 100%;
-        }
-    #post_banner h4{
-        font-size:24px;
-        color:#555555;
-    }
-    #post_banner h5{
-        font-size:15px;
-        font-weight: 200;
-        color:#555555;
-        text-align: center;
-    }
-    #post_banner h6{
-        font-size:15px;
-        font-weight: 200;
-        color:#555555;
-        text-align: center;
-    }
-        #post_banner h6 i{
-            color:#777777;
-            font-size: 22px;
-            margin-right: 5px;
-            margin-top: -5px;
-            margin-left: -5px;
-        }
-        #post_banner #designer_follow{
-            width: 100%;
-            height:40px;
-            line-height: 43px;
-            border:none;
-            background:#48cfad;
-            margin-top:15px;
-        }
-            #post_banner #designer_follow i {
-                font-size:22px;
-                color:#fff;
-                margin-left:3px;
-            }
 
 #main_board{
     margin-top: 100px !important;
