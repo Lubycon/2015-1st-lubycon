@@ -164,16 +164,7 @@
 
 
 #contents_aside{
-    width:310px;
-    height: 100%;
-    
-    display: inline-block;
-    position: absolute;
-    top:0;
-    right:0;
-    
-    background: #ffffff;
-    border-left: 1px solid #dddddd;    
+    right:0;  
 }
 
     #contents_aside .designer_info{
@@ -200,19 +191,19 @@
         font-size:24px;
         height:30px;
         font-weight: 200;
-        color:#555555;
+        color:#eeeeee;
         text-align: center;
     }
     #contents_aside .designer_info h5{
         font-size:15px;
         font-weight: 200;
-        color:#555555;
+        color:#eeeeee;
         text-align: center;
     }
         #contents_aside .designer_info h5 i {
             margin-right:5px;
             font-size:14px;
-            color:#555555;
+            color:#eeeeee;
         } 
 
 
@@ -246,7 +237,7 @@
         margin-top: 10px;
         
 
-        color:#555555;
+        color:#eeeeee;
         font-weight: 200;
         text-align:left;
 
@@ -269,13 +260,22 @@
             float:left;
             font-size:16px;
             font-weight: 200;
-            color:#555555;
+            color:#eeeeee;
         }
         #contents_score i {
-            color:#555555;
+            color:#eeeeee;
             font-size: 17px;
             margin-left: 15px;
             margin-right: 18px;
+        }
+        #contents_score .fa-heart {
+            color: #48cfad;
+        }
+        #contents_score .fa-cloud-download {
+            color: #488ccb;
+        }
+        #contents_score .fa-eye {
+            color: #ffbe54;
         }
         #contents_score .contents_view_score{
             float:right;
@@ -430,7 +430,7 @@
 
     #contents_tag{
         width: 100%;
-        background: #dddddd;
+        background: #333333;
         padding:5px;
         text-align: left;
         box-shadow: inset -1px 2px 5px 0px rgba(0,0,0,0.3);

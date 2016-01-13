@@ -169,7 +169,7 @@
                             <li class="contents_view_score"><?=$file_view?></li>
                         </ul>
                         <ul>
-                            <li><i class="fa fa-download"></i></li>
+                            <li><i class="fa fa-cloud-download"></i></li>
                             <li>Downloads</li>
                             <li class="contents_view_score"><?=$file_down?></li>
                         </ul>

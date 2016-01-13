@@ -551,8 +551,7 @@ h1 /* main logo */ {
     line-height: 35px;
     border: 1px solid #ffffff;
     border-radius: 4px 7px 7px 4px;
-    margin-top: 65px;
-    margin-bottom: 15px;
+    margin-top: 372px;
     display:none;
     z-index: 2;
 }
@@ -620,7 +619,7 @@ h1 /* main logo */ {
     z-index:1;
 }
 #index_figure_wrap {
-    height: 350px;
+    height: 450px;
 }
 #main_figure,#index_figure {
     background: url(../../ch/img/main_img.png) 0% 47% no-repeat;
@@ -630,7 +629,7 @@ h1 /* main logo */ {
     position: relative;
 }
 #index_figure {
-    height: 350px;
+    height: 450px;
     box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.5);
 }
 #main_figure {
@@ -1095,8 +1094,9 @@ h1 /* main logo */ {
         position: absolute;
         top:0;
         
-        background: #ffffff;
-        border-left: 1px solid #dddddd;
+        color: #eeeeee;
+        background: #383838;
+        border-left: 1px solid #222222;
         box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
         z-index: 3;    
     }
