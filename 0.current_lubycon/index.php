@@ -121,7 +121,7 @@
                     Community
                     <ul class="sub">
                         <li><!--ranking-->
-                            <a href="./index.php?1=artists_page&2=artists_page&3=all"><i class="fa fa-trophy fa-1x"></i><p>Artists</p></a>
+                            <a href="./index.php?1=artists_page&2=artists_page"><i class="fa fa-trophy fa-1x"></i><p>Artists</p></a>
                         </li>
                         <li><!--forum-->
                             <a href="./index.php?1=community&2=community_page&3=forum"><i class="fa fa-comments-o fa-1x"></i><p>Forum</p></a>
