@@ -819,27 +819,8 @@ $(function () {
 
     $("#subnav li").click(function (){       
         var id = $(this).attr('id');
-        //console.log(id);
-
-        $.ajax({
-            type: "POST",
-            url: "php/ajax/subnav_check.php", //이페이지에서 중복체크를 한다
-            data: "id=" + id,//test.asp에 id 값을 보낸다
-            cache: false,
-            success: function (data) {
-                //$('#bodyer').hide().append(data).fadeIn(300); //해당 내용을 보여준다
-                $('#contents_box').html('');
-                $('#contents_box').append(data);
-                $(".basic_filter").selectOrDie
-                ({
-                    customClass: "custom",
-                    customID: "custom",
-                    size: 5
-                });
-                var hostURL = location.host;
-                location.href = 'http://' + hostURL + '/0.current_lubycon/index.php?1=personal_page&2=personal_page&3=' + id;
-            }
-        });
+        var hostURL = location.host;
+        location.href = 'http://' + hostURL + '/0.current_lubycon/index.php?1=personal_page&2=personal_page&3=' + id;
     });
 });
 

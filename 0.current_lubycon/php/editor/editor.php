@@ -3,8 +3,6 @@
 <link href="css/summernote.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="css/bootstrap.min.css" />
 
-<script type="text/javascript" src="js/jquery-ui.min.js"></script>
-<script type="text/javascript" src="js/jquery.form.min.js"></script>
 <script type="text/javascript" src="js/editor.js"></script>
 <script type="text/javascript" src="js/spectrum.js"></script>
 <script type="text/javascript" src="js/summernote.js"></script>
@@ -80,9 +78,6 @@
             <input type="submit" class="final_upload_bt" id="upload_final" value="SUBMIT" onsubmit="return postForm()"/>
         </section>
         <section class="tab_section" id="thumbnail_tab_section">
-            <link href="css/croppic.css" rel="stylesheet">
-            <script src="js/croppic.min.js"></script>
-
             <?php   
                 //it's follow contents_card.php infomation
                 $username = "Admin_User";
@@ -103,28 +98,7 @@
             <div class="buttons_pop">
                 <button type="button" class="next_bt" id="call_setting">OK</button>
                 <button type="button" class="cancel_bt" id="tnail_cancel">Cancel</button>
-            </div>
-            <script>
-                $("#tnail_preview").append('<div id="cropContainerMinimal"></div>');
-
-                var croppicContaineroutputMinimal = {
-                    uploadUrl: 'img_save_to_file.php',
-                    cropUrl: 'img_crop_to_file.php',
-                    modal: false,
-                    doubleZoomControls: false,
-                    rotateControls: false,
-                    loaderHtml: '<div class="loader bubblingG"><span id="bubblingG_1"></span><span id="bubblingG_2"></span><span id="bubblingG_3"></span></div> ',
-                    onBeforeImgUpload: function () { console.log('onBeforeImgUpload') },
-                    onAfterImgUpload: function () { console.log('onAfterImgUpload') },
-                    onImgDrag: function () { console.log('onImgDrag') },
-                    onImgZoom: function () { console.log('onImgZoom') },
-                    onBeforeImgCrop: function () { console.log('onBeforeImgCrop') },
-                    onAfterImgCrop: function () { console.log('onAfterImgCrop') },
-                    onReset: function () { console.log('onReset') },
-                    onError: function (errormessage) { console.log('onError:' + errormessage) }
-                }
-                var cropContaineroutput = new Croppic('cropContainerMinimal', croppicContaineroutputMinimal);
-            </script>
+            </div> 
         </section>
         <section class="tab_section" id="setting_tab_section">
             <div id="top_set" class="setting_group">
