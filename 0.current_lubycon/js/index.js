@@ -28,16 +28,30 @@ $(document).ready(function(){
 /////////////////////////////////////////////////////////
 //      ready to body fadein event start
 /////////////////////////////////////////////////////////
-$(function () {
+/*$(function () {
     $(window).load(function (){
         $('#bodyer').fadeIn(500); //don't add stop function
     });
-});
+});*/
 /////////////////////////////////////////////////////////
 //      ready to body fadein event end
 /////////////////////////////////////////////////////////
-
-
+/////////////////////////////////////////////////////////
+//      get url function start
+/////////////////////////////////////////////////////////
+function GetURLParameter(sParam) {
+    var sPageURL = window.location.search.substring(1);
+    var sURLVariables = sPageURL.split('&');
+    for(var i = 0; i < sURLVariables.length; i++){
+        var sParameterName = sURLVariables[i].split('=');
+        if(sParameterName[0] == sParam){
+            return sParameterName[1];
+        }
+    }
+}
+/////////////////////////////////////////////////////////
+//      get url function end
+/////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////
 //      gloval navigation button hover event start
 //      get parameter change selected nav color
@@ -92,19 +106,24 @@ $(function () //selcted change
 /////////////////////////////////////////////////////////
 
 $(function(){   
-    $('.animate_scale').hover(function(e){
-        console.log($(this).width());
-        console.log($(this).height());
-        $(this).animate({ width: "+=3", height: "+=3", right: "-=1.5", top: "-=1.5" }, 150);
+    $('.animate_scale').hover(function (e){
+        $(this).stop().animate({ width: "+=3", height: "+=3", right: "-=1.5", top: "-=1.5" }, 150);
     }, function(){
-         $(this).animate({ width: "-=3", height: "-=3", right: "+=1.5", top: "+=1.5" }, 150);
+         $(this).stop().nimate({ width: "-=3", height: "-=3", right: "+=1.5", top: "+=1.5" }, 150);
     });
 });//scale animation end
 $(function(){
-    $(".animate_opacity").hover(function(e){
-        $(this).animate({ opacity: 0.5 },200);
+    $('.animate_width').hover(function (e){
+        $(this).stop().animate({ width: "+=3", right: "-=1.5"}, 150);
+    }, function(){
+        $(this).stop().animate({ width: "-=3", right: "+=1.5"},150);
+    })
+})
+$(function(){
+    $(".animate_opacity").hover(function (e){
+        $(this).stop().animate({ opacity: 0.5 },200);
     },function(){
-        $(this).animate({ opacity: 1 },200);
+        $(this).stop().animate({ opacity: 1 },200);
     });
 });//opacity animation end
 
@@ -211,12 +230,6 @@ $(function() //after signin child hover show and hide
 /////////////////////////////////////////////////////////
 
 $(function () { //add contents button start
-    $('#addcontent_bt').hover(function () {
-        $(this).stop().animate({ opacity: 0.9 }, 200);
-    }, function () {
-        $(this).stop().animate({ opacity: 1 }, 200);
-    });
-
     $('#addcontent_bt').click(function () {
         $('.dark_overlay').stop().fadeIn(100);
         $('.editor_popup').css("display","block");
@@ -340,38 +353,38 @@ $(function(){
 /////////////////////////////////////////////////////////
 //      containers sticky start
 /////////////////////////////////////////////////////////
-
-$(document).scroll(function () {
-    var sticky_start = $("#main_header").height() + $("#main_figure").height();
-    if($("#navsel").length == 0){
-            sticky_start -= 50;
-    }else{
-        sticky_start;
-    }
-    var scrollend = $("#footer").offset().top - $(window).height();
-    var banner_position = 
-    $("#footer").offset().top 
-    - $(".con_aside").height() 
-    - $("#navsel").height() 
-    - $("#main_figure").height();
-
-    if($(document).find(".con_aside") && $(".con_aside").attr("id") != "editor_aside"){ 
-        if ($(document).scrollTop() > sticky_start && $(document).scrollTop() < scrollend){
-            $(".con_aside").css({ "position": "fixed", "top": "100px" });
+$(document).ready(function(){  
+    $(document).scroll(function () {
+        var stickyStart = $("#main_header").height() + $("#navsel").height() + $("#nav_guide").height();
+        if($("#navsel").length == 0){
+                stickyStart -= $("#navsel").height();
+        }else{
+            stickyStart;
         }
-        else if($(document).scrollTop() > scrollend){
-            $(".con_aside").css({ "position": "absolute", "top": banner_position + "px" });
-            $(".con_aside").css({ "height" : $(window).height() + "px"});
+        var scrollEnd = $(document).height() - $(window).height();
+        var bannerPosition = $(".con_aside").height() - $("#navsel").height();
+
+        if($(document).find(".con_aside") && $(".con_aside").attr("id") != "editor_aside"){ 
+            
+            if ($(document).scrollTop() >= stickyStart && $(document).scrollTop() < scrollEnd){
+                $(".con_aside").css({ "position": "fixed", "top": "100px" });
+                console.log("sticky start");
+            }
+            else if($(document).scrollTop() == scrollEnd){
+                console.log("sticky bottom end");
+            }
+            else if($(document).scrollTop() < stickyStart){
+                $(".con_aside").css({ "position": "absolute", "top": "0px" });
+                $("#floating_bt").css({ "position": "absolute", "top": "0px"});
+                console.log("sticky top end");
+            };
         }
-        else {
-            $(".con_aside").css({ "position": "absolute", "top": "0px" });
-            $("#floating_bt").css({ "position": "absolute", "top": "100px"});
+        else{
+            return true;
         };
-    }
-    else{
-        return true;
-    };
+    });
 });
+
 /////////////////////////////////////////////////////////
 //      containers sticky end
 /////////////////////////////////////////////////////////
@@ -390,10 +403,10 @@ $(function(){
 $(document).scroll(function (){
     if($("#nav_guide").length != 0){
         var nav_guide = $("#nav_guide");
-        var sticky_start = $("#main_header").height() + $("#main_figure").height();
+        var sticky_start = $("#main_figure").height() + $("#navsel").height();
         var contents_y = nav_guide.height();
         if($("#navsel").length == 0){
-            sticky_start -= 50;
+            sticky_start -= $("#navsel").height();
         }else{
             sticky_start;
         }
@@ -401,7 +414,7 @@ $(document).scroll(function (){
         
         if ($(document).scrollTop() > sticky_start){
             $("#main_header").css({"box-shadow": "0px 0px 0px 0px rgba(0,0,0,0.5)"});
-            nav_guide.css({ "position": "fixed", "top": "50px", "z-index": "2", "box-shadow": "0px 3px 7px rgba(0,0,0,0.3)" });
+            nav_guide.css({ "position": "fixed", "top": "50px", "z-index": "4", "box-shadow": "0px 3px 7px rgba(0,0,0,0.3)" });
             nav_guide.next().css({"top": contents_y});
             nav_guide.next().next().css({"top": contents_y});
             $("#floating_bt").css({"position" : "fixed", "top" : "100px"});
@@ -692,45 +705,40 @@ function hideAlert2(){
 //      alert event end
 /////////////////////////////////////////////////////////
 /*----------------------------contents page----------------------------*/
-
-
-/*----------------------------start personal page----------------------------*/
-
 /////////////////////////////////////////////////////////
-//      personal page subnav hover and ajax
+//      lubySelectbox action start
 /////////////////////////////////////////////////////////
-$(function () {
-    $(".contents_bt").each(function(){
+$(function(){
+    $(".lubySelector").each(function(){
         var toggle_count = 0;
        
         $(this).click(function(){
             console.log(toggle_count);
             switch(toggle_count){
                 case 0 :
-                    $(this).find($(".subnav_list")).stop().fadeIn(300);
+                    $(this).find($(".lubySelector_list")).stop().fadeIn(300);
                     $(this).css("background","#333333");
-                    $(this).find($(".subnav_arrow")).children("i").attr("class","fa fa-caret-up");
+                    $(this).find($(".lubySelector_arrow")).children("i").attr("class","fa fa-caret-up");
                     toggle_count = 1;
                     return false;
                 break;
 
                 case 1 :
-                    $(this).find($(".subnav_list")).stop().fadeOut(300);
+                    $(this).find($(".lubySelector_list")).stop().fadeOut(300);
                     $(this).css("background","#555555");
-                    $(this).find($(".subnav_arrow")).children("i").attr("class","fa fa-caret-down");
+                    $(this).find($(".lubySelector_arrow")).children("i").attr("class","fa fa-caret-down");
                     toggle_count = 0;
                     return false;
                 break;
             };//switch end
         });//click end
-        //-------------------------------selectbox fadeOut event-----------------------------//
         $(this).mouseleave(function(){
             $(document).click(function (event) {
                 event = event || window.event//for IE
-                if (!$(event.target).hasClass("contents_bt")) {
-                    $(this).find($(".subnav_list")).stop().fadeOut(300);
-                    $(".contents_bt").css("background","#555555");
-                    $(this).find($(".subnav_arrow")).children("i").attr("class","fa fa-caret-down");
+                if (!$(event.target).hasClass("lubySelector")) {
+                    $(this).find($(".lubySelector_list")).stop().fadeOut(300);
+                    $(".lubySelector").css("background","#555555");
+                    $(this).find($(".lubySelector_arrow")).children("i").attr("class","fa fa-caret-down");
                     toggle_count = 0;
                     return true;
                 }//if end
@@ -739,10 +747,26 @@ $(function () {
                 }//else end
             });//click end
         });//mouseleave end
-        //-------------------------------selectbox fadeOut event-----------------------------//
+        $(this).find($(".lubySelector_list li")).click(function (event){
+            event = event || window.event
+            var selected_v = $(event.target).text();
+            $(event.target).parent().siblings(".lubySelector_selected").text(selected_v);
+            $(event.target).siblings("li").removeClass();
+            $(event.target).addClass("selected_li");
+        });
     });//each end
+});
 
+/////////////////////////////////////////////////////////
+//      lubySelectbox action end
+/////////////////////////////////////////////////////////
 
+/*----------------------------start personal page----------------------------*/
+
+/////////////////////////////////////////////////////////
+//      personal page subnav hover and ajax
+/////////////////////////////////////////////////////////
+$(function () {
     $('document').ready(function () {
         if ($('.personal').attr('class') == 'personal con_main') {
             var id = four_param;
@@ -761,21 +785,20 @@ $(function () {
                         customID: "custom",
                         size: 5
                     });
+                    if($('document').find(".subnav_li")){
+                        var gotURL = GetURLParameter('4');
+                        var urltxt = "#" + gotURL.toString();
+                        $(".subnav_li").attr("class","subnav_li");
+                        $(urltxt).addClass("selected_subnav");
+                    }
                 }
             });
         }//if end
     });
 
-    $("#subnav li").click(function (){
-        if(!$(this).hasClass("selected_subnav")){
-            $("#subnav li").removeClass("selected_subnav");
-            $(this).addClass("selected_subnav");
-        }else{
-            return;
-        }//if,else end
-        
+    $("#subnav li").click(function (){       
         var id = $(this).attr('id');
-        console.log(id);
+        //console.log(id);
 
         $.ajax({
             type: "POST",
@@ -792,6 +815,8 @@ $(function () {
                     customID: "custom",
                     size: 5
                 });
+                var hostURL = location.host;
+                location.href = 'http://' + hostURL + '/0.current_lubycon/index.php?1=personal_page&2=personal_page&3=main&4=' + id;
             }
         });
     });

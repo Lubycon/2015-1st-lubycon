@@ -53,12 +53,12 @@
     #slide_section  .slider_pager div, #slide_section  .slider_pager div:hover, #slide_section  .slider_pager .av {
         position: absolute;
         /* size of bullet elment */
-        width: 12px;
-        height: 12px;
+        width: 15px;
+        height: 6px;
         background: #d1d1d1;
         overflow: hidden;
         cursor: pointer;
-        border-radius: 50%;
+        border-radius: 10px;
     }
 
         #slide_section  .slider_pager div:hover, #slide_section  .slider_pager .av:hover {

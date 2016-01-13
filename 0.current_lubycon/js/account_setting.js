@@ -1,13 +1,5 @@
 $(function () //account setting script
 {
-    $(document).scroll(function () { //account setting move banner
-        if ($(document).scrollTop() > $('#account_setting_section').offset().top - 65) {
-            $('#account_aside').css({ "position": "fixed", "top": "65px" });
-        } else {
-            $('#account_aside').css({ "position": "absolute", "top": "0px" });
-        }
-    });
-
     var i = 2;
 
     $('#Change_pass').click(function () //change pass remove attr

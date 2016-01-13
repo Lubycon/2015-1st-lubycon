@@ -1,63 +1,37 @@
-<figure id="main_figure">
-    <h2>INSIGHT</h2>
-</figure>
-<!-- end main_figure -->
+<script src="js/chart/amcharts.js" type="text/javascript"></script>
+<script src="js/chart/serial.js" type="text/javascript"></script>
+<script src="js/chart/lubytheme.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/insight.js"></script>
 
-<link href="css/insight.css" rel="stylesheet" type="text/css" />
-<!-- personal page css -->
-<script type="text/javascript" src="js/d3.min.js"></script>
 <!--graph script-->
 
-<section id="contents">
-    <?php
-    include_once("php/layout/personal_layout.php");
-    include_once("php/layout/user_inform.php");
-    ?>
-
-    <section id="insight_box">
-        <div id="graph_ul">
-            <div class="graph_box">
-                <div class="graph_title">
-                    <i class="fa fa-upload" id="upload_icon"></i>
-                    <p class="graph_title_text">UPLOAD</p>
-                </div>
-                <svg id="graph1" width="500" height="200"></svg><!--graph1-->
+<div id="contents">
+    <div id="insight_box">
+        <div class="chart_wrap">
+            <div class="chart_title">
+                <i id="chart_icon" class="fa fa-heart"></i>
+                <span id="chart_name">Like</span>
+                <i id="toggle_arrow" class="fa fa-caret-down"></i>
             </div>
-
-            <div class="graph_box">
-                <div class="graph_title">
-                    <i class="fa fa-download" id="down_icon"></i>
-                    <p class="graph_title_text">DOWNLOAD</p>
-                </div>
-                <svg id="graph2" width="500" height="200"></svg><!--graph2-->
-            </div>
-
-            <div class="graph_box">
-                <div class="graph_title">
-                    <i class="fa fa-heart" id="like_icon"></i>
-                    <p class="graph_title_text">LIKE</p>      
-                </div>
-                <svg id="graph3" width="500" height="200"></svg><!--graph3-->
-            </div>
-
-            <div class="graph_box">
-                <div class="graph_title">
-                    <i class="fa fa-eye" id="view_icon"></i>
-                    <p class="graph_title_text">VIEW</p>      
-                </div>
-                <svg id="graph4" width="500" height="200"></svg><!--graph3-->
-            </div>
-
-            <div id="tooltip">
-                <!--tooltip start-->
-                <div class="value">
-                    <p class="value_text"></p>
-                </div>
-            </div>
-        </div>
-        <script type="text/javascript" src="js/insight.js"></script>
-    </section>
+            <div id="chart_selector">
+                <ul>
+                    <li id="showlike" class="chart_list"><i class="fa fa-heart"></i>Like</li>
+                    <li id="showview" class="chart_list"><i class="fa fa-eye"></i>View</li>
+                    <li id="showupload" class="chart_list"><i class="fa fa-cloud-upload"></i>Uploaded</li>
+                    <li id="showdownload" class="chart_list"><i class="fa fa-cloud-download"></i>Downloaded</li>
+                </ul>
+            </div><!--select chart-->
+            <div class="chartboxes" id="chartdiv1" style="width: 100%; height: 450px;"></div>
+            <div class="chartboxes" id="chartdiv2" style="width: 100%; height: 450px;"></div>
+            <div class="chartboxes" id="chartdiv3" style="width: 100%; height: 450px;"></div>
+            <div class="chartboxes" id="chartdiv4" style="width: 100%; height: 450px;"></div> 
+        </div>   
+        <link href="css/insight.css" rel="stylesheet" type="text/css" />
+        <!-- personal page css -->
+        
+        <!--graph script-->
+    </div>
     <!-- end contents box -->
-</section>
+</div>
 <!-- end contents section -->
 

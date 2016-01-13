@@ -9,7 +9,7 @@ switch($id)
     case 'insight':include_once('../personal_page/insight.php'); break;
     case 'bookmark':include_once('../personal_page/bookmark.php'); break;
     case 'account_setting':include_once('../personal_page/account_setting.php'); break;
-    default:echo $id + '404 not found';
+    default:echo $id + 'HTTP 404 not found';
 }
 
 //include_once('../account/create_account.php');

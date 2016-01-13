@@ -1,47 +1,23 @@
-$(function () {
-    $(document).scroll(function () //community subject sticky event
-    {
-        if($(document).find('#post_subject_area'))
-        {
-            if ($(document).scrollTop() > 206) {
-                $('#post_subject_area').css({ "position": "fixed", "top": "50px", "z-index": "2" });
+/*--------------------------------postbox sticky start-------------------------------*/
+$(function(){
+    if($("#main_board").length != 0){
+        var postBanner = $("#post_banner");
+        var bannerStop = $("#main_board").offset().top - $(window).height();
+        $(document).scroll(function(){
+            if($(document).scrollTop() >= bannerStop){
+                postBanner.css({"position":"absolute", "top":"1126px"});
+                return;
             }
-            else {
-                $('#post_subject_area').css({ "position": "absolute", "top": "50px" });
-            }  
-        }
-        else{
-            console.log("");
-            return true;
-        }
-    });
-
-    $(document).scroll(function (){
-        var scrollend = $("#post_banner").parent().next().offset().top - $(window).height();
-        var banner_position = 
-        $("#post_banner").parent().next().offset().top 
-        - $("#post_banner").height() 
-        - $("#navsel").height() 
-        - $("#main_figure").height() 
-        -30;
-
-        if($(document).find("#post_banner")){ 
-            if ($(document).scrollTop() > 214 && $(document).scrollTop() < scrollend){
-                $("#post_banner").css({ "position": "fixed", "top": "100px" });
+            else{
+                return;
             }
-            else if($(document).scrollTop() > scrollend){
-                $("#post_banner").css({ "position": "absolute", "top": banner_position + "px" });
-                $("#post_banner").css({ "height" : $(window).height() + "px"})
-            }
-            else {
-                $("#post_banner").css({ "position": "absolute", "top": "0px" });
-            };
-        }
-        else{
-            return true;
-        };
-    });
+        });
+    }else{
+        return;
+    }; 
 });
+/*--------------------------------postbox sticky end-------------------------------*/
+
 /*--------------------------------community editor start-------------------------------*/
 $(function(){
     $('#file_import_bt').click(function () {

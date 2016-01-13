@@ -11,10 +11,10 @@
             <i class="fa fa-bars artist_menu_icon"></i>
             <div class="artist_menu_list">
                 <ul>
-                    <li><i class="fa fa-eye"></i>View Contents</li>
-                    <li><i class="fa fa-bar-chart"></i>View Insight</li>
-                    <li><i class="fa fa-user-plus"></i>Follow</li>
-                    <li><i class="fa fa-fa fa-envelope-o"></i>Message to artist</li>
+                    <li><a href="./index.php?1=personal_page&2=personal_page&3=main&4=my_contents"><i class="fa fa-eye"></i>View Contents</a></li>
+                    <li><a href="./index.php?1=personal_page&2=personal_page&3=main&4=insight"><i class="fa fa-bar-chart"></i>View Insight</a></li>
+                    <li><a href="./index.php?1=personal_page&2=personal_page&3=main&4=my_forums"><i class="fa fa-table"></i>View Forums</a></li>
+                    <li><a href="./index.php?1=personal_page&2=personal_page&3=main&4=#"><i class="fa fa-fa fa-envelope-o"></i>Message to artist</a></li>
                 </ul>
             </div>
         </div>

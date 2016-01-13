@@ -1,8 +1,9 @@
-<figure id="main_figure">
-    <div class="dark_overlay_small"></div>
-    <h2>ABOUT US</h2>
-</figure>
-<!-- end main_figure -->
+<div class="main_figure_wrap">
+    <figure id="main_figure">
+        <div class="dark_overlay_small"></div>
+        <h2>LUBYCON</h2>
+    </figure>   <!-- end main_figure -->
+</div>
 
 <link href="css/about_us.css" rel="stylesheet" type="text/css" />
 <!-- account_setting page css -->

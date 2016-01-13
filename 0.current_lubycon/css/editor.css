@@ -156,6 +156,9 @@ body{
             background: rgba(100,100,100,0.8) !important;
             color: #ffffff !important;
         }
+.note-popover .popover-content .note-color .dropdown-menu .btn-group .note-palette-title, .panel-heading.note-toolbar .note-color .dropdown-menu .btn-group .note-palette-title {
+    color: #eeeeee;
+}
 .note-editor.note-frame .note-statusbar{
     background-color: #111111 !important;
     border-radius: 0px !important;
@@ -170,6 +173,8 @@ body{
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
 }
+
+
 #editor_aside
 {
     right:0;
@@ -314,7 +319,7 @@ body{
     #tnail_preview {
         background:#222222;
     }
-        .contents_card {
+        #tnail_preview ul li .contents_card {
             margin:0px;
             text-align: left;
         }

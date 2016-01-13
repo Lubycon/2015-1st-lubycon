@@ -16,7 +16,7 @@
     <title>Lubycon</title>
 
     <link rel="shortcut icon" href="./ch/img/logo/lubycon.ico" /> <!-- favicon -->
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source Sans Pro:200,400" type="text/css" />	<!--google web font-->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source Sans Pro:300,400" type="text/css" />	<!--google web font-->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" /> <!--icon font-->
 
     <link href="css/layout/normalize.css" rel="stylesheet" type="text/css" />  <!-- web normalize -->
@@ -166,6 +166,7 @@
             <ul>
                 <li><a href="./index.php?1=personal_page&2=personal_page&3=main&4=dashboard">Dashboard</a></li>
                 <li><a href="./index.php?1=personal_page&2=personal_page&3=main&4=my_contents">My Contents</a></li>
+                <li><a href="./index.php?1=personal_page&2=personal_page&3=main&4=insight">Insight</a></li>
                 <li><a href="./index.php?1=personal_page&2=personal_page&3=main&4=bookmarks">Bookmarks</a></li>
                 <li><a href="./index.php?1=personal_page&2=personal_page&3=main&4=account_setting">Account Setting</a></li>
                 <li style="display:none;"><a href="./index.php?1=personal_page&2=personal_page&3=main&4=message">Message</a></li>
@@ -174,7 +175,7 @@
         </div>
         <!-- end after sign in -->
 
-        <button id="addcontent_bt"><i class="fa fa-plus"></i>Add Contents</button>
+        <button id="addcontent_bt" class="animate_width"><i class="fa fa-plus"></i>Add Contents</button>
 
         <!--end content button-->
         <div id="lang_select_bt">
@@ -197,7 +198,6 @@
         <input type="text" id="main_search_text" value="Enter the Keyword" />
 
         <button id="main_search_btn" class="out">
-            <i class="fa fa-caret-left"></i>
             <i class="fa fa-search"></i>
         </button>
 
@@ -208,7 +208,7 @@
                 <option value="Designer">Artists</option>
                 <option value="Community">Community</option>
             </select>
-            <span class="subnav_arrow"><i class="fa fa-caret-down"></i></span>
+            <span class="lubySelector_arrow"><i class="fa fa-caret-down"></i></span>
         </div>
         <!-- end select_box -->
     </div>

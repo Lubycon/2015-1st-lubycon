@@ -1,116 +1,88 @@
 ﻿@charset "utf-8";
 
-#insight_box{
+body {
+    background: #282828;
+}
+#insight_box {
     width:100%;
-    max-width:1600px;
-    min-width:1200px;
     position: relative;
-    margin:0px auto;
-    margin-top:50px;
-    margin-bottom:50px;
 }
-
-#graph_ul{
-    width:100%;
-    margin:0px auto;
-    text-align: center;
-}
-
-.graph_box{
-    width: 640px;
-    height: 200px;
+.chart_wrap {
     position: relative;
-    display: block;
-    margin:20px auto;
-    border:1px solid #333;
-    border-radius: 10px;
-    overflow: hidden;
+    background: #282828; 
+    text-align: left;
+    padding: 40px 10px 50px 10px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
 }
-    .graph_title{
-        width:140px;
-        height: 100%;
-        line-height: 40px;
-        background: rgba(0,0,0,0.7);
+    .chart_title {
+        display: inline-block;
         text-align: center;
-        float: left;
+        border-radius: 5px;
+        padding: 3px 10px;
+        margin: 20px;
+        cursor: pointer;
     }
-        .graph_title i{
-            width:70px;
-            height:70px;
-            line-height: 70px;
-            display:block;
-            margin:0px auto;
-            margin-top: 50px;
-            border-radius: 50%;
-            color:#ffffff;
-            font-size:45px;
+    .chart_title:hover {
+        background: rgba(255,255,255,0.3);
+    }
+        .chart_title #chart_icon {
+            color: #48cfad;
+            margin-right: 10px;
+            font-size: 22px;
+        }
+        .chart_title #chart_name {
+            color: #ffffff;
             font-weight: 200;
-
+            font-size: 30px;
+            margin-right: 10px;
         }
-            #upload_icon{
-                background: #48cfad;
-                -webkit-text-stroke:1px #48cfad;
-            }
-            #down_icon{
-                background: #ffbe54;
-                -webkit-text-stroke:1px #ffbe54;
-            }
-            #like_icon{
-                background: #488ccb;
-                -webkit-text-stroke:1px #488ccb;
-                font-size:40px;
-                line-height:77px;
-            }
-            #view_icon{
-                background: #ec6446;
-                -webkit-text-stroke: 1px #ec6446;
-                font-size: 40px;
-            }
-        .graph_title_text{
-            display:block;
-            color:#ffffff;
-            font-size:20px;
-            font-weight: 200;
+        .chart_title #toggle_arrow {
+            color: #ffffff;
+            font-size: 17px;
         }
-    
 
-    #graph1,#graph2,#graph3{
-        display:block;
+    #chart_selector {
+        display: none;
+        position: absolute;
+        z-index: 1;
+        top: 108px;
+        left: 30px;
+        width: 130px;
+        padding: 4px;
+        border-radius: 5px;
+        background: rgba(255,255,255,0.8);
+        font-size: 15px;
     }
-
-        .axis path{
-            fill: none;
-            stroke: #555555;
-            shape-rendering: cripsEdges;
+        .chart_list {
+            border-radius: 5px;
+            padding: 5px;
+            color: #444444;
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
         }
-        .axis text{
-            font-family: Lato;
-            font-size: 13px;
-            display:none;
+        .chart_list:hover {
+            background: rgba(150,150,150,0.6);
+            cursor: pointer;
         }
-
-
-#tooltip{
-    width:150px;
-    height:42px;
-    background:rgba(0,0,0,0.8);
-
-    border: 1px solid #000000;
-    border-radius: 5px;
-    padding:10px;
-
-    position: absolute;
-    display: none;
-    overflow:hidden;
-
-    box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.5);
-}
-    .value_text{
-        color:#ffffff;
-        font-size:17px;
-        font-weight: 200;
-        text-align: center;
+            .chart_list i {
+                margin-right: 10px;
+            }
+    .chartboxes {
+        height: 100% !important;
     }
-
-
+    #chartdiv {
+        display: block;
+    }
+    #chartdiv2 {
+        display: none;
+    }
+    #chartdiv3 {
+        display: none;
+    }
+    #chartdiv4 {
+        display: none;
+    }
 /* main section end */

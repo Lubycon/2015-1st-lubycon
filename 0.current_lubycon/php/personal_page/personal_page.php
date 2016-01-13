@@ -1,9 +1,12 @@
-<figure id="main_figure">
-	<div class="dark_overlay_small"></div>
-    <h2>MY CONTENTS</h2>
-</figure>
+<div class="main_figure_wrap">
+    <figure id="main_figure">
+        <div class="dark_overlay_small"></div>
+        <h2>PERSONAL PAGE</h2>
+    </figure>   <!-- end main_figure -->
+</div>
 <!-- end main_figure -->
 <link href="css/personal_page.css" rel="stylesheet" type="text/css" />
+
 <!-- personal page css -->
 <section id="contents">
 	<section id="nav_guide">

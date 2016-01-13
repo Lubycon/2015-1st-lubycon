@@ -1,7 +1,9 @@
-<figure id="main_figure">
-    <div class="dark_overlay_small"></div>
-    <h2>COMMUNITY</h2>
-</figure>	<!-- end main_figure -->
+<div class="main_figure_wrap">
+    <figure id="main_figure">
+        <div class="dark_overlay_small"></div>
+        <h2>COMMUNITY</h2>
+    </figure>
+</div>	<!-- end main_figure -->
 
 <link href="css/community_view.css" rel="stylesheet" type="text/css" />  <!-- community_view css -->
 <link href="css/community.css" rel="stylesheet" type="text/css" />  <!-- community css -->
@@ -28,8 +30,8 @@
         $year = 2015;
         $month = "Nov";
         $day = 7;
-        $hour = 00;
-        $second = 00;
+        $hour = 0;
+        $minute = 0;
 
         $post_like = 0;
         $post_view = 0;
@@ -56,19 +58,47 @@
     <section id="nav_guide">
         <p id="post_subject">
             <?=$post_subject?>
+            <span class="written_date"><?=$year?>.<?=$month?>.<?=$day?> <?=$hour?>:<?=$minute?></span>
         </p>
+        
+        <ul id="post_info">
+            <li><i id="like_icon" class="fa fa-heart count_icon"></i><?=$post_like?></li>
+            <li><i id="view_icon" class="fa fa-eye count_icon"></i><?=$post_view?></li>
+        </ul>
     </section>  <!-- end nav_guide -->
-    <section id="post_writer_box">
-        <div id="post_writer_box_inner">
-            <p class="post_writer_date"><?=$year?>.<?=$month?>.<?=$day?> <?=$hour?>:<?=$second?></p>
-            <ul>
-                <li><i class="fa fa-heart"></i><?=$post_like?></li>
-                <li><i class="fa fa-eye"></i><?=$post_view?></li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="post_box">
+    <section id="post_box" class="con_wrap">
+        <div id="post_banner" class="con_aside">
+            <?php 
+                $username = "Admin_User";
+                $userjob = "Job";
+                $usercity = "City";
+                $usercountry = "Country";
+                $language1 = "language1";
+                $language2 = "language2";
+                
+            ?>
+            <div id="author_main">
+                <figure>
+                    <img src="./ch/img/no_img/no_img_user1.jpg">
+                </figure>
+                <h4><?=$username?></h4>
+            </div>
+            <div id="author_sub">
+                <article class="author_wrap" id="author_job">
+                    <i class="fa fa-suitcase"></i>
+                    <p class="author_name" id="job_name"><?=$userjob?></p>
+                </article>
+                <article class="author_wrap" id="author_location">
+                    <i class="fa fa-home"></i>
+                    <p class="author_name" id="location_name"><?=$usercity?>, <?=$usercountry?></p>
+                </article>
+                <article class="author_wrap" id="author_language">
+                    <i class="fa fa-language"></i>
+                    <p class="author_name" id="language_name"><?=$language1?>, <?=$language2?></p>
+                </article>
+            </div>
+            <button id="my_page_bt">My Page</button>
+        </div><!--end con_aside-->
         <section id="post_section" class="con_main">
             <article id="post_contents">
                 <p>
@@ -76,8 +106,8 @@
                 </p>
                 <div id="com_like_bt" class="like_bt"><i class="fa fa-heart"></i></div>
                 <div id="post_edit_box">
-                    <button class="out">Delete</button>
-                    <button class="out">Modified</button>
+                    <button class="post_edit_bt animate_opacity"><i class="fa fa-trash"></i>Delete</button>
+                    <button class="post_edit_bt animate_opacity"><i class="fa fa-repeat"></i>Modified</button>
                 </div>
             </article>  <!-- end post_contents -->
             <article id="comment_box">
@@ -105,21 +135,6 @@
                 </div>
             </article>
         </section><!-- end post_section -->
-        <aside id="post_banner" class="con_aside">
-            <div id="profile_pic">
-                <figure id="img_mask">
-                    <img src="./ch/img/no_img/no_img_user1.jpg">
-                </figure>
-            </div>
-            <h4><?=$username?></h4>
-            <h5 class="designer_job"><?=$userjob?></h5>
-            <h6><i class="fa fa-home"></i><?=$usercity?>, <?=$usercountry?></h6>
-            <div id="designer_follow"><i class="fa fa-user-plus"></i></div>
-            <div id="share_box">
-                <div id="share_face" class="share_bt"><i class="fa fa-facebook"></i></div>
-                <div id="share_google" class="share_bt"><i class="fa fa-google-plus"></i></div>
-            </div>
-        </aside>    <!-- end post_banner -->
     </section>  <!-- end post_box -->
     <?php
         include("main_board.php");
