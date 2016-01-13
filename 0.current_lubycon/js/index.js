@@ -650,6 +650,28 @@ function file_info_slideup() {
 /////////////////////////////////////////////////////////
 //      contents view file_info toggle end
 /////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+//      contents view descript box toggle start
+/////////////////////////////////////////////////////////
+$(function(){
+    var descriptToggle = 0;
+    $("#view_descript").click(function(){
+        switch(descriptToggle){
+            case 0 :
+                $(this).next("#descript_box").fadeIn(300);
+                descriptToggle = 1;
+            break;
+            case 1 :
+                $(this).next("#descript_box").fadeOut(300);
+                descriptToggle = 0;
+            break;
+            default : return; break;
+        }//switch end
+    });//click end
+});
+/////////////////////////////////////////////////////////
+//      contents view descript box toggle end
+/////////////////////////////////////////////////////////
 
 /////////////////////////////////////////////////////////
 //      alert event start
