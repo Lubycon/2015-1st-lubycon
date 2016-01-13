@@ -181,13 +181,15 @@
                     </div>
                     <div id="tag_wrap">
                         <p id="tag_title"><i class="fa fa-tag"></i>Tags</p>
-                        <ul id="tagbox_wrap">
-                            <li><span class="tagbox">#lorem</span></li>
-                            <li><span class="tagbox">#lorem</span></li>
-                            <li><span class="tagbox">#lorem</span></li>
-                            <li><span class="tagbox">#lorem</span></li>
-                            <li><span class="tagbox">#lorem</span></li>                       
-                        </ul>
+                        <div id="tagbox_wrap">
+                            <ul id="tagbox_wrap_inner">
+                                <li class="tagbox">#lorem</li>
+                                <li class="tagbox">#lorem</li>
+                                <li class="tagbox">#lorem</li>
+                                <li class="tagbox">#lorem</li>
+                                <li class="tagbox">#lorem</li>
+                            </ul>                       
+                        </div>
                     </div>
                     <div id="file_descript">
                         <p id="view_descript">ABOUT THIS CONTENT</p>

@@ -280,21 +280,26 @@
                 color: #eeeeee;
 
             }
-        #tagbox_wrap{
+        #tagbox_wrap {
             background: #282828;
             margin: 10px;
             padding:5px;
-            text-align: left;
+            text-align: center;
             border-radius: 5px;
             box-shadow: inset -1px 2px 5px 0px rgba(0,0,0,0.3);
             box-sizing: border-box;
             -webkit-box-sizing: border-box;
             -moz-box-sizing: border-box;
         }
+        #tagbox_wrap_inner {
+            width: 94%;
+            display: inline-block;
+            text-align: left;
+        }
 
             #tagbox_wrap li {
                 display:inline-block;           
-                margin: 8px 1px;
+                margin: 3px 1px;
             }
                 .tagbox {
                     border: 1px solid #999999;
@@ -303,7 +308,6 @@
                     color:#eeeeee;
                     font-weight: 200;
                     padding: 5px 8px;
-                    margin:0px auto;
                     text-align: center;
                     cursor: pointer;
                 }
