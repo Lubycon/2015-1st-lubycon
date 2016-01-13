@@ -164,12 +164,12 @@
                 <span id="user_id">Admin_User</span>
                 <i class="fa fa-angle-down"></i>
             <ul>
-                <li><a href="./index.php?1=personal_page&2=personal_page&3=main&4=dashboard">Dashboard</a></li>
-                <li><a href="./index.php?1=personal_page&2=personal_page&3=main&4=my_contents">My Contents</a></li>
-                <li><a href="./index.php?1=personal_page&2=personal_page&3=main&4=insight">Insight</a></li>
-                <li><a href="./index.php?1=personal_page&2=personal_page&3=main&4=bookmarks">Bookmarks</a></li>
-                <li><a href="./index.php?1=personal_page&2=personal_page&3=main&4=account_setting">Account Setting</a></li>
-                <li style="display:none;"><a href="./index.php?1=personal_page&2=personal_page&3=main&4=message">Message</a></li>
+                <li><a href="./index.php?1=personal_page&2=personal_page&3=dashboard">Dashboard</a></li>
+                <li><a href="./index.php?1=personal_page&2=personal_page&3=my_contents">My Contents</a></li>
+                <li><a href="./index.php?1=personal_page&2=personal_page&3=insight">Insight</a></li>
+                <li><a href="./index.php?1=personal_page&2=personal_page&3=bookmarks">Bookmarks</a></li>
+                <li><a href="./index.php?1=personal_page&2=personal_page&3=account_setting">Account Setting</a></li>
+                <li style="display:none;"><a href="./index.php?1=personal_page&2=personal_page&3=message">Message</a></li>
                 <li id="sign_out">Sign Out</li>
             </ul>
         </div>
