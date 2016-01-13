@@ -38,7 +38,7 @@
         box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.5);
     }
 .con_aside{
-    border-right: 1px solid #dddddd;
+    border-right: 1px solid #222222;
     border-left: 0px;    
 }
     #myinfo_setting{
@@ -108,9 +108,10 @@
             width:100%;
         }
         #myinfo_main h4{
+            font-weight: 200;
             height:30px;
             font-size:26px;
-            color:#444444;
+            color:#eeeeee;
             margin-top: 20px;
             text-align: center;
         }
@@ -126,15 +127,17 @@
             margin:5px 0px;
         }
             .myinfo_wrap i{
-                color: #444444;
+                color: #eeeeee;
                 display: inline-block;
                 float: left;
             }
             .myinfo_wrap .myinfo_name{
-                color: #555555;
+                color: #eeeeee;
+                font-weight: 200;
                 display: inline-block !important;
             }
                 #job_name{
+                    font-weight: 200;
                     color: #48cfad;
                 }
 

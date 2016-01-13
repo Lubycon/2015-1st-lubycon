@@ -169,7 +169,7 @@
                             <li class="contents_view_score"><?=$file_view?></li>
                         </ul>
                         <ul>
-                            <li><i class="fa fa-download"></i></li>
+                            <li><i class="fa fa-cloud-download"></i></li>
                             <li>Downloads</li>
                             <li class="contents_view_score"><?=$file_down?></li>
                         </ul>
@@ -179,18 +179,22 @@
                             <li class="contents_view_score"><?=$file_like?></li>
                         </ul>
                     </div>
-
-                    <ul id="contents_tag">
-                        <li><span>#lorem</span></li>
-                        <li><span>#lorem</span></li>
-                        <li><span>#lorem</span></li>
-                        <li><span>#lorem</span></li>
-                        <li><span>#lorem</span></li>                       
-                    </ul>
-
-                    <article id="file_descript">
-                        <?=$file_descript?>
-                    </article>
+                    <div id="tag_wrap">
+                        <p id="tag_title"><i class="fa fa-tag"></i>Tags</p>
+                        <ul id="tagbox_wrap">
+                            <li><span class="tagbox">#lorem</span></li>
+                            <li><span class="tagbox">#lorem</span></li>
+                            <li><span class="tagbox">#lorem</span></li>
+                            <li><span class="tagbox">#lorem</span></li>
+                            <li><span class="tagbox">#lorem</span></li>                       
+                        </ul>
+                    </div>
+                    <div id="file_descript">
+                        <p id="view_descript">ABOUT THIS CONTENT</p>
+                        <div id="descript_box">
+                            <p><?=$file_descript?></p>
+                        </div>
+                    </div>
                 </div><!--end con_aside-->
             </div><!--end content_box_total-->
         </section><!--end content_view-->
