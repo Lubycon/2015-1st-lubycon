@@ -1,3 +1,23 @@
+/*--------------------------------postbox sticky start-------------------------------*/
+$(function(){
+    if($("#main_board").length != 0){
+        var postBanner = $("#post_banner");
+        var bannerStop = $("#main_board").offset().top - $(window).height();
+        $(document).scroll(function(){
+            if($(document).scrollTop() >= bannerStop){
+                postBanner.css({"position":"absolute", "top":"1126px"});
+                return;
+            }
+            else{
+                return;
+            }
+        });
+    }else{
+        return;
+    }; 
+});
+/*--------------------------------postbox sticky end-------------------------------*/
+
 /*--------------------------------community editor start-------------------------------*/
 $(function(){
     $('#file_import_bt').click(function () {

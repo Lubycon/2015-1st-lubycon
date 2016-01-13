@@ -1,6 +1,6 @@
 /*-------------------------json loader start-------------------------------*/
 ////////////import data start
-$(document).ready(function(){
+
     var likedata = [];
     var likedata_loader = 
     $.getJSON("js/chart/data/likedata.json", function(data) {
@@ -55,6 +55,7 @@ $(document).ready(function(){
     ////////////import data end
     /*-------------------------json loader end-------------------------------*/
     /*-------------------------make chart start-------------------------------*/
+$(document).ready(function(){
     var likeChart;
     var viewChart;
     var upChart;

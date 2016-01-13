@@ -542,24 +542,28 @@ h1 /* main logo */ {
 
 
 #main_search_bar {
+    position: absolute;
     width: 600px;
     height: 35px;
-    background: #fff;
-    margin: 0px auto;
+    background: none;
+    left: 50%;
+    margin-left: -301px;
     line-height: 35px;
-    border: 1px solid #818181;
+    border: 1px solid #ffffff;
     border-radius: 4px 7px 7px 4px;
     margin-top: 65px;
     margin-bottom: 15px;
     display:none;
+    z-index: 2;
 }
 
 #main_search_text {
     margin-left: 5px;
     padding-left: 10px;
     border: none;
-    color: #999;
+    color: #ffffff;
     width: 380px;
+    background: none;
     letter-spacing: 0.5px;
     z-index:1;
     font-weight: 200;
@@ -567,10 +571,18 @@ h1 /* main logo */ {
 
 #select_box {
     float: right;
-    color: #999;
-    font-weight: 300;
+    color: #ffffff;
+    font-weight: 200;
     position:relative;
+    background: none;
 }
+    #select_box .sod_select {
+        background: none;
+        color: #ffffff;
+    }
+    #select_box .sod_list_wrapper {
+        background: rgba(255,255,255,0.8);
+    }
 
 #main_search_btn {
     float: right;
@@ -580,23 +592,12 @@ h1 /* main logo */ {
     border: none;
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
-    background: #666666;
+    background: none;
     z-index: 1;
 }
-
-    #main_search_btn .fa-caret-left {
-        position: absolute;
-        top: 5px;
-        left: -8px;
-        color: #666666;
-        font-size: 25px;
-        z-index: 1;
-    }
-
     #main_search_btn .fa-search {
-        color: #fff;
+        color: #ffffff;
         font-size: 17px;
-        -webkit-text-stroke: 1px #666666;
     }
 
 .out {
@@ -659,7 +660,7 @@ h1 /* main logo */ {
 #navsel {
     width: 100%;
     height: 35px;
-    background: #444444;
+    background: #3a3a3a;
     margin: 0px auto;
     position: relative;
     overflow-y: hidden;
@@ -714,7 +715,7 @@ h1 /* main logo */ {
     position: relative;
 }
 
-#nav_guide .contents_bt {  
+#nav_guide .lubySelector {  
     width: 160px;
     height: 35px;
     line-height: 35px;
@@ -741,13 +742,13 @@ h1 /* main logo */ {
         float: left;
     }
 
-.contents_bt .global_icon {
+.lubySelector .global_icon {
     display: inline-block;
     margin-bottom: 0px;
     margin-left: 10px;
 }
 
-    .contents_bt .global_icon img {
+    .lubySelector .global_icon img {
         vertical-align: middle;
     }
 
@@ -757,22 +758,22 @@ h1 /* main logo */ {
         margin-top: -4px !important;
     }
 
-.subnav_selected {
+.lubySelector_selected {
     margin-left: 10px;
     font-weight: 200;
     font-size: 14px;
 }
-    #category_bt .subnav_selected{
+    #category_bt .lubySelector_selected{
         font-size: 17px;
     }
 
-.subnav_arrow{
+.lubySelector_arrow{
     position: absolute;
     right: 8px;
     top: 1px;
 }
 
-.subnav_list {
+.lubySelector_list {
     min-width: 150px;
     max-height: 210px;
     
@@ -795,7 +796,7 @@ h1 /* main logo */ {
     }
 
 
-    .subnav_list li {
+    .lubySelector_list li {
         background: #333333;
         color:#fff;
         height: 30px;
@@ -804,15 +805,15 @@ h1 /* main logo */ {
         font-weight: 200;
         border-radius: 3px;
     }
-        .subnav_list li a {
+        .lubySelector_list li a {
         color: #fff;   
         font-weight: 200;
     }
 
-        .subnav_list li:hover {
+        .lubySelector_list li:hover {
             background: #555555;
         }
-        .subnav_list .selected_li{
+        .lubySelector_list .selected_li{
             color: #48cfad;
         }
 
@@ -1072,6 +1073,7 @@ h1 /* main logo */ {
 
     .con_main{
         width: 100%;
+        position: relative;
         min-width:960px;
         background: #fcfcfc;
         height:auto;
@@ -1266,11 +1268,11 @@ h1 /* main logo */ {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.5);
     border-radius: 5px;
     background:#fff;
     overflow: hidden;
-    margin: 40px;
+    margin: 15px;
 }
 #comment_my_pic {
     width:50px;
@@ -1495,6 +1497,10 @@ h1 /* main logo */ {
                     margin-top: 8px;
                     margin-left: 7px;
                     font-size: 17px;
+                }
+                .artist_menu_list ul li a{
+                    color: #aaaaaa;
+                    font-weight: 200;
                 }
     .artist_top_info {
         position: relative;

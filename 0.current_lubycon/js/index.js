@@ -355,15 +355,14 @@ $(function(){
 /////////////////////////////////////////////////////////
 $(document).ready(function(){  
     $(document).scroll(function () {
-        var stickyStart = $("#main_header").height() + $("#main_figure").height();
+        var stickyStart = $("#main_header").height() + $("#navsel").height() + $("#nav_guide").height();
         if($("#navsel").length == 0){
-                stickyStart -= 50;
+                stickyStart -= $("#navsel").height();
         }else{
             stickyStart;
         }
         var scrollEnd = $(document).height() - $(window).height();
         var bannerPosition = $(".con_aside").height() - $("#navsel").height();
-        var afterHeight = $(window).height() - 100;
 
         if($(document).find(".con_aside") && $(".con_aside").attr("id") != "editor_aside"){ 
             
@@ -372,8 +371,6 @@ $(document).ready(function(){
                 console.log("sticky start");
             }
             else if($(document).scrollTop() == scrollEnd){
-                $(".con_aside").height = afterHeight;
-                $(".con_aside").css({"top": "50px"});
                 console.log("sticky bottom end");
             }
             else if($(document).scrollTop() < stickyStart){
@@ -406,16 +403,16 @@ $(function(){
 $(document).scroll(function (){
     if($("#nav_guide").length != 0){
         var nav_guide = $("#nav_guide");
-        var sticky_start = $("#main_header").height() + $("#main_figure").height();
+        var sticky_start = $("#main_figure").height() + $("#navsel").height();
         var contents_y = nav_guide.height();
         if($("#navsel").length == 0){
-            sticky_start -= 50;
+            sticky_start -= $("#navsel").height();
         }else{
             sticky_start;
         }
 
         
-        if ($(document).scrollTop() >= sticky_start){
+        if ($(document).scrollTop() > sticky_start){
             $("#main_header").css({"box-shadow": "0px 0px 0px 0px rgba(0,0,0,0.5)"});
             nav_guide.css({ "position": "fixed", "top": "50px", "z-index": "4", "box-shadow": "0px 3px 7px rgba(0,0,0,0.3)" });
             nav_guide.next().css({"top": contents_y});
@@ -708,45 +705,40 @@ function hideAlert2(){
 //      alert event end
 /////////////////////////////////////////////////////////
 /*----------------------------contents page----------------------------*/
-
-
-/*----------------------------start personal page----------------------------*/
-
 /////////////////////////////////////////////////////////
-//      personal page subnav hover and ajax
+//      lubySelectbox action start
 /////////////////////////////////////////////////////////
-$(function () {
-    $(".contents_bt").each(function(){
+$(function(){
+    $(".lubySelector").each(function(){
         var toggle_count = 0;
        
         $(this).click(function(){
             console.log(toggle_count);
             switch(toggle_count){
                 case 0 :
-                    $(this).find($(".subnav_list")).stop().fadeIn(300);
+                    $(this).find($(".lubySelector_list")).stop().fadeIn(300);
                     $(this).css("background","#333333");
-                    $(this).find($(".subnav_arrow")).children("i").attr("class","fa fa-caret-up");
+                    $(this).find($(".lubySelector_arrow")).children("i").attr("class","fa fa-caret-up");
                     toggle_count = 1;
                     return false;
                 break;
 
                 case 1 :
-                    $(this).find($(".subnav_list")).stop().fadeOut(300);
+                    $(this).find($(".lubySelector_list")).stop().fadeOut(300);
                     $(this).css("background","#555555");
-                    $(this).find($(".subnav_arrow")).children("i").attr("class","fa fa-caret-down");
+                    $(this).find($(".lubySelector_arrow")).children("i").attr("class","fa fa-caret-down");
                     toggle_count = 0;
                     return false;
                 break;
             };//switch end
         });//click end
-        //-------------------------------selectbox fadeOut event-----------------------------//
         $(this).mouseleave(function(){
             $(document).click(function (event) {
                 event = event || window.event//for IE
-                if (!$(event.target).hasClass("contents_bt")) {
-                    $(this).find($(".subnav_list")).stop().fadeOut(300);
-                    $(".contents_bt").css("background","#555555");
-                    $(this).find($(".subnav_arrow")).children("i").attr("class","fa fa-caret-down");
+                if (!$(event.target).hasClass("lubySelector")) {
+                    $(this).find($(".lubySelector_list")).stop().fadeOut(300);
+                    $(".lubySelector").css("background","#555555");
+                    $(this).find($(".lubySelector_arrow")).children("i").attr("class","fa fa-caret-down");
                     toggle_count = 0;
                     return true;
                 }//if end
@@ -755,10 +747,26 @@ $(function () {
                 }//else end
             });//click end
         });//mouseleave end
-        //-------------------------------selectbox fadeOut event-----------------------------//
+        $(this).find($(".lubySelector_list li")).click(function (event){
+            event = event || window.event
+            var selected_v = $(event.target).text();
+            $(event.target).parent().siblings(".lubySelector_selected").text(selected_v);
+            $(event.target).siblings("li").removeClass();
+            $(event.target).addClass("selected_li");
+        });
     });//each end
+});
 
+/////////////////////////////////////////////////////////
+//      lubySelectbox action end
+/////////////////////////////////////////////////////////
 
+/*----------------------------start personal page----------------------------*/
+
+/////////////////////////////////////////////////////////
+//      personal page subnav hover and ajax
+/////////////////////////////////////////////////////////
+$(function () {
     $('document').ready(function () {
         if ($('.personal').attr('class') == 'personal con_main') {
             var id = four_param;

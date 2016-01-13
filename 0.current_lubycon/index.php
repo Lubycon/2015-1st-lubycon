@@ -198,7 +198,6 @@
         <input type="text" id="main_search_text" value="Enter the Keyword" />
 
         <button id="main_search_btn" class="out">
-            <i class="fa fa-caret-left"></i>
             <i class="fa fa-search"></i>
         </button>
 
@@ -209,7 +208,7 @@
                 <option value="Designer">Artists</option>
                 <option value="Community">Community</option>
             </select>
-            <span class="subnav_arrow"><i class="fa fa-caret-down"></i></span>
+            <span class="lubySelector_arrow"><i class="fa fa-caret-down"></i></span>
         </div>
         <!-- end select_box -->
     </div>

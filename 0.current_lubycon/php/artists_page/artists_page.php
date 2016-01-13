@@ -11,12 +11,12 @@
 <section id="contents">
     <section id="nav_guide">
         <div class="subnav_box">
-            <div class="contents_bt">
+            <div class="lubySelector">
                 <span class="global_icon">
                     <img src="./ch/img/grobal_icon.png" width="24" height="24" /></span>
-                <span class="subnav_selected">All Continents</span>
-                <span class="subnav_arrow"><i class="fa fa-caret-down"></i></span>
-                <ul class="subnav_list">
+                <span class="lubySelector_selected">All Continents</span>
+                <span class="lubySelector_arrow"><i class="fa fa-caret-down"></i></span>
+                <ul class="lubySelector_list">
                     <li>All Continents</li>
                     <li>Africa</li>
                     <li>Asia</li>
@@ -27,11 +27,11 @@
                 </ul>
             </div>
         </div>
-        <div class="contents_bt">
+        <div class="lubySelector">
             <span class="global_icon"><i class="fa fa-filter"></i></span>
-            <span class="subnav_selected">All</span>
-            <span class="subnav_arrow"><i class="fa fa-caret-down"></i></span>
-            <ul class="subnav_list">
+            <span class="lubySelector_selected">All</span>
+            <span class="lubySelector_arrow"><i class="fa fa-caret-down"></i></span>
+            <ul class="lubySelector_list">
                 <li class="selected_li">All</li>
                 <li>Most Like</li>
                 <li>Most Download</li>
@@ -44,7 +44,7 @@
                     <option value="Title">Name</option>
                     <option value="Designer">Country</option>
                 </select>
-                <span class="subnav_arrow"><i class="fa fa-caret-down"></i></span>
+                <span class="lubySelector_arrow"><i class="fa fa-caret-down"></i></span>
             </div>
             <input type="text" id="sub_search_text" value="Enter the Keyword" />
             <button id="sub_search_btn">
@@ -65,13 +65,13 @@
                     $language2 = "language2";
                     
                 ?>
-                <i id="myinfo_setting" class="fa fa-gear"></i>
+                <i id="myinfo_setting" class="fa fa-bars"></i>
                 <div id="myinfo_menu_list">
                     <ul>
-                        <li><i class="fa fa-eye"></i>View Contents</li>
-                        <li><i class="fa fa-bar-chart"></i>View Insight</li>
-                        <li><i class="fa fa-user-plus"></i>Follow</li>
-                        <li><i class="fa fa-fa fa-envelope-o"></i>Message to artist</li>
+                        <li><a href="./index.php?1=personal_page&2=personal_page&3=main&4=my_contents"><i class="fa fa-eye"></i>My Contents</a></li>
+                        <li><a href="./index.php?1=personal_page&2=personal_page&3=main&4=insight"><i class="fa fa-bar-chart"></i>My Insight</a></li>
+                        <li><a href="./index.php?1=personal_page&2=personal_page&3=main&4=#"><i class="fa fa-user-plus"></i>Followers</a></li>
+                        <li><a href="./index.php?1=personal_page&2=personal_page&3=main&4=#"><i class="fa fa-fa fa-envelope-o"></i>My Message</a></li>
                     </ul>
                 </div>
                 <div id="myinfo_main">

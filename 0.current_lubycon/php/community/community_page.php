@@ -29,11 +29,11 @@
     <section id="nav_guide">
     
         <div class="subnav_box">
-            <div class="contents_bt">
+            <div class="lubySelector">
                 <span class="global_icon"><i class="fa fa-filter"></i></span>
-                <span class="subnav_selected">Featured</span>
-                <span class="subnav_arrow"><i class="fa fa-caret-down"></i></span>
-                <ul class="subnav_list">
+                <span class="lubySelector_selected">Featured</span>
+                <span class="lubySelector_arrow"><i class="fa fa-caret-down"></i></span>
+                <ul class="lubySelector_list">
                     <li class="selected_li">Featured</li>
                     <li>Recent</li>
                     <li>Most Like</li>
@@ -41,11 +41,11 @@
                     <li>Most Comment</li>
                 </ul>
             </div>
-            <div class="contents_bt">
+            <div class="lubySelector">
                 <span class="global_icon"><i class="fa fa-globe"></i></span>
-                <span class="subnav_selected">English</span>
-                <span class="subnav_arrow"><i class="fa fa-caret-down"></i></span>
-                <ul class="subnav_list">
+                <span class="lubySelector_selected">English</span>
+                <span class="lubySelector_arrow"><i class="fa fa-caret-down"></i></span>
+                <ul class="lubySelector_list">
                     <li class="selected_li">English</li>
                     <li>Korean</li>
                     <li>Japanese</li>
@@ -53,11 +53,11 @@
                     <li>French</li>
                 </ul>
             </div>
-            <div class="contents_bt">
+            <div class="lubySelector">
                 <span class="global_icon"><i class="fa fa-bars"></i></span>
-                <span class="subnav_selected">20 Contents</span>
-                <span class="subnav_arrow"><i class="fa fa-caret-down"></i></span>
-                <ul class="subnav_list">
+                <span class="lubySelector_selected">20 Contents</span>
+                <span class="lubySelector_arrow"><i class="fa fa-caret-down"></i></span>
+                <ul class="lubySelector_list">
                     <li class="selected_li">20 Contents</li>
                     <li>30 Contents</li>
                     <li>40 Contents</li>
@@ -71,7 +71,7 @@
                         <option value="Subject">Subject</option>
                         <option value="Writer">Writer</option>
                     </select>
-                <span class="subnav_arrow"><i class="fa fa-caret-down"></i></span>
+                <span class="lubySelector_arrow"><i class="fa fa-caret-down"></i></span>
                 </div>
                 <input type="text" id="sub_search_text" value="Enter the Keyword" />
                 <button id="sub_search_btn">

@@ -1,8 +1,8 @@
-<div class="contents_bt" id="category_bt">
+<div class="lubySelector" id="category_bt">
     <span class="global_icon"><i class="fa fa-filter"></i></span>
-    <span class="subnav_selected">All categories</span>
-    <span class="subnav_arrow"><i class="fa fa-caret-down"></i></span>
-    <ul class="subnav_list" id="category_list">
+    <span class="lubySelector_selected">All categories</span>
+    <span class="lubySelector_arrow"><i class="fa fa-caret-down"></i></span>
+    <ul class="lubySelector_list" id="category_list">
         <li class="selected_li">All categories</li>
         <span class="spline"><p>A</p><hr></span>
         <li>Animation</li>

@@ -67,6 +67,38 @@
         </ul>
     </section>  <!-- end nav_guide -->
     <section id="post_box" class="con_wrap">
+        <div id="post_banner" class="con_aside">
+            <?php 
+                $username = "Admin_User";
+                $userjob = "Job";
+                $usercity = "City";
+                $usercountry = "Country";
+                $language1 = "language1";
+                $language2 = "language2";
+                
+            ?>
+            <div id="author_main">
+                <figure>
+                    <img src="./ch/img/no_img/no_img_user1.jpg">
+                </figure>
+                <h4><?=$username?></h4>
+            </div>
+            <div id="author_sub">
+                <article class="author_wrap" id="author_job">
+                    <i class="fa fa-suitcase"></i>
+                    <p class="author_name" id="job_name"><?=$userjob?></p>
+                </article>
+                <article class="author_wrap" id="author_location">
+                    <i class="fa fa-home"></i>
+                    <p class="author_name" id="location_name"><?=$usercity?>, <?=$usercountry?></p>
+                </article>
+                <article class="author_wrap" id="author_language">
+                    <i class="fa fa-language"></i>
+                    <p class="author_name" id="language_name"><?=$language1?>, <?=$language2?></p>
+                </article>
+            </div>
+            <button id="my_page_bt">My Page</button>
+        </div><!--end con_aside-->
         <section id="post_section" class="con_main">
             <article id="post_contents">
                 <p>
@@ -103,21 +135,6 @@
                 </div>
             </article>
         </section><!-- end post_section -->
-        <aside id="post_banner" class="con_aside">
-            <div id="profile_pic">
-                <figure id="img_mask">
-                    <img src="./ch/img/no_img/no_img_user1.jpg">
-                </figure>
-            </div>
-            <h4><?=$username?></h4>
-            <h5 class="designer_job"><?=$userjob?></h5>
-            <h6><i class="fa fa-home"></i><?=$usercity?>, <?=$usercountry?></h6>
-            <div id="designer_follow"><i class="fa fa-user-plus"></i></div>
-            <div id="share_box">
-                <div id="share_face" class="share_bt"><i class="fa fa-facebook"></i></div>
-                <div id="share_google" class="share_bt"><i class="fa fa-google-plus"></i></div>
-            </div>
-        </aside>    <!-- end post_banner -->
     </section>  <!-- end post_box -->
     <?php
         include("main_board.php");

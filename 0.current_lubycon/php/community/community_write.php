@@ -1,4 +1,4 @@
-﻿<div class="main_figure_wrap">
+<div class="main_figure_wrap">
     <figure id="main_figure">
         <div class="dark_overlay_small"></div>
         <h2>COMMUNITY</h2>
@@ -28,7 +28,7 @@
 
     <section id="nav_guide"></section>  <!-- end nav_guide -->
 
-    <section id="work_space">
+    <section id="work_space" class="con_wrap">
         <div id="work_inner">
             <div class="properties_box">
                 <p class="work_title">Title</p>

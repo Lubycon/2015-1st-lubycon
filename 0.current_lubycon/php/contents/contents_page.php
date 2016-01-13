@@ -36,22 +36,22 @@
                     case "3d" : include_once("php/sub_nav/categories/category_3d.php"); break;
                 }
             ?>
-            <div class="contents_bt">
+            <div class="lubySelector">
                 <span class="global_icon"><i class="fa fa-usd"></i></span>
-                <span class="subnav_selected">All</span>
-                <span class="subnav_arrow"><i class="fa fa-caret-down"></i></span>
-                <ul class="subnav_list">
+                <span class="lubySelector_selected">All</span>
+                <span class="lubySelector_arrow"><i class="fa fa-caret-down"></i></span>
+                <ul class="lubySelector_list">
                     <li class="selected_li">All</li>
                     <li>Free</li>
                     <li>Free for personal</li>
                     <li>Paid</li>
                 </ul>
             </div><!--pay selector end-->
-            <div class="contents_bt">
+            <div class="lubySelector">
                 <span class="global_icon"><i class="fa fa-filter"></i></span>
-                <span class="subnav_selected">Featured</span>
-                <span class="subnav_arrow"><i class="fa fa-caret-down"></i></span>
-                <ul class="subnav_list">
+                <span class="lubySelector_selected">Featured</span>
+                <span class="lubySelector_arrow"><i class="fa fa-caret-down"></i></span>
+                <ul class="lubySelector_list">
                     <li class="selected_li">Featured</li>
                     <li>Recent</li>
                     <li>Most Like</li>
@@ -67,7 +67,7 @@
                         <option value="Designer">Designer</option>
                         <option value="Tag">Tag</option>
                     </select>
-                <span class="subnav_arrow"><i class="fa fa-caret-down"></i></span>
+                <span class="lubySelector_arrow"><i class="fa fa-caret-down"></i></span>
                 </div>
                 <input type="text" id="sub_search_text" value="Enter the Keyword" />
                 <button id="sub_search_btn">
