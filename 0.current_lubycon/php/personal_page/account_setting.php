@@ -6,7 +6,7 @@
     <section id="account_setting_section" class="setting_card">
         <p class="setting_title">Account Setting</p>
         <form class="setting_form">
-            <label>E-mail</label><input type="text" value="asshole_zepot@gmail.com" disabled />
+            <label>E-mail</label><input type="text" value="loremIpsum@lubycon.com" disabled />
             <div class="pubilc_option">
                 <i class="fa fa-lock"></i>
                 <select class="basic_filter">
@@ -17,7 +17,7 @@
             </div>
             <!-- end select box -->
             <br />
-            <label>Nickname</label><input type="text" value="asshole_zepot" disabled /><br />
+            <label>Nickname</label><input type="text" value="loremIpsum" disabled /><br />
             <label>Passward</label><input type="password" name="now_pass" id="now_pass_id" disabled /><i></i><span id="Change_pass">Change Passward</span><br />
             <p id="now_pass_check" class="form_check"></p>
             <label>New Passward</label><input type="password" name="pass" id="pass_id" disabled /><i></i><br />
@@ -33,7 +33,7 @@
         <form class="setting_form">
             <label>Profile Photo</label>
             <input type="text" id="file_text" disabled="disabled" />
-            <span id="file_bt">Find the file</span>
+            <span id="file_bt">Find the image</span>
             <input type="file" id="file_hide" accept="image/*" />
             <br />
             <img id="img_preview" />

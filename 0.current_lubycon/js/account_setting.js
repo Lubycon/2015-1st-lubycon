@@ -1,6 +1,6 @@
 $(function () //account setting script
 {
-    var i = 2;
+    
 
     $('#Change_pass').click(function () //change pass remove attr
     {
@@ -69,33 +69,40 @@ $(function () //account setting script
 
     });
     */
-
+    var i = 1;
 
     $('#lang_plus').click(function () //clone language div and change id
     {
-        $("#clone_div").append('<div id="lang_clone"></div>');
-        $("#lang_clone").append('<label>&nbsp;</label>');
-        $('#lang_input_id').clone(true).appendTo('#lang_clone');
-        $('#lang_option_id').clone(true).appendTo('#lang_clone');
-        $("#lang_clone").append('<span id="lang_minus_id" class="lang_minus"><i class="fa fa-minus-circle"></i></span>');
-        $('#lang_public_id').clone(true).appendTo('#lang_clone');
+        if(i < 4){
+            $("#clone_div").append('<div id="lang_clone"></div>');
+            $("#lang_clone").append('<label>&nbsp;</label>');
+            $('#lang_input_id').clone(true).appendTo('#lang_clone');
+            $('#lang_option_id').clone(true).appendTo('#lang_clone');
+            $("#lang_clone").append('<span id="lang_minus_id" class="lang_minus"><i class="fa fa-minus-circle"></i></span>');
+            $('#lang_public_id').clone(true).appendTo('#lang_clone');
 
 
-        $('#lang_clone > #lang_input_id').attr('id', 'lang_input_' + i);
-        $('#lang_clone > #lang_option_id').attr('id', 'lang_option_' + i);
-        $('#lang_clone > #lang_public_id').attr('id', 'lang_public_' + i);
-        $('#lang_clone > #lang_minus_id').attr('id', 'lang_minus_' + i);
+            $('#lang_clone > #lang_input_id').attr('id', 'lang_input_' + i);
+            $('#lang_clone > #lang_option_id').attr('id', 'lang_option_' + i);
+            $('#lang_clone > #lang_public_id').attr('id', 'lang_public_' + i).css("margin-left","70px");
+            $('#lang_clone > #lang_minus_id').attr('id', 'lang_minus_' + i);
 
-        $("#lang_clone").append('<br/>');
+            $("#lang_clone").append('<br/>');
 
-        $('#clone_div > #lang_clone').attr('id', 'lang_clone_' + i);
-        i++; //int plus
+            $('#clone_div > #lang_clone').attr('id', 'lang_clone_' + i);
+            i++; //int plus
+        }
+        else{
+            alert("Sorry, You can not add language more than 4 things.");
+            i = i;
+            return true;
+        }
     });
 
     $(document).on("click", ".lang_minus", function () {
         $(this).parent().remove();
+        i--; //int minus
         // clone div remove
-
     });
 
 });

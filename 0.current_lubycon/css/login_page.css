@@ -3,7 +3,7 @@
 /****************************css reset start***********************************************************/
 body
 {
-	background: #fafafa;
+	background: #282828;
 	min-width: 1200px;
 }
 body,h1,h2,h3,h4,h5,h6,div,p,ul,ol,dl,li,dt,dd,address,figure, nav, section, header, footer
@@ -51,36 +51,26 @@ form
 }
 
 #intro_wrap {
-	margin-top: 30px;
+
 }
 	#logo_lubycon {
 		margin: 0px auto;
-		width: 100px;
+		width: 290px;
 		height: 100px;
 		overflow: hidden;
 		background: url(../ch/img/logo/lubycon_logo.svg) no-repeat;
-		background-size: 500px;
-	}
-	#intro_p {
-		text-align: center;
-		height: 20px;
-		margin-top: 40px;
-		font-size: 30px;
-		font-weight: 200;
+		background-size: 300px;
 	}
 
 
 
 #login_box {
     position: relative;
-    width: 550px;
+    width: 400px;
     margin: 0px auto;
-    margin-top: 40px;
+    margin-top: 70px;
     padding: 20px;
-    background: #444444;
-    border: 1px solid #222222;
-    border-radius: 5px;
-    box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.5);
+    background: #282828;
     z-index: 1;
     overflow: hidden;
     cursor: default;
@@ -96,7 +86,7 @@ form
 #login_input {
     width: 330px;
     position: relative;
-    border: 1px solid #222222;
+    border: 1px solid #1e1e1e;
     border-radius: 5px;
     overflow: hidden;
     margin: 0px auto;
@@ -106,21 +96,23 @@ form
 #login_id, #login_pass {
     width: 100%;
     height: 45px;
-    color: #666666;
+    color: #dddddd;
+    font-weight: 200;
+    background: #222222;
     border: none;
-    padding-left: 10px;
+    padding-left: 40px;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
 }
 	#login_id {
-		border-bottom: 1px solid #aaaaaa;
+		border-bottom: 1px solid #1e1e1e;
 	}
 
 #login_input > #email_icon, #pass_icon {
     position: absolute;
-    color: #b1b1b1;
-    right: 20px;
+    color: #dddddd;
+    left: 13px;
     margin-top: 12px;
     font-size: 17px;
 }
@@ -131,12 +123,11 @@ form
     line-height: 48px;
     
     margin: 0px auto;
-    margin-top: 15px;
-    border-radius: 5px;
-    border:none;
-    box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.5);
+    margin-top: 25px;
+    border-radius: 50px;
+    border: 1px solid #dddddd;
     
-    background: #48cfad;
+    background: none;
     text-align: center;
     color: #fff;
     font-size: 20px;
@@ -147,6 +138,10 @@ form
 	#login_lubycon i{
 		margin-top: 14px;
 	}
+#login_lubycon:hover {
+    border: 1px solid #87ead1;
+    color: #84ead1;
+}
 
 #login_submit {
     position: relative;
@@ -154,38 +149,50 @@ form
     margin: 0px auto;
     overflow: hidden;
     text-align: right;
-    margin-top: 15px;
+    margin-top: 45px;
     margin-bottom: 15px;
 }
-
-#login_box #login_facebook, #login_google {
-    width: 159px;
-    height: 38px;
-    line-height: 38px;
-    border: none;
-    margin: 0px 2px;
-    padding: 0px;
-    text-align: center;
-    color: #fff;
-    overflow: hidden;
-    border-radius: 3px;
-    box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.5);
-}
-
-#login_box #login_facebook {
-    background: #003366;
-    vertical-align: top;
-}
-    #login_box #login_facebook span{
+    #loginWith_title {
+        height: 25px;
+        line-height: 25px;
+        padding-bottom: 2px;
+        margin-bottom: 10px; 
+        color: #777777;
+        border-bottom: 1px solid #777777;
         font-weight: 200;
+        text-align: left;
+    }
+    #login_box #login_facebook, #login_google {
+        width: 159px;
+        height: 38px;
+        line-height: 38px;
+        border: none;
+        margin: 0px 2px;
+        padding: 0px;
+        text-align: center;
+        color: #fff;
+        overflow: hidden;
+        border-radius: 50px;
     }
 
-#login_box #login_google {
-    background: #dc4e41;
-}
-    #login_box #login_google span{
-        font-weight: 200;
+    #login_box #login_facebook {
+        color: #ffffff;
+        background: none;
+        border: 1px solid #ffffff;
+        vertical-align: top;
     }
+        #login_box #login_facebook span{
+            font-weight: 200;
+        }
+
+    #login_box #login_google {
+        color: #ffffff;
+        background: none;
+        border: 1px solid #ffffff;
+    }
+        #login_box #login_google span{
+            font-weight: 200;
+        }
 
 
 #login_box .fa-facebook, #login_box .fa-google-plus {
@@ -201,16 +208,18 @@ form
     top: 4px;
     left: 25px;
 }
+#login_box .fa-google-plus {
 
+}
 
 
 
 
 #forgot_pass {
-	width: 550px;
+	width: 330px;
     height: 22px;
     line-height: 22px;
-    color: #444444;
+    color: #777777;
     font-size: 14px;
     font-weight: 400;
     border-radius: 2px;
@@ -262,13 +271,14 @@ form
     #create_account_area #account_title {
         height: 35px;
         line-height: 35px;
-        background: #222;
-        text-align: center;
-        color: #fff;
-        font-size: 22px;
-        font-weight: 200;
-        border-top-right-radius: 3px;
-        border-top-left-radius: 3px;
+        background: none;
+        text-align: left;
+        color: #444444;
+        font-size: 25px;
+        padding-left: 10px;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
     }
 
     #create_account_area #account_box {

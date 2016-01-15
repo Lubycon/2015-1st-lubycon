@@ -109,7 +109,7 @@ $(function(){
     $('.animate_scale').hover(function (e){
         $(this).stop().animate({ width: "+=3", height: "+=3", right: "-=1.5", top: "-=1.5" }, 150);
     }, function(){
-         $(this).stop().nimate({ width: "-=3", height: "-=3", right: "+=1.5", top: "+=1.5" }, 150);
+         $(this).stop().animate({ width: "-=3", height: "-=3", right: "+=1.5", top: "+=1.5" }, 150);
     });
 });//scale animation end
 $(function(){
@@ -815,7 +815,7 @@ $(function () {
                 }
             });
         }//if end
-    });;;;;;
+    });
 
     $("#subnav li").click(function (){       
         var id = $(this).attr('id');

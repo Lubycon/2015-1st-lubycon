@@ -4,12 +4,18 @@
     padding-left: 275px !important;
 }
 
+#confirm_alert {
+    width: 400px;
+    height: 200px;
+}
+
 #account_section{
     width: 100%;
     text-align: left;
 }
     .setting_card{
         width:100%;
+        background: #ffffff;
         border:1px solid #dadada;
         margin-bottom:20px;
         padding:15px 20px;
@@ -18,6 +24,7 @@
         width:100%;
         margin-bottom:30px;
         font-size:25px;
+        color: #444444;
     }
     .setting_form{
         padding-left:60px;
@@ -28,7 +35,7 @@
             height: 30px;
             line-height: 30px;
             margin-bottom:20px;
-            color:#828282;
+            color:#444444;
         }
         .setting_form input{
             width: 190px;
@@ -114,12 +121,12 @@
         background:none;
         position: absolute;
         margin-top: 7px;
-        margin-left: 22px;
+        margin-left: 25px;
         cursor:pointer;
     }
     .lang_minus i{
         font-size:23px;
-        color:#ea4126;
+        color:#ec6446;
         vertical-align:middle;
     }
     #delete_desc{
