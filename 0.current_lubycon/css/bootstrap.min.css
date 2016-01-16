@@ -3237,6 +3237,10 @@ select[multiple].input-lg, textarea.input-lg {
     background-image: none;
     border: 1px solid transparent;
     border-radius: 4px;
+    color: #FFF;
+    background: #404040 none repeat scroll 0% 0%;
+    margin: 5px 10px;
+    font-size: 15px;
 }
 
     .btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {
