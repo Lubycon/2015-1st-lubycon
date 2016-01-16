@@ -1,67 +1,73 @@
 /*-------------------------json loader start-------------------------------*/
 ////////////import data start
+var likeChart;
+var viewChart;
+var upChart;
+var downChart;
 
-    var likedata = [];
-    var likedata_loader = 
-    $.getJSON("js/chart/data/likedata.json", function(data) {
-        $.each(data, function(i, v) {
-            //console.log("date :" + v["date"] +", "+ "value :" + v["value"]);
-            likedata.push({
-                date: v["date"],
-                value: v["value"]
-            });
+var likedata = [];
+var likedata_loader = 
+$.getJSON("js/chart/data/likedata.json", function(data) {
+    $.each(data, function(i, v) {
+        //console.log("date :" + v["date"] +", "+ "value :" + v["value"]);
+        likedata.push({
+            date: v["date"],
+            value: v["value"]
         });
-        console.log("loaded likedata");  
     });
+    console.log("loaded likedata"); 
+    success : likeChart(); console.log("likeChart complete");
+     
+});
 
-    var viewdata = [];
-    var viewdata_loader = 
-    $.getJSON("js/chart/data/viewdata.json", function(data) {
-        $.each(data, function(i, v) {
-            //console.log("date :" + v["date"] +", "+ "value :" + v["value"]);
-            viewdata.push({
-                date: v["date"],
-                value: v["value"]
-            });
+var viewdata = [];
+var viewdata_loader = 
+$.getJSON("js/chart/data/viewdata.json", function(data) {
+    $.each(data, function(i, v) {
+        //console.log("date :" + v["date"] +", "+ "value :" + v["value"]);
+        viewdata.push({
+            date: v["date"],
+            value: v["value"]
         });
-        console.log("loaded viewdata");  
     });
+    console.log("loaded viewdata"); 
+    success : viewChart(); console.log("viewChart complete");
+     
+});
 
-    var updata = [];
-    var updata_loader = 
-    $.getJSON("js/chart/data/updata.json", function(data) {
-        $.each(data, function(i, v) {
-            //console.log("date :" + v["date"] +", "+ "value :" + v["value"]);
-            updata.push({
-                date: v["date"],
-                value: v["value"]
-            });
+var updata = [];
+var updata_loader = 
+$.getJSON("js/chart/data/updata.json", function(data) {
+    $.each(data, function(i, v) {
+        //console.log("date :" + v["date"] +", "+ "value :" + v["value"]);
+        updata.push({
+            date: v["date"],
+            value: v["value"]
         });
-        console.log("loaded updata");  
     });
+    console.log("loaded updata");
+    success : upChart(); console.log("upChart complete");
+      
+});
 
-    var downdata = [];
-    var downdata_loader = 
-    $.getJSON("js/chart/data/downdata.json", function(data) {
-        $.each(data, function(i, v) {
-            //console.log("date :" + v["date"] +", "+ "value :" + v["value"]);
-            downdata.push({
-                date: v["date"],
-                value: v["value"]
-            });
+var downdata = [];
+var downdata_loader = 
+$.getJSON("js/chart/data/downdata.json", function(data) {
+    $.each(data, function(i, v) {
+        //console.log("date :" + v["date"] +", "+ "value :" + v["value"]);
+        downdata.push({
+            date: v["date"],
+            value: v["value"]
         });
-        console.log("loaded downdata");  
     });
-    ////////////import data end
-    /*-------------------------json loader end-------------------------------*/
-    /*-------------------------make chart start-------------------------------*/
-$(document).ready(function(){
-    var likeChart;
-    var viewChart;
-    var upChart;
-    var downChart;
-    
-/*---------------------------------------------------------------------------------------------------------------------------*/   
+    console.log("loaded downdata");  
+    success: downChart(); console.log("downChart complete");
+});
+////////////import data end
+/*-------------------------json loader end-------------------------------*/
+/*-------------------------make chart start-------------------------------*/ 
+/*---------------------------------------------------------------------------------------------------------------------------*/
+function likeChart(){
     likeChart = AmCharts.makeChart("chartdiv1", {
         "type": "serial",
         "theme": "likeChart",
@@ -137,7 +143,15 @@ $(document).ready(function(){
         },
         "dataProvider": likedata
     });
-/*---------------------------------------------------------------------------------------------------------------------------*/   
+    likeChart.addListener("rendered", zoomChart);
+    zoomChart();
+    function zoomChart(){
+        likeChart.zoomToIndexes(likeChart.dataProvider.length - 40, likeChart.dataProvider.length - 1);
+    };    
+};   
+    
+/*---------------------------------------------------------------------------------------------------------------------------*/
+function viewChart(){
     viewChart = AmCharts.makeChart("chartdiv2", {
         "type": "serial",
         "theme": "viewChart",
@@ -213,7 +227,14 @@ $(document).ready(function(){
         },
         "dataProvider": viewdata
     });
-
+    viewChart.addListener("rendered", zoomChart);
+    zoomChart();
+    function zoomChart(){
+        viewChart.zoomToIndexes(viewChart.dataProvider.length - 40, viewChart.dataProvider.length - 1);
+    }
+}; 
+/*---------------------------------------------------------------------------------------------------------------------------*/
+function upChart(){
     upChart = AmCharts.makeChart("chartdiv3", {
         "type": "serial",
         "theme": "upChart",
@@ -289,7 +310,14 @@ $(document).ready(function(){
         },
         "dataProvider": updata
     });
-/*---------------------------------------------------------------------------------------------------------------------------*/   
+    upChart.addListener("rendered", zoomChart);
+    zoomChart();
+    function zoomChart(){
+        upChart.zoomToIndexes(viewChart.dataProvider.length - 40, upChart.dataProvider.length - 1);
+    }
+} 
+/*---------------------------------------------------------------------------------------------------------------------------*/
+function downChart(){
     downChart = AmCharts.makeChart("chartdiv4", {
         "type": "serial",
         "theme": "downChart",
@@ -365,24 +393,16 @@ $(document).ready(function(){
         },
         "dataProvider": downdata
     });
-    /*-------------------------make chart end-------------------------------*/
-
-
-
-    likeChart.addListener("rendered", zoomChart);
-    viewChart.addListener("rendered", zoomChart);
-    upChart.addListener("rendered", zoomChart);
     downChart.addListener("rendered", zoomChart);
-
     zoomChart();
-
     function zoomChart(){
-        likeChart.zoomToIndexes(likeChart.dataProvider.length - 40, likeChart.dataProvider.length - 1);
-        viewChart.zoomToIndexes(viewChart.dataProvider.length - 40, viewChart.dataProvider.length - 1);
-        upChart.zoomToIndexes(upChart.dataProvider.length - 40, upChart.dataProvider.length - 1);
-        downChart.zoomToIndexes(downChart.dataProvider.length - 40, downChart.dataProvider.length - 1);
+        downChart.zoomToindexes(downChart.dataProvider.length - 40, downChart.dataProvider.length - 1);
     }
+};   
+/*-------------------------make chart end-------------------------------*/
+
 /*------------------------------------------select chart action start------------------------------------------------*/
+$(document).ready(function(){
     var chart_icon = $("#chart_icon");
     var chart_name = $("#chart_name");
     var chartboxes = $(".chartboxes");
