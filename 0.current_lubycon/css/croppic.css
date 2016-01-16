@@ -13,12 +13,27 @@
 				background-repeat: no-repeat;
 				background-position: center;
 			}
-			
+			#croppic_account{
+				width: 100px;
+                height: 100px;
+                position: relative;
+                background: #000;
+                padding: 50px;
+			}
 			/* DO NOT CHANGE FROM HERE ( unless u know what u are doing) */
 			.cropImgWrapper{
 				cursor: -webkit-grab;
 				cursor: grab;
 			}
+            #croppic_account .cropImgWrapper 
+            {
+                border-radius: 50%;
+            }
+            #croppic_account .croppedImg 
+            {
+                border-radius: 50%;
+            }
+
 			.cropImgWrapper:active{
 				cursor: -webkit-grabbing;
 				cursor: grabbing;
