@@ -76,8 +76,6 @@
     echo "<br/><br/>-------------contents description--------------<br/>";
 
     echo "<br/>-------------text editor html--------------<br/><br/>";
-
-    $text_editor = $_POST['file'];
     
     echo htmlspecialchars($_POST['text_editor']);
     
