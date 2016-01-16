@@ -24,7 +24,7 @@
 		  $filename = $_FILES["img"]["tmp_name"];
 		  list($width, $height) = getimagesize( $filename );
 
-		  move_uploaded_file($filename,  $imagePath . $_FILES["img"]["name"]);
+		  move_uploaded_file($filename,"../../" . $imagePath . $_FILES["img"]["name"]); //edit this path
 
 		  $response = array(
 			"status" => 'success',

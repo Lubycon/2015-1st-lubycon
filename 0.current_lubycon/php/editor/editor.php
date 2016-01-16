@@ -99,12 +99,12 @@
                     <script src="./js/croppic.min.js"></script>
                     <script>
 		                var croppicHeaderOptions = {
-				                uploadUrl:'img_save_to_file.php',
+				                uploadUrl:'./php/img_crop/img_save_to_file.php',
 				                cropData:{
 					                "dummyData":1,
 					                "dummyData2":"asdas"
 				                },
-				                cropUrl:'img_crop_to_file.php',
+				                cropUrl:'./php/img_crop/img_crop_to_file.php',
 				                customUploadButtonId:'cropContainerHeaderButton',
 				                modal:false,
 				                loaderHtml:'<div class="loader bubblingG"><span id="bubblingG_1"></span><span id="bubblingG_2"></span><span id="bubblingG_3"></span></div> ',

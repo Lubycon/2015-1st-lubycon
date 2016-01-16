@@ -4,8 +4,10 @@
 				position: absolute;  /* MANDATORY */
                 left: 1px;
                 top: 1px;
+
                 border-top-right-radius: 5px;
                 border-top-left-radius: 5px;
+                overflow:hidden;
 
 				background-image: url(../img/placeholder.png);
 				background-repeat: no-repeat;
@@ -54,7 +56,7 @@
 				float:left;
 				margin:0;
 				cursor:pointer;
-				background-image:url('../img/cropperIcons.png');	
+				background-image:url('../ch/img/cropperIcons.png');	
 				width:30px;
 				height:30px;
 				text-align:center;

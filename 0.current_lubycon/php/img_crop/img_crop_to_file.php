@@ -3,7 +3,7 @@
 *	!!! THIS IS JUST AN EXAMPLE !!!, PLEASE USE ImageMagick or some other quality image processing libraries
 */
 
-$imgUrl = $_POST['imgUrl'];
+$imgUrl = "../../".$_POST['imgUrl']; //edit this path
 $imgInitW = $_POST['imgInitW'];
 $imgInitH = $_POST['imgInitH'];
 $imgW = $_POST['imgW'];
@@ -48,7 +48,7 @@ switch(strtolower($what['mime']))
 				$cropH, $cropW, $cropH);	
 
 
-	imagejpeg($dest_image, $output_filename.$type, $jpeg_quality);
+	imagejpeg($dest_image, "../../".$output_filename.$type, $jpeg_quality); //edit this path
 	
 	$response = array(
 			"status" => 'success',
