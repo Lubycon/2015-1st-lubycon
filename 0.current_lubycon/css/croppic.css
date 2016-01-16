@@ -17,8 +17,8 @@
 				width: 100px;
                 height: 100px;
                 position: relative;
-                background: #000;
-                padding: 50px;
+                background: rgba(0,0,0,0.5);
+                padding: 40px;
 			}
 			/* DO NOT CHANGE FROM HERE ( unless u know what u are doing) */
 			.cropImgWrapper{
