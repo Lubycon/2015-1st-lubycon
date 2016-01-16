@@ -32,7 +32,7 @@
     <script type="text/javascript" src="js/index.js"></script> <!-- index file js -->
     <script type="text/javascript" src="js/account.js"></script> <!-- account file js -->
     
-
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" /><!--responsive design enable-->
     <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -41,29 +41,29 @@
     <div class="dark_overlay"></div>
     <!-- popup start -->
     <!-----------------------------------------------------alert boxes-------------------------------------------------->
-    <div class="luby_alert" id="suc_alert">
+    <div class="luby_alert hidden-mb" id="suc_alert">
         <i id="suc_icon" class="fa fa-check-circle rotateIn animated"></i>
         <p>Success!</p>
     </div><!--succese box-->
-    <div class="luby_alert" id="fail_alert">
+    <div class="luby_alert hidden-mb" id="fail_alert">
         <i id="fail_icon" class="fa fa-times tada animated"></i>
         <p>Failed!</p>
     </div><!--fail box-->
-    <div class="luby_alert" id="bookmark_alert">
+    <div class="luby_alert hidden-mb" id="bookmark_alert">
         <i id="star_icon" class="fa fa-star bounce animated"></i>
         <p>It's marked!</p>
     </div><!--bookmark box-->
-    <div class="luby_alert" id="like_alert">
+    <div class="luby_alert hidden-mb" id="like_alert">
         <i id="like_icon" class="fa fa-heart"></i>
         <p>Like :)</p>
     </div>
-    <div class="luby_alert" id="confirm_alert">
+    <div class="luby_alert hidden-mb" id="confirm_alert">
         <p class="confirm_text">Are you sure?</p>
         <button class="index_confirm_bt">Confirm</button>
         <button class="index_cancel_bt">Cancel</button>
     </div><!--confirm box-->
     <!-----------------------------------------------------alert boxes-------------------------------------------------->
-    <div class="editor_popup fadeInDown animated">
+    <div class="editor_popup hidden-mb fadeInDown animated">
         <p>Which content will you upload?</p>
         <ul>
             <li>
@@ -91,14 +91,16 @@
     <!---------------- common parts start ---------------->
     <!---------------- header start ---------------->
     <header id="main_header">
+        <div id="mobile-menu" class="visible-mb"><i class="fa fa-bars"></i></div>
         <h1>
             <a href="./index.php">
-                <img src="./ch/img/logo/lubycon_logo.svg" width="176" height="40" alt="Lubycon logo" />
+                <img id="luby-logo" class="hidden-mb-ib" src="./ch/img/logo/lubycon_logo.svg" width="176" height="40" alt="Lubycon logo" />
+                <img id="luby-logo-mb" class="visible-mb" src="./ch/img/logo/lubycon_logo-mb.svg" width="160" height="50" alt="Lubycon logo" />
             </a>
-            <span id="beta_version">BETA</span><!--beta mark-->
+            <span id="beta_version" class="hidden-mb-b">BETA</span><!--beta mark-->
         </h1><!--LUBYCON LOGO-->
 
-        <nav id="main_gnb">
+        <nav id="main_gnb" class="hidden-mb-b">
             <ul id="gnb">
                 <li class="bigsub">
                     <a href="./index.php?1=contents&2=contents_page&3=all" class="bigsub_link">
@@ -161,8 +163,10 @@
         <!-- after sign in -->
         <div id="after_signin">
                 <figure><img src="./ch/img/no_img/no_img_user1.jpg" alt="profile_img" /></figure>
-                <span id="user_id">Admin_User</span>
-                <i class="fa fa-angle-down"></i>
+                <div id="user_information" class="hidden-mb-b">
+                    <span id="user_id">Admin_User</span>
+                    <i class="fa fa-angle-down"></i>
+                </div>  
             <ul>
                 <li><a href="./index.php?1=personal_page&2=personal_page&3=dashboard">Dashboard</a></li>
                 <li><a href="./index.php?1=personal_page&2=personal_page&3=my_contents">My Contents</a></li>
@@ -175,10 +179,10 @@
         </div>
         <!-- end after sign in -->
 
-        <button id="addcontent_bt" class="animate_width"><i class="fa fa-plus"></i>Add Contents</button>
+        <button id="addcontent_bt" class="animate_width hidden-mb-b"><i class="fa fa-plus"></i>Add Contents</button>
 
         <!--end content button-->
-        <div id="lang_select_bt">
+        <div id="lang_select_bt" class="hidden-mb-b">
             <ul>
                 <li class="lang_selected">ENG</li>
                 <ul class="lang_list">

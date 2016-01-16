@@ -1,5 +1,5 @@
 <link href="css/index.css" rel="stylesheet" type="text/css" />  <!-- index file css -->
-<div id="index_figure_wrap" class="main_figure_wrap">
+<div id="index_figure_wrap" class="main_figure_wrap hidden-mb-b">
     <figure id="index_figure">
         <h2>Connect Your Creativity With The World</h2>
     </figure>
@@ -72,7 +72,7 @@
 
 <!-- index page slider plugin -->
 
-<section id="slide_section">
+<section id="slide_section" class="hidden-mb-b">
     <nav id="slide_lnb">
         <input id="artwork_bt" type="radio" name="tap" checked="checked" />
         <input id="vector_bt" type="radio" name="tap" />

@@ -313,7 +313,7 @@ function upChart(){
     upChart.addListener("rendered", zoomChart);
     zoomChart();
     function zoomChart(){
-        upChart.zoomToIndexes(viewChart.dataProvider.length - 40, upChart.dataProvider.length - 1);
+        upChart.zoomToIndexes(upChart.dataProvider.length - 40, upChart.dataProvider.length - 1);
     }
 } 
 /*---------------------------------------------------------------------------------------------------------------------------*/
@@ -396,7 +396,7 @@ function downChart(){
     downChart.addListener("rendered", zoomChart);
     zoomChart();
     function zoomChart(){
-        downChart.zoomToindexes(downChart.dataProvider.length - 40, downChart.dataProvider.length - 1);
+        downChart.zoomToIndexes(downChart.dataProvider.length - 40, downChart.dataProvider.length - 1);
     }
 };   
 /*-------------------------make chart end-------------------------------*/
