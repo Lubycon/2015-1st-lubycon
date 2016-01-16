@@ -15,6 +15,9 @@ $(document).ready(function(){
         });
     });
 });*/
+$(window).resize(function(){
+    console.log($(window).width());
+});
 /*$(document).on('keypress', function(e) {
     if (e.which == 13) {// 13 == enter key@ascii
         alert("you pressed enter key");
