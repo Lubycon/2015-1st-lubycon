@@ -1,7 +1,8 @@
 <link href="css/spectrum.css" rel="stylesheet" type="text/css" />
 <link href="css/editor.css" rel="stylesheet" type="text/css" />
 <link href="css/summernote.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link href="css/bootstrap.min.css" rel="stylesheet" />
+<link href="css/croppic.css" rel="stylesheet" type="text/css" />
 
 <script type="text/javascript" src="js/editor.js"></script>
 <script type="text/javascript" src="js/spectrum.js"></script>
@@ -93,6 +94,29 @@
                             include_once('php/layout/content_card.php');
                         ?>
                     </ul>
+                    <div id="croppic"></div>
+                    <span class="btn" id="cropContainerHeaderButton">Choose the croping pic</span>
+                    <script src="./js/croppic.min.js"></script>
+                    <script>
+		                var croppicHeaderOptions = {
+				                uploadUrl:'img_save_to_file.php',
+				                cropData:{
+					                "dummyData":1,
+					                "dummyData2":"asdas"
+				                },
+				                cropUrl:'img_crop_to_file.php',
+				                customUploadButtonId:'cropContainerHeaderButton',
+				                modal:false,
+				                loaderHtml:'<div class="loader bubblingG"><span id="bubblingG_1"></span><span id="bubblingG_2"></span><span id="bubblingG_3"></span></div> ',
+				                onBeforeImgUpload: function(){ console.log('onBeforeImgUpload') },
+				                onAfterImgUpload: function(){ console.log('onAfterImgUpload') },
+				                onImgDrag: function(){ console.log('onImgDrag') },
+				                onImgZoom: function(){ console.log('onImgZoom') },
+				                onBeforeImgCrop: function(){ console.log('onBeforeImgCrop') },
+				                onAfterImgCrop:function(){ console.log('onAfterImgCrop') }
+		                }	
+		                var croppic = new Croppic('croppic', croppicHeaderOptions);
+	                </script>
                 </div>
             </div>
             <div class="buttons_pop">
