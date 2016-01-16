@@ -64,7 +64,7 @@
                 <div class="select_box">
                     <select class="basic">
                         <option value="Title">Title</option>
-                        <option value="Designer">Designer</option>
+                        <option value="Designer">Creator</option>
                         <option value="Tag">Tag</option>
                     </select>
                 <span class="lubySelector_arrow"><i class="fa fa-caret-down"></i></span>
@@ -79,14 +79,11 @@
     <section id="contents_box" class="con_wrap">
         <ul>
             <?php
-            for($i=0;$i<30;$i++)
+            for($i=0;$i<60;$i++)
             {
                 include('php/layout/content_card.php');
             }
             ?>
         </ul>
     </section>  <!-- end contents box -->
-    <?php
-        include_once('php/layout/pager.php');
-    ?>
 </section>  <!-- end contents section -->

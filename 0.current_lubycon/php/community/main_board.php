@@ -4,11 +4,11 @@
             <thead id="table_head">
                 <th class="table_blank"></th>	<!-- space -->
                 <th class="table_number">No.</th>
-                <th class="table_subject">SUBJECT</th>
-                <th class="table_writer">WRITER</th>
+                <th class="table_subject">Title</th>
+                <th class="table_writer">Creator</th>
                 <th class="table_like"><i class="fa fa-heart"></i></th>	<!-- heart icon -->
                 <th class="table_view"><i class="fa fa-eye"></i></th> <!-- eye icon -->
-                <th class="table_date">DATE</th>
+                <th class="table_date">Date</th>
                 </thead>
             <tbody>
                 <?php

@@ -68,8 +68,7 @@
                 <div class="select_box">
                     <select class="basic">
                         <option value="Title">Title</option>
-                        <option value="Subject">Subject</option>
-                        <option value="Writer">Writer</option>
+                        <option value="Writer">Creator</option>
                     </select>
                 <span class="lubySelector_arrow"><i class="fa fa-caret-down"></i></span>
                 </div>

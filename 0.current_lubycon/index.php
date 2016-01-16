@@ -123,7 +123,7 @@
                     Community
                     <ul class="sub">
                         <li><!--ranking-->
-                            <a href="./index.php?1=artists_page&2=artists_page"><i class="fa fa-trophy fa-1x"></i><p>Artists</p></a>
+                            <a href="./index.php?1=creators_page&2=creators"><i class="fa fa-pencil fa-1x"></i><p>Creators</p></a>
                         </li>
                         <li><!--forum-->
                             <a href="./index.php?1=community&2=community_page&3=forum"><i class="fa fa-comments-o fa-1x"></i><p>Forum</p></a>
@@ -149,7 +149,7 @@
         </nav>	<!--end main_gnb-->
 
         <!-- before sign in -->
-        <div id="signin_bt">
+        <div id="signin_bt" class="hidden-mb-b">
             <div id="signin">
                 <a href="./login_page.php">
                     <p class="signicon"><i class="fa fa-unlock-alt fa-lg"></i></p>
@@ -159,11 +159,10 @@
         </div>
         <!-- before sign in -->
 
-
         <!-- after sign in -->
-        <div id="after_signin">
+        <div id="after_signin" class="hidden-mb-b">
                 <figure><img src="./ch/img/no_img/no_img_user1.jpg" alt="profile_img" /></figure>
-                <div id="user_information" class="hidden-mb-b">
+                <div id="display_user">
                     <span id="user_id">Admin_User</span>
                     <i class="fa fa-angle-down"></i>
                 </div>  
@@ -195,10 +194,11 @@
                 </ul>	<!-- end lang_list -->
             </ul>	<!-- end lang_all -->
         </div>	<!-- end lang_select_bt -->
+        <div id="mb-search" class="visible-mb"><i class="fa fa-search"></i></div>
     </header>	
     <!---------------- header end ---------------->
     <!---------------- search bar start ---------------->
-    <div id="main_search_bar">
+    <div id="main_search_bar" class="hidden-mb-b">
         <input type="text" id="main_search_text" value="Enter the Keyword" />
 
         <button id="main_search_btn" class="out">
@@ -209,7 +209,7 @@
             <select class="basic">
                 <option value="All">All</option>
                 <option value="Contents">Contents</option>
-                <option value="Designer">Artists</option>
+                <option value="Creatorr">Creator</option>
                 <option value="Community">Community</option>
             </select>
             <span class="lubySelector_arrow"><i class="fa fa-caret-down"></i></span>

@@ -26,8 +26,64 @@ $(window).resize(function(){
 /////////////////////////////////////////////////////////
 //      debuging tool end
 /////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+//      mobile function start
+/////////////////////////////////////////////////////////
+$(document).ready(function(){
+    if($(window).width() <= 1024){
+        var deviceWidth = $(window).width();
+        var slideCount = 1; //1=artwork, 2=vector, 3=3d
 
+        console.log("It's mobile");
 
+        $(".mb-slide_arrow").click(function (event){
+            var slideId = event.target.id;
+            console.log("slideCount On");
+            console.log(slideId);
+
+            switch(slideId){
+                case "mb-slideRight":
+                    slideCount++;
+                    if(slideCount > 3){
+                        slideCount = 1;
+                        console.log(slideCount);
+                    }
+                    else{
+                        console.log(slideCount);
+                    }
+                    changeSlide()     
+                break;
+                case "mb-slideLeft":
+                    slideCount--;
+                    if(slideCount == 0){
+                        slideCount = 3;
+                        console.log(slideCount);
+                    }
+                    else{
+                        console.log(slideCount);
+                    }
+                    changeSlide()           
+                break;
+            }//switch end
+        });//click end
+        function changeSlide(){
+            switch(slideCount){
+                case 1:
+                    console.log("artwork slide on");
+                break;
+                case 2:
+                    console.log("vector slide on");
+                break;
+                case 3:
+                    console.log("3d slide on");
+                break;
+            }
+        }
+    };//if mobile end
+});//document ready end
+/////////////////////////////////////////////////////////
+//      mobile function end
+/////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////
 //      ready to body fadein event start
 /////////////////////////////////////////////////////////

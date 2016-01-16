@@ -4,6 +4,5 @@
     {
         require('../layout/content_card.php');
     };
-        include_once('../layout/pager.php');
     ?>
 </ul>

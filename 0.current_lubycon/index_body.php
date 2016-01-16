@@ -71,6 +71,48 @@
 </script>
 
 <!-- index page slider plugin -->
+<section class="mb-wrap visible-mb">
+    <div id="mb-slide_wrap">
+        <div id="mb-slide_arrow_set">
+            <div class="mb-slide_arrow" id="mb-slide_arrowLeft">
+                <i class="fa fa-angle-left" id="mb-slideLeft"></i>
+            </div>
+            <div class="mb-slide_arrow" id="mb-slide_arrowRight">
+                <i class="fa fa-angle-right" id="mb-slideRight"></i>
+            </div>
+        </div>
+        <div class="mb-slide_section" id="mb-artwork_slide">
+            <div class="mb-slide_title" id="mb-artwork_title">Artwork</div>
+            <div class="mb-slide_contents_wrap" id="mb-artwork_contents_wrap">
+                <ul>
+                    <li class="mb-slide_content">
+                        <!--card-->
+                    </li>
+                </ul>
+            </div>
+        </div><!--artwork section end-->
+        <div class="mb-slide_section" id="mb-vector_slide">
+            <div class="mb-slide_title" id="mb-vector_title">Vector</div>
+            <div class="mb-slide_contents_wrap" id="mb-vector_contents_wrap">
+                <ul>
+                    <li class="mb-slide_content">
+                        <!--card-->
+                    </li>
+                </ul>
+            </div>
+        </div><!--vector section end-->
+        <div class="mb-slide_section" id="mb-3d_slide">
+            <div class="mb-slide_title" id="mb-3d_title">Vector</div>
+            <div class="mb-slide_contents_wrap" id="mb-3d_contents_wrap">
+                <ul>
+                    <li class="mb-slide_content">
+                        <!--card-->
+                    </li>
+                </ul>
+            </div>
+        </div><!--3d section end-->
+    </div><!--mb-slide end-->
+</section>
 
 <section id="slide_section" class="hidden-mb-b">
     <nav id="slide_lnb">
@@ -129,8 +171,8 @@
 <!--slide section end-->
 
 <!--designer of the month start-->
-<section id="designer_month">
-    <article class="designer_title">DESGINER OF THE MONTH</article>
+<section id="designer_month" class="hidden-mb-b">
+    <article class="designer_title">CREATOR OF THE MONTH</article>
     <div id="designer_body">
         <div id="designer_inbody">
             <div id="designer_photo">
@@ -156,7 +198,7 @@
 </section>
 <!--designer of the month end-->
 
-<section id="community_pre">
+<section id="community_pre" class="hidden-mb-b">
     <!--community preview start-->
     <article class="designer_title">HOT TOPICS IN <font color="#48cfad">DECEMBER</font></article>
     <ul>
