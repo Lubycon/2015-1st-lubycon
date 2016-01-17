@@ -80,14 +80,16 @@
             <div class="mb-slide_arrow" id="mb-slide_arrowRight">
                 <i class="fa fa-angle-right" id="mb-slideRight"></i>
             </div>
-        </div>
+        </div><!--mb slide arrow end-->
         <div class="mb-slide_section" id="mb-artwork_slide">
             <div class="mb-slide_title" id="mb-artwork_title">Artwork</div>
             <div class="mb-slide_contents_wrap" id="mb-artwork_contents_wrap">
                 <ul>
-                    <li class="mb-slide_content">
-                        <!--card-->
-                    </li>
+                    <?php 
+                        for($i=0;$i<1;$i++){
+                            include('php/layout/mb_contents_card.php');
+                        }
+                    ?>
                 </ul>
             </div>
         </div><!--artwork section end-->
@@ -102,7 +104,7 @@
             </div>
         </div><!--vector section end-->
         <div class="mb-slide_section" id="mb-3d_slide">
-            <div class="mb-slide_title" id="mb-3d_title">Vector</div>
+            <div class="mb-slide_title" id="mb-3d_title">3D</div>
             <div class="mb-slide_contents_wrap" id="mb-3d_contents_wrap">
                 <ul>
                     <li class="mb-slide_content">
@@ -112,7 +114,7 @@
             </div>
         </div><!--3d section end-->
     </div><!--mb-slide end-->
-</section>
+</section><!--mobile section end-->
 
 <section id="slide_section" class="hidden-mb-b">
     <nav id="slide_lnb">

@@ -19,11 +19,11 @@
                 <h4 class="contents_title load_view"><?=$contents_name?></h4>
                 <h5><?=$price?></h5>
             </div>
-            <a href="./index.php?1=personal_page&2=personal_page&3=main">
+            <a href="./index.php?1=creators_page&2=creators">
                 <img src="<?=$user_img_url?>" alt="artist photo" />
             </a>
             <span class="by">by</span>
-            <a href="./index.php?1=personal_page&2=personal_page&3=main">
+            <a href="./index.php?1=creators_page&2=creators">
                 <span class="name"><?=$username?></span>
             </a>
             <i class="bookmark_bt fa fa-star"></i>
