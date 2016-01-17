@@ -38,8 +38,6 @@ $(document).ready(function(){
 
         $(".mb-slide_arrow").click(function (event){
             var slideId = event.target.id;
-            console.log("slideCount On");
-            console.log(slideId);
 
             switch(slideId){
                 case "mb-slideRight":
@@ -51,7 +49,7 @@ $(document).ready(function(){
                     else{
                         console.log(slideCount);
                     }
-                    changeSlide()     
+                    changeSlideUp()     
                 break;
                 case "mb-slideLeft":
                     slideCount--;
@@ -62,23 +60,42 @@ $(document).ready(function(){
                     else{
                         console.log(slideCount);
                     }
-                    changeSlide()           
+                    changeSlideDown()           
                 break;
             }//switch end
         });//click end
-        function changeSlide(){
+        function changeSlideUp(){
             switch(slideCount){
-                case 1:
+                case 1:                 
                     console.log("artwork slide on");
                 break;
-                case 2:
+                case 2:    
                     console.log("vector slide on");
                 break;
                 case 3:
                     console.log("3d slide on");
                 break;
-            }
-        }
+            }//switch end
+            console.log("artwork" + $("#mb-artwork_slide").css("left").toString() + ", vector" +
+                        $("#mb-vector_slide").css("left").toString() + ", 3D" +
+                        $("#mb-3d_slide").css("left").toString());
+        }//function end
+        function changeSlideDown(){
+            switch(slideCount){
+                case 1:                 
+                    console.log("artwork slide on");
+                break;
+                case 2:    
+                    console.log("vector slide on");
+                break;
+                case 3:
+                    console.log("3d slide on");
+                break;
+            }//switch end
+            console.log("artwork" + $("#mb-artwork_slide").css("left").toString() + ", vector" +
+                        $("#mb-vector_slide").css("left").toString() + ", 3D" +
+                        $("#mb-3d_slide").css("left").toString());
+        }//function end
     };//if mobile end
 });//document ready end
 /////////////////////////////////////////////////////////
