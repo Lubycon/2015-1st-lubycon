@@ -94,7 +94,7 @@ body{
     #main_header{
         height: 60px;
     }
-        #mobile-menu{
+        #mb-menu{
             width: 60px;
             height: 60px;
             line-height: 70px;
@@ -103,7 +103,7 @@ body{
             z-index: 11;
             cursor: pointer;
         }
-            #mobile-menu i{
+            #mb-menu i{
                 color: #ffffff;
                 font-size: 30px;
             }
