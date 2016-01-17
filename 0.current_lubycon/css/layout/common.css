@@ -1191,6 +1191,7 @@ h1 /* main logo */ {
     overflow:auto;
     position: relative;
     z-index: 2;
+    padding-bottom:35px;
 }
 
 #contents_box > ul
@@ -1221,6 +1222,7 @@ h1 /* main logo */ {
         cursor: default;
         overflow-y: hidden;
         z-index: 2;
+        padding-bottom:35px;
     }
 
     .con_main{

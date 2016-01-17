@@ -427,15 +427,15 @@ $(document).ready(function(){
             
             if ($(document).scrollTop() >= stickyStart && $(document).scrollTop() < scrollEnd){
                 $(".con_aside").css({ "position": "fixed", "top": "100px" });
-                console.log("sticky start");
+                //console.log("sticky start");
             }
             else if($(document).scrollTop() == scrollEnd){
-                console.log("sticky bottom end");
+                //console.log("sticky bottom end");
             }
             else if($(document).scrollTop() < stickyStart){
                 $(".con_aside").css({ "position": "absolute", "top": "0px" });
                 $("#floating_bt").css({ "position": "absolute", "top": "0px"});
-                console.log("sticky top end");
+                //console.log("sticky top end");
             };
         }
         else{
