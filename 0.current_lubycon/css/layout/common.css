@@ -751,7 +751,7 @@ h1 /* main logo */ {
         color: #ffffff;
     }
     #select_box .sod_list_wrapper {
-        background: rgba(255,255,255,0.8);
+        background: rgba(255,255,255,0.9);
     }
 
 #main_search_btn {
@@ -788,6 +788,7 @@ h1 /* main logo */ {
     z-index:1;
 }
 #index_figure_wrap {
+    width: 100%;
     height: 450px;
 }
 #main_figure,#index_figure {
