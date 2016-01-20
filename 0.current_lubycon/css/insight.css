@@ -3,6 +3,9 @@
 body {
     background: #282828;
 }
+#contents_box {
+    padding-bottom: 0px;
+}
 #insight_box {
     width:100%;
     position: relative;
