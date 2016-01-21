@@ -1,96 +1,173 @@
 <script type="text/javascript" src="js/luby_clock.js" ></script>
 <?php
-    $username = "Admin_User";
-    $user_img_url = "./ch/img/no_img/no_img_user1.jpg";
-    $user_location_img = "./ch/img/flag_icons/Korea-South.png";//in profile card
-
-    $userjob = "Job";//in job card
-
+    $userjob = "UI/UX Designer";
+    $user_position = "Lubycon Co.";
+    $usercity = "City";
+    $usercountry = "Country";
     $language1 = "Language1";
-    $language2 = "Language2";//in language card
+    $language2 = "Language2";
 
-    $country_code = "+00";
-    $user_mob = "10-0000-0000";
-    $user_web = "www.lubycon.com";
-    $user_mail = "lorem@ipsum.com";//in contact card
-
+    $total_like = 0;
+    $total_view = 0;
+    $total_up = 0;
+    $total_down = 0;   
+    
+    $username = "Admin_User";
+    $userWebsite = "www.lubycon.com";
+    $userEmail = "lorem@ipsum.com";
     $localcity = "City";
     $localcountry = "Country";
-    $usercity = "City";
-    $usercountry = "Country";//in time card
 ?>
 <div id="information_inbody">
-    <ul id="dashboard_wrap">              
-        <li class="dash_card" id="profile_card">
-            <div class="artist_pic">
-                <img src="<?=$user_img_url?>" alt="user_pic"/>
+    <ul id="dashboard_wrap">
+        <li class="dash_section" id="creator_month">
+            <div class="dash_header">
+                <h4>CREATOR OF THE MONTH</h4>
+                <i class="fa fa-angle-up"></i>
             </div>
-            <div class="artist_location">
-                <img src="<?=$user_location_img?>" alt="user_location"/>
+        </li>
+        <li class="dash_section" id="basic_information">
+            <div class="dash_header">
+                <h4>BASIC INFORMATION</h4>
+                <i class="fa fa-angle-up"></i>
             </div>
-            <p class="artist_name"><?=$username?></p>
-            <div id="sns_bt_wrap">
-                <div class="sns_bt" id="facebook_bt">
-                    <i class="fa fa-facebook"></i>
+            <div class="dash_body">
+                <div class="dash_body_sector" id="userjob">
+                    <p class="dash_body_title">Job</p>
+                    <p class="dash_body_content"><?=$userjob?></p>
                 </div>
-                <div class="sns_bt" id="twitter_bt">
-                    <i class="fa fa-twitter"></i>
+                <div class="dash_body_sector" id="user_position">
+                    <p class="dash_body_title">Position</p>
+                    <p class="dash_body_content"><?=$user_position?></p>
                 </div>
-                <div class="sns_bt" id="google_bt">
-                    <i class="fa fa-google-plus"></i>
+                <div class="dash_body_sector" id="user_location">
+                    <p class="dash_body_title">Location</p>
+                    <p class="dash_body_content"><?=$usercity?> / <?=$usercountry?></p>
                 </div>
-            </div> 
-        </li><!--profile card end-->
-        <li class="dash_card dash_card_wrap" id="job_language_wrap">
-            <div class="info_card" id="job_card">
-                <figure id="job_icon_wrap">
-                    <p id="job_title">Job</p>
-                    <i id="job_icon" class="fa fa-pencil"></i>
-                </figure>
-                <p class="artist_job"><?=$userjob?></p>
-            </div><!--job card end-->
-            <div class="info_card" id="language_card">
-                <div id="language_title">
-                    <i class="fa fa-language" id="language_icon"></i>
-                    <span>Language</span>
+                <div class="dash_body_sector" id="user_language">
+                    <p class="dash_body_title">Job</p>
+                    <p class="dash_body_content"><?=$language1?><br><?=$language2?></p>
                 </div>
-                <div id="language_wrap">
-                    <p class="personal_language" id="language1"><?=$language1?></p>
-                    <p class="personal_language" id="language2"><?=$language2?></p>
+            </div>
+        </li>
+        <li class="dash_section" id="history">
+            <div class="dash_header">
+                <h4>HISTORY</h4>
+                <i class="fa fa-angle-up"></i>
+            </div>
+            <div class="dash_body">
+                <ul class="history_wrap">
+                    <li class="history_list">
+                        <div class="history_date">2016 Jan</div>
+                        <div class="history_kind" id="work_expierence"><i class="fa fa-circle"></i></div>
+                        <div class="history_content">Lorem ipsum dolor sit amet, consec tetur adipisicing elit.</div>
+                    </li>
+                    <li class="history_list">
+                        <div class="history_date">2016 Jan</div>
+                        <div class="history_kind" id="studied"><i class="fa fa-circle"></i></div>
+                        <div class="history_content">Lorem ipsum dolor sit amet, consec tetur adipisicing elit.</div>
+                    </li>
+                    <li class="history_list">
+                        <div class="history_date">2016 Jan</div>
+                        <div class="history_kind" id="work_expierence"><i class="fa fa-circle"></i></div>
+                        <div class="history_content">Lorem ipsum dolor sit amet, consec tetur adipisicing elit.</div>
+                    </li>
+                    <li class="history_list">
+                        <div class="history_date">2016 Jan</div>
+                        <div class="history_kind" id="contest"><i class="fa fa-circle"></i></div>
+                        <div class="history_content">Lorem ipsum dolor sit amet, consec tetur adipisicing elit.</div>
+                    </li>
+                    <li class="history_list">
+                        <div class="history_date">2016 Jan</div>
+                        <div class="history_kind" id="studied"><i class="fa fa-circle"></i></div>
+                        <div class="history_content">Lorem ipsum dolor sit amet, consec tetur adipisicing elit.</div>
+                    </li>
+                </ul>
+                <aside id="history_desc">
+                    <p class="history_desc_list" id="work_desc">
+                        <i class="fa fa-circle"></i>
+                        <span>Work Expierence</span>
+                    </p>
+                    <p class="history_desc_list" id="studied_desc">
+                        <i class="fa fa-circle"></i>
+                        <span>Studied</span>
+                    </p>
+                    <p class="history_desc_list" id="contest_desc">
+                        <i class="fa fa-circle"></i>
+                        <span>Contest / Prized</span>
+                    </p>
+                </aside>
+            </div>
+        </li>
+        <li class="dash_section" id="insight">
+            <div class="dash_header">
+                <h4>INSIGHT</h4>
+                <i class="fa fa-angle-up"></i>
+            </div>
+            <div class="dash_body">
+                <div class="dash_body_sector insight_total" id="total_like">
+                    <p class="dash_body_title">Total Like</p>
+                    <p class="dash_body_content"><?=$total_like?></p>
                 </div>
-            </div><!--language card end-->
-        </li>   
-        <li class="dash_card dash_card_wrap" id="contact_card_wrap" >
-            <div class="contact_card" id="mobile_card">
-                <div class="contact_title" id="mobile_title">
-                    <i class="fa fa-mobile"></i>
-                    <span>Mobile</span>
+                <div class="dash_body_sector insight_total" id="total_view">
+                    <p class="dash_body_title">Total View</p>
+                    <p class="dash_body_content"><?=$total_view?></p>
                 </div>
-                <div class="in_num" id="mobile_num"><?=$country_code?>-<?=$user_mob?></div>
-            </div><!--mobile end-->
-            <div class="contact_card" id="web_card">
-                <p class="contact_title" id="web_title">
-                    <i class="fa fa-link"></i>
-                    <span>Website</span>
-                </p>
-                <div class="in_num" id="web_num"><?=$user_web?></div>
-            </div><!--website end-->
-            <div class="contact_card" id="email_card">
-                <div class="contact_title" id="email_title">
-                    <i class="fa fa-envelope-o"></i>
-                    <span>E-mail</span>
+                <div class="dash_body_sector insight_total" id="total_upload">
+                    <p class="dash_body_title">Total Upload</p>
+                    <p class="dash_body_content"><?=$total_up?></p>
                 </div>
-                <div class="in_num" id="email_num"><?=$user_mail?></div>
-            </div><!--email end-->
-        </li><!--contact card end-->
-        <li class="dash_card" id="best_card"></li><!--best card end-->
-        <li class="dash_card dash_card_long" id="recent_card"></li><!--recent card end-->   
-        <li class="dash_card dash_card_long"></li>
-        <li class="dash_card dash_card_long" id="time_card">
+                <div class="dash_body_sector insight_total" id="total_download">
+                    <p class="dash_body_title">Total Download</p>
+                    <p class="dash_body_content"><?=$total_down?></p>
+                </div>
+            </div>
+        </li>
+        <li class="dash_section" id="contact">
+            <div class="dash_header">
+                <h4>CONTACT</h4>
+                <i class="fa fa-angle-up"></i>
+            </div>
+            <div class="dash_body">
+                <div class="dash_body_sector x2" id="useremail">
+                    <div class="x2_inner">
+                        <p class="dash_body_title">E-mail</p>
+                        <p class="dash_body_content"><?=$userEmail?></p>
+                    </div>
+                    <div class="x2_inner">
+                        <p class="dash_body_title">E-mail</p>
+                        <p class="dash_body_content"><?=$userEmail?></p>
+                    </div> 
+                </div>
+                <div class="dash_body_sector" id="usertime">
+                    <p class="dash_body_title"><?=$username?>&nbsp;Time</p>
+                    <div class="time_location" id="user_location">
+                        <?=$usercity?>, <?=$usercountry?>
+                    </div>
+                    <div class="clock_wrap">
+                        <div class="ampm" id="user_ampm"></div>
+                        <div class="clock" id="userclock"></div>
+                    </div>
+                    
+                </div>
+                <div class="dash_body_sector" id="localtime">
+                    <p class="dash_body_title">Local Time</p>
+                    <div class="time_location" id="local_location">
+                        <?=$localcity?>, <?=$localcountry?>
+                    </div>
+                    <div class="clock_wrap">
+                        <div class="ampm" id="local_ampm"></div>
+                        <div class="clock" id="localclock"></div>
+                    </div>
+                    
+                </div>
+            </div>
+        </li>              
+        <!--<div class="dash_section" id="time_card">
             <div class="time_wrap" id="usertime">
                 <p class="timename" id="usertime_name"><?=$username?>&nbsp;Time</p>
                 <div class="clock_wrap">
-                    <div class="ampm" id="user_ampm"></div><!--pm or am-->
+                    <div class="ampm" id="user_ampm"></div>
                     <div class="clock" id="userclock"></div>
                 </div>
                 <div class="time_location" id="user_location">
@@ -100,14 +177,13 @@
             <div class="time_wrap" id="localtime">
                 <p class="timename" id="localtime_name">Local time</p>
                 <div class="clock_wrap">
-                    <div class="ampm" id="local_ampm"></div><!--pm or am-->
+                    <div class="ampm" id="local_ampm"></div>
                     <div class="clock" id="localclock"></div>
                 </div>
                 <div class="time_location" id="local_location">
                     <?=$localcity?>, <?=$localcountry?>
                 </div>
             </div>
-        </li>
-        <li class="dash_card dash_card_long" id="insight_card"></li>
+        </div>-->
     </ul>
 </div>
