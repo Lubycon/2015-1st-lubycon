@@ -71,50 +71,7 @@
 </script>
 
 <!-- index page slider plugin -->
-<section class="mb-wrap visible-mb">
-    <div id="mb-slide_wrap">
-        <div id="mb-slide_arrow_set">
-            <div class="mb-slide_arrow" id="mb-slide_arrowLeft">
-                <i class="fa fa-angle-left" id="mb-slideLeft"></i>
-            </div>
-            <div class="mb-slide_arrow" id="mb-slide_arrowRight">
-                <i class="fa fa-angle-right" id="mb-slideRight"></i>
-            </div>
-        </div>
-        <div class="mb-slide_section" id="mb-artwork_slide">
-            <div class="mb-slide_title" id="mb-artwork_title">Artwork</div>
-            <div class="mb-slide_contents_wrap" id="mb-artwork_contents_wrap">
-                <ul>
-                    <li class="mb-slide_content">
-                        <!--card-->
-                    </li>
-                </ul>
-            </div>
-        </div><!--artwork section end-->
-        <div class="mb-slide_section" id="mb-vector_slide">
-            <div class="mb-slide_title" id="mb-vector_title">Vector</div>
-            <div class="mb-slide_contents_wrap" id="mb-vector_contents_wrap">
-                <ul>
-                    <li class="mb-slide_content">
-                        <!--card-->
-                    </li>
-                </ul>
-            </div>
-        </div><!--vector section end-->
-        <div class="mb-slide_section" id="mb-3d_slide">
-            <div class="mb-slide_title" id="mb-3d_title">Vector</div>
-            <div class="mb-slide_contents_wrap" id="mb-3d_contents_wrap">
-                <ul>
-                    <li class="mb-slide_content">
-                        <!--card-->
-                    </li>
-                </ul>
-            </div>
-        </div><!--3d section end-->
-    </div><!--mb-slide end-->
-</section>
-
-<section id="slide_section" class="hidden-mb-b">
+<section id="slide_section">
     <nav id="slide_lnb">
         <input id="artwork_bt" type="radio" name="tap" checked="checked" />
         <input id="vector_bt" type="radio" name="tap" />

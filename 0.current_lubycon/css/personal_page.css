@@ -5,7 +5,6 @@
 	position: relative;
 }
 
-
 .con_aside {
 	width: 250px;
 	float: left;
@@ -52,7 +51,6 @@
 			word-break: break-all;
 		}
 
-
 	#subnav {
 
 	}
@@ -82,276 +80,334 @@
 .con_main {
 	padding-right: 0;
 	padding-left: 250px;
+	background: #f0f0f0;
 }
 /*------------dash board start------------------*/
 #dashboard_wrap {
 	width:100%;
-    max-width: 1160px;
+    max-width: 1200px;
     margin: 0px auto;
-    padding: 50px 0px;
+    padding: 25px;
     text-align: center;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
 }
-
-.dash_card {
-	display: inline-block;
-	position:relative;
-	vertical-align: top;
-	overflow: hidden;
-    width: 220px;
-    height: 260px;
-    background: #fff;
-    border-radius: 5px;
-    margin: 4px;
-    box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.3);
-}
-.dash_card_long {
-	width: 452px;
-	overflow: hidden;
-}
-.dash_card_wrap {
-	box-shadow: none;
-	overflow: visible;
-	background: none;
-}
-.info_card {
-	height: 112px;
-	margin: 7px 0px;
+.dash_section {
+	width: 100%;
+	max-width: 1200px;
 	background: #ffffff;
-	box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.3);
-	border-radius: 3px;
-	overflow: hidden;
+	position: relative;
+	margin: 25px 0px;
+	box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
 }
-.contact_card {
-	height: 70px;
-	margin: 7px 0px;
-	background: #ffffff;
-	box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.3);
-	border-radius: 3px;
-	overflow: hidden;
+.dash_header {
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	border-bottom: 1px solid #eeeeee;
 }
-	/*---------profile card start--------*/
-	.artist_pic {
-
-	}
-	.artist_location {
-		top: 98px;
-		right: 57px;
-	}
-		#artist_location img {
-			background-position: center;
-		}
-	.artist_name {
-		font-size: 24px;
-		font-weight: 200;
-		margin-top: 26px;
-	}
-	#sns_bt_wrap {
-		display: inline-block;
-		border-radius: 5px;
-		overflow: hidden;
-		margin-top: 27px;
-		height: 36px;
-	}
-		.sns_bt {
-			width: 67px;
-			height: 100%;
-			line-height: 36px;
-			margin: 0px -2px;
-			display: inline-block;
-			cursor: pointer;
-		}
-		.sns_bt:hover {
-			opacity: 0.8;
-		}
-		#facebook_bt {
-			background: #003366;
-			color: #ffffff;
-		}
-		#twitter_bt {
-			background: #00aced;
-			color: #ffffff;
-		}
-		#google_bt {
-			background: #dc4e41;
-			color: #ffffff;
-		}
-	/*---------profile card end--------*/
-	/*---------job card start--------*/
-	#job_icon_wrap {
-		background: #bd8cbf;
-		height: 70px;
-	}
-		#job_title {
-			position: absolute;
-			font-weight: 200;
-			font-size: 13px;
-			color: #ffffff;
-			text-align: left;
-			padding-left: 8px;
-			padding-top: 5px;
-		}
-		#job_icon {
-			color: #ffffff;
-			font-size: 40px;
-			margin: 14px auto;
-		}
-		.artist_job {
-			height: 42px;
-			line-height: 37px;
-			color: #444444;
-			font-size: 20px;
-			font-weight: 200;
-		}
-	/*---------job card end--------*/
-	/*---------language card start--------*/
-	#language_title {
-		height: 25px;
-		line-height: 25px;
-		background: #aaaaaa;
-		text-align: left;
-		padding-left: 8px;
-		box-sizing: border-box;
-		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
-	}
-		#language_title i {
-			font-size: 13px;
-			color: #ffffff;
-			margin-right: 3px;
-		}
-		#language_title span {
-			font-size: 13px;
-			font-weight: 200;
-			color: #ffffff;
-		}
-		#language_wrap {
-			height: 87px;
-		}
-			.personal_language {
-				color: #444444;
-				font-weight: 200;
-				font-size: 18px;
-				height: 50%;
-				line-height: 43.5px;
-			}
-	/*---------language card end--------*/
-	/*---------contact card start-------*/
-	.contact_title {
-		height: 35px;
-		line-height: 37px;
-		text-align: left;
-		padding-left: 8px;
-		color: #ffffff;
-		font-size: 13px;
-		font-weight: 200;
-	}
-		.contact_title i {
-			font-size: 13px;
-			margin-right: 5px;
-		}
-		.contact_title span {
-			font-weight: 200;
-		}
-
-		#mobile_title {
-			background: #48cfad;
-		}
-			#mobile_title i {
-				font-size: 20px;
-			}
-		#web_title {
-			background: #bd8cbf;
-		}
-		#email_title {
-			background: #f5989d;
-		}
-	.in_num {
-		height: 35px;
-		line-height: 35px;
-		color: #444444;
-		font-size: 15px;
-	}
-	/*---------contact card end---------*/
-	/*----------time card start---------*/
-	.time_wrap {
-		width: 50%;
-		height: 100%;
+	.dash_header h4 {
 		float: left;
-		vertical-align: top;
-	}
-	#usertime {
-		background: #48cfad;
-	}
-	#localtime {
-
-	}
-	.timename {
-		font-size: 13px;
+		display: inline-block;
+		padding-left: 10px;
 		font-weight: 200;
-		text-align: left;
-		padding-top: 5px;
-		padding-left: 8px;
+		font-size: 22px;
+		color: #444444;
+	}
+	.dash_header i {
+		width: 50px;
+		height: 50px;
+		line-height: 50px;
+		float: right;
+		font-size: 25px;
+		color: #444444;
+		cursor: pointer;
+	}
+		.dash_header i:hover {
+			background: #fafafa;
+		}
+.dash_body {
+	position: relative;
+	min-height: 150px;
+}
+	.dash_body_sector {
+		width: 25%;
+		display: inline-block;
+		position: relative;
+		height: 150px;
+		border-right: 1px solid #eeeeee;
 		box-sizing: border-box;
 		-webkit-box-sizing: border-box;
 		-moz-box-sizing: border-box;
+		float: left;
 	}
-	#usertime_name {
-		color: #ffffff;
+	.x2 {
+		width: 50%;
 	}
-	#localtime_name {
-		color: #444444;
-	}
-	.clock_wrap {
-		display: inline-block;
-		margin: 0px auto;
-		margin-top: 40px;
-	}
-		.ampm {
-			font-weight: 200;
-			font-size: 17px;
+		.x2_inner {
+			height: 75px;
+			border-bottom: 1px solid #eeeeee;
+		}
+			.x2_inner:last-child {
+				border-bottom: none;
+			}
+		.dash_body_title {
+			font-size: 15px;
+			color: #444444;
 			text-align: left;
-		}
-		#user_ampm {
-			color: #ffffff;
-		}
-		#local_ampm {
-			color: #48cfad;
-		}
-	
-		.clock {
-			margin-top: -12px;
 			font-weight: 200;
-			font-size: 65px;
+			padding : 5px 0px 0px 10px;
+		}
+		.dash_body_content {
+			line-height: 120px;
+			color: #444444;
+			font-size: 32px;
 			text-align: center;
 		}
-		.colon {
-			font-weight: 200;
-			visibility: visible;
+			.x2_inner .dash_body_content {
+				display: block;
+				line-height: 40px;
+				padding-left: 15px;
+				color: #444444;
+				font-size: 28px;
+				text-align: left;
+			}
+			.x2_inner a:hover {
+				opacity: 0.7;
+			}
+		#user_language .dash_body_content {
+			font-size: 25px;
+			line-height: 40px;
+			margin-top: 20px;
 		}
+
+.history_wrap {
+	width: 100%;
+	padding-right: 160px;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+	.history_list {
+		text-align: left;
+	}
+
+		.history_date {
+			text-align: right;
+			display: inline-block;
+			width: 140px;		
+			border-right: 1px solid #eeeeee;
+			font-weight: 200;
+			font-size: 15px;
+			color: #aaaaaa;
+			padding: 10px 0px;
+			padding-right: 10px;
+		}
+
+		.history_kind {
+			text-align: center;
+			width: 40px;
+			display: inline-block;
+			position: relative;
+			padding: 10px 0px;
+		}
+			.history_kind .fa-circle {
+				font-size: 14px;
+			}
+				#work_expierence .fa-circle {
+					color: #48cfad;
+				}
+				#studied .fa-circle {
+					color: #6eabe3;
+				}
+				#contest .fa-circle {
+					color: #ffbe54;
+				}	
+			.history_kind span {
+				height: 30px;
+				position: absolute;
+				bottom: 23px;
+				left: 19px;
+				border-right: 3px solid;
+			}
+				#work_expierence span {
+					border-color: #48cfad;
+				}
+				#studied span {
+					border-color: #6eabe3;
+				}
+				#contest span {
+					border-color: #ffbe54;
+				}
+		.history_content {
+			display: inline-block;
+			color: #444444;
+			font-weight: 200;
+			font-size: 16px;
+			padding: 10px 0px;
+		}
+#history_desc {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 160px;
+	height: 100%;
+	border-left: 1px solid #eeeeee;
+	text-align: left;
+	padding: 10px 0px 0px 10px;
+}
+	.history_desc_list {
+		font-size: 14px;
+		color: #aaaaaa;
+		margin: 3px 0px;
+	}
+		.history_desc_list .fa-circle {
+			font-size: 14px;
+			margin-right: 5px;
+		}
+		#work_desc .fa-circle {
+			color: #48cfad;
+		}
+		#studied_desc .fa-circle {
+			color: #6eabe3;
+		}
+		#contest_desc .fa-circle {
+			color: #ffbe54;
+		}
+		.history_desc_list span {
+			font-weight: 200;
+		}
+.insight_total .dash_body_content {
+	font-size: 66px;
+	font-weight: bold;
+}
+#total_counts {
+	height: 150px;
+	background: #ffffff;
+}
+#dash_chart_wrap {
+	background: #282828;
+	position: relative;
+}
+	#chart_body_title {
+		color: #aaaaaa;
+	}
+
+	.chart_title {
+		position: absolute;
+        display: inline-block;
+        top: 23px;
+        right: 40px;
+        text-align: center;
+        border-radius: 5px;
+        padding: 3px 10px;
+        cursor: pointer;
+    }
+    .chart_title:hover {
+        background: rgba(255,255,255,0.3);
+    }
+        .chart_title #chart_icon {
+            color: #48cfad;
+            margin-right: 10px;
+            font-size: 20px;
+        }
+        .chart_title #chart_name {
+            color: #ffffff;
+            font-weight: 200;
+            font-size: 23px;
+            margin-right: 10px;
+        }
+        .chart_title #toggle_arrow {
+            color: #ffffff;
+            font-size: 17px;
+        }
+	#chart_selector {
+        display: none;
+        position: absolute;
+        z-index: 1;
+        top: 65px;
+        right: 16px;
+        width: 130px;
+        padding: 4px;
+        border-radius: 5px;
+        background: rgba(255,255,255,0.8);
+        font-size: 15px;
+    }
+        .chart_list {
+        	text-align: left;
+            border-radius: 5px;
+            padding: 5px;
+            color: #444444;
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+        }
+        .chart_list:hover {
+            background: rgba(150,150,150,0.6);
+            cursor: pointer;
+        }
+            .chart_list i {
+                margin-right: 10px;
+            }
+
+.chartboxes {
+	margin-top: 30px;
+}
+#chartdiv1 {
+    display: block;
+}
+#chartdiv2 {
+    display: none;
+}
+#chartdiv3 {
+    display: none;
+}
+#chartdiv4 {
+    display: none;
+}
+
+
+
+.clock_wrap {
+	margin-top: 25px;
+}
+	.ampm {
+		display: inline-block;
+		font-weight: 200;
+		color: #48cfad;
+	}
+	.clock {
+		display: inline-block;
+		font-size: 50px;
+		font-weight: 200;
+	}
 		#userclock {
-			color: #ffffff;
+			color: #48cfad;
 		}
 		#localclock {
 			color: #48cfad;
 		}
-	.time_location {
-		margin-top: 10px;
+	.colon {
 		font-weight: 200;
 	}
-	#user_location {
-		color: #ffffff;
+	.time_location {
+		position: absolute;
+		top: 0;
+		right: 0;
+		padding: 5px 10px 0px 0px;
+		font-size: 15px;
+		font-weight: 200;
+		color: #48cfad;
 	}
-	#local_location {
-		color: #444444;
-	}
-	/*-----------time card end----------*/
-	
+		#user_location {
 
+		}
+		#local-location {
 
-
+		}
 
 
 

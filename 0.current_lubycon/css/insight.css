@@ -3,6 +3,9 @@
 body {
     background: #282828;
 }
+#contents_box {
+    padding-bottom: 0px;
+}
 #insight_box {
     width:100%;
     position: relative;
@@ -73,7 +76,7 @@ body {
     .chartboxes {
         height: 100% !important;
     }
-    #chartdiv {
+    #chartdiv1 {
         display: block;
     }
     #chartdiv2 {
