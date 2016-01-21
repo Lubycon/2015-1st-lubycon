@@ -5,7 +5,6 @@
 	position: relative;
 }
 
-
 .con_aside {
 	width: 250px;
 	float: left;
@@ -81,11 +80,9 @@
 .con_main {
 	padding-right: 0;
 	padding-left: 250px;
+	background: #f0f0f0;
 }
 /*------------dash board start------------------*/
-.con_main {
-	background: #dddddd;
-}
 #dashboard_wrap {
 	width:100%;
     max-width: 1200px;
@@ -130,11 +127,11 @@
 		cursor: pointer;
 	}
 		.dash_header i:hover {
-			background: #f3f3f3;
+			background: #fafafa;
 		}
 .dash_body {
-	min-height: 150px;
 	position: relative;
+	min-height: 150px;
 }
 	.dash_body_sector {
 		width: 25%;
@@ -171,11 +168,15 @@
 			text-align: center;
 		}
 			.x2_inner .dash_body_content {
+				display: block;
 				line-height: 40px;
 				padding-left: 15px;
 				color: #444444;
 				font-size: 28px;
 				text-align: left;
+			}
+			.x2_inner a:hover {
+				opacity: 0.7;
 			}
 		#user_language .dash_body_content {
 			font-size: 25px;
@@ -210,21 +211,37 @@
 			text-align: center;
 			width: 40px;
 			display: inline-block;
+			position: relative;
 			padding: 10px 0px;
 		}
 			.history_kind .fa-circle {
 				font-size: 14px;
 			}
-			#work_expierence .fa-circle {
-				color: #48cfad;
-
+				#work_expierence .fa-circle {
+					color: #48cfad;
+				}
+				#studied .fa-circle {
+					color: #6eabe3;
+				}
+				#contest .fa-circle {
+					color: #ffbe54;
+				}	
+			.history_kind span {
+				height: 30px;
+				position: absolute;
+				bottom: 23px;
+				left: 19px;
+				border-right: 3px solid;
 			}
-			#studied .fa-circle {
-				color: #6eabe3;
-			}
-			#contest .fa-circle {
-				color: #ffbe54;
-			}
+				#work_expierence span {
+					border-color: #48cfad;
+				}
+				#studied span {
+					border-color: #6eabe3;
+				}
+				#contest span {
+					border-color: #ffbe54;
+				}
 		.history_content {
 			display: inline-block;
 			color: #444444;
@@ -264,8 +281,95 @@
 			font-weight: 200;
 		}
 .insight_total .dash_body_content {
-	font-size: 50px;
+	font-size: 66px;
+	font-weight: bold;
 }
+#total_counts {
+	height: 150px;
+	background: #ffffff;
+}
+#dash_chart_wrap {
+	background: #282828;
+	position: relative;
+}
+	#chart_body_title {
+		color: #aaaaaa;
+	}
+
+	.chart_title {
+		position: absolute;
+        display: inline-block;
+        top: 23px;
+        right: 40px;
+        text-align: center;
+        border-radius: 5px;
+        padding: 3px 10px;
+        cursor: pointer;
+    }
+    .chart_title:hover {
+        background: rgba(255,255,255,0.3);
+    }
+        .chart_title #chart_icon {
+            color: #48cfad;
+            margin-right: 10px;
+            font-size: 20px;
+        }
+        .chart_title #chart_name {
+            color: #ffffff;
+            font-weight: 200;
+            font-size: 23px;
+            margin-right: 10px;
+        }
+        .chart_title #toggle_arrow {
+            color: #ffffff;
+            font-size: 17px;
+        }
+	#chart_selector {
+        display: none;
+        position: absolute;
+        z-index: 1;
+        top: 65px;
+        right: 16px;
+        width: 130px;
+        padding: 4px;
+        border-radius: 5px;
+        background: rgba(255,255,255,0.8);
+        font-size: 15px;
+    }
+        .chart_list {
+        	text-align: left;
+            border-radius: 5px;
+            padding: 5px;
+            color: #444444;
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+        }
+        .chart_list:hover {
+            background: rgba(150,150,150,0.6);
+            cursor: pointer;
+        }
+            .chart_list i {
+                margin-right: 10px;
+            }
+
+.chartboxes {
+	margin-top: 30px;
+}
+#chartdiv1 {
+    display: block;
+}
+#chartdiv2 {
+    display: none;
+}
+#chartdiv3 {
+    display: none;
+}
+#chartdiv4 {
+    display: none;
+}
+
+
 
 .clock_wrap {
 	margin-top: 25px;

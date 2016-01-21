@@ -1,4 +1,7 @@
-<script type="text/javascript" src="js/luby_clock.js" ></script>
+<script type="text/javascript" src="js/dashboard.js"></script>
+<script src="js/chart/amcharts.js" type="text/javascript"></script>
+<script src="js/chart/serial.js" type="text/javascript"></script>
+<script src="js/chart/lubytheme.js" type="text/javascript"></script>
 <?php
     $userjob = "UI/UX Designer";
     $user_position = "Lubycon Co.";
@@ -23,13 +26,13 @@
         <li class="dash_section" id="creator_month">
             <div class="dash_header">
                 <h4>CREATOR OF THE MONTH</h4>
-                <i class="fa fa-angle-up"></i>
+                <i class="fa fa-angle-up toggle_info"></i>
             </div>
         </li>
         <li class="dash_section" id="basic_information">
             <div class="dash_header">
                 <h4>BASIC INFORMATION</h4>
-                <i class="fa fa-angle-up"></i>
+                <i class="fa fa-angle-up toggle_info"></i>
             </div>
             <div class="dash_body">
                 <div class="dash_body_sector" id="userjob">
@@ -53,7 +56,7 @@
         <li class="dash_section" id="history">
             <div class="dash_header">
                 <h4>HISTORY</h4>
-                <i class="fa fa-angle-up"></i>
+                <i class="fa fa-angle-up toggle_info"></i>
             </div>
             <div class="dash_body">
                 <ul class="history_wrap">
@@ -63,23 +66,23 @@
                         <div class="history_content">Lorem ipsum dolor sit amet, consec tetur adipisicing elit.</div>
                     </li>
                     <li class="history_list">
-                        <div class="history_date">2016 Jan</div>
-                        <div class="history_kind" id="studied"><i class="fa fa-circle"></i></div>
+                        <div class="history_date">2016 May</div>
+                        <div class="history_kind" id="studied"><i class="fa fa-circle"></i><span></span></div>
                         <div class="history_content">Lorem ipsum dolor sit amet, consec tetur adipisicing elit.</div>
                     </li>
                     <li class="history_list">
-                        <div class="history_date">2016 Jan</div>
-                        <div class="history_kind" id="work_expierence"><i class="fa fa-circle"></i></div>
+                        <div class="history_date">2017 Sep</div>
+                        <div class="history_kind" id="work_expierence"><i class="fa fa-circle"></i><span></span></div>
                         <div class="history_content">Lorem ipsum dolor sit amet, consec tetur adipisicing elit.</div>
                     </li>
                     <li class="history_list">
-                        <div class="history_date">2016 Jan</div>
-                        <div class="history_kind" id="contest"><i class="fa fa-circle"></i></div>
+                        <div class="history_date">2017 Nov</div>
+                        <div class="history_kind" id="contest"><i class="fa fa-circle"></i><span></span></div>
                         <div class="history_content">Lorem ipsum dolor sit amet, consec tetur adipisicing elit.</div>
                     </li>
                     <li class="history_list">
-                        <div class="history_date">2016 Jan</div>
-                        <div class="history_kind" id="studied"><i class="fa fa-circle"></i></div>
+                        <div class="history_date">2018 Jan</div>
+                        <div class="history_kind" id="studied"><i class="fa fa-circle"></i><span></span></div>
                         <div class="history_content">Lorem ipsum dolor sit amet, consec tetur adipisicing elit.</div>
                     </li>
                 </ul>
@@ -102,31 +105,53 @@
         <li class="dash_section" id="insight">
             <div class="dash_header">
                 <h4>INSIGHT</h4>
-                <i class="fa fa-angle-up"></i>
+                <i class="fa fa-angle-up toggle_info"></i>
             </div>
             <div class="dash_body">
-                <div class="dash_body_sector insight_total" id="total_like">
-                    <p class="dash_body_title">Total Like</p>
-                    <p class="dash_body_content"><?=$total_like?></p>
+                <div id="total_counts">
+                    <div class="dash_body_sector insight_total" id="total_like">
+                        <p class="dash_body_title">Total Like</p>
+                        <p class="dash_body_content"><?=$total_like?></p>
+                    </div>
+                    <div class="dash_body_sector insight_total" id="total_view">
+                        <p class="dash_body_title">Total View</p>
+                        <p class="dash_body_content"><?=$total_view?></p>
+                    </div>
+                    <div class="dash_body_sector insight_total" id="total_upload">
+                        <p class="dash_body_title">Total Upload</p>
+                        <p class="dash_body_content"><?=$total_up?></p>
+                    </div>
+                    <div class="dash_body_sector insight_total" id="total_download">
+                        <p class="dash_body_title">Total Download</p>
+                        <p class="dash_body_content"><?=$total_down?></p>
+                    </div>
                 </div>
-                <div class="dash_body_sector insight_total" id="total_view">
-                    <p class="dash_body_title">Total View</p>
-                    <p class="dash_body_content"><?=$total_view?></p>
-                </div>
-                <div class="dash_body_sector insight_total" id="total_upload">
-                    <p class="dash_body_title">Total Upload</p>
-                    <p class="dash_body_content"><?=$total_up?></p>
-                </div>
-                <div class="dash_body_sector insight_total" id="total_download">
-                    <p class="dash_body_title">Total Download</p>
-                    <p class="dash_body_content"><?=$total_down?></p>
+                <div id="dash_chart_wrap">
+                    <p class="dash_body_title" id="chart_body_title">The last 7 days data</p>
+                    <div class="chart_title">
+                        <i id="chart_icon" class="fa fa-heart"></i>
+                        <span id="chart_name">Like</span>
+                        <i id="toggle_arrow" class="fa fa-caret-down"></i>
+                    </div>
+                    <div id="chart_selector">
+                        <ul>
+                            <li id="showlike" class="chart_list"><i class="fa fa-heart"></i>Like</li>
+                            <li id="showview" class="chart_list"><i class="fa fa-eye"></i>View</li>
+                            <li id="showupload" class="chart_list"><i class="fa fa-cloud-upload"></i>Uploaded</li>
+                            <li id="showdownload" class="chart_list"><i class="fa fa-cloud-download"></i>Downloaded</li>
+                        </ul>
+                    </div><!--select chart-->
+                    <div class="chartboxes" id="chartdiv1" style="width: 100%; height: 350px;"></div>
+                    <div class="chartboxes" id="chartdiv2" style="width: 100%; height: 350px;"></div>
+                    <div class="chartboxes" id="chartdiv3" style="width: 100%; height: 350px;"></div>
+                    <div class="chartboxes" id="chartdiv4" style="width: 100%; height: 350px;"></div>
                 </div>
             </div>
         </li>
         <li class="dash_section" id="contact">
             <div class="dash_header">
                 <h4>CONTACT</h4>
-                <i class="fa fa-angle-up"></i>
+                <i class="fa fa-angle-up toggle_info"></i>
             </div>
             <div class="dash_body">
                 <div class="dash_body_sector x2" id="useremail">
@@ -135,8 +160,8 @@
                         <p class="dash_body_content"><?=$userEmail?></p>
                     </div>
                     <div class="x2_inner">
-                        <p class="dash_body_title">E-mail</p>
-                        <p class="dash_body_content"><?=$userEmail?></p>
+                        <p class="dash_body_title">Website</p>
+                        <a href=<?=$userWebsite?> class="dash_body_content"><?=$userWebsite?></a>
                     </div> 
                 </div>
                 <div class="dash_body_sector" id="usertime">
@@ -148,7 +173,6 @@
                         <div class="ampm" id="user_ampm"></div>
                         <div class="clock" id="userclock"></div>
                     </div>
-                    
                 </div>
                 <div class="dash_body_sector" id="localtime">
                     <p class="dash_body_title">Local Time</p>
@@ -159,7 +183,6 @@
                         <div class="ampm" id="local_ampm"></div>
                         <div class="clock" id="localclock"></div>
                     </div>
-                    
                 </div>
             </div>
         </li>              
