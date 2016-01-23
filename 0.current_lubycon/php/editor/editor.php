@@ -52,7 +52,7 @@
     <button type="button" class="next_bt" id="call_thumb">Next</button>
 </nav>-->
 <section id="editor_inbody">
-    <section id="editor_body">
+    <section id="editor_body" class="con_wrap">
         <section id="editor_section" class="con_main">
             <textarea name="text_editor" id="summernote" title="Contents"></textarea>
             <!--summernote-->

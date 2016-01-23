@@ -29,19 +29,25 @@ $(function(){
     });
 });
 
-$(function () {
-    $('.tool_com').hover(function ()
-    {
-        $(this).children('.tooltip_bt').stop().fadeIn(300).css("display", "inline-block");
-    }, function () {
-        $(this).children('.tooltip_bt').stop().fadeOut(300);
+$(document).ready(function(){
+    $('#main_work_space').summernote({
+        minHeight:null,
+        maxHeight:null,
+        focus:true,
+        placeholder: 'Write here...',
+        toolbar: [
+            // [groupName, [list of button]]
+            ['style',['style']],
+            ['fontsize', ['fontname', 'fontsize']],
+            ['style', ['bold', 'italic', 'underline', 'strikethrough', 'clear']],
+            ['font', ['superscript', 'subscript']],            
+            ['color', ['color']],
+            ['para', ['ul', 'ol', 'paragraph']],
+            ['height', ['height']],
+            ['insert', ['picture', 'video', 'link', 'table', 'hr']],
+            ['misc', ['help']],
+        ],
+        fontNames: ['Arial', 'Arial Black', 'Comic Sans MS', 'Source Sans Pro'],
     });
 });
-
-$(function(){
-    $('.note-codable').focus(function(){
-        $('.note-editing-area').css('border','1px solid #48cfad');
-    });
-});
-
-/*--------------------------------community editor start-------------------------------*/
+/*--------------------------------community editor end-------------------------------*/

@@ -191,7 +191,6 @@
                     <li>ENG</li>
                     <li>FRN</li>
                     <li>JPN</li>
-                    <li>POR</li>
                 </ul>	<!-- end lang_list -->
             </ul>	<!-- end lang_all -->
         </div>	<!-- end lang_select_bt -->
