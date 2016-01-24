@@ -92,12 +92,12 @@ body{
         display: none;
     }
     #main_header{
-        height: 60px;
+        height: 45px;
     }
         #mb-menu{
-            width: 60px;
-            height: 60px;
-            line-height: 70px;
+            width: 45px;
+            height: 45px;
+            line-height: 55px;
             text-align: center;
             position: absolute;
             z-index: 11;
@@ -105,13 +105,14 @@ body{
         }
             #mb-menu i{
                 color: #ffffff;
-                font-size: 30px;
+                font-size: 25px;
             }
         #main_header h1{
             width: 100%;
         }
             #luby-logo-mb{
                 margin: 0px auto;
+                margin-top: -7px;
             }
         #after_signin{
             margin-right: 0px;
@@ -125,9 +126,9 @@ body{
                     height: 45px;
                 }
         #mb-search{
-            width: 60px;
-            height: 60px;
-            line-height: 70px;
+            width: 45px;
+            height: 45px;
+            line-height: 55px;
             text-align: center;
             position: absolute;
             z-index: 11;
@@ -136,92 +137,12 @@ body{
         }
             #mb-search i{
                 color: #ffffff;
-                font-size: 30px;
+                font-size: 25px;
             }
     .mb-wrap{
         width: 100%;
         margin-top: 60px;
     }
-    #mb-slide_wrap{
-        position: relative;
-    }
-        #mb-slide_arrow_set{
-            width: 100%;
-            position: absolute;
-            z-index: 2;
-        }
-            .mb-slide_arrow{
-                width: 60px;
-                height: 70px;
-                line-height: 70px;
-                position: relative;
-                color: #ffffff;
-                font-size: 50px;
-                z-index: 2;
-                text-align: center;
-                cursor: pointer;
-            }
-            #mb-slide_arrowLeft{
-                float: left;
-            }
-            #mb-slide_arrowRight{
-                float: right;
-            }
-                .mb-slide_arrow i{
-                    width: 100%;
-                    height: 100%;
-                }
-        .mb-slide_section{
-            width:100%;
-            position: absolute;
-        }
-        #mb-artwork_slide{
-            left: 0;
-        }
-        #mb-vector_slide{
-            left: 100%;
-        }
-        #mb-3d_slide{
-            left: -100%;
-        }
-            .mb-slide_title{
-                height: 70px;
-                line-height: 70px;
-                color: #ffffff;
-                font-size: 30px;
-                font-weight: 200;
-                text-align: center;
-                background: #aaaaaa;
-            }
-            .mb-slide_contents_wrap{
-
-            }
-            .mb-slide_contents_wrap ul{
-
-            }
-            .mb-slide_content{
-                width: 100%;
-                height: 40px;
-                border: 1px solid #000000;
-            }
-    .mb-contents_card{
-        width: 100%;
-        height: 100px;
-    }
-        .mb-contents_pic{
-            width: 100px;
-            height: 100px;
-            display: inline-block;
-        }
-            .mb-contents_pic img{
-                width: 100%;
-            }
-        .mb-contents_disc{
-            display: inline-block;
-        }
-            .mb-contents_sub{
-                display: inline-block;
-            }
 }
 /*------mobile end-------*/
 /*------desktop start-------*/
@@ -436,7 +357,7 @@ body{
     box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.5);
 }
 
-h1 /* main logo */ {
+#main_header h1 /* main logo */ {
     position: absolute;
     left: 10px;
     top: 5px;

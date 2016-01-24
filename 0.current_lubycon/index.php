@@ -20,13 +20,12 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" /> <!--icon font-->
 
     <link href="css/layout/normalize.css" rel="stylesheet" type="text/css" />  <!-- web normalize -->
-    <link href="css/layout/common.css" rel="stylesheet" type="text/css" />  <!-- common css -->  
+    <link href="css/layout/common.css" rel="stylesheet" type="text/css" />  <!-- common css -->
     <link href="css/selectordie.css" rel="stylesheet" type="text/css" /> <!-- selector decoration css -->
     <link href="css/layout/animate.css" rel="stylesheet" type="text/css" /><!--animation for objects-->
     <link href="css/slider.css" rel="stylesheet" type="text/css" /><!--slider css-->
 
     <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script> <!-- jquery library -->
-    <script type="text/javascript" src="js/jquery.mobile.min.js"></script> <!--jquery moblie-->
     <script type="text/javascript" src="js/selectordie.min.js"></script> <!-- selector decoration js -->
     <script type="text/javascript" src="js/selectordie.demo.js"></script> <!-- selector decoration js -->
     <script type="text/javascript" src="js/slider.js"></script><!--slider plugin-->
@@ -96,7 +95,7 @@
         <h1>
             <a href="./index.php">
                 <img id="luby-logo" class="hidden-mb-ib" src="./ch/img/logo/lubycon_logo.svg" width="176" height="40" alt="Lubycon logo" />
-                <img id="luby-logo-mb" class="visible-mb" src="./ch/img/logo/lubycon_logo-mb.svg" width="160" height="50" alt="Lubycon logo" />
+                <img id="luby-logo-mb" class="visible-mb" src="./ch/img/logo/lubycon_logo-mb.svg" width="100" height="50" alt="Lubycon logo" />
             </a>
             <span id="beta_version" class="hidden-mb-b">BETA</span><!--beta mark-->
         </h1><!--LUBYCON LOGO-->
@@ -200,7 +199,6 @@
     <!---------------- search bar start ---------------->
     <div id="main_search_bar" class="hidden-mb-b">
         <input type="text" id="main_search_text" value="Enter the Keyword" />
-
         <button id="main_search_btn" class="out">
             <i class="fa fa-search"></i>
         </button>

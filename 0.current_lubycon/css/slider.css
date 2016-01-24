@@ -1,20 +1,30 @@
 /* slider body */
+@media screen and (max-width: 1024px){
+    #slider1,#slider2,#slider3{
+        background: none;
+        border: none;
+    }
+}
+@media screen and (min-width: 1025px){
+    #slider1,#slider2,#slider3{
+        background: #e6e6e6 none repeat scroll 0% 0%;
+        border: 1px solid #cdcdcd;
+    }
+}
 
 #slider1,#slider2,#slider3{
     position: relative;
     margin: 0px auto;
     top: 0px;
     left: 0px;
-    width:1000px;
+    width:100%;
     height:370px;
-    background: #E6E6E6 none repeat scroll 0% 0%;
-    border: 1px solid #CDCDCD;
     border-radius: 10px;
     padding: 10px;
 }
 #slider2,#slider3{
-                      display:none;
-                  }
+    display: none;
+}
 
 #slide_section .slides {
     position: absolute;
