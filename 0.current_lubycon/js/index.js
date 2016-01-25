@@ -93,58 +93,10 @@ $(function () //selcted change
     $(".selected_nav").children("a").click(function(){
         return false;//disabled anchor tag
     });
-});
-
-       
+});       
 /////////////////////////////////////////////////////////
 //      gloval navigation button hover event end
 /////////////////////////////////////////////////////////
-
-
-
-/////////////////////////////////////////////////////////
-//      add hover animations start
-/////////////////////////////////////////////////////////
-$(function(){   
-    $('.animate_scale').hover(function (e){
-        $(this).stop().animate({ width: "+=3", height: "+=3", right: "-=1.5", top: "-=1.5" }, 150);
-    }, function(){
-         $(this).stop().animate({ width: "-=3", height: "-=3", right: "+=1.5", top: "+=1.5" }, 150);
-    });
-});//scale animation end
-$(function(){
-    $('.animate_width').hover(function (e){
-        $(this).stop().animate({ width: "+=3", right: "-=1.5"}, 150);
-    }, function(){
-        $(this).stop().animate({ width: "-=3", right: "+=1.5"},150);
-    })
-})
-$(function(){
-    $(".animate_opacity").hover(function (e){
-        $(this).stop().animate({ opacity: 0.5 },200);
-    },function(){
-        $(this).stop().animate({ opacity: 1 },200);
-    });
-});//opacity animation end
-
-//tooltip start
-$(function(){
-   $(document).ready(function(){
-        var tip_parent = $(document).find(".tooltip_bt").prev();
-
-        tip_parent.hover(function() {
-            $(this).next(".tooltip_bt").stop().fadeIn(300);
-        }, function() {
-            $(this).next(".tooltip_bt").stop().fadeOut(300);
-        });
-    });
-});
-//tooltip end
-
-/////////////////////////////////////////////////////////
-//      add hover animations end
-/////////////////////////////////////////////////////////
-
 /////////////////////////////////////////////////////////
 //      change language start
 /////////////////////////////////////////////////////////
@@ -168,11 +120,9 @@ $(function () //language change bt slide and change
         $(this).css('color','#929292')
     });
 });
-
 /////////////////////////////////////////////////////////
 //      change language end
 /////////////////////////////////////////////////////////
-
 /////////////////////////////////////////////////////////
 //      before sign in child event start
 /////////////////////////////////////////////////////////
@@ -186,14 +136,12 @@ $(function () //sign in toggle event
         $("#addcontent_bt").hide();
     });
 });
-
 /////////////////////////////////////////////////////////
 //      before sign in child event end
 /////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////
 //      after signin child hover show and hide start
 /////////////////////////////////////////////////////////
-
 $(function() //after signin child hover show and hide
 {
     var toggle_count = 0;
@@ -220,11 +168,9 @@ $(function() //after signin child hover show and hide
 	    $("#addcontent_bt").hide();
 	});
 });
-
 /////////////////////////////////////////////////////////
 //      after signin child hover show and hide end
 /////////////////////////////////////////////////////////
-
 /////////////////////////////////////////////////////////
 //      add contents bt popup event start
 /////////////////////////////////////////////////////////
@@ -248,15 +194,12 @@ $(function () { //add contents button start
         $('#embed_popup').stop().fadeOut(150);
     });
 });
-
 /////////////////////////////////////////////////////////
 //      add contents bt popup event end
 /////////////////////////////////////////////////////////
-
 /////////////////////////////////////////////////////////
 //      main search bar input reset start
 /////////////////////////////////////////////////////////
-
 $(function () { //search box click value reset start
     var search_box = $('#main_search_text');
     var search_box2 = $('#sub_search_text');
@@ -331,116 +274,9 @@ $(function () { //search box click value reset start
 /////////////////////////////////////////////////////////
 //      create account checkbox event end
 /////////////////////////////////////////////////////////
-
-/////////////////////////////////////////////////////////
-//      main figure animate end
-/////////////////////////////////////////////////////////
-
-//main figure button animation start
-$(function(){
-    $('#figure_signin').hover(
-        function (){
-            $(this).stop().animate({opacity:0.5, width:160},200);
-        },
-        function (){
-            $(this).stop().animate({opacity:1, width:150},200);
-        }
-    );
-});
-/////////////////////////////////////////////////////////
-//      main figure animate end
-/////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////
-//      containers sticky start
-/////////////////////////////////////////////////////////
-$(document).ready(function(){  
-    $(document).scroll(function () {
-        var stickyStart = $("#main_header").height() + $("#navsel").height() + $("#nav_guide").height();
-        if($("#navsel").length == 0){
-                stickyStart -= $("#navsel").height();
-        }else{
-            stickyStart;
-        }
-        var scrollEnd = $(document).height() - $(window).height();
-        var bannerPosition = $(".con_aside").height() - $("#navsel").height();
-
-        if($(document).find(".con_aside") && $(".con_aside").attr("id") != "editor_aside"){ 
-            
-            if ($(document).scrollTop() >= stickyStart && $(document).scrollTop() < scrollEnd){
-                $(".con_aside").css({ "position": "fixed", "top": "100px" });
-                //console.log("sticky start");
-            }
-            else if($(document).scrollTop() == scrollEnd){
-                //console.log("sticky bottom end");
-            }
-            else if($(document).scrollTop() < stickyStart){
-                $(".con_aside").css({ "position": "absolute", "top": "0px" });
-                $("#floating_bt").css({ "position": "absolute", "top": "0px"});
-                //console.log("sticky top end");
-            };
-        }
-        else{
-            return true;
-        };
-    });
-});
-
-/////////////////////////////////////////////////////////
-//      containers sticky end
-/////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////
-//      main figure sticky start
-/////////////////////////////////////////////////////////
-$(function(){
-
-});
-/////////////////////////////////////////////////////////
-//      main figure sticky end
-/////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////
-//      nav_guide sticky start
-/////////////////////////////////////////////////////////
-$(document).scroll(function (){
-    if($("#nav_guide").length != 0){
-        var nav_guide = $("#nav_guide");
-        var sticky_start = $("#main_figure").height() + $("#navsel").height();
-        var contents_y = nav_guide.height();
-        if($("#navsel").length == 0){
-            sticky_start -= $("#navsel").height();
-        }else{
-            sticky_start;
-        }
-
-        
-        if ($(document).scrollTop() > sticky_start){
-            $("#main_header").css({"box-shadow": "0px 0px 0px 0px rgba(0,0,0,0.5)"});
-            nav_guide.css({ "position": "fixed", "top": "50px", "z-index": "4", "box-shadow": "0px 3px 7px rgba(0,0,0,0.3)" });
-            nav_guide.next().css({"top": contents_y});
-            nav_guide.next().next().css({"top": contents_y});
-            $("#floating_bt").css({"position" : "fixed", "top" : "100px"});
-        }
-        else {
-            $("#main_header").css({"box-shadow": "0px 2px 4px 0px rgba(0,0,0,0.5)"});
-            nav_guide.css({ "position": "relative", "top": "0px", "box-shadow": "0px 0px 0px rgba(0,0,0,0.3)" });
-            nav_guide.next().css({"top": "0px"});
-            nav_guide.next().next().css({"top": "0px"});
-            $("#floating_bt").css({"position" : "absolute", "top" : "0px"});
-        }  
-    }
-    else{
-        return true;
-    }  
-});
-/////////////////////////////////////////////////////////
-//      nav_guide sticky end
-/////////////////////////////////////////////////////////
-
-
 /*----------------------------common js----------------------------*/
 
 /*----------------------------index page slider----------------------------*/
-
-
 /////////////////////////////////////////////////////////
 //      index page slide switch start
 /////////////////////////////////////////////////////////
@@ -508,14 +344,31 @@ $(function()	// triple bt on event
 //      index page triple bt event end
 /////////////////////////////////////////////////////////
 /*----------------------------index page slider end----------------------------*/
+/***********************************designer of the month canvas start****************************************/
+$(function () {
+    var pb = document.getElementById('photo_body');
+    if (pb) {
+        var pbdraw = pb.getContext("2d");
+
+        pbdraw.beginPath();
+        pbdraw.moveTo(140, 0);
+        pbdraw.lineTo(0, 88);
+        pbdraw.lineTo(0, 246);
+        pbdraw.lineTo(140, 325);
+        pbdraw.lineTo(280, 246);
+        pbdraw.lineTo(280, 88);
+        pbdraw.closePath();
+
+        pbdraw.fillStyle = '#464646';
+        pbdraw.fill();
+    }
+});
+/***********************************designer of the month canvas end****************************************/
 /*----------------------------contents page----------------------------*/
-
-
 /////////////////////////////////////////////////////////
 //      contents card hover overlay view start
 /////////////////////////////////////////////////////////
-$(function ()
-{
+$(function (){
     $(document).on({
         mouseenter: function() {
             $(this).children('.contents_overlay').stop().fadeIn(300);
@@ -588,36 +441,8 @@ $(function() {
 /////////////////////////////////////////////////////////
 
 /////////////////////////////////////////////////////////
-//      contents card bookmark toggle start
-/////////////////////////////////////////////////////////
-$(function(){
-    $(".bookmark_bt,#bookmark_inner_bt").each(function(){
-        var bookmark_count = 0;
-        $(this).click(function(){
-            switch(bookmark_count){
-                case 0:
-                $(this).css('color', '#ffbe54');
-                bookmark_count = 1;
-                console.log(bookmark_count);
-                break;
-
-            case 1:
-                $(this).css('color', '#c1c1c1');
-                bookmark_count = 0;
-                console.log(bookmark_count);
-                break;
-            }//switch end
-        });//click end
-    });//each end
-});
-/////////////////////////////////////////////////////////
-//      contents card bookmark toggle end
-/////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////
 //      contents view file_info toggle start
 /////////////////////////////////////////////////////////
-
-
 $(function () {
     var toggle_count = 0;
     $(document).on('click', '#info_header', function ()
@@ -646,7 +471,6 @@ function file_info_slideup() {
     $("#info_toggle").attr('class', 'fa fa-angle-down');
     toggle_count = 0;
 };
-
 /////////////////////////////////////////////////////////
 //      contents view file_info toggle end
 /////////////////////////////////////////////////////////
@@ -672,119 +496,8 @@ $(function(){
 /////////////////////////////////////////////////////////
 //      contents view descript box toggle end
 /////////////////////////////////////////////////////////
-
-/////////////////////////////////////////////////////////
-//      alert event start
-/////////////////////////////////////////////////////////
-$(function (){
-    $(document).on("click",".bookmark_bt,#bookmark_inner_bt",function(){
-        if($(this).css("color") != "rgb(193, 193, 193)"){
-            console.log("success");
-            $("#bookmark_alert").css('display','inline-block');
-            $("#bookmark_alert").attr("class","luby_alert fadeIn animated");
-            $("#star_icon").attr("class","fa fa-star bounce animated");
-            setTimeout("hideAlert()",1500);
-            return false; 
-        }
-        else{
-            return true;
-        };
-    });//bookmark alert   
-});
-//like alert start
-$(function(){
-    $(document).on("click",".like_bt,.like_bt_active",function(){
-        if($(this).hasClass("like_bt")){
-            console.log("like!");
-            $(this).attr("class","like_bt_active");
-            $("#like_alert").css('display','inline-block');
-            $("#like_alert").attr("class","luby_alert fadeIn animated");
-            setTimeout("hideAlert2()",1500);
-        }
-        else if($(this).hasClass("like_bt_active")){
-            console.log("unlike");
-            $(this).attr("class","like_bt");
-        }
-        else{
-            return true;
-        };//if end
-    });//on end
-});//function end
-
-//like alert end
-
-function hideAlert(){
-    $("#bookmark_alert").attr("class","luby_alert fadeOut animated");
-    $("#star_icon").attr("class","fa fa-star");
-    $("#bookmark_alert").stop().fadeOut(1000);
-};
-function hideAlert2(){
-    $("#like_alert").attr("class","luby_alert fadeOut animated");
-    $("#like_alert").stop().fadeOut(1000);
-};
-
-/////////////////////////////////////////////////////////
-//      alert event end
-/////////////////////////////////////////////////////////
 /*----------------------------contents page----------------------------*/
-/////////////////////////////////////////////////////////
-//      lubySelectbox action start
-/////////////////////////////////////////////////////////
-$(function(){
-    $(".lubySelector").each(function(){
-        var toggle_count = 0;
-       
-        $(this).click(function(){
-            console.log(toggle_count);
-            switch(toggle_count){
-                case 0 :
-                    $(this).find($(".lubySelector_list")).stop().fadeIn(300);
-                    $(this).css("background","#333333");
-                    $(this).find($(".lubySelector_arrow")).children("i").attr("class","fa fa-caret-up");
-                    toggle_count = 1;
-                    return false;
-                break;
-
-                case 1 :
-                    $(this).find($(".lubySelector_list")).stop().fadeOut(300);
-                    $(this).css("background","#555555");
-                    $(this).find($(".lubySelector_arrow")).children("i").attr("class","fa fa-caret-down");
-                    toggle_count = 0;
-                    return false;
-                break;
-            };//switch end
-        });//click end
-        $(this).mouseleave(function(){
-            $(document).click(function (event) {
-                event = event || window.event//for IE
-                if (!$(event.target).hasClass("lubySelector")) {
-                    $(this).find($(".lubySelector_list")).stop().fadeOut(300);
-                    $(".lubySelector").css("background","#555555");
-                    $(this).find($(".lubySelector_arrow")).children("i").attr("class","fa fa-caret-down");
-                    toggle_count = 0;
-                    return true;
-                }//if end
-                else{
-                    return true;
-                }//else end
-            });//click end
-        });//mouseleave end
-        $(this).find($(".lubySelector_list li")).click(function (event){
-            event = event || window.event
-            var selected_v = $(event.target).text();
-            $(event.target).parent().siblings(".lubySelector_selected").text(selected_v);
-            $(event.target).siblings("li").removeClass();
-            $(event.target).addClass("selected_li");
-        });
-    });//each end
-});
-
-/////////////////////////////////////////////////////////
-//      lubySelectbox action end
-/////////////////////////////////////////////////////////
-
 /*----------------------------start personal page----------------------------*/
-
 /////////////////////////////////////////////////////////
 //      personal page subnav hover and ajax
 /////////////////////////////////////////////////////////
@@ -823,13 +536,11 @@ $(function () {
         location.href = 'http://' + hostURL + '/0.current_lubycon/index.php?1=personal_page&2=personal_page&3=' + id;
     });
 });
-
 /////////////////////////////////////////////////////////
 //      personal page subnav hover and ajax
 /////////////////////////////////////////////////////////
 
 /*----------------------------personal page----------------------------*/
-
 /*----------------------------about us----------------------------*/
 /////////////////////////////////////////////////////////
 //      about us animation event start
@@ -894,7 +605,6 @@ function callContact(){
 /////////////////////////////////////////////////////////
 //      about us animation event end
 /////////////////////////////////////////////////////////
-
 /////////////////////////////////////////////////////////
 //      about us hover event start
 /////////////////////////////////////////////////////////
@@ -922,10 +632,7 @@ $(function(){
 /////////////////////////////////////////////////////////
 //      about us hover event end
 /////////////////////////////////////////////////////////
-
-
 /************************************about us**************************************/
-
 /*----------------------------waiting for resisting start----------------------------*/
 
 /////////////////////////////////////////////////////////
@@ -960,33 +667,10 @@ $(function(){
 
 /*----------------------------waiting for resisting end----------------------------*/
 
-/***********************************index_2 canvas start****************************************/
-/*
-=======
-/***********************************designer of the month canvas start****************************************/
-$(function () {
-    var pb = document.getElementById('photo_body');
-    if (pb) {
-        var pbdraw = pb.getContext("2d");
 
-        pbdraw.beginPath();
-        pbdraw.moveTo(140, 0);
-        pbdraw.lineTo(0, 88);
-        pbdraw.lineTo(0, 246);
-        pbdraw.lineTo(140, 325);
-        pbdraw.lineTo(280, 246);
-        pbdraw.lineTo(280, 88);
-        pbdraw.closePath();
 
-        pbdraw.fillStyle = '#464646';
-        pbdraw.fill();
-    }
-});
-
-/***********************************designer of the month canvas end****************************************/
 
 /*----------------------------waiting for resisting end----------------------------*/
-
 /*----------------------------followers start--------------------------*/
 $(function(){
     var toggle_count=0;//from DB

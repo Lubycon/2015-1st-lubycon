@@ -14,24 +14,36 @@
             <img src="<?=$contents_thumb_url?>" class="load_view" alt="contents thumbnail"/>
         </div>
         <!-- end contents pic -->
-        <div class="contents_disc">
+        <div class="contents_desc">
             <div class="contents_sub">
-                <h4 class="contents_title load_view"><?=$contents_name?></h4>
+                <?php 
+                    $current_url = $_GET["3"];
+                    switch($current_url)
+                    {
+                        case "artwork" : echo "<a href='./index.php?1=contents&2=contents_view&3=artwork'>"; break;
+                        case "vector" : echo "<a href='./index.php?1=contents&2=contents_view&3=vector'>"; break;
+                        case "3d" : echo "<a href='./index.php?1=contents&2=contents_view&3=3d'>"; break;
+                        default : echo "<a href='./index.php?1=contents&2=contents_view&3=all'>"; break;
+                    };
+                ?>
+                    <h4 class="contents_title load_view"><?=$contents_name?></h4>
+                </a>
                 <h5><?=$price?></h5>
             </div>
-            <a href="./index.php?1=creators_page&2=creators">
-                <img src="<?=$user_img_url?>" alt="artist photo" />
-            </a>
-            <span class="by">by</span>
-            <a href="./index.php?1=creators_page&2=creators">
-                <span class="name"><?=$username?></span>
-            </a>
+            <span class="creator_desc">
+                <a href="./index.php?1=creators_page&2=creators" class="hidden-mb-ib">
+                    <img src="<?=$user_img_url?>" alt="artist photo" />
+                </a>
+                <span class="by">by</span>
+                <a href="./index.php?1=creators_page&2=creators">
+                    <span class="name"><?=$username?></span>
+                </a>
+            </span>
             <i class="bookmark_bt fa fa-star"></i>
         </div>
-        <!-- end contents disc -->
+        <!-- end contents desc -->
         <div class="contents_overlay load_view">
             <?php 
-                $current_url = $_GET["3"];
                 switch($current_url)
                 {
                     case "artwork" : echo "<a href='./index.php?1=contents&2=contents_view&3=artwork'>"; break;

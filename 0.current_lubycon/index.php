@@ -30,6 +30,7 @@
     <script type="text/javascript" src="js/selectordie.demo.js"></script> <!-- selector decoration js -->
     <script type="text/javascript" src="js/slider.js"></script><!--slider plugin-->
     <script type="text/javascript" src="js/index.js"></script> <!-- index file js -->
+    <script type="text/javascript" src="js/luby_ui.js"></script><!-- ui file js -->
     <script type="text/javascript" src="js/account.js"></script> <!-- account file js -->
     
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" /><!--responsive design enable-->
@@ -41,29 +42,29 @@
     <div class="dark_overlay"></div>
     <!-- popup start -->
     <!-----------------------------------------------------alert boxes-------------------------------------------------->
-    <div class="luby_alert hidden-mb" id="suc_alert">
+    <div class="luby_alert" id="suc_alert">
         <i id="suc_icon" class="fa fa-check-circle rotateIn animated"></i>
         <p>Success!</p>
     </div><!--succese box-->
-    <div class="luby_alert hidden-mb" id="fail_alert">
+    <div class="luby_alert" id="fail_alert">
         <i id="fail_icon" class="fa fa-times tada animated"></i>
         <p>Failed!</p>
     </div><!--fail box-->
-    <div class="luby_alert hidden-mb" id="bookmark_alert">
+    <div class="luby_alert" id="bookmark_alert">
         <i id="star_icon" class="fa fa-star bounce animated"></i>
         <p>It's marked!</p>
     </div><!--bookmark box-->
-    <div class="luby_alert hidden-mb" id="like_alert">
+    <div class="luby_alert" id="like_alert">
         <i id="like_icon" class="fa fa-heart"></i>
         <p>Like :)</p>
     </div>
-    <div class="luby_alert hidden-mb" id="confirm_alert">
+    <div class="luby_alert" id="confirm_alert">
         <p class="confirm_text">Are you sure?</p>
         <button class="index_confirm_bt">Confirm</button>
         <button class="index_cancel_bt">Cancel</button>
     </div><!--confirm box-->
     <!-----------------------------------------------------alert boxes-------------------------------------------------->
-    <div class="editor_popup hidden-mb fadeInDown animated">
+    <div class="editor_popup fadeInDown animated">
         <p>Which content will you upload?</p>
         <ul>
             <li>

@@ -1,4 +1,17 @@
 ﻿@charset "utf-8";
+@media screen and (max-width: 1024px){
+    #nav_guide {
+        margin-top: 46px;
+    }
+}
+@media screen and (min-width: 1025px){
+    #nav_guide {
+        margin-top: 0px;
+    }
+}
+
+
+
 .dark_overlay{
     background:rgba(0,0,0,0.85);
     width:100%;
@@ -51,8 +64,6 @@
         display: inline-block;
     }
 
-
-
 #sharing_bt_box{
     display: inline-block;
     margin-top: 10px;
@@ -87,7 +98,6 @@
 
 #contents_main{
     width: 100%;
-    min-width:960px;
     height:auto;
     display: inline-block;
     overflow:hidden;

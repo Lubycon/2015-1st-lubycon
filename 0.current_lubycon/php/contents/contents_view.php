@@ -1,4 +1,4 @@
-<div class="main_figure_wrap">
+<div class="main_figure_wrap hidden-mb-b">
     <figure id="main_figure">
         <div class="dark_overlay_small"></div>
         <h2>CONTENTS</h2>
@@ -6,7 +6,7 @@
 </div>
 <link href="css/contents_view.css" rel="stylesheet" type="text/css" /><!-- contents view css -->
 <section id="contents">
-    <section id="navsel">
+    <section id="navsel" class="hidden-mb-b">
         <nav id="lnb_nav">
             <ul>
                 <li class="nav_menu" id="all">
@@ -24,8 +24,6 @@
             </ul>
         </nav>  <!-- end lnb nav -->
     </section>  <!-- end section -->
-
-
     <section id="nav_guide">
         <div class="subnav_box">
             <span id="contents_subject">
