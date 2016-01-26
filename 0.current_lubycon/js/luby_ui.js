@@ -9,8 +9,8 @@
 //      nav_guide sticky start
 /////////////////////////////////////////////////////////
 $(document).scroll(function (){
-    if($("#nav_guide").length != 0){
-        var nav_guide = $("#nav_guide");
+    if($(".nav_guide").length != 0){
+        var nav_guide = $(".nav_guide");
         var sticky_start = $("#main_figure").height() + $("#navsel").height();
         var contents_y = nav_guide.height();
         if($("#navsel").length == 0){
@@ -45,7 +45,7 @@ $(document).scroll(function (){
 /////////////////////////////////////////////////////////
 $(document).ready(function(){  
     $(document).scroll(function () {
-        var stickyStart = $("#main_header").height() + $("#navsel").height() + $("#nav_guide").height();
+        var stickyStart = $("#main_header").height() + $("#navsel").height() + $(".nav_guide").height();
         if($("#navsel").length == 0){
                 stickyStart -= $("#navsel").height();
         }else{
@@ -285,7 +285,7 @@ $(function(){
 $(window).on("load resize",function(){
     if(($(window).width() <= 1024) && ($("#mb-menu_panel").length != 0)){
         $("#mb-menu_panel").height = $(window).height();
-        var mb_menu = $("#mb-menu i");
+        var mb_menu = $("#mb-menu");
         var mb_menu_toggle = 0;
         mb_menu.click(function(){
             remove_mb_menu();
@@ -309,6 +309,7 @@ $(window).on("load resize",function(){
                         "z-index": "100000",
                         "cursor": "pointer"
                     });
+                    $("body").css("overflow","hidden");
                     mb_menu_toggle = 1;
                     console.log("true2");
                 break;
@@ -316,6 +317,7 @@ $(window).on("load resize",function(){
                     $("#cancel_layer").remove();
                     $("#wrapper").stop().animate({ left: "0" }, 200);
                     $("#mb-menu_panel").stop().animate({ left: "-250"}, 200);
+                    $("body").css("overflow","auto");
                     mb_menu_toggle = 0;
                 break;
             };//swtich end

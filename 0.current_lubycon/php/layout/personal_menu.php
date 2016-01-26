@@ -12,7 +12,7 @@
             <h5><?=$user_intro?></h5>
         </div>
     </div>
-    <div id="subnav">
+    <div id="subnav" class="hidden-mb-b">
         <ul>
             <li class="subnav_li selected_subnav" id="dashboard">Dashboard</li>
             <li class="subnav_li" id="my_contents">Contents</li>

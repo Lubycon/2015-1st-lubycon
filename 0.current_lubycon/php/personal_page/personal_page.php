@@ -9,7 +9,7 @@
 
 <!-- personal page css -->
 <section id="contents">
-	<section id="nav_guide">
+	<section class="nav_guide">
         <!-- end lnb nav -->
     </section>
     <section id="personal_view">

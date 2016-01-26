@@ -12,7 +12,7 @@
     <section id="navsel">
         <!-- end lnb nav -->
     </section>
-    <section id="nav_guide">
+    <section class="nav_guide">
         <div class="subnav_box">
             <div class="contents_bt">
                 <span class="global_icon">

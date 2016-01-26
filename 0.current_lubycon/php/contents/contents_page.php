@@ -8,7 +8,7 @@
 </div>
 <link href="css/contents_page.css" rel="stylesheet" type="text/css" />  <!-- contents page css -->
 <section id="contents">
-    <section id="navsel">
+    <section id="navsel" class="hidden-mb-b">
         <nav id="lnb_nav">
             <ul>
                 <li class="nav_menu" id="all">
@@ -28,7 +28,7 @@
     </section>  <!-- end section -->
 
 
-    <section id="nav_guide">
+    <section class="nav_guide">
         <div class="subnav_box">
             <?php
                 $current_url = $_GET["3"];//change to db query later
@@ -62,7 +62,7 @@
                 </ul>
             </div>
 
-            <div id="sub_search_bar" class="hidden-mb-ib">
+            <div id="sub_search_bar">
                 <div class="select_box">
                     <select class="basic">
                         <option value="Title">Title</option>

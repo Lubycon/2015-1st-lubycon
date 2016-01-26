@@ -29,7 +29,7 @@
         </nav>
     </section>
 
-    <section id="nav_guide"></section>  <!-- end nav_guide -->
+    <section class="nav_guide"></section>  <!-- end nav_guide -->
 
     <section id="work_space" class="con_wrap">
         <div id="work_inner">

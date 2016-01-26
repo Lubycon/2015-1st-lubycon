@@ -26,7 +26,7 @@
         <!-- end lnb nav -->
         <!-- end select box -->
     </section>
-    <section id="nav_guide">
+    <section class="nav_guide">
     
         <div class="subnav_box">
             <div class="lubySelector">

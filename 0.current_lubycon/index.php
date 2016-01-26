@@ -21,6 +21,7 @@
 
     <link href="css/layout/normalize.css" rel="stylesheet" type="text/css" />  <!-- web normalize -->
     <link href="css/layout/common.css" rel="stylesheet" type="text/css" />  <!-- common css -->
+    <link href="css/layout/media.css" rel="stylesheet" type="text/css" /> <!-- media query-->
     <link href="css/selectordie.css" rel="stylesheet" type="text/css" /> <!-- selector decoration css -->
     <link href="css/layout/animate.css" rel="stylesheet" type="text/css" /><!--animation for objects-->
     <link href="css/slider.css" rel="stylesheet" type="text/css" /><!--slider css-->
