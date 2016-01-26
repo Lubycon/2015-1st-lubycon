@@ -202,10 +202,33 @@ $(function(){
 /////////////////////////////////////////////////////////
 //      lubySelectbox action start
 /////////////////////////////////////////////////////////
+/*
+<div class="lubySelector"> //.....................................class: lubySelector
+    <span class="global_icon"><i class="fa fa-usd"></i></span> // class: global_icon(It was used font-awesome)
+    <span class="lubySelector_selected">All</span> //.............class: lubySelector_selected
+    <span class="lubySelector_arrow"><i class="fa fa-caret-down"></i></span> //class: lubySelector_arrow
+    <ul class="lubySelector_list"> //.............................class: lubySelector_list
+        <li class="selected_li">All</li> //.......................class: selected_li
+        <li>Free</li>
+        <li>Free for personal</li>
+        <li>Paid</li>
+    </ul>
+</div>
+*/
 $(function(){
     $(".lubySelector").each(function(){
         var toggle_count = 0;
-       
+        var option_list = [];//make option list array
+        $(this).find(".lubySelector_list li").each(function(){//make option list array
+            option_list.push($(this).text().replace(/ /gi, ''));
+            //It will be push to array after removed all spaces  
+        });
+        $(this).after("<select class='original_box'>");//make select box after lubySelector  
+        for(var i = 0; i <= option_list.length; i++){//make options in select box
+            $(this).next(".original_box").append("<option value="+option_list[i]+">"+option_list[i]+"</option>");
+            //i = Array's index
+        };
+        $(".original_box").hide();//original select box will be hide
         $(this).click(function(){
             console.log(toggle_count);
             switch(toggle_count){
@@ -244,13 +267,15 @@ $(function(){
         $(this).find($(".lubySelector_list li")).click(function (event){
             event = event || window.event
             var selected_v = $(event.target).text();
+            var selected_option = $(event.target).text().replace(/ /gi, '');
             $(event.target).parent().siblings(".lubySelector_selected").text(selected_v);
+            $(event.target).parents(".lubySelector").next(".original_box").val(selected_option);
             $(event.target).siblings("li").removeClass();
             $(event.target).addClass("selected_li");
+            console.log("hidden_selector value is " + "'" + $(event.target).parents(".lubySelector").next(".original_box").val() + "'");
         });
     });//each end
 });
-
 /////////////////////////////////////////////////////////
 //      lubySelectbox action end
 /////////////////////////////////////////////////////////
