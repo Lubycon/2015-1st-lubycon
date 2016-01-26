@@ -144,6 +144,21 @@
 		-moz-box-sizing: border-box;
 		float: left;
 	}
+	.insight_total {
+		
+	}
+		#total_like .dash_body_content{
+			border-bottom: 5px solid #48cfad;
+		}
+		#total_view .dash_body_content{
+			border-bottom: 5px solid #ec6446;
+		}
+		#total_upload .dash_body_content{
+			border-bottom: 5px solid #488ccb;
+		}
+		#total_download .dash_body_content{
+			border-bottom: 5px solid #ffbe54;
+		}
 	.x2 {
 		width: 50%;
 	}

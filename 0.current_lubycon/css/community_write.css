@@ -38,6 +38,7 @@
             font-size:20px;
             color:#444;
             font-weight: 200;
+            vertical-align: top;
             display: inline-block;
             margin-right:20px;
             margin-left:5px;
@@ -70,6 +71,7 @@
         width:1098px;
         border:none;
         border-radius: 3px;
+        display: inline-block;
     }
         .note-toolbar
         {
@@ -82,37 +84,7 @@
             min-height:300px;
         }
         
-        .modal
-        {
-            position: fixed;
-            top:0;
-            left:0;
-            right:0;
-            bottom:0;
-            z-index:5;
-            display: none;
-            outline: 0;
-            overflow: hidden;
-        }
-            .modal-dialog
-            {
-                width:600px;
-                margin:30px auto;
-            }
-            .modal-content
-            {
-                position: relative;
-                outline: 0;
-            }
-                .modal-body
-                {
-                    position: relative;
-                    outline: 0;
-                }
-                .panel-heading.note-toolbar .dropdown-menu
-                {
-                    z-index: 2
-                }
+
         a[data-event="formatBlock"] h1
         {
             position:relative;
@@ -121,14 +93,6 @@
             height:auto;
         }
     
-
-
-
-
-
-
-
-
     .tooltip_bt{
         min-width: 70px;
         height: 20px;

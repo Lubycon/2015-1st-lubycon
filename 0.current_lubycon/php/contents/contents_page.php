@@ -1,6 +1,6 @@
 <script type="text/javascript" src="js/infinite_scroll.js"></script> <!-- scroll js -->
 
-<div class="main_figure_wrap">
+<div class="main_figure_wrap hidden-mb-b">
     <figure id="main_figure">
         <div class="dark_overlay_small"></div>
         <h2>CONTENTS</h2>
@@ -8,7 +8,7 @@
 </div>
 <link href="css/contents_page.css" rel="stylesheet" type="text/css" />  <!-- contents page css -->
 <section id="contents">
-    <section id="navsel">
+    <section id="navsel" class="hidden-mb-b">
         <nav id="lnb_nav">
             <ul>
                 <li class="nav_menu" id="all">
@@ -28,7 +28,7 @@
     </section>  <!-- end section -->
 
 
-    <section id="nav_guide">
+    <section class="nav_guide">
         <div class="subnav_box">
             <?php
                 $current_url = $_GET["3"];//change to db query later
@@ -38,7 +38,7 @@
                     case "3d" : include_once("php/sub_nav/categories/category_3d.php"); break;
                 }
             ?>
-            <div class="lubySelector">
+            <div class="lubySelector hidden-mb-ib">
                 <span class="global_icon"><i class="fa fa-usd"></i></span>
                 <span class="lubySelector_selected">All</span>
                 <span class="lubySelector_arrow"><i class="fa fa-caret-down"></i></span>
@@ -49,7 +49,7 @@
                     <li>Paid</li>
                 </ul>
             </div><!--pay selector end-->
-            <div class="lubySelector">
+            <div class="lubySelector hidden-mb-ib">
                 <span class="global_icon"><i class="fa fa-filter"></i></span>
                 <span class="lubySelector_selected">Featured</span>
                 <span class="lubySelector_arrow"><i class="fa fa-caret-down"></i></span>

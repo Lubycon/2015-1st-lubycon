@@ -1,16 +1,16 @@
-﻿<div class="main_figure_wrap hidden-mb-b">
+﻿<div class="main_figure_wrap">
     <figure id="main_figure">
         <div class="dark_overlay_small"></div>
         <h2>COMMUNITY</h2>
     </figure>   <!-- end main_figure -->
 </div>
-<link href="css/bootstrap.min.css" type="text/css" rel="stylesheet"> 
-<link href="css/summernote.css" type="text/css" rel="stylesheet" />
+
 <link href="css/community_write.css" rel="stylesheet" type="text/css" />  <!-- community_view css -->
 <link href="css/community.css" rel="stylesheet" type="text/css" />  <!-- community css -->
-<script src="js/bootstrap.min.js" type="text/javascript"></script> 
 <script src="js/community.js" type="text/javascript"></script>
-
+<link href="css/bootstrap.min.css" type="text/css" rel="stylesheet"> 
+<script src="js/bootstrap.min.js" type="text/javascript"></script> 
+<link href="css/summernote.css" type="text/css" rel="stylesheet" />
 
 <section id="contents">
     <section id="navsel">

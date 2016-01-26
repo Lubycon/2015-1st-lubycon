@@ -1,4 +1,4 @@
-<div class="main_figure_wrap">
+<div class="main_figure_wrap hidden-mb-b">
     <figure id="main_figure">
         <div class="dark_overlay_small"></div>
         <h2>CREATORS</h2>
@@ -9,7 +9,7 @@
 <link href="css/artists_page.css" rel="stylesheet" type="text/css" />
 <!-- contents page css -->
 <section id="contents">
-    <section id="nav_guide">
+    <section class="nav_guide">
         <div class="subnav_box">
             <div class="lubySelector">
                 <span class="global_icon">

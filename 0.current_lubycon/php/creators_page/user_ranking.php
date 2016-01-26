@@ -1,4 +1,4 @@
-<div class="main_figure_wrap">
+<div class="main_figure_wrap hidden-mb-b">
     <figure id="main_figure">
         <div class="dark_overlay_small"></div>
         <h2>RANKING</h2>
@@ -12,7 +12,7 @@
     <section id="navsel">
         <!-- end lnb nav -->
     </section>
-    <section id="nav_guide">
+    <section class="nav_guide">
         <div class="subnav_box">
             <div class="contents_bt">
                 <span class="global_icon">

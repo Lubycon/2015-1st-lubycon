@@ -20,17 +20,18 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" /> <!--icon font-->
 
     <link href="css/layout/normalize.css" rel="stylesheet" type="text/css" />  <!-- web normalize -->
-    <link href="css/layout/common.css" rel="stylesheet" type="text/css" />  <!-- common css -->  
+    <link href="css/layout/common.css" rel="stylesheet" type="text/css" />  <!-- common css -->
+    <link href="css/layout/media.css" rel="stylesheet" type="text/css" /> <!-- media query-->
     <link href="css/selectordie.css" rel="stylesheet" type="text/css" /> <!-- selector decoration css -->
     <link href="css/layout/animate.css" rel="stylesheet" type="text/css" /><!--animation for objects-->
     <link href="css/slider.css" rel="stylesheet" type="text/css" /><!--slider css-->
 
     <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script> <!-- jquery library -->
-    <script type="text/javascript" src="js/jquery.mobile.min.js"></script> <!--jquery moblie-->
     <script type="text/javascript" src="js/selectordie.min.js"></script> <!-- selector decoration js -->
     <script type="text/javascript" src="js/selectordie.demo.js"></script> <!-- selector decoration js -->
     <script type="text/javascript" src="js/slider.js"></script><!--slider plugin-->
     <script type="text/javascript" src="js/index.js"></script> <!-- index file js -->
+    <script type="text/javascript" src="js/luby_ui.js"></script><!-- ui file js -->
     <script type="text/javascript" src="js/account.js"></script> <!-- account file js -->
     
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" /><!--responsive design enable-->
@@ -39,32 +40,75 @@
     <![endif]-->
 </head>
 <body id="bodyer">
+<div id="wrapper"> 
     <div class="dark_overlay"></div>
+    <aside id="mb-menu_panel" class="visible-mb"><!--mobile panel menu-->
+    <?php
+        $user_pic = "./ch/img/no_img/no_img_user1.jpg";
+        $user_name = "Lorem ipsum";
+    ?>
+        <header id="mb-user_section">
+            <figure id="mb-user_pic">
+                <img src=<?=$user_pic?>></img>
+            </figure>
+            <span id="mb-user_name"><?=$user_name?></span>
+        </header>
+        <ul class="mb-menu_group">
+            <li class="mb-menu_list">
+                <a href="./index.php?1=contents&2=contents_page&3=artwork">Artwork</a>
+            </li>
+            <li class="mb-menu_list">
+                <a href="./index.php?1=contents&2=contents_page&3=vector">Vector</a>
+            </li>
+            <li class="mb-menu_list">
+                <a href="./index.php?1=contents&2=contents_page&3=3d">3D</a>
+            </li>
+        </ul>
+        <ul class="mb-menu_group">
+            <li class="mb-menu_list">
+                <a href="./index.php?1=creators_page&2=creators">Creator</a>
+            </li>
+        </ul>
+        <ul class="mb-menu_group">
+            <li class="mb-menu_list">
+                <a href="./index.php?1=personal_page&2=personal_page&3=dashboard">Dashboard</a>
+            </li>
+            <li class="mb-menu_list">
+                <a href="./index.php?1=personal_page&2=personal_page&3=insight">Insight</a>
+            </li>
+            <li class="mb-menu_list">
+                <a href="./index.php?1=personal_page&2=personal_page&3=account_setting">Account Setting</a>
+            </li>
+        </ul>
+        <ul class="mb-menu_group">
+            <li class="mb-menu_list">Log out</li>
+        </ul>
+    </aside>
     <!-- popup start -->
     <!-----------------------------------------------------alert boxes-------------------------------------------------->
-    <div class="luby_alert hidden-mb" id="suc_alert">
+    <div class="luby_alert" id="suc_alert">
         <i id="suc_icon" class="fa fa-check-circle rotateIn animated"></i>
         <p>Success!</p>
     </div><!--succese box-->
-    <div class="luby_alert hidden-mb" id="fail_alert">
+    <div class="luby_alert" id="fail_alert">
         <i id="fail_icon" class="fa fa-times tada animated"></i>
         <p>Failed!</p>
     </div><!--fail box-->
-    <div class="luby_alert hidden-mb" id="bookmark_alert">
+    <div class="luby_alert" id="bookmark_alert">
         <i id="star_icon" class="fa fa-star bounce animated"></i>
         <p>It's marked!</p>
     </div><!--bookmark box-->
-    <div class="luby_alert hidden-mb" id="like_alert">
+    <div class="luby_alert" id="like_alert">
         <i id="like_icon" class="fa fa-heart"></i>
         <p>Like :)</p>
     </div>
-    <div class="luby_alert hidden-mb" id="confirm_alert">
+    <div class="luby_alert" id="confirm_alert">
         <p class="confirm_text">Are you sure?</p>
         <button class="index_confirm_bt">Confirm</button>
         <button class="index_cancel_bt">Cancel</button>
     </div><!--confirm box-->
     <!-----------------------------------------------------alert boxes-------------------------------------------------->
-    <div class="editor_popup hidden-mb fadeInDown animated">
+    <div class="editor_popup fadeInDown animated">
         <p>Which content will you upload?</p>
         <ul>
             <li>
@@ -96,7 +140,7 @@
         <h1>
             <a href="./index.php">
                 <img id="luby-logo" class="hidden-mb-ib" src="./ch/img/logo/lubycon_logo.svg" width="176" height="40" alt="Lubycon logo" />
-                <img id="luby-logo-mb" class="visible-mb" src="./ch/img/logo/lubycon_logo-mb.svg" width="160" height="50" alt="Lubycon logo" />
+                <img id="luby-logo-mb" class="visible-mb" src="./ch/img/logo/lubycon_logo-mb.svg" width="100" height="50" alt="Lubycon logo" />
             </a>
             <span id="beta_version" class="hidden-mb-b">BETA</span><!--beta mark-->
         </h1><!--LUBYCON LOGO-->
@@ -191,7 +235,6 @@
                     <li>ENG</li>
                     <li>FRN</li>
                     <li>JPN</li>
-                    <li>POR</li>
                 </ul>	<!-- end lang_list -->
             </ul>	<!-- end lang_all -->
         </div>	<!-- end lang_select_bt -->
@@ -201,7 +244,6 @@
     <!---------------- search bar start ---------------->
     <div id="main_search_bar" class="hidden-mb-b">
         <input type="text" id="main_search_text" value="Enter the Keyword" />
-
         <button id="main_search_btn" class="out">
             <i class="fa fa-search"></i>
         </button>
@@ -228,6 +270,7 @@
         }
     ?>
     <footer id="footer" class="relative_foot"></footer>   <!--end footer-->
+</div>
 </body>
 
 </html>

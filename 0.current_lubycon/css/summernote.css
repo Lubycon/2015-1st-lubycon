@@ -30,6 +30,7 @@
 
     .note-editor .note-editing-area {
         position: relative;
+        cursor: text;
     }
 
         .note-editor .note-editing-area .note-editable {

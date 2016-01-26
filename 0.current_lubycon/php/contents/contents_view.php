@@ -1,4 +1,4 @@
-<div class="main_figure_wrap">
+<div class="main_figure_wrap hidden-mb-b">
     <figure id="main_figure">
         <div class="dark_overlay_small"></div>
         <h2>CONTENTS</h2>
@@ -6,7 +6,7 @@
 </div>
 <link href="css/contents_view.css" rel="stylesheet" type="text/css" /><!-- contents view css -->
 <section id="contents">
-    <section id="navsel">
+    <section id="navsel" class="hidden-mb-b">
         <nav id="lnb_nav">
             <ul>
                 <li class="nav_menu" id="all">
@@ -24,9 +24,7 @@
             </ul>
         </nav>  <!-- end lnb nav -->
     </section>  <!-- end section -->
-
-
-    <section id="nav_guide">
+    <section class="nav_guide" id="contents_info_wrap">
         <div class="subnav_box">
             <span id="contents_subject">
                 <?php 
@@ -142,7 +140,7 @@
                         <h4><?=$username?></h4>
                         <h5><i class="fa fa-home"></i><?=$usercity?>, <?=$usercountry?></h5>
                     </div>
-                    <button id="content_down"><i class="fa fa-download"></i></button>
+                    <button id="content_down" class="hidden-mb-b"><i class="fa fa-download"></i></button>
                     <div id="file_info">
                         <header id="info_header">File info<i class="fa fa-angle-down" id="info_toggle"></i></header>
                         <section id="files">
@@ -165,21 +163,21 @@
                     <div id="contents_score">
                         <ul>
                             <li><i class="fa fa-eye"></i></li>
-                            <li>Views</li>
+                            <li class="hidden-mb-ib">Views</li>
                             <li class="contents_view_score"><?=$file_view?></li>
                         </ul>
                         <ul>
                             <li><i class="fa fa-cloud-download"></i></li>
-                            <li>Downloads</li>
+                            <li class="hidden-mb-ib">Downloads</li>
                             <li class="contents_view_score"><?=$file_down?></li>
                         </ul>
                         <ul>
                             <li><i class="fa fa-heart"></i></li>
-                            <li>Likes</li>
+                            <li class="hidden-mb-ib">Likes</li>
                             <li class="contents_view_score"><?=$file_like?></li>
                         </ul>
                     </div>
-                    <div id="tag_wrap">
+                    <div id="tag_wrap" class="hidden-mb-b">
                         <p id="tag_title"><i class="fa fa-tag"></i>Tags</p>
                         <div id="tagbox_wrap">
                             <ul id="tagbox_wrap_inner">
@@ -191,7 +189,7 @@
                             </ul>                       
                         </div>
                     </div>
-                    <div id="file_descript">
+                    <div id="file_descript" class="hidden-mb-b">
                         <p id="view_descript">ABOUT THIS CONTENT</p>
                         <div id="descript_box">
                             <p><?=$file_descript?></p>

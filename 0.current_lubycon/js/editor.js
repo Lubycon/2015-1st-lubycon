@@ -393,7 +393,7 @@ $(function () {
                 ['color', ['color']],
                 ['para', ['paragraph']],
                 ['insert', ['picture', 'video', 'link', 'table', 'hr']],
-                ['misc', ['fullscreen', 'help']],
+                ['misc', ['help']],
             ],
             fontNames: ['Arial', 'Arial Black', 'Comic Sans MS', 'Source Sans Pro'],
             callbacks:

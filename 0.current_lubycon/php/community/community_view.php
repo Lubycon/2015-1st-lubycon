@@ -1,4 +1,4 @@
-<div class="main_figure_wrap">
+<div class="main_figure_wrap hidden-mb-b">
     <figure id="main_figure">
         <div class="dark_overlay_small"></div>
         <h2>COMMUNITY</h2>
@@ -55,7 +55,7 @@
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.";
     ?>
 
-    <section id="nav_guide">
+    <section class="nav_guide">
         <p id="post_subject">
             <?=$post_subject?>
             <span class="written_date"><?=$year?>.<?=$month?>.<?=$day?> <?=$hour?>:<?=$minute?></span>

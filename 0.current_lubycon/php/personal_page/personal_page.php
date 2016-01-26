@@ -1,4 +1,4 @@
-<div class="main_figure_wrap">
+<div class="main_figure_wrap hidden-mb-b">
     <figure id="main_figure">
         <div class="dark_overlay_small"></div>
         <h2>PERSONAL PAGE</h2>
@@ -9,7 +9,7 @@
 
 <!-- personal page css -->
 <section id="contents">
-	<section id="nav_guide">
+	<section class="nav_guide">
         <!-- end lnb nav -->
     </section>
     <section id="personal_view">

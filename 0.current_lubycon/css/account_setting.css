@@ -26,10 +26,7 @@
         font-size:25px;
         color: #444444;
     }
-    .setting_form{
-        padding-left:60px;
-    }
-        .setting_form label{
+        .setting_card label{
             width: 130px;
             display: inline-block;
             height: 30px;
@@ -37,18 +34,18 @@
             margin-bottom:20px;
             color:#444444;
         }
-        .setting_form input{
+        .setting_card input{
             width: 190px;
             height: 29px;
             border:1px solid #999;
             border-radius: 3px;
             padding: 0px 10px;
         }
-            .setting_form input:focus{
+            .setting_card input:focus{
                 border:1px solid #48cfad;
                 box-shadow: 0px 0px 5px rgba(81, 203, 238, 1);
             }
-        .setting_form .fa-times{
+        .setting_card .fa-times{
             width: 25px;
             height: 25px;
             line-height: 25px;
@@ -59,7 +56,7 @@
             vertical-align: middle;
             margin-left: 10px;
         }
-        .setting_form .fa-check{
+        .setting_card .fa-check{
             width: 25px;
             height: 25px;
             line-height: 25px;
@@ -81,7 +78,7 @@
             line-height: 13px;
         }
 
-    .setting_form #Change_pass{
+    .setting_card #Change_pass{
         width:130px;
         height:30px;
         background:#48cfad;

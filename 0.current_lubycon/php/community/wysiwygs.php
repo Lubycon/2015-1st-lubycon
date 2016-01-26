@@ -8,7 +8,7 @@
 <script src="js/summernote.js" type="text/javascript" ></script>
 <script>
 	$(document).ready(function(){
-		$('.note').summernote({
+		$('#main_work_space').summernote({
 			minHeight:null,
 			maxHeight:null,
 			focus:true,
