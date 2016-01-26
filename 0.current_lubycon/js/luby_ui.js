@@ -288,20 +288,38 @@ $(window).on("load resize",function(){
         var mb_menu = $("#mb-menu i");
         var mb_menu_toggle = 0;
         mb_menu.click(function(){
+            remove_mb_menu();
+            $("#cancel_layer").click(function(){
+                remove_mb_menu();
+            });
+        });//click end
+        function remove_mb_menu(){
             switch(mb_menu_toggle){
                 case 0 : 
                     $("#wrapper").stop().animate({ left: "250" }, 200);
                     $("#mb-menu_panel").stop().animate({ left: "0"}, 200);
+                    $("#mb-menu_panel").after("<div id='cancel_layer'>");
+                    $("#cancel_layer").css({
+                        "width": "100%",
+                        "height": "100%",
+                        "background": "none",
+                        "position": "absolute",
+                        "top": "0",
+                        "left": "0",
+                        "z-index": "100000",
+                        "cursor": "pointer"
+                    });
                     mb_menu_toggle = 1;
                     console.log("true2");
                 break;
                 case 1 :
+                    $("#cancel_layer").remove();
                     $("#wrapper").stop().animate({ left: "0" }, 200);
                     $("#mb-menu_panel").stop().animate({ left: "-250"}, 200);
                     mb_menu_toggle = 0;
                 break;
             };//swtich end
-        });//click end
+        }//remove_function end
     }//if end
     else{
         console.log("This is not mobile");
