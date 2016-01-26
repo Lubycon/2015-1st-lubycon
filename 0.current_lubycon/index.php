@@ -39,7 +39,50 @@
     <![endif]-->
 </head>
 <body id="bodyer">
+<div id="wrapper"> 
     <div class="dark_overlay"></div>
+    <aside id="mb-menu_panel" class="visible-mb"><!--mobile panel menu-->
+    <?php
+        $user_pic = "./ch/img/no_img/no_img_user1.jpg";
+        $user_name = "Lorem ipsum";
+    ?>
+        <header id="mb-user_section">
+            <figure id="mb-user_pic">
+                <img src=<?=$user_pic?>></img>
+            </figure>
+            <span id="mb-user_name"><?=$user_name?></span>
+        </header>
+        <ul class="mb-menu_group">
+            <li class="mb-menu_list">
+                <a href="./index.php?1=contents&2=contents_page&3=artwork">Artwork</a>
+            </li>
+            <li class="mb-menu_list">
+                <a href="./index.php?1=contents&2=contents_page&3=vector">Vector</a>
+            </li>
+            <li class="mb-menu_list">
+                <a href="./index.php?1=contents&2=contents_page&3=3d">3D</a>
+            </li>
+        </ul>
+        <ul class="mb-menu_group">
+            <li class="mb-menu_list">
+                <a href="./index.php?1=creators_page&2=creators">Creator</a>
+            </li>
+        </ul>
+        <ul class="mb-menu_group">
+            <li class="mb-menu_list">
+                <a href="./index.php?1=personal_page&2=personal_page&3=dashboard">Dashboard</a>
+            </li>
+            <li class="mb-menu_list">
+                <a href="./index.php?1=personal_page&2=personal_page&3=insight">Insight</a>
+            </li>
+            <li class="mb-menu_list">
+                <a href="./index.php?1=personal_page&2=personal_page&3=account_setting">Account Setting</a>
+            </li>
+        </ul>
+        <ul class="mb-menu_group">
+            <li class="mb-menu_list">Log out</li>
+        </ul>
+    </aside>
     <!-- popup start -->
     <!-----------------------------------------------------alert boxes-------------------------------------------------->
     <div class="luby_alert" id="suc_alert">
@@ -226,6 +269,7 @@
         }
     ?>
     <footer id="footer" class="relative_foot"></footer>   <!--end footer-->
+</div>
 </body>
 
 </html>

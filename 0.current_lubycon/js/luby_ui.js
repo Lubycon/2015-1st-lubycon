@@ -4,7 +4,7 @@
 //3. tooltip box action
 //4. alert action
 //5. selector
-
+//6. mb-panel_menu
 /////////////////////////////////////////////////////////
 //      nav_guide sticky start
 /////////////////////////////////////////////////////////
@@ -278,4 +278,36 @@ $(function(){
 });
 /////////////////////////////////////////////////////////
 //      lubySelectbox action end
+/////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+//      mobile menu action start
+/////////////////////////////////////////////////////////
+$(window).on("load resize",function(){
+    if(($(window).width() <= 1024) && ($("#mb-menu_panel").length != 0)){
+        $("#mb-menu_panel").height = $(window).height();
+        var mb_menu = $("#mb-menu i");
+        var mb_menu_toggle = 0;
+        mb_menu.click(function(){
+            switch(mb_menu_toggle){
+                case 0 : 
+                    $("#wrapper").stop().animate({ left: "250" }, 200);
+                    $("#mb-menu_panel").stop().animate({ left: "0"}, 200);
+                    mb_menu_toggle = 1;
+                    console.log("true2");
+                break;
+                case 1 :
+                    $("#wrapper").stop().animate({ left: "0" }, 200);
+                    $("#mb-menu_panel").stop().animate({ left: "-250"}, 200);
+                    mb_menu_toggle = 0;
+                break;
+            };//swtich end
+        });//click end
+    }//if end
+    else{
+        console.log("This is not mobile");
+        return; 
+    }
+});
+/////////////////////////////////////////////////////////
+//      mobile menu action end
 /////////////////////////////////////////////////////////

@@ -79,22 +79,26 @@ body{
 /*--------------------------------------------------------media query start*/
 /*------mobile start-------*/
 @media screen and (max-width: 1024px){
-    .visible-mb{
+    .visible-mb {
         display: block;
     }
-    .hidden-mb-ib{
+    .hidden-mb-ib {
         display: none;
     }
-    .hidden-mb-b{
+    .hidden-mb-b {
         display: none;
     }
-    #footer{
+    #wrapper {
+        position: absolute;
+        width: 100%;
+    }
+    #footer {
         display: none;
     }
-    #main_header{
+    #main_header {
         height: 45px;
     }
-        #mb-menu{
+        #mb-menu {
             width: 45px;
             height: 45px;
             line-height: 55px;
@@ -103,29 +107,79 @@ body{
             z-index: 11;
             cursor: pointer;
         }
-            #mb-menu i{
+            #mb-menu i {
                 color: #ffffff;
                 font-size: 25px;
             }
-        #main_header h1{
+        #mb-menu_panel {
+            position: fixed;
+            width: 250px;
+            height: 100%;
+            background: #383838 no-repeat;
+            top: 0;
+            left: -250px;
+            z-index: 10000;
+        }
+            .mb-menu_group {
+                padding: 15px;
+            }
+                .mb-menu_list {
+                    padding: 10px;
+                    border-bottom: 1px solid #222222;
+                    font-size: 20px;
+                    color: #ffffff;
+                    font-weight: 200;
+                }
+                    .mb-menu_list a {
+                        font-size: 20px;
+                        color: #ffffff;
+                        font-weight: 200;
+                    }
+            #mb-user_section{
+                width: 100%;
+                padding: 15px;
+                background: #282828;
+                box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                -moz-box=sizing: border-box;
+            }
+            #mb-user_pic {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                overflow: hidden;
+                display: inline-block;
+            }
+                #mb-user_pic img {
+                    width: 100%;
+                }
+            #mb-user_name {
+                display: inline-block;
+                line-height: 50px;
+                margin-left: 18px;
+                color: #ffffff;
+                font-size: 23px;
+                vertical-align: top;
+            }
+        #main_header h1{ 
             width: 100%;
         }
-            #luby-logo-mb{
+            #luby-logo-mb {  
                 margin: 0px auto;
                 margin-top: -7px;
             }
-        #after_signin{
+        #after_signin {
             margin-right: 0px;
         }
-            #after_signin figure{
+            #after_signin figure {
                 width: 45px;
                 height: 45px;
             }
-                #after_signin figure img{
+                #after_signin figure img {
                     width: 45px;
                     height: 45px;
                 }
-        #mb-search{
+        #mb-search {
             width: 45px;
             height: 45px;
             line-height: 55px;
