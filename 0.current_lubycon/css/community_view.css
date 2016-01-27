@@ -160,19 +160,13 @@
         font-size:18px;
         font-weight: 200;
     }
-    #post_contents #com_like_bt{
+    #post_contents #like_bt{
         background: #eeeeee;
     }
-        #post_contents #com_like_bt i{
+        #post_contents #like_bt i{
             font-size: 40px;
             margin-top: 3px;
         }
-    .like_bt_active {
-        background: #ec6446 !important;
-    }
-    .like_bt_active i{
-        color:#ffffff !important;
-    }
 
 
 #share_box {

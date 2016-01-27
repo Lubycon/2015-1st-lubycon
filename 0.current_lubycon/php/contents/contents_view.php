@@ -77,8 +77,8 @@
             <div class="con_wrap">
                 <div id="contents_main" class="con_main">
                     <div id="floating_bt">
-                        <div id="bookmark"><i id="bookmark_inner_bt" class="fa fa-star"></i></div>
-                        <div id="con_like_bt" class="like_bt"><i class="fa fa-heart"></i></div>
+                        <div id="bookmark_bt" class="lubyAlert_bt"><i id="bookmark_inner_bt" class="fa fa-star"></i></div>
+                        <div id="like_bt" class="like_bt lubyAlert_bt"><i class="fa fa-heart"></i></div>
                     </div>
                     <?php 
                         $current_url = $_GET["3"];

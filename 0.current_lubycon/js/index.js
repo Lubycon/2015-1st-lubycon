@@ -15,8 +15,10 @@ $(document).ready(function(){
         });
     });
 });*/
-$(window).resize(function(){
+$(window).on("resize load", function(){
     console.log($(window).width());
+    $("body").css("min-height",$(window).height().toString()+"px");
+    console.log("body_height" + $("body").height());
 });
 /*$(document).on('keypress', function(e) {
     if (e.which == 13) {// 13 == enter key@ascii

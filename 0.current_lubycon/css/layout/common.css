@@ -1,6 +1,8 @@
 ﻿@charset "utf-8";
 /*CSS RESET*/
 body {
+    width: 100%;
+    position: relative;
     background: #fff;
     display: block;
     overflow-x:hidden;
@@ -102,55 +104,55 @@ body{
     display: inline-block;
 }
 
-    .luby_alert{
-        width: 340px;
+    .lubyAlert{
+        width: 170px;
         height: 170px;
         position: fixed;
         display: none;
         
         left: 50%;
-        margin-left: -200px;
+        margin-left: -85px;
         padding: 3px;
         top: 25%;
         text-align: center;
         
-        background: rgba(255,255,255,0.95);
+        background: rgba(0,0,0,0.8);
         border-radius: 10px;
         box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.8);
         z-index: 100;
         cursor:default;
     }
-        .luby_alert .fa{
-            font-size: 52px;          
+        .lubyAlert .fa{
+            font-size: 48px;          
             text-align: center;
             display: block;
             margin-top: 34px;
         }
-        .luby_alert #suc_icon{
+        .lubyAlert #suc_icon{
             color:#48cfad;
         }
-        .luby_alert #fail_icon{
+        .lubyAlert #fail_icon{
             color:#ec6446;
         }
-        .luby_alert #star_icon{
-            color:#ffbe54;
+        .lubyAlert #star_icon{
+            color:#ffffff;
         }
-        .luby_alert #like_icon{
-            color:#ec6446;
+        .lubyAlert #like_icon{
+            color:#ffffff;
         }
         
-        .luby_alert p{
-            color:#444444;
-            font-size: 36px;
+        .lubyAlert p{
+            color:#ffffff;
+            font-size: 30px;
             font-weight: 200;
             text-align: center;
 
             margin-top:14px;
         }
-        .luby_alert .confirm_text{
+        .lubyAlert .confirm_text{
             margin-top:45px;
         }
-        .luby_alert .index_confirm_bt{
+        .lubyAlert .index_confirm_bt{
             width:150px;
             height:35px;
 
@@ -164,7 +166,7 @@ body{
             margin-top: 60px;
             cursor:pointer;
         }
-        .luby_alert .index_cancel_bt{
+        .lubyAlert .index_cancel_bt{
             width:150px;
             height:35px;
 
@@ -1194,12 +1196,11 @@ body{
             .creator_desc .name{
                 color:#444444;
             }
-        .contents_desc .bookmark_bt{
+        .contents_desc #bookmark_bt{
             position: absolute;
-            bottom: 3px;
-            right: 3px;
+            bottom: 5px;
+            right: 5px;
             color: #cccccc;
-            font-size: 25px;
             cursor: pointer;
         }
 .like_bt {

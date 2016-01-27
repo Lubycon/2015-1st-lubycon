@@ -34,7 +34,7 @@
     <script type="text/javascript" src="js/luby_ui.js"></script><!-- ui file js -->
     <script type="text/javascript" src="js/account.js"></script> <!-- account file js -->
     
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" /><!--responsive design enable-->
+    <meta name="viewport" content="width=device-width, height=device-height"><!--responsive design enable-->
     <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -86,23 +86,23 @@
     </aside>
     <!-- popup start -->
     <!-----------------------------------------------------alert boxes-------------------------------------------------->
-    <div class="luby_alert" id="suc_alert">
+    <div class="lubyAlert" id="suc_alert">
         <i id="suc_icon" class="fa fa-check-circle rotateIn animated"></i>
         <p>Success!</p>
     </div><!--succese box-->
-    <div class="luby_alert" id="fail_alert">
+    <div class="lubyAlert" id="fail_alert">
         <i id="fail_icon" class="fa fa-times tada animated"></i>
         <p>Failed!</p>
     </div><!--fail box-->
-    <div class="luby_alert" id="bookmark_alert">
+    <div class="lubyAlert" id="bookmark_btAlert">
         <i id="star_icon" class="fa fa-star bounce animated"></i>
         <p>It's marked!</p>
     </div><!--bookmark box-->
-    <div class="luby_alert" id="like_alert">
+    <div class="lubyAlert" id="like_btAlert">
         <i id="like_icon" class="fa fa-heart"></i>
         <p>Like :)</p>
     </div>
-    <div class="luby_alert" id="confirm_alert">
+    <div class="lubyAlert" id="confirm_alert">
         <p class="confirm_text">Are you sure?</p>
         <button class="index_confirm_bt">Confirm</button>
         <button class="index_cancel_bt">Cancel</button>

@@ -123,81 +123,53 @@ $(function(){
 //      toottip_end
 /////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////
-//      alert event start
-/////////////////////////////////////////////////////////
-$(function (){
-    $(document).on("click",".bookmark_bt,#bookmark_inner_bt",function(){
-        var window_width = $(window).width();
-        if($(this).css("color") != "rgb(193, 193, 193)"){
-            console.log("success");
-            $("#bookmark_alert").css('display','inline-block');
-            $("#bookmark_alert").attr("class","luby_alert fadeIn animated");
-            $("#star_icon").attr("class","fa fa-star bounce animated");
-            setTimeout("hideAlert()",1500);
-            return true; 
-        }
-        else{
-            return false;
-        };
-    });//bookmark alert   
-});
-//like alert start
-$(function(){
-    $(document).on("click",".like_bt,.like_bt_active",function(){
-        if($(this).hasClass("like_bt")){
-            console.log("like!");
-            $(this).attr("class","like_bt_active");
-            $("#like_alert").css('display','inline-block');
-            $("#like_alert").attr("class","luby_alert fadeIn animated");
-            setTimeout("hideAlert2()",1500);
-        }
-        else if($(this).hasClass("like_bt_active")){
-            console.log("unlike");
-            $(this).attr("class","like_bt");
-        }
-        else{
-            return false;
-        };//if end
-    });//on end
-});//function end
-//like alert end
-function hideAlert(){
-    $("#bookmark_alert").attr("class","luby_alert fadeOut animated");
-    $("#star_icon").attr("class","fa fa-star");
-    $("#bookmark_alert").stop().fadeOut(1000);
-};
-function hideAlert2(){
-    $("#like_alert").attr("class","luby_alert fadeOut animated");
-    $("#like_alert").stop().fadeOut(1000);
-};
-/////////////////////////////////////////////////////////
-//      alert event end
-/////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////
-//      contents card bookmark toggle start
+//      lubyAlert start
 /////////////////////////////////////////////////////////
 $(function(){
-    $(".bookmark_bt,#bookmark_inner_bt").each(function(){
-        var bookmark_count = 0;
+    $(".lubyAlert_bt").each(function(){
+        var toggle_count = 0;
         $(this).click(function(){
-            switch(bookmark_count){
+            var thisId = $(this).attr("id");
+            var alertId = $(document).find("#"+thisId.toString()+"Alert");
+            switch(toggle_count){
                 case 0:
-                $(this).css('color', '#ffbe54');
-                bookmark_count = 1;
-                console.log(bookmark_count);
+                    switch(thisId){
+                        case "bookmark_bt" :
+                            $(this).css("color","#ffbe54");
+                            $(this).find("i").css('color', '#ffbe54');
+                            toggle_count = 1;
+                            console.log("this is star");
+                        break;
+                        case "like_bt" :
+                            $(this).find("i").css('color', '#ec6446');
+                            toggle_count = 1;
+                            console.log("this is heart");
+                        break;
+                        default: return false; break;
+                    }
+                    alertId.stop().fadeIn(700,function(){ hideAlert(); });
+                    console.log(toggle_count);
+                    return true;
                 break;
-
-            case 1:
-                $(this).css('color', '#c1c1c1');
-                bookmark_count = 0;
-                console.log(bookmark_count);
+                case 1:
+                    $(this).css("color","#cccccc");
+                    $(this).find("i").css('color', '#cccccc');
+                    toggle_count = 0;
+                    console.log(toggle_count);
+                    return true;
                 break;
+                default: return false; break;
             }//switch end
         });//click end
     });//each end
 });
+function hideAlert(){
+    $(".lubyAlert").fadeOut(1500,function(){
+        return;
+    });
+};
 /////////////////////////////////////////////////////////
-//      contents card bookmark toggle end
+//      lubyAlert end
 /////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////
 //      lubySelectbox action start
@@ -296,12 +268,12 @@ $(window).on("load resize",function(){
         function remove_mb_menu(){
             switch(mb_menu_toggle){
                 case 0 : 
-                    $("#wrapper").stop().animate({ left: "250" }, 200);
-                    $("#mb-menu_panel").stop().animate({ left: "0"}, 200);
+                    $("#wrapper").stop().animate({ left: "250" }, 150);
+                    $("#mb-menu_panel").stop().animate({ left: "0"}, 150);
                     $("#mb-menu_panel").after("<div id='cancel_layer'>");
                     $("#cancel_layer").css({
-                        "width": "100%",
-                        "height": "100%",
+                        "width": $(window).width().toString(),
+                        "height": $(window).height().toString(),
                         "background": "none",
                         "position": "absolute",
                         "top": "0",
@@ -315,11 +287,13 @@ $(window).on("load resize",function(){
                 break;
                 case 1 :
                     $("#cancel_layer").remove();
-                    $("#wrapper").stop().animate({ left: "0" }, 200);
-                    $("#mb-menu_panel").stop().animate({ left: "-250"}, 200);
-                    $("body").css("overflow","auto");
+                    $("#wrapper").stop().animate({ left: "0" }, 150);
+                    $("#mb-menu_panel").stop().animate({ left: "-250"}, 150);
+                    $("body").css("overflow", "auto");
+                    $("body").css("overflow-x", "hidden");
                     mb_menu_toggle = 0;
                 break;
+                default: return; break;
             };//swtich end
         }//remove_function end
     }//if end

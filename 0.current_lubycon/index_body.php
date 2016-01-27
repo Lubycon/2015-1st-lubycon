@@ -71,7 +71,7 @@
 </script>
 
 <!-- index page slider plugin -->
-<section id="slide_section">
+<section id="slide_section" class="hidden-mb-b">
     <nav id="slide_lnb">
         <input id="artwork_bt" type="radio" name="tap" checked="checked" />
         <input id="vector_bt" type="radio" name="tap" />

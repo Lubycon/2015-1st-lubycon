@@ -99,7 +99,7 @@
         overflow: hidden;
         display:none;
     }
-        .contents_view #bookmark{
+        .contents_view #bookmark_bt{
             width:40px;
             height:40px;
             line-height: 39px;
@@ -110,7 +110,7 @@
             vertical-align: top;
             z-index: 1;
         }
-            .contents_view #bookmark #bookmark_inner_bt{
+            .contents_view #bookmark_bt #bookmark_inner_bt{
                 font-size: 26px;
                 margin-left: 4px;
                 vertical-align:middle;
@@ -118,7 +118,7 @@
                 cursor:pointer;
             }
 
-        #con_like_bt{
+        #like_bt{
             width:40px;
             height:40px;
             line-height:40px;
@@ -133,7 +133,7 @@
             cursor: pointer;
 
         }
-            #con_like_bt i {
+            #like_bt i {
                 font-size:20px;
                 vertical-align:middle;
             }
@@ -200,6 +200,7 @@
     #content_down {
         width:110px;
         height:55px;
+        margin: 0px auto;
         background:#48cfad;
         border:none;
         border-radius: 30px;

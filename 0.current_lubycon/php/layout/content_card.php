@@ -39,7 +39,7 @@
                     <span class="name"><?=$username?></span>
                 </a>
             </span>
-            <i class="bookmark_bt fa fa-star"></i>
+            <i id="bookmark_bt" class="lubyAlert_bt fa fa-star"></i>
         </div>
         <!-- end contents desc -->
         <div class="contents_overlay load_view">
