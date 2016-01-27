@@ -5,6 +5,13 @@
 //4. alert action
 //5. selector
 //6. mb-panel_menu
+function eventHandler(event, selector) {//
+    event.stopPropagation();
+    event.preventDefault();
+    if (event.type === 'touchend'){
+        selector.off('click');
+    }
+};
 /////////////////////////////////////////////////////////
 //      nav_guide sticky start
 /////////////////////////////////////////////////////////
@@ -128,7 +135,8 @@ $(function(){
 $(function(){
     $(".lubyAlert_bt").each(function(){
         var toggle_count = 0;
-        $(this).click(function(){
+        $(this).on("click touchend", function(){
+            eventHandler(event, $(this));
             var thisId = $(this).attr("id");
             var alertId = $(document).find("#"+thisId.toString()+"Alert");
             switch(toggle_count){
@@ -259,9 +267,10 @@ $(window).on("load resize",function(){
         $("#mb-menu_panel").height = $(window).height();
         var mb_menu = $("#mb-menu");
         var mb_menu_toggle = 0;
-        mb_menu.click(function(){
+        mb_menu.on("click touchend", function(){
+            eventHandler(event, $(this));
             remove_mb_menu();
-            $("#cancel_layer").click(function(){
+            $("#cancel_layer").on("click touchend",function(){
                 remove_mb_menu();
             });
         });//click end
