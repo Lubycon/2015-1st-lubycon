@@ -35,6 +35,7 @@
     <script type="text/javascript" src="js/account.js"></script> <!-- account file js -->
     
     <meta name="viewport" content="width=device-width, height=device-height"><!--responsive design enable-->
+    <meta name="theme-color" content="#222222"><!--mobile web browser address window will be changed to #222-->
     <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -67,6 +68,9 @@
         <ul class="mb-menu_group">
             <li class="mb-menu_list">
                 <a href="./index.php?1=creators_page&2=creators">Creator</a>
+            </li>
+            <li class="mb-menu_list">
+            	<a href="./index.php?1=community&2=community_page&3=forum">Forum</a>
             </li>
         </ul>
         <ul class="mb-menu_group">

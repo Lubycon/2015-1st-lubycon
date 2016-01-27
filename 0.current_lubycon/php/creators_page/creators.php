@@ -9,7 +9,7 @@
 <link href="css/artists_page.css" rel="stylesheet" type="text/css" />
 <!-- contents page css -->
 <section id="contents">
-    <section class="nav_guide">
+    <section class="nav_guide hidden-mb-ib">
         <div class="subnav_box">
             <div class="lubySelector">
                 <span class="global_icon">
@@ -27,7 +27,7 @@
                 </ul>
             </div>
         </div>
-        <div class="lubySelector">
+        <div class="lubySelector hidden-mb-ib">
             <span class="global_icon"><i class="fa fa-filter"></i></span>
             <span class="lubySelector_selected">All</span>
             <span class="lubySelector_arrow"><i class="fa fa-caret-down"></i></span>
@@ -38,7 +38,7 @@
                 <li>Most Comment</li>
             </ul>
         </div>
-        <div id="sub_search_bar">
+        <div id="sub_search_bar" class="hidden-mb-ib">
             <div class="select_box">
                 <select class="basic">
                     <option value="Title">Name</option>
@@ -65,7 +65,7 @@
                     $language2 = "language2";
                     
                 ?>
-                <i id="myinfo_setting" class="fa fa-bars"></i>
+                <i id="myinfo_setting" class="fa fa-bars hidden-mb-b"></i>
                 <div id="myinfo_menu_list">
                     <ul>
                         <li><a href="./index.php?1=personal_page&2=personal_page&3=main&4=my_contents"><i class="fa fa-eye"></i>My Contents</a></li>

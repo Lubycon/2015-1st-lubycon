@@ -8,7 +8,7 @@
     ?><!--you should change to mySQL later-->
     <div class="artists_card">
         <div class="artist_menu">
-            <i class="fa fa-bars artist_menu_icon"></i>
+            <i class="fa fa-bars artist_menu_icon hidden-mb-b"></i>
             <div class="artist_menu_list">
                 <ul>
                     <li><a href="./index.php?1=personal_page&2=personal_page&3=main&4=my_contents"><i class="fa fa-eye"></i>View Contents</a></li>

@@ -209,7 +209,7 @@ $(function(){
             //i = Array's index
         };
         $(".original_box").hide();//original select box will be hide
-        $(this).click(function(){
+        $(this).on("click touchend",function(){
             console.log(toggle_count);
             switch(toggle_count){
                 case 0 :
@@ -244,7 +244,7 @@ $(function(){
                 }//else end
             });//click end
         });//mouseleave end
-        $(this).find($(".lubySelector_list li")).click(function (event){
+        $(this).find($(".lubySelector_list li")).on("click touchend",function (event){
             event = event || window.event
             var selected_v = $(event.target).text();
             var selected_option = $(event.target).text().replace(/ /gi, '');

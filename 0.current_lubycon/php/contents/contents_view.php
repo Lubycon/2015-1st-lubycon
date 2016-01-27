@@ -97,8 +97,8 @@
                     <article id="comment_box">
                         <div id="comment_writer">
                             <div id="comment_text_box">
-                                <figure id="comment_my_pic">
-                                    <img src="ch/img/no_img/no_img_user1.jpg">
+                                <figure id="comment_my_pic" class="hidden-mb-ib">
+                                    <img src="ch/img/no_img/no_img_user1.jpg" class="hidden-mb-ib">
                                 </figure>
                                 <textarea id="comment_text"></textarea>
                                 <button id="comment_bt">
