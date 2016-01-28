@@ -9,7 +9,7 @@
 <link href="css/community.css" rel="stylesheet" type="text/css" />
 <!-- contents page css -->
 <section id="contents">
-    <section id="navsel">
+    <section id="navsel" class="hidden-mb-b">
         <nav id="lnb_nav">
             <ul>
                 <li class="nav_menu" id="forum">
@@ -29,7 +29,7 @@
     <section class="nav_guide">
     
         <div class="subnav_box">
-            <div class="lubySelector">
+            <div class="lubySelector hidden-mb-ib">
                 <span class="global_icon"><i class="fa fa-filter"></i></span>
                 <span class="lubySelector_selected">Featured</span>
                 <span class="lubySelector_arrow"><i class="fa fa-caret-down"></i></span>
@@ -41,7 +41,7 @@
                     <li>Most Comment</li>
                 </ul>
             </div>
-            <div class="lubySelector">
+            <div class="lubySelector mb-lubySelector">
                 <span class="global_icon"><i class="fa fa-globe"></i></span>
                 <span class="lubySelector_selected">English</span>
                 <span class="lubySelector_arrow"><i class="fa fa-caret-down"></i></span>
@@ -53,7 +53,7 @@
                     <li>French</li>
                 </ul>
             </div>
-            <div class="lubySelector">
+            <div class="lubySelector hidden-mb-ib">
                 <span class="global_icon"><i class="fa fa-bars"></i></span>
                 <span class="lubySelector_selected">20 Contents</span>
                 <span class="lubySelector_arrow"><i class="fa fa-caret-down"></i></span>
@@ -80,13 +80,12 @@
         </div><!--subnav_box end-->
     </section>
     <!-- end nav_guide -->
-    <section class="main_wrap">
+    <section class="main_wrap hidden-mb-b">
         <div id="forum_option_box">
             <!-- end forum_search_box -->
             <a href="./index.php?1=community&2=community_write">
                 <span id="write_bt" class="out">Write</span>
             </a>
-
         </div>
         <!-- end forum_option_box -->
     </section>
