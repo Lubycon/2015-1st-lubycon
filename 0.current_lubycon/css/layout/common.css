@@ -122,6 +122,12 @@ body{
         z-index: 100;
         cursor:default;
     }
+    #confirm_btAlert{
+        width: 420px;
+        height: 200px;
+        margin-left: -210px;
+        background: rgba(0,0,0,0.9);
+    }
         .lubyAlert .fa{
             font-size: 48px;          
             text-align: center;
@@ -129,10 +135,10 @@ body{
             margin-top: 34px;
         }
         .lubyAlert #suc_icon{
-            color:#48cfad;
+            color:#ffffff;
         }
         .lubyAlert #fail_icon{
-            color:#ec6446;
+            color:#ffffff;
         }
         .lubyAlert #star_icon{
             color:#ffffff;
@@ -150,7 +156,7 @@ body{
             margin-top:14px;
         }
         .lubyAlert .confirm_text{
-            margin-top:45px;
+            /*empty*/
         }
         .lubyAlert .index_confirm_bt{
             width:150px;
@@ -1409,20 +1415,13 @@ body{
     margin: 0px auto;
 }
 .artist_card_in{
-    display: inline-block;
-    margin: 1%;
+    /*empty*/
 }
 
 .artists_card{
     position: relative;
-    width: 240px;
-    height: 280px;
     background: #fff;
-    border-radius: 5px;
-    float: left;
-    margin: 10px 10px;
-    padding-top: 10px;
-    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.3);
+    padding-top: 10px;  
 }
     .artist_menu{
         position: absolute;
@@ -1473,26 +1472,17 @@ body{
         position: relative;
     }
         .artist_pic {
-            width: 90px;
-            height: 90px;
             overflow: hidden;
-            border-radius: 50%;
-
-            margin: 0px auto;
-            margin-top: 30px;
+            border-radius: 50%; 
         }
             .artist_pic img{
                 height:100%;
             }
         .artist_location {
-            width: 30px;
-            height: 30px;
             position : absolute;
             overflow: hidden;
             border-radius: 50%;
             box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.5);
-            top: 67px;
-            right: 73px;
         }
             .artist_location img {
                 width: 100%;
@@ -1500,15 +1490,11 @@ body{
             }
     .artist_mid_info {
         position: relative;
-        margin-top: 38px;
     }
         .artist_name {
-            text-align: center;
             color: #444444;
-            font-size: 18px;
         }
         .artist_job{
-            text-align: center;
             color: #48cfad;
             font-size: 16px;
             margin-top: 2px;
@@ -1518,15 +1504,10 @@ body{
                 margin-right: 10px;
             }
     .artist_bot_info {
-        width: 220px;
-        position: relative;
-        margin: 0px auto;
-        margin-top: 28px;
-        padding: 14px 2px 0px 2px;
+        position: relative;       
         box-sizing: border-box;
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
-        border-top: 1px solid #aaaaaa;
     }
         .contents_count {
             display: inline-block;

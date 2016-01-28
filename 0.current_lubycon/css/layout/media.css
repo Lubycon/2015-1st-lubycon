@@ -17,6 +17,19 @@
     #footer {
         display: none;
     }
+    .lubyAlert .index_confirm_bt{
+        margin-top: 30px;
+    }
+    .lubyAlert .index_confirm_bt{
+        display: block;
+        margin: 0px auto;
+        margin-top: 20px;
+    }
+    .lubyAlert .index_cancel_bt{
+        display: block;
+        margin: 0px auto;
+        margin-top: 20px;
+    }
     #main_header {
         height: 45px;
     }
@@ -35,11 +48,11 @@
             }
         #mb-menu_panel {
             position: fixed;
-            width: 250px;
+            width: 65%;
             height: 100%;
             background: #383838 no-repeat;
             top: 0;
-            left: -250px;
+            left: -65%;
             z-index: 10000;
         }
             .mb-menu_group {
@@ -52,6 +65,10 @@
                     color: #ffffff;
                     font-weight: 200;
                 }
+                    .mb-menu_list i {
+                        margin-right: 25px;
+                        font-size: 15px;
+                    }
                     .mb-menu_list a {
                         font-size: 17px;
                         color: #ffffff;
@@ -121,15 +138,15 @@
     .nav_guide {
         margin-top: 46px;
     }
-        .nav_guide #category_bt {
-            width: 100%;
-            height: 48px;
-            margin: 0px;
-            border-radius: 0px;
-            float: left;
-            box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.8);
+        .nav_guide .mb-lubySelector {
+            width: 100% !important;
+            height: 48px !important;
+            margin: 0px !important;
+            border-radius: 0px !important;
+            float: left !important;
+            box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.8) !important;
         }
-             #category_bt .lubySelector_selected{
+             .mb-lubySelector .lubySelector_selected{
                 position: absolute;
                 width: 114px;
                 margin: 0px;
@@ -140,17 +157,16 @@
                 font-size: 20px;
                 font-weight: 400;
              }
-             #category_bt .lubySelector_arrow{
+             .mb-lubySelector .lubySelector_arrow{
                 position: absolute;
                 top: 10px;
                 right: 10px;
              }
-                #category_list {
+                .mb-lubySelector .lubySelector_list {
                     width: 100%;
                     top: 46px;
                     border-radius: 0px;
                 }
-
     .con_main {
         margin-top: 100px;
         padding: 0px !important;
@@ -162,6 +178,9 @@
     }
     #sub_search_bar {
         display: none;
+    }
+    #contents_box {
+        margin-top: 2px;
     }
     #contents_box > ul {
         margin-top: 0px;
@@ -210,6 +229,47 @@
                 .creator_desc .by {
                     margin-left: 0px;
                 }
+        .artists_card_in{
+            display: block;
+            margin: 0px;
+        }
+        .artists_card {
+            width: 100%;
+            height: 120px;
+            margin: 0px;
+            border-bottom: 1px solid #000000;
+            border-radius: 0px;
+            box-shadow: none;
+            text-align: left;
+        }
+        .artist_top_info{
+            display: inline-block;
+        }
+            .artist_pic {
+                width: 45px;
+                height: 45px;
+                display: inline-block;
+            }
+            .artist_location{
+                width: 20px;
+                height: 20px;
+                top: 28px;
+                right: -7px;
+            }
+        .artist_mid_info {
+            display: inline-block;
+            margin-left: 10px;
+        }
+            .artist_name {
+                text-align: left;
+                font-size: 20px;
+            }
+            .artist_job{
+                text-align: left;
+            }
+        .artist_bot_info {
+            border: none;
+        }
 
     #contents_info_wrap {
         background: #383838;
@@ -276,6 +336,54 @@
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
     }
+    #user_view_aside{
+        height: 100px;
+    }
+    #user_view_main{
+        margin-top: 146px;
+    }
+    #user_view_aside #myinfo_main{
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+        #myinfo_main figure {
+            width: 45px;
+            height: 45px;
+            display: inline-block;
+        }
+        #myinfo_main h4 {
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 7px;
+            margin-left: 5px;
+        }
+        #user_view_aside #myinfo_sub{
+            text-align: left;
+            margin-left: 5px;
+        }
+            #myinfo_sub .myinfo_wrap{
+                display: inline-block;
+                text-align: left;
+                margin-right: 10px;
+            }
+                .myinfo_wrap i{
+                    margin-right: 7px;
+                }
+            #job_name {
+                color: #eeeeee;
+            }
+    #best_artist_wrap{
+        width: 100%;
+        height: 130px;
+        border-bottom: 1px solid #000;
+        border-radius: 0px;
+    }
+    #my_page_bt{
+        display: none;
+    }
+    .tab_item table {
+        min-width: 0px;
+    }
 }
 /*------------------------------------------------mobile end-------*/
 /*---------------------------------------------desktop start-------*/
@@ -288,6 +396,15 @@
     }
     .hidden-mb-b{
         display: block;
+    }
+    .lubyAlert .confirm_text{
+        margin-top: 45px;
+    }
+    .lubyAlert .index_confirm_bt{
+        margin-top: 60px;
+    }
+    .lubyAlert .index_cancel_bt{
+        margin-top: 60px;
     }
 
     #main_header{
@@ -373,6 +490,47 @@
                 .creator_desc .by {
                     margin-left: 5px;
                 }
+        .artist_card_in{
+            display: inline-block;
+            margin: 10px;
+        }
+        .artists_card {
+            width: 240px;
+            height: 280px;
+            border-radius: 5px;
+            float: left;
+            margin: 10px 10px;
+            box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.3);
+        }
+            .artist_pic {
+                width: 90px;
+                height: 90px;
+                margin: 0px auto;
+                margin-top: 30px;
+            }
+            .artist_location {
+                width: 30px;
+                height: 30px;
+                top: 67px;
+                right: 73px;
+            }
+        .artist_mid_info {
+            margin-top: 38px;
+        }
+            .artist_name {
+                text-align: center;
+                font-size: 18px;
+            }
+            .artist_job{
+                text-align: center;
+            }
+        .artist_bot_info {
+            width: 220px;
+            border-top: 1px solid #aaaaaa;
+            margin: 0px auto;
+            margin-top: 28px;
+            padding: 14px 2px 0px 2px;
+        }
     #contents_info_wrap {
         background: #222222;
     }
@@ -424,6 +582,53 @@
         height: 33px;
         display: inline-block;
         margin: 0px 0px 2px 7px;
+    }
+    #user_view_aside #myinfo_main{
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+        #myinfo_main figure {
+            width: 80px;
+            height: 80px;
+            display: block;
+        }
+        #myinfo_main h4 {
+            display: block;
+            margin-top: 20px;
+        }
+        #user_view_aside #myinfo_sub{
+            width:220px;
+            margin: 0px auto;
+            margin-top: 10px;
+        }
+            #myinfo_sub .myinfo_wrap{
+                display: block;
+                text-align: center;
+                margin:5px 0px;
+            }
+            #job_name{
+                color: #48cfad;
+            }
+    #best_artist_wrap{
+        width: 84%;
+        height: 150px;
+        margin: 20px auto;
+        margin-top: 38px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.3);
+    }
+    #my_page_bt{
+        width: 220px;
+        height: 45px;
+        margin-top: 20px;
+        border: none;
+        border-radius: 3px;
+        background: #48cfad;
+        font-weight: 200;
+        color: #ffffff;
+    }
+    .tab_item table{
+        min-width: 1200px;
     }
 }
 /*------desktop end-------*/

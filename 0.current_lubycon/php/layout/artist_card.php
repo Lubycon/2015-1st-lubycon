@@ -28,7 +28,7 @@
         </div>
         <div class="artist_mid_info">
             <p class="artist_name"><?=$username?></p><!--user name-->
-            <p class="artist_job"><i class="fa fa-suitcase"></i><?=$userjob?></p><!--job-->
+            <p class="artist_job"><i class="fa fa-suitcase hidden-mb-ib"></i><?=$userjob?></p><!--job-->
         </div>
         <div class="artist_bot_info">
             <article class="contents_count">

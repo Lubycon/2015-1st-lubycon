@@ -56,45 +56,45 @@
         </header>
         <ul class="mb-menu_group">
             <li class="mb-menu_list">
-                <a href="./index.php?1=contents&2=contents_page&3=artwork">Artwork</a>
+                <i class="fa fa-font fa-1x"></i><a href="./index.php?1=contents&2=contents_page&3=artwork">Artwork</a>
             </li>
             <li class="mb-menu_list">
-                <a href="./index.php?1=contents&2=contents_page&3=vector">Vector</a>
+                <i class="fa fa-square fa-1x"></i><a href="./index.php?1=contents&2=contents_page&3=vector">Vector</a>
             </li>
             <li class="mb-menu_list">
-                <a href="./index.php?1=contents&2=contents_page&3=3d">3D</a>
+                <i class="fa fa-cube fa-1x"></i><a href="./index.php?1=contents&2=contents_page&3=3d">3D</a>
             </li>
         </ul>
         <ul class="mb-menu_group">
             <li class="mb-menu_list">
-                <a href="./index.php?1=creators_page&2=creators">Creator</a>
+                <i class="fa fa-pencil fa-1x"></i><a href="./index.php?1=creators_page&2=creators">Creator</a>
             </li>
             <li class="mb-menu_list">
-            	<a href="./index.php?1=community&2=community_page&3=forum">Forum</a>
+            	<i class="fa fa-comments-o fa-1x"></i><a href="./index.php?1=community&2=community_page&3=forum">Forum</a>
             </li>
         </ul>
         <ul class="mb-menu_group">
             <li class="mb-menu_list">
-                <a href="./index.php?1=personal_page&2=personal_page&3=dashboard">Dashboard</a>
+                <i class="fa fa-home fa-1x"></i><a href="./index.php?1=personal_page&2=personal_page&3=dashboard">Dashboard</a>
             </li>
             <li class="mb-menu_list">
-                <a href="./index.php?1=personal_page&2=personal_page&3=insight">Insight</a>
+                <i class="fa fa-line-chart fa-1x"></i><a href="./index.php?1=personal_page&2=personal_page&3=insight">Insight</a>
             </li>
             <li class="mb-menu_list">
-                <a href="./index.php?1=personal_page&2=personal_page&3=account_setting">Account Setting</a>
+                <i class="fa fa-gear fa-1x"></i><a href="./index.php?1=personal_page&2=personal_page&3=account_setting">Account Setting</a>
             </li>
         </ul>
         <ul class="mb-menu_group">
-            <li class="mb-menu_list">Log out</li>
+            <li class="mb-menu_list"><i class="fa fa-power-off fa-1x"></i>Log out</li>
         </ul>
     </aside>
     <!-- popup start -->
     <!-----------------------------------------------------alert boxes-------------------------------------------------->
-    <div class="lubyAlert" id="suc_alert">
+    <div class="lubyAlert" id="success_btAlert">
         <i id="suc_icon" class="fa fa-check-circle rotateIn animated"></i>
         <p>Success!</p>
     </div><!--succese box-->
-    <div class="lubyAlert" id="fail_alert">
+    <div class="lubyAlert" id="fail_btAlert">
         <i id="fail_icon" class="fa fa-times tada animated"></i>
         <p>Failed!</p>
     </div><!--fail box-->
@@ -106,7 +106,7 @@
         <i id="like_icon" class="fa fa-heart"></i>
         <p>Like :)</p>
     </div>
-    <div class="lubyAlert" id="confirm_alert">
+    <div class="lubyAlert" id="confirm_btAlert">
         <p class="confirm_text">Are you sure?</p>
         <button class="index_confirm_bt">Confirm</button>
         <button class="index_cancel_bt">Cancel</button>

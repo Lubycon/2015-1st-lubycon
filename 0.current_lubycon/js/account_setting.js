@@ -188,30 +188,30 @@ $(document).ready(function () {
 
 ////////////////////////////delete button interaction start
 $(function(){
-    $('#delete_bt').click(function(){
-        console.log('1');
-        $('#confirm_alert').css('display','inline-block');
-        $('#confirm_alert').attr("class","luby_alert flipInX animated");
-        $('.dark_overlay').stop().fadeIn(100);
-    });
-
-
-
     ////////cancel bt start/////////////////////////////////
-    $('.dark_overlay, .index_cancel_bt').click(function (){
+    $('.dark_overlay, .index_cancel_bt').on("click touchend",function (){
+        eventHandler(event,$(this));
         $('.dark_overlay').stop().fadeOut(200);
-        $('#confirm_alert').stop().fadeOut(200);
+        $('#confirm_btAlert').stop().fadeOut(200);
     });
-    $(".index_confirm_bt").click(function(){
-        $("#confirm_alert").css("display","none");
-        $("#suc_alert").css("display","inline-block");
-        $("#suc_alert").attr("class","luby_alert zoomIn animated");
+    $(".index_confirm_bt").on("click touchend",function(){
+        eventHandler(event,$(this));
+        $("#confirm_btAlert").css("display","none");
+        $("#success_btAlert").css("display","inline-block");
+        $("#success_btAlert").attr("class","lubyAlert zoomIn animated");
         setTimeout("removeAlert()",1500);
     })
     //////////cancel bt end/////////////////////////////////
 });
+function eventHandler(event, selector) {//
+    event.stopPropagation();
+    event.preventDefault();
+    if (event.type === 'touchend'){
+        selector.off('click');
+    }
+};
 function removeAlert(){
-    $("#suc_alert").fadeOut(500);
+    $("#success_btAlert").fadeOut(500);
     $(".dark_overlay").fadeOut(500);
 }
 

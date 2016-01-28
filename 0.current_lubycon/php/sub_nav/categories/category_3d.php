@@ -1,4 +1,4 @@
-<div class="lubySelector" id="category_bt">
+<div class="lubySelector mb-lubySelector" id="category_bt">
     <span class="global_icon hidden-mb-ib"><i class="fa fa-filter hidden-mb-ib"></i></span>
     <span class="lubySelector_selected">All categories</span>
     <span class="lubySelector_arrow"><i class="fa fa-caret-down"></i></span>
