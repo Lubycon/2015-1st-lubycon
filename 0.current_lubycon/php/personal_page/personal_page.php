@@ -9,7 +9,7 @@
 
 <!-- personal page css -->
 <section id="contents">
-	<section class="nav_guide">
+	<section class="nav_guide hidden-mb-b">
         <!-- end lnb nav -->
     </section>
     <section id="personal_view">

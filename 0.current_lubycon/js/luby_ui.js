@@ -131,27 +131,15 @@ $(function(){
 /////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////
 //      lubyAlert start
-/////////////////////////////////////////////////////////
-$(window).on("load",function(){
-    if($(".lubyAlert_bt").length != 0){
-        console.log("find lubyAlert button!");
-        return true;
-    }
-    else{
-        console.log("no lubyAlert button!");
-        return true;
-    }
-});    
+/////////////////////////////////////////////////////////   
 $(window).on("load",function(){
     setTimeout(function(){
         $(".lubyAlert_bt").each(function(){
             var toggle_count = 0;
-            console.log("each true");
             $(this).on("click touchend", function(){
                 eventHandler(event, $(this));
                 var thisId = $(this).attr("id");
                 var alertObject = $(document).find("#"+thisId.toString()+"Alert");
-                console.log(alertObject);
                 switch(toggle_count){
                     case 0:
                         switch(thisId){
@@ -177,11 +165,9 @@ $(window).on("load",function(){
                             if(alertObject.attr("id") != "confirm_btAlert"){
                                 hideAlert();
                                 console.log(toggle_count);
-                                console.log("It will be fadeout")
                                 return true; 
                             }
                             else if(alertObject.attr("id") === "confirm_btAlert"){
-                                console.log("confirm");
                                 return true;
                             }
                         });
@@ -247,25 +233,39 @@ $(function(){
             $(this).hide();
             toggle_count = 0;    
         });
-        $(this).on("click touchend",function(){
+        $(this).on("click touchend",function (e){
             console.log(toggle_count);
+            eventHandler(event, $(this));
             switch(toggle_count){
                 case 0 :
-                    $(this).find($(".lubySelector_list")).stop().fadeIn(300);
-                    $(this).css("background","#333333");
-                    $(this).find($(".lubySelector_arrow")).children("i").attr("class","fa fa-caret-up");
-                    $(this).next(".original_box").show().trigger("focus");
+                    if($(window).width() > 1024){
+                        $(this).find($(".lubySelector_list")).stop().fadeIn(300);
+                        $(this).css("background","#333333");
+                        $(this).find($(".lubySelector_arrow")).children("i").attr("class","fa fa-caret-up");
+                    }
+                    else{
+                        $(this).next(".original_box").show().trigger("focus");
+                    }
                     toggle_count = 1;
-                    return false;
+                    console.log(toggle_count);
+                    return true;
                 break;
 
                 case 1 :
-                    $(this).find($(".lubySelector_list")).stop().fadeOut(300);
-                    $(this).css("background","#555555");
-                    $(this).find($(".lubySelector_arrow")).children("i").attr("class","fa fa-caret-down");
+                    if($(window).width() > 1024){
+                        $(this).find($(".lubySelector_list")).stop().fadeOut(300);
+                        $(this).css("background","#555555");
+                        $(this).find($(".lubySelector_arrow")).children("i").attr("class","fa fa-caret-down");
+                    }
+                    else{
+                        $(this).next(".original_box").hide().trigger("blur");
+                    }
                     toggle_count = 0;
-                    return false;
+                    console.log(toggle_count);
+                    return true;
                 break;
+
+                default: return false; break;
             };//switch end
         });//click end
         $(this).mouseleave(function(){
@@ -303,7 +303,7 @@ $(function(){
 /////////////////////////////////////////////////////////
 $(window).on("load resize",function(){
     if(($(window).width() <= 1024) && ($("#mb-menu_panel").length != 0)){
-        $("#mb-menu_panel").height = $(window).height();
+        $("#mb-menu_panel").height = window.screen.height;
         var mb_menu = $("#mb-menu");
         var mb_menu_toggle = 0;
         var distance = $("#mb-menu_panel").outerWidth();
@@ -332,7 +332,6 @@ $(window).on("load resize",function(){
                     });
                     $("body").css("overflow","hidden");
                     mb_menu_toggle = 1;
-                    console.log("true2");
                 break;
                 case 1 :
                     $("#cancel_layer").remove();
@@ -347,7 +346,6 @@ $(window).on("load resize",function(){
         }//remove_function end
     }//if end
     else{
-        console.log("This is not mobile");
         return; 
     }
 });

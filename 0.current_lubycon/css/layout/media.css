@@ -167,6 +167,10 @@
                     top: 46px;
                     border-radius: 0px;
                 }
+        .original_box {
+            position: absolute;
+            left: -1000px;
+        }
     .con_main {
         margin-top: 100px;
         padding: 0px !important;
@@ -383,6 +387,16 @@
     }
     .tab_item table {
         min-width: 0px;
+    }
+    #personal_aside {
+        width: 100%;
+        border-right: none
+    }
+        #user_information {
+            background: #383838;
+        }
+    #personal_ciew .con_wrap #contents_box{
+        margin-top: 196px;
     }
 }
 /*------------------------------------------------mobile end-------*/
@@ -630,6 +644,13 @@
     .tab_item table{
         min-width: 1200px;
     }
+    #personal_aside {
+        width: 250px;
+        border-right: 1px solid #222222;
+    }
+        #user_information {
+            background: #282828;
+        }
 }
 /*------desktop end-------*/
 /*--------------------------------------------------------------------------------media query end*/
