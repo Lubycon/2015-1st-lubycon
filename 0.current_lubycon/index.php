@@ -34,7 +34,7 @@
     <script type="text/javascript" src="js/luby_ui.js"></script><!-- ui file js -->
     <script type="text/javascript" src="js/account.js"></script> <!-- account file js -->
     
-    <meta name="viewport" content="width=device-width, height=device-height"><!--responsive design enable-->
+    <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no"><!--responsive design enable-->
     <meta name="theme-color" content="#222222"><!--mobile web browser address window will be changed to #222-->
     <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -62,7 +62,7 @@
                 <i class="fa fa-square fa-1x"></i><a href="./index.php?1=contents&2=contents_page&3=vector">Vector</a>
             </li>
             <li class="mb-menu_list">
-                <i class="fa fa-cube fa-1x"></i><a href="./index.php?1=contents&2=contents_page&3=3d">3D</a>
+                <i class="fa fa-cube fa-1x"></i><a href="./index.php?1=contents&2=contents_page&3=3d">3D Model</a>
             </li>
         </ul>
         <ul class="mb-menu_group">
@@ -130,7 +130,7 @@
             <li>
                 <a href="./index.php?1=editor&2=editor&3=3d">
                 <i class="fa fa-cube"></i>
-                <p>3D</p>
+                <p>3D Model</p>
                 </a>
             </li>
         </ul>
@@ -163,7 +163,7 @@
                             <a href="./index.php?1=contents&2=contents_page&3=vector"><i class="fa fa-square fa-1x"></i><p>Vector</p></a>
                         </li>
                         <li>
-                            <a href="./index.php?1=contents&2=contents_page&3=3d"><i class="fa fa-cube fa-1x"></i><p>3D</p></a>
+                            <a href="./index.php?1=contents&2=contents_page&3=3d"><i class="fa fa-cube fa-1x"></i><p>3D Model</p></a>
                         </li>
                     </ul>	<!--end Contents menu-->
                 </li>

@@ -498,6 +498,30 @@ $(function(){
 /////////////////////////////////////////////////////////
 //      contents view descript box toggle end
 /////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+//      community mainboard start
+/////////////////////////////////////////////////////////
+$(window).on("load resize",function(){
+    if($("#main_board").length != 0){
+        console.log("here is mainboard");
+        var blank = $(".table_blank").width(),
+            number = $(".table_number").width(),            
+            writer = $(".table_writer").width(),
+            like = $(".table_like").width(),
+            view = $(".table_view").width(),
+            date = $(".table_date").width(),
+            subject = $(".table_subject");
+        var resWidth = ($(".table_head_wrap").width() - blank - number - writer - like - view - date).toString();
+        subject.css({ "width" : resWidth });
+        return;
+    }
+    else{
+        return;
+    }
+});
+/////////////////////////////////////////////////////////
+//      community mainboard end
+/////////////////////////////////////////////////////////
 /*----------------------------contents page----------------------------*/
 /*----------------------------start personal page----------------------------*/
 /////////////////////////////////////////////////////////

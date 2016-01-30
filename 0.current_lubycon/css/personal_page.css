@@ -6,14 +6,11 @@
 }
 
 .con_aside {
-	width: 250px;
 	float: left;
-	border-right: 1px solid #222222;
 	border-left: none;
 }
 	#user_information {
 		width: 100%;
-		background: #282828;
 		display: block;
 		position:  relative;
 		box-sizing: border-box;
@@ -148,16 +145,16 @@
 		
 	}
 		#total_like .dash_body_content{
-			border-bottom: 5px solid #48cfad;
+			
 		}
 		#total_view .dash_body_content{
-			border-bottom: 5px solid #ec6446;
+			
 		}
 		#total_upload .dash_body_content{
-			border-bottom: 5px solid #488ccb;
+			
 		}
 		#total_download .dash_body_content{
-			border-bottom: 5px solid #ffbe54;
+		
 		}
 	.x2 {
 		width: 50%;

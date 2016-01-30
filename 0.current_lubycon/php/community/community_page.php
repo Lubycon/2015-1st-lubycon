@@ -29,6 +29,9 @@
     <section class="nav_guide">
     
         <div class="subnav_box">
+            <a href="./index.php?1=community&2=community_write">
+                <span id="write_bt" class="out">Write</span>
+            </a>
             <div class="lubySelector hidden-mb-ib">
                 <span class="global_icon"><i class="fa fa-filter"></i></span>
                 <span class="lubySelector_selected">Featured</span>
@@ -43,25 +46,15 @@
             </div>
             <div class="lubySelector mb-lubySelector">
                 <span class="global_icon"><i class="fa fa-globe"></i></span>
-                <span class="lubySelector_selected">English</span>
+                <span class="lubySelector_selected">All Language</span>
                 <span class="lubySelector_arrow"><i class="fa fa-caret-down"></i></span>
                 <ul class="lubySelector_list">
-                    <li class="selected_li">English</li>
+                    <li class="selected_li">All Language</li>
+                    <li>English</li>
                     <li>Korean</li>
                     <li>Japanese</li>
                     <li>Chinese</li>
                     <li>French</li>
-                </ul>
-            </div>
-            <div class="lubySelector hidden-mb-ib">
-                <span class="global_icon"><i class="fa fa-bars"></i></span>
-                <span class="lubySelector_selected">20 Contents</span>
-                <span class="lubySelector_arrow"><i class="fa fa-caret-down"></i></span>
-                <ul class="lubySelector_list">
-                    <li class="selected_li">20 Contents</li>
-                    <li>30 Contents</li>
-                    <li>40 Contents</li>
-                    <li>50 Contents</li>
                 </ul>
             </div>
             <div id="sub_search_bar">
@@ -80,18 +73,10 @@
         </div><!--subnav_box end-->
     </section>
     <!-- end nav_guide -->
-    <section class="main_wrap hidden-mb-b">
-        <div id="forum_option_box">
-            <!-- end forum_search_box -->
-            <a href="./index.php?1=community&2=community_write">
-                <span id="write_bt" class="out">Write</span>
-            </a>
-        </div>
-        <!-- end forum_option_box -->
+    <section class="con_wrap">
+        <?php
+            include("main_board.php");
+        ?><!--end main_board section -->
     </section>
-
-    <?php
-        include("main_board.php");
-    ?><!--end main_board section -->
 </section>
 <!-- end contents section -->

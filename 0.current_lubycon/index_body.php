@@ -79,7 +79,7 @@
         <nav>
             <label for="artwork_bt" class="la_bt clicked">ARTWORK</label>
             <label for="vector_bt" class="la_bt">VECTOR</label>
-            <label for="3d_bt" class="la_bt">3D DESIGN</label>
+            <label for="3d_bt" class="la_bt">3D MODEL</label>
             <p class="down_triangle .hidden-mb-b"></p>
         </nav>
         <!-- end nav -->
