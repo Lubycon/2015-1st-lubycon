@@ -20,6 +20,9 @@ body {
     -moz-box-sizing: border-box;
 }
     .chart_title {
+        position: relative;
+        top: 0;
+        right: 0;
         display: inline-block;
         text-align: center;
         border-radius: 5px;

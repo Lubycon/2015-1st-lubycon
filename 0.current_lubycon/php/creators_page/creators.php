@@ -71,7 +71,6 @@
                         <li><a href="./index.php?1=personal_page&2=personal_page&3=main&4=my_contents"><i class="fa fa-eye"></i>My Contents</a></li>
                         <li><a href="./index.php?1=personal_page&2=personal_page&3=main&4=insight"><i class="fa fa-bar-chart"></i>My Insight</a></li>
                         <li><a href="./index.php?1=personal_page&2=personal_page&3=main&4=#"><i class="fa fa-user-plus"></i>Followers</a></li>
-                        <li><a href="./index.php?1=personal_page&2=personal_page&3=main&4=#"><i class="fa fa-fa fa-envelope-o"></i>My Message</a></li>
                     </ul>
                 </div>
                 <div id="myinfo_main">

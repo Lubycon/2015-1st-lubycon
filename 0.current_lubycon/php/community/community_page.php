@@ -30,7 +30,7 @@
     
         <div class="subnav_box">
             <a href="./index.php?1=community&2=community_write">
-                <span id="write_bt" class="out">Write</span>
+                <span id="write_bt" class="out animate_width">Write</span>
             </a>
             <div class="lubySelector hidden-mb-ib">
                 <span class="global_icon"><i class="fa fa-filter"></i></span>
