@@ -1,7 +1,7 @@
 <?php
-$id = $_POST['id'];
+$third_param = $_POST['id'];
 //echo $id;
-switch($id)
+switch($third_param)
 {
     case 'dashboard':include_once('../personal_page/dashboard.php'); break;
     case 'my_contents':include_once('../personal_page/my_contents.php'); break;

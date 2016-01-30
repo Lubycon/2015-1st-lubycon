@@ -69,7 +69,7 @@
                         <option value="Designer">Creator</option>
                         <option value="Tag">Tag</option>
                     </select>
-                <span class="lubySelector_arrow"><i class="fa fa-caret-down"></i></span>
+                    <span class="lubySelector_arrow"><i class="fa fa-caret-down"></i></span>
                 </div>
                 <input type="text" id="sub_search_text" value="Enter the Keyword" />
                 <button id="sub_search_btn">
@@ -83,6 +83,8 @@
             <?php
             for($i=0;$i<60;$i++)
             {
+                $third_param = $_GET['3'];
+                $_GET["number"] = $i;
                 include('php/layout/content_card.php');
             }
             ?>

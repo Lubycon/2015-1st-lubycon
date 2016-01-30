@@ -107,6 +107,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "js", "js", "{F4657569-6E1C-
 		js\account_setting.js = js\account_setting.js
 		js\ajax.js = js\ajax.js
 		js\bootstrap.min.js = js\bootstrap.min.js
+		js\call_comments.js = js\call_comments.js
 		js\chosen.jquery.js = js\chosen.jquery.js
 		js\chosen.prism.js = js\chosen.prism.js
 		js\community.js = js\community.js
@@ -158,10 +159,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "layout", "layout", "{95A271
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ajax", "ajax", "{A5A8174F-E088-43E5-BDAE-1CF2E3FCFFAE}"
 	ProjectSection(SolutionItems) = preProject
+		php\ajax\call_comments_ajax.php = php\ajax\call_comments_ajax.php
 		php\ajax\create_account_popup.php = php\ajax\create_account_popup.php
 		php\ajax\editor_ajax.php = php\ajax\editor_ajax.php
 		php\ajax\editor_fileupload.php = php\ajax\editor_fileupload.php
 		php\ajax\editor_thumbupload.php = php\ajax\editor_thumbupload.php
+		php\ajax\infinite_scroll_ajax.php = php\ajax\infinite_scroll_ajax.php
 		php\ajax\login_check.php = php\ajax\login_check.php
 		php\ajax\subnav_check.php = php\ajax\subnav_check.php
 	EndProjectSection
