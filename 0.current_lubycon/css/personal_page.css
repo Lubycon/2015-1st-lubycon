@@ -301,14 +301,15 @@
 	background: #ffffff;
 }
 #dash_chart_wrap {
-	background: #282828;
+	background: #ffffff;
+	border-top: 1px solid #eeeeee;
 	position: relative;
 }
 	#chart_body_title {
-		color: #aaaaaa;
+		color: #444444;
 	}
 
-	.chart_title {
+	#dash_chart_wrap .chart_title {
 		position: absolute;
         display: inline-block;
         top: 23px;
@@ -318,50 +319,51 @@
         padding: 3px 10px;
         cursor: pointer;
     }
-    .chart_title:hover {
-        background: rgba(255,255,255,0.3);
+    #dash_chart_wrap .chart_title:hover {
+        background: rgba(0,0,0,0.1);
     }
-        .chart_title #chart_icon {
+        #dash_chart_wrap .chart_title #chart_icon {
             color: #48cfad;
             margin-right: 10px;
             font-size: 20px;
         }
-        .chart_title #chart_name {
-            color: #ffffff;
+         #dash_chart_wrap .chart_title #chart_name {
+            color: #444444;
             font-weight: 200;
             font-size: 23px;
             margin-right: 10px;
         }
-        .chart_title #toggle_arrow {
-            color: #ffffff;
+         #dash_chart_wrap .chart_title #toggle_arrow {
+            color: #444444;
             font-size: 17px;
         }
-	#chart_selector {
+	 #dash_chart_wrap #chart_selector {
         display: none;
         position: absolute;
         z-index: 1;
         top: 65px;
-        right: 16px;
+        right: 40px;
         width: 130px;
         padding: 4px;
         border-radius: 5px;
-        background: rgba(255,255,255,0.8);
+        background: rgba(0,0,0,0.8);
         font-size: 15px;
     }
-        .chart_list {
+         #dash_chart_wrap .chart_list {
         	text-align: left;
             border-radius: 5px;
             padding: 5px;
-            color: #444444;
+            color: #ffffff;
+            font-weight: 200;
             box-sizing: border-box;
             -webkit-box-sizing: border-box;
             -moz-box-sizing: border-box;
         }
-        .chart_list:hover {
-            background: rgba(150,150,150,0.6);
+         #dash_chart_wrap .chart_list:hover {
+            background: rgba(100,100,100,0.6);
             cursor: pointer;
         }
-            .chart_list i {
+            #dash_chart_wrap .chart_list i {
                 margin-right: 10px;
             }
 

@@ -9,6 +9,7 @@
     position: relative;
     width:100%;
     top:0px;
+    margin-top: -4px;
 }
     #user_box_total
     {

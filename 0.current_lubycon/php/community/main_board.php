@@ -1,8 +1,8 @@
 <section id="main_board">
     <div class="table_wrap">
-        <div class="table_head">
+        <div class="table_head hidden-mb-b">
             <div class="table_head_wrap">
-                <span class="table_blank hidden-mb-ib"></span>	<!-- space -->
+                <span class="table_blank"></span>	<!-- space -->
                 <span class="table_number">No.</span>
                 <span class="table_subject">Title</span>                               
                 <span class="table_date">Date</span>
@@ -16,8 +16,8 @@
                 $subject = "Lorem Ipsum dolor sit amet. aonsectetur adipisicing eli.";
                 $comment_num = 0;
                 $username = "Admin_User";
-                $like_num = "52.2k";
-                $view_num = "32.2k";
+                $like_num = 0;
+                $view_num = 0;
                 $content_date = "00.00.00";//yy.mm.dd
 
                 $current_url = $_GET["3"];
