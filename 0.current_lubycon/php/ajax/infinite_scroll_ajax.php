@@ -1,8 +1,11 @@
 <?php
-    
-    for($i=0;$i<30;$i++)
+    for($i=0;$i<60;$i++)
     {
-        @require('../layout/content_card.php');
-    };
-    sleep(2)
+        $_GET["number"] = $i;
+        @$_GET["3"] = $_GET["3"];
+        include('../layout/content_card.php');
+    }
+    sleep(2);
 ?>
+
+       
