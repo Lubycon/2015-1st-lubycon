@@ -16,7 +16,7 @@
     <title>Lubycon</title>
 
     <link rel="shortcut icon" href="./ch/img/logo/lubycon.ico" /> <!-- favicon -->
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source Sans Pro:300,400" type="text/css" />	<!--google web font-->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source Sans Pro:200,400,600" type="text/css" />	<!--google web font-->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" /> <!--icon font-->
 
     <link href="css/layout/normalize.css" rel="stylesheet" type="text/css" />  <!-- web normalize -->
@@ -103,7 +103,7 @@
         <p>It's marked!</p>
     </div><!--bookmark box-->
     <div class="lubyAlert" id="like_btAlert">
-        <i id="like_icon" class="fa fa-heart"></i>
+        <i id="like_icon" class="fa fa-heart bounceIn animated"></i>
         <p>Like :)</p>
     </div>
     <div class="lubyAlert" id="confirm_btAlert">

@@ -8,27 +8,26 @@
 }
 
 #write_bt {
-    width: 120px;
-    height: 34px;
-    line-height: 36px;
-    margin: 7px 10px 0px 10px;
-    border-radius: 50px;
-    color: #fff;
-    font-size: 17px;
-    float: right;
-    font-weight: 200;
-    border: 1px solid #ffffff;
-    background: none;
+    width: 70px;
+    height: 70px;
+    line-height: 78px;
+    border-radius: 50%;
+    background: #48cfad;
     text-align: center;
     cursor:pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 40px;
+    z-index: 5;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
 }
-    #write_bt:hover {
-        border: 1px solid #87ead1;
-        color: #87ead1;
+    #write_bt i {
+        color: #ffffff;
+        font-size: 24px;
     }
 
 #main_wrap{
-    background: #fefefe;
+    background: #f0f0f0;
 }
 
 /*main header end*/

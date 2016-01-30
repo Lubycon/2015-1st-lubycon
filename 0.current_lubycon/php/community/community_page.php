@@ -27,11 +27,7 @@
         <!-- end select box -->
     </section>
     <section class="nav_guide">
-    
-        <div class="subnav_box">
-            <a href="./index.php?1=community&2=community_write">
-                <span id="write_bt" class="out animate_width">Write</span>
-            </a>
+        <div class="subnav_box"> 
             <div class="lubySelector hidden-mb-ib">
                 <span class="global_icon"><i class="fa fa-filter"></i></span>
                 <span class="lubySelector_selected">Featured</span>
@@ -78,5 +74,9 @@
             include("main_board.php");
         ?><!--end main_board section -->
     </section>
+    <a href="./index.php?1=community&2=community_write">
+        <span id="write_bt" class="out animate_opacity"><i class="fa fa-plus"></i></span>
+    </a>
+    <div class="tooltip_bt">Write</div>
 </section>
 <!-- end contents section -->

@@ -1063,7 +1063,7 @@ body{
     .con_main{
         width: 100%;
         position: relative;
-        background: #fafafa;
+        background: #f0f0f0;
         height: auto;
         display: inline-block;
         overflow: hidden;
@@ -1253,7 +1253,7 @@ body{
     border-radius: 5px;
     background:#fff;
     overflow: hidden;
-    margin: 15px;
+    margin: 40px 60px;
 }
 #comment_my_pic {
     width:50px;
@@ -1537,6 +1537,9 @@ body{
 /* main board */
 #main_board {
     width: 100%;
+    max-width: 1700px;
+    margin: 0px auto;
+    margin-top: 50px;
     position: relative;
     background: #ffffff;
     z-index: 2;
@@ -1552,11 +1555,18 @@ body{
         text-align: center;
         cursor: default !important;
     }
-        .table_head_wrap{
-            max-width: 1600px;
+        .table_head_wrap {
             margin: 0px auto;
             padding: 0px 20px;
         }
+            .board_name {
+                position: absolute;
+                top: 11px;
+                left: 30px;
+                color: #eeeeee;
+                font-size: 19px;
+                font-weight: 200;
+            }
             .table_head_wrap span {
                 line-height: 50px;
                 color: #fff;
@@ -1564,7 +1574,7 @@ body{
                 font-weight: 200;
             }
     .table_list_wrap{
-        height: 50px;
+
     }
     .table_body {
         width: 100%;
@@ -1575,19 +1585,21 @@ body{
             border-bottom: 1px solid #dddddd;
             background: #ffffff;
         }
+            .table_list:hover{
+                background: #fcfcfc;
+            }
             .table_list_inner{
-                max-width: 1600px;
+                position: relative;
                 margin: 0px auto;
-                padding: 0px 20px;
+                padding: 10px 20px;
             }  
                 .table_list_inner span {
-                    height: 50px;
-                    line-height: 50px;
+                    
                 }
 .table_blank {
-    width: 40px;
-    height: 50px;
-    float: left;
+    position: absolute;
+    top: 3px;
+    left: 11px;
     text-align: center;
 }
     .table_blank .fa-circle {
@@ -1604,40 +1616,63 @@ body{
         }
 
 .table_number {
-    display: inline-block;
-    left: 40px;
-    width: 50px;
-    float: left;
-    text-align: center;
-    color: #545454;
+    position: absolute;
+    top: 6px;
+    left: 29px;
+    font-size: 14px;
+    text-align: left;
+    color: #666666;
 }
+
+.table_info {
+    display: inline-block;
+    position: relative;
+    height: 55px;
+    margin-left: 40px;
+}
+    .table_user_img {
+        float: left;
+        display: inline-block;
+        width: 55px;
+        height: 55px !important;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+        .table_user_img img {
+            width: 100%;
+        }
 
 .table_subject {
     display: inline-block;
     cursor:pointer;
-    color:#333333;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+    margin-top: 5px;
     padding-left: 20px;
+    text-align: left;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-}
-    .table_subject:hover{
-        text-decoration: underline;
+} 
+    .table_subject a{
+        color: #555555;
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: -0.1px;
     }
-.table_list_inner .table_subject{
-    text-align: left;
-}
-
+    .table_subject a:hover {
+        color: #87ead1;
+    }
 .table_writer {
+    position: absolute;
     display: inline-block;
-    width: 130px;
+    bottom: 3px;
+    left: 51px;
+    min-width: 130px;
     text-align: center;
-    color: #545454;
+    color: #444444;
     cursor:pointer;
-    float: right;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
@@ -1649,31 +1684,36 @@ body{
 .table_like {
     display: inline-block;
     min-width: 60px;
+    line-height: 55px;
+    font-size: 18px;
     float: right;
     text-align: center;
     color: #488ccb;
 }
 
     .table_like .fa-heart {
-        font-size: 12px;
+        font-size: 16px;
         color: #ec6446;
     }
 
 .table_view {
     display: inline-block;
     min-width: 60px;
+    line-height: 55px;
+    font-size: 18px;
     float: right;
     text-align: center;
     color: #488ccb;
 }
 
     .table_view .fa-eye {
-        font-size: 15px;
+        font-size: 19px;
     }
 
 .table_date {
     display: inline-block;
     width: 100px;
+    line-height: 55px;
     float: right;
     text-align: center;
     color: #545454;
