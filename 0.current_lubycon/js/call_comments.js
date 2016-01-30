@@ -17,9 +17,8 @@ function call_comments() {
     })
 };
 
-$("#comment_more_bt").click(function()
-{
-    
+$(document).on("click", "#comment_more_bt", function ()
+{ 
     if (ajax_eventing == false)
     {
         ajax_eventing = true;

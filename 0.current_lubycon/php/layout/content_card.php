@@ -8,6 +8,7 @@
         $like_num = 0;
         $view_num = 0;
         $comment_num = 0;
+        $current_url = $_GET[3];
     ?><!--you should change to mySQL later-->
     <div class="contents_card">
         <div class="contents_pic">
@@ -17,14 +18,15 @@
         <div class="contents_desc">
             <div class="contents_sub">
                 <?php 
-                    $current_url = $_GET["3"];
+                    echo "<a class='contents_link' href='./index.php?1=contents&2=contents_view&3=";
                     switch($current_url)
                     {
-                        case "artwork" : echo "<a href='./index.php?1=contents&2=contents_view&3=artwork'>"; break;
-                        case "vector" : echo "<a href='./index.php?1=contents&2=contents_view&3=vector'>"; break;
-                        case "3d" : echo "<a href='./index.php?1=contents&2=contents_view&3=3d'>"; break;
-                        default : echo "<a href='./index.php?1=contents&2=contents_view&3=all'>"; break;
+                        case "artwork" : echo "artwork"; break;
+                        case "vector" : echo "vector"; break;
+                        case "3d" : echo "3d"; break;
+                        default : echo "all"; break;
                     };
+                    echo "'>";
                 ?>
                     <h4 class="contents_title load_view"><?=$contents_name?></h4>
                 </a>
@@ -44,13 +46,15 @@
         <!-- end contents desc -->
         <div class="contents_overlay load_view">
             <?php 
+                echo "<a class='contents_link' href='./index.php?1=contents&2=contents_view&3=";
                 switch($current_url)
                 {
-                    case "artwork" : echo "<a href='./index.php?1=contents&2=contents_view&3=artwork'>"; break;
-                    case "vector" : echo "<a href='./index.php?1=contents&2=contents_view&3=vector'>"; break;
-                    case "3d" : echo "<a href='./index.php?1=contents&2=contents_view&3=3d'>"; break;
-                    default : echo "<a href='./index.php?1=contents&2=contents_view&3=all'>"; break;
+                    case "artwork" : echo "artwork"; break;
+                    case "vector" : echo "vector"; break;
+                    case "3d" : echo "3d"; break;
+                    default : echo "all"; break;
                 };
+                echo "'>";
             ?>
                 <i class="fa fa-search-plus"></i>
                 <ul>
