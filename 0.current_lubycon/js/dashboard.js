@@ -158,7 +158,10 @@ function likeChart(){
             "id": "v1",
             "axisAlpha": 0,
             "position": "left",
-            "ignoreAxisWidth":true
+            "ignoreAxisWidth":true,
+            "color": "#444444",
+            "gridColor": "#444444",
+            "gridAlpha": 0.3
         }],
         "balloon": {
             "borderThickness": 1,
@@ -189,13 +192,16 @@ function likeChart(){
             "cursorAlpha":1,
             "cursorColor":"#7feed2",//navigation bar color
             "limitToGraph":"g1",
-            "valueLineAlpha":0.2
+            "valueLineAlpha":1
         },
         "categoryField": "date",
         "categoryAxis": {
             "parseDates": true,
             "dashLength": 1,
-            "minorGridEnabled": true
+            "minorGridEnabled": true,
+            "color": "#444444",
+            "gridColor": "#444444",
+            "gridAlpha": 0.3
         },
         "export": {
             "enabled": false
@@ -220,7 +226,10 @@ function viewChart(){
             "id": "v2",
             "axisAlpha": 0,
             "position": "left",
-            "ignoreAxisWidth":true
+            "ignoreAxisWidth":true,
+            "color": "#444444",
+            "gridColor": "#444444",
+            "gridAlpha": 0.3
         }],
         "balloon": {
             "borderThickness": 1,
@@ -251,13 +260,16 @@ function viewChart(){
             "cursorAlpha":1,
             "cursorColor":"#ec6446",//navigation bar color
             "limitToGraph":"g1",
-            "valueLineAlpha":0.2
+            "valueLineAlpha":1
         },
         "categoryField": "date",
         "categoryAxis": {
             "parseDates": true,
             "dashLength": 1,
-            "minorGridEnabled": true
+            "minorGridEnabled": true,
+            "color": "#444444",
+            "gridColor": "#444444",
+            "gridAlpha": 0.3
         },
         "export": {
             "enabled": false
@@ -283,7 +295,10 @@ function upChart(){
             "id": "v3",
             "axisAlpha": 0,
             "position": "left",
-            "ignoreAxisWidth":true
+            "ignoreAxisWidth":true,
+            "color": "#444444",
+            "gridColor": "#444444",
+            "gridAlpha": 0.3
         }],
         "balloon": {
             "borderThickness": 1,
@@ -314,13 +329,16 @@ function upChart(){
             "cursorAlpha":1,
             "cursorColor":"#488ccb",//navigation bar color
             "limitToGraph":"g1",
-            "valueLineAlpha":0.2
+            "valueLineAlpha":1
         },
         "categoryField": "date",
         "categoryAxis": {
             "parseDates": true,
             "dashLength": 1,
-            "minorGridEnabled": true
+            "minorGridEnabled": true,
+            "color": "444444",
+            "gridColor": "#444444",
+            "gridAlpha": 0.3
         },
         "export": {
             "enabled": false
@@ -346,7 +364,10 @@ function downChart(){
             "id": "v4",
             "axisAlpha": 0,
             "position": "left",
-            "ignoreAxisWidth":true
+            "ignoreAxisWidth":true,
+            "color": "#444444",
+            "gridColor": "#444444",
+            "gridAlpha": 0.3
         }],
         "balloon": {
             "borderThickness": 1,
@@ -377,13 +398,16 @@ function downChart(){
             "cursorAlpha":1,
             "cursorColor":"#ffbe54",
             "limitToGraph":"g1",
-            "valueLineAlpha":0.2
+            "valueLineAlpha":1
         },
         "categoryField": "date",
         "categoryAxis": {
             "parseDates": true,
             "dashLength": 1,
-            "minorGridEnabled": true
+            "minorGridEnabled": true,
+            "color": "#444444",
+            "gridColor": "#444444",
+            "gridAlpha": 0.3
         },
         "export": {
             "enabled": false

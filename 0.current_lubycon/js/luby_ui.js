@@ -103,7 +103,7 @@ $(function(){
 })
 $(function(){
     $(".animate_opacity").hover(function (e){
-        $(this).stop().animate({ opacity: 0.5 },200);
+        $(this).stop().animate({ opacity: 0.9 },200);
     },function(){
         $(this).stop().animate({ opacity: 1 },200);
     });
@@ -186,9 +186,11 @@ $(window).on("load",function(){
     },1);//setTimeout end  
 });//window load end
 function hideAlert(){
-    $(".lubyAlert").fadeOut(1500,function(){
-        return;
-    });
+    setTimeout(function(){
+        $(".lubyAlert").fadeOut(700,function(){
+            return;
+        });
+    },500)
 };
 /////////////////////////////////////////////////////////
 //      lubyAlert end

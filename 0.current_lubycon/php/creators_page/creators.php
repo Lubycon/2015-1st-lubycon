@@ -68,10 +68,10 @@
                 <i id="myinfo_setting" class="fa fa-bars hidden-mb-b"></i>
                 <div id="myinfo_menu_list">
                     <ul>
-                        <li><a href="./index.php?1=personal_page&2=personal_page&3=main&4=my_contents"><i class="fa fa-eye"></i>My Contents</a></li>
-                        <li><a href="./index.php?1=personal_page&2=personal_page&3=main&4=insight"><i class="fa fa-bar-chart"></i>My Insight</a></li>
-                        <li><a href="./index.php?1=personal_page&2=personal_page&3=main&4=#"><i class="fa fa-user-plus"></i>Followers</a></li>
-                        <li><a href="./index.php?1=personal_page&2=personal_page&3=main&4=#"><i class="fa fa-fa fa-envelope-o"></i>My Message</a></li>
+                        <li><a href="./index.php?1=personal_page&2=personal_page&3=dashboard"><i class="fa fa-tachometer"></i>Dashboard</a></li>
+                        <li><a href="./index.php?1=personal_page&2=personal_page&3=my_contents"><i class="fa fa-eye"></i>My Contents</a></li>
+                        <li><a href="./index.php?1=personal_page&2=personal_page&3=insight"><i class="fa fa-bar-chart"></i>My Insight</a></li>
+                        <li><a href="./index.php?1=personal_page&2=personal_page&3=bookmark"><i class="fa fa-star"></i>Bookmarks</a></li>
                     </ul>
                 </div>
                 <div id="myinfo_main">
@@ -102,7 +102,7 @@
                         <p>ARTIST_OF_THE_MONTH(designing...)</p>
                     </li>
                     <?php
-                        for($i=0;$i<30;$i++){
+                        for($i=0;$i<60;$i++){
                             include('php/layout/artist_card.php');
                         }
                     ?>

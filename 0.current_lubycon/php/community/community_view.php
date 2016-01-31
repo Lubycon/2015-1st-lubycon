@@ -10,6 +10,7 @@
 <link href="css/community_view.css" rel="stylesheet" type="text/css" />  <!-- community_view css -->
 <link href="css/community.css" rel="stylesheet" type="text/css" />  <!-- community css -->
 <script type="text/javascript" src="js/community.js"></script>
+<script type="text/javascript" src="js/resizeObject.js"></script>
 
 <section id="contents">
     <section id="navsel">
@@ -99,7 +100,7 @@
                     <p class="author_name" id="language_name"><?=$language1?>, <?=$language2?></p>
                 </article>
             </div>
-            <button id="my_page_bt">My Page</button>
+            <button id="my_page_bt">VIEW MORE</button>
         </div><!--end con_aside-->
         <section id="post_section" class="con_main">
             <article id="post_contents">
@@ -115,7 +116,7 @@
             <article id="comment_box">
                 <div id="comment_writer">
                     <div id="comment_text_box">
-                        <figure id="comment_my_pic">
+                        <figure id="comment_my_pic" class="hidden-mb-ib">
                             <img src="ch/img/no_img/no_img_user1.jpg">
                         </figure>
                         <textarea id="comment_text"></textarea>

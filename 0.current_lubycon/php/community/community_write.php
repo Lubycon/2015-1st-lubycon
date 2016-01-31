@@ -1,4 +1,4 @@
-﻿<div class="main_figure_wrap hidden-mb-b">
+<div class="main_figure_wrap hidden-mb-b">
     <figure id="main_figure">
         <div class="dark_overlay_small"></div>
         <h2>COMMUNITY</h2>

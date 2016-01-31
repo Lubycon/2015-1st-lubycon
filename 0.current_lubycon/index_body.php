@@ -5,6 +5,23 @@
     </figure>
 </div>
 <!-- end main_figure -->
+<!--index contents page for mobile start-->
+<section class="mobile_wrap visible-mb">
+    <p class="mb-section_title">CONTENTS</p>
+    <section class="mb-contents_wrap">
+        <div class="mb-contents_inner">
+            <p class="mb-contents_title">ARTWORK</p>
+            <div class="mb-contents_contents">
+                <div class="mb-content1"><img src="ch/img/slider/slider1/1.png"></div>
+                <div class="mb-contents_layout">
+                    <div class="mb-content2"><img src="ch/img/slider/slider1/2.png"></div>
+                    <div class="mb-view_more"><i class="fa fa-angle-double-right"></i><p>VIEW MORE</p></div>
+                </div>
+            </div>
+        </div><!--section 1 end-->
+    </section>
+</section>
+<!--index contents page for mobile end-->
 
 
 <!-- main slider js -->

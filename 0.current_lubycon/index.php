@@ -16,7 +16,7 @@
     <title>Lubycon</title>
 
     <link rel="shortcut icon" href="./ch/img/logo/lubycon.ico" /> <!-- favicon -->
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source Sans Pro:300,400" type="text/css" />	<!--google web font-->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source Sans Pro:200,400,600" type="text/css" />	<!--google web font-->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" /> <!--icon font-->
 
     <link href="css/layout/normalize.css" rel="stylesheet" type="text/css" />  <!-- web normalize -->
@@ -103,7 +103,7 @@
         <p>It's marked!</p>
     </div><!--bookmark box-->
     <div class="lubyAlert" id="like_btAlert">
-        <i id="like_icon" class="fa fa-heart"></i>
+        <i id="like_icon" class="fa fa-heart bounceIn animated"></i>
         <p>Like :)</p>
     </div>
     <div class="lubyAlert" id="confirm_btAlert">
@@ -219,7 +219,7 @@
                 <li><a href="./index.php?1=personal_page&2=personal_page&3=dashboard">Dashboard</a></li>
                 <li><a href="./index.php?1=personal_page&2=personal_page&3=my_contents">My Contents</a></li>
                 <li><a href="./index.php?1=personal_page&2=personal_page&3=insight">Insight</a></li>
-                <li><a href="./index.php?1=personal_page&2=personal_page&3=bookmarks">Bookmarks</a></li>
+                <li><a href="./index.php?1=personal_page&2=personal_page&3=bookmark">Bookmarks</a></li>
                 <li><a href="./index.php?1=personal_page&2=personal_page&3=account_setting">Account Setting</a></li>
                 <li style="display:none;"><a href="./index.php?1=personal_page&2=personal_page&3=message">Message</a></li>
                 <li id="sign_out">Sign Out</li>
@@ -273,7 +273,7 @@
             include_once("index_body.php");
         }
     ?>
-    <footer id="footer" class="relative_foot"></footer>   <!--end footer-->
+    <footer id="footer" class="footer"></footer>   <!--end footer-->
 </div>
 </body>
 

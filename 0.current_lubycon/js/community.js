@@ -1,11 +1,20 @@
 /*--------------------------------postbox sticky start-------------------------------*/
 $(function(){
     if($("#main_board").length != 0){
-        var postBanner = $("#post_banner");
-        var bannerStop = $("#main_board").offset().top - $(window).height();
+        var postBanner = $("#post_banner"),
+            valueMain = $("#author_main").outerHeight(true),
+            valueSub = $("#author_sub").outerHeight(true),
+            bannerStop = $("#main_board").position().top - (valueMain + valueSub) - 101,
+            bannerPosition = (bannerStop-101-35).toString()+"px";
+            console.log(valueMain, valueSub, bannerStop);
+        $("#comment_box").on("resize",function(){
+            bannerStop = $("#main_board").position().top - (valueMain + valueSub) - 101,
+            bannerPosition = (bannerStop-101-35).toString()+"px";
+            postBanner.css({ "position": "fixed", "top": "100px" });
+        });
         $(document).scroll(function(){
             if($(document).scrollTop() >= bannerStop){
-                postBanner.css({"position":"absolute", "top":"1126px"});
+                postBanner.css({"position":"absolute", "top": bannerPosition});
                 return;
             }
             else{
@@ -30,24 +39,30 @@ $(function(){
 });
 
 $(document).ready(function(){
-    $('#main_work_space').summernote({
-        minHeight:null,
-        maxHeight:null,
-        focus:true,
-        placeholder: 'Write here...',
-        toolbar: [
-            // [groupName, [list of button]]
-            ['style',['style']],
-            ['fontsize', ['fontname', 'fontsize']],
-            ['style', ['bold', 'italic', 'underline', 'strikethrough', 'clear']],
-            ['font', ['superscript', 'subscript']],            
-            ['color', ['color']],
-            ['para', ['ul', 'ol', 'paragraph']],
-            ['height', ['height']],
-            ['insert', ['picture', 'video', 'link', 'table', 'hr']],
-            ['misc', ['help']],
-        ],
-        fontNames: ['Arial', 'Arial Black', 'Comic Sans MS', 'Source Sans Pro'],
-    });
+    if($("#main_work_space").length != 0){
+        $('#main_work_space').summernote({
+            minHeight:null,
+            maxHeight:null,
+            focus:true,
+            placeholder: 'Write here...',
+            toolbar: [
+                // [groupName, [list of button]]
+                ['style',['style']],
+                ['fontsize', ['fontname', 'fontsize']],
+                ['style', ['bold', 'italic', 'underline', 'strikethrough', 'clear']],
+                ['font', ['superscript', 'subscript']],            
+                ['color', ['color']],
+                ['para', ['ul', 'ol', 'paragraph']],
+                ['height', ['height']],
+                ['insert', ['picture', 'video', 'link', 'table', 'hr']],
+                ['misc', ['help']],
+            ],
+            fontNames: ['Arial', 'Arial Black', 'Comic Sans MS', 'Source Sans Pro'],
+        });
+        return true;
+    }else{
+        return false;
+    }
+    
 });
 /*--------------------------------community editor end-------------------------------*/
