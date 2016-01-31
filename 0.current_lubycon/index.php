@@ -219,7 +219,7 @@
                 <li><a href="./index.php?1=personal_page&2=personal_page&3=dashboard">Dashboard</a></li>
                 <li><a href="./index.php?1=personal_page&2=personal_page&3=my_contents">My Contents</a></li>
                 <li><a href="./index.php?1=personal_page&2=personal_page&3=insight">Insight</a></li>
-                <li><a href="./index.php?1=personal_page&2=personal_page&3=bookmarks">Bookmarks</a></li>
+                <li><a href="./index.php?1=personal_page&2=personal_page&3=bookmark">Bookmarks</a></li>
                 <li><a href="./index.php?1=personal_page&2=personal_page&3=account_setting">Account Setting</a></li>
                 <li style="display:none;"><a href="./index.php?1=personal_page&2=personal_page&3=message">Message</a></li>
                 <li id="sign_out">Sign Out</li>

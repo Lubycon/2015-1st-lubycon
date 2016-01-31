@@ -15,9 +15,9 @@
                 ?>
             </div>
             <div class="table_head_wrap">                              
-                <span class="table_date">Date</span>
-                <span class="table_view"><i class="fa fa-eye"></i></span> <!-- eye icon -->
-                <span class="table_like"><i class="fa fa-heart"></i></span>    <!-- heart icon -->
+                <span class="table_date hidden-mb-ib">Date</span>
+                <span class="table_view hidden-mb-ib"><i class="fa fa-eye"></i></span> <!-- eye icon -->
+                <span class="table_like hidden-mb-ib"><i class="fa fa-heart"></i></span>    <!-- heart icon -->
             </div>
         </div>
         <div class="table_body">
@@ -36,7 +36,7 @@
                     "<li class='table_list'>
                         <div class='table_list_inner'>
                             <span class='table_blank hidden-mb-ib'><i class='fa fa-circle' id='{$current_url}_circle'></i></span>   <!-- space -->
-                            <span class='table_number'>{$i}</span>   <!-- number -->
+                            <span class='table_number hidden-mb-ib'>{$i}</span>   <!-- number -->
                             <span class='table_info'>
                                 <span class='table_user_img'>
                                     <img src='{$userimg}'>

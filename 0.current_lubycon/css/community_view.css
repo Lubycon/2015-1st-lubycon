@@ -145,7 +145,7 @@
 
 #post_contents {
     position: relative;
-    margin: 15px;
+    margin: 30px 60px;
     padding: 20px;
     background: #ffffff;
     text-align: left;
@@ -236,6 +236,7 @@
 }
 
 #main_board{
+    max-width: none;
     margin-top: 0;
     z-index: 3;
 }

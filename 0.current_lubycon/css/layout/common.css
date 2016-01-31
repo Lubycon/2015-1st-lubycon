@@ -1057,7 +1057,7 @@ body{
     text-align: center;
     cursor: default;
     overflow-y: hidden;
-    padding-bottom:35px;
+    padding-bottom: 40px;
 }
 
     .con_main{
@@ -1536,10 +1536,6 @@ body{
 /*artist card end*/
 /* main board */
 #main_board {
-    width: 100%;
-    max-width: 1700px;
-    margin: 0px auto;
-    margin-top: 50px;
     position: relative;
     background: #ffffff;
     z-index: 2;
@@ -1628,13 +1624,10 @@ body{
     display: inline-block;
     position: relative;
     height: 55px;
-    margin-left: 40px;
 }
     .table_user_img {
         float: left;
         display: inline-block;
-        width: 55px;
-        height: 55px !important;
         border-radius: 50%;
         overflow: hidden;
     }
@@ -1649,7 +1642,6 @@ body{
     white-space: nowrap;
     overflow: hidden;
     margin-top: 5px;
-    padding-left: 20px;
     text-align: left;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -1657,7 +1649,6 @@ body{
 } 
     .table_subject a{
         color: #555555;
-        font-size: 18px;
         font-weight: 600;
         letter-spacing: -0.1px;
     }
@@ -1668,7 +1659,6 @@ body{
     position: absolute;
     display: inline-block;
     bottom: 3px;
-    left: 51px;
     min-width: 130px;
     text-align: center;
     color: #444444;
@@ -1682,7 +1672,6 @@ body{
         }
 
 .table_like {
-    display: inline-block;
     min-width: 60px;
     line-height: 55px;
     font-size: 18px;
@@ -1690,6 +1679,9 @@ body{
     text-align: center;
     color: #488ccb;
 }
+    .table_list .table_like {
+        display: inline-block;
+    }
 
     .table_like .fa-heart {
         font-size: 16px;
@@ -1697,7 +1689,6 @@ body{
     }
 
 .table_view {
-    display: inline-block;
     min-width: 60px;
     line-height: 55px;
     font-size: 18px;
@@ -1705,19 +1696,24 @@ body{
     text-align: center;
     color: #488ccb;
 }
+    .table_list .table_view {
+        display: inline-block;
+    }
 
     .table_view .fa-eye {
         font-size: 19px;
     }
 
 .table_date {
-    display: inline-block;
     width: 100px;
     line-height: 55px;
     float: right;
     text-align: center;
     color: #545454;
 }
+    .table_list .table_date{
+        display: inline-block;
+    }
 /* main board */
 /*tooltip start*/
 .tooltip_bt{

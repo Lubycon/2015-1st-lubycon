@@ -11,6 +11,7 @@
             <i class="fa fa-bars artist_menu_icon hidden-mb-b"></i>
             <div class="artist_menu_list">
                 <ul>
+                    <li><a href="./index.php?1=personal_page&2=personal_page&3=main&4=dashboard"><i class="fa fa-tachometer"></i>View Dashboard</a></li>
                     <li><a href="./index.php?1=personal_page&2=personal_page&3=main&4=my_contents"><i class="fa fa-eye"></i>View Contents</a></li>
                     <li><a href="./index.php?1=personal_page&2=personal_page&3=main&4=insight"><i class="fa fa-bar-chart"></i>View Insight</a></li>
                     <li><a href="./index.php?1=personal_page&2=personal_page&3=main&4=my_forums"><i class="fa fa-table"></i>View Forums</a></li>

@@ -471,6 +471,47 @@
     #personal_ciew .con_wrap #contents_box{
         margin-top: 196px;
     }
+    #main_board{
+        width: 100%;
+        margin: 0px;
+    }
+    .table_info{
+
+    }
+        .table_list .table_user_img{
+            width: 40px;
+            height: 40px;
+        }
+        .table_list .table_subject{
+            width: 50%;
+            float: left;
+            padding-left: 10px;
+        }
+            .table_list .table_subject a{
+                font-size: 16px;
+            }
+        .table_writer {
+            font-size: 13px;
+            left: 19px;
+        }
+        .table_list .table_like{
+            position: absolute;
+            top: 0;
+            right: 50px;
+            line-height: 30px;
+        }
+        .table_list .table_view{
+            position: absolute;
+            top:0;
+            right:10px;
+            line-height: 30px;
+        }
+        .table_list .table_date{
+            position: absolute;
+            bottom:0;
+            right:0;
+            line-height: 30px;
+        }
 }
 /*------------------------------------------------mobile end-------*/
 /*---------------------------------------------desktop start-------*/
@@ -724,6 +765,25 @@
         #user_information {
             background: #282828;
         }
+    #main_board{
+        width: 90%;
+        max-width: 1700px;
+        margin: 50px auto;
+    }
+    .table_info{
+        margin-left: 40px;
+    }
+        .table_list .table_user_img{
+            width: 55px;
+            height: 55px;
+        }
+        .table_list .table_subject{
+            padding-left: 20px;
+        }
+            .table_list .table_subject a{
+                left: 51px;
+                font-size: 18px;
+            }
 }
 /*------desktop end-------*/
 /*--------------------------------------------------------------------------------media query end*/

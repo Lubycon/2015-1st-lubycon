@@ -508,7 +508,7 @@ $(function(){
 //      community mainboard start
 /////////////////////////////////////////////////////////
 $(window).on("load resize",function(){
-    if($("#main_board").length != 0){
+    if(($("#main_board").length != 0) && ($(window).width() >= 1025)){
         console.log("here is mainboard");
         var blank = $(".table_blank").width(),
             number = $(".table_number").width(),            

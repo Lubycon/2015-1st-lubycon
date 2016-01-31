@@ -7,7 +7,11 @@ $(function(){
             bannerStop = $("#main_board").position().top - (valueMain + valueSub) - 101,
             bannerPosition = (bannerStop-101-35).toString()+"px";
             console.log(valueMain, valueSub, bannerStop);
-
+        $("#comment_box").on("resize",function(){
+            bannerStop = $("#main_board").position().top - (valueMain + valueSub) - 101,
+            bannerPosition = (bannerStop-101-35).toString()+"px";
+            postBanner.css({ "position": "fixed", "top": "100px" });
+        });
         $(document).scroll(function(){
             if($(document).scrollTop() >= bannerStop){
                 postBanner.css({"position":"absolute", "top": bannerPosition});

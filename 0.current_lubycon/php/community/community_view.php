@@ -10,6 +10,7 @@
 <link href="css/community_view.css" rel="stylesheet" type="text/css" />  <!-- community_view css -->
 <link href="css/community.css" rel="stylesheet" type="text/css" />  <!-- community css -->
 <script type="text/javascript" src="js/community.js"></script>
+<script type="text/javascript" src="js/resizeObject.js"></script>
 
 <section id="contents">
     <section id="navsel">

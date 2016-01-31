@@ -85,6 +85,7 @@
     -moz-box-sizing: border-box;
     vertical-align: top;
     padding-right: 310px;
+    margin-bottom: -40px;
 }
 
     #floating_bt{
