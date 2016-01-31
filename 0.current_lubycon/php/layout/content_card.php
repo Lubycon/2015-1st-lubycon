@@ -1,15 +1,15 @@
 <li>
     <?php
+        $number = $_GET["number"];
+        $current_url = $third_param;
         $username = "Admin_User";
         $contents_name = "Contents_name";
         $price = "Free";
-        $contents_thumb_url = "./ch/img/no_img/no_img.jpg";
+        $contents_thumb_url = "../contents_data/".$current_url."jpg/thumb/".$number.".jpg";
         $user_img_url = "./ch/img/no_img/no_img_user1.jpg";
         $like_num = 0;
         $view_num = 0;
         $comment_num = 0;
-        $current_url = $third_param;
-        $number = $_GET["number"];
     ?><!--you should change to mySQL later-->
     <div class="contents_card">
         <div class="contents_pic">

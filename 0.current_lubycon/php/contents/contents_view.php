@@ -1,5 +1,13 @@
 <script type="text/javascript" src="js/call_comments.js"></script> <!-- account file js -->
 
+<?php
+
+$number = $_GET["4"];
+$current_url = $_GET["3"];
+$contents_img_url = "../contents_data/".$current_url."jpg/".$number.".jpg";
+
+?>
+
 <div class="main_figure_wrap hidden-mb-b">
     <figure id="main_figure">
         <div class="dark_overlay_small"></div>
@@ -90,9 +98,7 @@
                    </iframe>";
                         }
                         else{
-                            echo "<figure class='contents_img'>
-                                    <img class='inner_img' src='ch/img/contents/contents.jpg' />
-                                </figure>";
+                            echo '<figure class="contents_img"><img class="inner_img" src="'.$contents_img_url.'" /></figure>';
                         };
                     ?>
                     

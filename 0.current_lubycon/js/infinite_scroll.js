@@ -1,3 +1,5 @@
+var third_param = getUrlParameter('3');
+/*
 function up_call_contents() {
     var top_bound = ($("#main_header").height() + $("#nav_guide").height() + $("#lnb_nav > ul:nth-child(1)").height());
     $("#contents_box > ul").before('<p class="progressbar"><i class="fa fa-spinner fa-pulse"></i></p>');
@@ -7,8 +9,8 @@ function up_call_contents() {
         url: "php/ajax/infinite_scroll_ajax.php",
         processData: false,
         contentType: false,
-        //data: formData,
         type: "POST",
+        data: 'data=' + third_param,
         cache: false,
         success: function (data)
         {
@@ -21,16 +23,16 @@ function up_call_contents() {
         }
     })
 };
+*/
 function down_call_contents() {
     $("#contents_box > ul").append('<p class="progressbar"><i class="fa fa-spinner fa-pulse"></i></p>');
-
     $.ajax
     ({
         url: "php/ajax/infinite_scroll_ajax.php",
         processData: false,
         contentType: false,
-        //data: formData,
         type: "POST",
+        data: "third_param=" + third_param,
         cache: false,
         success: function (data) {
             $("#contents_box > ul:nth-child(1)").append(data);
