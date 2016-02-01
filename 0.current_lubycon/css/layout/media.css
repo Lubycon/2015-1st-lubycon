@@ -5,10 +5,10 @@
         display: block;
     }
     .hidden-mb-ib {
-        display: none;
+        display: none !important;
     }
     .hidden-mb-b {
-        display: none;
+        display: none !important;
     }
     #wrapper {
         position: absolute;
@@ -512,12 +512,16 @@
             right:0;
             line-height: 30px;
         }
+    #write_bt{
+        bottom: 20px;
+        right: 10px;
+    }
 }
 /*------------------------------------------------mobile end-------*/
 /*---------------------------------------------desktop start-------*/
 @media screen and (min-width: 1025px){
     .visible-mb{
-        display: none;
+        display: none !important;
     }
     .hidden-mb-ib{
         display: inline-block;
@@ -784,6 +788,14 @@
                 left: 51px;
                 font-size: 18px;
             }
+        .table_writer {
+            font-size: 15px;
+            left: 50px;
+        }
+    #write_bt{
+        bottom: 20px;
+        right: 40px;
+    }
 }
 /*------desktop end-------*/
 /*--------------------------------------------------------------------------------media query end*/

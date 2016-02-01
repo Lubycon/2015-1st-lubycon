@@ -1786,13 +1786,13 @@
   };
 
   var editor = renderer.create('<div class="note-editor note-frame panel panel-default"/>');
-  var toolbar = renderer.create('<div class="note-toolbar panel-heading"/>');
+  var toolbar = renderer.create('<div class="note-toolbar panel-heading hidden-mb-b"/>');
   var editingArea = renderer.create('<div class="note-editing-area"/>');
   var codable = renderer.create('<textarea class="note-codable"/>');
   var editable = renderer.create('<div class="note-editable panel-body" contentEditable="true"/>');
   var statusbar = renderer.create([
     '<div class="note-statusbar">',
-    '  <div class="note-resizebar">',
+    '  <div class="note-resizebar hidden-mb-b">',
     '    <div class="note-icon-bar"/>',
     '    <div class="note-icon-bar"/>',
     '    <div class="note-icon-bar"/>',

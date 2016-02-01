@@ -6,11 +6,9 @@ function up_call_contents() {
 
     $.ajax
     ({
-        url: "php/ajax/infinite_scroll_ajax.php",
-        processData: false,
-        contentType: false,
         type: "POST",
-        data: 'data=' + third_param,
+        url: "php/ajax/infinite_scroll_ajax.php", //이페이지에서 중복체크를 한다
+        data: 'third_param=' + third_param,//test.asp에 id 값을 보낸다
         cache: false,
         success: function (data)
         {
@@ -28,17 +26,14 @@ function down_call_contents() {
     $("#contents_box > ul").append('<p class="progressbar"><i class="fa fa-spinner fa-pulse"></i></p>');
     $.ajax
     ({
-        url: "php/ajax/infinite_scroll_ajax.php",
-        processData: false,
-        contentType: false,
         type: "POST",
-        data: "third_param=" + third_param,
+        url: "php/ajax/infinite_scroll_ajax.php", //이페이지에서 중복체크를 한다
+        data: 'third_param=' + third_param,//test.asp에 id 값을 보낸다
         cache: false,
         success: function (data) {
             $("#contents_box > ul:nth-child(1)").append(data);
             $(".progressbar").remove();
             ajax_eventing = false;
-
         }
     })
 };

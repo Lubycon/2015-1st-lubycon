@@ -388,14 +388,13 @@ $(function () {
             toolbar: [
                 // [groupName, [list of button]]
                 ['style',['style']],
-                ['fontsize', ['fontname', 'fontsize']],
+                ['fontsize', ['fontsize']],
                 ['style', ['bold', 'italic', 'underline', 'strikethrough', 'clear']],              
                 ['color', ['color']],
                 ['para', ['paragraph']],
                 ['insert', ['picture', 'video', 'link', 'table', 'hr']],
-                ['misc', ['help']],
+                ['misc', ['help']]
             ],
-            fontNames: ['Arial', 'Arial Black', 'Comic Sans MS', 'Source Sans Pro'],
             callbacks:
             {
                 onImageUpload: function (files, editor, welEditable)
