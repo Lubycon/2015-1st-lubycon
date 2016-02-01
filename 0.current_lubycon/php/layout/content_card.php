@@ -10,7 +10,7 @@
             case "artwork" : $current_url = "artwork"; $contents_name = $artwork_subject; break;
             case "vector" : $current_url = "vector"; $contents_name = $vector_subject; break;
             case "3d" : $current_url = "3d"; break;
-            default : $current_url = "artwork"; break;
+            default : $current_url = "artwork"; $contents_name = $artwork_subject; break;
         };
 
         $username = "Admin_User";
