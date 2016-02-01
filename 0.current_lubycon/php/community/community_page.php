@@ -1,3 +1,5 @@
+<script type="text/javascript" src="js/community_infinite_scroll.js"></script> <!-- scroll js -->
+
 <div class="main_figure_wrap hidden-mb-b">
     <figure id="main_figure">
         <div class="dark_overlay_small"></div>

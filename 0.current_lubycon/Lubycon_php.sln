@@ -29,6 +29,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "community", "community", "{
 	ProjectSection(SolutionItems) = preProject
 		php\community\community_page.php = php\community\community_page.php
 		php\community\community_view.php = php\community\community_view.php
+		php\community\community_write.php = php\community\community_write.php
+		php\community\main_board.php = php\community\main_board.php
+		php\community\wysiwygs.php = php\community\wysiwygs.php
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "company", "company", "{2444400F-89DF-48F0-B2FC-DA811A7CF73C}"
@@ -111,6 +114,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "js", "js", "{F4657569-6E1C-
 		js\chosen.jquery.js = js\chosen.jquery.js
 		js\chosen.prism.js = js\chosen.prism.js
 		js\community.js = js\community.js
+		js\community_infinite_scroll.js = js\community_infinite_scroll.js
 		js\croppic.min.js = js\croppic.min.js
 		js\d3.min.js = js\d3.min.js
 		js\editor.js = js\editor.js
@@ -150,6 +154,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "layout", "layout", "{95A271
 	ProjectSection(SolutionItems) = preProject
 		php\layout\artist_card.php = php\layout\artist_card.php
 		php\layout\comment.php = php\layout\comment.php
+		php\layout\community_card.php = php\layout\community_card.php
 		php\layout\content_card.php = php\layout\content_card.php
 		php\layout\follower_card.php = php\layout\follower_card.php
 		php\layout\index_forum.php = php\layout\index_forum.php
@@ -160,6 +165,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ajax", "ajax", "{A5A8174F-E088-43E5-BDAE-1CF2E3FCFFAE}"
 	ProjectSection(SolutionItems) = preProject
 		php\ajax\call_comments_ajax.php = php\ajax\call_comments_ajax.php
+		php\ajax\community_infinite_scroll.php = php\ajax\community_infinite_scroll.php
 		php\ajax\create_account_popup.php = php\ajax\create_account_popup.php
 		php\ajax\editor_ajax.php = php\ajax\editor_ajax.php
 		php\ajax\editor_fileupload.php = php\ajax\editor_fileupload.php
