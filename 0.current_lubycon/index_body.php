@@ -7,18 +7,78 @@
 <!-- end main_figure -->
 <!--index contents page for mobile start-->
 <section class="mobile_wrap visible-mb">
-    <p class="mb-section_title">CONTENTS</p>
+    <?php
+        $artwork_count = 0;
+        $vector_count = 0;
+        $threeD_count = 0;
+    ?>
     <section class="mb-contents_wrap">
         <div class="mb-contents_inner">
-            <p class="mb-contents_title">ARTWORK</p>
+            <div class="mb-contents_title">
+                <i class="fa fa-font"></i>
+                <h1>ARTWORK</h1>
+                <p class="mb-contents_count"><?=$artwork_count?>&nbsp;Contents</p>
+            </div>
+            <div class="mb-big_content">
+                <img src="../contents_data/artworkjpg/thumb/5.jpg" alt="best_img">
+            </div>
             <div class="mb-contents_contents">
-                <div class="mb-content1"><img src="ch/img/slider/slider1/1.png"></div>
-                <div class="mb-contents_layout">
-                    <div class="mb-content2"><img src="ch/img/slider/slider1/2.png"></div>
-                    <div class="mb-view_more"><i class="fa fa-angle-double-right"></i><p>VIEW MORE</p></div>
-                </div>
+                <?php
+                    for( $i=1 ; $i<=4 ; $i++ ){
+                        echo '<div class="mb-contents">
+                                <img src="../contents_data/artworkjpg/thumb/'.$i.'.jpg" alt="artwork_thumbnail'.$i.'">
+                              </div>';
+                    };
+                ?>   
+            </div>
+            <div class="mb-contents_footer">
+                <div class="mb-view_more" id="mb-artwork_bt"><p>VIEW MORE</p></div>
             </div>
         </div><!--section 1 end-->
+        <div class="mb-contents_inner">
+            <div class="mb-contents_title">
+                <i class="fa fa-square"></i>
+                <h1>VECTOR</h1>
+                <p class="mb-contents_count"><?=$vector_count?>&nbsp;Contents</p>
+            </div>
+            <div class="mb-big_content">
+                <img src="../contents_data/vectorjpg/thumb/7.jpg" alt="best_img">
+            </div>
+            <div class="mb-contents_contents">
+                <?php
+                    for( $i=1 ; $i<=4 ; $i++ ){
+                        echo '<div class="mb-contents">
+                                <img src="../contents_data/vectorjpg/thumb/'.$i.'.jpg" alt="vector_thumbnail'.$i.'">
+                              </div>';
+                    };
+                ?>   
+            </div>
+            <div class="mb-contents_footer">
+                <div class="mb-view_more" id="mb-vector_bt"><p>VIEW MORE</p></div>
+            </div>
+        </div><!--section 2 end-->
+        <div class="mb-contents_inner">
+            <div class="mb-contents_title">
+                <i class="fa fa-cube"></i>
+                <h1>3D MODEL</h1>
+                <p class="mb-contents_count"><?=$threeD_count?>&nbsp;Contents</p>
+            </div>
+            <div class="mb-big_content">
+                <img src="../contents_data/3djpg/thumb/5.jpg" alt="best_img">
+            </div>
+            <div class="mb-contents_contents">
+                <?php
+                    /*for( $i=1 ; $i<=4 ; $i++ ){
+                        echo '<div class="mb-contents">
+                                <img src="../contents_data/3djpg/thumb/'.$i.'.jpg" alt="3d_thumbnail'.$i.'">
+                              </div>';
+                    };*/
+                ?>   
+            </div>
+            <div class="mb-contents_footer">
+                <div class="mb-view_more" id="mb-3d_bt"><p>VIEW MORE</p></div>
+            </div>
+        </div><!--section 3 end-->
     </section>
 </section>
 <!--index contents page for mobile end-->

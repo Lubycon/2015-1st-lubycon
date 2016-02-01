@@ -261,10 +261,36 @@ $(function () { //search box click value reset start
 //      main search bar input reset end
 /////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////
-//      main index contents width start(mobile)
+//      main index contents viewmore start(mobile)
 /////////////////////////////////////////////////////////
+$(function(){
+    if($(window).width() < 1025){
+        $(".mb-view_more").on("click touchend",function(event){
+            eventHandler(event,$(this));
+            var id = $(this).attr("id"),
+                url = "";
+            switch(id){
+                case "mb-artwork_bt" : 
+                    url = "http://localhost:8080/0.current_lubycon/index.php?1=contents&2=contents_page&3=artwork";
+                    location.href = url;
+                break;
+                case "mb-vector_bt" :
+                    url = "http://localhost:8080/0.current_lubycon/index.php?1=contents&2=contents_page&3=vector";
+                    location.href = url;
+                break;
+                case "mb-3d_bt" :
+                    url = "http://localhost:8080/0.current_lubycon/index.php?1=contents&2=contents_page&3=3d";
+                    location.href = url;
+                break;
+                default: return; break;
+            }
+        });
+    }else{
+        return;
+    }
+});
 /////////////////////////////////////////////////////////
-//      main index contents width end(mobile)
+//      main index contents viewmore end(mobile)
 /////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////
 //      create account checkbox event start
