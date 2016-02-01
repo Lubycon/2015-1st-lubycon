@@ -7,6 +7,7 @@
 <!-- end main_figure -->
 
 <link href="css/community.css" rel="stylesheet" type="text/css" />
+<script src="js/community.js" type="text/javascript"></script>
 <!-- contents page css -->
 <section id="contents">
     <section id="navsel" class="hidden-mb-b">
@@ -74,7 +75,7 @@
             include("main_board.php");
         ?><!--end main_board section -->
     </section>
-    <a href="./index.php?1=community&2=community_write">
+    <a href="#">
         <span id="write_bt" class="out animate_opacity"><i class="fa fa-plus"></i></span>
     </a>
     <div class="tooltip_bt">Write</div>

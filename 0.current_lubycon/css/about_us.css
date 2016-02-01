@@ -1,5 +1,9 @@
 ﻿@charset "utf-8";
 
+#main_search_bar{
+    display: none;
+}
+
 
 #descript_lubycon
 {
