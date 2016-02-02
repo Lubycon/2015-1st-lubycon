@@ -147,11 +147,11 @@
             }
         #mb-menu_panel {
             position: fixed;
-            width: 65%;
+            width: 270px;
             height: 100%;
             background: #383838 no-repeat;
             top: 0;
-            left: -65%;
+            left: -270px;
             z-index: 10000;
         }
             .mb-menu_group {
@@ -324,59 +324,75 @@
             .contents_desc {
                 display: inline-block;
                 vertical-align: top;
+                width: 50%;
             }
-                    .contents_desc h5 {
-                        display: block;
-                        float: none;
-                    }
-                    .contents_desc #bookmark_bt {
-                        font-size: 30px;
-                    }
+                .contents_title {
+                    float: none;
+                    display: block;
+                }
+                .contents_desc h5 {
+                    display: block;
+                    float: none;
+                }
+                .contents_desc #bookmark_bt {
+                    font-size: 30px;
+                }
             .creator_desc {
                 margin-top: 20px;
             }
                 .creator_desc .by {
                     margin-left: 0px;
+                    font-size: 12px;
+                    font-weight: 400;
                 }
-        .artists_card_in{
+                .creator_desc .name{
+                    font-size: 14px;
+                }
+        .creators_card_in{
             display: block;
             margin: 0px;
         }
-        .artists_card {
+        #best_creator_wrap{
+            width: 100%;
+            height: 130px;
+            border-bottom: 1px solid #eeeeee;
+            border-radius: 0px;
+        }
+        .creators_card {
             width: 100%;
             height: 120px;
             margin: 0px;
-            border-bottom: 1px solid #000000;
+            border-bottom: 1px solid #eeeeee;
             border-radius: 0px;
             box-shadow: none;
             text-align: left;
         }
-        .artist_top_info{
+        .creator_top_info{
             display: inline-block;
         }
-            .artist_pic {
+            .creator_pic {
                 width: 45px;
                 height: 45px;
                 display: inline-block;
             }
-            .artist_location{
+            .creator_location{
                 width: 20px;
                 height: 20px;
                 top: 28px;
                 right: -7px;
             }
-        .artist_mid_info {
+        .creator_mid_info {
             display: inline-block;
             margin-left: 10px;
         }
-            .artist_name {
+            .creator_name {
                 text-align: left;
                 font-size: 20px;
             }
-            .artist_job{
+            .creator_job{
                 text-align: left;
             }
-        .artist_bot_info {
+        .creator_bot_info {
             border: none;
         }
 
@@ -481,12 +497,6 @@
             #job_name {
                 color: #eeeeee;
             }
-    #best_artist_wrap{
-        width: 100%;
-        height: 130px;
-        border-bottom: 1px solid #000;
-        border-radius: 0px;
-    }
     #my_page_bt{
         display: none;
     }
@@ -515,7 +525,7 @@
             height: 40px;
         }
         .table_list .table_subject{
-            width: 50%;
+            width: 58%;
             float: left;
             padding-left: 10px;
         }
@@ -628,7 +638,7 @@
             height: 300px;
             margin: 22px 10px;
             border-radius: 5px;
-            box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.3);
+            box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.3);
         }
             .contents_overlay {
                 width: 250px;
@@ -644,6 +654,10 @@
             .contents_desc{
                 display: block;
             }
+                .contents_title {
+                    float: left;
+                    width: 190px;
+                }
                 .contents_desc h5 {
                     display: inline-block;
                     float: right;
@@ -652,46 +666,50 @@
                     font-size: 25px;
                 }
             .creator_desc {
-                margin-top: 0px;
+                margin-top: 5px;
             }
                 .creator_desc .by {
-                    margin-left: 5px;
+                    font-size: 15px;
+                    font-weight: 200;
                 }
-        .artist_card_in{
+                .creator_desc .name{
+                    font-size: 16px;
+                }
+        .creator_card_in{
             display: inline-block;
             margin: 10px;
         }
-        .artists_card {
+        .creators_card {
             width: 240px;
             height: 280px;
             border-radius: 5px;
             float: left;
             margin: 10px 10px;
-            box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.3);
+            box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.3);
         }
-            .artist_pic {
+            .creator_pic {
                 width: 90px;
                 height: 90px;
                 margin: 0px auto;
                 margin-top: 30px;
             }
-            .artist_location {
+            .creator_location {
                 width: 30px;
                 height: 30px;
                 top: 67px;
                 right: 73px;
             }
-        .artist_mid_info {
+        .creator_mid_info {
             margin-top: 38px;
         }
-            .artist_name {
+            .creator_name {
                 text-align: center;
                 font-size: 18px;
             }
-            .artist_job{
+            .creator_job{
                 text-align: center;
             }
-        .artist_bot_info {
+        .creator_bot_info {
             width: 220px;
             border-top: 1px solid #aaaaaa;
             margin: 0px auto;
@@ -776,13 +794,11 @@
             #job_name{
                 color: #48cfad;
             }
-    #best_artist_wrap{
+    #best_creator_wrap{
         width: 84%;
         height: 150px;
         margin: 20px auto;
         margin-top: 38px;
-        border-radius: 5px;
-        box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.3);
     }
     #my_page_bt{
         width: 220px;

@@ -1057,12 +1057,14 @@ body{
     cursor: default;
     overflow-y: hidden;
     padding-bottom: 40px;
+    background: #eeeeee;
+
 }
 
     .con_main{
         width: 100%;
         position: relative;
-        background: #f0f0f0;
+        background: #eeeeee;
         height: auto;
         display: inline-block;
         overflow: hidden;
@@ -1088,10 +1090,9 @@ body{
 
 .contents_card{
     position: relative;
-    background: #fff;
+    background: #ffffff;
     overflow: hidden;
     float: left;
-    border: 1px solid #dddddd;
 }
     .contents_overlay{
         position: absolute;
@@ -1157,23 +1158,21 @@ body{
         .contents_desc .contents_title{
             cursor:pointer;
             color:#444444;
-            font-weight:200;
-            float:left;
-            font-size: 20px;
-            font-weight: 400;
+            font-size: 16px;
+            font-weight: 600;
             text-decoration: none;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
             height:26px;
             line-height:26px;
         }
-            .contents_desc .content_title:hover{
-                opacity: 0.8;
-            }
         .contents_desc h5 {
-            color:#686868;
+            color:#888888;
             font-size:14px;
             height:15px;
             line-height:15px;
-            margin-top:4px;
+            margin-top:7px;
             font-weight:400;
         }
         .creator_desc {
@@ -1184,18 +1183,17 @@ body{
                 opacity: 0.8;
             }
             .creator_desc img{
-                width:40px;
-                height:40px;
-                padding-top:3px;
-                clear:both;
+                width: 40px;
+                height: 40px;
                 border-radius: 50%;
             }
             .creator_desc .by{
-                color:#808080;
-                margin-right:5px;
+                color:#888888;
+                margin-right: 3px;
             }
             .creator_desc .name{
                 color:#444444;
+                font-size: 16px;
             }
         .contents_desc #bookmark_bt{
             position: absolute;
@@ -1408,31 +1406,31 @@ body{
         #comment_more_bt i{
             font-size: 25px;
         }
-/*artists card start*/
-#artist_card_wrap{
+/*creators card start*/
+#creator_card_wrap{
     max-width: 1330px;
     margin: 0px auto;
 }
-.artist_card_in{
+.creator_card_in{
     /*empty*/
 }
 
-.artists_card{
+.creators_card{
     position: relative;
     background: #fff;
     padding-top: 10px;  
 }
-    .artist_menu{
+    .creator_menu{
         position: absolute;
         right: 7px;
         top: 7px;
         cursor: pointer;
     }
-        .artist_menu .artist_menu_icon{
+        .creator_menu .creator_menu_icon{
             font-size: 20px;
             color: #aaaaaa;
         }
-        .artist_menu_list{
+        .creator_menu_list{
             width: 150px;
             top: 10px;
             left: -140px;
@@ -1443,19 +1441,19 @@ body{
             background: rgba(255,255,255,0.9);
             display: none;  
         }
-        .artist_menu_list ul{
+        .creator_menu_list ul{
             line-height: 35px;
         }
-            .artist_menu_list ul li{
+            .creator_menu_list ul li{
                 text-align: center;
                 color: #aaaaaa;
                 font-weight: 200;
                 font-size: 14px;
             }
-            .artist_menu_list ul li:hover{
+            .creator_menu_list ul li:hover{
                 background: rgba(200,200,200,0.5);
             }
-                .artist_menu_list ul li i{
+                .creator_menu_list ul li i{
                     display: inline-block;
                     color: #aaaaaa;
                     float: left;
@@ -1463,46 +1461,46 @@ body{
                     margin-left: 7px;
                     font-size: 17px;
                 }
-                .artist_menu_list ul li a{
+                .creator_menu_list ul li a{
                     color: #aaaaaa;
                     font-weight: 200;
                 }
-    .artist_top_info {
+    .creator_top_info {
         position: relative;
     }
-        .artist_pic {
+        .creator_pic {
             overflow: hidden;
             border-radius: 50%; 
         }
-            .artist_pic img{
+            .creator_pic img{
                 height:100%;
             }
-        .artist_location {
+        .creator_location {
             position : absolute;
             overflow: hidden;
             border-radius: 50%;
             box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.5);
         }
-            .artist_location img {
+            .creator_location img {
                 width: 100%;
                 height: 100%;
             }
-    .artist_mid_info {
+    .creator_mid_info {
         position: relative;
     }
-        .artist_name {
+        .creator_name {
             color: #444444;
         }
-        .artist_job{
+        .creator_job{
             color: #48cfad;
             font-size: 16px;
             margin-top: 2px;
         }
-            .artist_job i {
+            .creator_job i {
                 color: #444444;
                 margin-right: 10px;
             }
-    .artist_bot_info {
+    .creator_bot_info {
         position: relative;       
         box-sizing: border-box;
         -webkit-box-sizing: border-box;
@@ -1532,7 +1530,7 @@ body{
                 opacity: 0.8;
             }
 
-/*artist card end*/
+/*creator card end*/
 /* main board */
 #main_board {
     position: relative;
@@ -1587,6 +1585,7 @@ body{
                 position: relative;
                 margin: 0px auto;
                 padding: 10px 20px;
+                text-align: left;
             }  
                 .table_list_inner span {
                     

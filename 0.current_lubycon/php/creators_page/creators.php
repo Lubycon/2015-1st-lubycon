@@ -6,7 +6,7 @@
 </div>
 <!-- end main_figure -->
 
-<link href="css/artists_page.css" rel="stylesheet" type="text/css" />
+<link href="css/creators_page.css" rel="stylesheet" type="text/css" />
 <!-- contents page css -->
 <section id="contents">
     <section class="nav_guide hidden-mb-ib">
@@ -97,13 +97,13 @@
                 <button id="my_page_bt">My Page</button>
             </div><!--end con_aside-->
             <div id="user_view_main" class="con_main">
-                <ul id="artist_card_wrap">
-                    <li id="best_artist_wrap">
-                        <p>ARTIST_OF_THE_MONTH(designing...)</p>
+                <ul id="creator_card_wrap">
+                    <li id="best_creator_wrap">
+                        <p>CREATOR_OF_THE_MONTH(designing...)</p>
                     </li>
                     <?php
                         for($i=0;$i<60;$i++){
-                            include('php/layout/artist_card.php');
+                            include('php/layout/creator_card.php');
                         }
                     ?>
                 </ul>

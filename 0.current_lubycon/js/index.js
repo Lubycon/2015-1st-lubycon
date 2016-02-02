@@ -15,6 +15,7 @@ $(document).ready(function(){
         });
     });
 });*/
+var windowWidth = $(window).width();
 $(window).on("resize load", function(){
     console.log($(window).width());
     $("body").css("min-height",$(window).height().toString()+"px");
@@ -403,14 +404,21 @@ $(function () {
 //      contents card hover overlay view start
 /////////////////////////////////////////////////////////
 $(function (){
-    $(document).on({
-        mouseenter: function() {
-            $(this).children('.contents_overlay').stop().fadeIn(300);
-        },
-        mouseleave: function() {
-            $(this).children('.contents_overlay').stop().fadeOut(300)
-        }
-    }, '.contents_card');
+    if(windowWidth >= 1025){
+        $(document).on({
+            mouseenter: function() {
+                $(this).children('.contents_overlay').stop().fadeIn(300);
+                $(this).find(".contents_title").css("text-decoration","underline");
+            },
+            mouseleave: function() {
+                $(this).children('.contents_overlay').stop().fadeOut(300);
+                $(this).find(".contents_title").css("text-decoration","none");
+            }
+        }, '.contents_card');
+    }
+    else{
+        return;
+    }
 });
 /////////////////////////////////////////////////////////
 //      contents card hover overlay view end
@@ -781,7 +789,7 @@ $(function(){
 
 });
 /*----------------------------pager interaction end--------------------------*/
-/*--------------------my info setting in artist_page toggle start------------*/
+/*--------------------my info setting in creator_page toggle start------------*/
 $(function(){
     if($("#myinfo_setting").length != 0){
         var my_toggle_count = 0;
@@ -816,22 +824,22 @@ $(function(){
         });//mouseleave end
     };//if end
 });
-/*--------------------my info setting in artist_page toggle end----------------------*/
-/*----------------------------artist card menu toggle start--------------------------*/
+/*--------------------my info setting in creator_page toggle end----------------------*/
+/*----------------------------creator card menu toggle start--------------------------*/
 $(function(){
-    if($(".artists_card").length != 0){
-        $(".artist_menu").each(function(){
+    if($(".creators_card").length != 0){
+        $(".creator_menu").each(function(){
             var toggle_count = 0;
             $(this).click(function (event){
                 event = event || window.event//for IE
                 switch(toggle_count){
                     case 0:
-                    $(this).children(".artist_menu_list").stop().fadeIn(200);
+                    $(this).children(".creator_menu_list").stop().fadeIn(200);
                     toggle_count = 1;
                     //console.log(toggle_count);
                     break;
                 case 1:
-                    $(this).children(".artist_menu_list").stop().fadeOut(200);
+                    $(this).children(".creator_menu_list").stop().fadeOut(200);
                     toggle_count = 0;
                     //console.log(toggle_count);
                     break;
@@ -840,9 +848,9 @@ $(function(){
             $(this).mouseleave(function(){
                 $(document).click(function (event) {
                     event = event || window.event//for IE
-                    if (!$(event.target).hasClass("artist_menu_icon")) {
+                    if (!$(event.target).hasClass("creator_menu_icon")) {
                         //console.log($(event.target).attr("class"));
-                        $(this).find($(".artist_menu_list")).stop().fadeOut(200);
+                        $(this).find($(".creator_menu_list")).stop().fadeOut(200);
                         toggle_count = 0;
                         //console.log(toggle_count);
                         return;
@@ -856,7 +864,7 @@ $(function(){
     };//if end
 });
 
-/*----------------------------artist card menu toggle end--------------------------*/
+/*----------------------------creator card menu toggle end--------------------------*/
 /*-----------------------------footer sticky start----------------------------------*/
 /*$(window).scroll(function() {
     if ($(window).scrollTop() <= $(document).height() - $(window).height()){//footer height 180px
