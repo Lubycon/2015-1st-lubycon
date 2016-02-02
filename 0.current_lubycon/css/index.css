@@ -29,9 +29,9 @@
 
 /* slide section */
 #slide_section {
-    background: #ffffff;
-    height: 500px;
+    background: #eeeeee;
     margin: 0px auto;
+    padding: 25px;
     position: relative;
 }
 

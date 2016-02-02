@@ -40,15 +40,13 @@
                     echo "&4=".$number."'>";
                 ?>
                     <h4 class="contents_title load_view"><?=$contents_name[$number]?></h4>
+                    <h5><?=$price?></h5>
                 </a>
-                <h5><?=$price?></h5>
             </div>
             <span class="creator_desc">
-                <a href="./index.php?1=creators_page&2=creators" class="hidden-mb-ib">
-                    <img src="<?=$user_img_url?>" alt="artist photo" />
-                </a>
-                <span class="by">by</span>
                 <a href="./index.php?1=creators_page&2=creators">
+                    <img src="<?=$user_img_url?>" class="hidden-mb-ib" alt="artist photo" />
+                    <span class="by">by</span>
                     <span class="name"><?=$username?></span>
                 </a>
             </span>
