@@ -123,134 +123,159 @@
         }
 /* slide section end */
 
-/* designers section */
-#designer_month
-{
+/* creators section */
+#creator_month{
     width: 100%;
+    padding: 30px;
     margin-bottom:140px;
+    background: #eeeeee;
+    text-align: center;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
 }
-    .designer_title
-    {
+    #creator_wrap{
+        position: relative;
+        display: inline-block;
         width: 100%;
-        height: 100px;
-        line-height: 100px;
-        margin-top: 80px;
-        font-size:36px;
-        font-weight: 200;
+        max-width: 1200px;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        background: #ffffff;
+    }
+    #creator_title{
+        width: 100%;
         text-align:center;
+        margin: 40px 0px;
     }
-
-    #designer_body
-    {
-        width: 100%;
-        height: 270px;
-        position: relative;
-        background: #ebebeb;
-    }
-
-
-
-    #designer_inbody
-    {
-        width: 1260px;
-        height: 270px;
-        margin:0px auto;
-        position: relative;
-    }
-        #designer_photo
-        {
-            width: 280px;
-            position: relative;
-            top:-53px;
-            float: left;
+        #creator_title i{
+            color: #444444;
+            font-size: 80px;
         }
-
-            #photo_frame {
-                width: 187px;
-                height: 217px;
-                background: url(../ch/img/designer_of_the_month/frame.png) no-repeat;
+        #creator_title article{
+            color: #444444;
+            font-size: 40px;
+            font-weight: 200;
+        }
+            #creator_title article p{
+                font-weight: 400;
+                font-size: 45px;
+            }
+    #creator_body{
+        width: 100%;
+        position: relative;
+        display: inline-block;     
+    }
+        #creator_info{
+            width: 100%;
+            max-width: 1000px;
+            position: relative;
+            height: 300px;
+            margin: 0px auto;
+            position:relative;
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+        }
+            #creator_info_background{
+                width: 100%;
+                max-width: 1000px;
+                height: 300px;
+                background: url(../../contents_data/vectorjpg/12.jpg) no-repeat 50% 46%;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+                -webkit-filter: blur(3px) brightness(0.7);
+                -moz-filter: blur(3px) brightness(0.7);
+                -o-filter: blur(3px) brightness(0.7);
+                -ms-filter: blur(3px) brightness(0.7);
+                filter: blur(3px) brightness(0.7);
+                overflow: hidden;
+            }
+            #creator_info_p{
                 position: absolute;
-                z-index: 1;
+                top: 48px;
                 left: 50%;
-                margin-left:-91px;
+                margin-left: -50px;
             }
-
-
-            #photo_body {
-                position:absolute;
-                top:50px;
+            #creator_pic_frame{
+                width: 100px;
+                height: 100px;
+                overflow: hidden;
+                border-radius: 50%;
+                background: #488ccb;
+                margin: 0px auto;
             }
-
-            #designer_photo ul
-            {
+                #creator_pic_frame img{
+                    width: 100%;
+                }
+            #creator_info ul{
+                width: 100%;
+                max-width: 1000px;
                 position:relative;
-                width:124px;
-                height: 110px;
                 margin:0px auto;
-                padding-top:213px;
-                z-index:1;
             }
-                #designer_name
-                {
+                #creator_name{
                     height:50px;
-                    font-size:36px;
-                    color:#fff;
+                    font-size: 36px;
+                    color:#ffffff;
                     text-align: center;
                     text-shadow: 0px 3px 3px #000;
                 }
-                #designer_job
-                {
+                #creator_job{
                     height:35px;
                     font-size:21px;
-                    color: #fff;
+                    color: #ffffff;
                     text-align: center;
                     font-weight: 200;
                 }
-                #designer_location
-                {
+                #creator_location{
                     height: 14px;
-                    font-size:14px;
-                    color: #fff;
                     text-align: center;
-                    font-weight: 200;
                 }
-                    #designer_location i
-                    {
+                    #creator_location p{
+                        display: inline-block;
+                        font-size:14px;
+                        color: #ffffff;
+                        font-weight: 200;
+                    }
+                    #creator_location i{
+                        display: inline-block;
+                        color: #ffffff;
                         margin-right: 5px;
                     }
 
-
-        #designer_body p
-        {
-            font-size: 18px;
-            font-weight: 200;
-            position: relative;
-            float: left;
-            top: 80px;
-            margin-left: 70px;
-        }
-
-        #interview
-        {
+            #creator_desc{
+                width: 100%;
+                display: inline-block;
+            }
+                #creator_desc p{
+                    margin: 20px 0px;
+                    font-size: 20px;
+                    font-weight: 200;
+                    text-align: center;
+                }
+        #interview_bt{
             width: 200px;
-            height: 40px;
-            line-height: 40px;
-            top: 215px;
-            right:20px;
+            height: 50px;
+            line-height: 50px;
             
-            border-radius:3px;
-            background:#48cfad;
+            border: 1px solid #444444;
+            border-radius: 50px;
+            background: transparent;
+            margin: 30px auto;
             
             font-size:17px;
             font-weight: 200;
-            color:#fff;
+            color:#444444;
             text-align: center;
             
-            position: absolute;
             overflow: hidden;
             cursor: pointer;
         }
-            #interview i
+            #interview_bt i
             {
                 width: 35px;
                 height: 100%;
@@ -264,7 +289,7 @@
             {
                 opacity:0.7;
             }
-/* designers section */
+/* creators section */
 
 /* main board */
 
@@ -272,13 +297,23 @@
 {
     width: 100%;
 }
+    #topic_title{
+        color: #444444;
+        font-size: 30px;
+        font-weight: 200;
+        text-align: center;
+    }
     #community_pre ul
     {
         padding:0px 50px 50px 50px;
+        display: inline-block;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
     }
 
-        .forum_card
-        {
+        .forum_card{
+            display: inline-block;
             margin-top: 35px;
         }
 
@@ -289,10 +324,8 @@
     width: 1200px;
     height: 180px;
     margin: 0px auto;
+    background: #ffffff;
     border-top: 5px solid #48cfad;
-    border-radius:5px;
-    box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.5);
-
     overflow: hidden;
 }
 

@@ -269,18 +269,20 @@ $(function(){
         $(".mb-view_more").on("click touchend",function(event){
             eventHandler(event,$(this));
             var id = $(this).attr("id"),
+                hostURL = location.host,
                 url = "";
+                alert(hostURL);
             switch(id){
                 case "mb-artwork_bt" : 
-                    url = "http://localhost:8080/0.current_lubycon/index.php?1=contents&2=contents_page&3=artwork";
+                    url = 'http://' + hostURL + '/0.current_lubycon/index.php?1=contents&2=contents_page&3=artwork';
                     location.href = url;
                 break;
                 case "mb-vector_bt" :
-                    url = "http://localhost:8080/0.current_lubycon/index.php?1=contents&2=contents_page&3=vector";
+                    url = 'http://' + hostURL + '/0.current_lubycon/index.php?1=contents&2=contents_page&3=vector';
                     location.href = url;
                 break;
                 case "mb-3d_bt" :
-                    url = "http://localhost:8080/0.current_lubycon/index.php?1=contents&2=contents_page&3=3d";
+                    url = 'http://' + hostURL + '/0.current_lubycon/index.php?1=contents&2=contents_page&3=3d';
                     location.href = url;
                 break;
                 default: return; break;
@@ -379,26 +381,6 @@ $(function()	// triple bt on event
 //      index page triple bt event end
 /////////////////////////////////////////////////////////
 /*----------------------------index page slider end----------------------------*/
-/***********************************designer of the month canvas start****************************************/
-$(function () {
-    var pb = document.getElementById('photo_body');
-    if (pb) {
-        var pbdraw = pb.getContext("2d");
-
-        pbdraw.beginPath();
-        pbdraw.moveTo(140, 0);
-        pbdraw.lineTo(0, 88);
-        pbdraw.lineTo(0, 246);
-        pbdraw.lineTo(140, 325);
-        pbdraw.lineTo(280, 246);
-        pbdraw.lineTo(280, 88);
-        pbdraw.closePath();
-
-        pbdraw.fillStyle = '#464646';
-        pbdraw.fill();
-    }
-});
-/***********************************designer of the month canvas end****************************************/
 /*----------------------------contents page----------------------------*/
 /////////////////////////////////////////////////////////
 //      contents card hover overlay view start

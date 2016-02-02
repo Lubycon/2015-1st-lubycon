@@ -204,37 +204,47 @@
 </section>
 <!--slide section end-->
 
-<!--designer of the month start-->
-<section id="designer_month" class="hidden-mb-b">
-    <article class="designer_title">CREATOR OF THE MONTH</article>
-    <div id="designer_body">
-        <div id="designer_inbody">
-            <div id="designer_photo">
-                <figure id="photo_frame"></figure>
-                <canvas id="photo_body" width="280" height="325"></canvas>
-                <ul>
-                    <li id="designer_name">SsaRu</li>
-                    <li id="designer_job">Engineer</li>
-                    <li id="designer_location"><i class="fa fa-home"></i>Seoul, South korea</li>
-                </ul>
-            </div>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />
-                Cras commodo lacus at lacus bibendum imperdiet.<br />
-                Quisque in accumsan turpis. Nullam non lacus nec enim convallis iaculis.<br />
-                Vivamus a sodales sapien. Curabitur suscipit ullamcorper enim, quis hendrerit nunc tempus eu.<br />
-                Nunc porttitor mauris sapien, quis molestie quam placerat sit amet.<br />
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />
-            </p>
-            <div id="interview">Read the interview<i class="fa fa-angle-right"></i></div>
+<!--creator of the month start-->
+<section id="creator_month">
+    <div id="creator_wrap">
+        <div id="creator_title">
+            <i class="fa fa-trophy"></i>   
+            <article><p>CREATOR</p> OF THE MONTH</article>
         </div>
+        <div id="creator_body">
+            <div id="creator_info">
+                <figure id="creator_info_background"></figure>
+                <div id="creator_info_p">
+                    <figure id="creator_pic_frame">
+                        <img src="./ch/img/creator_of_the_month/SsaRu.png" id="creator_pic">
+                    </figure>
+                    <ul>
+                        <li id="creator_name">SsaRu</li>
+                        <li id="creator_job">Engineer</li>
+                        <li id="creator_location"><i class="fa fa-home"></i><p>Seoul, South korea</p></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="creator_desc">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />
+                    Cras commodo lacus at lacus bibendum imperdiet.<br />
+                    Quisque in accumsan turpis. Nullam non lacus nec enim convallis iaculis.<br />
+                    Vivamus a sodales sapien. Curabitur suscipit ullamcorper enim, quis hendrerit nunc tempus eu.<br />
+                    Nunc porttitor mauris sapien, quis molestie quam placerat sit amet.<br />
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />
+                </p>
+            </div>
+            <div id="interview_bt">VIEW MORE</div>
+        </div>  
     </div>
+    
 </section>
-<!--designer of the month end-->
+<!--creator of the month end-->
 
 <section id="community_pre" class="hidden-mb-b">
     <!--community preview start-->
-    <article class="designer_title">HOT TOPICS IN <font color="#48cfad">DECEMBER</font></article>
+    <article id="topic_title">HOT TOPICS IN <font color="#48cfad">DECEMBER</font></article>
     <ul>
         <?php
             for( $i=0 ; $i<5 ; $i++ ){
