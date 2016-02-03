@@ -244,7 +244,16 @@
 
 <section id="community_pre" class="hidden-mb-b">
     <!--community preview start-->
-    <article id="topic_title">HOT TOPICS IN <font color="#48cfad">DECEMBER</font></article>
+    <article id="topic_title">HOT TOPICS IN 
+        <font color="#48cfad">
+                <?php
+                    date_default_timezone_set('UTC');
+                    $utcMonth = date("F");
+                    $utcMonthString = strtoupper($utcMonth);
+                    echo $utcMonthString;
+                ?>
+        </font>
+    </article>
     <ul>
         <?php
             for( $i=0 ; $i<5 ; $i++ ){

@@ -1,6 +1,10 @@
 /*--------------------------------------------------------media query start*/
 /*------mobile start-------*/
 @media screen and (max-width: 1024px){
+    html{
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+    }
     .visible-mb {
         display: block;
     }
@@ -30,6 +34,38 @@
         margin: 0px auto;
         margin-top: 20px;
     }
+    #main_search_bar{
+        display: none;
+        position: fixed;
+        top: 45px;
+        width: 100%;
+        height: 60px;
+        z-index: 11;
+        margin-top: 0;
+        margin-left: 0;
+        left: 0;
+        background: #222222;
+        border-bottom: 1px solid #111111;
+        border-radius: 0px;
+    }
+        #main_search_bar input{
+            display: none;
+            position: relative;
+            border: 1px solid #ffffff;
+            padding: 10px;
+            margin-top: 10px;
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+        }
+        #main_search_btn{
+            width: 50px;
+            height: 60px;
+            background: #333333;
+        }
+        #main_search_bar #select_box{
+            display: none;
+        }
     .mobile_wrap{
         width: 100%;
         margin-top: 46px;
@@ -200,7 +236,8 @@
                 vertical-align: top;
             }
         #main_header h1{ 
-            width: 100%;
+            left: 50%;
+            margin-left: -50px;
         }
             #luby-logo-mb {  
                 margin: 0px auto;
@@ -230,6 +267,17 @@
             #mb-search i{
                 color: #ffffff;
                 font-size: 25px;
+                position: absolute;
+                right: 11px;
+            }
+            #mb-search .icon1{
+                display: inline-block;
+                top: 9px;
+            }
+            #mb-search .icon2{
+                display: none;
+                font-size: 35px;
+                top: 3px;
             }
     #navsel {
         margin-top: 46px;
@@ -274,19 +322,19 @@
         background: #eeeeee;
     }
     .con_main {
-        margin-top: 100px;
         padding: 0px !important;
     }
     .con_aside {
         width: 100%;
         height: 150px;
         margin-top: 46px;
+        position: relative;
     }
     #sub_search_bar {
         display: none;
     }
     #contents_box {
-        margin-top: 2px;
+        
     }
     #contents_box > ul {
         margin-top: 0px;
@@ -300,6 +348,7 @@
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
     }
+
         .contents_card {
             width: 100%;
             height: 120px;
@@ -354,14 +403,18 @@
         }
         #best_creator_wrap{
             width: 100%;
+            max-width: 800px;
+            margin: 0px auto;
             height: 130px;
             border-bottom: 1px solid #eeeeee;
             border-radius: 0px;
+
         }
         .creators_card {
             width: 100%;
+            max-width: 800px;
             height: 120px;
-            margin: 0px;
+            margin: 0px auto;
             border-bottom: 1px solid #eeeeee;
             border-radius: 0px;
             box-shadow: none;
@@ -418,6 +471,7 @@
     #contents_aside {
         height: 100px;
         margin-top: 0px;
+        position: absolute;
     }
     #contents_aside .designer_info {
         margin-bottom: 10px;
@@ -449,6 +503,9 @@
                 margin-left: 4px;
                 border-right: 1px solid #4a4a4a;
             }
+        #contents_main{
+            margin-top: 100px;
+        }
     #comment_box #comment_text {
         height: 70px;
     }
@@ -465,7 +522,7 @@
         height: 100px;
     }
     #user_view_main{
-        margin-top: 146px;
+        
     }
     #user_view_aside #myinfo_main{
         margin-top: 0px;
@@ -515,7 +572,8 @@
     }
     #main_board{
         width: 100%;
-        margin: 0px;
+        max-width: 800px;
+        margin: 0px auto;
     }
     .table_info{
 
@@ -558,6 +616,41 @@
         bottom: 20px;
         right: 10px;
     }
+    .dash_body_sector{
+        width: 100%;
+        height: 150px;
+        border-bottom: 1px solid #eeeeee;
+    }
+    .history_list {
+        border-bottom: 1px solid #eeeeee;
+    }
+    .x2{
+        width: 100%;
+    }
+        .history_date{
+            width: 50px;
+            font-size: 12px;
+        }
+        .history_kind{
+            float: left;
+            padding: 0;
+            width: 20px;
+            top: 5px;
+            left: 5px;
+        }
+            .history_kind .fa-circle{
+                font-size: 10px;
+            }
+            .history_kind span{
+                display: none;
+            }
+        .history_content{
+            padding: 10px;
+        }
+    .x2_inner .dash_body_content{
+        text-align: center;
+    }
+        
 }
 /*------------------------------------------------mobile end-------*/
 /*---------------------------------------------desktop start-------*/
@@ -584,6 +677,25 @@
     #main_header{
         height: 50px;
     }
+    #main_search_bar{
+        display: none;
+        position: absolute;
+        width: 600px;
+        height: 35px;
+        background: none;
+        left: 50%;
+        margin-left: -301px;
+        line-height: 35px;
+        border: 1px solid #ffffff;
+        border-radius: 5px;
+        margin-top: 372px;
+        z-index: 2;
+    }
+        #main_search_btn{
+            width: 70px;
+            height: 35px;
+            position: relative;
+        }
     #after_signin{
         margin-right: 50px;
     }
@@ -623,6 +735,7 @@
     .con_aside {
         width: 310px;
         height: 100%;
+        position: absolute;
     }
     #sub_search_bar {
         display: inline-block;
@@ -846,6 +959,43 @@
     #write_bt{
         bottom: 20px;
         right: 40px;
+    }
+    .dash_body_sector{
+        width: 25%;
+        height: 150px;
+        float: left;
+        border-right: 1px solid #eeeeee;
+    }
+    .history_wrap{
+        padding-right: 160px;
+    }
+    .x2{
+        width: 100%;
+    }
+        .history_date{
+            width: 140px;
+            border-right: 1px solid #eeeeee;
+            font-size: 15px;
+        }
+        .history_kind{
+            width: 40px;
+            padding: 10px 0px;
+        }
+            .history_kind .fa-circle{
+                font-size: 14px;
+            }
+            .history_kind span{
+                display: inline;
+            }
+        .history_content{
+            padding: 10px 0px;
+        }
+    #total_counts{
+        height: 150px;
+    }
+    .x2_inner .dash_body_content{
+        padding-left: 15px;
+        text-align: left;
     }
 }
 /*------desktop end-------*/

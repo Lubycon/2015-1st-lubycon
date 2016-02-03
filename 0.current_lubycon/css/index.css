@@ -18,15 +18,20 @@
         margin: 0px auto;
         margin-top: 46px;
     }
+    #main_search_bar{
+        display: none;
+    }
 }
 @media screen and (min-width: 1025px){
     #slide_lnb{
         margin: 0px auto;
     }
+    #main_search_bar{
+        display: block !important;
+    }
 }
    
 /* main section end */
-
 /* slide section */
 #slide_section {
     background: #eeeeee;
@@ -256,6 +261,7 @@
                     font-size: 20px;
                     font-weight: 200;
                     text-align: center;
+                    padding: 10px;
                 }
         #interview_bt{
             width: 200px;

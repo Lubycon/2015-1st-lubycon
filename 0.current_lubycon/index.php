@@ -43,6 +43,7 @@
 <body id="bodyer">
 <div id="wrapper"> 
     <div class="dark_overlay"></div>
+    <div id="cancel_layer"></div>
     <aside id="mb-menu_panel" class="visible-mb"><!--mobile panel menu-->
     <?php
         $user_pic = "./ch/img/no_img/no_img_user1.jpg";
@@ -242,11 +243,11 @@
                 </ul>	<!-- end lang_list -->
             </ul>	<!-- end lang_all -->
         </div>	<!-- end lang_select_bt -->
-        <div id="mb-search" class="visible-mb"><i class="fa fa-search"></i></div>
+        <div id="mb-search" class="visible-mb"><i class="fa fa-search icon1"></i><i class="fa fa-angle-up icon2"></i></div>
     </header>	
     <!---------------- header end ---------------->
     <!---------------- search bar start ---------------->
-    <div id="main_search_bar" class="hidden-mb-b">
+    <div id="main_search_bar">
         <input type="text" id="main_search_text" value="Enter the Keyword" />
         <button id="main_search_btn" class="out">
             <i class="fa fa-search"></i>

@@ -86,7 +86,7 @@
                         <div class="history_content">Lorem ipsum dolor sit amet, consec tetur adipisicing elit.</div>
                     </li>
                 </ul>
-                <aside id="history_desc">
+                <aside id="history_desc" class="hidden-mb-ib">
                     <p class="history_desc_list" id="work_desc">
                         <i class="fa fa-circle"></i>
                         <span>Work Expierence</span>
@@ -186,27 +186,5 @@
                 </div>
             </div>
         </li>              
-        <!--<div class="dash_section" id="time_card">
-            <div class="time_wrap" id="usertime">
-                <p class="timename" id="usertime_name"><?=$username?>&nbsp;Time</p>
-                <div class="clock_wrap">
-                    <div class="ampm" id="user_ampm"></div>
-                    <div class="clock" id="userclock"></div>
-                </div>
-                <div class="time_location" id="user_location">
-                    <?=$usercity?>, <?=$usercountry?>
-                </div>
-            </div>
-            <div class="time_wrap" id="localtime">
-                <p class="timename" id="localtime_name">Local time</p>
-                <div class="clock_wrap">
-                    <div class="ampm" id="local_ampm"></div>
-                    <div class="clock" id="localclock"></div>
-                </div>
-                <div class="time_location" id="local_location">
-                    <?=$localcity?>, <?=$localcountry?>
-                </div>
-            </div>
-        </div>-->
     </ul>
 </div>

@@ -5,6 +5,7 @@
 //4. alert action
 //5. selector
 //6. mb-panel_menu
+var windowWidth = $(window).width();
 function eventHandler(event, selector) {//
     event.stopPropagation();
     event.preventDefault();
@@ -25,7 +26,7 @@ $(document).scroll(function (){
         }else{
             sticky_start;
         }   
-        if (($(document).scrollTop() > sticky_start) && ($(window).width() >= 1025)){
+        if (($(document).scrollTop() > sticky_start) && (windowWidth >= 1025)){
             $("#main_header").css({"box-shadow": "0px 0px 0px 0px rgba(0,0,0,0.5)"});
             nav_guide.css({ "position": "fixed", "top": "50px", "z-index": "4", "box-shadow": "0px 3px 7px rgba(0,0,0,0.3)" });
             nav_guide.next().css({"top": contents_y});
@@ -61,7 +62,7 @@ $(document).ready(function(){
         var scrollEnd = $(document).height() - $(window).height();
         var bannerPosition = $(".con_aside").height() - $("#navsel").height();
 
-        if($(document).find(".con_aside") && ($(".con_aside").attr("id") != "editor_aside") && ($(window).width() >= 1025)){ 
+        if($(document).find(".con_aside") && ($(".con_aside").attr("id") != "editor_aside") && (windowWidth >= 1025)){ 
             
             if ($(document).scrollTop() >= stickyStart && $(document).scrollTop() < scrollEnd){
                 $(".con_aside").css({ "position": "fixed", "top": "100px" });
@@ -215,6 +216,7 @@ $(function(){
     $(".lubySelector").each(function(){
         var toggle_count = 0;
         var option_list = [];//make option list array
+        $(this).find(".global_icon").addClass("hidden-mb-ib");
         $(this).find(".lubySelector_list li").each(function(){//make option list array
             option_list.push($(this).text().replace(/ /gi, ''));
             //It will be push to array after removed all spaces  
@@ -240,7 +242,7 @@ $(function(){
             eventHandler(event, $(this));
             switch(toggle_count){
                 case 0 :
-                    if($(window).width() > 1024){
+                    if(windowWidth > 1024){
                         $(this).find($(".lubySelector_list")).stop().fadeIn(300);
                         $(this).css("background","#333333");
                         $(this).find($(".lubySelector_arrow")).children("i").attr("class","fa fa-caret-up");
@@ -254,7 +256,7 @@ $(function(){
                 break;
 
                 case 1 :
-                    if($(window).width() > 1024){
+                    if(windowWidth > 1024){
                         $(this).find($(".lubySelector_list")).stop().fadeOut(300);
                         $(this).css("background","#555555");
                         $(this).find($(".lubySelector_arrow")).children("i").attr("class","fa fa-caret-down");
@@ -304,7 +306,7 @@ $(function(){
 //      mobile menu action start
 /////////////////////////////////////////////////////////
 $(window).on("load resize",function(){
-    if(($(window).width() <= 1024) && ($("#mb-menu_panel").length != 0)){
+    if((windowWidth <= 1024) && ($("#mb-menu_panel").length != 0)){
         $("#mb-menu_panel").height = window.screen.height;
         var mb_menu = $("#mb-menu");
         var mb_menu_toggle = 0;
@@ -312,36 +314,42 @@ $(window).on("load resize",function(){
         mb_menu.on("click touchend", function(){
             eventHandler(event, $(this));
             remove_mb_menu();
-            $("#cancel_layer").on("click touchend",function(){
-                remove_mb_menu();
-            });
+            return;
         });//click end
+        $("#cancel_layer").on("click touchend",function(){
+            remove_mb_menu();
+            return;
+        });
         function remove_mb_menu(){
             switch(mb_menu_toggle){
                 case 0 : 
                     $("#wrapper").stop().animate({ left: distance.toString() }, 150);
                     $("#mb-menu_panel").stop().animate({ left: "0"}, 150);
-                    $("#mb-menu_panel").after("<div id='cancel_layer'>");
                     $("#cancel_layer").css({
                         "width": window.screen.width.toString(),
                         "height": window.screen.height.toString(),
-                        "background": "none",
+                        "background": "transparent",
                         "position": "absolute",
                         "top": "0",
                         "left": "0",
                         "z-index": "100000",
                         "cursor": "pointer"
                     });
+                    $("#cancel_layer").show();
                     $("body").css("overflow","hidden");
                     mb_menu_toggle = 1;
+                    console.log(mb_menu_toggle);
+                    return;
                 break;
                 case 1 :
-                    $("#cancel_layer").remove();
+                    $("#cancel_layer").hide();
                     $("#wrapper").stop().animate({ left: "0" }, 150);
                     $("#mb-menu_panel").stop().animate({ left: (distance*-1).toString()}, 150);
                     $("body").css("overflow", "auto");
                     $("body").css("overflow-x", "hidden");
                     mb_menu_toggle = 0;
+                    console.log(mb_menu_toggle);
+                    return;
                 break;
                 default: return; break;
             };//swtich end
@@ -353,4 +361,52 @@ $(window).on("load resize",function(){
 });
 /////////////////////////////////////////////////////////
 //      mobile menu action end
+/////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+//      mobile search action start
+/////////////////////////////////////////////////////////
+$(window).on("load resize",function(){
+    if((windowWidth <= 1024) && ($("#mb-menu_panel").length != 0)){
+        var searchBt = $("#mb-search"),
+            searchInBt = $("#main_search_btn"),
+            searchBox = $("#main_search_bar"),
+            searchText = $("#main_search_text"),
+            searchTextWidth = (windowWidth - searchInBt.outerWidth(true) - 25).toString(),
+            darkOverlay = $(".dark_overlay"),
+            mainHeader = $("#main_header"),
+            icon1 = $("#mb-search .icon1"),
+            icon2 = $("#mb-search .icon2"),
+            toggle_count = 0;
+        searchText.css("width",searchTextWidth+"px");
+        searchBt.on("click touchend",function(){
+            eventHandler(event, $(this));
+            switch(toggle_count){
+                case 0 :  
+                    icon1.fadeOut(500);
+                    icon2.fadeIn(500);
+                    searchBox.stop().slideDown(300,function(){
+                        searchBox.find("input").stop().fadeIn(500);
+                    });
+                    darkOverlay.css("z-index","10");
+                    mainHeader.css("border-bottom", "0px solid #111");
+                    toggle_count = 1;
+                break;
+                case 1 : 
+                    
+                    searchBox.find("input").stop().fadeOut(500,function(){
+                        searchBox.stop().slideUp(300);
+                        icon1.fadeIn(500);
+                        icon2.fadeOut(500);
+                    });
+                    darkOverlay.css("z-index","50");
+                    mainHeader.css("border-bottom", "1px solid #111");
+                    toggle_count = 0;
+                break;
+                default: return; break;
+            }
+        });
+    }
+});
+/////////////////////////////////////////////////////////
+//      mobile search action end
 /////////////////////////////////////////////////////////

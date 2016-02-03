@@ -1,7 +1,17 @@
+var windowWidth = $(window).width();
+function eventHandler(event, selector) {//
+    event.stopPropagation();
+    event.preventDefault();
+    if (event.type === 'touchend'){
+        selector.off('click');
+    }
+};
+
 /*----------------------------toggle section button start------------------------------*/
 $(".toggle_info").each(function(){
     var toggle_count = 1;
-    $(this).click(function (event){
+    $(this).on("click touchend",function (event){
+        eventHandler(event,$(this));
         event = event || window.event//for IE
         switch(toggle_count){
             case 0:
@@ -432,7 +442,8 @@ $(document).ready(function(){
     var chartbox4 = $("#chartdiv4");
     var chartlist_toggle = 0;
 
-    $(".chart_title").click(function(){
+    $(".chart_title").on("click touchend",function(){
+        eventHandler(event,$(this));
         switch(chartlist_toggle){
             case 0 : 
                 selectorStart();
@@ -442,7 +453,8 @@ $(document).ready(function(){
             break;
         }
     });
-    $(".chart_list").click(function (event){
+    $(".chart_list").on("click touchend",function (event){
+        eventHandler(event,$(this));
         switch(event.target.id){
             case "showlike" :
                 chart_icon.attr("class","fa fa-heart");

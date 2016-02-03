@@ -30,15 +30,17 @@ $(window).on("resize load", function(){
 //      debuging tool end
 /////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////
-//      ready to body fadein event start
+//      mobile browser address window disable start
 /////////////////////////////////////////////////////////
-/*$(function () {
-    $(window).load(function (){
-        $('#bodyer').fadeIn(500); //don't add stop function
-    });
-});*/
+window.addEventListener("load",function() {
+    // Set a timeout...
+    setTimeout(function(){
+        // Hide the address bar!
+        window.scrollTo(0, 1);
+    }, 0);
+});
 /////////////////////////////////////////////////////////
-//      ready to body fadein event end
+//      mobile browser address window disable start
 /////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////
 //      get url function start
@@ -195,6 +197,9 @@ $(function () { //add contents button start
         $('.dark_overlay').stop().fadeOut(200);
         $('.editor_popup').stop().fadeOut(200);
         $('#embed_popup').stop().fadeOut(150);
+        if(windowWidth < 1025){
+            $("#main_search_bar").fadeOut(150);
+        }
     });
 });
 /////////////////////////////////////////////////////////
