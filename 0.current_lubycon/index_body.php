@@ -163,6 +163,7 @@
     </nav>
     <!--end slide lnb-->
     <?php
+        $v=0;
         for( $i=1 ; $i<4 ; $i++ ){ //loop slider making
             echo 
             '<div id="slider'.$i.'" style="width: 980px; height: 363px;">
@@ -174,15 +175,16 @@
                         echo '<li class="load_view">
                                 <a href="./index.php?1=contents&2=contents_view&3=';
                                 switch($i){
-                                    case "1" : echo "artwork"; break;
-                                    case "2" : echo "vector"; break;
-                                    case "3" : echo "3d"; break;
+                                    case "1" : echo "artwork"; $kind = 'artwork'; break;
+                                    case "2" : echo "vector"; $kind = 'vector';break;
+                                    case "3" : echo "3d"; $kind = '3d'; break;
                                     default : echo ""; break;
                                 };
-                                echo '">
-                                <img src="./ch/img/slider/slider'.$i.'/'.$k.'.png" alt="thumbnail_photo_'.$k.'">
+                                echo '&4='.$v.'">
+                                <img src="../contents_data/'.$kind.'jpg/thumb/'.$v.'.jpg" alt="thumbnail_photo_'.$k.'">
                                 </a>
                               </li>';
+                        $v++;
                         }
                 echo'</ul>
                 </div>';

@@ -1,11 +1,30 @@
 <script type="text/javascript" src="js/call_comments.js"></script> <!-- account file js -->
 
 <?php
+include('../contents_data/contents_data.php');
 
 $number = $_GET["4"];
 $current_url = $_GET["3"];
 $contents_img_url = "../contents_data/".$current_url."jpg/".$number.".jpg";
+$price = 'Free';
 
+$userjob = "Job";
+$usercity = "City";
+$usercountry = "Country";
+
+$file_descript = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.";
+
+$file_view = 0;
+$file_down = 0;
+$file_like = 0;
+
+switch($current_url)
+{
+case "artwork" : $current_url = "artwork"; $contents_name = $artwork_subject; $contents_author = $artwork_author; break;
+case "vector" : $current_url = "vector"; $contents_name = $vector_subject; $contents_author = $vector_author; break;
+case "3d" : $current_url = "3d"; break;
+default : $current_url = "artwork"; $contents_name = $artwork_subject;$contents_author = $artwork_author; break;
+};
 ?>
 
 <div class="main_figure_wrap hidden-mb-b">
@@ -37,11 +56,7 @@ $contents_img_url = "../contents_data/".$current_url."jpg/".$number.".jpg";
     <section class="nav_guide" id="contents_info_wrap">
         <div class="subnav_box">
             <span id="contents_subject">
-                <?php 
-                    $title = "Lorem Ipsum";
-                    $price = "Free";
-                ?>
-                <h3 id="contents_title"><?=$title?></h3>
+                <h3 id="contents_title"><?=$contents_name[$number]?></h3>
                 <h4 id="contents_price"><?=$price?></h4>
             </span>
             
@@ -129,23 +144,11 @@ $contents_img_url = "../contents_data/".$current_url."jpg/".$number.".jpg";
                 </div><!--end con_main-->
 
                 <div id="contents_aside" class="con_aside">
-                    <?php 
-                        $username = "Admin_User";
-                        $userjob = "Job";
-                        $usercity = "City";
-                        $usercountry = "Country";
-
-                        $file_descript = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.";
-                        
-                        $file_view = 0;
-                        $file_down = 0;
-                        $file_like = 0;                        
-                    ?>
                     <div class="designer_info">
                         <figure id="user_img">
                             <img src="./ch/img/no_img/no_img_user1.jpg">
                         </figure>
-                        <h4><?=$username?></h4>
+                        <h4><?=$contents_author[$number]?></h4>
                         <h5><i class="fa fa-home"></i><?=$usercity?>, <?=$usercountry?></h5>
                     </div>
                     <button id="content_down" class="hidden-mb-b"><i class="fa fa-download"></i></button>
