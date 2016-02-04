@@ -62,12 +62,16 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "personal_page", "personal_page", "{5528D5D6-2249-4D2D-917F-4B4987AE93D2}"
 	ProjectSection(SolutionItems) = preProject
 		php\personal_page\account_setting.php = php\personal_page\account_setting.php
+		php\personal_page\bookmark.php = php\personal_page\bookmark.php
+		php\personal_page\dashboard.php = php\personal_page\dashboard.php
 		php\personal_page\followers.php = php\personal_page\followers.php
 		php\personal_page\insight.php = php\personal_page\insight.php
 		php\personal_page\message.php = php\personal_page\message.php
 		php\personal_page\my_contents.php = php\personal_page\my_contents.php
 		php\personal_page\my_forums.php = php\personal_page\my_forums.php
 		php\personal_page\personal_page.php = php\personal_page\personal_page.php
+		php\personal_page\subnav.php = php\personal_page\subnav.php
+		php\personal_page\test.php = php\personal_page\test.php
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "css", "css", "{89F53E10-E9B7-495E-82C7-F2122711B934}"

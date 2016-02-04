@@ -3,7 +3,8 @@
         $number = $_GET["number"];
         $current_url = $third_param;
 
-        include('../contents_data/contents_data.php');
+        @include('../contents_data/contents_data.php');
+        @include('../../../contents_data/contents_data.php');
 
         switch($current_url)
         {

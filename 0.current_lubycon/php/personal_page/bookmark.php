@@ -1,8 +1,9 @@
 <ul>
     <?php
-    for($i=0;$i<30;$i++)
-    {
-        require('../layout/content_card.php');
-    };
+        for($i=0;$i<60;$i++)
+        {
+            $_GET["number"] = $i;
+            include('../layout/content_card.php');
+        }
     ?>
 </ul>
