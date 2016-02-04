@@ -34,13 +34,43 @@ $(window).on("resize load", function(){
 /////////////////////////////////////////////////////////
 window.addEventListener("load",function() {
     // Set a timeout...
-    setTimeout(function(){
+    setTimeout(function(){ // It's not working now
         // Hide the address bar!
         window.scrollTo(0, 1);
     }, 0);
 });
 /////////////////////////////////////////////////////////
 //      mobile browser address window disable start
+/////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+//      dragging sensor start
+/////////////////////////////////////////////////////////
+var dragging = false;
+$(function(){
+    $(window).on("touchmove", function(){
+        dragging = true;
+    });
+    $(window).on("touchstart", function(){
+        dragging = false;
+    });
+});
+/////////////////////////////////////////////////////////
+//      dragging sensor end
+/////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+//      event handler start
+/////////////////////////////////////////////////////////
+//This function will be canceled the click event when users touch in mobile devices
+//So if you want use any function in mobile, This eventHandler must be called to your function//
+function eventHandler(event, selector) {
+    event.stopPropagation();
+    event.preventDefault();
+    if (event.type === 'touchend'){
+        selector.off('click');
+    }
+};
+/////////////////////////////////////////////////////////
+//      event handler end
 /////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////
 //      get url function start
@@ -62,9 +92,7 @@ function GetURLParameter(sParam) {
 //      gloval navigation button hover event start
 //      get parameter change selected nav color
 /////////////////////////////////////////////////////////
-
-$(function () //gnb hober event
-{
+$(function (){ //gnb hover event
     $('.bigsub').hover(function () {
         $(this).children("ul").stop().fadeIn(300);
     }, function () {
@@ -270,28 +298,32 @@ $(function () { //search box click value reset start
 //      main index contents viewmore start(mobile)
 /////////////////////////////////////////////////////////
 $(function(){
-    if($(window).width() < 1025){
+    if($(window).width() < 1025){//It will be activate in only mobile
         $(".mb-view_more").on("click touchend",function(event){
             eventHandler(event,$(this));
-            var id = $(this).attr("id"),
+            if(!dragging){
+                var id = $(this).attr("id"),
                 hostURL = location.host,
                 url = "";
-                alert(hostURL);
-            switch(id){
-                case "mb-artwork_bt" : 
-                    url = 'http://' + hostURL + '/0.current_lubycon/index.php?1=contents&2=contents_page&3=artwork';
-                    location.href = url;
-                break;
-                case "mb-vector_bt" :
-                    url = 'http://' + hostURL + '/0.current_lubycon/index.php?1=contents&2=contents_page&3=vector';
-                    location.href = url;
-                break;
-                case "mb-3d_bt" :
-                    url = 'http://' + hostURL + '/0.current_lubycon/index.php?1=contents&2=contents_page&3=3d';
-                    location.href = url;
-                break;
-                default: return; break;
+                switch(id){
+                    case "mb-artwork_bt" : 
+                        url = 'http://' + hostURL + '/0.current_lubycon/index.php?1=contents&2=contents_page&3=artwork';
+                        location.href = url;
+                    break;
+                    case "mb-vector_bt" :
+                        url = 'http://' + hostURL + '/0.current_lubycon/index.php?1=contents&2=contents_page&3=vector';
+                        location.href = url;
+                    break;
+                    case "mb-3d_bt" :
+                        url = 'http://' + hostURL + '/0.current_lubycon/index.php?1=contents&2=contents_page&3=3d';
+                        location.href = url;
+                    break;
+                    default: return; break;
+                }
             }
+            else if(dragging){
+                return;
+            } 
         });
     }else{
         return;

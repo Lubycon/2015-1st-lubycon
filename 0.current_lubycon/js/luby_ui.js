@@ -6,13 +6,21 @@
 //5. selector
 //6. mb-panel_menu
 var windowWidth = $(window).width();
-function eventHandler(event, selector) {//
+/////////////////////////////////////////////////////////
+//      event handler start
+/////////////////////////////////////////////////////////
+//This function will be canceled the click event when users touch in mobile devices
+//So if you want use any function in mobile, This eventHandler must be called to your function//
+function eventHandler(event, selector) {
     event.stopPropagation();
     event.preventDefault();
     if (event.type === 'touchend'){
         selector.off('click');
     }
 };
+/////////////////////////////////////////////////////////
+//      event handler end
+/////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////
 //      nav_guide sticky start
 /////////////////////////////////////////////////////////
@@ -222,7 +230,7 @@ $(function(){
             //It will be push to array after removed all spaces  
         });
         $(this).after("<select class='original_box'>");//make select box after lubySelector  
-        for(var i = 0; i <= option_list.length; i++){//make options in select box
+        for(var i = 0; i < option_list.length; i++){//make options in select box
             $(this).next(".original_box").append("<option value="+option_list[i]+">"+option_list[i]+"</option>");
             //i = Array's index
         };
@@ -336,7 +344,11 @@ $(window).on("load resize",function(){
                         "cursor": "pointer"
                     });
                     $("#cancel_layer").show();
-                    $("body").css("overflow","hidden");
+                    $("body").css({
+                        "position":"fixed",
+                        "height":window.screen.height.toString(),
+                        "overflow":"hidden"
+                    });
                     mb_menu_toggle = 1;
                     console.log(mb_menu_toggle);
                     return;
@@ -345,7 +357,11 @@ $(window).on("load resize",function(){
                     $("#cancel_layer").hide();
                     $("#wrapper").stop().animate({ left: "0" }, 150);
                     $("#mb-menu_panel").stop().animate({ left: (distance*-1).toString()}, 150);
-                    $("body").css("overflow", "auto");
+                    $("body").css({
+                        "position":"relative",
+                        "height":"auto",
+                        "overflow":"auto"
+                    });
                     $("body").css("overflow-x", "hidden");
                     mb_menu_toggle = 0;
                     console.log(mb_menu_toggle);
@@ -409,4 +425,32 @@ $(window).on("load resize",function(){
 });
 /////////////////////////////////////////////////////////
 //      mobile search action end
+/////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+//      visible goToTheTop button start
+/////////////////////////////////////////////////////////
+$(window).on("load resize", function(){
+    if((windowWidth < 1025) && ($("#gotop_bt").length != 0)){
+        var goTopBt = $(document).find("#gotop_bt");
+        $(document).on("touchmove scroll", function (event){
+            if($(document).scrollTop() > 500){
+                goTopBt.stop().show();
+                return;
+            }
+            else{
+                goTopBt.stop().hide();
+                return;
+            }
+        });
+        $("#gotop_bt").on("click touchend", function(event){
+            $('html, body').animate({scrollTop : 0},500);
+            return;
+        });
+    }
+    else{
+        return;
+    }
+})
+/////////////////////////////////////////////////////////
+//      visible goToTheTop button end
 /////////////////////////////////////////////////////////

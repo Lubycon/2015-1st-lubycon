@@ -13,7 +13,7 @@
 <script type="text/javascript" src="js/resizeObject.js"></script>
 
 <section id="contents">
-    <section id="navsel">
+    <section id="navsel" class="hidden-mb-b">
         <nav id="lnb_nav">
             <ul>
                 <li class="nav_menu" id="forum">

@@ -1,7 +1,7 @@
 ﻿@charset "utf-8";
 
-.con_main {
-    padding-left: 275px !important;
+#contents_box {
+    padding-left: 275px;
 }
 
 #confirm_alert {

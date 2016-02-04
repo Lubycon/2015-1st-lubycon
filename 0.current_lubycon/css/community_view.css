@@ -58,29 +58,19 @@
         }
 
 #post_box {
-    min-width: 1200px;
     width: 100%;
     margin: 0px auto;
     position:relative;
     background: #f0f0f0;
 }
 #post_banner {
-    position: absolute;
-    width: 310px;
-    height: 100%;
     top: 0px;
     right: 0px;
-
-    border-right: 1px solid #222222;
     text-align:center;
-
     overflow:hidden;
 }
 
-
     #post_banner #author_main{
-        margin-top: 30px;
-        margin-bottom: 20px;
         width: 100%;
         text-align: left;
         padding: 5px;
@@ -89,8 +79,6 @@
         -moz-box-sizing: border-box;
     }
         #author_main figure{
-            width:80px;
-            height:80px;
             margin: 0px auto;
             border-radius: 50%;
             overflow:hidden;
@@ -129,7 +117,6 @@
             }
                 #job_name{
                     font-weight: 200;
-                    color: #48cfad;
                 }
 
     #my_page_bt{
@@ -145,7 +132,6 @@
 
 #post_contents {
     position: relative;
-    margin: 30px 60px;
     padding: 20px;
     background: #ffffff;
     text-align: left;

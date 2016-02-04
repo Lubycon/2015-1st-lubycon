@@ -108,9 +108,15 @@
         }
     #user_view_aside #myinfo_sub{
         display: block;
+        width: 220px;
+        margin: 0px auto;
+        margin-top: 10px;
         
     }
         #myinfo_sub .myinfo_wrap{
+            display: block;
+            text-align: center;
+            margin: 5px 0px;
             position: relative;
         }
             .myinfo_wrap i{

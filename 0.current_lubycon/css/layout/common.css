@@ -188,7 +188,25 @@ body{
             margin-top: 60px; 
             cursor:pointer;                   
         }
-
+#gotop_bt{
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.7);
+    text-align: center;
+    z-index: 5;
+    cursor: pointer;
+}
+    #gotop_bt i{
+        margin-top: 12px;
+        color: #ffffff;
+        font-size: 35px;
+    }
 .editor_popup {
     width: 540px;
     height: 175px;
@@ -1234,11 +1252,8 @@ body{
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.5);
-    border-radius: 5px;
     background:#fff;
     overflow: hidden;
-    margin: 40px 60px;
 }
 #comment_my_pic {
     width:50px;
@@ -1357,10 +1372,15 @@ body{
             }
 
         #comment_box #comment_list .comment_div h4{
+            max-width: 100%;
             line-height:20px;
             margin-bottom:6px;
+            padding-right: 90px;
             font-size:19px;
             color: #444444;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
         }
         #comment_box #comment_list .comment_div .comment_contents{
             line-height:19px;
@@ -1610,6 +1630,7 @@ body{
     display: inline-block;
     position: relative;
     height: 55px;
+    width: 100%;
 }
     .table_user_img {
         float: left;

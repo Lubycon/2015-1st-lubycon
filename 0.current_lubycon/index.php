@@ -44,6 +44,7 @@
 <div id="wrapper"> 
     <div class="dark_overlay"></div>
     <div id="cancel_layer"></div>
+    <div id="gotop_bt"><i class="fa fa-angle-up"></i></div>
     <aside id="mb-menu_panel" class="visible-mb"><!--mobile panel menu-->
     <?php
         $user_pic = "./ch/img/no_img/no_img_user1.jpg";

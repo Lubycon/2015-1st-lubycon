@@ -242,6 +242,7 @@
             #luby-logo-mb {  
                 margin: 0px auto;
                 margin-top: -7px;
+                cursor: pointer;
             }
         #after_signin {
             margin-right: 0px;
@@ -506,20 +507,24 @@
         #contents_main{
             margin-top: 100px;
         }
-    #comment_box #comment_text {
-        height: 70px;
+    #comment_box{
+        border-radius: 0px;
+        box-shadow: none;
     }
-    #comment_box #comment_bt {
-        width: 80%;
-        height: 30px;
-        display: inline-block;
-        padding: 0px 10px;
-        box-sizing: border-box;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-    }
+        #comment_box #comment_text {
+            height: 70px;
+        }
+        #comment_box #comment_bt {
+            width: 80%;
+            height: 30px;
+            display: inline-block;
+            padding: 0px 10px;
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+        }
     #user_view_aside{
-        height: 100px;
+        margin-top: 51px;
     }
     #user_view_main{
         
@@ -535,22 +540,7 @@
         }
         #myinfo_main h4 {
             display: inline-block;
-            vertical-align: top;
-            margin-top: 7px;
-            margin-left: 5px;
         }
-        #user_view_aside #myinfo_sub{
-            text-align: left;
-            margin-left: 5px;
-        }
-            #myinfo_sub .myinfo_wrap{
-                display: inline-block;
-                text-align: left;
-                margin-right: 10px;
-            }
-                .myinfo_wrap i{
-                    margin-right: 7px;
-                }
             #job_name {
                 color: #eeeeee;
             }
@@ -567,7 +557,7 @@
         #user_information {
             background: #383838;
         }
-    #personal_ciew .con_wrap #contents_box{
+    #personal_view .con_wrap #contents_box{
         margin-top: 196px;
     }
     #main_board{
@@ -583,7 +573,7 @@
             height: 40px;
         }
         .table_list .table_subject{
-            width: 58%;
+            width: 66%;
             float: left;
             padding-left: 10px;
         }
@@ -614,8 +604,31 @@
         }
     #write_bt{
         bottom: 20px;
-        right: 10px;
+        left: 10px;
     }
+
+    #post_banner{
+        position: relative;
+        width: 100%;
+        height: 150px;
+        margin-top: 0;
+    }
+        #post_banner #author_main{
+            margin: 0;
+        }
+            #author_main figure{
+                display: inline-block;
+                width: 45px;
+                height: 45px;
+            }
+            #author_main h4{
+                display: inline-block;
+            }
+
+    #post_contents{
+        margin: 15px;
+    }
+
     .dash_body_sector{
         width: 100%;
         height: 150px;
@@ -872,15 +885,20 @@
                 height:30px;
                 line-height:30px;
             }
-    #comment_box #comment_text {
-        height: 50px;
+    #comment_box{
+        box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.5);
+        margin: 40px 60px;
+        border-radius: 5px;
     }
-    #comment_box #comment_bt {
-        width: 70px;
-        height: 33px;
-        display: inline-block;
-        margin: 0px 0px 2px 7px;
-    }
+        #comment_box #comment_text {
+            height: 50px;
+        }
+        #comment_box #comment_bt {
+            width: 70px;
+            height: 33px;
+            display: inline-block;
+            margin: 0px 0px 2px 7px;
+        }
     #user_view_aside #myinfo_main{
         margin-top: 30px;
         margin-bottom: 20px;
@@ -894,16 +912,6 @@
             display: block;
             margin-top: 20px;
         }
-        #user_view_aside #myinfo_sub{
-            width:220px;
-            margin: 0px auto;
-            margin-top: 10px;
-        }
-            #myinfo_sub .myinfo_wrap{
-                display: block;
-                text-align: center;
-                margin:5px 0px;
-            }
             #job_name{
                 color: #48cfad;
             }
@@ -960,6 +968,28 @@
         bottom: 20px;
         right: 40px;
     }
+
+    #post_banner{
+        position: absolute;
+        width: 310px;
+        height: 100%;
+        border-right: 1px solid #222222;
+    }
+        #post_banner #author_main{
+            margin: 30px 0px 20px 0px;
+        }
+            #author_main figure{
+                width: 80px;
+                height: 80px;
+                display: block;
+            }
+            #author_main h4{
+                display: block;
+            }
+    #post_contents{
+        margin: 30px 60px;
+    }
+
     .dash_body_sector{
         width: 25%;
         height: 150px;

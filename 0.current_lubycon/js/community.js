@@ -7,7 +7,7 @@ function eventHandler(event, selector) {//
 };
 /*--------------------------------postbox sticky start-------------------------------*/
 $(function(){
-    if($("#main_board").length != 0){
+    if(($(window).width() > 1024) && ($("#main_board").length != 0)){
         var postBanner = $("#post_banner"),
             valueMain = $("#author_main").outerHeight(true),
             valueSub = $("#author_sub").outerHeight(true),
