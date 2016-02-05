@@ -285,6 +285,7 @@
     }
     .nav_guide {
         margin-top: 46px;
+        height: auto;
     }
         .nav_guide .mb-lubySelector {
             width: 100% !important;
@@ -441,10 +442,12 @@
         }
             .creator_name {
                 text-align: left;
-                font-size: 20px;
+                font-size: 16px;
+                font-weight: 600;
             }
             .creator_job{
                 text-align: left;
+                font-size: 14px;
             }
         .creator_bot_info {
             border: none;
@@ -515,8 +518,8 @@
             height: 70px;
         }
         #comment_box #comment_bt {
-            width: 80%;
-            height: 30px;
+            width: 88%;
+            height: 45px;
             display: inline-block;
             padding: 0px 10px;
             box-sizing: border-box;
@@ -524,6 +527,7 @@
             -moz-box-sizing: border-box;
         }
     #user_view_aside{
+        height: 100px;
         margin-top: 51px;
     }
     #user_view_main{
@@ -540,9 +544,12 @@
         }
         #myinfo_main h4 {
             display: inline-block;
+            font-size: 18px;
+            vertical-align: top;
+            margin-top: 12px;
         }
             #job_name {
-                color: #eeeeee;
+                color: #dddddd;
             }
     #my_page_bt{
         display: none;
@@ -610,7 +617,7 @@
     #post_banner{
         position: relative;
         width: 100%;
-        height: 150px;
+        height: 100px;
         margin-top: 0;
     }
         #post_banner #author_main{
@@ -623,11 +630,32 @@
             }
             #author_main h4{
                 display: inline-block;
+                font-size: 18px;
+                vertical-align: top;
+                margin-top: 12px;
             }
-
+    #post_subject{
+        padding: 10px;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+    }
+        .post_subject_name{
+            display: block;
+        }
     #post_contents{
         margin: 15px;
     }
+    #post_info{
+        position: relative;
+        display: block;
+        text-align: center;
+        height: 27px;
+    }
+        #post_info li{
+            float: none;
+            display: inline-block;
+        }
 
     .dash_body_sector{
         width: 100%;
@@ -834,6 +862,7 @@
             }
             .creator_job{
                 text-align: center;
+                font-size: 16px;
             }
         .creator_bot_info {
             width: 220px;
@@ -887,8 +916,7 @@
             }
     #comment_box{
         box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.5);
-        margin: 40px 60px;
-        border-radius: 5px;
+        margin: 40px;
     }
         #comment_box #comment_text {
             height: 50px;
@@ -911,6 +939,7 @@
         #myinfo_main h4 {
             display: block;
             margin-top: 20px;
+            font-size: 26px;
         }
             #job_name{
                 color: #48cfad;
@@ -985,7 +1014,25 @@
             }
             #author_main h4{
                 display: block;
+                font-size: 26px;
+                margin-top: 20px;
             }
+    #post_subject{
+        height: 50px;
+        line-height: 53px;
+    }
+        .post_subject_name{
+            display: inline-block;
+        }
+    #post_info{
+        position:absolute;
+        right: 25px;
+        top: 15px;
+        margin-right: 5px;
+    }
+        #post_info li{
+            float:left;
+        }
     #post_contents{
         margin: 30px 60px;
     }

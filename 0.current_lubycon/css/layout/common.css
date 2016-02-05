@@ -1175,7 +1175,7 @@ body{
         }
         .contents_desc h5 {
             color:#888888;
-            font-size:14px;
+            font-size:13px;
             height:15px;
             line-height:15px;
             margin-top:7px;
@@ -1301,7 +1301,7 @@ body{
      }
         #comment_box #comment_text
         {
-            width: 80%;
+            width: 88%;
             max-width: 830px;
             margin: 0px;
             padding: 10px;
@@ -1498,9 +1498,10 @@ body{
     }
         .creator_name {
             color: #444444;
+            font-weight: 600;
         }
         .creator_job{
-            color: #48cfad;
+            color: #444444;
             font-size: 16px;
             margin-top: 2px;
         }

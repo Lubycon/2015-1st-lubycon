@@ -28,7 +28,7 @@
         </div>
         <div class="creator_mid_info">
             <p class="creator_name"><?=$username?></p><!--user name-->
-            <p class="creator_job"><i class="fa fa-suitcase hidden-mb-ib"></i><?=$userjob?></p><!--job-->
+            <p class="creator_job"><?=$userjob?></p><!--job-->
         </div>
         <div class="creator_bot_info">
             <article class="contents_count">

@@ -5,7 +5,6 @@
 //4. alert action
 //5. selector
 //6. mb-panel_menu
-var windowWidth = $(window).width();
 /////////////////////////////////////////////////////////
 //      event handler start
 /////////////////////////////////////////////////////////
@@ -20,6 +19,12 @@ function eventHandler(event, selector) {
 };
 /////////////////////////////////////////////////////////
 //      event handler end
+/////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+//      dragging sensor start
+/////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+//      dragging sensor end
 /////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////
 //      nav_guide sticky start
@@ -112,7 +117,7 @@ $(function(){
 })
 $(function(){
     $(".animate_opacity").hover(function (e){
-        $(this).stop().animate({ opacity: 0.9 },200);
+        $(this).stop().animate({ opacity: 0.8 },200);
     },function(){
         $(this).stop().animate({ opacity: 1 },200);
     });
@@ -246,39 +251,43 @@ $(function(){
             toggle_count = 0;    
         });
         $(this).on("click touchend",function (e){
-            console.log(toggle_count);
             eventHandler(event, $(this));
-            switch(toggle_count){
-                case 0 :
-                    if(windowWidth > 1024){
-                        $(this).find($(".lubySelector_list")).stop().fadeIn(300);
-                        $(this).css("background","#333333");
-                        $(this).find($(".lubySelector_arrow")).children("i").attr("class","fa fa-caret-up");
-                    }
-                    else{
-                        $(this).next(".original_box").show().trigger("focus");
-                    }
-                    toggle_count = 1;
-                    console.log(toggle_count);
-                    return true;
-                break;
+            if(!dragging){
+                switch(toggle_count){
+                    case 0 :
+                        if(windowWidth > 1024){
+                            $(this).find($(".lubySelector_list")).stop().fadeIn(300);
+                            $(this).css("background","#333333");
+                            $(this).find($(".lubySelector_arrow")).children("i").attr("class","fa fa-caret-up");
+                        }
+                        else{
+                            $(this).next(".original_box").show().trigger("focus");
+                        }
+                        toggle_count = 1;
+                        console.log(toggle_count);
+                        return true;
+                    break;
 
-                case 1 :
-                    if(windowWidth > 1024){
-                        $(this).find($(".lubySelector_list")).stop().fadeOut(300);
-                        $(this).css("background","#555555");
-                        $(this).find($(".lubySelector_arrow")).children("i").attr("class","fa fa-caret-down");
-                    }
-                    else{
-                        $(this).next(".original_box").hide().trigger("blur");
-                    }
-                    toggle_count = 0;
-                    console.log(toggle_count);
-                    return true;
-                break;
+                    case 1 :
+                        if(windowWidth > 1024){
+                            $(this).find($(".lubySelector_list")).stop().fadeOut(300);
+                            $(this).css("background","#555555");
+                            $(this).find($(".lubySelector_arrow")).children("i").attr("class","fa fa-caret-down");
+                        }
+                        else{
+                            $(this).next(".original_box").hide().trigger("blur");
+                        }
+                        toggle_count = 0;
+                        console.log(toggle_count);
+                        return true;
+                    break;
 
-                default: return false; break;
-            };//switch end
+                    default: return false; break;
+                };//switch end
+            }
+            else if(dragging){
+                return;
+            }            
         });//click end
         $(this).mouseleave(function(){
             $(document).click(function (event) {
@@ -320,9 +329,14 @@ $(window).on("load resize",function(){
         var mb_menu_toggle = 0;
         var distance = $("#mb-menu_panel").outerWidth();
         mb_menu.on("click touchend", function(){
-            eventHandler(event, $(this));
-            remove_mb_menu();
-            return;
+            if(!dragging){
+                eventHandler(event, $(this));
+                remove_mb_menu();
+                return;
+            }
+            else if(dragging){
+                return;
+            }
         });//click end
         $("#cancel_layer").on("click touchend",function(){
             remove_mb_menu();
@@ -331,8 +345,8 @@ $(window).on("load resize",function(){
         function remove_mb_menu(){
             switch(mb_menu_toggle){
                 case 0 : 
-                    $("#wrapper").stop().animate({ left: distance.toString() }, 150);
-                    $("#mb-menu_panel").stop().animate({ left: "0"}, 150);
+                    $("#wrapper").stop().animate({ left: distance.toString() }, 200);
+                    $("#mb-menu_panel").stop().animate({ left: "0"}, 200);
                     $("#cancel_layer").css({
                         "width": window.screen.width.toString(),
                         "height": window.screen.height.toString(),
@@ -355,8 +369,8 @@ $(window).on("load resize",function(){
                 break;
                 case 1 :
                     $("#cancel_layer").hide();
-                    $("#wrapper").stop().animate({ left: "0" }, 150);
-                    $("#mb-menu_panel").stop().animate({ left: (distance*-1).toString()}, 150);
+                    $("#wrapper").stop().animate({ left: "0" }, 200);
+                    $("#mb-menu_panel").stop().animate({ left: (distance*-1).toString()}, 200);
                     $("body").css({
                         "position":"relative",
                         "height":"auto",

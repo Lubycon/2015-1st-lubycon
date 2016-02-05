@@ -60,7 +60,7 @@
 
     <section class="nav_guide">
         <p id="post_subject">
-            <?=$post_subject?>
+            <span class="post_subject_name"><?=$post_subject?></span>
             <span class="written_date"><?=$year?>.<?=$month?>.<?=$day?> <?=$hour?>:<?=$minute?></span>
         </p>
         
@@ -88,14 +88,14 @@
             </div>
             <div id="author_sub">
                 <article class="author_wrap" id="author_job">
-                    <i class="fa fa-suitcase"></i>
+                    <i class="fa fa-suitcase hidden-mb-ib"></i>
                     <p class="author_name" id="job_name"><?=$userjob?></p>
                 </article>
-                <article class="author_wrap" id="author_location">
+                <article class="author_wrap hidden-mb-b" id="author_location">
                     <i class="fa fa-home"></i>
                     <p class="author_name" id="location_name"><?=$usercity?>, <?=$usercountry?></p>
                 </article>
-                <article class="author_wrap" id="author_language">
+                <article class="author_wrap hidden-mb-b" id="author_language">
                     <i class="fa fa-language"></i>
                     <p class="author_name" id="language_name"><?=$language1?>, <?=$language2?></p>
                 </article>
