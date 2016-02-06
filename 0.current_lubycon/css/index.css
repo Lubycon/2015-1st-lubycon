@@ -129,17 +129,17 @@
 /* slide section end */
 
 /* creators section */
-#creator_month{
+.index_pre_body{
     width: 100%;
     padding: 30px;
-    margin-bottom:140px;
+    margin-bottom: 50px;
     background: #eeeeee;
     text-align: center;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
 }
-    #creator_wrap{
+    .index_pre_wrap{
         position: relative;
         display: inline-block;
         width: 100%;
@@ -149,294 +149,224 @@
         -moz-box-sizing: border-box;
         background: #ffffff;
     }
-    #creator_title{
+    .index_pre_title{
         width: 100%;
         text-align:center;
         margin: 40px 0px;
     }
-        #creator_title i{
+        .index_pre_title i{
             color: #444444;
             font-size: 80px;
         }
-        #creator_title article{
+        .index_pre_title article{
             color: #444444;
             font-size: 40px;
             font-weight: 200;
         }
-            #creator_title article p{
+           .index_pre_title article p{
                 font-weight: 400;
                 font-size: 45px;
             }
-    #creator_body{
+    .index_pre_inner{
         width: 100%;
         position: relative;
         display: inline-block;     
     }
-        #creator_info{
+#creator_info{
+    width: 100%;
+    max-width: 1000px;
+    position: relative;
+    height: 300px;
+    margin: 0px auto;
+    position:relative;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+    #creator_info_background{
+        width: 100%;
+        max-width: 1000px;
+        height: 300px;
+        background: url(../../contents_data/vectorjpg/12.jpg) no-repeat 50% 46%;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        -webkit-filter: blur(3px) brightness(0.7);
+        -moz-filter: blur(3px) brightness(0.7);
+        -o-filter: blur(3px) brightness(0.7);
+        -ms-filter: blur(3px) brightness(0.7);
+        filter: blur(3px) brightness(0.7);
+        overflow: hidden;
+    }
+    #creator_info_p{
+        position: absolute;
+        top: 48px;
+        left: 50%;
+        margin-left: -50px;
+    }
+    #creator_pic_frame{
+        width: 100px;
+        height: 100px;
+        overflow: hidden;
+        border-radius: 50%;
+        background: #488ccb;
+        margin: 0px auto;
+    }
+        #creator_pic_frame img{
             width: 100%;
-            max-width: 1000px;
-            position: relative;
-            height: 300px;
-            margin: 0px auto;
-            position:relative;
-            box-sizing: border-box;
-            -webkit-box-sizing: border-box;
-            -moz-box-sizing: border-box;
         }
-            #creator_info_background{
-                width: 100%;
-                max-width: 1000px;
-                height: 300px;
-                background: url(../../contents_data/vectorjpg/12.jpg) no-repeat 50% 46%;
-                -webkit-background-size: cover;
-                -moz-background-size: cover;
-                -o-background-size: cover;
-                background-size: cover;
-                -webkit-filter: blur(3px) brightness(0.7);
-                -moz-filter: blur(3px) brightness(0.7);
-                -o-filter: blur(3px) brightness(0.7);
-                -ms-filter: blur(3px) brightness(0.7);
-                filter: blur(3px) brightness(0.7);
-                overflow: hidden;
-            }
-            #creator_info_p{
-                position: absolute;
-                top: 48px;
-                left: 50%;
-                margin-left: -50px;
-            }
-            #creator_pic_frame{
-                width: 100px;
-                height: 100px;
-                overflow: hidden;
-                border-radius: 50%;
-                background: #488ccb;
-                margin: 0px auto;
-            }
-                #creator_pic_frame img{
-                    width: 100%;
-                }
-            #creator_info ul{
-                width: 100%;
-                max-width: 1000px;
-                position:relative;
-                margin:0px auto;
-            }
-                #creator_name{
-                    height:50px;
-                    font-size: 36px;
-                    color:#ffffff;
-                    text-align: center;
-                    text-shadow: 0px 3px 3px #000;
-                }
-                #creator_job{
-                    height:35px;
-                    font-size:21px;
-                    color: #ffffff;
-                    text-align: center;
-                    font-weight: 200;
-                }
-                #creator_location{
-                    height: 14px;
-                    text-align: center;
-                }
-                    #creator_location p{
-                        display: inline-block;
-                        font-size:14px;
-                        color: #ffffff;
-                        font-weight: 200;
-                    }
-                    #creator_location i{
-                        display: inline-block;
-                        color: #ffffff;
-                        margin-right: 5px;
-                    }
-
-            #creator_desc{
-                width: 100%;
-                display: inline-block;
-            }
-                #creator_desc p{
-                    margin: 20px 0px;
-                    font-size: 20px;
-                    font-weight: 200;
-                    text-align: center;
-                    padding: 10px;
-                }
-        #interview_bt{
-            width: 200px;
-            height: 50px;
-            line-height: 50px;
-            
-            border: 1px solid #444444;
-            border-radius: 50px;
-            background: transparent;
-            margin: 30px auto;
-            
-            font-size:17px;
-            font-weight: 200;
-            color:#444444;
+    #creator_info ul{
+        width: 100%;
+        max-width: 1000px;
+        position:relative;
+        margin:0px auto;
+    }
+        #creator_name{
+            height:50px;
+            font-size: 36px;
+            color:#ffffff;
             text-align: center;
-            
-            overflow: hidden;
-            cursor: pointer;
+            text-shadow: 0px 3px 3px #000;
         }
-            #interview_bt i
-            {
-                width: 35px;
-                height: 100%;
-                line-height: 40px;
-                background:#37bc9b;
-                font-size: 30px;
-                float:right;
+        #creator_job{
+            height:35px;
+            font-size:21px;
+            color: #ffffff;
+            text-align: center;
+            font-weight: 200;
+        }
+        #creator_location{
+            height: 14px;
+            text-align: center;
+        }
+            #creator_location p{
+                display: inline-block;
+                font-size:14px;
+                color: #ffffff;
+                font-weight: 200;
+            }
+            #creator_location i{
+                display: inline-block;
+                color: #ffffff;
+                margin-right: 5px;
             }
 
-            #interview:hover
-            {
-                opacity:0.7;
-            }
+    #creator_desc{
+        width: 100%;
+        display: inline-block;
+    }
+        #creator_desc p{
+            margin: 20px 0px;
+            font-size: 20px;
+            font-weight: 200;
+            text-align: center;
+            padding: 10px;
+        }
+.viewmore_bt{
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    
+    border: 1px solid #444444;
+    border-radius: 50px;
+    background: transparent;
+    margin: 30px auto;
+    
+    font-size:17px;
+    font-weight: 200;
+    color:#444444;
+    text-align: center;
+    
+    overflow: hidden;
+    cursor: pointer;
+}
+    #viewmore_bt:hover
+    {
+        opacity:0.7;
+    }
 /* creators section */
 
 /* main board */
-
-#community_pre
-{
+.forum_cards{
     width: 100%;
 }
-    #topic_title{
-        color: #444444;
-        font-size: 30px;
-        font-weight: 200;
-        text-align: center;
+    .forum_card{
+        width: 100%;
     }
-    #community_pre ul
-    {
-        padding:0px 50px 50px 50px;
-        display: block;
+    .forum_card_body{
+        width: 100%;
+        position: relative;
+    }
+    .forum_card_header{
+        width: 100%;
+        padding: 20px 30px;
+        background: #444444;
         box-sizing: border-box;
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
     }
-
-        .forum_card{
-            display: block;
-            margin-top: 35px;
-        }
-
-.f_card_body
-{
-    position:relative;
-
-    width: 1200px;
-    height: 180px;
-    margin: 0px auto;
-    background: #ffffff;
-    border-top: 5px solid #48cfad;
-    overflow: hidden;
-}
-
-.f_card_body:hover
-{
-    text-decoration: underline;
-    opacity:0.8;
-}
-    .side_bar
-    {
-        width:5px;
-        height:71%;
-        float:left;
-
-        border-right: 2px solid #48cfad;
-        margin: 32px 20px 15px 15px;
-
-        text-align:right;
+    .forum_card_info{
+        width: 100%;
+        position: relative;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
     }
-        .side_bar i
-        {
-            font-size:13px;
-            color:#48cfad;
-            margin-right:-6.5px;
-
-            vertical-align: top;
-            margin-top:-4px;
+        .forum_card_title{
+            color: #fafafa;
+            font-size: 35px;
+            font-weight: 600;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
         }
-
-
-    .f_card_header
-    {
-        width: 1153px;
-        float:left;
-        margin-top: 5px;
+        .forum_card_author{
+            color: #fafafa;
+            font-size: 20px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+    .forum_card_count{
+        width: 100%;
+        position: relative;
+        margin-top: 15px;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
     }
-        .f_card_title
-        {
-            width:933px;
-            height:40px;
-            line-height: 40px;
-            margin-top:5px;
-
-            color:#333333;
-            font-size:30px;
-            float: left;
+        .forum_card_count .real_count{
+            display: inline-block;
+            min-width: 30px;
+            color: #fafafa;
+            margin-right: 15px;
         }
-
-        .f_card_counters
-        {
-            width:200px;
-            height: 40px;
-            line-height: 40px;
-            padding-right:10px;
-            padding-left:10px;
-            float:right;
-        }
-            .forum_like
-            {
-                float: right;
-                color:#818181;
-                margin-right:30px;
+            .forum_card_count .real_count i{
+                color: #fafafa;
+                font-size: 16px;
+                margin-right: 10px;
             }
-                .forum_like i
-                {
-                    font-size:20px;
-                    color:#818181;
-                    margin-right: 15px;
-                }
-            .forum_comment
-            {
-                float: right;
-                color:#818181;
+            .forum_card_count .real_count .fa-heart{
+                color: #ec6446;
             }
-                .forum_comment i
-                {
-                    font-size:20px;
-                    color:#818181;
-                    margin-right: 15px;
-                }
-        .f_card_content
-        {
-            width:1143px;
-            height: 120px;
-            padding:15px 15px 5px 0px;
-            margin-left:43px;
-            margin-top:40px;
-        }
-
-            .f_card_content p
-            {
-                
-                width:1143px;
-                height:120px;
-                font-size:18px;
-                font-weight: 200;
-                color:#666666;
-
-                display:-webkit-box;
-                overflow:hidden;
-                text-overflow:ellipsis;
-                -webkit-line-clamp: 5;
-                -webkit-box-orient: vertical;
-                word-wrap:break-word;
+            .forum_card_count .real_count .fa-eye{
+                color: #fafafa;
             }
-
-
+    .forum_card_section{
+        padding: 20px;
+        background: #ffffff;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+    }
+    .forum_card_section p{
+        line-height: 25px;
+        font-size: 18px;
+        font-weight: 200;
+        color: #444444;
+        padding: 20px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
 /* main board */

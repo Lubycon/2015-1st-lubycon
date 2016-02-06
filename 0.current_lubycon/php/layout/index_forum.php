@@ -1,8 +1,10 @@
 <li class="forum_card">
     <?php
         $card_title = "Lorem Ipsum";
-        $comment_num = 0;
+        $card_author = "Adimin_User";
+        $view_num = 0;
         $like_num = 0;
+        $comment_num = 0;
         $card_content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                             Cras commodo lacus at lacus bibendum imperdiet.<br />
                     Quisque in accumsan turpis. Nullam non lacus nec enim convallis iaculis.
@@ -16,25 +18,21 @@
                             Nunc porttitor mauris sapien, quis molestie quam placerat sit amet.
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit.";
     ?>
-<!-- card list start-->
-    <div class="f_card_body">
-        <!--card start-->
-        <a href="./index.php?1=community&2=community_view">
-            <!--link start-->
-            <aside class="side_bar"><i class="fa fa-circle"></i></aside>
-            <div class="f_card_header">
-                <article class="f_card_title"><?=$card_title?></article>
-                <div class="f_card_counters">
-                    <div class="forum_comment"><i class="fa fa-comment"></i><?=$comment_num?></div>
-                    <div class="forum_like"><i class="fa fa-heart"></i><?=$like_num?></div>
-                </div>
+    <div class="forum_card_body">
+        <header class="forum_card_header">
+            <div class="forum_card_info">
+                <p class="forum_card_title"><?=$card_title?></p>
+                <p class="forum_card_author"><?=$card_author?></p>
             </div>
-            <article class="f_card_content">
-                <p><?=$card_content?></p>
-            </article>
-        </a>
-        <!--link end-->
+            <div class="forum_card_count">
+                <span class="real_count"><i class="fa fa-eye"></i><?=$view_num?></span>
+                <span class="real_count"><i class="fa fa-heart"></i><?=$like_num?></span>
+                <span class="real_count"><i class="fa fa-comment"></i><?=$comment_num?></span>
+            </div>
+        </header>
+        <div class="forum_card_section">
+            <p><?=$card_content?></p>
+        </div>
+        <div class="viewmore_bt animate_opacity">VIEW MORE</div>
     </div>
-    <!--card end-->
 </li>
-<!--card list end-->

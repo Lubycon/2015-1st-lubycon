@@ -205,13 +205,13 @@
 <!--slide section end-->
 
 <!--creator of the month start-->
-<section id="creator_month">
-    <div id="creator_wrap">
-        <div id="creator_title">
+<section class="index_pre_body">
+    <div class="index_pre_wrap">
+        <div class="index_pre_title">
             <i class="fa fa-trophy"></i>   
             <article><p>CREATOR</p> OF THE MONTH</article>
         </div>
-        <div id="creator_body">
+        <div class="index_pre_inner">
             <div id="creator_info">
                 <figure id="creator_info_background"></figure>
                 <div id="creator_info_p">
@@ -235,31 +235,27 @@
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />
                 </p>
             </div>
-            <div id="interview_bt" class="animate_opacity">VIEW MORE</div>
+            <div class="viewmore_bt animate_opacity">VIEW MORE</div>
         </div>  
     </div>
-    
 </section>
 <!--creator of the month end-->
 
-<section id="community_pre" class="hidden-mb-b">
-    <!--community preview start-->
-    <article id="topic_title">HOT TOPICS IN 
-        <font color="#48cfad">
+<section class="index_pre_body">
+    <div class="index_pre_wrap">
+        <div class="index_pre_title">
+            <i class="fa fa-volume-up"></i>   
+            <article><p>HOT TOPICS</p> OF THE MONTH</article>
+        </div>
+        <div class="index_pre_inner">
+            <ul class="forum_cards">
                 <?php
-                    date_default_timezone_set('UTC');
-                    $utcMonth = date("F");
-                    $utcMonthString = strtoupper($utcMonth);
-                    echo $utcMonthString;
+                    for($i = 0; $i < 6; $i++){
+                        include("./php/layout/index_forum.php");
+                    }
                 ?>
-        </font>
-    </article>
-    <ul>
-        <?php
-            for( $i=0 ; $i<5 ; $i++ ){
-                include("php/layout/index_forum.php");
-            };
-        ?>
-    </ul>
+            </ul>
+        </div>
+    </div>
 </section>
 <!--community preview end-->
