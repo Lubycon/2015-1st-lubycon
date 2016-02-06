@@ -25,7 +25,27 @@
     };
     echo "<br/><br/>-------------zip file upload--------------<br/>";
 
+    echo "<br/><br/>-------------crop thumbnail image--------------<br/>";
+
+    $cropurl = $_POST['croppicurl'];
+
+    echo "croppic url : " . $cropurl;
+
+    echo "<br/><br/>-------------crop thumbnail image--------------<br/>";
+
     
+    echo "<br/><br/>-------------contents image--------------<br/>";
+    $contens_image = $_POST['contents_image'];
+    if($contens_image) 
+    {
+        echo "<br/>user upload image = ";
+        for($i=0 ; $i< count($contens_image); $i++)
+        {
+            echo "../contents_data/temp/".$contens_image[$i] . " ";
+        };
+    };
+    echo "<br/><br/>-------------contents image--------------<br/>";
+
 
     
     echo "<br/>-------------contents subject name--------------<br/><br/>";

@@ -9,7 +9,8 @@ if ($_FILES['file']['name'])
         $destination = '../../../contents_data/temp/' . $filename; //change this directory
         $location = $_FILES["file"]["tmp_name"];
         move_uploaded_file($location, $destination);
-        echo $destination;//change this URL
+        $file_info = array("file_path" => $destination , "file_name" => $filename);
+        echo json_encode($file_info);
     }else{
         echo  $message = 'Ooops!  Your upload triggered the following error:  ' . $_FILES['file']['error'];
     }

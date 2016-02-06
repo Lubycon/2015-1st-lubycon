@@ -122,6 +122,7 @@
 				                },
 				                cropUrl:'./php/img_crop/img_crop_to_file.php',
 				                customUploadButtonId:'cropContainerHeaderButton',
+                                outputUrlId:'myOutputId',
 				                modal:false,
 				                loaderHtml:'<div class="loader bubblingG"><span id="bubblingG_1"></span><span id="bubblingG_2"></span><span id="bubblingG_3"></span></div> ',
 				                onBeforeImgUpload: function(){ console.log('onBeforeImgUpload') },
@@ -129,16 +130,13 @@
 				                onImgDrag: function(){ console.log('onImgDrag') },
 				                onImgZoom: function(){ console.log('onImgZoom') },
 				                onBeforeImgCrop: function(){ console.log('onBeforeImgCrop') },
-				                onAfterImgCrop:function(){ console.log('onAfterImgCrop') }
+				                onAfterImgCrop:function(data){ console.log(data) }
 		                }	
 		                var croppic = new Croppic('croppic', croppicHeaderOptions);
 	                </script>
+                    <input type="hidden" id="myOutputId" name="croppicurl">
                 </div>
             </div>
-            <div class="buttons_pop">
-                <button type="button" class="next_bt" id="call_setting">OK</button>
-                <button type="button" class="cancel_bt" id="tnail_cancel">Cancel</button>
-            </div> 
         </section>
         <section class="tab_section" id="setting_tab_section">
             <div id="top_set" class="setting_group">
@@ -146,7 +144,7 @@
                     <p class="setting_title">Categories (max 3 categorys)</p>
                     <div class="set_con">
                             <!-- need save user select category max value = 3 -->
-                            <select data-placeholder="Choise your contents categories" style="width:100%;" class="chosen-select" multiple tabindex="8" name="user_selected_category[]">
+                            <select data-placeholder="Choose your contents categories" style="width:100%;" class="chosen-select" multiple tabindex="8" name="user_selected_category[]">
                                 <option>Car</option>
                                 <option>People</option>
                                 <option>Book</option>
