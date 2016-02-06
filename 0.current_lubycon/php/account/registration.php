@@ -11,6 +11,10 @@
 	$pass = $_POST['pass'];
 	$repass = $_POST['repass'];
 	$date = date('Y-m-d');
+	$country_code = $_POST['country_code'];
+
+	// password encryption -> using bycrypt
+	$hash = password_hash($pass, PASSWORD_DEFAULT);
 
 	//regular expression
 	$mail_vali = "/^[0-9a-zA-Z]([\-.\w]*[0-9a-zA-Z\-_+])*@([0-9a-zA-Z][\-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9}$/";	// email validation check
@@ -58,7 +62,7 @@
 
 	if($email_validation && $pass_validation && $nick_validation){
 		
-		$database->query = "insert into luby_user(user_email,user_nick,user_pass,user_date)values('".$email."', '".$nick."', password('".$pass."'), '".$date."')";
+		$database->query = "insert into luby_user(user_email,user_nick,user_pass,user_date,country_code)values('".$email."', '".$nick."', '".$hash."', '".$date."', '".$country_code."')";
 		$database->DBQuestion();
 
 		if(!$database->result){
