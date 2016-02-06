@@ -150,51 +150,56 @@ $(window).on("load",function(){
     setTimeout(function(){
         $(".lubyAlert_bt").each(function(){
             var toggle_count = 0;
-            $(this).on("click touchend", function(){
-                eventHandler(event, $(this));
-                var thisId = $(this).attr("id");
-                var alertObject = $(document).find("#"+thisId.toString()+"Alert");
-                switch(toggle_count){
-                    case 0:
-                        switch(thisId){
-                            case "bookmark_bt" :
-                                $(this).css("color","#ffbe54");
-                                $(this).find("i").css('color', '#ffbe54');
-                                toggle_count = 1;
-                                console.log("this is star");
-                            break;
-                            case "like_bt" :
-                                $(this).find("i").css('color', '#ec6446');
-                                toggle_count = 1;
-                                console.log("this is heart");
-                            break;
-                            case "confirm_bt" :
-                                toggle_count = toggle_count;
-                                $(".dark_overlay").fadeIn(200);
-                                console.log("this is confirm");
-                            break;
-                            default: return false; break;
-                        }
-                        alertObject.stop().fadeIn(700,function(event){ 
-                            if(alertObject.attr("id") != "confirm_btAlert"){
-                                hideAlert();
-                                console.log(toggle_count);
-                                return true; 
+            $(this).on("click touchend", function (event){
+                if(!dragging){
+                    eventHandler(event, $(this));
+                    var thisId = $(this).attr("id");
+                    var alertObject = $(document).find("#"+thisId.toString()+"Alert");
+                    switch(toggle_count){
+                        case 0:
+                            switch(thisId){
+                                case "bookmark_bt" :
+                                    $(this).css("color","#ffbe54");
+                                    $(this).find("i").css('color', '#ffbe54');
+                                    toggle_count = 1;
+                                    console.log("this is star");
+                                break;
+                                case "like_bt" :
+                                    $(this).find("i").css('color', '#ec6446');
+                                    toggle_count = 1;
+                                    console.log("this is heart");
+                                break;
+                                case "confirm_bt" :
+                                    toggle_count = toggle_count;
+                                    $(".dark_overlay").fadeIn(200);
+                                    console.log("this is confirm");
+                                break;
+                                default: return false; break;
                             }
-                            else if(alertObject.attr("id") === "confirm_btAlert"){
-                                return true;
-                            }
-                        });
-                    break;
-                    case 1:
-                        $(this).css("color","#cccccc");
-                        $(this).find("i").css('color', '#cccccc');
-                        toggle_count = 0;
-                        console.log(toggle_count);
-                        return true;
-                    break;
-                    default: return false; break;
-                }//switch end
+                            alertObject.stop().fadeIn(700,function(event){ 
+                                if(alertObject.attr("id") != "confirm_btAlert"){
+                                    hideAlert();
+                                    console.log(toggle_count);
+                                    return true; 
+                                }
+                                else if(alertObject.attr("id") === "confirm_btAlert"){
+                                    return true;
+                                }
+                            });
+                        break;
+                        case 1:
+                            $(this).css("color","#cccccc");
+                            $(this).find("i").css('color', '#cccccc');
+                            toggle_count = 0;
+                            console.log(toggle_count);
+                            return true;
+                        break;
+                        default: return false; break;
+                    }//switch end
+                }
+                else if(dragging){
+                    return;
+                } 
             });//click end
         });//each end
     },1);//setTimeout end  
@@ -228,34 +233,31 @@ function hideAlert(){
 $(function(){
     $(".lubySelector").each(function(){
         var toggle_count = 0;
-        var option_list = [];//make option list array
+        var option_list = [];
         $(this).find(".global_icon").addClass("hidden-mb-ib");
-        $(this).find(".lubySelector_list li").each(function(){//make option list array
+        $(this).find(".lubySelector_list li").each(function(){
             option_list.push($(this).text().replace(/ /gi, ''));
             //It will be push to array after removed all spaces  
         });
-        $(this).after("<select class='original_box'>");//make select box after lubySelector  
-        for(var i = 0; i < option_list.length; i++){//make options in select box
+        $(this).after("<select class='original_box'>");
+        for(i in option_list){
             $(this).next(".original_box").append("<option value="+option_list[i]+">"+option_list[i]+"</option>");
-            //i = Array's index
         };
         $(".original_box").hide();//original select box will be hide
         $(".original_box").change(function(){
             var lubySelectbox = $(this).prev(".lubySelector").find(".lubySelector_selected");
             var original_value = $(this).val();
             lubySelectbox.text(original_value.toString());
-            $(this).prev(".lubySelector").find($(".lubySelector_list")).stop().fadeOut(300);
-            $(this).prev(".lubySelector").css("background","#555555");
-            $(this).prev(".lubySelector").find($(".lubySelector_arrow")).children("i").attr("class","fa fa-caret-down");
             $(this).hide();
             toggle_count = 0;    
         });
-        $(this).on("click touchend",function (e){
+        $(this).on("click touchend",function (event){
             eventHandler(event, $(this));
             if(!dragging){
                 switch(toggle_count){
                     case 0 :
                         if(windowWidth > 1024){
+                            $(this).find($(".lubySelector_arrow")).children("i").attr("class","fa fa-caret-down");
                             $(this).find($(".lubySelector_list")).stop().fadeIn(300);
                             $(this).css("background","#333333");
                             $(this).find($(".lubySelector_arrow")).children("i").attr("class","fa fa-caret-up");
@@ -264,7 +266,6 @@ $(function(){
                             $(this).next(".original_box").show().trigger("focus");
                         }
                         toggle_count = 1;
-                        console.log(toggle_count);
                         return true;
                     break;
 
@@ -278,7 +279,6 @@ $(function(){
                             $(this).next(".original_box").hide().trigger("blur");
                         }
                         toggle_count = 0;
-                        console.log(toggle_count);
                         return true;
                     break;
 
@@ -312,7 +312,6 @@ $(function(){
             $(event.target).parents(".lubySelector").next(".original_box").val(selected_option);
             $(event.target).siblings("li").removeClass();
             $(event.target).addClass("selected_li");
-            console.log("hidden_selector value is " + "'" + $(event.target).parents(".lubySelector").next(".original_box").val() + "'");
         });
     });//each end
 });

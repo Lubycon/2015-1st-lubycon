@@ -92,7 +92,7 @@
                     <p class="author_name" id="job_name"><?=$userjob?></p>
                 </article>
                 <article class="author_wrap hidden-mb-b" id="author_location">
-                    <i class="fa fa-home"></i>
+                    <i class="fa fa-map-marker"></i>
                     <p class="author_name" id="location_name"><?=$usercity?>, <?=$usercountry?></p>
                 </article>
                 <article class="author_wrap hidden-mb-b" id="author_language">

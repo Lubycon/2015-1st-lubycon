@@ -116,9 +116,9 @@
         width: 220px;
         height: 45px;
         margin-top: 20px;
-        border: none;
-        border-radius: 3px;
-        background: #48cfad;
+        border: 1px solid #ffffff;
+        border-radius: 80px;
+        background: transparent;
         font-weight: 200;
         color: #ffffff;
     }

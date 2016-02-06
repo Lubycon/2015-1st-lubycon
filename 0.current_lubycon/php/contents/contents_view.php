@@ -150,7 +150,7 @@ default : $current_url = "artwork"; $contents_name = $artwork_subject;$contents_
                             <img src="<?=$user_img_url?>">
                         </figure>
                         <h4><a href="./index.php?1=personal_page&2=personal_page&3=dashboard"><?=$contents_author[$number]?></a></h4>
-                        <h5><i class="fa fa-home"></i><?=$usercity?>, <?=$usercountry?></h5>
+                        <h5><i class="fa fa-map-marker"></i><?=$usercity?>, <?=$usercountry?></h5>
                     </div>
                     <button id="content_down" class="hidden-mb-b"><i class="fa fa-download"></i></button>
                     <div id="file_info">
