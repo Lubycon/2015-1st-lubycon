@@ -118,7 +118,7 @@
         border:none;
         background:none;
         position: absolute;
-        margin-top: 7px;
+        margin-top: 18px;
         margin-left: 22px;
         cursor:pointer;
     }
@@ -131,8 +131,8 @@
         border:none;
         background:none;
         position: absolute;
-        margin-top: 7px;
-        margin-left: 25px;
+        margin-top: 18px;
+        margin-left: 22px;
         cursor:pointer;
     }
     .lang_minus i{
