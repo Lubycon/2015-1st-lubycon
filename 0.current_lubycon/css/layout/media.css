@@ -548,9 +548,6 @@
             vertical-align: top;
             margin-top: 12px;
         }
-            #job_name {
-                color: #dddddd;
-            }
     #my_page_bt{
         display: none;
     }
@@ -565,7 +562,7 @@
             background: #383838;
         }
     #personal_view .con_wrap #contents_box{
-        margin-top: 196px;
+        
     }
     #main_board{
         width: 100%;
@@ -941,9 +938,6 @@
             margin-top: 20px;
             font-size: 26px;
         }
-            #job_name{
-                color: #48cfad;
-            }
     #best_creator_wrap{
         width: 84%;
         height: 150px;
@@ -954,9 +948,9 @@
         width: 220px;
         height: 45px;
         margin-top: 20px;
-        border: none;
-        border-radius: 3px;
-        background: #48cfad;
+        border: 1px solid #ffffff;
+        border-radius: 80px;
+        background: transparent;
         font-weight: 200;
         color: #ffffff;
     }
