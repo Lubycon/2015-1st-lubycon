@@ -11,7 +11,7 @@ $current_url = $third_param;
 echo "<li class='table_list'>
     <div class='table_list_inner'>
         <span class='table_blank hidden-mb-ib'><i class='fa fa-circle' id='{$current_url}_circle'></i></span>   <!-- space -->
-        <span class='table_number hidden-mb-ib'>{$i}</span>   <!-- number -->
+        <span class='table_number hidden-mb-ib'>{$j}</span>   <!-- number -->
         <span class='table_info'>
         <span class='table_user_img'>
         <img src='{$userimg}'>

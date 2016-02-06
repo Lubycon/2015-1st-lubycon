@@ -24,11 +24,13 @@
             
             <ul class="table_list_wrap">
             <?php
+            $j = 1;
             for($i=0;$i<30;$i++)
             {
                 $third_param = $_GET['3'];
-                $_GET["number"] = $i;
+                $_GET["number"] = $j;
                 include('php/layout/community_card.php');
+                $j++;
             }
             ?>
             </ul>
