@@ -15,7 +15,7 @@ $cropH = $_POST['cropH'];
 
 $jpeg_quality = 100;
 
-$output_filename = "temp/croppedImg_".rand();
+$output_filename = "temp/croppedImg_".rand(); //saved filename set
 
 $what = getimagesize($imgUrl);
 switch(strtolower($what['mime']))
@@ -48,11 +48,11 @@ switch(strtolower($what['mime']))
 				$cropH, $cropW, $cropH);	
 
 
-	imagejpeg($dest_image, "../../".$output_filename.$type, $jpeg_quality); //edit this path
+	imagejpeg($dest_image, "../../../contents_data/".$output_filename.$type, $jpeg_quality); //edit this path
 	
 	$response = array(
 			"status" => 'success',
-			"url" => $output_filename.$type 
+			"url" => "../contents_data/".$output_filename.$type //edit this path
 		  );
 	 print json_encode($response);
 

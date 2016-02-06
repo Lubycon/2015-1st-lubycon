@@ -37,7 +37,7 @@
         <form id="main_login" name="main_login" method="post" action="login_check.php">
             <div id="login_input">
                     <input type="text" id="login_id" name="login_id" value="E-mail"/><i id="email_icon" class="fa fa-user"></i>
-                    <input type="text" id="login_pass" name="login_pass" value="Password" /><i id="pass_icon" class="fa fa-key"></i>
+                    <input type="password" id="login_pass" name="login_pass" value="Password" /><i id="pass_icon" class="fa fa-key"></i>
             </div> <!-- end login_input div --> 
             <button type="submit" id="login_lubycon" class="animate_width"><i class="fa fa-unlock-alt"></i></button><!--submit bt-->
         </form><!--end login_input form-->

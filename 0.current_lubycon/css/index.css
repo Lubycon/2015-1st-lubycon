@@ -312,14 +312,14 @@
     #community_pre ul
     {
         padding:0px 50px 50px 50px;
-        display: inline-block;
+        display: block;
         box-sizing: border-box;
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
     }
 
         .forum_card{
-            display: inline-block;
+            display: block;
             margin-top: 35px;
         }
 

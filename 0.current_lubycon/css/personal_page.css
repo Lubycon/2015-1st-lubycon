@@ -4,7 +4,9 @@
 	width: 100%;
 	position: relative;
 }
-
+.con_wrap {
+    background:#282828;
+}
 .con_aside {
 	float: left;
 	border-left: none;

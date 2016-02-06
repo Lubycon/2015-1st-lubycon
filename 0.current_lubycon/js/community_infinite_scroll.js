@@ -1,4 +1,6 @@
 var third_param = getUrlParameter('3');
+
+
 /*
 function up_call_contents() {
     var top_bound = ($("#main_header").height() + $("#nav_guide").height() + $("#lnb_nav > ul:nth-child(1)").height());
@@ -23,12 +25,13 @@ function up_call_contents() {
 };
 */
 function down_call_contents() {
+    var post_number = $(".table_list_wrap .table_list:last-child .table_number").text();
     $(".table_list_wrap").append('<p class="progressbar"><i class="fa fa-spinner fa-pulse"></i></p>');
     $.ajax
     ({
         type: "POST",
         url: "php/ajax/community_infinite_scroll.php", //이페이지에서 중복체크를 한다
-        data: 'third_param=' + third_param,//test.asp에 id 값을 보낸다
+        data: 'post_number=' + post_number + '&third_param=' + third_param,//test.asp에 id 값을 보낸다
         cache: false,
         success: function (data) {
             $(".table_list_wrap").append(data);

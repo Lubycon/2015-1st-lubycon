@@ -2,18 +2,18 @@ $(function () //account setting script
 {
     
 
-    $('#Change_pass').click(function () //change pass remove attr
+    $('#change_pass').click(function () //change pass remove attr
     {
         if($('#now_pass_id').attr('disabled'))
         {
             $('#now_pass_id , #pass_id ,#re_pass_id').removeAttr('disabled');
-            $('#Change_pass').text('Not Change Password');
-            $('#Change_pass').css({'background':'#c1c1c1 ','margin-left':'65px'});
+            $('#change_pass').text('Not change Password');
+            $('#change_pass').css({'background':'#c1c1c1 ','margin-left':'65px'});
         }else
         {
             $('#now_pass_id , #pass_id ,#re_pass_id').attr('disabled', 'disabled');
-            $('#Change_pass').text('Change Password');
-            $('#Change_pass').css({ 'background': '#48CFAD ', 'margin-left': '75px' });
+            $('#change_pass').text('change Password');
+            $('#change_pass').css({ 'background': '#48CFAD ', 'margin-left': '75px' });
             $('#now_pass_id , #pass_id ,#re_pass_id').val('').css({ 'border-left': '2px solid #D5D5D5', 'width': '190px' }).next().removeClass();
             $('#pass_check, #now_pass_check').text('').show();
         }
@@ -69,27 +69,19 @@ $(function () //account setting script
 
     });
     */
-    var i = 1;
 
+    var i = 1;
     $('#lang_plus').click(function () //clone language div and change id
     {
-        if(i < 4){
-            $("#clone_div").append('<div id="lang_clone"></div>');
-            $("#lang_clone").append('<label>&nbsp;</label>');
-            $('#lang_input_id').clone(true).appendTo('#lang_clone');
-            $('#lang_option_id').clone(true).appendTo('#lang_clone');
-            $("#lang_clone").append('<span id="lang_minus_id" class="lang_minus"><i class="fa fa-minus-circle"></i></span>');
-            $('#lang_public_id').clone(true).appendTo('#lang_clone');
-
-
-            $('#lang_clone > #lang_input_id').attr('id', 'lang_input_' + i);
-            $('#lang_clone > #lang_option_id').attr('id', 'lang_option_' + i);
-            $('#lang_clone > #lang_public_id').attr('id', 'lang_public_' + i).css("margin-left","70px");
-            $('#lang_clone > #lang_minus_id').attr('id', 'lang_minus_' + i);
-
-            $("#lang_clone").append('<br/>');
-
-            $('#clone_div > #lang_clone').attr('id', 'lang_clone_' + i);
+        if (i < 4) {
+            var lang_div = '<div id="lang_clone' + i + '"><div id="lang_option_' + i + '" class="language_option"><select class="basic_filter" name="lang_ability[]"><option value="Beginer">Beginer</option><option value="Advanced">Advanced</option><option value="Fluent">Fluent</option><option value="Native">Native</option></select></div><input id="lang_input_' + i + '" class="language_text" name="language[]" type="text"><span id="lang_minus_id" class="lang_minus"><i class="fa fa-minus-circle"></i></span></div>';
+            $("#clone_div").append(lang_div);
+            $(".basic_filter").selectOrDie
+                ({
+                    customClass: "custom",
+                    customID: "custom",
+                    size: 5
+                });
             i++; //int plus
         }
         else{

@@ -1195,7 +1195,7 @@ body{
             }
             .creator_desc .by{
                 color:#888888;
-                margin-right: 3px;
+                margin-right: 1px;
             }
             .creator_desc .name{
                 color:#444444;
@@ -1301,7 +1301,7 @@ body{
      }
         #comment_box #comment_text
         {
-            width: 88%;
+            width: 80%;
             max-width: 830px;
             margin: 0px;
             padding: 10px;
@@ -1600,7 +1600,6 @@ body{
                     
                 }
 .table_blank {
-    position: absolute;
     top: 3px;
     left: 11px;
     text-align: center;
@@ -1617,24 +1616,18 @@ body{
         #qna_circle{
             color: #d19cd9;
         }
-
+.table_number_wrap{
+    display: inline-block;
+    min-width: 20px;
+    vertical-align: top;
+    margin-right: 13px;
+}
 .table_number {
-    position: absolute;
-    top: 6px;
-    left: 29px;
     font-size: 14px;
     text-align: left;
     color: #666666;
 }
-
-.table_info {
-    display: inline-block;
-    position: relative;
-    height: 55px;
-    width: 100%;
-}
-    .table_user_img {
-        float: left;
+.table_user_img {
         display: inline-block;
         border-radius: 50%;
         overflow: hidden;
@@ -1642,48 +1635,53 @@ body{
         .table_user_img img {
             width: 100%;
         }
+.table_info {
+    position: relative;
+    margin-left: 20px;
+}
+.table_info a:hover{
+    opacity: 0.6;
+} 
 
 .table_subject {
     display: inline-block;
+    position: relative;
     cursor:pointer;
+    margin-top: 5px;
+    text-align: left;
+    color: #555555;
+    font-weight: 600;
+    letter-spacing: -0.1px;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-    margin-top: 5px;
-    text-align: left;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-} 
-    .table_subject a{
-        color: #555555;
-        font-weight: 600;
-        letter-spacing: -0.1px;
-    }
-    .table_subject a:hover {
-        color: #87ead1;
+}
+    .table_contents{
+        position: absolute;
+        top: 5px;
+        right: -20px;
     }
 .table_writer {
-    position: absolute;
-    display: inline-block;
+    display: block;
     bottom: 3px;
-    min-width: 130px;
-    text-align: center;
     color: #444444;
     cursor:pointer;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+    text-align: left;
+    margin-top: 5px;
 }
     .table_writer:hover{
             text-decoration: underline;
         }
 
 .table_like {
-    min-width: 60px;
     line-height: 55px;
     font-size: 18px;
-    float: right;
     text-align: center;
     color: #488ccb;
 }
@@ -1693,14 +1691,12 @@ body{
 
     .table_like .fa-heart {
         font-size: 16px;
-        color: #ec6446;
+        color: #ffffff;
     }
 
 .table_view {
-    min-width: 60px;
     line-height: 55px;
     font-size: 18px;
-    float: right;
     text-align: center;
     color: #488ccb;
 }
@@ -1716,7 +1712,6 @@ body{
     width: 100px;
     line-height: 55px;
     float: right;
-    text-align: center;
     color: #545454;
 }
     .table_list .table_date{
