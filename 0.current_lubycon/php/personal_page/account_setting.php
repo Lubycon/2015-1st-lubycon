@@ -2,6 +2,7 @@
 <link href="css/croppic.css" rel="stylesheet" type="text/css" />
 <!-- account_setting page css -->
 <script type="text/javascript" src="js/account_setting.js"></script>
+<script type="text/javascript" src="js/jquery.mousewheel.min.js"></script>
 
 <form id="account_setting_form" enctype="multipart/form-data" method="post" action="./php/personal_page/test.php">
     <section id="account_section">
