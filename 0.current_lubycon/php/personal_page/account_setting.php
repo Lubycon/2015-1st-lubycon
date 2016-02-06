@@ -328,7 +328,7 @@
                 </div>
                 <input type="text" id="lang_input_id" class="language_text" name="language[]" />
                 <span id="lang_plus">
-                    <i class="fa fa-plus-circle"></i>
+                    <i class="fa fa-plus"></i>
                 </span>
                 <!-- end select box -->
                 
