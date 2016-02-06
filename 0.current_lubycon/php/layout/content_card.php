@@ -44,7 +44,7 @@
                 </a>
             </div>
             <span class="creator_desc">
-                <a href="./index.php?1=creators_page&2=creators">
+                <a href="./index.php?1=personal_page&2=personal_page&3=dashboard">
                     <img src="<?=$user_img_url?>" class="hidden-mb-ib" alt="artist photo" />
                     <span class="by">by</span>
                     <span class="name"><?=$username[$number]?></span>

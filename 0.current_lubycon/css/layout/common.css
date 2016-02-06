@@ -1189,9 +1189,9 @@ body{
                 opacity: 0.8;
             }
             .creator_desc img{
-                width: 40px;
-                height: 40px;
-                border-radius: 50%;
+                width: 35px;
+                height: 35px;
+                margin-top: 3px;
             }
             .creator_desc .by{
                 color:#888888;
