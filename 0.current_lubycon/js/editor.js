@@ -415,13 +415,15 @@ $(function () {
             $.ajax({
                 data: form_data,
                 type: "POST",
+                dataType: 'json',
                 url: './php/editor/imageUpload.php',
                 cache: false,
                 contentType: false,
                 processData: false,
                 success: function (url)
                 {
-                    $(el).summernote('editor.insertImage', url);
+                    $(el).summernote('editor.insertImage', url["file_path"]);
+                    $("#editor_form").append("<input type='hidden' name='contents_image[]' value='" + url["file_name"] + "'>");
                 }
             });
         }

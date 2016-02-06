@@ -155,7 +155,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "contents_page", "contents_p
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "layout", "layout", "{79EDE1A8-A22F-45A4-8EBB-14D24588F03D}"
 	ProjectSection(SolutionItems) = preProject
+		css\layout\animate.css = css\layout\animate.css
 		css\layout\common.css = css\layout\common.css
+		css\layout\media.css = css\layout\media.css
 		css\layout\normalize.css = css\layout\normalize.css
 		css\layout\selectordie.css = css\layout\selectordie.css
 	EndProjectSection
