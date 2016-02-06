@@ -16,7 +16,7 @@
 
         $price = "Free";
         $contents_thumb_url = "../contents_data/".$current_url."jpg/thumb/".$number.".jpg";
-        $user_img_url = "./ch/img/no_img/no_img_user1.jpg";
+        $user_img_url = "../contents_data/".$current_url."jpg/profile/".$number.".jpg";
         $like_num = 0;
         $view_num = 0;
         $comment_num = 0;

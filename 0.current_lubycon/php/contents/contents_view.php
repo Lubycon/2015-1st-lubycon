@@ -6,6 +6,7 @@ include('../contents_data/contents_data.php');
 $number = $_GET["4"];
 $current_url = $_GET["3"];
 $contents_img_url = "../contents_data/".$current_url."jpg/".$number.".jpg";
+$user_img_url = "../contents_data/".$current_url."jpg/profile/".$number.".jpg";
 $price = 'Free';
 
 $userjob = "Job";
@@ -146,7 +147,7 @@ default : $current_url = "artwork"; $contents_name = $artwork_subject;$contents_
                 <div id="contents_aside" class="con_aside">
                     <div class="designer_info">
                         <figure id="user_img">
-                            <img src="./ch/img/no_img/no_img_user1.jpg">
+                            <img src="<?=$user_img_url?>">
                         </figure>
                         <h4><?=$contents_author[$number]?></h4>
                         <h5><i class="fa fa-home"></i><?=$usercity?>, <?=$usercountry?></h5>
