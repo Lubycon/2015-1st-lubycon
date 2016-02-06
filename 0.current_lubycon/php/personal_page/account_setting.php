@@ -327,13 +327,13 @@
                     </select>
                 </div>
                 <input type="text" id="lang_input_id" class="language_text" name="language[]" />
+                <div id="clone_div"></div>
                 <span id="lang_plus">
                     <i class="fa fa-plus"></i>
                 </span>
-                <!-- end select box -->
-                
-                <div id="clone_div"></div>
-                
+                <span id="lang_minus_id" class="lang_minus">
+                    <i class="fa fa-minus"></i>
+                </span>
                 <label id="basic_desc_label">Description</label><textarea id="basic_desc" maxlength="1000" name="desc"></textarea><br />
         </section>
 

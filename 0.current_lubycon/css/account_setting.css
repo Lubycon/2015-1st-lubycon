@@ -124,7 +124,8 @@
         display: block;
         text-align: center;
         border-radius: 3px;
-        padding: 5px 0px;
+        padding: 10px 0px;
+        margin: 10px 0px;
     }
     #lang_plus i{
         font-size:23px;
@@ -140,7 +141,8 @@
         display: block;
         text-align: center;
         border-radius: 3px;
-        padding: 5px 0px;
+        padding: 10px 0px;
+        margin: 10px 0px;
     }
     .lang_minus i{
         font-size:23px;

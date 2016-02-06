@@ -1,3 +1,4 @@
+
 $(function () //account setting script
 {
     
@@ -71,10 +72,15 @@ $(function () //account setting script
     */
 
     var i = 1;
-    $('#lang_plus').click(function () //clone language div and change id
+    $(document).ready(function ()
     {
+        $("#lang_minus_id").hide();
+    });
+    $(document).on("click touchend", "#lang_plus", function (event) //clone language div and change id
+    {
+        eventHandler(event, $(this));
         if (i < 4) {
-            var lang_div = '<div id="lang_clone' + i + '"><div id="lang_option_' + i + '" class="language_option"><select class="basic_filter" name="lang_ability[]"><option value="Beginer">Beginer</option><option value="Advanced">Advanced</option><option value="Fluent">Fluent</option><option value="Native">Native</option></select></div><input id="lang_input_' + i + '" class="language_text" name="language[]" type="text"><span id="lang_minus_id" class="lang_minus"><i class="fa fa-minus"></i></span></div>';
+            var lang_div = '<div id="lang_clone' + i + '"><div id="lang_option_' + i + '" class="language_option"><select class="basic_filter" name="lang_ability[]"><option value="Beginer">Beginer</option><option value="Advanced">Advanced</option><option value="Fluent">Fluent</option><option value="Native">Native</option></select></div><input id="lang_input_' + i + '" class="language_text" name="language[]" type="text"></div>';
             $("#clone_div").append(lang_div);
             $(".basic_filter").selectOrDie
                 ({
@@ -82,18 +88,24 @@ $(function () //account setting script
                     customID: "custom",
                     size: 5
                 });
+            $("#lang_minus_id").show();
             i++; //int plus
-        }
-        else{
-            alert("Sorry, You can not add language more than 4 things.");
-            i = i;
-            return true;
+
+            if (i == 4) {
+                $("#lang_plus").hide();
+            }
         }
     });
 
-    $(document).on("click", ".lang_minus", function () {
-        $(this).parent().remove();
+    $(document).on("click touchend", ".lang_minus", function (event) {
+        eventHandler(event, $(this));
+        $("#lang_plus").show();
+        $("#clone_div > div:last-child").remove();
         i--; //int minus
+        if( i == 1 )
+        {
+            $("#lang_minus_id").hide();
+        }
         // clone div remove
     });
 
