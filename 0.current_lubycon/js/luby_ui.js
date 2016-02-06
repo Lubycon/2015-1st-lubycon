@@ -165,7 +165,7 @@ $(window).on("load",function(){
                                     console.log("this is star");
                                 break;
                                 case "like_bt" :
-                                    $(this).find("i").css('color', '#ec6446');
+                                    $(this).find("i").css('color', '#48cfad');
                                     toggle_count = 1;
                                     console.log("this is heart");
                                 break;

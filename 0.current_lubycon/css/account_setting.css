@@ -110,8 +110,7 @@
         font-weight: 200;
     }
         .setting_card #change_pass:hover{
-            background: #48cfad;
-            color: #ffffff;
+            color: #48cfad;
             border: 1px solid #48cfad
         }
 

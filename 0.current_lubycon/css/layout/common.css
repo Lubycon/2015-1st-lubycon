@@ -82,7 +82,10 @@ body{
 
 /*----------------------------------------------------------scroll bar end*/
 /* main header start */
-
+#luby-logo{
+    -webkit-filter: grayscale(100%);
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
+}
 /* popup end */
 
 .dark_overlay {
@@ -1126,7 +1129,7 @@ body{
         .contents_overlay li {
             float:left;
             color:#fff;
-            font-size:18px;
+            font-size: 16px;
             font-weight: 200;
             margin-right:10px;
             margin-left:10px;
@@ -1148,7 +1151,7 @@ body{
             float:right;
         }
         .contents_overlay .contents_like_li i{
-            color:#F15620;
+            color:#48cfad;
         }
     .contents_pic{
         height:215px;
@@ -1691,7 +1694,7 @@ body{
 
     .table_like .fa-heart {
         font-size: 16px;
-        color: #ffffff;
+        color: #48cfad;
     }
 
 .table_view {
