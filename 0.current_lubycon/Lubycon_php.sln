@@ -12,6 +12,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lubycon_php", "Lubycon_php"
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "php", "php", "{DAEE0839-5F41-492F-95AB-58A345B7C2AE}"
+	ProjectSection(SolutionItems) = preProject
+		..\contents_data\contents_data.php = ..\contents_data\contents_data.php
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "account", "account", "{EB38E6BD-6829-4E8C-8594-BEEC354919CB}"
 	ProjectSection(SolutionItems) = preProject
@@ -156,13 +159,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "layout", "layout", "{79EDE1
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "layout", "layout", "{95A2715A-1E5C-45E2-A385-A4B1032CE2F9}"
 	ProjectSection(SolutionItems) = preProject
-		php\layout\artist_card.php = php\layout\artist_card.php
 		php\layout\comment.php = php\layout\comment.php
 		php\layout\community_card.php = php\layout\community_card.php
 		php\layout\content_card.php = php\layout\content_card.php
+		php\layout\creator_card.php = php\layout\creator_card.php
 		php\layout\follower_card.php = php\layout\follower_card.php
 		php\layout\index_forum.php = php\layout\index_forum.php
-		php\layout\pager.php = php\layout\pager.php
+		php\layout\mb_contents_card.php = php\layout\mb_contents_card.php
 		php\layout\personal_menu.php = php\layout\personal_menu.php
 	EndProjectSection
 EndProject
@@ -197,6 +200,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "chart", "chart", "{4A844A4F
 		js\chart\serial.js = js\chart\serial.js
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "creators_page", "creators_page", "{B5BAB6CF-31EF-4F58-AB26-627D58D8B67D}"
+	ProjectSection(SolutionItems) = preProject
+		php\creators_page\creators.php = php\creators_page\creators.php
+		php\creators_page\user_ranking.php = php\creators_page\user_ranking.php
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -219,5 +228,6 @@ Global
 		{47A72F42-267F-46A1-83F9-784BC9FB8B66} = {DAEE0839-5F41-492F-95AB-58A345B7C2AE}
 		{15C9771D-A4D8-4999-BB4D-670E36973F1D} = {DAEE0839-5F41-492F-95AB-58A345B7C2AE}
 		{4A844A4F-BD40-4012-B242-753595699D6D} = {F4657569-6E1C-48D8-8BE1-96250A2CB5CA}
+		{B5BAB6CF-31EF-4F58-AB26-627D58D8B67D} = {DAEE0839-5F41-492F-95AB-58A345B7C2AE}
 	EndGlobalSection
 EndGlobal

@@ -1,10 +1,13 @@
 <li class="creator_card_in">
     <?php
-        $username = "Admin_User";
-        $user_img_url = "./ch/img/no_img/no_img_user1.jpg";
+        @include('../contents_data/contents_data.php');
+        $number = $_GET["number"];
+
+        $user_img_url = "../contents_data/artworkjpg/profile/".$number.".jpg";
         $user_location_img = "./ch/img/flag_icons/United-States-Of-America.png";
-        $userjob = "Job";
-        $contents_count = 256;
+        $username = $artwork_author;
+        $userjob = $jobarray[$number];
+        $contents_count = rand(150, 300);
     ?><!--you should change to mySQL later-->
     <div class="creators_card">
         <div class="creator_menu">
@@ -27,7 +30,7 @@
             </div>
         </div>
         <div class="creator_mid_info">
-            <p class="creator_name"><?=$username?></p><!--user name-->
+            <p class="creator_name"><?=$username[$number]?></p><!--user name-->
             <p class="creator_job"><?=$userjob?></p><!--job-->
         </div>
         <div class="creator_bot_info">

@@ -57,12 +57,13 @@
         <section class="con_wrap">
             <div id="user_view_aside" class="con_aside">
                 <?php 
-                    $username = "Admin_User";
-                    $userjob = "Job";
-                    $usercity = "City";
-                    $usercountry = "Country";
-                    $language1 = "language1";
-                    $language2 = "language2";
+                    $user_img_url = "../contents_data/artworkjpg/profile/57.jpg";
+                    $username = "daniel zepp";
+                    $userjob = "Designer";
+                    $usercity = "Seoul";
+                    $usercountry = "South Korea";
+                    $language1 = "Korean";
+                    $language2 = "English";
                     
                 ?>
                 <i id="myinfo_setting" class="fa fa-bars hidden-mb-b"></i>
@@ -76,7 +77,7 @@
                 </div>
                 <div id="myinfo_main">
                     <figure>
-                        <img src="./ch/img/no_img/no_img_user1.jpg">
+                        <img src="<?=$user_img_url?>">
                     </figure>
                     <h4><?=$username?></h4>
                 </div>
@@ -103,6 +104,7 @@
                     </li>
                     <?php
                         for($i=0;$i<60;$i++){
+                            $_GET["number"] = $i;
                             include('php/layout/creator_card.php');
                         }
                     ?>
