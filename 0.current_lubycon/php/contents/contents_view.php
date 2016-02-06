@@ -15,9 +15,9 @@ $usercountry = "Country";
 
 $file_descript = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.";
 
-$file_view = 0;
-$file_down = 0;
-$file_like = 0;
+$file_view = rand(1, 300);
+$file_down = rand(1, 100);
+$file_like = rand(1, 30);
 
 switch($current_url)
 {

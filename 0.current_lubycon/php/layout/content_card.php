@@ -17,9 +17,9 @@
         $price = "Free";
         $contents_thumb_url = "../contents_data/".$current_url."jpg/thumb/".$number.".jpg";
         $user_img_url = "../contents_data/".$current_url."jpg/profile/".$number.".jpg";
-        $like_num = 0;
-        $view_num = 0;
-        $comment_num = 0;
+        $like_num = rand(1, 30);
+        $view_num = rand(1, 400);
+        $comment_num = rand(0, 10);
     ?><!--you should change to mySQL later-->
     <div class="contents_card">
         <div class="contents_pic">
