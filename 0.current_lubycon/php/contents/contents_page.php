@@ -39,17 +39,6 @@
                 }
             ?>
             <div class="lubySelector hidden-mb-ib">
-                <span class="global_icon"><i class="fa fa-usd"></i></span>
-                <span class="lubySelector_selected">All</span>
-                <span class="lubySelector_arrow"><i class="fa fa-caret-down"></i></span>
-                <ul class="lubySelector_list">
-                    <li class="selected_li">All</li>
-                    <li>Free</li>
-                    <li>Free for personal</li>
-                    <li>Paid</li>
-                </ul>
-            </div><!--pay selector end-->
-            <div class="lubySelector hidden-mb-ib">
                 <span class="global_icon"><i class="fa fa-filter"></i></span>
                 <span class="lubySelector_selected">Featured</span>
                 <span class="lubySelector_arrow"><i class="fa fa-caret-down"></i></span>

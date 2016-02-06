@@ -228,25 +228,21 @@ function hideAlert(){
 $(function(){
     $(".lubySelector").each(function(){
         var toggle_count = 0;
-        var option_list = [];//make option list array
+        var option_list = [];
         $(this).find(".global_icon").addClass("hidden-mb-ib");
-        $(this).find(".lubySelector_list li").each(function(){//make option list array
+        $(this).find(".lubySelector_list li").each(function(){
             option_list.push($(this).text().replace(/ /gi, ''));
             //It will be push to array after removed all spaces  
         });
-        $(this).after("<select class='original_box'>");//make select box after lubySelector  
-        for(var i = 0; i < option_list.length; i++){//make options in select box
+        $(this).after("<select class='original_box'>");
+        for(i in option_list){
             $(this).next(".original_box").append("<option value="+option_list[i]+">"+option_list[i]+"</option>");
-            //i = Array's index
         };
         $(".original_box").hide();//original select box will be hide
         $(".original_box").change(function(){
             var lubySelectbox = $(this).prev(".lubySelector").find(".lubySelector_selected");
             var original_value = $(this).val();
             lubySelectbox.text(original_value.toString());
-            $(this).prev(".lubySelector").find($(".lubySelector_list")).stop().fadeOut(300);
-            $(this).prev(".lubySelector").css("background","#555555");
-            $(this).prev(".lubySelector").find($(".lubySelector_arrow")).children("i").attr("class","fa fa-caret-down");
             $(this).hide();
             toggle_count = 0;    
         });
@@ -256,6 +252,7 @@ $(function(){
                 switch(toggle_count){
                     case 0 :
                         if(windowWidth > 1024){
+                            $(this).find($(".lubySelector_arrow")).children("i").attr("class","fa fa-caret-down");
                             $(this).find($(".lubySelector_list")).stop().fadeIn(300);
                             $(this).css("background","#333333");
                             $(this).find($(".lubySelector_arrow")).children("i").attr("class","fa fa-caret-up");
@@ -264,7 +261,6 @@ $(function(){
                             $(this).next(".original_box").show().trigger("focus");
                         }
                         toggle_count = 1;
-                        console.log(toggle_count);
                         return true;
                     break;
 
@@ -278,7 +274,6 @@ $(function(){
                             $(this).next(".original_box").hide().trigger("blur");
                         }
                         toggle_count = 0;
-                        console.log(toggle_count);
                         return true;
                     break;
 
@@ -312,7 +307,6 @@ $(function(){
             $(event.target).parents(".lubySelector").next(".original_box").val(selected_option);
             $(event.target).siblings("li").removeClass();
             $(event.target).addClass("selected_li");
-            console.log("hidden_selector value is " + "'" + $(event.target).parents(".lubySelector").next(".original_box").val() + "'");
         });
     });//each end
 });
