@@ -116,25 +116,33 @@
         }
 
     #lang_plus{
-        border:none;
-        background:none;
-        position: absolute;
-        margin-top: 18px;
-        margin-left: 22px;
-        cursor:pointer;
+        border: medium none;
+        cursor: pointer;
+        width: 100%;
+        max-width: 300px;
+        background: #6B6B6B;
+        display: block;
+        text-align: center;
+        border-radius: 3px;
+        padding: 10px 0px;
+        margin: 10px 0px;
     }
     #lang_plus i{
         font-size:23px;
-        color:#6b6b6b;
+        color:#48cfad;
         vertical-align:middle;
     }
     .lang_minus{
-        border:none;
-        background:none;
-        position: absolute;
-        margin-top: 18px;
-        margin-left: 22px;
-        cursor:pointer;
+        border: medium none;
+        cursor: pointer;
+        width: 100%;
+        max-width: 300px;
+        background: #6B6B6B;
+        display: block;
+        text-align: center;
+        border-radius: 3px;
+        padding: 10px 0px;
+        margin: 10px 0px;
     }
     .lang_minus i{
         font-size:23px;
