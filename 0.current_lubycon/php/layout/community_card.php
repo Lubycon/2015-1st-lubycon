@@ -12,7 +12,7 @@ echo "<li class='table_list'>
     <div class='table_list_inner'>
         <span class='table_number_wrap hidden-mb-ib'>
             <span class='table_blank'><i class='fa fa-circle' id='{$current_url}_circle'></i></span>   <!-- space -->
-            <span class='table_number'>{$i}</span>   <!-- number -->
+            <span class='table_number'>{$j}</span>   <!-- number -->
         </span>
         <span class='table_user_img'>
             <img src='{$userimg}'>
