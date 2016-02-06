@@ -2,18 +2,18 @@ $(function () //account setting script
 {
     
 
-    $('#Change_pass').click(function () //change pass remove attr
+    $('#change_pass').click(function () //change pass remove attr
     {
         if($('#now_pass_id').attr('disabled'))
         {
             $('#now_pass_id , #pass_id ,#re_pass_id').removeAttr('disabled');
-            $('#Change_pass').text('Not Change Password');
-            $('#Change_pass').css({'background':'#c1c1c1 ','margin-left':'65px'});
+            $('#change_pass').text('Not change Password');
+            $('#change_pass').css({'background':'#c1c1c1 ','margin-left':'65px'});
         }else
         {
             $('#now_pass_id , #pass_id ,#re_pass_id').attr('disabled', 'disabled');
-            $('#Change_pass').text('Change Password');
-            $('#Change_pass').css({ 'background': '#48CFAD ', 'margin-left': '75px' });
+            $('#change_pass').text('change Password');
+            $('#change_pass').css({ 'background': '#48CFAD ', 'margin-left': '75px' });
             $('#now_pass_id , #pass_id ,#re_pass_id').val('').css({ 'border-left': '2px solid #D5D5D5', 'width': '190px' }).next().removeClass();
             $('#pass_check, #now_pass_check').text('').show();
         }

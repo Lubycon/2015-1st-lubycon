@@ -584,7 +584,7 @@
             font-size: 13px;  
         }
         .mobile_i{
-            margin-right: 3px;
+            margin-right: 5px;
             color: #444444 !important;
         }
     .table_counts{
@@ -697,7 +697,26 @@
     .x2_inner .dash_body_content{
         text-align: center;
     }
-        
+
+
+    .setting_card{
+        padding: 10px;
+    }
+    .setting_card p{
+
+    }
+        .setting_card label{
+
+        }
+        .setting_card input{
+            width: 90%;
+            margin: 0px auto;
+            margin-bottom: 10px;
+        }
+    .public_option{
+        display: block;
+        position:relative;
+    }
 }
 /*------------------------------------------------mobile end-------*/
 /*---------------------------------------------desktop start-------*/
@@ -1087,6 +1106,22 @@
     .x2_inner .dash_body_content{
         padding-left: 15px;
         text-align: left;
+    }
+    .setting_card{
+        padding:15px 20px;
+    }
+    .setting_card p{
+
+    }
+        .setting_card label{
+
+        }
+        .setting_card input{
+            width: 300px;
+        }
+    .public_option{
+        display: inline-block;
+        margin-left: 67px;
     }
 }
 /*------desktop end-------*/
