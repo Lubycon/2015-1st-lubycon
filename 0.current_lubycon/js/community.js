@@ -36,7 +36,7 @@ $(function(){
 $(function(){
     if($("#write_bt").length != 0){
         if("length true");
-        $("#write_bt").parent("a").on("click touchend", function(event){
+        $("#write_bt").on("click touchend", function(event){
             eventHandler(event,$(this));
             var url = "./index.php?1=community&2=community_write";    
             $(location).attr('href',url);

@@ -1007,7 +1007,7 @@
         .table_date{
             text-align: center;
         }
-    #write_bt{
+    .write_bt{
         bottom: 20px;
         right: 40px;
     }
