@@ -150,51 +150,56 @@ $(window).on("load",function(){
     setTimeout(function(){
         $(".lubyAlert_bt").each(function(){
             var toggle_count = 0;
-            $(this).on("click touchend", function(){
-                eventHandler(event, $(this));
-                var thisId = $(this).attr("id");
-                var alertObject = $(document).find("#"+thisId.toString()+"Alert");
-                switch(toggle_count){
-                    case 0:
-                        switch(thisId){
-                            case "bookmark_bt" :
-                                $(this).css("color","#ffbe54");
-                                $(this).find("i").css('color', '#ffbe54');
-                                toggle_count = 1;
-                                console.log("this is star");
-                            break;
-                            case "like_bt" :
-                                $(this).find("i").css('color', '#ec6446');
-                                toggle_count = 1;
-                                console.log("this is heart");
-                            break;
-                            case "confirm_bt" :
-                                toggle_count = toggle_count;
-                                $(".dark_overlay").fadeIn(200);
-                                console.log("this is confirm");
-                            break;
-                            default: return false; break;
-                        }
-                        alertObject.stop().fadeIn(700,function(event){ 
-                            if(alertObject.attr("id") != "confirm_btAlert"){
-                                hideAlert();
-                                console.log(toggle_count);
-                                return true; 
+            $(this).on("click touchend", function (event){
+                if(!dragging){
+                    eventHandler(event, $(this));
+                    var thisId = $(this).attr("id");
+                    var alertObject = $(document).find("#"+thisId.toString()+"Alert");
+                    switch(toggle_count){
+                        case 0:
+                            switch(thisId){
+                                case "bookmark_bt" :
+                                    $(this).css("color","#ffbe54");
+                                    $(this).find("i").css('color', '#ffbe54');
+                                    toggle_count = 1;
+                                    console.log("this is star");
+                                break;
+                                case "like_bt" :
+                                    $(this).find("i").css('color', '#ec6446');
+                                    toggle_count = 1;
+                                    console.log("this is heart");
+                                break;
+                                case "confirm_bt" :
+                                    toggle_count = toggle_count;
+                                    $(".dark_overlay").fadeIn(200);
+                                    console.log("this is confirm");
+                                break;
+                                default: return false; break;
                             }
-                            else if(alertObject.attr("id") === "confirm_btAlert"){
-                                return true;
-                            }
-                        });
-                    break;
-                    case 1:
-                        $(this).css("color","#cccccc");
-                        $(this).find("i").css('color', '#cccccc');
-                        toggle_count = 0;
-                        console.log(toggle_count);
-                        return true;
-                    break;
-                    default: return false; break;
-                }//switch end
+                            alertObject.stop().fadeIn(700,function(event){ 
+                                if(alertObject.attr("id") != "confirm_btAlert"){
+                                    hideAlert();
+                                    console.log(toggle_count);
+                                    return true; 
+                                }
+                                else if(alertObject.attr("id") === "confirm_btAlert"){
+                                    return true;
+                                }
+                            });
+                        break;
+                        case 1:
+                            $(this).css("color","#cccccc");
+                            $(this).find("i").css('color', '#cccccc');
+                            toggle_count = 0;
+                            console.log(toggle_count);
+                            return true;
+                        break;
+                        default: return false; break;
+                    }//switch end
+                }
+                else if(dragging){
+                    return;
+                } 
             });//click end
         });//each end
     },1);//setTimeout end  
@@ -246,7 +251,7 @@ $(function(){
             $(this).hide();
             toggle_count = 0;    
         });
-        $(this).on("click touchend",function (e){
+        $(this).on("click touchend",function (event){
             eventHandler(event, $(this));
             if(!dragging){
                 switch(toggle_count){
