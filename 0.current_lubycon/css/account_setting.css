@@ -1,15 +1,14 @@
 ﻿@charset "utf-8";
 
 .sod_select.custom.custom{
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     margin-top: 10px;
 }
 .sod_select.custom .sod_list_wrapper{
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
 }
-
-
-
 
 #confirm_alert {
     width: 400px;
@@ -48,6 +47,8 @@
             -moz-box-sizing: border-box;
         }
         .setting_card input{
+            width: 100%;
+            max-width: 300px;
             height: 40px;
             border:1px solid #aaa;
             border-radius: 3px;
@@ -84,15 +85,15 @@
             margin-left: 10px;
         }
     .form_check{
-            color:#ea4126;
-            font-size: 12px !important;
-            margin-left: 140px;
-            margin-top: -16px;
-            margin-bottom:0px !important;
-            display:none;
-            height: 16px;
-            line-height: 13px;
-        }
+        color:#ea4126;
+        font-size: 12px !important;
+        margin-left: 140px;
+        margin-top: -16px;
+        margin-bottom:0px !important;
+        display:none;
+        height: 16px;
+        line-height: 13px;
+    }
 
     .setting_card #change_pass{
         display: inline-block;
@@ -156,16 +157,18 @@
         cursor:pointer;
     }
     #basic_desc{
-        width: 300px;
+        width: 100%;
+        max-width: 300px;
         height: 250px;
-
-        min-width:300px;
         max-width:300px;
         min-height:29px;
         margin-bottom:10px;
         border-radius: 3px;
         border:1px solid #999;
         resize:none;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
     }
         #basic_desc:focus{
             border:1px solid #48cfad;
