@@ -443,10 +443,9 @@
         .creator_mid_info {
             margin-top: 5px;
         }
-            .creator_name {
+            .creator_name a{
                 text-align: left;
                 font-size: 16px;
-                font-weight: 600;
             }
             .creator_job{
                 text-align: left;
@@ -884,7 +883,7 @@
     .creator_mid_info {
         margin-top: 20px;
     }
-        .creator_name {
+        .creator_name a{
             text-align: center;
             font-size: 18px;
         }

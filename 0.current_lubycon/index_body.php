@@ -221,7 +221,7 @@
                     <ul>
                         <li id="creator_name">SsaRu</li>
                         <li id="creator_job">Engineer</li>
-                        <li id="creator_location"><i class="fa fa-home"></i><p>Seoul, South korea</p></li>
+                        <li id="creator_location"><i class="fa fa-map-marker"></i><p>Seoul, South korea</p></li>
                     </ul>
                 </div>
             </div>

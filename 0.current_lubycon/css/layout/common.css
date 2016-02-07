@@ -1512,9 +1512,16 @@ body{
             text-align: left;
         }
         .creator_name {
-            color: #444444;
-            font-weight: 600;
-        }
+            
+        }   
+            .creator_name a{
+                color: #444444;
+                font-weight: 600;
+            }
+            .creator_name a:hover{
+                text-decoration: underline;
+                color: #48cfad;
+            }
         .creator_job{
             color: #444444;
             font-size: 16px;
@@ -1880,7 +1887,7 @@ body{
         width: 30px !important;
     }
 .dropdown-toggle .caret{
-    display: none;
+    
 }
 .note-popover .popover-content .note-color .dropdown-toggle, .panel-heading.note-toolbar .note-color .dropdown-toggle {
     padding-left: 10px !important;

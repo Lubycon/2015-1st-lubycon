@@ -37,8 +37,17 @@ $(function () {
 /////////////////////////////////////////////////////////
 //      editor aside tab end
 /////////////////////////////////////////////////////////
-
-
+/////////////////////////////////////////////////////////
+//      change tool box icon start
+/////////////////////////////////////////////////////////
+$(function(){
+    var caret = $(".note-toolbar panel-heading").find(".caret");
+    caret.attr("class","fa fa-plus");
+    console.log(true);
+});
+/////////////////////////////////////////////////////////
+//      change tool box icon end
+/////////////////////////////////////////////////////////
 
 
 
@@ -60,26 +69,6 @@ $(function () {
         }
     });
 });
-//////////text input auto resize start-------/////////
-/*function Expander() {
-    this.start = function () {
-        $("#editor_content_name").keydown(function(e) {
-            this.style.width = 0;
-            var newWidth = this.scrollWidth + 5;
-            
-            if( this.scrollWidth >= this.clientWidth ){
-                newWidth += 5;
-                this.style.width = newWidth + 'px';
-            }
-        });
-    }
-}
-
-$(function() {
-    window.app = new Expander();
-    window.app.start();
-});*/
-//////////text input auto resize end-------/////////
 /////////////////////////////////////////////////////////
 //      editor content_name end
 /////////////////////////////////////////////////////////
@@ -217,405 +206,180 @@ function editor_gnv_select(gnv_sel) {
             break;
     }
 };
-/* gnv function
-$(document).ready(function () {
-    editor_gnv_select("setting");
-});
-*/
-
 $(function () {
-    /////////////////////////////////////////////////////////
-    //      img crop start
-    /////////////////////////////////////////////////////////
-    /*
-    $(document).on('click', '.preview_img', function () {
-        if ($(this).css('border') == '1px solid rgb(255, 255, 255)') {
-            $(this).css({ "background": "rgb(255, 255, 255)" }); //css reset
-            $(this).css({ "box-shadow": "0px 0px 5px rgba(72, 203, 173, 1)" });
-            $(this).removeAttr('id'); // remove all id
-
-            $(this).css({ "border": "1px solid #48cfad" });
-            $(this).attr('id', 'selected_img');
-
-            $('#img_crop').removeClass('img_crop_notallow'); //img crop bt able
-        } else {
-            $(this).css({ "border": "1px solid #ffffff" });
-            $(this).css({ "box-shadow": "none" });
-            $('#img_crop').addClass('img_crop_notallow'); //img crop bt disable
-        }
-    });
-    */
     $(".contents_overlay").remove(); //remove contents card overlay
-    /////////////////////////////////////////////////////////
-    //      img crop end
-    /////////////////////////////////////////////////////////
-
-    /////////////////////////////////////////////////////////
-    //      editor_upload_file start
-    /////////////////////////////////////////////////////////
-    
     $('#editor_upload_file').click(function () { //upload file window open
         $('#upload_file_input').click();
     });
-
-    /*
-    ajax start
-    $(function ()
-    {
-        $('#upload_file_input').change(function ()
+/////////////////////////////////////////////////////////
+//      editor nav end
+/////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+//      add text 
+/////////////////////////////////////////////////////////
+    $('#summernote').summernote({
+        height: $(window).height() + 100,
+        minHeight: null,
+        maxHeight: null,
+        focus: true,
+        placeholder: '...make your preview image on here...',
+        toolbar: [
+            // [groupName, [list of button]]
+            ['style',['style']],
+            ['fontsize', ['fontsize']],
+            ['style', ['bold', 'italic', 'underline', 'strikethrough', 'clear']],              
+            ['color', ['color']],
+            ['para', ['paragraph']],
+            ['insert', ['picture', 'video', 'link', 'table', 'hr']],
+            ['misc', ['help']]
+        ],
+        callbacks:
         {
-            upload_File_ajax();
-        });
+            onImageUpload: function (files, editor, welEditable)
+            {
+                for ( var i = files.length - 1 ; i >= 0 ; i-- )
+                {
+                    sendFile(files[i], this);
+                    console.log(files[i]);
+                }
+            }
+        }
     });
 
-    function upload_File_ajax()
+    function sendFile(file, el)
     {
-        var form = $("#editor_form")[0];
-        var formData = new FormData(form);
-        $.ajax
-        ({
-            url: "php/ajax/editor_fileupload.php",
-            processData: false,
-            contentType: false,
-            data: formData,
+        var form_data = new FormData();
+        form_data.append('file', file);
+        $.ajax({
+            data: form_data,
             type: "POST",
             dataType: 'json',
+            url: './php/editor/imageUpload.php',
             cache: false,
-            success: function (data)
+            contentType: false,
+            processData: false,
+            success: function (url)
             {
-                console.log('upload succece');
-                //console.log(args); arg is uploaded file name
-                $("#file_info_filename").text(data["filename"]); //uploaed file name
-                $("#file_info_filesize").text(data["filesize"] + "byte"); //uploaded file size
-                $("#file_info_fileinside").html(""); //reset box
-                for (var i = 0; i < data["zip_inside"].length; i++) { //uploaded zip inside data
-                    var for_array = "<li>" + data["zip_inside"][i] + "</li>";
-                    $("#file_info_fileinside").append(for_array);
-                    
-                    if( i >= 10 )
-                    {
-                        $("#file_info_fileinside").append("<li>..........</li>");
-                        break;
-                    };
-                };
-                $("#file_info_fileinside").append("<li>uploaded zip file in " + data["zip_inside"].length + " files</li>");
-                file_info_slidedown(); //file_info slide_down function
-            },
-            error: function (data)
-            {
-                console.log('upload fail');
-                $('#editor_form').trigger("reset");
-            },
-        })
+                $(el).summernote('editor.insertImage', url["file_path"]);
+                $("#editor_form").append("<input type='hidden' name='contents_image[]' value='" + url["file_name"] + "'>");
+            }
+        });
     }
-    */
+    //summernote end
+    var postForm = function ()
+    { // summernote submit event
+        var content = $('textarea[name="content"]').html($('#summernote').code());
+    }
+/////////////////////////////////////////////////////////
+//      add text end
+/////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+//      text color picker start
+/////////////////////////////////////////////////////////
+$(document).on('focus', '.editor_body_text', function () // text editor focus view
+{
+    $(this).next('.textarea_editor').stop().fadeIn(200);
+    $(this).parent(".contents_div").css("background","rgba(255,255,255,0.1)");
+});
+$(document).on("blur",".editor_body_text", function(){
+    $(this).next(".textarea_editor").stop().fadeOut(200);
+    $(this).parent(".contents_div").css("background","none");
+})
 
+$(document).on('click', '.color_picker > ul > li', function () //change text color change
+{
+    $(this).parents('.textarea_editor').prev('.editor_body_text').css({ "color": $(this).text() });
+    $(this).parent('ul').prev('.selected_color').css({ "background": $(this).text() });
+    $(this).parent('ul').hide();
+});
 
-    /////////////////////////////////////////////////////////
-    //      editor_upload_file end
-    /////////////////////////////////////////////////////////
+$(document).ready(function () { //outside click toggle
+    $(document).click(function (e) {
+        var subject = $(".text_editor");
 
-    /////////////////////////////////////////////////////////
-    //      preview img start 
-    /////////////////////////////////////////////////////////
-
-    /*
-    $('#editor_preview_upload').click(function () { //preview image window open
-        $('#preview_upload_input').click();
+        if (e.target.id != subject.attr('id') && !subject.has(e.target).length) {
+            $('.textarea_editor').stop().fadeOut(200);
+        }
     });
+});
 
-    $('#preview_upload_input').on('change', function (e) //preview image upload
-    {
-        var files = e.target.files;
+$(document).on('click', '.selected_color', function () //color picker toggle
+{
+    $(this).next('ul').toggle();
+});
 
-        $.each(files, function (i, file) {
-            var reader = new FileReader();
-            reader.readAsDataURL(file);
-            reader.onload = function (e) {
-
-                var template = '<li class="preview_img">' +
-                               '<div id="contents_div" class="contents_div">' +
-                               '<img src="' + e.target.result + '">' +
-                               '<button type="button" class="con_delete_bt"><i class="fa fa-times"></i></button>' +
-                               '</div>' +
-                               '</li>'
-
-                $('#editor_section ul').append(template);
-            };
-        });
+$(document).on('click', '.color_picker', function () // color picker palete making
+{
+    $('.color_picker > ul > li').each(function () {
+        $(this).css("background", $(this).text());
     });
-    */
-    /////////////////////////////////////////////////////////
-    //      editor nav end
-    /////////////////////////////////////////////////////////
+});
+/////////////////////////////////////////////////////////
+//      text color picker end
+/////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+//      text editor tools end
+/////////////////////////////////////////////////////////
 
-    /////////////////////////////////////////////////////////
-    //      embed midea 
-    /////////////////////////////////////////////////////////
-    /*
-    $('#embed_media').click(function () { // embed code window load
-        $('.dark_overlay').stop().fadeIn(100);
-        $('#embed_popup').stop().fadeIn(100);
-    });
+/////////////////////////////////////////////////////////
+//      editor next contents call ajax start
+/////////////////////////////////////////////////////////
+$(document).on('click', '.next_bt', function () {
+    var check_id = $(this).attr('id');
+    //console.log(check_id);
 
+    editor_gnv_select(check_id);
 
-    $('.mic_next_bt').click(function () // embed code event
-    {
-        var embed_midea =
-            '<li class="embed_contents">' +
-            $('#embed_textarea').val() +
-            '<button type="button" class="con_delete_bt"><i class="fa fa-times"></i></button>' +
-            '</li>'
+    $.ajax({
+        type: "POST",
+        url: "php/ajax/editor_ajax.php",
+        data: "check_id=" + check_id,
+        cache: false,
+        success: function (data) {
+            /* call php data */
+            $('#next_pop_body').html('').append(data).fadeIn(300).css('display', 'inline-block');
 
-        $('#editor_preview_box').append(embed_midea);
-        $('#embed_popup').hide();
-        $('.dark_overlay').hide();
-    });
-    */
-    /////////////////////////////////////////////////////////
-    //      embed midea 
-    /////////////////////////////////////////////////////////
+            /* remove contents card event */
+            $('#tnail_preview ul li .load_view').removeClass('load_view');
+            $('#tnail_preview ul li a').removeAttr('href');
 
-    /////////////////////////////////////////////////////////
-    //      add text 
-    /////////////////////////////////////////////////////////
-        $('#summernote').summernote({
-            height: $(window).height() + 100,
-            minHeight: null,
-            maxHeight: null,
-            focus: true,
-            placeholder: '...make your preview image on here...',
-            toolbar: [
-                // [groupName, [list of button]]
-                ['style',['style']],
-                ['fontsize', ['fontsize']],
-                ['style', ['bold', 'italic', 'underline', 'strikethrough', 'clear']],              
-                ['color', ['color']],
-                ['para', ['paragraph']],
-                ['insert', ['picture', 'video', 'link', 'table', 'hr']],
-                ['misc', ['help']]
-            ],
-            callbacks:
-            {
-                onImageUpload: function (files, editor, welEditable)
-                {
-                    for ( var i = files.length - 1 ; i >= 0 ; i-- )
-                    {
-                        sendFile(files[i], this);
-                        console.log(files[i]);
-                    }
-                }
-            }
-        });
-
-        function sendFile(file, el)
-        {
-            var form_data = new FormData();
-            form_data.append('file', file);
-            $.ajax({
-                data: form_data,
-                type: "POST",
-                dataType: 'json',
-                url: './php/editor/imageUpload.php',
-                cache: false,
-                contentType: false,
-                processData: false,
-                success: function (url)
-                {
-                    $(el).summernote('editor.insertImage', url["file_path"]);
-                    $("#editor_form").append("<input type='hidden' name='contents_image[]' value='" + url["file_name"] + "'>");
-                }
+            /* js align center */
+            $('#next_pop_body').css('marginLeft', function () {
+                return $(this).width() / -2;//set width
             });
+
+            /* select box call function */
+            $(".basic_filter").selectOrDie
+            ({
+                customClass: "custom",
+                customID: "custom",
+                size: 5
+            });
+            $('.dark_overlay').fadeIn(300);
+
+            /* change card title to user type text */
+            $(".contents_title").text($("#editor_content_name").val());
         }
-        //summernote end
-        var postForm = function ()
-        { // summernote submit event
-            var content = $('textarea[name="content"]').html($('#summernote').code());
-        }
-    /////////////////////////////////////////////////////////
-    //      add text end
-    /////////////////////////////////////////////////////////
-
-    /////////////////////////////////////////////////////////
-    //      delete bt hover start
-    /////////////////////////////////////////////////////////
-    /*
-    $(document).on('mouseenter', '.text_editor', function () // textarea delete bt hover
-    {
-        $(this).find('.con_delete_bt , .con_move_bt').stop().fadeIn(150);
-        $(this).children('.contents_div').css({ "border": "1px solid #d1d1d1" });
     });
-    $(document).on('mouseleave', '.text_editor', function () // textarea delete bt hover
-    {
-        $(this).find('.con_delete_bt, .con_move_bt').stop().fadeOut(150);
-        $(this).children('.contents_div').css({ "border": "none" });
-    });
+});
 
+$('.dark_overlay').click(function () {
+    $('.dark_overlay').stop().fadeOut(300);
+    $('#next_pop_body').stop().fadeOut(300).html('');
+    editor_gnv_select("edit");
+});
+$(document).on('click', '.cancel_bt, .editor_popup_cancel', function () {
+    $('.dark_overlay').stop().fadeOut(300);
+    $('#next_pop_body').stop().fadeOut(300).html('');
+    editor_gnv_select("edit");
+})
+$(document).on("click","#back_bt_editor", function(){
+    //please add function for go back(ajax);
+});
 
-    $(document).on('mouseenter', '.preview_img', function () // preview_img delete bt hover
-    {
-        $(this).find('.con_delete_bt').stop().fadeIn(150);
-        $(this).children('.contents_div').css({ "border": "1px solid #d1d1d1" });
-    });
-    $(document).on('mouseleave', '.preview_img', function () // preview_img delete bt hover
-    {
-        $(this).find('.con_delete_bt').stop().fadeOut(150);
-        $(this).children('.contents_div').css({ "border": "none" });
-    });
-
-
-    $(document).on('mouseenter', '.embed_contents', function () { // embed contents delete bt hover
-        $(this).children('.con_delete_bt').stop().fadeIn(150);
-        $(this).css({ "border": "1px solid #d1d1d1" });
-    });
-    $(document).on('mouseleave', '.embed_contents', function () { // embed contents delete bt hover
-        $(this).children('.con_delete_bt').stop().fadeOut(150);
-        $(this).css({ "border": "none" });
-    });
-    */
-    /////////////////////////////////////////////////////////
-    //      delete bt hover end
-    /////////////////////////////////////////////////////////
-
-    /////////////////////////////////////////////////////////
-    //      contents delete btn start
-    /////////////////////////////////////////////////////////
-    /*
-    $(document).on('click', '.con_delete_bt', function () //text area delete event
-    {
-        $(this).parents('.text_editor').fadeOut(200, function () { $(this).destroy(); });
-        $(this).parents('.embed_contents').fadeOut(200, function () { $(this).remove(); });
-        $(this).parents('.preview_img').fadeOut(200, function () { $(this).remove(); });
-    });
-    $(document).on('mouseenter', '.con_move_bt', function () //text area delete event
-    {
-        $(this).parents('.text_editor').removeClass("disabled");
-        $("#editor_preview_box").sortable({ cancel: ".disabled" });
-    });
-    $(document).on('mouseup', '.con_move_bt', function () //text area delete event
-    {
-        $('.text_editor').addClass("disabled");
-        $("#editor_preview_box li").disableSelection();
-    });
-    */
-    /////////////////////////////////////////////////////////
-    //      contents delete btn end
-    /////////////////////////////////////////////////////////
-
-    /////////////////////////////////////////////////////////
-    //      text color picker start
-    /////////////////////////////////////////////////////////
-    $(document).on('focus', '.editor_body_text', function () // text editor focus view
-    {
-        $(this).next('.textarea_editor').stop().fadeIn(200);
-        $(this).parent(".contents_div").css("background","rgba(255,255,255,0.1)");
-    });
-    $(document).on("blur",".editor_body_text", function(){
-        $(this).next(".textarea_editor").stop().fadeOut(200);
-        $(this).parent(".contents_div").css("background","none");
-    })
-
-    $(document).on('click', '.color_picker > ul > li', function () //change text color change
-    {
-        $(this).parents('.textarea_editor').prev('.editor_body_text').css({ "color": $(this).text() });
-        $(this).parent('ul').prev('.selected_color').css({ "background": $(this).text() });
-        $(this).parent('ul').hide();
-    });
-
-    $(document).ready(function () { //outside click toggle
-        $(document).click(function (e) {
-            var subject = $(".text_editor");
-
-            if (e.target.id != subject.attr('id') && !subject.has(e.target).length) {
-                $('.textarea_editor').stop().fadeOut(200);
-            }
-        });
-    });
-
-    $(document).on('click', '.selected_color', function () //color picker toggle
-    {
-        $(this).next('ul').toggle();
-    });
-
-    $(document).on('click', '.color_picker', function () // color picker palete making
-    {
-        $('.color_picker > ul > li').each(function () {
-            $(this).css("background", $(this).text());
-        });
-    });
-    /////////////////////////////////////////////////////////
-    //      text color picker end
-    /////////////////////////////////////////////////////////
-
-    /////////////////////////////////////////////////////////
-    //      text editor tools end
-    /////////////////////////////////////////////////////////
-
-    /////////////////////////////////////////////////////////
-    //      editor next contents call ajax start
-    /////////////////////////////////////////////////////////
-    $(document).on('click', '.next_bt', function () {
-        var check_id = $(this).attr('id');
-        //console.log(check_id);
-
-        editor_gnv_select(check_id);
-
-        $.ajax({
-            type: "POST",
-            url: "php/ajax/editor_ajax.php",
-            data: "check_id=" + check_id,
-            cache: false,
-            success: function (data) {
-                /* call php data */
-                $('#next_pop_body').html('').append(data).fadeIn(300).css('display', 'inline-block');
-
-                /* remove contents card event */
-                $('#tnail_preview ul li .load_view').removeClass('load_view');
-                $('#tnail_preview ul li a').removeAttr('href');
-
-                /* js align center */
-                $('#next_pop_body').css('marginLeft', function () {
-                    return $(this).width() / -2;//set width
-                });
-
-                /* select box call function */
-                $(".basic_filter").selectOrDie
-                ({
-                    customClass: "custom",
-                    customID: "custom",
-                    size: 5
-                });
-                $('.dark_overlay').fadeIn(300);
-
-                /* change card title to user type text */
-                $(".contents_title").text($("#editor_content_name").val());
-            }
-        });
-    });
-
-    $('.dark_overlay').click(function () {
-        $('.dark_overlay').stop().fadeOut(300);
-        $('#next_pop_body').stop().fadeOut(300).html('');
-        editor_gnv_select("edit");
-    });
-    $(document).on('click', '.cancel_bt, .editor_popup_cancel', function () {
-        $('.dark_overlay').stop().fadeOut(300);
-        $('#next_pop_body').stop().fadeOut(300).html('');
-        editor_gnv_select("edit");
-    })
-    $(document).on("click","#back_bt_editor", function(){
-        //please add function for go back(ajax);
-    });
-
-    /////////////////////////////////////////////////////////
-    //      editor next contents call ajax end
-    /////////////////////////////////////////////////////////
-    /////////////////////////////////////////////////////////
-    //      editor change thumbnail start
-    /////////////////////////////////////////////////////////
-    
-
-
+/////////////////////////////////////////////////////////
+//      editor next contents call ajax end
+/////////////////////////////////////////////////////////
     /////////////////////////////////////////////////////////
     //      editor change thumbnail start
     /////////////////////////////////////////////////////////

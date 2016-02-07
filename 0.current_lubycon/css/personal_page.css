@@ -174,7 +174,7 @@
 		.dash_body_content {
 			line-height: 120px;
 			color: #444444;
-			font-size: 32px;
+			font-size: 28px;
 			text-align: center;
 		}
 			.x2_inner .dash_body_content {
@@ -192,7 +192,6 @@
 			margin-top: 20px;
 		}
 #creator_month {
-    height:300px;
     overflow:hidden;
 }
 #creator_month_body{
@@ -297,7 +296,7 @@
     width:25%;
 }
 #dash_creator_placed .dash_body_content {
-    line-height:200px;
+    line-height: 276px;
 }
 #dash_creator_interview {
     width:40%;
@@ -307,14 +306,20 @@
     line-height: 25px;
     font-size: 16px;
     text-align: left;
-    margin: 76px 11px;
     margin-bottom: 0px;
+    padding: 10px;
+    box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
 }
-    #dash_creator_interview a {
+    #dash_creator_interview a{
         position: absolute;
-        bottom: 5px;
-        right: 5px;
-        color: #2A2A2A;
+        bottom: -40px;
+        right: 8px;
+        color: #444444;
+    }
+    #dash_creator_interview a:hover{
+    	opacity: 0.7;
     }
 .history_wrap {
 	width: 100%;

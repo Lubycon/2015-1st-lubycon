@@ -215,6 +215,7 @@
 }
 
 #main_board{
+    width: 100%;
     max-width: none;
     margin-top: 0;
     z-index: 3;

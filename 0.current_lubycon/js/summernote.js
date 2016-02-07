@@ -6806,6 +6806,7 @@
         'arrowsAlt': 'fa fa-arrows-alt',
         'bold': 'fa fa-bold',
         'caret': 'caret',
+        'caret-right': 'fa fa-caret-right',
         'circle': 'fa fa-circle',
         'close': 'fa fa-close',
         'code': 'fa fa-code',

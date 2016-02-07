@@ -72,11 +72,10 @@
                 <input id="editor_content_name" type="text" value="input text..." name="contents_subject" />
             </p>
             <div id="editor_upload_file">
-                <i class="fa fa-cloud-upload"></i>Upload
+                <i class="fa fa-cloud-upload"></i>Upload File
             </div>
             <span class="tooltip_bt" id="file_tooltip">Upload file to server<br/>(allow only zip file)</span><!--tooltip for upload-->
             <input type="file" id="upload_file_input" name="upload_file" accept="application/zip"/>
-            <input type="submit" class="final_upload_bt" id="upload_final" value="SUBMIT" onsubmit="return postForm()"/>
         </section>
         <section class="tab_section" id="thumbnail_tab_section">
             <?php   
@@ -334,6 +333,7 @@
                     <p id="file_info_filesize"><?=$uploaded_file_size?></p>
                 </footer>
             </div>
+            <input type="submit" class="final_upload_bt" id="upload_final" value="SUBMIT ALL" onsubmit="return postForm()"/>
         </div>
     </aside><!--editor_aside end-->
 </section><!--editor_inbody_end-->

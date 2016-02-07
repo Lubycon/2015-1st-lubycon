@@ -29,10 +29,21 @@
         </div>
         <div class="lubySelector hidden-mb-ib">
             <span class="global_icon"><i class="fa fa-filter"></i></span>
-            <span class="lubySelector_selected">All</span>
+            <span class="lubySelector_selected">All jobs</span>
             <span class="lubySelector_arrow"><i class="fa fa-caret-down"></i></span>
             <ul class="lubySelector_list">
-                <li class="selected_li">All</li>
+                <li class="selected_li">All jobs</li>
+                <li>Designer</li>
+                <li>Engineer</li>
+                <li>Student</li>
+            </ul>
+        </div>
+        <div class="lubySelector hidden-mb-ib">
+            <span class="global_icon"><i class="fa fa-filter"></i></span>
+            <span class="lubySelector_selected">Newbies</span>
+            <span class="lubySelector_arrow"><i class="fa fa-caret-down"></i></span>
+            <ul class="lubySelector_list">
+                <li class="selected_li">Newbies</li>
                 <li>Most Like</li>
                 <li>Most Download</li>
                 <li>Most Comment</li>
