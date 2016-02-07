@@ -4,7 +4,7 @@
 
 -- use database
 
-use mysql;
+USE mysql;
 
 -- create user
 
@@ -16,4 +16,5 @@ use mysql;
 -- user pass : hmdwdgdhkr2015
 -- empty space for addtional information
 
-INSERT INTO user VALUES('%','Lubcyon',PASSWORD('hmdwdgdhkr2015'),'Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','','','','',0,0,0,0,'','','N');
+GRANT USAGE ON lubycon.* TO lubycon@'%' IDENTIFIED BY 'hmdwdgdhkr2015';
+GRANT SELECT, INSERT, UPDATE ON lubycon.* TO lubycon@'%';
