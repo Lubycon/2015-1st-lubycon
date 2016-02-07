@@ -57,8 +57,8 @@
         <section class="con_wrap">
             <div id="user_view_aside" class="con_aside">
                 <?php 
-                    $user_img_url = "../contents_data/artworkjpg/profile/57.jpg";
-                    $username = "daniel zepp";
+                    $user_img_url = "../contents_data/3djpg/profile/32.jpg";
+                    $username = "Kim dongkyu";
                     $userjob = "Designer";
                     $usercity = "Seoul";
                     $usercountry = "South Korea";
