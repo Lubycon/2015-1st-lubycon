@@ -115,38 +115,36 @@
         }
 
     #lang_plus{
-        border: medium none;
         cursor: pointer;
         width: 100%;
         max-width: 300px;
-        background: #6B6B6B;
+        background: transparent;
         display: block;
         text-align: center;
-        border-radius: 3px;
-        padding: 10px 0px;
-        margin: 10px 0px;
+        margin-top: 5px;
     }
+        #lang_plus:hover{
+            background: #fcfcfc;
+        }
     #lang_plus i{
         font-size:23px;
         color:#48cfad;
-        vertical-align:middle;
     }
     .lang_minus{
-        border: medium none;
         cursor: pointer;
         width: 100%;
         max-width: 300px;
-        background: #6B6B6B;
+        background: transparent;
         display: block;
         text-align: center;
-        border-radius: 3px;
-        padding: 10px 0px;
-        margin: 10px 0px;
+        margin-top: 5px;
     }
+        .lang_minus:hover{
+            background: #fcfcfc;
+        }
     .lang_minus i{
         font-size:23px;
-        color:#ec6446;
-        vertical-align:middle;
+        color:#aaaaaa;
     }
     #delete_desc{
         font-size:16px;
@@ -154,12 +152,13 @@
     }
     #confirm_bt {
         border:none;
-        display:inline-block;
+        display: inline-block;
         background:#ec6446;
         color:#fff;
-        border-radius:2px;
-        padding:8px 15px;
-        margin-bottom:60px;
+        border-radius: 5px;
+        padding: 10px 16px;
+        margin-top: 60px;
+        margin-bottom: 60px;
         font-weight: 200;
         cursor:pointer;
     }

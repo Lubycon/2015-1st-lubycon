@@ -68,11 +68,11 @@
             </div>
             <div class="mb-contents_contents">
                 <?php
-                    /*for( $i=1 ; $i<=4 ; $i++ ){
+                    for( $i=1 ; $i<=4 ; $i++ ){
                         echo '<div class="mb-contents">
                                 <img src="../contents_data/3djpg/thumb/'.$i.'.jpg" alt="3d_thumbnail'.$i.'">
                               </div>';
-                    };*/
+                    };
                 ?>   
             </div>
             <div class="mb-contents_footer">
@@ -155,7 +155,6 @@
             <label for="artwork_bt" class="la_bt clicked">ARTWORK</label>
             <label for="vector_bt" class="la_bt">VECTOR</label>
             <label for="3d_bt" class="la_bt">3D MODEL</label>
-            <p class="down_triangle .hidden-mb-b"></p>
         </nav>
         <!-- end nav -->
     </nav>

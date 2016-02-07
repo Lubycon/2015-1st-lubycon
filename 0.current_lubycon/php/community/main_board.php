@@ -10,7 +10,7 @@
                         case "forum" : echo "Forum"; break;
                         case "tutorial" : echo "Tutorial"; break;
                         case "qna" : echo "Q & A"; break;
-                        default : return false; break;
+                        default : echo "All"; break;
                     }
                 ?>
             </div>
@@ -25,8 +25,7 @@
             <ul class="table_list_wrap">
             <?php
             $j = 1;
-            for($i=0;$i<30;$i++)
-            {
+            for($i=0;$i<30;$i++){
                 $third_param = $_GET['3'];
                 $_GET["number"] = $j;
                 include('php/layout/community_card.php');

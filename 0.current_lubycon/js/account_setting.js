@@ -1,75 +1,20 @@
 
 $(function () //account setting script
 {
-    
-
     $('#change_pass').click(function () //change pass remove attr
     {
         if($('#now_pass_id').attr('disabled'))
         {
             $('#now_pass_id , #pass_id ,#re_pass_id').removeAttr('disabled');
             $('#change_pass').text('Not change Password');
-            $('#change_pass').css({'background':'#c1c1c1 ','margin-left':'65px'});
         }else
         {
             $('#now_pass_id , #pass_id ,#re_pass_id').attr('disabled', 'disabled');
             $('#change_pass').text('change Password');
-            $('#change_pass').css({ 'background': '#48CFAD ', 'margin-left': '75px' });
-            $('#now_pass_id , #pass_id ,#re_pass_id').val('').css({ 'border-left': '2px solid #D5D5D5', 'width': '190px' }).next().removeClass();
+            $('#now_pass_id , #pass_id ,#re_pass_id').val('').next().removeClass();
             $('#pass_check, #now_pass_check').text('').show();
         }
     });
-    
-
-    /* 안씀
-    $('#pass ,#repeat_pass, #repeat_pass_again').blur(function () //change pass border color
-    {
-
-        // id_overlapping Logic
-        // 추가적인 비밀번호 로직 필요
-        var data = $(this).val();
-        var Id = $(this).attr('id');
-        var CurrentId = '#'+Id;
-
-        $.ajax({
-            type:"POST",
-            url:"./php/overlap_check.php",
-            data:'check='+ data ,
-            cache: false,
-            success: function(data){
-
-                if(data == "")
-                {   console.log('empty');
-                    $(CurrentId).css({ 'border-left': '2px solid #D5D5D5', 'width': '190px' });
-                    $(CurrentId).next(i).removeClass();
-                }
-                else
-                {
-                    if(data == 1)//overlapping
-                    {
-                        console.log('overlap');
-                        $(CurrentId).css({ 'border-left': '2px solid #D5D5D5', 'width': '190px' });
-                        $(CurrentId).next(i).removeClass();
-                        $(CurrentId).next(i).addClass('fa fa-times');
-                    }
-                    else if(data == 0)
-                    {
-                        console.log('non-overlap');
-                        $(CurrentId).css({ 'border-left': '5px solid #8ec89a', 'width': '187px' });
-                        $(CurrentId).next(i).removeClass();
-                        $(CurrentId).next(i).addClass('fa fa-check');
-                    }
-                    else
-                    {
-                        console.log("exception");
-                    }
-                }
-            }
-
-        });
-
-    });
-    */
 
     var i = 1;
     $(document).ready(function ()
@@ -102,8 +47,7 @@ $(function () //account setting script
         $("#lang_plus").show();
         $("#clone_div > div:last-child").remove();
         i--; //int minus
-        if( i == 1 )
-        {
+        if( i == 1 ){
             $("#lang_minus_id").hide();
         }
         // clone div remove

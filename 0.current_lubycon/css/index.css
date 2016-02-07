@@ -96,19 +96,6 @@
         background: #48cfad;
     }
 
-    .down_triangle {
-        position: absolute;
-        z-index: 2;
-        border-color: #48cfad transparent transparent transparent;
-        border-style: solid;
-        border-width: 6px 10px 0px 10px;
-        height: 0px;
-        width: 0px;
-        top: 55px;
-        left: 87px;
-    }
-
-
     .seemore_bt {
         display: block;
         margin: 0px auto;

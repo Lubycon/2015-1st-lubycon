@@ -7,7 +7,6 @@ $number = $_GET["4"];
 $current_url = $_GET["3"];
 $contents_img_url = "../contents_data/".$current_url."jpg/".$number.".jpg";
 $user_img_url = "../contents_data/".$current_url."jpg/profile/".$number.".jpg";
-$price = 'Free';
 
 $userjob = "Job";
 $usercity = "City";
@@ -58,35 +57,7 @@ default : $current_url = "artwork"; $contents_name = $artwork_subject;$contents_
         <div class="subnav_box">
             <span id="contents_subject">
                 <h3 id="contents_title"><?=$contents_name[$number]?></h3>
-                <h4 id="contents_price"><?=$price?></h4>
             </span>
-            
-            <div class="contents_bt">
-                <span class="global_icon"><i class="fa fa-usd"></i></span>
-                <span class="subnav_selected">All</span>
-                <span class="subnav_arrow"><i class="fa fa-caret-down"></i></span>
-                <ul class="subnav_list">
-                    <li class="selected_li">All</li>
-                    <li>Free</li>
-                    <li>Free for personal</li>
-                    <li>Paid</li>
-                </ul>
-            </div><!--pay selector end-->
-
-            <div id="sub_search_bar">
-                <div class="select_box">
-                    <select class="basic">
-                        <option value="Title">Title</option>
-                        <option value="Designer">Designer</option>
-                        <option value="Tag">Tag</option>
-                    </select>
-                <span class="subnav_arrow"><i class="fa fa-caret-down"></i></span>
-                </div>
-                <input type="text" id="sub_search_text" value="Enter the Keyword" />
-                <button id="sub_search_btn">
-                    <i class="fa fa-search"></i>
-                </button>
-            </div>
             <div id="sharing_bt_box">
                 <button class="share_sns share_face">
                     <i class="fa fa-facebook"></i>
@@ -145,12 +116,15 @@ default : $current_url = "artwork"; $contents_name = $artwork_subject;$contents_
                 </div><!--end con_main-->
 
                 <div id="contents_aside" class="con_aside">
-                    <div class="designer_info">
+                    <div class="creator_info">
                         <figure id="user_img">
                             <img src="<?=$user_img_url?>">
                         </figure>
-                        <h4><a href="./index.php?1=personal_page&2=personal_page&3=dashboard"><?=$contents_author[$number]?></a></h4>
-                        <h5><i class="fa fa-map-marker"></i><?=$usercity?>, <?=$usercountry?></h5>
+                        <span id="user_info_wrap">
+                            <h4><a href="./index.php?1=personal_page&2=personal_page&3=dashboard"><?=$contents_author[$number]?></a></h4>
+                            <h5><?=$userjob?></h5>
+                            <h5><i class="fa fa-map-marker"></i><?=$usercity?>, <?=$usercountry?></h5>
+                        </span>
                     </div>
                     <button id="content_down" class="hidden-mb-b"><i class="fa fa-download"></i></button>
                     <div id="file_info">
