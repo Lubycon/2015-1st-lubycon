@@ -29,22 +29,24 @@
                 </ul>
             </div>
         </div>
-        <div class="creator_top_info">
-            <div class="creator_pic">
-                <img src="<?=$user_img_url?>" alt="user_pic"/>
+        <div class="creator_info_wrap">
+            <div class="creator_top_info">
+                <div class="creator_pic">
+                    <img src="<?=$user_img_url?>" alt="user_pic"/>
+                </div>
+                <div class="creator_location_img">
+                    <img src="<?=$user_location_img?>" alt="user_location"/>
+                </div>
             </div>
-            <div class="creator_location_img">
-                <img src="<?=$user_location_img?>" alt="user_location"/>
+            <div class="creator_mid_info">
+                <p class="creator_name"><?=$username[$number]?></p><!--user name-->
+                <p class="creator_job"><?=$userjob?></p><!--job-->
+                <p class="creator_location hidden-mb-b"><i class="fa fa-map-marker"></i><?=$usercity?>, <?=$usercountry?></p>
+                <article class="contents_count hidden-mb-b">
+                    <p class="count_num"><?=$contents_count?></p>
+                    Contents
+                </article>
             </div>
-        </div>
-        <div class="creator_mid_info">
-            <p class="creator_name"><?=$username[$number]?></p><!--user name-->
-            <p class="creator_job"><?=$userjob?></p><!--job-->
-            <p class="creator_location"><i class="fa fa-map-marker"></i><?=$usercity?>, <?=$usercountry?></p>
-            <article class="contents_count">
-                <p class="count_num"><?=$contents_count?></p>
-                Contents
-            </article>
         </div>
         <div class="creator_bot_info">
             <ul>
