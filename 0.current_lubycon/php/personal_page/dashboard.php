@@ -1,7 +1,7 @@
-<script type="text/javascript" src="js/dashboard.js"></script>
 <script src="js/chart/amcharts.js" type="text/javascript"></script>
 <script src="js/chart/serial.js" type="text/javascript"></script>
 <script src="js/chart/lubytheme.js" type="text/javascript"></script>
+ <script type="text/javascript" src="js/dashboard.js"></script>
 <?php
     $userjob = "UI/UX Designer";
     $user_position = "Lubycon Co.";
