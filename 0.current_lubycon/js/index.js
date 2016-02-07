@@ -561,17 +561,22 @@ $(function(){
 //      community mainboard start
 /////////////////////////////////////////////////////////
 $(window).on("load resize",function(){
-    if(($("#main_board").length != 0) && ($(window).width() >= 1025)){
-        console.log("here is mainboard");
-        var blank = $(".table_blank").width(),
-            number = $(".table_number").width(),            
-            writer = $(".table_writer").width(),
-            like = $(".table_like").width(),
-            view = $(".table_view").width(),
-            date = $(".table_date").width(),
-            subject = $(".table_subject");
-        var resWidth = ($(".table_head_wrap").width() - blank - number - writer - like - view - date).toString();
-        subject.css({ "width" : resWidth });
+    if($("#main_board").length != 0){
+        var wholeList = $(".table_list"),
+        list = $(".table_list_inner"),
+        userimg = $(".table_user_img"),
+        number = $(".table_number_wrap"),            
+        count = $(".table_counts"),
+        subject = $(".table_subject");
+        var list_padding = list.innerWidth() - list.width();
+        var resWidth;
+        if(windowWidth >= 1025){
+            resWidth = (wholeList.width() - list_padding - userimg.width() - number.outerWidth(true) - count.width() - 100).toString() + "px";
+        }
+        else if(windowWidth < 1025){
+            resWidth = (wholeList.width() - list_padding - userimg.width() - 50).toString() + "px";
+        }
+        subject.css({ "max-width" : resWidth });
         return;
     }
     else{

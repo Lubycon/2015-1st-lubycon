@@ -1,10 +1,21 @@
 <li class="creator_card_in">
     <?php
-        $username = "Admin_User";
-        $user_img_url = "./ch/img/no_img/no_img_user1.jpg";
+        @include('../contents_data/contents_data.php');
+        $number = $_GET["number"];
+        $contents_num1 = $number;
+        $contents_num2 = $number + 1;
+        $contents_num3 = $number + 3;
+
+        $user_img_url = "../contents_data/3djpg/profile/".$number.".jpg";
         $user_location_img = "./ch/img/flag_icons/United-States-Of-America.png";
-        $userjob = "Job";
-        $contents_count = 256;
+        $usercity = "Los Santos";
+        $usercountry = "United States";
+        $username = $threed_author;
+        $userjob = $jobarray[$number];
+        $contents_count = rand(3, 150);
+        $user_content1 = "../contents_data/artworkjpg/thumb/".$contents_num1.".jpg";
+        $user_content2 = "../contents_data/artworkjpg/thumb/".$contents_num2.".jpg";
+        $user_content3 = "../contents_data/artworkjpg/thumb/".$contents_num3.".jpg";
     ?><!--you should change to mySQL later-->
     <div class="creators_card">
         <div class="creator_menu">
@@ -18,24 +29,37 @@
                 </ul>
             </div>
         </div>
-        <div class="creator_top_info">
-            <div class="creator_pic">
-                <img src="<?=$user_img_url?>" alt="user_pic"/>
+        <div class="creator_info_wrap">
+            <div class="creator_top_info">
+                <div class="creator_pic">
+                    <img src="<?=$user_img_url?>" alt="user_pic"/>
+                </div>
+                <div class="creator_location_img">
+                    <img src="<?=$user_location_img?>" alt="user_location"/>
+                </div>
             </div>
-            <div class="creator_location">
-                <img src="<?=$user_location_img?>" alt="user_location"/>
+            <div class="creator_mid_info">
+                <p class="creator_name"><?=$username[$number]?></p><!--user name-->
+                <p class="creator_job"><?=$userjob?></p><!--job-->
+                <p class="creator_location hidden-mb-b"><i class="fa fa-map-marker"></i><?=$usercity?>, <?=$usercountry?></p>
+                <article class="contents_count hidden-mb-b">
+                    <p class="count_num"><?=$contents_count?></p>
+                    Contents
+                </article>
             </div>
-        </div>
-        <div class="creator_mid_info">
-            <p class="creator_name"><?=$username?></p><!--user name-->
-            <p class="creator_job"><i class="fa fa-suitcase hidden-mb-ib"></i><?=$userjob?></p><!--job-->
         </div>
         <div class="creator_bot_info">
-            <article class="contents_count">
-                <p class="count_num"><?=$contents_count?></p>
-                Contents
-            </article>
-            <p class="view_profile_bt"><a href="#">VIEW MORE</a></p>
+            <ul>
+                <li class="usercontent">
+                    <img src="<?=$user_content1?>" alt="user_content"/>
+                </li>
+                <li class="usercontent">
+                    <img src="<?=$user_content2?>" alt="user_content"/>
+                </li>
+                <li class="usercontent">
+                    <img src="<?=$user_content3?>" alt="user_content"/>
+                </li>
+            </ul>
         </div>
         
     </div>

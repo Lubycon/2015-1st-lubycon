@@ -1,7 +1,7 @@
-<script type="text/javascript" src="js/dashboard.js"></script>
 <script src="js/chart/amcharts.js" type="text/javascript"></script>
 <script src="js/chart/serial.js" type="text/javascript"></script>
 <script src="js/chart/lubytheme.js" type="text/javascript"></script>
+ <script type="text/javascript" src="js/dashboard.js"></script>
 <?php
     $userjob = "UI/UX Designer";
     $user_position = "Lubycon Co.";
@@ -28,6 +28,31 @@
                 <h4>CREATOR OF THE MONTH</h4>
                 <i class="fa fa-angle-up toggle_info"></i>
             </div>
+            <div class="dash_body" id="creator_month_body">
+                <div class="dash_body_sector" id="dash_creator_infobox">
+                    <div class="dash_body_sector" id="dash_creator_info">
+                        <figure id="dash_creator_info_background"></figure>
+                        <div id="dash_creator_info_p">
+                            <figure id="dash_creator_pic_frame">
+                                <img src="./ch/img/creator_of_the_month/SsaRu.png" id="creator_pic">
+                            </figure>
+                            <ul>
+                                <li id="dash_creator_name">SsaRu</li>
+                                <li id="dash_creator_job">Engineer</li>
+                                <li id="dash_creator_location"><i class="fa fa-home"></i><p>Seoul, South korea</p></li>
+                            </ul>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="dash_body_sector" id="dash_creator_placed">
+                        <p class="dash_body_title">Placed</p>
+                        <p class="dash_body_content">September, 2016</p>
+                    </div>
+                    <div class="dash_body_sector" id="dash_creator_interview">
+                        <p class="dash_body_title">Interview</p>
+                        <p class="dash_body_content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <a href="#">VIEW MORE</a>
+                    </div>
         </li>
         <li class="dash_section" id="basic_information">
             <div class="dash_header">

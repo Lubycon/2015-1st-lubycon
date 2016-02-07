@@ -5,7 +5,6 @@
 //4. alert action
 //5. selector
 //6. mb-panel_menu
-var windowWidth = $(window).width();
 /////////////////////////////////////////////////////////
 //      event handler start
 /////////////////////////////////////////////////////////
@@ -20,6 +19,12 @@ function eventHandler(event, selector) {
 };
 /////////////////////////////////////////////////////////
 //      event handler end
+/////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+//      dragging sensor start
+/////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+//      dragging sensor end
 /////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////
 //      nav_guide sticky start
@@ -112,7 +117,7 @@ $(function(){
 })
 $(function(){
     $(".animate_opacity").hover(function (e){
-        $(this).stop().animate({ opacity: 0.9 },200);
+        $(this).stop().animate({ opacity: 0.8 },200);
     },function(){
         $(this).stop().animate({ opacity: 1 },200);
     });
@@ -145,51 +150,56 @@ $(window).on("load",function(){
     setTimeout(function(){
         $(".lubyAlert_bt").each(function(){
             var toggle_count = 0;
-            $(this).on("click touchend", function(){
-                eventHandler(event, $(this));
-                var thisId = $(this).attr("id");
-                var alertObject = $(document).find("#"+thisId.toString()+"Alert");
-                switch(toggle_count){
-                    case 0:
-                        switch(thisId){
-                            case "bookmark_bt" :
-                                $(this).css("color","#ffbe54");
-                                $(this).find("i").css('color', '#ffbe54');
-                                toggle_count = 1;
-                                console.log("this is star");
-                            break;
-                            case "like_bt" :
-                                $(this).find("i").css('color', '#ec6446');
-                                toggle_count = 1;
-                                console.log("this is heart");
-                            break;
-                            case "confirm_bt" :
-                                toggle_count = toggle_count;
-                                $(".dark_overlay").fadeIn(200);
-                                console.log("this is confirm");
-                            break;
-                            default: return false; break;
-                        }
-                        alertObject.stop().fadeIn(700,function(event){ 
-                            if(alertObject.attr("id") != "confirm_btAlert"){
-                                hideAlert();
-                                console.log(toggle_count);
-                                return true; 
+            $(this).on("click touchend", function (event){
+                if(!dragging){
+                    eventHandler(event, $(this));
+                    var thisId = $(this).attr("id");
+                    var alertObject = $(document).find("#"+thisId.toString()+"Alert");
+                    switch(toggle_count){
+                        case 0:
+                            switch(thisId){
+                                case "bookmark_bt" :
+                                    $(this).css("color","#ffbe54");
+                                    $(this).find("i").css('color', '#ffbe54');
+                                    toggle_count = 1;
+                                    console.log("this is star");
+                                break;
+                                case "like_bt" :
+                                    $(this).find("i").css('color', '#48cfad');
+                                    toggle_count = 1;
+                                    console.log("this is heart");
+                                break;
+                                case "confirm_bt" :
+                                    toggle_count = toggle_count;
+                                    $(".dark_overlay").fadeIn(200);
+                                    console.log("this is confirm");
+                                break;
+                                default: return false; break;
                             }
-                            else if(alertObject.attr("id") === "confirm_btAlert"){
-                                return true;
-                            }
-                        });
-                    break;
-                    case 1:
-                        $(this).css("color","#cccccc");
-                        $(this).find("i").css('color', '#cccccc');
-                        toggle_count = 0;
-                        console.log(toggle_count);
-                        return true;
-                    break;
-                    default: return false; break;
-                }//switch end
+                            alertObject.stop().fadeIn(700,function(event){ 
+                                if(alertObject.attr("id") != "confirm_btAlert"){
+                                    hideAlert();
+                                    console.log(toggle_count);
+                                    return true; 
+                                }
+                                else if(alertObject.attr("id") === "confirm_btAlert"){
+                                    return true;
+                                }
+                            });
+                        break;
+                        case 1:
+                            $(this).css("color","#cccccc");
+                            $(this).find("i").css('color', '#cccccc');
+                            toggle_count = 0;
+                            console.log(toggle_count);
+                            return true;
+                        break;
+                        default: return false; break;
+                    }//switch end
+                }
+                else if(dragging){
+                    return;
+                } 
             });//click end
         });//each end
     },1);//setTimeout end  
@@ -223,62 +233,61 @@ function hideAlert(){
 $(function(){
     $(".lubySelector").each(function(){
         var toggle_count = 0;
-        var option_list = [];//make option list array
+        var option_list = [];
         $(this).find(".global_icon").addClass("hidden-mb-ib");
-        $(this).find(".lubySelector_list li").each(function(){//make option list array
+        $(this).find(".lubySelector_list li").each(function(){
             option_list.push($(this).text().replace(/ /gi, ''));
             //It will be push to array after removed all spaces  
         });
-        $(this).after("<select class='original_box'>");//make select box after lubySelector  
-        for(var i = 0; i < option_list.length; i++){//make options in select box
+        $(this).after("<select class='original_box'>");
+        for(i in option_list){
             $(this).next(".original_box").append("<option value="+option_list[i]+">"+option_list[i]+"</option>");
-            //i = Array's index
         };
         $(".original_box").hide();//original select box will be hide
         $(".original_box").change(function(){
             var lubySelectbox = $(this).prev(".lubySelector").find(".lubySelector_selected");
             var original_value = $(this).val();
             lubySelectbox.text(original_value.toString());
-            $(this).prev(".lubySelector").find($(".lubySelector_list")).stop().fadeOut(300);
-            $(this).prev(".lubySelector").css("background","#555555");
-            $(this).prev(".lubySelector").find($(".lubySelector_arrow")).children("i").attr("class","fa fa-caret-down");
             $(this).hide();
             toggle_count = 0;    
         });
-        $(this).on("click touchend",function (e){
-            console.log(toggle_count);
+        $(this).on("click touchend",function (event){
             eventHandler(event, $(this));
-            switch(toggle_count){
-                case 0 :
-                    if(windowWidth > 1024){
-                        $(this).find($(".lubySelector_list")).stop().fadeIn(300);
-                        $(this).css("background","#333333");
-                        $(this).find($(".lubySelector_arrow")).children("i").attr("class","fa fa-caret-up");
-                    }
-                    else{
-                        $(this).next(".original_box").show().trigger("focus");
-                    }
-                    toggle_count = 1;
-                    console.log(toggle_count);
-                    return true;
-                break;
+            if(!dragging){
+                switch(toggle_count){
+                    case 0 :
+                        if(windowWidth > 1024){
+                            $(this).find($(".lubySelector_arrow")).children("i").attr("class","fa fa-caret-down");
+                            $(this).find($(".lubySelector_list")).stop().fadeIn(300);
+                            $(this).css("background","#333333");
+                            $(this).find($(".lubySelector_arrow")).children("i").attr("class","fa fa-caret-up");
+                        }
+                        else{
+                            $(this).next(".original_box").show().trigger("focus");
+                        }
+                        toggle_count = 1;
+                        return true;
+                    break;
 
-                case 1 :
-                    if(windowWidth > 1024){
-                        $(this).find($(".lubySelector_list")).stop().fadeOut(300);
-                        $(this).css("background","#555555");
-                        $(this).find($(".lubySelector_arrow")).children("i").attr("class","fa fa-caret-down");
-                    }
-                    else{
-                        $(this).next(".original_box").hide().trigger("blur");
-                    }
-                    toggle_count = 0;
-                    console.log(toggle_count);
-                    return true;
-                break;
+                    case 1 :
+                        if(windowWidth > 1024){
+                            $(this).find($(".lubySelector_list")).stop().fadeOut(300);
+                            $(this).css("background","#555555");
+                            $(this).find($(".lubySelector_arrow")).children("i").attr("class","fa fa-caret-down");
+                        }
+                        else{
+                            $(this).next(".original_box").hide().trigger("blur");
+                        }
+                        toggle_count = 0;
+                        return true;
+                    break;
 
-                default: return false; break;
-            };//switch end
+                    default: return false; break;
+                };//switch end
+            }
+            else if(dragging){
+                return;
+            }            
         });//click end
         $(this).mouseleave(function(){
             $(document).click(function (event) {
@@ -303,7 +312,6 @@ $(function(){
             $(event.target).parents(".lubySelector").next(".original_box").val(selected_option);
             $(event.target).siblings("li").removeClass();
             $(event.target).addClass("selected_li");
-            console.log("hidden_selector value is " + "'" + $(event.target).parents(".lubySelector").next(".original_box").val() + "'");
         });
     });//each end
 });
@@ -320,9 +328,14 @@ $(window).on("load resize",function(){
         var mb_menu_toggle = 0;
         var distance = $("#mb-menu_panel").outerWidth();
         mb_menu.on("click touchend", function(){
-            eventHandler(event, $(this));
-            remove_mb_menu();
-            return;
+            if(!dragging){
+                eventHandler(event, $(this));
+                remove_mb_menu();
+                return;
+            }
+            else if(dragging){
+                return;
+            }
         });//click end
         $("#cancel_layer").on("click touchend",function(){
             remove_mb_menu();
@@ -331,8 +344,8 @@ $(window).on("load resize",function(){
         function remove_mb_menu(){
             switch(mb_menu_toggle){
                 case 0 : 
-                    $("#wrapper").stop().animate({ left: distance.toString() }, 150);
-                    $("#mb-menu_panel").stop().animate({ left: "0"}, 150);
+                    $("#wrapper").stop().animate({ left: distance.toString() }, 200);
+                    $("#mb-menu_panel").stop().animate({ left: "0"}, 200);
                     $("#cancel_layer").css({
                         "width": window.screen.width.toString(),
                         "height": window.screen.height.toString(),
@@ -355,8 +368,8 @@ $(window).on("load resize",function(){
                 break;
                 case 1 :
                     $("#cancel_layer").hide();
-                    $("#wrapper").stop().animate({ left: "0" }, 150);
-                    $("#mb-menu_panel").stop().animate({ left: (distance*-1).toString()}, 150);
+                    $("#wrapper").stop().animate({ left: "0" }, 200);
+                    $("#mb-menu_panel").stop().animate({ left: (distance*-1).toString()}, 200);
                     $("body").css({
                         "position":"relative",
                         "height":"auto",

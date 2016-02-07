@@ -2,13 +2,14 @@
 <link href="css/croppic.css" rel="stylesheet" type="text/css" />
 <!-- account_setting page css -->
 <script type="text/javascript" src="js/account_setting.js"></script>
+<script type="text/javascript" src="js/jquery.mousewheel.min.js"></script>
 
 <form id="account_setting_form" enctype="multipart/form-data" method="post" action="./php/personal_page/test.php">
     <section id="account_section">
         <section id="account_setting_section" class="setting_card">
             <p class="setting_title">Account Setting</p>
                 <label>E-mail</label><input type="text" value="loremIpsum@lubycon.com" disabled />
-                <div class="pubilc_option">
+                <div class="public_option">
                     <i class="fa fa-lock"></i>
                     <select class="basic_filter" name="email_public">
                         <option value="Public">Public</option>
@@ -17,13 +18,13 @@
                     </select>
                 </div>
                 <!-- end select box -->
-                <br />
-                <label>Nickname</label><input type="text" value="loremIpsum" disabled /><br />
-                <label>Passward</label><input type="password" name="now_pass" id="now_pass_id" disabled /><i></i><span id="Change_pass">Change Passward</span><br />
+                
+                <label>Nickname</label><input type="text" value="loremIpsum" disabled />
+                <label>Passward</label><input type="password" name="now_pass" id="now_pass_id" disabled /><i></i><span id="change_pass">Change Passward</span><br />
                 <p id="now_pass_check" class="form_check"></p>
-                <label>New Passward</label><input type="password" name="pass" id="pass_id" disabled /><i></i><br />
+                <label>New Passward</label><input type="password" name="pass" id="pass_id" disabled /><i></i>
                 <p id="pass_check" class="form_check"></p>
-                <label>Repeat Passward</label><input type="password" name="repass" id="re_pass_id" disabled /><i></i><br />
+                <label>Repeat Passward</label><input type="password" name="repass" id="re_pass_id" disabled /><i></i>
                 <p id="re_pass_check" class="form_check"></p>
         </section>
 
@@ -31,7 +32,7 @@
             <p class="setting_title">Basic Info</p>
                 <label>Profile Photo</label>
                 <div id="croppic_account"></div>
-                    <span class="btn" id="cropContainerHeaderButton">Choose the croping pic</span>
+                    <span class="btn" id="cropContainerHeaderButton">Find image</span>
                     <script src="./js/croppic.min.js"></script>
                     <script>
 		                var croppicHeaderOptions = {
@@ -53,7 +54,7 @@
 		                }	
 		                var croppic = new Croppic('croppic_account', croppicHeaderOptions);
 	                </script>
-                <br/>
+               
                 <label>Occupation / Job</label>
                 <div class="job_option">
                     <select class="basic_filter" name="job">
@@ -62,7 +63,7 @@
                         <option value="student">Student</option>
                     </select>
                 </div>
-                <br />
+
                 <label>Location</label>
                 <div class="location_option">
                     <select class="basic_filter" name="location">
@@ -315,8 +316,9 @@
                         <option value="Zimbabwe">Zimbabwe</option>
                     </select>
                 </div>
-                <input type="text" id="location_text" name="location_text" /><br />
-                <label>Language</label><input type="text" id="lang_input_id" class="language_text" name="language[]" /><div id="lang_option_id" class="language_option">
+                <input type="text" id="location_text" name="location_text" />
+                <label>Language</label>
+                <div id="lang_option_id" class="language_option">
                     <select class="basic_filter" name="lang_ability[]">
                         <option value="Beginer">Beginer</option>
                         <option value="Advanced">Advanced</option>
@@ -324,28 +326,21 @@
                         <option value="Native">Native</option>
                     </select>
                 </div>
-                <span id="lang_plus">
-                    <i class="fa fa-plus-circle"></i>
-                </span>
-                <div id="lang_public_id" class="pubilc_option">
-                    <i class="fa fa-lock"></i>
-                    <select class="basic_filter" name="lang_public[]">
-                        <option value="Public">Public</option>
-                        <option value="Followers">Followers</option>
-                        <option value="Private">Private</option>
-                    </select>
-                </div>
-                <!-- end select box -->
-                <br />
+                <input type="text" id="lang_input_id" class="language_text" name="language[]" />
                 <div id="clone_div"></div>
-                <br />
+                <span id="lang_plus">
+                    <i class="fa fa-plus"></i>
+                </span>
+                <span id="lang_minus_id" class="lang_minus">
+                    <i class="fa fa-minus"></i>
+                </span>
                 <label id="basic_desc_label">Description</label><textarea id="basic_desc" maxlength="1000" name="desc"></textarea><br />
         </section>
 
         <section id="contact_info_section" class="setting_card">
             <p class="setting_title">Contact Info</p>
                 <label>Mobile</label><input type="text" name="mobile_number"/>
-                <div class="pubilc_option">
+                <div class="public_option">
                     <i class="fa fa-lock"></i>
                     <select class="basic_filter" name="mobile_public">
                         <option value="Public">Public</option>
@@ -354,9 +349,9 @@
                     </select>
                 </div>
                 <!-- end select box -->
-                <br />
+                
                 <label>FAX</label><input type="text" name="fax_number"/>
-                <div class="pubilc_option">
+                <div class="public_option">
                     <i class="fa fa-lock"></i>
                     <select class="basic_filter" name="fax_public">
                         <option value="Public">Public</option>
@@ -365,9 +360,9 @@
                     </select>
                 </div>
                 <!-- end select box -->
-                <br />
+                
                 <label>Website</label><input type="text" name="website_url"/>
-                <div class="pubilc_option">
+                <div class="public_option">
                     <i class="fa fa-lock"></i>
                     <select class="basic_filter" name="website_public">
                         <option value="Public">Public</option>
@@ -376,7 +371,7 @@
                     </select>
                 </div>
                 <!-- end select box -->
-                <br />
+                
         </section>
 
         <section id="delete_account_section" class="setting_card">

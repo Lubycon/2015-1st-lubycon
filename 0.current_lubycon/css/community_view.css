@@ -23,26 +23,21 @@
 #post_subject {
     font-size: 22px;
     color: #fff;
-    line-height: 53px;
-    height: 50px;
     font-weight: 200;
     text-align: center;
 }
+.post_subject_name {
 
+}
 .written_date {
     color: #aaaaaa;
     font-size: 14px;
     margin-left: 5px;
 }
     #post_info{
-        position:absolute;
-        right: 25px;
-        top: 15px;
-        margin-right: 5px;
         
     }
         #post_info li {
-            float:left;
             margin-left:15px;
             color:#777777;
         }
@@ -51,7 +46,7 @@
             color:#777777;
         }
         #like_icon {
-            color: #ec6446;
+            color: #48cfad;
         }
         #view_icon {
             color: #ffffff;
@@ -87,11 +82,8 @@
             width:100%;
         }
         #author_main h4{
-            font-weight: 200;
             height:30px;
-            font-size:26px;
             color:#eeeeee;
-            margin-top: 20px;
             text-align: center;
         }
     #post_banner #author_sub{
@@ -117,15 +109,16 @@
             }
                 #job_name{
                     font-weight: 200;
+                    color: #eeeeee;
                 }
 
     #my_page_bt{
         width: 220px;
         height: 45px;
         margin-top: 20px;
-        border: none;
-        border-radius: 3px;
-        background: #48cfad;
+        border: 1px solid #ffffff;
+        border-radius: 80px;
+        background: transparent;
         font-weight: 200;
         color: #ffffff;
     }

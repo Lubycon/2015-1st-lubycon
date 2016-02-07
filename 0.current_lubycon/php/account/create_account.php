@@ -1,3 +1,10 @@
+<?php
+     require_once '../database/database_class.php';
+
+     $database = new DBConnect;
+     $database->DBInsert();
+?>
+
 <section id="create_account_area">
      <p id="account_title">Create An Account</p>
      <div id="account_box">
@@ -13,7 +20,15 @@
                <label>Location</label>
                
                <div class="location_option_ca">
-                    <select class="basic_filter">
+                    <select class="basic_filter" name="country_code">
+                         <?php
+                              $database->query = "SELECT * FROM luby_country";
+                              $database->DBQuestion();
+                              while($row = mysqli_fetch_array($database->result)){
+                                   echo ("<option value = ".$row['country_code'].">".$row['country_name']."</option>");
+                              }
+                         ?>
+                         <!--
                          <option value="Afganistan">Afghanistan</option>
                          <option value="Albania">Albania</option>
                          <option value="Algeria">Algeria</option>
@@ -261,6 +276,7 @@
                          <option value="Zaire">Zaire</option>
                          <option value="Zambia">Zambia</option>
                          <option value="Zimbabwe">Zimbabwe</option>
+                    -->
                     </select>
                </div>
                

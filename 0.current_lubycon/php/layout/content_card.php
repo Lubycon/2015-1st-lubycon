@@ -10,16 +10,16 @@
         {
             case "artwork" : $current_url = "artwork"; $contents_name = $artwork_subject; $username = $artwork_author;  break;
             case "vector" : $current_url = "vector"; $contents_name = $vector_subject; $username = $vector_author; break;
-            case "3d" : $current_url = "3d"; break;
+            case "3d" : $current_url = "3d"; $contents_name = $threed_subject; $username = $threed_author; break;
             default : $current_url = "artwork"; $contents_name = $artwork_subject;$username = $artwork_author; break;
         };
 
         $price = "Free";
         $contents_thumb_url = "../contents_data/".$current_url."jpg/thumb/".$number.".jpg";
-        $user_img_url = "./ch/img/no_img/no_img_user1.jpg";
-        $like_num = 0;
-        $view_num = 0;
-        $comment_num = 0;
+        $user_img_url = "../contents_data/".$current_url."jpg/profile/".$number.".jpg";
+        $like_num = rand(1, 30);
+        $view_num = rand(1, 400);
+        $comment_num = rand(0, 10);
     ?><!--you should change to mySQL later-->
     <div class="contents_card">
         <div class="contents_pic">
@@ -44,7 +44,7 @@
                 </a>
             </div>
             <span class="creator_desc">
-                <a href="./index.php?1=creators_page&2=creators">
+                <a href="./index.php?1=personal_page&2=personal_page&3=dashboard">
                     <img src="<?=$user_img_url?>" class="hidden-mb-ib" alt="artist photo" />
                     <span class="by">by</span>
                     <span class="name"><?=$username[$number]?></span>

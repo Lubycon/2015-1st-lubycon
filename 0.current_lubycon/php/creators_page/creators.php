@@ -57,12 +57,13 @@
         <section class="con_wrap">
             <div id="user_view_aside" class="con_aside">
                 <?php 
-                    $username = "Admin_User";
-                    $userjob = "Job";
-                    $usercity = "City";
-                    $usercountry = "Country";
-                    $language1 = "language1";
-                    $language2 = "language2";
+                    $user_img_url = "../contents_data/3djpg/profile/32.jpg";
+                    $username = "Kim dongkyu";
+                    $userjob = "Designer";
+                    $usercity = "Seoul";
+                    $usercountry = "South Korea";
+                    $language1 = "Korean";
+                    $language2 = "English";
                     
                 ?>
                 <i id="myinfo_setting" class="fa fa-bars hidden-mb-b"></i>
@@ -76,20 +77,20 @@
                 </div>
                 <div id="myinfo_main">
                     <figure>
-                        <img src="./ch/img/no_img/no_img_user1.jpg">
+                        <img src="<?=$user_img_url?>">
                     </figure>
                     <h4><?=$username?></h4>
                 </div>
                 <div id="myinfo_sub">
                     <article class="myinfo_wrap" id="myinfo_job">
-                        <i class="fa fa-suitcase"></i>
+                        <i class="fa fa-suitcase hidden-mb-ib"></i>
                         <p class="myinfo_name" id="job_name"><?=$userjob?></p>
                     </article>
-                    <article class="myinfo_wrap" id="myinfo_location">
-                        <i class="fa fa-home"></i>
+                    <article class="myinfo_wrap hidden-mb-b" id="myinfo_location">
+                        <i class="fa fa-map-marker"></i>
                         <p class="myinfo_name" id="location_name"><?=$usercity?>, <?=$usercountry?></p>
                     </article>
-                    <article class="myinfo_wrap" id="myinfo_language">
+                    <article class="myinfo_wrap hidden-mb-b" id="myinfo_language">
                         <i class="fa fa-language"></i>
                         <p class="myinfo_name" id="language_name"><?=$language1?>, <?=$language2?></p>
                     </article>
@@ -103,6 +104,7 @@
                     </li>
                     <?php
                         for($i=0;$i<60;$i++){
+                            $_GET["number"] = $i;
                             include('php/layout/creator_card.php');
                         }
                     ?>

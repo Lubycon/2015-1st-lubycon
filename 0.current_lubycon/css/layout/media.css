@@ -285,11 +285,13 @@
     }
     .nav_guide {
         margin-top: 46px;
+        height: auto;
     }
         .nav_guide .mb-lubySelector {
             width: 100% !important;
             height: 48px !important;
             margin: 0px !important;
+            background: #222222;
             border-radius: 0px !important;
             float: left !important;
             box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.8) !important;
@@ -414,40 +416,45 @@
         .creators_card {
             width: 100%;
             max-width: 800px;
-            height: 120px;
             margin: 0px auto;
             border-bottom: 1px solid #eeeeee;
             border-radius: 0px;
             box-shadow: none;
             text-align: left;
+            padding: 15px;
+        }
+        .creator_info_wrap{
+            padding-left: 2%;
         }
         .creator_top_info{
-            display: inline-block;
+            margin-top: 5px;
         }
             .creator_pic {
                 width: 45px;
                 height: 45px;
                 display: inline-block;
             }
-            .creator_location{
+            .creator_location_img{
                 width: 20px;
                 height: 20px;
                 top: 28px;
                 right: -7px;
             }
         .creator_mid_info {
-            display: inline-block;
-            margin-left: 10px;
+            margin-top: 5px;
         }
             .creator_name {
                 text-align: left;
-                font-size: 20px;
+                font-size: 16px;
+                font-weight: 600;
             }
             .creator_job{
                 text-align: left;
+                font-size: 14px;
             }
         .creator_bot_info {
             border: none;
+            padding-top: 18px;
         }
 
     #contents_info_wrap {
@@ -515,8 +522,8 @@
             height: 70px;
         }
         #comment_box #comment_bt {
-            width: 80%;
-            height: 30px;
+            width: 88%;
+            height: 45px;
             display: inline-block;
             padding: 0px 10px;
             box-sizing: border-box;
@@ -524,6 +531,7 @@
             -moz-box-sizing: border-box;
         }
     #user_view_aside{
+        height: 100px;
         margin-top: 51px;
     }
     #user_view_main{
@@ -540,10 +548,10 @@
         }
         #myinfo_main h4 {
             display: inline-block;
+            font-size: 18px;
+            vertical-align: top;
+            margin-top: 12px;
         }
-            #job_name {
-                color: #eeeeee;
-            }
     #my_page_bt{
         display: none;
     }
@@ -558,7 +566,7 @@
             background: #383838;
         }
     #personal_view .con_wrap #contents_box{
-        margin-top: 196px;
+        
     }
     #main_board{
         width: 100%;
@@ -566,41 +574,50 @@
         margin: 0px auto;
     }
     .table_info{
-
+        display: inline-block;
     }
         .table_list .table_user_img{
             width: 40px;
             height: 40px;
         }
         .table_list .table_subject{
-            width: 66%;
-            float: left;
-            padding-left: 10px;
+            font-size: 16px;
         }
-            .table_list .table_subject a{
-                font-size: 16px;
-            }
         .table_writer {
-            font-size: 13px;
-            left: 19px;
+            font-size: 13px;  
         }
-        .table_list .table_like{
-            position: absolute;
-            top: 0;
-            right: 50px;
+        .mobile_i{
+            margin-right: 5px;
+            color: #444444;
+        }
+    .table_counts{
+        
+    }
+        .table_counts .table_like{
+            font-size: 16px;
             line-height: 30px;
         }
-        .table_list .table_view{
-            position: absolute;
-            top:0;
-            right:10px;
+            .table_like .mobile_i{
+                display: inline-block;
+                color: #48cfad !important;
+                font-size: 14px;
+
+            }
+        .table_counts .table_view{
+            font-size: 16px;
             line-height: 30px;
+            margin-left: 2px;
+            margin-right: 10px;
         }
-        .table_list .table_date{
-            position: absolute;
-            bottom:0;
-            right:0;
+            .table_view .mobile_i{
+                display: inline-block;
+                font-size: 14px;
+            }
+        .table_counts .table_date{
+            color: #888888;
+            font-size: 16px;
             line-height: 30px;
+            text-align: right;
         }
     #write_bt{
         bottom: 20px;
@@ -610,7 +627,7 @@
     #post_banner{
         position: relative;
         width: 100%;
-        height: 150px;
+        height: 100px;
         margin-top: 0;
     }
         #post_banner #author_main{
@@ -623,11 +640,32 @@
             }
             #author_main h4{
                 display: inline-block;
+                font-size: 18px;
+                vertical-align: top;
+                margin-top: 12px;
             }
-
+    #post_subject{
+        padding: 10px;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+    }
+        .post_subject_name{
+            display: block;
+        }
     #post_contents{
         margin: 15px;
     }
+    #post_info{
+        position: relative;
+        display: block;
+        text-align: center;
+        height: 27px;
+    }
+        #post_info li{
+            float: none;
+            display: inline-block;
+        }
 
     .dash_body_sector{
         width: 100%;
@@ -663,7 +701,26 @@
     .x2_inner .dash_body_content{
         text-align: center;
     }
-        
+
+
+    .setting_card{
+        padding: 10px;
+    }
+    .setting_card p{
+
+    }
+        .setting_card label{
+
+        }
+        .setting_card input{
+            width: 90%;
+            margin: 0px auto;
+            margin-bottom: 10px;
+        }
+    .public_option{
+        display: block;
+        position:relative;
+    }
 }
 /*------------------------------------------------mobile end-------*/
 /*---------------------------------------------desktop start-------*/
@@ -795,53 +852,53 @@
                 margin-top: 5px;
             }
                 .creator_desc .by {
-                    font-size: 15px;
-                    font-weight: 200;
+                    font-size: 13px;
                 }
                 .creator_desc .name{
-                    font-size: 16px;
+                    font-size: 14px;
                 }
-        .creator_card_in{
-            display: inline-block;
-            margin: 10px;
+    .creator_card_in{
+        display: inline-block;
+        margin: 10px;
+    }
+    .creators_card {
+        width: 390px;
+        border-radius: 5px;
+        float: left;
+        text-align: center;
+        box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.3);
+    }
+    .creator_top_info{
+        margin-top: 18px;
+    }
+        .creator_pic {
+            width: 90px;
+            height: 90px;
         }
-        .creators_card {
-            width: 240px;
-            height: 280px;
-            border-radius: 5px;
-            float: left;
-            margin: 10px 10px;
-            box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.3);
+        .creator_location_img {
+            width: 30px;
+            height: 30px;
+            bottom: 0;
+            right: 0;
         }
-            .creator_pic {
-                width: 90px;
-                height: 90px;
-                margin: 0px auto;
-                margin-top: 30px;
-            }
-            .creator_location {
-                width: 30px;
-                height: 30px;
-                top: 67px;
-                right: 73px;
-            }
-        .creator_mid_info {
-            margin-top: 38px;
+    .creator_mid_info {
+        margin-top: 20px;
+    }
+        .creator_name {
+            text-align: center;
+            font-size: 18px;
         }
-            .creator_name {
-                text-align: center;
-                font-size: 18px;
-            }
-            .creator_job{
-                text-align: center;
-            }
-        .creator_bot_info {
-            width: 220px;
-            border-top: 1px solid #aaaaaa;
-            margin: 0px auto;
-            margin-top: 28px;
-            padding: 14px 2px 0px 2px;
+        .creator_job{
+            text-align: center;
+            font-size: 16px;
         }
+    .creator_bot_info {
+        border-top: 1px solid #aaaaaa;
+        margin: 0px auto;
+        margin-top: 18px;
+        padding: 10px;
+    }
+
     #contents_info_wrap {
         background: #222222;
     }
@@ -849,8 +906,8 @@
         display: inline-block;
     }
         #contents_title {
-            font-size: 28px;
-            font-weight: 200;
+            font-size: 23px;
+            font-weight: 400;
             display: inline-block;
             text-align: center;
         }
@@ -859,6 +916,8 @@
             text-align: center;
             padding: 2px 10px;
             margin-left: 10px;
+            margin-top: 10px;
+            vertical-align: top;
             background: #444444;
             border: 1px solid #111111;
         }
@@ -887,8 +946,7 @@
             }
     #comment_box{
         box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.5);
-        margin: 40px 60px;
-        border-radius: 5px;
+        margin: 40px;
     }
         #comment_box #comment_text {
             height: 50px;
@@ -911,10 +969,8 @@
         #myinfo_main h4 {
             display: block;
             margin-top: 20px;
+            font-size: 26px;
         }
-            #job_name{
-                color: #48cfad;
-            }
     #best_creator_wrap{
         width: 84%;
         height: 150px;
@@ -925,9 +981,9 @@
         width: 220px;
         height: 45px;
         margin-top: 20px;
-        border: none;
-        border-radius: 3px;
-        background: #48cfad;
+        border: 1px solid #ffffff;
+        border-radius: 80px;
+        background: transparent;
         font-weight: 200;
         color: #ffffff;
     }
@@ -947,24 +1003,34 @@
         margin: 50px auto;
     }
     .table_info{
-        margin-left: 40px;
+        display: inline-block;
     }
         .table_list .table_user_img{
             width: 55px;
             height: 55px;
         }
         .table_list .table_subject{
-            padding-left: 20px;
+            font-size: 18px;
         }
-            .table_list .table_subject a{
-                left: 51px;
-                font-size: 18px;
-            }
         .table_writer {
             font-size: 15px;
-            left: 50px;
         }
-    #write_bt{
+    .table_counts{
+        display: inline-block;
+        float: right;
+    }
+        .table_like{
+            float: right;
+            min-width: 60px;
+        }
+        .table_view{
+            float: right;
+            min-width: 60px;
+        }
+        .table_date{
+            text-align: center;
+        }
+    .write_bt{
         bottom: 20px;
         right: 40px;
     }
@@ -985,14 +1051,31 @@
             }
             #author_main h4{
                 display: block;
+                font-size: 26px;
+                margin-top: 20px;
             }
+    #post_subject{
+        height: 50px;
+        line-height: 53px;
+    }
+        .post_subject_name{
+            display: inline-block;
+        }
+    #post_info{
+        position:absolute;
+        right: 25px;
+        top: 15px;
+        margin-right: 5px;
+    }
+        #post_info li{
+            float:left;
+        }
     #post_contents{
         margin: 30px 60px;
     }
 
     .dash_body_sector{
         width: 25%;
-        height: 150px;
         float: left;
         border-right: 1px solid #eeeeee;
     }
@@ -1000,7 +1083,7 @@
         padding-right: 160px;
     }
     .x2{
-        width: 100%;
+        width: 50%;
     }
         .history_date{
             width: 140px;
@@ -1026,6 +1109,22 @@
     .x2_inner .dash_body_content{
         padding-left: 15px;
         text-align: left;
+    }
+    .setting_card{
+        padding:15px 20px;
+    }
+    .setting_card p{
+
+    }
+        .setting_card label{
+
+        }
+        .setting_card input{
+            width: 300px;
+        }
+    .public_option{
+        display: inline-block;
+        margin-left: 67px;
     }
 }
 /*------desktop end-------*/

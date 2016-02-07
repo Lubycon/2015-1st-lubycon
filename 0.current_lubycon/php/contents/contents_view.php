@@ -6,6 +6,7 @@ include('../contents_data/contents_data.php');
 $number = $_GET["4"];
 $current_url = $_GET["3"];
 $contents_img_url = "../contents_data/".$current_url."jpg/".$number.".jpg";
+$user_img_url = "../contents_data/".$current_url."jpg/profile/".$number.".jpg";
 $price = 'Free';
 
 $userjob = "Job";
@@ -14,15 +15,15 @@ $usercountry = "Country";
 
 $file_descript = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.";
 
-$file_view = 0;
-$file_down = 0;
-$file_like = 0;
+$file_view = rand(1, 300);
+$file_down = rand(1, 100);
+$file_like = rand(1, 30);
 
 switch($current_url)
 {
 case "artwork" : $current_url = "artwork"; $contents_name = $artwork_subject; $contents_author = $artwork_author; break;
 case "vector" : $current_url = "vector"; $contents_name = $vector_subject; $contents_author = $vector_author; break;
-case "3d" : $current_url = "3d"; break;
+case "3d" : $current_url = "3d"; $contents_name = $threed_subject; $contents_author = $threed_author; break;
 default : $current_url = "artwork"; $contents_name = $artwork_subject;$contents_author = $artwork_author; break;
 };
 ?>
@@ -105,7 +106,7 @@ default : $current_url = "artwork"; $contents_name = $artwork_subject;$contents_
                         <div id="bookmark_bt" class="lubyAlert_bt"><i id="bookmark_inner_bt" class="fa fa-star"></i></div>
                         <div id="like_bt" class="like_bt lubyAlert_bt"><i class="fa fa-heart"></i></div>
                     </div>
-                    <?php 
+                    <?php
                         $current_url = $_GET["3"];
                         if($current_url=="3d"){
                             echo 
@@ -146,10 +147,10 @@ default : $current_url = "artwork"; $contents_name = $artwork_subject;$contents_
                 <div id="contents_aside" class="con_aside">
                     <div class="designer_info">
                         <figure id="user_img">
-                            <img src="./ch/img/no_img/no_img_user1.jpg">
+                            <img src="<?=$user_img_url?>">
                         </figure>
-                        <h4><?=$contents_author[$number]?></h4>
-                        <h5><i class="fa fa-home"></i><?=$usercity?>, <?=$usercountry?></h5>
+                        <h4><a href="./index.php?1=personal_page&2=personal_page&3=dashboard"><?=$contents_author[$number]?></a></h4>
+                        <h5><i class="fa fa-map-marker"></i><?=$usercity?>, <?=$usercountry?></h5>
                     </div>
                     <button id="content_down" class="hidden-mb-b"><i class="fa fa-download"></i></button>
                     <div id="file_info">
