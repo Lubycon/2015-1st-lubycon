@@ -1429,7 +1429,10 @@ body{
 .creators_card{
     position: relative;
     background: #fff;
-    padding-top: 10px;  
+    padding-top: 10px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box; 
 }
     .creator_menu{
         position: absolute;
@@ -1480,7 +1483,7 @@ body{
         position: relative;
         display: inline-block;
         text-align: left;
-        margin-top: 18px;
+        
         margin-right: 20px;
     }
         .creator_pic {
@@ -1504,7 +1507,6 @@ body{
         position: relative;
         display: inline-block;
         vertical-align: top;
-        margin-top: 20px;
     }
         .creator_mid_info p{
             text-align: left;
@@ -1544,7 +1546,7 @@ body{
             }
     .creator_bot_info {
         position: relative;
-        padding-top: 8px;       
+        text-align: center;       
         box-sizing: border-box;
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
@@ -1557,13 +1559,18 @@ body{
         }
             .usercontent{
                 display: inline-block;
-                width: 28%;
-                margin: 0px 2px;
+                width: 30%;
+                margin: 0px 1%;
+                cursor: pointer;
             }
                 .usercontent img{
                     width: 100%;
                     height: 100%;
+                    margin-bottom: -3px;
                 }
+            .usercontent:hover{
+                opacity: 0.7;
+            }
 
 /*creator card end*/
 /* main board */
