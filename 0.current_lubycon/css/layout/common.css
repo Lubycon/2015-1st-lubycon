@@ -1478,6 +1478,10 @@ body{
                 }
     .creator_top_info {
         position: relative;
+        display: inline-block;
+        text-align: left;
+        margin-top: 18px;
+        margin-right: 20px;
     }
         .creator_pic {
             overflow: hidden;
@@ -1486,19 +1490,25 @@ body{
             .creator_pic img{
                 height:100%;
             }
-        .creator_location {
+        .creator_location_img {
             position : absolute;
             overflow: hidden;
             border-radius: 50%;
             box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.5);
         }
-            .creator_location img {
+            .creator_location_img img {
                 width: 100%;
                 height: 100%;
             }
     .creator_mid_info {
         position: relative;
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 20px;
     }
+        .creator_mid_info p{
+            text-align: left;
+        }
         .creator_name {
             color: #444444;
             font-weight: 600;
@@ -1512,12 +1522,15 @@ body{
                 color: #444444;
                 margin-right: 10px;
             }
-    .creator_bot_info {
-        position: relative;       
-        box-sizing: border-box;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-    }
+        .creator_location{
+            color: #888888;
+            font-size: 14px;
+            margin-top: 2px;
+        }
+            .creator_location i {
+                color: #888888;
+                margin-right: 10px;
+            }
         .contents_count {
             display: inline-block;
             color: #aaaaaa;
@@ -1529,18 +1542,28 @@ body{
                 color: #48cfad;
                 font-size: 17px !important;
             }
-        .view_profile_bt {
-            display: inline-block;
-            background: none;
-            color: #444444;
-            float: right;
+    .creator_bot_info {
+        position: relative;
+        padding-top: 8px;       
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+    }
+        .creator_bot_info ul{
+            width: 100%;
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
         }
-            .view_profile_bt a {
-                color: #444444;
+            .usercontent{
+                display: inline-block;
+                width: 28%;
+                margin: 0px 2px;
             }
-            .view_profile_bt a:hover {
-                opacity: 0.8;
-            }
+                .usercontent img{
+                    width: 100%;
+                    height: 100%;
+                }
 
 /*creator card end*/
 /* main board */
