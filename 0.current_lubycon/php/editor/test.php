@@ -38,10 +38,10 @@
     $contens_image = $_POST['contents_image'];
     if($contens_image) 
     {
-        echo "<br/>user upload image = ";
+        echo "<br/>user upload image = <br/>";
         for($i=0 ; $i< count($contens_image); $i++)
         {
-            echo "../contents_data/temp/".$contens_image[$i] . " ";
+            echo "../contents_data/temp/".$contens_image[$i] . "<br/>";
         };
     };
     echo "<br/><br/>-------------contents image--------------<br/>";
