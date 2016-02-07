@@ -96,7 +96,7 @@ default : $current_url = "artwork"; $contents_name = $artwork_subject;$contents_
                 </button>
             </div>
         </div><!--subnav_box end-->
-    </section>d
+    </section>
 
     <section id="contents_box">
         <section class="contents_view">
