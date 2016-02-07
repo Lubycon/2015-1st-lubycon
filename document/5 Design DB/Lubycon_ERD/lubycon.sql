@@ -49,6 +49,8 @@ DROP TABLE IF EXISTS `luby_country`;
 CREATE TABLE IF NOT EXISTS `luby_country`
 (
 	`country_code` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+	`continent` ENUM('asia', 'europe', 'africa', 'americas', 'oceania') NOT NULL,
+	`region` ENUM() NOT NULL,
 	`country_name` VARCHAR(255) NOT NULL,
 	`country_tel_one` VARCHAR(10) NOT NULL,
 	`country_tel_two` VARCHAR(10),

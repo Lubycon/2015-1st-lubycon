@@ -6,11 +6,11 @@
         $contents_num2 = $number + 1;
         $contents_num3 = $number + 3;
 
-        $user_img_url = "../contents_data/artworkjpg/profile/".$number.".jpg";
+        $user_img_url = "../contents_data/3djpg/profile/".$number.".jpg";
         $user_location_img = "./ch/img/flag_icons/United-States-Of-America.png";
         $usercity = "Los Santos";
         $usercountry = "United States";
-        $username = $artwork_author;
+        $username = $threed_author;
         $userjob = $jobarray[$number];
         $contents_count = rand(3, 150);
         $user_content1 = "../contents_data/artworkjpg/thumb/".$contents_num1.".jpg";

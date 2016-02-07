@@ -23,7 +23,7 @@ switch($current_url)
 {
 case "artwork" : $current_url = "artwork"; $contents_name = $artwork_subject; $contents_author = $artwork_author; break;
 case "vector" : $current_url = "vector"; $contents_name = $vector_subject; $contents_author = $vector_author; break;
-case "3d" : $current_url = "3d"; break;
+case "3d" : $current_url = "3d"; $contents_name = $threed_subject; $contents_author = $threed_author; break;
 default : $current_url = "artwork"; $contents_name = $artwork_subject;$contents_author = $artwork_author; break;
 };
 ?>
@@ -106,7 +106,7 @@ default : $current_url = "artwork"; $contents_name = $artwork_subject;$contents_
                         <div id="bookmark_bt" class="lubyAlert_bt"><i id="bookmark_inner_bt" class="fa fa-star"></i></div>
                         <div id="like_bt" class="like_bt lubyAlert_bt"><i class="fa fa-heart"></i></div>
                     </div>
-                    <?php 
+                    <?php
                         $current_url = $_GET["3"];
                         if($current_url=="3d"){
                             echo 
