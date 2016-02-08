@@ -5,6 +5,8 @@
 <script type="text/javascript" src="js/jquery.mousewheel.min.js"></script>
 
 <form id="account_setting_form" enctype="multipart/form-data" method="post" action="./php/personal_page/test.php">
+
+
     <section id="account_section">
         <section id="account_setting_section" class="setting_card">
             <p class="setting_title">Account Setting</p>
@@ -27,7 +29,48 @@
                 <label>Repeat Passward</label><input type="password" name="repass" id="re_pass_id" disabled /><i></i>
                 <p id="re_pass_check" class="form_check"></p>
         </section>
-
+        
+        <section id="history_setting_section" class="setting_card">
+            <p class="setting_title">History setting</p>
+            <div class="history_cell">
+                <div class="history_data">
+                    <select class="history_year" name="history_year[]">
+                        <?php
+                            for( $i=2016 ; $i > 1899 ; $i-- )
+                            {
+                                echo '<option value="'.$i.'">'.$i.'</option>';
+                            }
+                        ?>
+                    </select>
+                    <select class="history_month" name="history_month[]">
+                        <option value="1">January</option>
+                        <option value="2">February</option>
+                        <option value="3">March</option>
+                        <option value="4">April</option>
+                        <option value="5">May</option>
+                        <option value="6">Jun</option>
+                        <option value="7">July</option>
+                        <option value="8">August</option>
+                        <option value="9">September</option>
+                        <option value="10">October</option>
+                        <option value="11">November</option>
+                        <option value="12">December</option>
+                    </select>
+                    <select class="history_kind" name="history_kind[]">
+                        <option value="work_expierence">Work Expierence</option>
+                        <option value="studied">Studied</option>
+                        <option value="contest_prized">Contest / Prized</option>
+                    </select>
+                    <input class="history_text" type="text" name="history_text[]"/>
+                </div>
+            </div>
+            <div id="history_plus">
+                <i class="fa fa-plus"></i>
+            </div>
+            <div id="history_minus">
+                <i class="fa fa-minus"></i>
+            </div>
+        </section>
         <section id="basic_info_section" class="setting_card">
             <p class="setting_title">Basic Info</p>
                 <label>Profile Photo</label>
@@ -373,7 +416,6 @@
                 <!-- end select box -->
                 
         </section>
-
         <section id="delete_account_section" class="setting_card">
             <p class="setting_title">Delete Account</p>
                 <p id="delete_desc">Deleting your account will delete all of your content and remove all data associated with it.</p>

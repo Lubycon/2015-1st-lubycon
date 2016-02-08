@@ -55,85 +55,74 @@ $(function () //account setting script
 
 });
 
-$(function () {
-
-    $('#file_bt').click(function () // input file fake bt event
+var history_stack = 1;
+$(document).ready(function ()
+{
+    $("#history_minus").hide();
+})
+$(document).on("click touchend", "#history_plus", function (event) //clone language div and change id
+{
+    eventHandler(event, $(this));
+    $(".history_cell .history_data:first-child").clone(true).appendTo(".history_cell");
+    $(".history_cell .history_data:last-child").children('.history_text').val("");
+    $("#history_minus").show();
+    history_stack++;
+});
+$(document).on("click touchend", "#history_minus", function (event) //clone language div and change id
+{
+    eventHandler(event, $(this));
+    if (history_stack == 2)
     {
-        $('#file_hide').click();
-    });
-    $('#file_hide').change(function () {
-        $('#file_text').val($(this).val());
-    });
+        $(".history_cell .history_data:last-child").remove();
+        $("#history_minus").hide();
+    } else if (history_stack > 1) {
+        $(".history_cell .history_data:last-child").remove();
+    }
+    history_stack--;
 });
+$(document).on("change", ".history_data select", function (event)
+{
+    eventHandler(event, $(this));
 
-// input file preview
-$.fn.setPreview = function (opt) {
-    "use strict"
-    var defaultOpt = {
-        inputFile: $(this),
-        img: null,
-        w: 216,
-        h: 216
-    };
-    $.extend(defaultOpt, opt);
+    var history_array = [];
 
-    var previewImage = function () {
-        if (!defaultOpt.inputFile || !defaultOpt.img) return;
+    $('.history_cell .history_data').each(function (index) {
+        history_array.push(
+            {
+                'index':  index,
+                'year': $(this).find('.history_year').val(),
+                'month':$(this).find('.history_month').val(),
+                'kind': $(this).find('.history_kind').val(),
+                'text': $(this).find('.history_text').val()
+            });
+        //console.log(history_array[index]);
+    });
 
-        var inputFile = defaultOpt.inputFile.get(0);
-        var img = defaultOpt.img.get(0);
-
-        // FileReader
-        if (window.FileReader) {
-            // image ÆÄÀÏ¸¸
-            if (!inputFile.files[0].type.match(/image\//)) return;
-
-            // preview
-            try {
-                var reader = new FileReader();
-                reader.onload = function (e) {
-                    img.src = e.target.result;
-                    img.style.width = defaultOpt.w + 'px';
-                    img.style.height = defaultOpt.h + 'px';
-                    img.style.display = '';
-                }
-                reader.readAsDataURL(inputFile.files[0]);
-            } catch (e) {
-                // exception...
+    aftersort = history_array.sort(CompareForSort);
+    function CompareForSort(first, second) {
+        if (first.year == second.year) // sort by year
+            if (first.month < second.month) { // if same value year, sort by month
+                return -1; //bigger than second month
+            } else
+            {
+                return 1; //bigger than first month
             }
-            // img.filters (MSIE)
-        } else if (img.filters) {
-            inputFile.select();
-            inputFile.blur();
-            var imgSrc = document.selection.createRange().text;
+        if (first.year < second.year) 
+            return -1; // bigger than second year
+        else 
+            return 1; // bigger than first year
+    }
 
-            img.style.width = defaultOpt.w + 'px';
-            img.style.height = defaultOpt.h + 'px';
-            img.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(enable='true',sizingMethod='scale',src=\"" + imgSrc + "\")";
-            img.style.display = '';
-            // no support
-        } else {
-            // Safari5, ...
-        }
-    };
-
-    // onchange
-    $(this).change(function () {
-        previewImage();
+    $('.history_cell .history_data').each(function (index) {
+        console.log(aftersort[index].year)
+        //console.log($(this).find('.history_year').val());
+        //$(this).find('.history_year option').attr("selected","disable");
+        $(this).find('.history_year').val(aftersort[index].year).attr('selected', 'selected');
+        $(this).find('.history_month').val(aftersort[index].month).attr('selected', 'selected');
+        $(this).find('.history_kind').val(aftersort[index].kind).attr('selected', 'selected');
+        $(this).find('.history_text').val(aftersort[index].text);
     });
-};
-
-
-$(document).ready(function () {
-    var opt = {
-        img: $('#img_preview'),
-        w: 'auto',
-        h: 216
-    };
-
-    $('#file_hide').setPreview(opt);
 });
-
 ////////////////////////////delete button interaction start
 $(function(){
     ////////cancel bt start/////////////////////////////////
