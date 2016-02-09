@@ -133,9 +133,9 @@ $(function(){
     });
     $(".index_confirm_bt").on("click touchend",function(){
         eventHandler(event,$(this));
-        $("#confirm_btAlert").css("display","none");
-        $("#success_btAlert").css("display","inline-block");
-        $("#success_btAlert").attr("class","lubyAlert zoomIn animated");
+        $("#confirmAlert").css("display","none");
+        $("#successAlert").css("display","inline-block");
+        $("#successAlert").attr("class","lubyAlert zoomIn animated");
         setTimeout("removeAlert()",1500);
     })
     //////////cancel bt end/////////////////////////////////
@@ -148,7 +148,7 @@ function eventHandler(event, selector) {//
     }
 };
 function removeAlert(){
-    $("#success_btAlert").fadeOut(500);
+    $("#successAlert").fadeOut(500);
     $(".dark_overlay").fadeOut(500);
 }
 
