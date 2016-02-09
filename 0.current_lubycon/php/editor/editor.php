@@ -161,7 +161,7 @@
                     <p class="setting_title">Tags</p>
                     <div class="set_con">
                             <!-- need to save user select tag max value = infinite -->
-                            <select data-placeholder="Choose your contents categorys" style="width:100%;" class="chosen-select" multiple tabindex="8" name="user_selected_tag[]">
+                            <select data-placeholder="Choose your contents categorys" style="width:100%;" class="chosen-select2" multiple tabindex="8" name="user_selected_tag[]">
                                 <option>Car</option>
                                 <option>People</option>
                                 <option>Book</option>
@@ -269,7 +269,10 @@
                 var config = {
                     '.chosen-select': {},
                     '.chosen-select-deselect': { allow_single_deselect: true },
-                    '.chosen-select' : {max_selected_options: 3}
+                    '.chosen-select' : {max_selected_options: 3},
+                    '.chosen-select2': {},
+                    '.chosen-select2-deselect': { allow_single_deselect: true },
+                    '.chosen-select2' : {max_selected_options: 12}
                 }
                 for (var selector in config) {
                     $(selector).chosen(config[selector]);
