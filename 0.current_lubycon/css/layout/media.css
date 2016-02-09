@@ -408,7 +408,6 @@
             width: 100%;
             max-width: 800px;
             margin: 0px auto;
-            height: 130px;
             border-bottom: 1px solid #eeeeee;
             border-radius: 0px;
 
@@ -982,8 +981,7 @@
             font-size: 26px;
         }
     #best_creator_wrap{
-        width: 84%;
-        height: 150px;
+        width: 806px;
         margin: 20px auto;
         margin-top: 38px;
     }

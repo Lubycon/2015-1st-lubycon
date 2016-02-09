@@ -28,11 +28,85 @@
     padding-left: 310px;
 }
     #best_creator_wrap{
+        height: 200px;
         box-sizing: border-box;
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
-        background: #ffffff; 
+        background: #ffffff;
+        box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.3);
     }
+    #best_left_wrap{
+        width: 50%;
+        position: relative;
+        display: inline-block;
+        float: left;
+        
+    }
+        #best_left_background{
+            width: 100%;
+            height: 200px;
+            background: url(../../contents_data/vectorjpg/12.jpg) no-repeat 50% 46%;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            -webkit-filter: blur(3px) brightness(0.7);
+            -moz-filter: blur(3px) brightness(0.7);
+            -o-filter: blur(3px) brightness(0.7);
+            -ms-filter: blur(3px) brightness(0.7);
+            filter: blur(3px) brightness(0.7);
+            overflow: hidden;
+        }
+        #best_left_content{
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+            #creator_pic_wrap{
+                display: inline-block;
+                position: relative;
+            }
+            #best_creator_info{
+                margin-top: 0;
+            }
+                #best_creator_info .creator_name a{
+                    color: #eeeeee;
+                }
+                #best_creator_info .creator_job{
+                    color: #eeeeee;
+                }
+                #best_creator_info .creator_location{
+                    color: #eeeeee;
+                }
+                    #best_creator_info .creator_location i{
+                        color: #eeeeee;
+                    }
+                 #best_creator_info .contents_count{
+                    color: #eeeeee;
+                 }
+
+    #best_right_wrap{
+        width: 50%;
+        height: 100%;
+        padding-top: 13px;
+        position: relative;
+        display: inline-block;
+        float: left;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+    }
+        .best_sector{
+
+        }
+            .best_contents_sector{
+                width: 25%;
+                padding: 3px;
+                box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                float: left;
+            }
 .con_aside{
     border-right: 1px solid #222222;
     border-left: 0px;    

@@ -110,9 +110,47 @@
             </div><!--end con_aside-->
             <div id="user_view_main" class="con_main">
                 <ul id="creator_card_wrap">
+                <?php
+                    $bestCreator_img_url = "./ch/img/no_img/no_img_user1.jpg";
+                    $bestCreator_location_img = "./ch/img/flag_icons/United-States-Of-America.png";
+                ?>
                     <li id="best_creator_wrap">
-                        <div id="best_left_wrap"></div>
-                        <div id="best_right_wrap"></div>
+                        <div id="best_left_wrap">
+                            <div id="best_left_background"></div>
+                            <div id="best_left_content">
+                                <figure id="creator_pic_wrap">
+                                    <div class="creator_pic">
+                                        <img src="<?=$bestCreator_img_url?>" alt="user_pic"/>
+                                    </div>
+                                    <div class="creator_location_img">
+                                        <img src="<?=$bestCreator_location_img?>" alt="user_location"/>
+                                    </div>
+                                </figure>
+                                <div class="creator_mid_info" id="best_creator_info">
+                                    <p class="creator_name"><a href="./index.php?1=personal_page&2=personal_page&3=dashboard">Admin User</p></a><!--user name-->
+                                    <p class="creator_job">Designer</p><!--job-->
+                                    <p class="creator_location hidden-mb-b"><i class="fa fa-map-marker"></i>Los Santos, United States</p>
+                                    <article class="contents_count hidden-mb-b">
+                                        <p class="count_num">000</p>
+                                        Contents
+                                    </article>
+                                </div>   
+                            </div>
+                        </div>
+                        <div id="best_right_wrap">
+                            <div class="best_sector">
+                                <img class="best_contents_sector" src="../contents_data/artworkjpg/thumb/1.jpg">
+                                <img class="best_contents_sector" src="../contents_data/artworkjpg/thumb/2.jpg">
+                                <img class="best_contents_sector" src="../contents_data/artworkjpg/thumb/3.jpg">
+                                <img class="best_contents_sector" src="../contents_data/artworkjpg/thumb/4.jpg">
+                            </div>
+                            <div class="best_sector">
+                                <img class="best_contents_sector" src="../contents_data/artworkjpg/thumb/5.jpg">
+                                <img class="best_contents_sector" src="../contents_data/artworkjpg/thumb/6.jpg">
+                                <img class="best_contents_sector" src="../contents_data/artworkjpg/thumb/7.jpg">
+                                <img class="best_contents_sector" src="../contents_data/artworkjpg/thumb/8.jpg">
+                            </div>
+                        </div>
                     </li>
                     <?php
                         for($i=0;$i<60;$i++){
