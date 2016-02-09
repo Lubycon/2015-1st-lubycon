@@ -1,5 +1,7 @@
 <?php
-
+    $terms_check = $_POST['terms_check'];
+    $private_check = $_POST['private_check'];
+    $email_send_check = $_POST['email_send_check'];
 	
 	require_once '../database/database_class.php';
 
