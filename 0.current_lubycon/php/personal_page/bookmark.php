@@ -7,3 +7,11 @@
         }
     ?>
 </ul>
+<!-- tempelate script -->
+<script>
+    $(document).ready(function()
+    {
+        $(".lubyAlert_bt").css("color","#FFBE54");
+    });
+</script>
+<!-- tempelate script -->

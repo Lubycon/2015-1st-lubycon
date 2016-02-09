@@ -1,8 +1,6 @@
 <ul>
     <?php
-        for( $i=0 ; $i<5 ; $i++ )
-        {
-            include("../community/main_board.php");
-        };
+     $third_param = $third_param;
+     include("../layout/main_board.php");
     ?>
 </ul>
