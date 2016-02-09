@@ -10,7 +10,7 @@
 	$nick = $_POST['nick'];
 	$pass = $_POST['pass'];
 	$repass = $_POST['repass'];
-	$date = date('Y-m-d');
+	$date = date('Y-m-d H:i:s');
 	$country_code = $_POST['country_code'];
 
 	// password encryption -> using bycrypt
