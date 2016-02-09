@@ -111,7 +111,8 @@
             <div id="user_view_main" class="con_main">
                 <ul id="creator_card_wrap">
                     <li id="best_creator_wrap">
-                        <p>CREATOR_OF_THE_MONTH(designing...)</p>
+                        <div id="best_left_wrap"></div>
+                        <div id="best_right_wrap"></div>
                     </li>
                     <?php
                         for($i=0;$i<60;$i++){
