@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 
 <html>
@@ -230,6 +231,16 @@
         <!-- end after sign in -->
 
         <button id="addcontent_bt" class="animate_width hidden-mb-b"><i class="fa fa-plus"></i>Add Contents</button>
+        <!--세션 여기-->
+
+        <?php
+            if(!$_COOKIE['logintime']){
+                session_destroy();
+            }else if($_COOKIE['logintime']){
+                setcookie('logintime',time(),time()+900);
+                echo ('<script>$("#signin_bt").hide(); $("#after_signin , #addcontent_bt").show();</script>');
+            }
+        ?>
 
         <!--end content button-->
         <div id="lang_select_bt" class="hidden-mb-b">

@@ -1,4 +1,5 @@
 <?php
+	session_start();
 	require_once './php/database/database_class.php';
 
 	$database = new DBConnect;
@@ -14,7 +15,11 @@
 	$result = mysqli_fetch_array($database->result);
 
 	if(password_verify($login_pass,$result['user_pass'])){
-		echo "<script>document.location.href='index.php'</script>";
+		// 로그인 기록 로그 테이블에 남겨놔야함.
+		setcookie($login_id, time(), time()+900);
+		$_SESSION['id'] = $login_id;
+		header('location:index.php');
+		//echo "<script>document.location.href='index.php'</script>";
 	}else{
 		echo "false <br/>";
 	}
