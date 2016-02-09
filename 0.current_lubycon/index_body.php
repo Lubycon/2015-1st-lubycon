@@ -164,9 +164,9 @@
             echo 
             '<div id="slider'.$i.'" style="width: 980px; height: 363px;">
             <div class="slides" u="slides">';
+            $v=0; //reset image number
                 for( $j=1 ; $j<4 ; $j++ ){ //loop slide page  
                 
-        $v=0;
             echo'<div>
                     <ul>';
                         for( $k=1 ; $k<11 ; $k++ ){ //loop slide img call
