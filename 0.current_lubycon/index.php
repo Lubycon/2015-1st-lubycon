@@ -234,10 +234,11 @@
         <!--세션 여기-->
 
         <?php
-            if(!$_COOKIE['logintime']){
+            if(!$_COOKIE['login']){
                 session_destroy();
-            }else if($_COOKIE['logintime']){
-                setcookie('logintime',time(),time()+900);
+            }else if($_COOKIE['login']){
+                $info = unserialize($_COOKIE['login']);
+                setcookie('login',serialize($info),time()+900);
                 echo ('<script>$("#signin_bt").hide(); $("#after_signin , #addcontent_bt").show();</script>');
             }
         ?>
