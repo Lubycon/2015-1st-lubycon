@@ -33,7 +33,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "community", "community", "{
 		php\community\community_page.php = php\community\community_page.php
 		php\community\community_view.php = php\community\community_view.php
 		php\community\community_write.php = php\community\community_write.php
-		php\community\main_board.php = php\community\main_board.php
+		php\community\test.php = php\community\test.php
 		php\community\wysiwygs.php = php\community\wysiwygs.php
 	EndProjectSection
 EndProject
@@ -113,6 +113,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "css", "css", "{89F53E10-E9B
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "js", "js", "{F4657569-6E1C-48D8-8BE1-96250A2CB5CA}"
 	ProjectSection(SolutionItems) = preProject
+		js\aboutus.js = js\aboutus.js
 		js\account.js = js\account.js
 		js\account_setting.js = js\account_setting.js
 		js\ajax.js = js\ajax.js
@@ -170,6 +171,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "layout", "layout", "{95A271
 		php\layout\creator_card.php = php\layout\creator_card.php
 		php\layout\follower_card.php = php\layout\follower_card.php
 		php\layout\index_forum.php = php\layout\index_forum.php
+		php\layout\main_board.php = php\layout\main_board.php
 		php\layout\mb_contents_card.php = php\layout\mb_contents_card.php
 		php\layout\personal_menu.php = php\layout\personal_menu.php
 	EndProjectSection
