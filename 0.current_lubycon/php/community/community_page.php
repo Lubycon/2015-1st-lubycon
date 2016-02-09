@@ -75,7 +75,7 @@
     <!-- end nav_guide -->
     <section class="con_wrap">
         <?php
-            include("main_board.php");
+            include("./php/layout/main_board.php");
         ?><!--end main_board section -->
     </section>
     <a>

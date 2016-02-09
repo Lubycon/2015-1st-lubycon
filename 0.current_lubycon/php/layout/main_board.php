@@ -1,6 +1,7 @@
 <section id="main_board">
     <?php
-        $current_url = $_GET["3"];
+        @$current_url = $_GET["3"];
+        @$current_url = $third_param;
     ?>
     <div class="table_wrap">
         <div class="table_head">
@@ -26,9 +27,11 @@
             <?php
             $j = 1;
             for($i=0;$i<30;$i++){
-                $third_param = $_GET['3'];
+                @$third_param = $_GET['3'];
+                $third_param = $third_param;
                 $_GET["number"] = $j;
-                include('php/layout/community_card.php');
+                @include('./php/layout/community_card.php');
+                @include('../layout/community_card.php');
                 $j++;
             }
             ?>
