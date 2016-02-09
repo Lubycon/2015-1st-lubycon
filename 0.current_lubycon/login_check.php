@@ -16,7 +16,7 @@
 
 	if(password_verify($login_pass,$result['user_pass'])){
 		// 로그인 기록 로그 테이블에 남겨놔야함.
-		$info[1] = $login_id
+		$info[1] = $login_id;
 		$info[2] = time();
 		setcookie('login', serialize($info), time()+900);
 		$_SESSION['id'] = $login_id;
