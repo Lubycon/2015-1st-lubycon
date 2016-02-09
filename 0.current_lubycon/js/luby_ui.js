@@ -485,7 +485,7 @@ $(window).on("load resize", function(){
 //      share toggle button start
 /////////////////////////////////////////////////////////
 $(document).ready(function(){
-    if(($(".share_bt_wrap").length != 0) && windowWidth >= 1025){
+    if($(".share_bt_wrap").length != 0){
         var toggle_count = 0;
         $(this).find(".share_bt").on("click touchend", function(event){
             if(!dragging){
@@ -498,11 +498,10 @@ $(document).ready(function(){
                             eventHandler(event, $(this));
                             toggle_count = showAlert($(this),toggle_count);
                             $(this).parents(".sharing_bt_box").fadeOut(200);
-                            if($(this).attr("id")=="shareLink"){
-                                var url = document.URL;
-                                copyToClipboard(url);
-                            }
+                            toggle_count = 0;
+                            return;
                         });
+                        toggle_count = 1;
                     break;
                     case 1 :
                         $(this).next(".sharing_bt_box").fadeOut(200);
@@ -517,9 +516,6 @@ $(document).ready(function(){
         });
     }
 });
-function copyToClipboard(text) {
-    window.prompt("Copy to clipboard: Ctrl+C, Enter", text);
-}
 /////////////////////////////////////////////////////////
 //      share toggle button end
 /////////////////////////////////////////////////////////
