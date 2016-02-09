@@ -33,25 +33,18 @@ $(document).scroll(function (){
     if($(".nav_guide").length != 0){
         var nav_guide = $(".nav_guide");
         var sticky_start = $("#main_figure").height() + $("#navsel").height();
-        var contents_y = nav_guide.height();
         if($("#navsel").length == 0){
             sticky_start -= $("#navsel").height();
         }else{
             sticky_start;
         }   
-        if (($(document).scrollTop() > sticky_start) && (windowWidth >= 1025)){
+        if (($(document).scrollTop() >= sticky_start) && (windowWidth >= 1025)){
             $("#main_header").css({"box-shadow": "0px 0px 0px 0px rgba(0,0,0,0.5)"});
-            nav_guide.css({ "position": "fixed", "top": "50px", "z-index": "4", "box-shadow": "0px 3px 7px rgba(0,0,0,0.3)" });
-            nav_guide.next().css({"top": contents_y});
-            nav_guide.next().next().css({"top": contents_y});
-            $("#floating_bt").css({"position" : "fixed", "top" : "100px"});
+            nav_guide.css({ "position": "fixed", "top": "50px", "z-index": "4", "box-shadow": "0px 3px 7px rgba(0,0,0,0.3)" });  
         }
         else {
             $("#main_header").css({"box-shadow": "0px 2px 4px 0px rgba(0,0,0,0.5)"});
             nav_guide.css({ "position": "relative", "top": "0px", "box-shadow": "0px 0px 0px rgba(0,0,0,0.3)" });
-            nav_guide.next().css({"top": "0px"});
-            nav_guide.next().next().css({"top": "0px"});
-            $("#floating_bt").css({"position" : "absolute", "top" : "0px"});
         }  
     }
     else{
@@ -65,28 +58,42 @@ $(document).scroll(function (){
 //      containers sticky start
 /////////////////////////////////////////////////////////
 $(document).ready(function(){  
-    $(document).scroll(function () {
-        var stickyStart = $("#main_header").height() + $("#navsel").height() + $(".nav_guide").height();
+    $(document).scroll(function (){
+        var stickyStart = $("#main_figure").height() + $("#navsel").height();
         if($("#navsel").length == 0){
                 stickyStart -= $("#navsel").height();
         }else{
             stickyStart;
         }
-        var scrollEnd = $(document).height() - $(window).height();
-        var bannerPosition = $(".con_aside").height() - $("#navsel").height();
+        var scrollEnd = $(document).height() - $(window).height(),
+            bannerPosition = $("#main_header").height() + $(".nav_guide").height(),
+            contentPosition = $(".nav_guide").height();
 
-        if($(document).find(".con_aside") && ($(".con_aside").attr("id") != "editor_aside") && (windowWidth >= 1025)){ 
-            
+        if($(document).find(".con_aside" || ".con_wrap") && ($(".con_aside").attr("id") != "editor_aside") && (windowWidth >= 1025)){  
             if ($(document).scrollTop() >= stickyStart && $(document).scrollTop() < scrollEnd){
-                $(".con_aside").css({ "position": "fixed", "top": "100px" });
+                if($(".nav_guide").attr("id") == "contents_info_wrap"){
+                    $("#contents_score").slideUp(150);
+                    bannerPosition = $("#main_header").height() + $(".nav_guide").height();
+                    contentPosition = bannerPosition - $("#navsel").outerHeight(true);
+                    $(".nav_guide").next().css({"top": contentPosition.toString() + "px" });
+                    $(".con_aside").css({ "position": "fixed", "top": bannerPosition.toString() + "px" });
+                    $("#floating_bt").css({"position" : "fixed", "top" : "150px"});    
+                }
+                else{
+                    $(".con_aside").css({ "position": "fixed", "top": bannerPosition });
+                    $(".nav_guide").next().css({"top": contentPosition.toString() + "px" });
+                }
                 //console.log("sticky start");
             }
             else if($(document).scrollTop() == scrollEnd){
                 //console.log("sticky bottom end");
             }
             else if($(document).scrollTop() < stickyStart){
+                $("#contents_score").slideDown(150);
+                $(".nav_guide").next().css({"top": "0px"});
                 $(".con_aside").css({ "position": "absolute", "top": "0px" });
                 $("#floating_bt").css({ "position": "absolute", "top": "0px"});
+                $("#floating_bt").css({"position" : "absolute", "top" : "0px"});
                 //console.log("sticky top end");
             };
         }
@@ -153,49 +160,7 @@ $(window).on("load",function(){
             $(this).on("click touchend", function (event){
                 if(!dragging){
                     eventHandler(event, $(this));
-                    var thisId = $(this).attr("id");
-                    var alertObject = $(document).find("#"+thisId.toString()+"Alert");
-                    switch(toggle_count){
-                        case 0:
-                            switch(thisId){
-                                case "bookmark_bt" :
-                                    $(this).css("color","#ffbe54");
-                                    $(this).find("i").css('color', '#ffbe54');
-                                    toggle_count = 1;
-                                    console.log("this is star");
-                                break;
-                                case "like_bt" :
-                                    $(this).find("i").css('color', '#48cfad');
-                                    toggle_count = 1;
-                                    console.log("this is heart");
-                                break;
-                                case "confirm_bt" :
-                                    toggle_count = toggle_count;
-                                    $(".dark_overlay").fadeIn(200);
-                                    console.log("this is confirm");
-                                break;
-                                default: return false; break;
-                            }
-                            alertObject.stop().fadeIn(700,function(event){ 
-                                if(alertObject.attr("id") != "confirm_btAlert"){
-                                    hideAlert();
-                                    console.log(toggle_count);
-                                    return true; 
-                                }
-                                else if(alertObject.attr("id") === "confirm_btAlert"){
-                                    return true;
-                                }
-                            });
-                        break;
-                        case 1:
-                            $(this).css("color","#cccccc");
-                            $(this).find("i").css('color', '#cccccc');
-                            toggle_count = 0;
-                            console.log(toggle_count);
-                            return true;
-                        break;
-                        default: return false; break;
-                    }//switch end
+                    toggle_count = showAlert($(this),toggle_count);
                 }
                 else if(dragging){
                     return;
@@ -204,6 +169,55 @@ $(window).on("load",function(){
         });//each end
     },1);//setTimeout end  
 });//window load end
+function showAlert(selector,arg){
+    var thisData = selector.attr("data");
+    var alertObject = $(document).find("#"+thisData+"Alert");
+    switch(arg){
+        case 0:
+            switch(thisData){
+                case "bookmark" :
+                    selector.css("color","#ffbe54");
+                    selector.find("i").css('color', '#ffbe54');
+                    arg = 1;
+                    console.log("this is star");
+                break;
+                case "like" :
+                    selector.find("i").css('color', '#48cfad');
+                    arg = 1;
+                    console.log("this is heart");
+                break;
+                case "confirm" :
+                    arg = arg;
+                    $(".dark_overlay").fadeIn(200);
+                    console.log("this is confirm");
+                break;
+                case "success" :
+                    arg = 1;
+                    console.log("this is success");
+                break;
+                default: return false; break;
+            }
+            alertObject.stop().fadeIn(700,function(event){ 
+                if(alertObject.attr("id") != "confirmAlert"){
+                    hideAlert();
+                    console.log(arg);
+                }
+                else if(alertObject.attr("id") === "confirmAlert"){
+
+                }
+            });
+            return arg;
+        break;
+        case 1:
+            selector.css("color","#cccccc");
+            selector.find("i").css('color', '#cccccc');
+            arg = 0;
+            console.log(arg);
+            return arg;
+        break;
+        default: return false; break;
+    }//switch end
+}
 function hideAlert(){
     setTimeout(function(){
         $(".lubyAlert").fadeOut(700,function(){
@@ -466,4 +480,46 @@ $(window).on("load resize", function(){
 })
 /////////////////////////////////////////////////////////
 //      visible goToTheTop button end
+/////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+//      share toggle button start
+/////////////////////////////////////////////////////////
+$(document).ready(function(){
+    if(($(".share_bt_wrap").length != 0) && windowWidth >= 1025){
+        var toggle_count = 0;
+        $(this).find(".share_bt").on("click touchend", function(event){
+            if(!dragging){
+                console.log(toggle_count);
+                eventHandler(event, $(this));
+                switch(toggle_count){
+                    case 0 : 
+                        $(".sharing_bt_box").fadeIn(200);
+                        $(".share_list").on("click touchend", function(event){
+                            eventHandler(event, $(this));
+                            toggle_count = showAlert($(this),toggle_count);
+                            $(this).parents(".sharing_bt_box").fadeOut(200);
+                            if($(this).attr("id")=="shareLink"){
+                                var url = document.URL;
+                                copyToClipboard(url);
+                            }
+                        });
+                    break;
+                    case 1 :
+                        $(this).next(".sharing_bt_box").fadeOut(200);
+                        toggle_count = 0;
+                    break;
+                    default : return; break;
+                }
+            }
+            else if(dragging){
+                return;
+            }   
+        });
+    }
+});
+function copyToClipboard(text) {
+    window.prompt("Copy to clipboard: Ctrl+C, Enter", text);
+}
+/////////////////////////////////////////////////////////
+//      share toggle button end
 /////////////////////////////////////////////////////////

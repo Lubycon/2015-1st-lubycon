@@ -128,7 +128,7 @@ body{
         z-index: 100;
         cursor:default;
     }
-    #confirm_btAlert{
+    #confirmAlert{
         width: 420px;
         height: 200px;
         margin-left: -210px;
@@ -1787,6 +1787,55 @@ body{
     .tooltip_long{
         padding: 3px 10px;
     }
+.share_bt_wrap{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+    .share_bt{
+        cursor: pointer;
+    }
+        .share_bt i{
+            color: #ffffff;
+            font-size: 25px;
+        }
+        .share_bt i:hover{
+            color: #ffbe54;
+        }
+    .sharing_bt_box{
+        position: absolute;
+        top: 30px;
+        right: 0;
+        display: none;
+        background: rgba(0,0,0,0.7);
+        border-radius: 5px;
+        padding: 10px;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+    }
+        .sharing_bt_box ul{
+            width: 190px;
+        }
+            .share_list{
+                cursor: pointer;
+                padding: 5px;
+                border-radius: 5px;
+            }
+            .share_list:hover{
+                background: rgba(255,255,255,0.3);
+            }
+                .share_list i{
+                    display: inline-block;
+                    color: #ffffff;
+                    margin-right: 10px;
+                    font-size: 20px;
+                }
+                .share_list p{
+                    display: inline-block;
+                    color: #ffffff;
+                    font-weight: 200;
+                }
 
 /*custom summernote css start*/
 /*---------------summer note start-----------------*/

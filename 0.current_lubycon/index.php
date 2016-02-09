@@ -93,23 +93,23 @@
     </aside>
     <!-- popup start -->
     <!-----------------------------------------------------alert boxes-------------------------------------------------->
-    <div class="lubyAlert" id="success_btAlert">
+    <div class="lubyAlert" id="successAlert">
         <i id="suc_icon" class="fa fa-check-circle rotateIn animated"></i>
         <p>Success!</p>
     </div><!--succese box-->
-    <div class="lubyAlert" id="fail_btAlert">
+    <div class="lubyAlert" id="failAlert">
         <i id="fail_icon" class="fa fa-times tada animated"></i>
         <p>Failed!</p>
     </div><!--fail box-->
-    <div class="lubyAlert" id="bookmark_btAlert">
+    <div class="lubyAlert" id="bookmarkAlert">
         <i id="star_icon" class="fa fa-star bounce animated"></i>
         <p>It's marked!</p>
     </div><!--bookmark box-->
-    <div class="lubyAlert" id="like_btAlert">
+    <div class="lubyAlert" id="likeAlert">
         <i id="like_icon" class="fa fa-heart bounceIn animated"></i>
         <p>Like :)</p>
     </div>
-    <div class="lubyAlert" id="confirm_btAlert">
+    <div class="lubyAlert" id="confirmAlert">
         <p class="confirm_text">Are you sure?</p>
         <button class="index_confirm_bt">Confirm</button>
         <button class="index_cancel_bt">Cancel</button>

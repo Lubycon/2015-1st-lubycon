@@ -7,6 +7,9 @@ $number = $_GET["4"];
 $current_url = $_GET["3"];
 $contents_img_url = "../contents_data/".$current_url."jpg/".$number.".jpg";
 $user_img_url = "../contents_data/".$current_url."jpg/profile/".$number.".jpg";
+$category0 = ucwords($current_url);
+$category1 = "Category1";
+$category2 = "Category2";
 
 $userjob = "Job";
 $usercity = "City";
@@ -18,12 +21,11 @@ $file_view = rand(1, 300);
 $file_down = rand(1, 100);
 $file_like = rand(1, 30);
 
-switch($current_url)
-{
-case "artwork" : $current_url = "artwork"; $contents_name = $artwork_subject; $contents_author = $artwork_author; break;
-case "vector" : $current_url = "vector"; $contents_name = $vector_subject; $contents_author = $vector_author; break;
-case "3d" : $current_url = "3d"; $contents_name = $threed_subject; $contents_author = $threed_author; break;
-default : $current_url = "artwork"; $contents_name = $artwork_subject;$contents_author = $artwork_author; break;
+switch($current_url){
+    case "artwork" : $current_url = "artwork"; $contents_name = $artwork_subject; $contents_author = $artwork_author; break;
+    case "vector" : $current_url = "vector"; $contents_name = $vector_subject; $contents_author = $vector_author; break;
+    case "3d" : $current_url = "3d"; $contents_name = $threed_subject; $contents_author = $threed_author; break;
+    default : $current_url = "artwork"; $contents_name = $artwork_subject;$contents_author = $artwork_author; break;
 };
 ?>
 
@@ -55,17 +57,44 @@ default : $current_url = "artwork"; $contents_name = $artwork_subject;$contents_
     </section>  <!-- end section -->
     <section class="nav_guide" id="contents_info_wrap">
         <div class="subnav_box">
-            <span id="contents_subject">
-                <h3 id="contents_title"><?=$contents_name[$number]?></h3>
-            </span>
-            <div id="sharing_bt_box">
-                <button class="share_sns share_face">
-                    <i class="fa fa-facebook"></i>
-                </button>
-                <button class="share_sns share_twit">
-                    <i class="fa fa-twitter"></i>
-                </button>
+            <h3 id="contents_title"><?=$contents_name[$number]?></h3>
+            <div id="contents_category"><?=$category0?> > <?=$category1?>, <?=$category2?></div>
+            <div id="contents_score">
+                <ul>
+                    <li><i class="fa fa-eye"></i></li>
+                    <li class="contents_view_score"><?=$file_view?></li>
+                </ul>
+                <ul>
+                    <li><i class="fa fa-cloud-download"></i></li>
+                    <li class="contents_view_score"><?=$file_down?></li>
+                </ul>
+                <ul>
+                    <li><i class="fa fa-heart"></i></li>
+                    <li class="contents_view_score"><?=$file_like?></li>
+                </ul>
             </div>
+            <div class="share_bt_wrap">
+                <div class="share_bt">
+                    <i class="fa fa-share-alt share_bt_icon"></i>
+                </div>
+                <div class="sharing_bt_box">
+                    <ul>
+                        <li class="share_list" data="success">
+                            <i class="fa fa-facebook-square"></i>
+                            <p>Share to Facebook</p>
+                        </li>
+                        <li class="share_list" data="success">
+                            <i class="fa fa-twitter-square"></i>
+                            <p>Share to Facebook</p>
+                        </li>
+                        <li class="share_list" id="shareLink" data="success">
+                            <i class="fa fa-link"></i>
+                            <p>Copy to link</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
         </div><!--subnav_box end-->
     </section>
 
@@ -74,8 +103,12 @@ default : $current_url = "artwork"; $contents_name = $artwork_subject;$contents_
             <div class="con_wrap">
                 <div id="contents_main" class="con_main">
                     <div id="floating_bt">
-                        <div id="bookmark_bt" class="lubyAlert_bt"><i id="bookmark_inner_bt" class="fa fa-star"></i></div>
-                        <div id="like_bt" class="like_bt lubyAlert_bt"><i class="fa fa-heart"></i></div>
+                        <div id="bookmark_bt" class="lubyAlert_bt" data="bookmark">
+                            <i id="bookmark_inner_bt" class="fa fa-star"></i>
+                        </div>
+                        <div id="like_bt" class="like_bt lubyAlert_bt" data="like">
+                            <i class="fa fa-heart"></i>
+                        </div>
                     </div>
                     <?php
                         $current_url = $_GET["3"];
@@ -144,24 +177,6 @@ default : $current_url = "artwork"; $contents_name = $artwork_subject;$contents_
                         <footer id="storage">
                             <p>1.2 MB</p>
                         </footer>
-                    </div>
-
-                    <div id="contents_score">
-                        <ul>
-                            <li><i class="fa fa-eye"></i></li>
-                            <li class="hidden-mb-ib">Views</li>
-                            <li class="contents_view_score"><?=$file_view?></li>
-                        </ul>
-                        <ul>
-                            <li><i class="fa fa-cloud-download"></i></li>
-                            <li class="hidden-mb-ib">Downloads</li>
-                            <li class="contents_view_score"><?=$file_down?></li>
-                        </ul>
-                        <ul>
-                            <li><i class="fa fa-heart"></i></li>
-                            <li class="hidden-mb-ib">Likes</li>
-                            <li class="contents_view_score"><?=$file_like?></li>
-                        </ul>
                     </div>
                     <div id="tag_wrap" class="hidden-mb-b">
                         <p id="tag_title"><i class="fa fa-tag"></i>Tags</p>

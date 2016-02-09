@@ -107,7 +107,7 @@
                 <p>
                     <?=$post_content?>
                 </p>
-                <div id="like_bt" class="lubyAlert_bt"><i class="fa fa-heart"></i></div>
+                <div id="like_bt" class="lubyAlert_bt" data="like"><i class="fa fa-heart"></i></div>
                 <div id="post_edit_box">
                     <button class="post_edit_bt animate_opacity"><i class="fa fa-trash"></i>Delete</button>
                     <button class="post_edit_bt animate_opacity"><i class="fa fa-repeat"></i>Modified</button>
