@@ -8,6 +8,14 @@ $view_num = 0;
 $content_date = "00.00.00";//yy.mm.dd
 $current_url = $third_param;
 
+switch($current_url)
+{
+case "forum" : $current_url = "forum"; break;
+case "tutorial" : $current_url = "tutorial";  break;
+case "qna" : $current_url = "qna";  break;
+default : $current_url = "forum";  break;
+};
+
 echo "<li class='table_list'>
     <div class='table_list_inner'>
         <span class='table_number_wrap hidden-mb-ib'>

@@ -86,6 +86,7 @@
 				                },
 				                cropUrl:'./php/img_crop/img_crop_to_file.php',
 				                customUploadButtonId:'cropContainerHeaderButton',
+                                outputUrlId:'myOutputId',
 				                modal:false,
 				                loaderHtml:'<div class="loader bubblingG"><span id="bubblingG_1"></span><span id="bubblingG_2"></span><span id="bubblingG_3"></span></div> ',
 				                onBeforeImgUpload: function(){ console.log('onBeforeImgUpload') },
@@ -97,7 +98,7 @@
 		                }	
 		                var croppic = new Croppic('croppic_account', croppicHeaderOptions);
 	                </script>
-               
+                    <input type="hidden" id="myOutputId" name="croppicurl">
                 <label>Occupation / Job</label>
                 <div class="job_option">
                     <select class="basic_filter" name="job">

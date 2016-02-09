@@ -50,7 +50,7 @@ CREATE TABLE IF NOT EXISTS `luby_country`
 (
 	`country_code` INT UNSIGNED NOT NULL AUTO_INCREMENT,
 	`continent` ENUM('asia', 'europe', 'africa', 'americas', 'oceania','undecided') NOT NULL,
-	`region` ENUM('east_asia', 'central_asia', 'south_aisa', 'northern_asia', 'south_east_asia', 'south_west_asia', 'eastern_europe', 'central_europe', 'western_europe', 'southern_europe', 'northern_europe', 'south_east_europe','south_west_europe', 'eastern_africa', 'central_africa', 'western_africa', 'southern_africa', 'northern_africa', 'indian_ocean', 'pacific', 'central_america', 'south_america', 'north_america', 'west_indies','undecided') NOT NULL,
+	`region` ENUM('east_asia', 'central_asia', 'south_asia', 'northern_asia', 'south_east_asia', 'south_west_asia', 'eastern_europe', 'central_europe', 'western_europe', 'southern_europe', 'northern_europe', 'south_east_europe','south_west_europe', 'eastern_africa', 'central_africa', 'western_africa', 'southern_africa', 'northern_africa', 'indian_ocean', 'pacific', 'central_america', 'south_america', 'north_america', 'west_indies','undecided') NOT NULL,
 	`country_name` VARCHAR(255) NOT NULL,
 	`country_tel_one` VARCHAR(10) NOT NULL,
 	`country_tel_two` VARCHAR(10),
@@ -89,6 +89,7 @@ CREATE TABLE IF NOT EXISTS `luby_user`
 	`user_fax_public` ENUM('public', 'followers', 'private') NOT NULL,
 	`user_web` TEXT,
 	`user_web_public` ENUM('public', 'followers', 'private') NOT NULL,
+	`newsletter` ENUM('true', 'false') NOT NULL,
 	
 	PRIMARY KEY (`user_code`)
 	

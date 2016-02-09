@@ -1,5 +1,7 @@
 <?php
-
+    $terms_check = $_POST['terms_check'];
+    $private_check = $_POST['private_check'];
+    $email_send_check = $_POST['email_send_check'];
 	
 	require_once '../database/database_class.php';
 
@@ -10,7 +12,7 @@
 	$nick = $_POST['nick'];
 	$pass = $_POST['pass'];
 	$repass = $_POST['repass'];
-	$date = date('Y-m-d');
+	$date = date('Y-m-d H:i:s');
 	$country_code = $_POST['country_code'];
 
 	// password encryption -> using bycrypt

@@ -403,6 +403,7 @@ body{
     color: #ffffff;
     font-size: 15px;
     opacity: 1;
+    display:none;
 }
     #addcontent_bt:hover {
         border: 2px solid #87ead1;
@@ -425,7 +426,7 @@ body{
     margin-right: 50px;
     padding-right: 10px;
     cursor: pointer;
-    display: none;
+    display: block;
 }
 
 #after_signin {
@@ -435,6 +436,7 @@ body{
     float: right;
     padding-right: 10px;
     cursor: pointer;
+    display:none;
 }
 
     #after_signin figure {

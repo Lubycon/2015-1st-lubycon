@@ -142,7 +142,7 @@
         cursor:pointer;
     }
         #file_import_com{
-            display:none;
+            opacity:0;
         }
         #file_text_com{
             width:300px;

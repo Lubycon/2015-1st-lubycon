@@ -129,7 +129,7 @@
                     <p id="comment_count"><span id="comment_counter">10</span> Comments</p>
                     <?php
                         for($i=1; $i<=10; $i++){
-                            include("php/layout/comment.php");
+                            include("./php/layout/comment.php");
                         };
                     ?>
                 </div><!--end comment_list-->
@@ -140,6 +140,6 @@
         </section><!-- end post_section -->
     </section>  <!-- end post_box -->
     <?php
-        include("main_board.php");
+        include("./php/layout/main_board.php");
     ?><!--end main_board section -->
 </section>  <!-- end contents section -->
