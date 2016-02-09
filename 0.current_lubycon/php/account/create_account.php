@@ -41,7 +41,7 @@
                     </a>
                     <span class="check_zone">
                          <p>I agree</p>
-                         <input type="checkbox" class="check_box" id="check1"/><label class="check_label" for="check1"></label>
+                         <input type="checkbox" class="check_box" id="check1" name="terms_check"/><label class="check_label" for="check1"></label>
                     </span>
                </div>
                <div class="term_check_box">
@@ -53,11 +53,11 @@
                     </a>
                     <span class="check_zone">
                          <p>I agree</p>
-                         <input type="checkbox" class="check_box" id="check2" /><label for="check2"></label>
+                         <input type="checkbox" class="check_box" id="check2" name="private_check"/><label for="check2"></label>
                     </span>
                </div>
                <p id="account_email_sendcheck">would like to receive newsletter by e-mail
-                    <input type="checkbox" class="email_resive" id="check3" /><label for="check3"></label>
+                    <input type="checkbox" class="email_resive" id="check3" name="email_send_check"/><label for="check3"></label>
                </p>
             
 
