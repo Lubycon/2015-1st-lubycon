@@ -90,6 +90,8 @@ CREATE TABLE IF NOT EXISTS `luby_user`
 	`user_web` TEXT,
 	`user_web_public` ENUM('public', 'followers', 'private') NOT NULL,
 	`newsletter` ENUM('true', 'false') NOT NULL,
+	`term_check` ENUM('true', 'false') NOT NULL,
+	`private_check` ENUM('true', 'false') NOT NULL,
 	
 	PRIMARY KEY (`user_code`)
 	

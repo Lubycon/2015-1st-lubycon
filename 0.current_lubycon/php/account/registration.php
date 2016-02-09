@@ -62,14 +62,38 @@
 		$nick_validation = false;
 	}
 
-	if($email_validation && $pass_validation && $nick_validation){
+	//term validation check
+	if($terms_check == "on"){
+		$terms_validation = true;
+	}
+	else{
+		$terms_validation = false;
+	}
+
+	//private plicy validation check
+	if($private_check == "on"){
+		$private_validation = true;
+	}else{
+		$private_validation = false;
+	}
+
+	//newsletter
+	if($email_send_check == ""){
+		$newsletter = 'true';
+	}else{
+		$newsletter = 'false';
+	}
+
+	if($email_validation && $pass_validation && $nick_validation && $private_validation && $terms_validation){
 		
-		$database->query = "insert into luby_user(user_email,user_nick,user_pass,user_date,country_code)values('".$email."', '".$nick."', '".$hash."', '".$date."', '".$country_code."')";
+		$database->query = "insert into luby_user(user_email,user_nick,user_pass,user_date,country_code,term_check, private_check, newsletter)values('".$email."', '".$nick."', '".$hash."', '".$date."', '".$country_code."', '".'true'."', '".'true'."', '".$newsletter."')";
 		$database->DBQuestion();
 
 		if(!$database->result){
 			echo "회원가입에 실패하였습니다. 5초 후에 이전 페이지로 이동합니다.";
 			$database->DBOut();
+			sleep(5);
+			echo("<script>history.back();</script>");
 		}
 		else{
 			//google smtp mailer start		
