@@ -3,14 +3,13 @@
 var regx = /[`;',./~!@\#$%<>^&*\()\-=+_\’]/gi; //special letters
 var space = / /gi //space check
 var regex = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/; //email check
-var nick_check = /^[A-Za-z0-9+]*$/;; //only alpabet, number
+var only_alpha_number = /^[A-Za-z0-9+]*$/;; //only alpabet, number
 
 var email_com; //for submit able
 var pass_com;
 var pass1_com;
 var now_pass_com; //account setting page check
 var nick_com;
-var ready
 
 function blank_function(current_id)
 {
@@ -39,14 +38,25 @@ function true_function(current_id)
     $(current_id).next().removeClass();
     $(current_id).next().addClass('fa fa-check');
 };
-
-$(document).on("blur", "#email_id", function () {
+$(document).on("click , blur", "#create_account_area input[type|='text'] , #create_account_area input[type|='password']", function ()
+{
+    var current_id = '#' + $(this).attr('id');
+    switch (current_id)
+    {
+        case '#email_id': email_check(current_id); break;
+        case '#pass_id': pass_check(current_id); break;
+        case '#re_pass_id': pass_check(current_id); break;
+        case '#now_pass_id': now_pass_check(current_id); break;
+        case '#nick_id': nick_check(current_id); break;
+        default : break;
+    }
+});
+function email_check(current_id) {
     /////////////////////////////////////////////////////////
     //      e-mail check start
     /////////////////////////////////////////////////////////
-    var current_id = '#' + $(this).attr('id');
     var current_stat = $(current_id + "_check");
-    var value = $(this).val();
+    var value = $(current_id).val();
 
     if (value == '') { //blank case
 
@@ -78,7 +88,7 @@ $(document).on("blur", "#email_id", function () {
                     console.log('DB return value overlapping');
                     console.log(data);
                     
-                    $('#email_check').text('Overlapping').show();
+                    $(current_stat).text('Overlapping').show();
                     false_function(current_id);
                     email_com = false
 
@@ -90,7 +100,7 @@ $(document).on("blur", "#email_id", function () {
                     
                     //$(current_id).val($(current_id).val().toLowerCase()); // lowercase and uppercase same
                     true_function(current_id);
-                    $('#email_check').text('').show();
+                    $(current_stat).text('').show();
                     email_com = true;
                 }
                 else {
@@ -102,18 +112,20 @@ $(document).on("blur", "#email_id", function () {
             }
         })
     }
-});
+};
 /////////////////////////////////////////////////////////
 //      e-mail check end
 /////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////
 //      password check end
 /////////////////////////////////////////////////////////
-$(document).on("blur", "#pass_id", function () {
+function pass_check(current_id) {
 
-    var current_id = '#' + $(this).attr('id');
     var current_stat = $(current_id + "_check");
-    var value = $(this).val();
+    var value = $(current_id).val();
+
+    console.log(current_id);
+    console.log(value);
 
     if (value == '') { //blank
         
@@ -199,13 +211,12 @@ $(document).on("blur", "#pass_id", function () {
             cnt = 1;
         }
     };
-});
+};
 
-$(document).on("blur", "#re_pass_id", function () { // repeat pass check
+function re_pass_check(current_id) { // repeat pass check
 
-    var current_id = '#' + $(this).attr('id');
     var current_stat = $(current_id + "_check");
-    var value = $(this).val();
+    var value = $(current_id).val();
 
     if (value == '') { //blank
 
@@ -230,7 +241,7 @@ $(document).on("blur", "#re_pass_id", function () { // repeat pass check
         pass_com = true;
 
     }
-});
+};
 
 /////////////////////////////////////////////////////////
 //      password check end
@@ -240,9 +251,8 @@ $(document).on("blur", "#re_pass_id", function () { // repeat pass check
 /////////////////////////////////////////////////////////
 $(document).on("blur", function () {
 
-    var current_id = '#' + $(this).attr('id');
-    var current_stat = $(current_id + "_check");
-    var value = $(this).val();
+    //var current_stat = $(current_id + "_check");
+    //var value = $(current_id).val();
 
     $('#now_pass_id').on("blur", function () //account setting page now password check
     {
@@ -277,11 +287,10 @@ var abuse_name = new Array('sex', 'bitch', 'pussy', 'cunt', 'fuck', 'fucking','d
 //      nick name check start
 /////////////////////////////////////////////////////////
 
-$(document).on("blur", "#nick_id", function () {
+function nick_check(current_id) {
 
-    var current_id = '#' + $(this).attr('id');
     var current_stat = $(current_id + "_check");
-    var value = $(this).val();
+    var value = $(current_id).val();
 
     //console.log(jQuery.inArray($('#nick_id').val(), nick_array));
     if (value == '') { //blank
@@ -298,7 +307,7 @@ $(document).on("blur", "#nick_id", function () {
 
         //console.log(jQuery.inArray($('#nick_id').val(), abuse_name))
 
-    } else if (!nick_check.test(value)) //영어,숫자 외 불가
+    } else if (!only_alpha_number.test(value)) //영어,숫자 외 불가
     {
         $(current_stat).text('you can write only english and number').show();
         false_function(current_id);
@@ -310,7 +319,7 @@ $(document).on("blur", "#nick_id", function () {
         false_function(current_id);
         nick_com = false;
 
-    } else if (!nick_check.test($('#nick_id').val())) //영어,숫자 외 불가
+    } else if (!only_alpha_number.test($('#nick_id').val())) //영어,숫자 외 불가
     {
         $(current_stat).text('you can write only english and number').show();
         false_function(current_id);
@@ -360,7 +369,7 @@ $(document).on("blur", "#nick_id", function () {
             }
         });
     }
-});
+};
 //----------------------------submit able event----------------------------
 
     /////////////////////////////////////////////////////////
@@ -392,7 +401,16 @@ $(document).on("click blur", '#create_account_area', function () //submit able e
 
 $(document).on("click", '.account_submit', function () //submit able event
 {
-    $("#account_idpass").submit();
+    email_check('#email_id');
+    pass_check('#pass_id');
+    re_pass_check('#re_pass_id');
+    nick_check('#nick_id');
+     if (email_com && nick_com && pass_com && $('.check_box:checked').length == 2) {
+         $("#account_idpass").submit();
+     } else
+     {
+         alert('error : account inform was modified');
+     }
 });
 
 
