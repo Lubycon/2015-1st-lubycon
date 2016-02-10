@@ -39,11 +39,8 @@ function true_function(current_id)
     $(current_id).next().removeClass();
     $(current_id).next().addClass('fa fa-check');
 };
-$(document).on("click", "input", function ()
-{
-    email_check();
-});
-$(document).on("blur", "#email_id", function email_check() {
+
+$(document).on("blur", "#email_id", function () {
     /////////////////////////////////////////////////////////
     //      e-mail check start
     /////////////////////////////////////////////////////////
@@ -391,10 +388,21 @@ $(document).on("click blur", '#create_account_area', function () //submit able e
                 $('#submit_bt').css('background', '#c1c1c1');
             };
         }
-    });
+});
+
+$(document).on("click", '.account_submit', function () //submit able event
+{
+    $("#account_idpass").submit();
+});
+
+
+
     /////////////////////////////////////////////////////////
     //      account submit event end
-    /////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+
+
+
 //----------------------------end submit able event----------------------------
 
 /*----------------------------end creat account----------------------------*/
