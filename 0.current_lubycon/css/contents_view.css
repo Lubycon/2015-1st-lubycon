@@ -58,14 +58,7 @@
 }
 
     #floating_bt{
-        position: absolute;
-        background: rgba(0,0,0,0.5);
-        border-radius: 3px;
-        margin-top: 9px;
-        right: 320px;
-        z-index: 1;
-        overflow: hidden;
-        display:none;
+        /*empty*/
     }
         .contents_view #bookmark_bt{
             width:40px;
@@ -109,6 +102,7 @@
     .contents_view .contents_img{
         width: 100%;
         background: #aaaaaa;
+        margin-bottom: -4px;
     }
         .inner_img{
             width: 100%;

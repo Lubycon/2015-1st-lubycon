@@ -248,14 +248,14 @@
             <ul>
                 <li class="lang_selected">ENG</li>
                 <ul class="lang_list">
-                    <li>CHN</li>
+                    <li>CHI</li>
                     <li class="selected_language">ENG</li>
-                    <li>FRN</li>
+                    <li>FRA</li>
                     <li>GER</li>
                     <li>JPN</li>
                     <li>KOR</li>
                     <li>RUS</li>
-                    <li>SPN</li>
+                    <li>SPA</li>
                 </ul>	<!-- end lang_list -->
             </ul>	<!-- end lang_all -->
         </div>	<!-- end lang_select_bt -->

@@ -1,33 +1,6 @@
 ﻿/*----------------------------common js----------------------------*/
 var windowWidth = $(window).width();
 /////////////////////////////////////////////////////////
-//      language select function, page resetting start
-/////////////////////////////////////////////////////////
-$(function(){
-    var browserLanguage;
-    if(navigator.appName == "Netscape"){
-        browserLanguage = navigator.language;
-    }
-    else{
-        browserLanguage = navigator.browserLanguage;
-    }
-    var langCode = browserLanguage.substr(0,2);
-    switch(langCode){
-        case "zh" : alert("Chinese"); break;
-        case "en" : alert("English"); break;
-        case "fr" : alert("French"); break;
-        case "de" : alert("German"); break;
-        case "ja" : alert("Japanese"); break;
-        case "ko" : alert("Korean"); break;
-        case "ru" : alert("Russian"); break;
-        case "es" : alert("Spanish"); break;
-        default : alert("Sorry, This Language was not provided. You will go to English page");
-    }
-});
-/////////////////////////////////////////////////////////
-//      language select function, page resetting end
-/////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////
 //      mobile browser address window disable start
 /////////////////////////////////////////////////////////
 window.addEventListener("load",function() {
@@ -134,14 +107,14 @@ $(function (){
 });
 function LanguageValue(lang){
     switch(lang){
-        case "CHN" : console.log("Chinese"); break;
+        case "CHI" : console.log("Chinese"); break;
         case "ENG" : console.log("English"); break;
-        case "FRN" : console.log("French"); break;
+        case "FRA" : console.log("French"); break;
         case "GER" : console.log("German"); break;
         case "JPN" : console.log("Japanese"); break;
         case "KOR" : console.log("Korean"); break;
         case "RUS" : console.log("Russian"); break;
-        case "SPN" : console.log("Spanish"); break;
+        case "SPA" : console.log("Spanish"); break;
         default : return; break;
     }
 }
@@ -441,7 +414,7 @@ $(function (){
 //      contents view con_left hovering start
 /////////////////////////////////////////////////////////
 $(function(){
-    if($("#contents_main").length != 0){
+    if(($("#contents_main").length != 0) && windowWidth >= 1025){
         floating_bt_action();
     }
     else{

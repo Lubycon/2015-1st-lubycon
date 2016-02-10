@@ -1,3 +1,26 @@
+<script type="text/javascript">
+$(function(){
+    var browserLanguage;
+    if(navigator.appName == "Netscape"){
+        browserLanguage = navigator.language;
+    }
+    else{
+        browserLanguage = navigator.browserLanguage;
+    }
+    var langCode = browserLanguage.substr(0,2);
+    switch(langCode){
+        case "zh" : alert("Chinese"); break;
+        case "en" : alert("English"); break;
+        case "fr" : alert("French"); break;
+        case "de" : alert("German"); break;
+        case "ja" : alert("Japanese"); break;
+        case "ko" : alert("Korean"); break;
+        case "ru" : alert("Russian"); break;
+        case "es" : alert("Spanish"); break;
+        default : alert("Sorry, This Language was not provided. You will go to English page");
+    }
+});
+</script>
 <link href="css/index.css" rel="stylesheet" type="text/css" />  <!-- index file css -->
 <div id="index_figure_wrap" class="main_figure_wrap hidden-mb-b">
     <figure id="index_figure">
