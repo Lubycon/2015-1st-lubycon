@@ -18,7 +18,7 @@
 
     <link rel="shortcut icon" href="./ch/img/logo/lubycon.ico" /> <!-- favicon -->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source Sans Pro:200,400,600" type="text/css" />	<!--google web font-->
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" /> <!--icon font-->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" /> <!--icon font-->
 
     <link href="css/layout/normalize.css" rel="stylesheet" type="text/css" />  <!-- web normalize -->
     <link href="css/layout/common.css" rel="stylesheet" type="text/css" />  <!-- common css -->
@@ -248,11 +248,14 @@
             <ul>
                 <li class="lang_selected">ENG</li>
                 <ul class="lang_list">
-                    <li>KOR</li>
                     <li>CHN</li>
-                    <li>ENG</li>
+                    <li class="selected_language">ENG</li>
                     <li>FRN</li>
+                    <li>GER</li>
                     <li>JPN</li>
+                    <li>KOR</li>
+                    <li>RUS</li>
+                    <li>SPN</li>
                 </ul>	<!-- end lang_list -->
             </ul>	<!-- end lang_all -->
         </div>	<!-- end lang_select_bt -->

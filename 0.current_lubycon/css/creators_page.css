@@ -28,7 +28,7 @@
     padding-left: 310px;
 }
     #best_creator_wrap{
-        height: 200px;
+        width: 100%;
         box-sizing: border-box;
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
@@ -38,14 +38,16 @@
     #best_left_wrap{
         width: 50%;
         position: relative;
+        padding: 5px;
         display: inline-block;
-        float: left;
-        
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
     }
         #best_left_background{
             width: 100%;
-            height: 200px;
-            background: url(../../contents_data/vectorjpg/12.jpg) no-repeat 50% 46%;
+            height: 195px;            
+            background: url(../../contents_data/artworkjpg/10.jpg) no-repeat 50% 46%;
             -webkit-background-size: cover;
             -moz-background-size: cover;
             -o-background-size: cover;
@@ -60,11 +62,14 @@
         #best_left_content{
             position: absolute;
             top: 0;
-            left: 0;
+            left: 50%;
+            margin-left: -140px;
+            margin-top: 45px;
         }
             #creator_pic_wrap{
                 display: inline-block;
                 position: relative;
+                margin-right: 20px;
             }
             #best_creator_info{
                 margin-top: 0;
@@ -86,12 +91,12 @@
                  }
 
     #best_right_wrap{
-        width: 50%;
+        width: 49%;
         height: 100%;
-        padding-top: 13px;
         position: relative;
+        vertical-align: top;
+        padding: 5px;
         display: inline-block;
-        float: left;
         box-sizing: border-box;
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;

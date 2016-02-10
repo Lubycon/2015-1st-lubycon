@@ -12,8 +12,7 @@
     <section class="nav_guide hidden-mb-ib">
         <div class="subnav_box">
             <div class="lubySelector">
-                <span class="global_icon">
-                    <img src="./ch/img/grobal_icon.png" width="24" height="24" /></span>
+                <span class="global_icon"><i class="fa fa-globe"></i></span>
                 <span class="lubySelector_selected">All Continents</span>
                 <span class="lubySelector_arrow"><i class="fa fa-caret-down"></i></span>
                 <ul class="lubySelector_list">
@@ -39,7 +38,7 @@
             </ul>
         </div>
         <div class="lubySelector hidden-mb-ib">
-            <span class="global_icon"><i class="fa fa-filter"></i></span>
+            <span class="global_icon"><i class="fa fa-group"></i></span>
             <span class="lubySelector_selected">Newbies</span>
             <span class="lubySelector_arrow"><i class="fa fa-caret-down"></i></span>
             <ul class="lubySelector_list">
@@ -111,8 +110,9 @@
             <div id="user_view_main" class="con_main">
                 <ul id="creator_card_wrap">
                 <?php
-                    $bestCreator_img_url = "./ch/img/no_img/no_img_user1.jpg";
+                    $bestCreator_img_url = "../contents_data/3djpg/profile/60.jpg";
                     $bestCreator_location_img = "./ch/img/flag_icons/United-States-Of-America.png";
+                    $bestCreator_contents_num = rand(3, 150);
                 ?>
                     <li id="best_creator_wrap">
                         <div id="best_left_wrap">
@@ -131,7 +131,7 @@
                                     <p class="creator_job">Designer</p><!--job-->
                                     <p class="creator_location hidden-mb-b"><i class="fa fa-map-marker"></i>Los Santos, United States</p>
                                     <article class="contents_count hidden-mb-b">
-                                        <p class="count_num">000</p>
+                                        <p class="count_num"><?=$bestCreator_contents_num?></p>
                                         Contents
                                     </article>
                                 </div>   

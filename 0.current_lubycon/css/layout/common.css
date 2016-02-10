@@ -566,6 +566,12 @@ body{
     color: #929292;
     cursor: pointer;
 }
+    #lang_select_bt ul ul li:hover {
+        opacity: 0.7;
+    }
+    #lang_select_bt ul ul .selected_language{
+        color: #48cfad;
+    }
 
 
 #main_search_bar {
@@ -1977,7 +1983,28 @@ body{
 }
 /*---------------summer note end-----------------*/
 /*custom summernote css end*/
-
+/*---------------cc icon start-------------------*/
+.cc_icon {
+    display: inline-block;
+    position: relative;
+    width: 29px;
+    height: 29px;
+    margin: 5px 5px 0px 5px;
+}
+#cc_share {
+    display: none;
+}
+    .cc_icon img {
+        width:100%;
+    }
+    .cc_tooltip {
+        top: 35px;
+        left: -47px;
+    }
+    #cc_tooltip {
+        left: -67px;
+    }
+/*---------------cc icon end---------------------*/
 
 
 #footer {

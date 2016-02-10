@@ -1,33 +1,31 @@
 ﻿/*----------------------------common js----------------------------*/
-/////////////////////////////////////////////////////////
-//      debuging tool start
-/////////////////////////////////////////////////////////
-/*
-$(document).ready(function(){
-    $(function(){//property check
-        $(window).click(function(e){
-            console.log("------------------------------------------------------------------------")
-            console.log("document_scrollTop : " + $(document).scrollTop());
-            console.log("document.height : " + $(document).height());
-            console.log("window.height : " + $(window).height());
-            console.log("class : " + $(event.target).attr('class'));
-            console.log("id : " + event.target.id);
-        });
-    });
-});*/
 var windowWidth = $(window).width();
-$(window).on("resize load", function(){
-    console.log($(window).width());
-    $("body").css("min-height",$(window).height().toString()+"px");
-    console.log("body_height" + $("body").height());
-});
-/*$(document).on('keypress', function(e) {
-    if (e.which == 13) {// 13 == enter key@ascii
-        alert("you pressed enter key");
-    };
-});*/
 /////////////////////////////////////////////////////////
-//      debuging tool end
+//      language select function, page resetting start
+/////////////////////////////////////////////////////////
+$(function(){
+    var browserLanguage;
+    if(navigator.appName == "Netscape"){
+        browserLanguage = navigator.language;
+    }
+    else{
+        browserLanguage = navigator.browserLanguage;
+    }
+    var langCode = browserLanguage.substr(0,2);
+    switch(langCode){
+        case "zh" : alert("Chinese"); break;
+        case "en" : alert("English"); break;
+        case "fr" : alert("French"); break;
+        case "de" : alert("German"); break;
+        case "ja" : alert("Japanese"); break;
+        case "ko" : alert("Korean"); break;
+        case "ru" : alert("Russian"); break;
+        case "es" : alert("Spanish"); break;
+        default : alert("Sorry, This Language was not provided. You will go to English page");
+    }
+});
+/////////////////////////////////////////////////////////
+//      language select function, page resetting end
 /////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////
 //      mobile browser address window disable start
@@ -118,25 +116,35 @@ $(function () //selcted change
 //      change language start
 /////////////////////////////////////////////////////////
 
-$(function () //language change bt slide and change
-{
+$(function (){
 	$('.lang_selected').mouseenter(function(){
 		$('.lang_list').stop().slideDown(300);
 	});
 	$('#lang_select_bt').mouseleave(function(){
 		$('.lang_list').stop().slideUp(300);
 	});
-	$('.lang_list li').click(function(){
-		$('.lang_selected').text($(this).text());
-		$('.lang_list').stop().slideUp(300);
-	});
-	$('.lang_list li').hover(function(){
-        $(this).css('color','#fff')
-    },
-    function(){
-        $(this).css('color','#929292')
+    $('.lang_list li').click(function(event){
+        var selectedLangText = $(this).text();
+        $('.lang_selected').text(selectedLangText);
+        $('.lang_list').stop().slideUp(300);
+        $('.lang_list li').removeClass();
+        $(event.target).addClass("selected_language");
+        LanguageValue(selectedLangText);
     });
 });
+function LanguageValue(lang){
+    switch(lang){
+        case "CHN" : console.log("Chinese"); break;
+        case "ENG" : console.log("English"); break;
+        case "FRN" : console.log("French"); break;
+        case "GER" : console.log("German"); break;
+        case "JPN" : console.log("Japanese"); break;
+        case "KOR" : console.log("Korean"); break;
+        case "RUS" : console.log("Russian"); break;
+        case "SPN" : console.log("Spanish"); break;
+        default : return; break;
+    }
+}
 /////////////////////////////////////////////////////////
 //      change language end
 /////////////////////////////////////////////////////////

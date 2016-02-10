@@ -204,7 +204,7 @@ body{
         .img_crop_notallow  i {
             color:#646464 !important;
         }
-
+        
         #body_color_view {
             width:30px;
             height:30px;
@@ -220,19 +220,30 @@ body{
     #work_space {
         margin:0px auto;
         display: inline-block;
-        margin-left: -11px;
     }
     #tnail_header {
-        color: #aaaaaa;
+        color: #eeeeee;
         margin-bottom: 10px;
+        font-weight: 200;
     }
     #tnail_preview {
         position:relative;
-        background:#222222;
     }
         #tnail_preview ul li .contents_card {
             margin:0px;
             text-align: left;
+        }
+        .contents_card{
+            width: 230px;
+            border-radius: 0;
+            height: auto;
+        }
+        .contents_pic{
+            height: 195px;
+        }
+        .contents_pic img{
+            width: 230px;
+            height: 195px;
         }
     #tnail_work {
         width:250px;
@@ -265,47 +276,17 @@ body{
             height:0px;
             border:none;
         }
-    .button_pop {
-        text-align: center;
+    #cropContainerHeaderButton{
+        margin-top: 20px;
+        background: transparent;
+        border: 1px solid #ffffff;
+        border-radius: 100px;
+        color: #ffffff;
+        font-weight: 200;
     }
-        #call_setting {
-            width: 85px;
-            height: 35px;
-            
-            border: none;
-            border-radius: 50px;
-            
-            padding: 0px;
-            margin-top: 20px;
-            position: relative;
-            top: 0px;
-            right: 0px;
-
+        #cropContainerHeaderButton:hover{
+            border: 1px solid #48cfad;
             color: #48cfad;
-            background:#555555;
-            box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2);
-            font-size: 1em;
-        }
-        .mic_next_bt, .cancel_bt {
-            width:85px;
-            height:35px;
-            border: none;
-            border-radius: 50px;
-            padding: 0px;
-            margin-top: 20px;
-        }
-        .mic_next_bt {
-            font-weight: 200;
-            color:#fff;
-            background:#48cfad;
-            margin-left:190px;
-            border-radius: 3px;
-            box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2);
-        }
-        .cancel_bt {
-            font-weight: 200;
-            color:#ec6446;
-            background: none;
         }
     /* Thumbnail end*/
 #setting_tab_section {
@@ -408,26 +389,6 @@ body{
                 -webkit-box-sizing: border-box;
                 -moz-box-sizing: border-box;
             }
-                .cc_icon {
-                    display: inline-block;
-                    position: relative;
-                    width: 29px;
-                    height: 29px;
-                    margin: 5px 5px 0px 5px;
-                }
-                #cc_share {
-                    display: none;
-                }
-                    .cc_icon img {
-                        width:100%;
-                    }
-                    .cc_tooltip {
-                        top: 35px;
-                        left: -47px;
-                    }
-                    #cc_tooltip {
-                        left: -67px;
-                    }
         #cc_editor #modify_cc {
             text-align: right;
             padding-right: 5px;
