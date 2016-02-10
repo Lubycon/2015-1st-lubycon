@@ -1,4 +1,5 @@
 <script type="text/javascript">
+/*
 $(function(){
     var browserLanguage;
     if(navigator.appName == "Netscape"){
@@ -20,6 +21,7 @@ $(function(){
         default : alert("Sorry, This Language was not provided. You will go to English page");
     }
 });
+*/
 </script>
 <link href="css/index.css" rel="stylesheet" type="text/css" />  <!-- index file css -->
 <div id="index_figure_wrap" class="main_figure_wrap hidden-mb-b">

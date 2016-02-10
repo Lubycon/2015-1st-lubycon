@@ -10,13 +10,13 @@
      <div id="account_box">
           <form id="account_idpass" name="form" action="./php/account/registration.php" method="post">
                <label>E-mail</label><input type="text" name="email" id="email_id" /><i></i>
-               <p id="email_check" class="form_check"></p>
+               <p id="email_id_check" class="form_check"></p>
                <label>Password</label><input type="password" name="pass" id="pass_id" /><i></i>
-               <p id="pass_check" class="form_check"></p>
+               <p id="pass_id_check" class="form_check"></p>
                <label>Repeat Password</label><input type="password" name="repass" id="re_pass_id" /><i></i>
-               <p id="re_pass_check" class="form_check"></p>
+               <p id="re_pass_id_check" class="form_check"></p>
                <label>Nickname</label><input type="text" name="nick" id="nick_id" /><i></i>
-               <p id="nick_check" class="form_check"></p>
+               <p id="nick_id_check" class="form_check"></p>
                <label>Location</label>
                
                <div class="location_option_ca">
@@ -61,7 +61,7 @@
                </p>
             
 
-               <input type="submit" class="account_submit" value="Submit" disabled />
+               <input type="button" class="account_submit" value="Submit" disabled />
           </form>
     </div>
 </section>
