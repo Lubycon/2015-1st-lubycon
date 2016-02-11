@@ -1,16 +1,13 @@
 <?session_start()
-    //if(isset($_COOKIE)){
-        echo '<script>console.log("entry");</script>';
+    if(isset($_COOKIE)){
+        //echo '<script>console.log("entry");</script>';
         if(isset($_COOKIE['login'])){
-            echo '<script>console.log("if 1");</script>';
             $info = unserialize($_COOKIE['login']);
             setcookie('login', serialize($info), time()+5);
-        }else{
-            echo '<script>console.log("else 1");</script>';
+        }else if(!isset($_COOKIE['login'])){
             session_destroy();
-            echo '<script>console.log('.$_SESSION['id'].');</script>';
         }
-    //}
+    }
 ?>
 <!DOCTYPE html>
 
@@ -248,7 +245,7 @@
         
         <?php
             if(isset($_COOKIE)){
-                echo '<script>console.log("if 1-1");</script>';
+                //echo '<script>console.log("if 1-1");</script>';
                 if(isset($_COOKIE['login'])){
                     echo ('<script>$("#signin_bt").hide();$("#after_signin,#addcontent_bt").show();</script>');
                 }
