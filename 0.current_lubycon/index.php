@@ -1,6 +1,5 @@
 <?session_start()
     if(isset($_COOKIE)){
-        //echo '<script>console.log("entry");</script>';
         if(isset($_COOKIE['login'])){
             $info = unserialize($_COOKIE['login']);
             setcookie('login', serialize($info), time()+5);
