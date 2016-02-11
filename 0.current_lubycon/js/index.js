@@ -88,7 +88,6 @@ $(function () //selcted change
 /////////////////////////////////////////////////////////
 //      change language start
 /////////////////////////////////////////////////////////
-/*
 $(function (){
 	$('.lang_selected').mouseenter(function(){
 		$('.lang_list').stop().slideDown(300);
@@ -102,7 +101,7 @@ $(function (){
         $('.lang_list').stop().slideUp(300);
         $('.lang_list li').removeClass();
         $(event.target).addClass("selected_language");
-        //LanguageValue(selectedLangText);
+        LanguageValue(selectedLangText);
     });
 });
 function LanguageValue(lang){
@@ -118,7 +117,6 @@ function LanguageValue(lang){
         default : return; break;
     }
 }
-*/
 /////////////////////////////////////////////////////////
 //      change language end
 /////////////////////////////////////////////////////////

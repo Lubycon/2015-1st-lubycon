@@ -8,7 +8,7 @@
         }else{
             echo '<script>console.log("else 1");</script>';
             session_destroy();
-            echo '<script>console.log('.$_SESSION['id'].');</script>';
+            echo '<script>console.log('.$_SESSION["id"].');</script>';
         }
     //}
 ?>
