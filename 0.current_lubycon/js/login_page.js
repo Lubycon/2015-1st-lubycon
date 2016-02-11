@@ -11,47 +11,6 @@ $(document).ready(function(){
             $("#login_lubycon").click();
         };//if end
     });//keypress end
-    /*
-    $("#login_lubycon").click(function(){
-        var form_data = {
-            user_id: $("#login_id").val(),//input id
-            user_pw: $("#login_pass").val(),//input pw
-            is_ajax: 1
-        };
-        console.log("response wating");
-        $.ajax({
-            type: "POST",
-            url: "php/ajax/login_check.php",
-            cache: false,
-            data: form_data,//user_id, user_pw, is_ajax
-            success: function(data) {
-                console.log(data);
-                if(data == "true"){
-                    go_index();
-                    $('#after_signin').show();
-                    $('#addcontent_bt').show();
-                    $('#signin_bt').hide();
-                    console.log(data);
-                    return;
-                }else if(data == "false"){
-                    setTimeout(function(){
-                        $("#login_box").attr("class","shake animated");
-                    },10);
-                    console.log(data);
-                    return;
-                }
-                else{
-                    console.log("exception");
-                    return;
-                }
-                return;
-            },
-            error: function(response) {
-                console.log("ajax error");
-            }
-        });
-    });
-*/
 });    //ajax
 function go_index(){
     //location.replace("../../index.php");
@@ -79,21 +38,25 @@ $(function () { //create account bt popup event start
             //data: "id=" + id,//test.asp에 id 값을 보낸다
             cache: false,
             success: function (data) {
-                $('#bodyer').hide().append(data).fadeIn(300); //해당 내용을 보여준다
+                $('#bodyer').hide().append(data).fadeIn(500); //해당 내용을 보여준다
                 $(".basic_filter").selectOrDie
                 ({
                     customClass: "custom",
                     customID: "custom",
                     size: 5
                 });
-                $('.dark_overlay').fadeIn(300);
+                $('.dark_overlay').fadeIn(500);
+                $("#modal_close_bt").on("click",function(){
+                    $('.dark_overlay').stop().fadeOut(500);
+                     $('#create_account_area').stop().fadeOut(500).remove();
+                });
             }
         });
     });
 
-    $('.dark_overlay').click(function () {
-        $('.dark_overlay').stop().fadeOut(300);
-        $('#create_account_area').stop().fadeOut(300).remove();
+    $('.dark_overlay').on("click",function () {
+        $('.dark_overlay').stop().fadeOut(500);
+        $('#create_account_area').stop().fadeOut(500).remove();
     });
 });
 

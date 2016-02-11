@@ -3,7 +3,7 @@
 var regx = /[`;',./~!@\#$%<>^&*\()\-=+_\¡¯]/gi; //special letters
 var space = / /gi //space check
 var regex = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/; //email check
-var only_alpha_number = /^[A-Za-z0-9+]*$/;; //only alpabet, number
+var only_alpha_number = /^[A-Za-z0-9+]*$/; //only alpabet, number
 
 var email_com; //for submit able
 var pass_com;
@@ -14,27 +14,27 @@ var nick_com;
 function blank_function(current_id)
 {
     // this function's run to blank input box and blur
-    $(current_id).css({ 'border-left': '2px solid #D5D5D5', 'width': '190px' });
+    $(current_id).css({ 'border-left': 'none', 'width': '190px' });
     $(current_id).next().removeClass();
     $(current_id + "_check").text('').show();
 };
 function re_pass_blank_function(current_id)
 {
-    $('#re_pass_id').css({ 'border-left': '2px solid #D5D5D5', 'width': '190px' });
+    $('#re_pass_id').css({ 'border-left': 'none', 'width': '190px' });
     $('#re_pass_id').next().removeClass();
     $('#re_pass_id_check').text('').show();
 }
 function false_function(current_id)
 {
     // this function's run to blank input box and blur
-    $(current_id).css({ 'border-left': '5px solid #ea4126', 'width': '187px' });
+    $(current_id).css({ 'border-left': '5px solid #ec6446', 'width': '187px' });
     $(current_id).next().removeClass();
     $(current_id).next().addClass('fa fa-times');
 };
 function true_function(current_id)
 {
     // this function's run to blank input box and blur
-    $(current_id).css({ 'border-left': '5px solid #8ec89a', 'width': '187px' });
+    $(current_id).css({ 'border-left': '5px solid #48cfad', 'width': '187px' });
     $(current_id).next().removeClass();
     $(current_id).next().addClass('fa fa-check');
 };
@@ -181,7 +181,7 @@ function pass_check(current_id) {
         //1Â÷ ok
 
         if (value == $('#re_pass_id').val()) {
-            $('#re_pass_id').css({ 'border-left': '5px solid #8ec89a', 'width': '187px' });
+            $('#re_pass_id').css({ 'border-left': '5px solid #48cfad', 'width': '187px' });
             $('#re_pass_id').next().removeClass();
             $('#re_pass_id').next().addClass('fa fa-check');
             $('#re_pass_check').text('').show();
@@ -231,7 +231,7 @@ function re_pass_check(current_id) { // repeat pass check
 
     } else if (value == $('#pass_id').val() && pass1_com) { //complite
 
-        $('#pass_id').css({ 'border-left': '5px solid #8ec89a', 'width': '187px' });
+        $('#pass_id').css({ 'border-left': '5px solid #48cfad', 'width': '187px' });
         $('#pass_id').next().removeClass();
         $('#pass_id').next().addClass('fa fa-check');
         $('#pass_check').text('').show();
@@ -280,7 +280,7 @@ $(document).on("blur", function () {
 /////////////////////////////////////////////////////////
 //----------------------------end creat account password logic----------------------------
 
-var abuse_name = new Array('sex', 'bitch', 'pussy', 'cunt', 'fuck', 'fucking','dart','simon','ssaru');
+var abuse_name = new Array('sex', 'bitch', 'pussy', 'cunt', 'fuck', 'fucking');
 
 //----------------------------creat account nick name logic----------------------------
 /////////////////////////////////////////////////////////
@@ -370,18 +370,20 @@ function nick_check(current_id) {
         });
     }
 };
-//----------------------------submit able event----------------------------
 
-    /////////////////////////////////////////////////////////
-    //      account submit event start
-    /////////////////////////////////////////////////////////
+/*-------------------------check box event start-----------------------*/
+/*-------------------------check box event end-----------------------*/
+//----------------------------submit able event----------------------------
+/////////////////////////////////////////////////////////
+//      account submit event start
+/////////////////////////////////////////////////////////
 
 $(document).on("click blur", '#create_account_area', function () //submit able event
 {
         
-        if (email_com && nick_com && pass_com && $('.check_box:checked').length == 2) { //account setting submit to able
+        if (email_com && nick_com && pass_com && $('.document_check_box:checked').length == 2) { //account setting submit to able
             $('.account_submit').removeAttr('disabled');
-            $('.account_submit').css('background', '#47bf7e');
+            $('.account_submit').css('background', '#48cfad');
         } else {
             $('.account_submit').attr('disabled', 'disabled');
             $('.account_submit').css('background', '#c1c1c1');
@@ -405,7 +407,7 @@ $(document).on("click", '.account_submit', function () //submit able event
     pass_check('#pass_id');
     re_pass_check('#re_pass_id');
     nick_check('#nick_id');
-     if (email_com && nick_com && pass_com && $('.check_box:checked').length == 2) {
+     if (email_com && nick_com && pass_com && $('.document_check_box:checked').length == 2) {
          $("#account_idpass").submit();
      } else
      {
@@ -415,8 +417,8 @@ $(document).on("click", '.account_submit', function () //submit able event
 
 
 
-    /////////////////////////////////////////////////////////
-    //      account submit event end
+/////////////////////////////////////////////////////////
+//      account submit event end
 /////////////////////////////////////////////////////////
 
 

@@ -62,8 +62,6 @@ form
 		background-size: 300px;
 	}
 
-
-
 #login_box {
     position: relative;
     width: 400px;
@@ -253,75 +251,92 @@ form
 }
 
 
-
-/*create account pop*/
+/**********************************************************************************************create account pop*/
 #create_account_area {
-    width: 450px;
+    width: 410px;
     background: #fff;
-    border-radius: 4px;
     z-index: 6;
-    position: fixed;
+    position: absolute;
     top: 37%;
     left: 50%;
-    margin-left: -225px;
+    margin-left: -205px;
     margin-top: -250px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     display: block;
 }
 
     #create_account_area #account_title {
-        height: 35px;
-        line-height: 35px;
+        width: 100%;
+        height: 60px;
+        line-height: 20px;
         background: none;
         text-align: left;
         color: #444444;
-        font-size: 25px;
-        padding-left: 10px;
+        font-size: 23px;
+        padding: 20px;
         box-sizing: border-box;
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
     }
+    #create_account_area #modal_close_bt {
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        top: 17px;
+        right: 20px;
+        cursor: pointer;
+    }
+        #create_account_area #modal_close_bt i{
+            color: #444444;
+            font-size: 25px;
+            background: transparent;
+            border-radius: 0;
+            margin-top: 0;
+            margin-left: 0;
+        }
+        #create_account_area #modal_close_bt i:hover{
+            color: #48cfad;
+        }
 
     #create_account_area #account_box {
-        width: 430px;
-        padding: 20px 10px;
-        border-bottom-right-radius: 3px;
-        border-bottom-left-radius: 3px;
+        width: 100%;
     }
-
-        #create_account_area #account_box #account_idpass label {
+    #account_idpass{
+        text-align: center;
+    }/*form*/   
+    #account_inputs{
+        text-align: left;
+        padding: 20px;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        background: #eeeeee;
+    }
+    .account_input_wrap{
+        margin: 20px 0px;
+    }
+        .account_input_wrap label {
             display: inline-block;
             width: 130px;
             text-align: left;
-            padding-left: 10px;
-            height: 30px;
-            margin-bottom: 20px;
             color: #444;
             font-size: 15px;
             line-height: 30px;
         }
-
-
-        #create_account_area #account_box #account_idpass input {
+        .account_input_wrap input {
             width: 190px;
             height: 35px;
-            border: 1px solid #999;
-            border-radius: 3px;
-            padding: 0px 10px;
+            border: none;
+            border-radius: 5px;
+            padding: 0px 10px;;
         }
-            #create_account_area #account_box #account_idpass input:focus {
+            .account_input_wrap input:focus {
                 border:1px solid #48cfad;
                 box-shadow: 0px 0px 5px rgba(81, 203, 238, 1);
             }
 
-        #create_account_area #account_box #account_idpass #dupli_id {
-            width: 59px;
-            height: 30px;
-            border: none;
-            background: #8ec89a;
-            color: #fff;
-            text-align: center;
-            margin-left: 5px;
-        }
         .location_option_ca {
             display: inline-block;
         }
@@ -335,172 +350,118 @@ form
                 }
 
 .form_check {
-    color: #ea4126;
+    color: #ec6446;
     font-size: 12px;
     margin-left: 140px;
     margin-top: -16px;
     display: none;
     height: 16px;
-    line-height: 13px;
+    line-height: 50px;
 }
-
-
-
+#account_documents{
+    
+}
 #document_desc{
-    font-size: 12px;
-    color: #48cfad;
-    margin-left: 8px;
-    margin-bottom: -15px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    color: #444444;
 }
 
-
-#create_account_area #account_box .term_check_box {
-    width: 402px;
-    height: 65px;
-    text-align: center;
-    border: 1px solid #888;
-    border-radius: 3px;
+.document_wrap {
+    text-align: left;
     font-size: 14px;
-    color: #8a8a8a;
-    float: left;
-    margin-top: 20px;
-    margin-left: 7px;
-    margin-right: 7px;
-    padding: 5px;
+    color: #444444;
     display: block;
     position: relative;
+    padding: 20px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
 }
-
     .document {
-        height:30px;
+        
     }
-
-    #create_account_area #account_box .term_check_box .term_title {
-        text-align: center;
-        font-size: 18px;
-        color: #555;
-        line-height: 29px;
-    }
-    #create_account_area #account_box .term_check_box .term_title:hover {
-        text-decoration: underline;
-        cursor:pointer;
-    }
-
-
-
     .check_zone {
-        position:absolute;
-        right:5px;
-        height:33px;
-        line-height: 33px;
-    }
-    #create_account_area #account_box .term_check_box p {
-        color: #8a8a8a;
-        float: left;
-        display: inline-block;
+        position:relative;
         height:30px;
-        margin-left:5px;
-        margin-right:5px;
-        margin-top: 17px;
     }
-
-
-    #create_account_area #account_box .term_check_box .check_box {
-        margin-top:5px !important;
-        width:20px !important;
-        height:20px !important;
-        display: none;
-    }
-        #create_account_area #account_box .term_check_box .check_box + label {
-            border: 1px solid #aaa;
-            border-radius: 50%;
-            width:20px !important;
-            height:20px !important;
-            padding:0px !important;
-            margin:7px !important;
-            margin-top:23px !important;
-            float: left;
+        .check_zone p {
+            color: #444444;
+            font-weight: 400;
+            font-size: 16px;
+            display: inline-block;
+            height:30px;
         }
-        #create_account_area #account_box .term_check_box .check_box:checked + label {
-            border:1px solid #48cfad;
-            background:rgba(72,207,173,0.5);       
+            .check_zone a {
+                color: #48cfad;
+                font-weight: 400;
+                font-size: 16px;
+                text-decoration: underline;
+                }
+            }
+                .check_zone a:hover{
+                    opacity: 0.7;
+                }    
+        .check_zone .document_check_box {
+            margin-right: 15px;
         }
-
 #create_account_area #account_box .email_resive {
-    border: none;
-    background: #fff;
-    margin-top: 5px;
-    width: 14px !important;
-    height: 14px !important;
-    display: block;
-    margin: 0px auto;
-    display: none;
+    margin-right: 15px;
 }
-    #create_account_area #account_box .email_resive + label {
-        display: block !important;
-        border: 1px solid #aaa;
-        border-radius: 50%;
-        width:20px !important;
-        height:20px !important;
-        padding:0px !important;
-        margin:8px auto !important;
-    }
-        #create_account_area #account_box .email_resive:checked + label {
-            border:1px solid #48cfad;
-            background:rgba(72,207,173,0.5);
-        }
-
-
 #create_account_area #account_box #account_email_sendcheck {
-    color: #8a8a8a;
-    text-align: center;
-    padding-top: 30px;
+    color: #444444;
+    text-align: left;
+    padding-left: 20px;
     line-height: 25px;
-    clear: both;
 }
 
 #create_account_area #account_box #account_idpass .account_submit {
     width: 210px;
-    height: 35px;
-    margin: 0px;
+    height: 45px;
+    margin: 20px;
     padding: 0px;
     border: none;
-    background: #c1c1c1;
+    background: #cccccc;
+    border-radius: 100px;
     /*background:#47bf7e; apply */
     color: #fff;
-    font-size: 19px;
-    margin-left: 108px;
-    margin-top: 10px;
-    font-weight: 200;
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
 }
+    #account_idpass .account_submit:hover{
+        opacity: 0.7;
+    }
 
 #create_account_area #checkIcon {
     color: #fff;
 }
 /* check incons */
 #create_account_area .fa-check {
+    position: absolute;
     width: 25px;
     height: 25px;
     border-radius: 50%;
+    margin-top: 6px;
+    margin-left: 11px;
     line-height: 25px;
     vertical-align: middle;
     text-align: center;
-    background: #8ec89a;
+    background: #48cfad;
     color: #fff;
-    margin-left: 25px;
-    position: absolute;
 }
 
 #create_account_area .fa-times {
+    position: absolute;
     width: 25px;
     height: 25px;
     border-radius: 50%;
     line-height: 25px;
     vertical-align: middle;
     margin-top: 6px;
+    margin-left: 11px;
     text-align: center;
     background: #ec6446;
     color: #fff;
-    margin-left: 25px;
-    position: absolute;
 }
