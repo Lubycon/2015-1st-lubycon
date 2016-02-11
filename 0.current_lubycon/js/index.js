@@ -144,15 +144,11 @@ $(function () //language change bt slide and change
 //      before sign in child event start
 /////////////////////////////////////////////////////////
 
-$(function () //sign in toggle event
-{
-    $('#sign_out').click(function () //logout
-    {
-        $("#after_signin").hide();
-        $("#signin_bt").show();
-        $("#addcontent_bt").hide();
-    });
-});
+function signOutEvent(){
+    $("#after_signin").hide();
+    $("#signin_bt").show();
+    $("#addcontent_bt").hide();
+};
 /////////////////////////////////////////////////////////
 //      before sign in child event end
 /////////////////////////////////////////////////////////

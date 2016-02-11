@@ -1,4 +1,17 @@
-<?php session_start(); ?>
+<?session_start()
+    //if(isset($_COOKIE)){
+        echo '<script>console.log("entry");</script>';
+        if(isset($_COOKIE['login'])){
+            echo '<script>console.log("if 1");</script>';
+            $info = unserialize($_COOKIE['login']);
+            setcookie('login', serialize($info), time()+5);
+        }else{
+            echo '<script>console.log("else 1");</script>';
+            session_destroy();
+            echo '<script>console.log('.$_SESSION['id'].');</script>';
+        }
+    //}
+?>
 <!DOCTYPE html>
 
 <html>
@@ -225,21 +238,20 @@
                 <li><a href="./index.php?1=personal_page&2=personal_page&3=bookmark">Bookmarks</a></li>
                 <li><a href="./index.php?1=personal_page&2=personal_page&3=account_setting">Account Setting</a></li>
                 <li style="display:none;"><a href="./index.php?1=personal_page&2=personal_page&3=message">Message</a></li>
-                <li id="sign_out">Sign Out</li>
+                <li id="sign_out"><a href="./logout.php">Sign Out</a></li>
             </ul>
         </div>
         <!-- end after sign in -->
 
         <button id="addcontent_bt" class="animate_width hidden-mb-b"><i class="fa fa-plus"></i>Add Contents</button>
         <!--세션 여기-->
-
+        
         <?php
-            if(!$_COOKIE['login']){
-                session_destroy();
-            }else if($_COOKIE['login']){
-                $info = unserialize($_COOKIE['login']);
-                setcookie('login',serialize($info),time()+900);
-                echo ('<script>$("#signin_bt").hide(); $("#after_signin , #addcontent_bt").show();</script>');
+            if(isset($_COOKIE)){
+                echo '<script>console.log("if 1-1");</script>';
+                if(isset($_COOKIE['login'])){
+                    echo ('<script>$("#signin_bt").hide();$("#after_signin,#addcontent_bt").show();</script>');
+                }
             }
         ?>
 

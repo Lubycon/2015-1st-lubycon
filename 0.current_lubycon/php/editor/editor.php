@@ -1,3 +1,6 @@
+<?php
+    require_once './session_check.php';
+?>
 <link href="css/spectrum.css" rel="stylesheet" type="text/css" />
 <link href="css/editor.css" rel="stylesheet" type="text/css" />
 <link href="css/summernote.css" rel="stylesheet" type="text/css" />
