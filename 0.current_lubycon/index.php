@@ -1,14 +1,11 @@
-<?session_start()
+<?php
+session_start();
     if(isset($_COOKIE)){
         if(isset($_COOKIE['login'])){
             $info = unserialize($_COOKIE['login']);
             setcookie('login', serialize($info), time()+5);
         }else if(!isset($_COOKIE['login'])){
             session_destroy();
-<<<<<<< HEAD
-            echo '<script>console.log('.$_SESSION["id"].');</script>';
-=======
->>>>>>> a247610e4bc276626db038b5fdbc1932e130e518
         }
     }
 ?>
