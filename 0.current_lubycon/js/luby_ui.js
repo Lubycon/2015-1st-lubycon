@@ -65,12 +65,14 @@ $(document).ready(function(){
         }else{
             stickyStart;
         }
+        console.log(stickyStart);
         var scrollEnd = $(document).height() - $(window).height(),
             bannerPosition = $("#main_header").height() + $(".nav_guide").height(),
             contentPosition = $(".nav_guide").height();
 
         if($(document).find(".con_aside" && ".con_wrap") && ($(".con_aside").attr("id") != "editor_aside") && (windowWidth >= 1025)){  
             if ($(document).scrollTop() >= stickyStart && $(document).scrollTop() < scrollEnd){
+                console.log("sticky_start");
                 if($(".nav_guide").attr("id") == "contents_info_wrap"){
                     $("#contents_score").slideUp(150);
                     bannerPosition = $("#main_header").height() + $(".nav_guide").height();
