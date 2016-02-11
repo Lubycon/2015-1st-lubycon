@@ -12,8 +12,7 @@
     <section class="nav_guide hidden-mb-ib">
         <div class="subnav_box">
             <div class="lubySelector">
-                <span class="global_icon">
-                    <img src="./ch/img/grobal_icon.png" width="24" height="24" /></span>
+                <span class="global_icon"><i class="fa fa-globe"></i></span>
                 <span class="lubySelector_selected">All Continents</span>
                 <span class="lubySelector_arrow"><i class="fa fa-caret-down"></i></span>
                 <ul class="lubySelector_list">
@@ -39,8 +38,8 @@
             </ul>
         </div>
         <div class="lubySelector hidden-mb-ib">
-            <span class="global_icon"><i class="fa fa-filter"></i></span>
-            <span class="lubySelector_selected">Newbies</span>
+            <span class="global_icon"><i class="fa fa-group"></i></span>
+            <span class="lubySelector_selected">New</span>
             <span class="lubySelector_arrow"><i class="fa fa-caret-down"></i></span>
             <ul class="lubySelector_list">
                 <li class="selected_li">Newbies</li>
@@ -110,8 +109,48 @@
             </div><!--end con_aside-->
             <div id="user_view_main" class="con_main">
                 <ul id="creator_card_wrap">
+                <?php
+                    $bestCreator_img_url = "../contents_data/3djpg/profile/60.jpg";
+                    $bestCreator_location_img = "./ch/img/flag_icons/United-States-Of-America.png";
+                    $bestCreator_contents_num = rand(3, 150);
+                ?>
                     <li id="best_creator_wrap">
-                        <p>CREATOR_OF_THE_MONTH(designing...)</p>
+                        <div id="best_left_wrap">
+                            <div id="best_left_background"></div>
+                            <div id="best_left_content">
+                                <figure id="creator_pic_wrap">
+                                    <div class="creator_pic">
+                                        <img src="<?=$bestCreator_img_url?>" alt="user_pic"/>
+                                    </div>
+                                    <div class="creator_location_img">
+                                        <img src="<?=$bestCreator_location_img?>" alt="user_location"/>
+                                    </div>
+                                </figure>
+                                <div class="creator_mid_info" id="best_creator_info">
+                                    <p class="creator_name"><a href="./index.php?1=personal_page&2=personal_page&3=dashboard">Admin User</p></a><!--user name-->
+                                    <p class="creator_job">Designer</p><!--job-->
+                                    <p class="creator_location hidden-mb-b"><i class="fa fa-map-marker"></i>Los Santos, United States</p>
+                                    <article class="contents_count hidden-mb-b">
+                                        <p class="count_num"><?=$bestCreator_contents_num?></p>
+                                        Contents
+                                    </article>
+                                </div>   
+                            </div>
+                        </div>
+                        <div id="best_right_wrap">
+                            <div class="best_sector">
+                                <img class="best_contents_sector" src="../contents_data/artworkjpg/thumb/1.jpg">
+                                <img class="best_contents_sector" src="../contents_data/artworkjpg/thumb/2.jpg">
+                                <img class="best_contents_sector" src="../contents_data/artworkjpg/thumb/3.jpg">
+                                <img class="best_contents_sector" src="../contents_data/artworkjpg/thumb/4.jpg">
+                            </div>
+                            <div class="best_sector">
+                                <img class="best_contents_sector" src="../contents_data/artworkjpg/thumb/5.jpg">
+                                <img class="best_contents_sector" src="../contents_data/artworkjpg/thumb/6.jpg">
+                                <img class="best_contents_sector" src="../contents_data/artworkjpg/thumb/7.jpg">
+                                <img class="best_contents_sector" src="../contents_data/artworkjpg/thumb/8.jpg">
+                            </div>
+                        </div>
                     </li>
                     <?php
                         for($i=0;$i<60;$i++){

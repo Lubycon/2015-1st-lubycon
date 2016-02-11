@@ -51,11 +51,11 @@
                 </ul>
             </div>
             <div class="lubySelector hidden-mb-ib">
-                <span class="global_icon"><i class="fa fa-filter"></i></span>
+                <span class="global_icon"><i class="fa fa-copyright"></i></span>
                 <span class="lubySelector_selected">All Lisence</span>
                 <span class="lubySelector_arrow"><i class="fa fa-caret-down"></i></span>
                 <ul class="lubySelector_list">
-                    <li class="selected_li">All Lisence</li>
+                    <li class="selected_li">All License</li>
                     <li>Free</li>
                     <li>Uncommercial</li>
                     <li>Share</li>

@@ -1,3 +1,28 @@
+<script type="text/javascript">
+/*
+$(function(){
+    var browserLanguage;
+    if(navigator.appName == "Netscape"){
+        browserLanguage = navigator.language;
+    }
+    else{
+        browserLanguage = navigator.browserLanguage;
+    }
+    var langCode = browserLanguage.substr(0,2);
+    switch(langCode){
+        case "zh" : alert("Chinese"); break;
+        case "en" : alert("English"); break;
+        case "fr" : alert("French"); break;
+        case "de" : alert("German"); break;
+        case "ja" : alert("Japanese"); break;
+        case "ko" : alert("Korean"); break;
+        case "ru" : alert("Russian"); break;
+        case "es" : alert("Spanish"); break;
+        default : alert("Sorry, This Language was not provided. You will go to English page");
+    }
+});
+*/
+</script>
 <link href="css/index.css" rel="stylesheet" type="text/css" />  <!-- index file css -->
 <div id="index_figure_wrap" class="main_figure_wrap hidden-mb-b">
     <figure id="index_figure">
@@ -164,9 +189,9 @@
             echo 
             '<div id="slider'.$i.'" style="width: 980px; height: 363px;">
             <div class="slides" u="slides">';
+            $v=0; //reset image number
                 for( $j=1 ; $j<4 ; $j++ ){ //loop slide page  
                 
-        $v=0;
             echo'<div>
                     <ul>';
                         for( $k=1 ; $k<11 ; $k++ ){ //loop slide img call

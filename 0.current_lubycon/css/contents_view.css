@@ -58,14 +58,7 @@
 }
 
     #floating_bt{
-        position: absolute;
-        background: rgba(0,0,0,0.5);
-        border-radius: 3px;
-        margin-top: 9px;
-        right: 320px;
-        z-index: 1;
-        overflow: hidden;
-        display:none;
+        /*empty*/
     }
         .contents_view #bookmark_bt{
             width:40px;
@@ -109,6 +102,7 @@
     .contents_view .contents_img{
         width: 100%;
         background: #aaaaaa;
+        margin-bottom: -4px;
     }
         .inner_img{
             width: 100%;
@@ -245,8 +239,8 @@
         }
             #tag_title i{
                 margin-left: 16px;
-                margin-right: 20px;
-                font-size: 17px;
+                margin-right: 10px;
+                font-size: 16px;
                 color: #eeeeee;
 
             }
@@ -284,10 +278,42 @@
                 .tagbox:hover {
                     background: #333333;
                 }
+    #cc_total_wrap{
+        width: 100%;
+        margin-top: 20px;
+    }
+        #cc_title{
+            font-size:16px;
+            font-weight: 200;
+            color:#eeeeee;
+            text-align: left;
+        }
+            #cc_title i{
+                margin-left: 16px;
+                margin-right: 10px;
+                font-size: 16px;
+                color: #eeeeee;
+
+            }
+        #cc_wrap {
+            background: #282828;
+            margin: 10px;
+            padding:5px;
+            text-align: center;
+            border-radius: 5px;
+            box-shadow: inset -1px 2px 5px 0px rgba(0,0,0,0.3);
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+        }
+        #cc_wrap_inner {
+            width: 94%;
+            display: inline-block;
+            text-align: center;
+        }
 
     #file_descript {
         width:100%;
-        height:160px;
         padding: 0px 10px;
         margin-top: 10px;
         position: relative;
@@ -315,7 +341,7 @@
             width: 500px;
             display: none;
             position: absolute;
-            bottom: 140px;
+            bottom: 0;
             right: 315px;
 
             background: #444444;
@@ -334,7 +360,7 @@
                 padding: 10px;
                 font-weight: 200;
             }
-
+    
     #file_info{
         width: 246px; 
         border-radius: 3px;

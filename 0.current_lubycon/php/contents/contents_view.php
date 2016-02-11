@@ -85,7 +85,7 @@ switch($current_url){
                         </li>
                         <li class="share_list" data="success">
                             <i class="fa fa-twitter-square"></i>
-                            <p>Share to Facebook</p>
+                            <p>Share to Twitter</p>
                         </li>
                         <li class="share_list" id="shareLink" data="success">
                             <i class="fa fa-link"></i>
@@ -102,14 +102,6 @@ switch($current_url){
         <section class="contents_view">
             <div class="con_wrap">
                 <div id="contents_main" class="con_main">
-                    <div id="floating_bt">
-                        <div id="bookmark_bt" class="lubyAlert_bt" data="bookmark">
-                            <i id="bookmark_inner_bt" class="fa fa-star"></i>
-                        </div>
-                        <div id="like_bt" class="like_bt lubyAlert_bt" data="like">
-                            <i class="fa fa-heart"></i>
-                        </div>
-                    </div>
                     <?php
                         $current_url = $_GET["3"];
                         if($current_url=="3d"){
@@ -121,6 +113,14 @@ switch($current_url){
                             echo '<figure class="contents_img"><img class="inner_img" src="'.$contents_img_url.'" /></figure>';
                         };
                     ?>
+                    <div id="floating_bt">
+                        <div id="bookmark_bt" class="lubyAlert_bt" data="bookmark">
+                            <i id="bookmark_inner_bt" class="fa fa-star"></i>
+                        </div>
+                        <div id="like_bt" class="like_bt lubyAlert_bt" data="like">
+                            <i class="fa fa-heart"></i>
+                        </div>
+                    </div>
                     
                     <article id="comment_box">
                         <div id="comment_writer">
@@ -187,6 +187,45 @@ switch($current_url){
                                 <li class="tagbox">#lorem</li>
                                 <li class="tagbox">#lorem</li>
                                 <li class="tagbox">#lorem</li>
+                            </ul>                       
+                        </div>
+                    </div>
+                    <div id="cc_total_wrap" class="hidden-mb-b">
+                        <p id="cc_title"><i class="fa fa-creative-commons fa-lg"></i>Creative Commons</p>
+                        <div id="cc_wrap">
+                            <ul id="cc_wrap_inner">
+                                <a href="#" id="cc_desc_link" target="_brank">
+                                <li class="cc_icon" id="cc_main">
+                                    <img src="./ch/img/creative_commons/png/cc_w.png" />
+                                    <span class="tooltip_bt tooltip_long cc_tooltip" id="cc_tooltip">
+                                       Creative Commons License
+                                    </span>
+                                </li><!--cc icon-->
+                                <li class="cc_icon" id="cc_by">
+                                    <img src="./ch/img/creative_commons/png/by_w.png" />
+                                    <span class="tooltip_bt cc_tooltip" id="by_tooltip">
+                                        Attribution
+                                    </span>
+                                </li><!-- default icon-->
+                                <li class="cc_icon" id="cc_nc">
+                                    <img src="./ch/img/creative_commons/png/nc_w.png" />
+                                    <span class="tooltip_bt cc_tooltip" id="nc_tooltip">
+                                        Non-Commercial
+                                    </span>
+                                </li><!--non commercial-->
+                                <li class="cc_icon" id="cc_nd">
+                                    <img src="./ch/img/creative_commons/png/nd_w.png" />
+                                    <span class="tooltip_bt cc_tooltip" id="nb_tooltip">
+                                        Non-Derivative
+                                    </span>
+                                </li><!--non derivation-->
+                                <li class="cc_icon" id="cc_share">
+                                    <img src="./ch/img/creative_commons/png/share_w.png" />
+                                    <span class="tooltip_bt cc_tooltip" id="share_tooltip">
+                                        Share Alike
+                                    </span>
+                                </li><!--non derivation-->
+                            </a>
                             </ul>                       
                         </div>
                     </div>

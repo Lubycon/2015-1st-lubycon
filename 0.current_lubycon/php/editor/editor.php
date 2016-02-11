@@ -92,23 +92,12 @@
             <div id="work_space">
                 <div id="tnail_preview">
                     <ul>
-                            <li>
+                        <li>
                             <div class="contents_card">
                                 <div class="contents_pic">
                                     <img src="./ch/img/no_img/no_img.jpg" class="load_view" alt="contents thumbnail"/>
                                 </div>
                                 <!-- end contents pic -->
-                                <div class="contents_desc">
-                                    <div class="contents_sub">
-                                            <h4 class="contents_title load_view">Contents name</h4>
-                                            <h5>Free</h5>
-                                    </div>
-                                    <span class="creator_desc">
-                                            <img src="./ch/img/no_img/no_img_user1.jpg" class="hidden-mb-ib" alt="artist photo" />
-                                            <span class="by">by</span>
-                                            <span class="name">your name</span>
-                                    </span>
-                                </div>
                             </div>
                         </li>
                     </ul>
