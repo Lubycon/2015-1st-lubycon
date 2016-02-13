@@ -30,7 +30,7 @@ function eventHandler(event, selector) {
 //      sticky start
 /////////////////////////////////////////////////////////
 $(document).scroll(function () {
-    if ($(".nav_guide").length != 0) {
+    if (($(".nav_guide").length != 0) && windowWidth >= 1025) {
         var stickyStart = $("#main_figure").height() + $("#navsel").height();
         if ($("#navsel").length == 0) {
             stickyStart -= $("#navsel").height();
@@ -44,7 +44,7 @@ $(document).scroll(function () {
     }
 });
 function lubySticky(stickyStart) {
-    if (($(document).scrollTop() >= stickyStart) && (windowWidth >= 1025)) {
+    if ($(document).scrollTop() >= stickyStart) {
         $("#main_header").css({ "box-shadow": "0px 0px 0px 0px rgba(0,0,0,0.5)" });
         if ($(".nav_guide").attr("id") == "contents_info_wrap") {
             $("#contents_score").slideUp(150, function () {
@@ -91,6 +91,12 @@ function lubySticky(stickyStart) {
 function stickyContent(stickyStart) {
     var bannerPosition = $("#main_header").height() + $(".nav_guide").height(),
         contentPosition = bannerPosition - $("#navsel").height() - 15;
+    if($("#navsel").length == 0){
+        contentPosition -= $("#navsel").height(); 
+    }
+    else{
+        contentPosition = contentPosition;
+    }
     if ($(document).find(".con_aside") && ($(".con_aside").attr("id") != "editor_aside")) {
         if ($(document).scrollTop() >= stickyStart) {
             stickyAsideStart(bannerPosition, contentPosition);
@@ -105,8 +111,6 @@ function stickyContent(stickyStart) {
 }
 function stickyAsideStart(bannerPosition, contentPosition) {
     if ($(".nav_guide").attr("id") == "contents_info_wrap") {
-        bannerPosition = $("#main_header").height() + $(".nav_guide").height();
-        contentPosition = bannerPosition - $("#navsel").height() - 15;
         $(".nav_guide").next().css({ "top": contentPosition.toString() + "px" });
         $(".con_aside").css({ "position": "fixed", "top": bannerPosition.toString() + "px" });
         $("#floating_bt").css({ "position": "fixed", "top": "150px" });

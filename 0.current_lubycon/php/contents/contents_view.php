@@ -121,6 +121,30 @@ switch($current_url){
                             <i class="fa fa-heart"></i>
                         </div>
                     </div>
+                    <div id="cc_total_wrap" class="visible-mb">
+                        <p id="cc_title"><i class="fa fa-creative-commons fa-lg"></i>Creative Commons</p>
+                        <div id="cc_wrap">
+                            <ul id="cc_wrap_inner">
+                                <a href="#" id="cc_desc_link" target="_brank">
+                                <li class="cc_icon" id="cc_main">
+                                    <img src="./ch/img/creative_commons/png/cc_w.png" />
+                                </li><!--cc icon-->
+                                <li class="cc_icon" id="cc_by">
+                                    <img src="./ch/img/creative_commons/png/by_w.png" />
+                                </li><!-- default icon-->
+                                <li class="cc_icon" id="cc_nc">
+                                    <img src="./ch/img/creative_commons/png/nc_w.png" />
+                                </li><!--non commercial-->
+                                <li class="cc_icon" id="cc_nd">
+                                    <img src="./ch/img/creative_commons/png/nd_w.png" />
+                                </li><!--non derivation-->
+                                <li class="cc_icon" id="cc_share">
+                                    <img src="./ch/img/creative_commons/png/share_w.png" />
+                                </li><!--non derivation-->
+                            </a>
+                            </ul>                       
+                        </div>
+                    </div>
                     
                     <article id="comment_box">
                         <div id="comment_writer">
