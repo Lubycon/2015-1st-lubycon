@@ -27,85 +27,103 @@ function eventHandler(event, selector) {
 //      dragging sensor end
 /////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////
-//      nav_guide sticky start
+//      sticky start
 /////////////////////////////////////////////////////////
-$(document).scroll(function (){
-    if($(".nav_guide").length != 0){
-        var nav_guide = $(".nav_guide");
-        var sticky_start = $("#main_figure").height() + $("#navsel").height();
-        if($("#navsel").length == 0){
-            sticky_start -= $("#navsel").height();
-        }else{
-            sticky_start;
-        }   
-        if (($(document).scrollTop() >= sticky_start) && (windowWidth >= 1025)){
-            $("#main_header").css({"box-shadow": "0px 0px 0px 0px rgba(0,0,0,0.5)"});
-            nav_guide.css({ "position": "fixed", "top": "50px", "z-index": "4", "box-shadow": "0px 3px 7px rgba(0,0,0,0.3)" });  
-        }
-        else {
-            $("#main_header").css({"box-shadow": "0px 2px 4px 0px rgba(0,0,0,0.5)"});
-            nav_guide.css({ "position": "relative", "top": "0px", "box-shadow": "0px 0px 0px rgba(0,0,0,0.3)" });
-        }  
-    }
-    else{
-        return true;
-    }  
-});
-/////////////////////////////////////////////////////////
-//      nav_guide sticky end
-/////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////
-//      containers sticky start
-/////////////////////////////////////////////////////////
-$(document).ready(function(){  
-    $(document).scroll(function (){
+$(document).scroll(function () {
+    if ($(".nav_guide").length != 0) {
         var stickyStart = $("#main_figure").height() + $("#navsel").height();
-        if($("#navsel").length == 0){
-                stickyStart -= $("#navsel").height();
-        }else{
+        if ($("#navsel").length == 0) {
+            stickyStart -= $("#navsel").height();
+        } else {
             stickyStart;
         }
-        //console.log(stickyStart);
-        var scrollEnd = $(document).height() - $(window).height(),
-            bannerPosition = $("#main_header").height() + $(".nav_guide").height(),
-            contentPosition = $(".nav_guide").height();
-
-        if($(document).find(".con_aside" && ".con_wrap") && ($(".con_aside").attr("id") != "editor_aside") && (windowWidth >= 1025)){  
-            if ($(document).scrollTop() >= stickyStart && $(document).scrollTop() < scrollEnd){
-                //console.log("sticky_start");
-                if($(".nav_guide").attr("id") == "contents_info_wrap"){
-                    $("#contents_score").slideUp(150);
-                    bannerPosition = $("#main_header").height() + $(".nav_guide").height();
-                    contentPosition = bannerPosition - $("#navsel").outerHeight(true);
-                    $(".nav_guide").next().css({"top": contentPosition.toString() + "px" });
-                    $(".con_aside").css({ "position": "fixed", "top": bannerPosition.toString() + "px" });
-                    $("#floating_bt").css({"position" : "fixed", "top" : "150px"});    
-                }
-                else{
-                    $(".con_aside").css({ "position": "fixed", "top": bannerPosition });
-                    $(".nav_guide").next().css({"top": contentPosition });
-                }
-                //console.log("sticky start");
-            }
-            else if($(document).scrollTop() == scrollEnd){
-                //console.log("sticky bottom end");
-            }
-            else if($(document).scrollTop() < stickyStart){
-                $("#contents_score").slideDown(150);
-                $(".nav_guide").next().css({"top": "0px"});
-                $(".con_aside").css({ "position": "absolute", "top": "0px" });
-                $("#floating_bt").css({ "position": "absolute", "top": "0px"});
-                $("#floating_bt").css({"position" : "absolute", "top" : "0px"});
-                //console.log("sticky top end");
-            };
-        }
-        else{
-            return true;
-        };
-    });
+        lubySticky(stickyStart);
+    }
+    else {
+        return;
+    }
 });
+function lubySticky(stickyStart) {
+    if (($(document).scrollTop() >= stickyStart) && (windowWidth >= 1025)) {
+        $("#main_header").css({ "box-shadow": "0px 0px 0px 0px rgba(0,0,0,0.5)" });
+        if ($(".nav_guide").attr("id") == "contents_info_wrap") {
+            $("#contents_score").slideUp(150, function () {
+                $(".nav_guide").css({
+                    "position": "fixed",
+                    "top": "50px",
+                    "z-index": "4",
+                    "box-shadow": "0px 3px 7px rgba(0,0,0,0.3)"
+                });
+                stickyContent(stickyStart);
+            });
+        }
+        else {
+            $(".nav_guide").css({
+                "position": "fixed",
+                "top": "50px",
+                "z-index": "4",
+                "box-shadow": "0px 3px 7px rgba(0,0,0,0.3)"
+            });
+            stickyContent(stickyStart);
+        }
+    }
+    else {
+        $("#main_header").css({ "box-shadow": "0px 2px 4px 0px rgba(0,0,0,0.5)" });
+        if ($(".nav_guide").attr("id") == "contents_info_wrap") {
+            $(".nav_guide").css({
+                "position": "relative",
+                "top": "0px",
+                "box-shadow": "0px 0px 0px rgba(0,0,0,0.3)"
+            });
+            stickyContent(stickyStart);
+            $("#contents_score").slideDown(150);
+        }
+        else {
+            $(".nav_guide").css({
+                "position": "relative",
+                "top": "0px",
+                "box-shadow": "0px 0px 0px rgba(0,0,0,0.3)"
+            });
+            stickyContent(stickyStart);
+        }
+    }
+}
+function stickyContent(stickyStart) {
+    var bannerPosition = $("#main_header").height() + $(".nav_guide").height(),
+        contentPosition = bannerPosition - $("#navsel").height() - 15;
+    if ($(document).find(".con_aside") && ($(".con_aside").attr("id") != "editor_aside")) {
+        if ($(document).scrollTop() >= stickyStart) {
+            stickyAsideStart(bannerPosition, contentPosition);
+        }
+        else if ($(document).scrollTop() < stickyStart) {
+            stickyAsideStop();
+        };
+    }
+    else {
+        return;
+    }
+}
+function stickyAsideStart(bannerPosition, contentPosition) {
+    if ($(".nav_guide").attr("id") == "contents_info_wrap") {
+        bannerPosition = $("#main_header").height() + $(".nav_guide").height();
+        contentPosition = bannerPosition - $("#navsel").height() - 15;
+        $(".nav_guide").next().css({ "top": contentPosition.toString() + "px" });
+        $(".con_aside").css({ "position": "fixed", "top": bannerPosition.toString() + "px" });
+        $("#floating_bt").css({ "position": "fixed", "top": "150px" });
+    }
+    else {
+        $(".con_aside").css({ "position": "fixed", "top": bannerPosition });
+        $(".nav_guide").next().css({ "top": contentPosition });
+    }
+}
+function stickyAsideStop() {
+    $(".nav_guide").next().css({ "top": "0px" });
+    $(".con_aside").css({ "position": "absolute", "top": "0px" });
+    $("#floating_bt").css({ "position": "absolute", "top": "0px" });
+    $("#floating_bt").css({ "position": "absolute", "top": "0px" });
+}
 /////////////////////////////////////////////////////////
-//      containers sticky end
+//      sticky end
 /////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////
 //      add hover animations start

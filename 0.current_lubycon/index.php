@@ -213,7 +213,6 @@ session_start();
                         c0-0.131-0.158-0.357-0.479-0.684L140.074,18.682z"/>
                 </g>
                 </svg>
-                <img id="luby-logo-mb" class="visible-mb" src="./ch/img/logo/lubycon_logo-mb.svg" width="100" height="50" alt="Lubycon logo" />
             </a>
             <span id="beta_version" class="hidden-mb-b">BETA</span><!--beta mark-->
         </h1><!--LUBYCON LOGO-->
@@ -355,7 +354,25 @@ session_start();
             include_once("index_body.php");
         }
     ?>
-    <footer id="footer" class="footer"></footer>   <!--end footer-->
+    <footer id="footer" class="footer">
+        <span id="luby_copyright"><i class="fa fa-copyright"></i>Lubycon 2016</span>
+        <span id="about_lubycon">
+            <span id="about_us_foot"><a href="./index.php?1=company&2=about_us">About us</a></span>
+            <span id="contact_us_foot"><a href="mailto:contact@lubycon.com" target="_blank">Contact us</a></span>
+        </span>
+        <span id="luby_link">
+            <a href="#"><i class="fa fa-facebook-square"></i></a>
+            <a href="#"><i class="fa fa-twitter-square"></i></a>
+            <a href="#"><i class="fa fa-google-plus-square"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-pinterest-square"></i></a>
+            <a href="#"><i class="fa fa-tumblr-square"></i></a>
+        </span>
+        <span id="luby_policies">
+            <span id="termsOfService_foot"><a href="../document/Important/term_of_service.pdf" class="document" target="_blank">Terms of service</a></span>
+            <span id="privatePolicy_foot"><a href="../document/Important/private_policy.pdf" class="document" target="_blank">Private policy</a></span>
+        </span>
+    </footer>   <!--end footer-->
 </div>
 </body>
 
