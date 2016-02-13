@@ -2017,14 +2017,76 @@ body{
     background: #222222;
     bottom: 0;
     z-index: 4;
+    color: #aaaaaa;
+    font-size: 13px;
+    font-weight: 200;
 }
+    #footer > span{
+        display: inline-block;
+        line-height: 41px;
+        border-right: 1px solid #000000;
+        box-shadow: 1px 0 0 #303030;
+        font-weight: 200;
+    }
+        #footer a{
+            color: #aaaaaa;
+            font-size: 13px;
+            cursor: pointer;
+            font-weight: 200;
+        }
+        #footer a:hover{
+            text-decoration: underline;
+        }
+    #luby_copyright{
+        padding: 0px 10px;
+    }
+        #luby_copyright i{
+            margin-right: 3px;
+        }
+    #about_lubycon{
+        
+    }
+        #about_lubycon span{
+            padding: 0px 15px;
+        }
+        #about_us_foot{
+            border-right: 1px solid #000000;
+            box-shadow: 1px 0px 0px #303030;
+        }
+        #contact_us_foot{
 
+        }
+    #luby_policies{
+        float: right;
+    }
+        #luby_policies span{
+            padding: 0px 15px;
+        }
+        #termsOfService_foot{
+            border-right: 1px solid #000000;
+            box-shadow: 1px 0px 0px #303030;
+        }
+        #privatePolicy_foot{
 
-
+        }
+    #luby_link{
+        float: right;
+        padding: 0px 15px;
+        margin-right: 0px;
+        margin-top: 3px;
+    }
+        #luby_link i{
+            margin: 0px 2px;
+            font-size: 23px;
+            color: #888888;
+            cursor: pointer;
+        }
+        #luby_link i:hover{
+            color: #48cfad;
+        }
 
 /*---------------------------------------------------BETA*/
-#beta_version
-{
+#beta_version{
     width: 40px;
     background:#333;
     color:#fff;
