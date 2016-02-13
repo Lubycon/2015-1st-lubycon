@@ -10,6 +10,7 @@ var pass_com;
 var pass1_com;
 var now_pass_com; //account setting page check
 var nick_com;
+var focus_com;
 
 function blank_function(current_id)
 {
@@ -40,17 +41,25 @@ function true_function(current_id)
 };
 $(document).on("click , blur", "#create_account_area input[type|='text'] , #create_account_area input[type|='password']", function ()
 {
+    focus_com = false;
+
     var current_id = '#' + $(this).attr('id');
     switch (current_id)
     {
         case '#email_id': email_check(current_id); break;
         case '#pass_id': pass_check(current_id); break;
-        case '#re_pass_id': pass_check(current_id); break;
+        case '#re_pass_id': re_pass_check(current_id); break;
         case '#now_pass_id': now_pass_check(current_id); break;
         case '#nick_id': nick_check(current_id); break;
-        default : break;
+        default: break;
     }
 });
+
+$(document).on("blur", "#create_account_area input[type|='text'] , #create_account_area input[type|='password']", function ()
+{
+    focus_com = true;
+});
+
 function email_check(current_id) {
     /////////////////////////////////////////////////////////
     //      e-mail check start
@@ -124,14 +133,12 @@ function pass_check(current_id) {
     var current_stat = $(current_id + "_check");
     var value = $(current_id).val();
 
-    console.log(current_id);
-    console.log(value);
-
     if (value == '') { //blank
         
         blank_function(current_id);
         re_pass_blank_function();
-        pass_com = false; 
+        pass_com = false;
+        pass1_com = false;
 
     } else if (value.match(/[^0-9]/g) == null) //문자한개필요
     {
@@ -140,6 +147,7 @@ function pass_check(current_id) {
         false_function(current_id);
         re_pass_blank_function();
         pass_com = false;
+        pass1_com = false;
 
     } else if (value.match(regx)) //특수문자 불가
     {
@@ -147,6 +155,7 @@ function pass_check(current_id) {
         false_function(current_id);
         re_pass_blank_function();
         pass_com = false;
+        pass1_com = false;
 
     } else if (value.match(space) || value.match('null') == null == false) //공백 불가
     {
@@ -154,6 +163,7 @@ function pass_check(current_id) {
         false_function(current_id);
         re_pass_blank_function();
         pass_com = false;
+        pass1_com = false;
 
     } else if (value.length < 8 || value.length > 20) {  // 8 to 20 letters
 
@@ -161,6 +171,7 @@ function pass_check(current_id) {
         false_function(current_id);
         re_pass_blank_function();
         pass_com = false;
+        pass1_com = false;
 
     } else if (value != $('#re_pass_id').val() && $('#re_pass_id').val() != '') { //not same repeat pass
 
@@ -168,6 +179,7 @@ function pass_check(current_id) {
         false_function(current_id);
         re_pass_blank_function();
         pass_com = false;
+        pass1_com = false;
 
 
     } else if (value.length >= 8 && value.length <= 20 ) { // complite
@@ -203,6 +215,7 @@ function pass_check(current_id) {
                 false_function(current_id);
                 re_pass_blank_function();
                 pass_com = false;
+                pass1_com = false;
                 break;
             }
         }
@@ -237,6 +250,8 @@ function re_pass_check(current_id) { // repeat pass check
         $('#pass_check').text('').show();
 
         $(current_stat).text('').show();
+
+
         true_function(current_id);
         pass_com = true;
 
@@ -381,7 +396,7 @@ function nick_check(current_id) {
 $(document).on("click blur", '#create_account_area', function () //submit able event
 {
         
-        if (email_com && nick_com && pass_com && $('.document_check_box:checked').length == 2) { //account setting submit to able
+    if (email_com && nick_com && pass_com && $('.document_check_box:checked').length == 2 && focus_com) { //account setting submit to able
             $('.account_submit').removeAttr('disabled');
             $('.account_submit').css('background', '#48cfad');
         } else {
