@@ -2,7 +2,7 @@
 
 var regx = /[`;',./~!@\#$%<>^&*\()\-=+_\¡¯]/gi; //special letters
 var space = / /gi //space check
-var regex = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/; //email check
+var regex = /^[0-9a-zA-Z]([\-.\w]*[0-9a-zA-Z\-_+])*@([0-9a-zA-Z][\-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9}$/; //email check
 var only_alpha_number = /^[A-Za-z0-9+]*$/; //only alpabet, number
 
 var email_com; //for submit able
@@ -101,7 +101,6 @@ function email_check(current_id) {
                     false_function(current_id);
                     email_com = false
 
-                    email_com = false;
                 }
                 else if (data == 0) { //Non-overlapping
                     console.log('DB return value non-overlapping, done');
