@@ -65,14 +65,14 @@ $(document).ready(function(){
         }else{
             stickyStart;
         }
-        console.log(stickyStart);
+        //console.log(stickyStart);
         var scrollEnd = $(document).height() - $(window).height(),
             bannerPosition = $("#main_header").height() + $(".nav_guide").height(),
             contentPosition = $(".nav_guide").height();
 
         if($(document).find(".con_aside" && ".con_wrap") && ($(".con_aside").attr("id") != "editor_aside") && (windowWidth >= 1025)){  
             if ($(document).scrollTop() >= stickyStart && $(document).scrollTop() < scrollEnd){
-                console.log("sticky_start");
+                //console.log("sticky_start");
                 if($(".nav_guide").attr("id") == "contents_info_wrap"){
                     $("#contents_score").slideUp(150);
                     bannerPosition = $("#main_header").height() + $(".nav_guide").height();
@@ -234,7 +234,7 @@ function hideAlert(){
 //      lubySelectbox action start
 /////////////////////////////////////////////////////////
 /*
-<div class="lubySelector"> //.....................................class: lubySelector
+<div data="name" class="lubySelector"> //.....................................class: lubySelector
     <span class="global_icon"><i class="fa fa-usd"></i></span> // class: global_icon(It was used font-awesome)
     <span class="lubySelector_selected">All</span> //.............class: lubySelector_selected
     <span class="lubySelector_arrow"><i class="fa fa-caret-down"></i></span> //class: lubySelector_arrow
@@ -255,7 +255,7 @@ $(function(){
             option_list.push($(this).text().replace(/ /gi, ''));
             //It will be push to array after removed all spaces  
         });
-        $(this).after("<select class='original_box'>");
+        $(this).after("<select class='original_box' name='" + $(this).attr('data') + "[]'>");
         for(i in option_list){
             $(this).next(".original_box").append("<option value="+option_list[i]+">"+option_list[i]+"</option>");
         };
