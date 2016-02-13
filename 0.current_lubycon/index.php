@@ -213,7 +213,6 @@ session_start();
                         c0-0.131-0.158-0.357-0.479-0.684L140.074,18.682z"/>
                 </g>
                 </svg>
-                <img id="luby-logo-mb" class="visible-mb" src="./ch/img/logo/lubycon_logo-mb.svg" width="100" height="50" alt="Lubycon logo" />
             </a>
             <span id="beta_version" class="hidden-mb-b">BETA</span><!--beta mark-->
         </h1><!--LUBYCON LOGO-->
@@ -355,7 +354,9 @@ session_start();
             include_once("index_body.php");
         }
     ?>
-    <footer id="footer" class="footer"></footer>   <!--end footer-->
+    <footer id="footer" class="footer">
+        
+    </footer>   <!--end footer-->
 </div>
 </body>
 
