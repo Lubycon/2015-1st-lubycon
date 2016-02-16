@@ -487,6 +487,7 @@ $(window).on("load resize", function(){
     if((windowWidth < 1025) && ($("#gotop_bt").length != 0)){
         var goTopBt = $(document).find("#gotop_bt");
         $(document).on("touchmove scroll", function (event){
+            eventHandler(event,$(this));
             if($(document).scrollTop() > 500){
                 goTopBt.stop().show();
                 return;
@@ -497,6 +498,7 @@ $(window).on("load resize", function(){
             }
         });
         $("#gotop_bt").on("click touchend", function(event){
+            eventHandler(event,$(this));
             $('html, body').animate({scrollTop : 0},500);
             return;
         });
