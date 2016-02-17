@@ -62,7 +62,7 @@ $(function(){
 $(document).ready(function(){
     if($("#main_work_space").length != 0){
         $('#summernote').summernote({
-            height: $(window).height() + 100,
+            height: 250,
             minHeight: null,
             maxHeight: null,
             focus: true,
@@ -77,12 +77,9 @@ $(document).ready(function(){
                 ['insert', ['picture', 'video', 'link', 'table', 'hr']],
                 ['misc', ['help']]
             ],
-            callbacks:
-            {
-                onImageUpload: function (files, editor, welEditable)
-                {
-                    for ( var i = files.length - 1 ; i >= 0 ; i-- )
-                    {
+            callbacks:{
+                onImageUpload: function (files, editor, welEditable){
+                    for ( var i = files.length - 1 ; i >= 0 ; i-- ){
                         sendFile(files[i], this);
                         console.log(files[i]);
                     }

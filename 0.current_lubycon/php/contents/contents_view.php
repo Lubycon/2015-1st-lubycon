@@ -28,13 +28,6 @@ switch($current_url){
     default : $current_url = "artwork"; $contents_name = $artwork_subject;$contents_author = $artwork_author; break;
 };
 ?>
-
-<div class="main_figure_wrap hidden-mb-b">
-    <figure id="main_figure">
-        <div class="dark_overlay_small"></div>
-        <h2>CONTENTS</h2>
-    </figure>   <!-- end main_figure -->
-</div>
 <link href="css/contents_view.css" rel="stylesheet" type="text/css" /><!-- contents view css -->
 <section id="contents">
     <section id="navsel" class="hidden-mb-b">
@@ -122,7 +115,6 @@ switch($current_url){
                         </div>
                     </div>
                     <div id="cc_total_wrap" class="visible-mb">
-                        <p id="cc_title"><i class="fa fa-creative-commons fa-lg"></i>Creative Commons</p>
                         <div id="cc_wrap">
                             <ul id="cc_wrap_inner">
                                 <a href="#" id="cc_desc_link" target="_brank">

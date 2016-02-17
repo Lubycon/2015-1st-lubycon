@@ -57,15 +57,28 @@ session_start();
     <div id="cancel_layer"></div>
     <div id="gotop_bt"><i class="fa fa-angle-up"></i></div>
     <aside id="mb-menu_panel" class="visible-mb"><!--mobile panel menu-->
-    <?php
-        $user_pic = "./ch/img/no_img/no_img_user1.jpg";
-        $user_name = "Lorem ipsum";
-    ?>
         <header id="mb-user_section">
-            <figure id="mb-user_pic">
-                <img src=<?=$user_pic?>></img>
-            </figure>
-            <span id="mb-user_name"><?=$user_name?></span>
+            <div id="mb-signin">
+                <a href="./login_page.php">
+                    <p class="signicon"><i class="fa fa-unlock-alt fa-lg"></i></p>
+                    <p class="signin">SIGN IN</p>
+                </a>
+            </div>
+            <div id="mb-after_signin">
+                <?php
+                    $user_pic = "./ch/img/no_img/no_img_user1.jpg";
+                    $user_name = "Lorem ipsum";
+                    $user_city = "City";
+                    $user_country = "Country";
+                ?>
+                 <figure id="mb-user_pic">
+                    <img src=<?=$user_pic?>></img>
+                </figure>
+                <span id="mb-user_info">
+                    <span id="mb-user_name"><?=$user_name?></span>
+                    <span id="mb-user_location"><i class="fa fa-map-marker"></i><?=$user_city?>, <?=$user_country?></span>
+                </span>
+            </div> 
         </header>
         <ul class="mb-menu_group">
             <li class="mb-menu_list">

@@ -1,9 +1,3 @@
-<div class="main_figure_wrap hidden-mb-b">
-    <figure id="main_figure">
-        <div class="dark_overlay_small"></div>
-        <h2>COMMUNITY</h2>
-    </figure>   <!-- end main_figure -->
-</div>
 <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet"> 
 <link href="css/summernote.css" type="text/css" rel="stylesheet" />
 <link href="css/community_write.css" rel="stylesheet" type="text/css" />  <!-- community_view css -->
@@ -14,8 +8,6 @@
 
 <form id="writer_form" enctype="multipart/form-data" method="post" action="./php/community/test.php">
 <section id="contents">
-    <section class="nav_guide"></section>  <!-- end nav_guide -->
-
     <section id="work_space" class="con_wrap">
         <div id="work_inner">
             <div class="properties_box">
@@ -31,7 +23,7 @@
             </div><!--main textbox end-->
             
             <div class="properties_box hidden-mb-ib" id="uploader_com">
-                <p class="work_title">File Upload</p>
+                <p class="work_title animate_opacity">File Upload</p>
                 <input type="text" id="file_text_com" val="please select file..." readonly />
                 <span id="file_import_bt">Find the file</span>
                 <input type="file" id="file_import_com" name="user_upload_file"/>
