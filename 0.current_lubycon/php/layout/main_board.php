@@ -1,6 +1,6 @@
 <section id="main_board">
     <?php
-        @$current_url = $_GET["3"];
+        @$third_param = $_GET["3"];
         @$current_url = $third_param;
     ?>
     <div class="table_wrap">

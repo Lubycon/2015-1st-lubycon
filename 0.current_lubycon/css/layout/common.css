@@ -286,7 +286,6 @@ body{
     z-index: 10;
     top: 0px;
     border-bottom: 1px solid #111;
-    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.5);
 }
 
 #main_header h1 /* main logo */ {
@@ -1287,7 +1286,7 @@ body{
 #comment_box #comment_writer {
     width: 100%;
     background: #444444;
-    padding: 10px;
+    padding: 20px 10px;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -1312,10 +1311,8 @@ body{
         width:100%;
         display: inline-block;
         position: relative;
-        margin-top: 4px;
      }
-        #comment_box #comment_text
-        {
+        #comment_box #comment_text{
             width: 80%;
             max-width: 830px;
             margin: 0px;

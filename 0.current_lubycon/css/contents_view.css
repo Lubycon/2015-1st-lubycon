@@ -11,6 +11,9 @@
     display:none;
     cursor:pointer;
 }
+#navsel{
+    margin-top: 50px;
+}
 .nav_guide{
     height: auto;
 }
@@ -22,13 +25,11 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
 }
-
 .contents_view{
     position: relative;
     width:100%;
     top:0px;
 }
-
     #contents_title{
         display: block;
         text-align: left;
@@ -37,7 +38,6 @@
         letter-spacing:1px;
         font-weight: 600;
     }
-
     #contents_category{
         color: #eeeeee;
         font-weight: 200;
@@ -94,11 +94,11 @@
     .contents_view .contents_img{
         width: 100%;
         background: #aaaaaa;
-        margin-bottom: -4px;
     }
         .inner_img{
             width: 100%;
             max-width: 1450px;
+            margin-bottom: -4px;
         }
     #webgl_viewer{
         width: 100%;
