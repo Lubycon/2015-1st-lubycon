@@ -80,19 +80,19 @@ $(document).on("click touchend", "#history_minus", function (event) //clone lang
     }
     history_stack--;
 });
-$(document).on("change", ".history_data select", function (event)
+$(".lubySelector li").on("click", function ()
 {
-    eventHandler(event, $(this));
-
+    //console.log($(this).parents('.lubySelector').next().val());
     var history_array = [];
+
 
     $('.history_cell .history_data').each(function (index) {
         history_array.push(
             {
                 'index':  index,
-                'year': $(this).find('.history_year').val(),
-                'month':$(this).find('.history_month').val(),
-                'kind': $(this).find('.history_kind').val(),
+                'year':  $(this).children('select:nth-of-type(1)').val(),
+                'month': $(this).children('select:nth-of-type(2)').val(),
+                'kind':  $(this).children('select:nth-of-type(3)').val(),
                 'text': $(this).find('.history_text').val()
             });
         //console.log(history_array[index]);
@@ -114,13 +114,14 @@ $(document).on("change", ".history_data select", function (event)
     }
 
     $('.history_cell .history_data').each(function (index) {
-        console.log(aftersort[index].year)
-        //console.log($(this).find('.history_year').val());
-        //$(this).find('.history_year option').attr("selected","disable");
-        $(this).find('.history_year').val(aftersort[index].year).attr('selected', 'selected');
-        $(this).find('.history_month').val(aftersort[index].month).attr('selected', 'selected');
-        $(this).find('.history_kind').val(aftersort[index].kind).attr('selected', 'selected');
-        $(this).find('.history_text').val(aftersort[index].text);
+        $(this).children('select:nth-of-type(1)').val(aftersort[index].year);
+        $(this).children('select:nth-of-type(2)').val(aftersort[index].month);
+        $(this).children('select:nth-of-type(3)').val(aftersort[index].kind);
+        $(this).children('.history_text').val(aftersort[index].text);
+        //$(this).find('.history_year').val(aftersort[index].year).attr('selected', 'selected');
+        //$(this).find('.history_month').val(aftersort[index].month).attr('selected', 'selected');
+        //$(this).find('.history_kind').val(aftersort[index].kind).attr('selected', 'selected');
+        //$(this).find('.history_text').val(aftersort[index].text);
     });
 });
 ////////////////////////////delete button interaction start

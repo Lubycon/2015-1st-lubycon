@@ -38,7 +38,7 @@
                     case "3d" : include_once("php/sub_nav/categories/category_3d.php"); break;
                 }
             ?>
-            <div class="lubySelector hidden-mb-ib">
+            <div class="lubySelector hidden-mb-ib" data="featured_sort">
                 <span class="global_icon"><i class="fa fa-filter"></i></span>
                 <span class="lubySelector_selected">Featured</span>
                 <span class="lubySelector_arrow"><i class="fa fa-caret-down"></i></span>
@@ -50,6 +50,7 @@
                     <li>Most Comment</li>
                 </ul>
             </div>
+
             <div class="lubySelector hidden-mb-ib" data="licence_sort">
                 <span class="global_icon"><i class="fa fa-copyright"></i></span>
                 <span class="lubySelector_selected">All Lisence</span>
