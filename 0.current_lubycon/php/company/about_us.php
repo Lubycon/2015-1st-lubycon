@@ -14,9 +14,9 @@
         <article id="descript_lubycon">
             <p class="descript_subject">Welcome to Lubycon !</p>
             <p class="descript_article">
-            Lubycon is a playground for all creative minds.<br />
-            Through Lubycon, anyone can create, share and gain access to unique designs that inspire the World.<br />
-            Lubycon respect all designer, engineer, developer, artists and their works
+                Lubycon is a playground for all creative minds.<br />
+                Through Lubycon, anyone can create, share and gain access to unique designs that inspire the World.<br />
+                Lubycon respect all designer, engineer, developer, artists and their works
             </p>
         </article>
     </section>
@@ -26,30 +26,30 @@
             <div class="focus_div" id="focus_design">
                 <p class="focus_subject">DESIGN</p>
                 <p class="focus_article">
-                All unique individuals are<br/>
-                naturally born with the joy<br/>
-                for creative process. Show<br/>
-                us your creation and tell<br/>
-                us about your creative mind! 
+                    All unique individuals are<br/>
+                    naturally born with the joy<br/>
+                    for creative process. Show<br/>
+                    us your creation and tell<br/>
+                    us about your creative mind! 
                 </p>
             </div>
             <div class="focus_div" id="focus_share">
                 <p class="focus_subject">SHARE</p>
                 <p class="focus_article">
-                Discover other similar minds<br/>
-                that connect to you and<br/>
-                inspire other artists!<br/>
-                Connect your creativity with<br/>
-                the World 
+                    Discover other similar minds<br/>
+                    that connect to you and<br/>
+                    inspire other artists!<br/>
+                    Connect your creativity with<br/>
+                    the World 
                 </p>
             </div>
             <div class="focus_div" id="focus_community">
                 <p class="focus_subject">COMMUNITY</p>
                 <p class="focus_article">
-                Make new friends through<br/>
-                your design! The community<br/>
-                exists to help and give you<br/>
-                access to new information. 
+                    Make new friends through<br/>
+                    your design! The community<br/>
+                    exists to help and give you<br/>
+                    access to new information. 
                 </p>
             </div>
         </div>
@@ -59,8 +59,8 @@
         <div id="contactus_wrap">
             <p class="contactus_subject">Contact Us</p>
             <p class="contactus_article">
-            If you have any questions<br />
-            please feel free to contact us at
+                If you have any questions<br />
+                please feel free to contact us at
             <a id="mailadress" href="mailto:contact@lubycon.com">contact@lubycon.com</a>
             </p>
             <a class="contactus_mailbt" href="mailto:contact@lubycon.com" target="_blank">

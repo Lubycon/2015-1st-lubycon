@@ -444,8 +444,13 @@
             margin: 0px auto;
             border-bottom: 1px solid #eeeeee;
             border-radius: 0px;
-
         }
+            #best_left_wrap{
+                width: 100%;
+            }
+            #best_right_wrap{
+                width: 100%;
+            }
         .creators_card {
             width: 100%;
             max-width: 800px;
@@ -1091,6 +1096,12 @@
         margin: 20px auto;
         margin-top: 0;
     }
+        #best_left_wrap{
+            width: 50%;
+        }
+        #best_right_wrap{
+            width: 49%;
+        }
     #my_page_bt{
         width: 220px;
         height: 45px;

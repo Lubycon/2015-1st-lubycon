@@ -28,7 +28,7 @@
     padding-left: 310px;
 }
     #best_creator_wrap{
-        width: 92%;
+        width: 100%;
         box-sizing: border-box;
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
@@ -36,7 +36,6 @@
         box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.3);
     }
     #best_left_wrap{
-        width: 50%;
         position: relative;
         padding: 5px;
         display: inline-block;
@@ -91,7 +90,6 @@
                  }
 
     #best_right_wrap{
-        width: 49%;
         position: relative;
         vertical-align: top;
         padding: 5px;

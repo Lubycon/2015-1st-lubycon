@@ -48,7 +48,7 @@
                          <div class="check_zone">
                               <input type="checkbox" class="document_check_box" id="check1" name="terms_check"/>
                               <p>I read 
-                                   <a href="../document/Important/term_of_service.pdf" class="document" target="_blank"><!--link for document-->
+                                   <a href="./index.php?1=company&2=terms_of_service" class="document" target="_blank">
                                         Terms of service
                                    </a>
                                    and I agree it.
@@ -57,7 +57,7 @@
                          <div class="check_zone">
                               <input type="checkbox" class="document_check_box" id="check2" name="private_check"/>
                               <p>I read
-                                   <a href="../document/Important/private_policy.pdf" class="document" target="_blank"><!--link for document-->
+                                   <a href="./index.php?1=company&2=private_policy" class="document" target="_blank">
                                         Private policy
                                    </a>
                                    and I agree it.

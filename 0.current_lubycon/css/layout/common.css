@@ -638,7 +638,7 @@ body{
     height: 450px;
 }
 #main_figure,#index_figure {
-    background: url(../../ch/img/main_img03.png) 0% 45% no-repeat;
+    background: url(../../ch/img/main_img.jpg) 0% 45% no-repeat;
     background-size: 100%;
     width: 100%;
     text-align: center;
@@ -664,12 +664,12 @@ body{
         z-index: 2;
     }
     #index_figure h2 {
-        display: none;
         padding-top: 137px;
         color: #fff;
         font-size: 46px;
         font-weight:200;
         letter-spacing: 1px;
+        font-family: 'Goudy Bookletter 1911', serif;
     }
 
 #navsel {

@@ -202,9 +202,9 @@ $(function () { //search box click value reset start
     var search_bt = $('#main_search_btn');
     var search_bt2 = $('#sub_search_btn');
 
-    search_box.on('keypress', function(e) {
+    search_box.on('keypress', function(event) {
         console.log("keypress_true");
-        if(e.which == 13) {// 13 == enter key@ascii
+        if(event.which == 13) {// 13 == enter key@ascii
             console.log("if true");
             search_bt.click();
         };//if end

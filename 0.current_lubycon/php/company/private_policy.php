@@ -96,7 +96,7 @@
 			<h1 class="doc_headline">Contact us</h1>
 			<div class="doc_content">
 				<p>
-					If you have any questions about this Privacy Policy, the practices of this site, or your dealings with this site, please contact us at <a href="#">contact@Lubycon.com</a>
+					If you have any questions about this Privacy Policy, the practices of this site, or your dealings with this site, please contact us at <a href="mailto:contact@lubycon.com">contact@Lubycon.com</a>
 				</p>
 			</div>
 		</div>

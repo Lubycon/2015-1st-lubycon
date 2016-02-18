@@ -2,10 +2,10 @@
 <div class="doc_wrap con_wrap">
 	<div class="doc_wrap_inner">
 		<div class="doc_body doc_title">
-			<h1 class="doc_headline">Term of Service</h1>
+			<h1 class="doc_headline">Terms of Service</h1>
 			<div class="doc_content">
 				<p>
-					If you require any more information or have any questions about our Terms of Service, please feel free to contact us by email at <a href="#">lubycon@gmail.com</a>
+					If you require any more information or have any questions about our Terms of Service, please feel free to contact us by email at <a href="mailto:contact@lubycon.com">lubycon@gmail.com</a>
 				</p>
 			</div>
 		</div>
@@ -217,7 +217,7 @@
 					You accept that, as a limited liability entity, www.Lubycon.com has an interest in limiting the personal liability of its officers and employees. You agree that you will not bring any claim personally against www.Lubycon.com's officers or employees in respect of any losses you suffer in connection with the website.
 				</p>
 				<p>
-					Without prejudice to the foregoing paragraph, you agree that the limitations of warranties and liability set out in this website disclaimer will protect www.Lubycon.com's officers, employees, agents, subsidiaries, successors, assigns and sub-contractors as well as <a href="#">www.Lubycon.com</a>.
+					Without prejudice to the foregoing paragraph, you agree that the limitations of warranties and liability set out in this website disclaimer will protect www.Lubycon.com's officers, employees, agents, subsidiaries, successors, assigns and sub-contractors as well as <a href="http://www.lubycon.com">www.Lubycon.com</a>.
 				</p>
 			</div>
 		</div>

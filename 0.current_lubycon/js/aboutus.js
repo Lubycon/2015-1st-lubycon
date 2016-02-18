@@ -20,8 +20,21 @@ $(window).on("load",function(){
 
     $(".nav_circle").on("click",function(event){
         var data = $(event.target).attr("data");
-        console.log(data);
-        aboutUsNav(data);
+        moveNav(data);
+    });
+    $(document).scroll(function(){
+        var data;
+        var scrollTop = $(document).scrollTop();
+        if((scrollTop >= 0) && (scrollTop < windowHeight)){
+            data = "aboutus_main";
+        }
+        else if((scrollTop >= windowHeight) && (scrollTop < windowHeight*2)){
+            data = "focus_section";
+        }
+        else{
+            data = "contactus_section";
+        }
+        detectNav(data);
     });
 });
 
@@ -32,13 +45,26 @@ function heightMatch(selector,windowHeight){
 function verticalAlign(windowHeight,objectHeight){
     return ((windowHeight*0.5) - (objectHeight*0.5)).toString() + "px";
 };
-function aboutUsNav(data){
+function moveNav(data){
     var object = "#" + data.toString();
     var destination = ($(object).offset().top);
     $('html, body').animate({scrollTop : destination},400);
     return;
 };
-
+function detectNav(data){
+    var datavalue = data.toString(),
+        object = ".nav_circle[data="+datavalue+"]";
+    $(".nav_circle").css({
+        "width" : "10px",
+        "height" : "10px",
+        "background" : "#dddddd"
+    })
+    $(object).css({
+        "width" : "12px",
+        "height" : "12px",
+        "background" : "#48cfad"
+    });
+};
 
 $(document).on('mouseenter','.contactus_mailbt', function (){
     $(this).stop().animate({ "padding" : "0px 10px" },200);
