@@ -129,8 +129,8 @@
                                 <div class="creator_mid_info" id="best_creator_info">
                                     <p class="creator_name"><a href="./index.php?1=personal_page&2=personal_page&3=dashboard">Admin User</p></a><!--user name-->
                                     <p class="creator_job">Designer</p><!--job-->
-                                    <p class="creator_location hidden-mb-b"><i class="fa fa-map-marker"></i>Los Santos, United States</p>
-                                    <article class="contents_count hidden-mb-b">
+                                    <p class="creator_location"><i class="fa fa-map-marker"></i>Los Santos, United States</p>
+                                    <article class="contents_count">
                                         <p class="count_num"><?=$bestCreator_contents_num?></p>
                                         Contents
                                     </article>

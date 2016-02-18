@@ -1,7 +1,13 @@
+var windowHeight = $(window).height();
+
 $(document).ready(function(){
 	$("#bodyer").fadeIn(500);
+    var loginboxHeight = $("#login_box").height();
+    $("#login_box").css("margin-top",verticalAlign(windowHeight,loginboxHeight));
 });
-
+function verticalAlign(windowHeight,objectHeight){
+    return ((windowHeight*0.5) - (objectHeight*0.5) - 20).toString() + "px";
+};
 /////////////////////////////////////////////////////////
 //      sign in ajax start
 /////////////////////////////////////////////////////////
@@ -19,11 +25,9 @@ function go_index(){
 /////////////////////////////////////////////////////////
 //      sign in ajax end
 /////////////////////////////////////////////////////////
-
 /////////////////////////////////////////////////////////
 //      create account bt popup event start (ajax)
 /////////////////////////////////////////////////////////
-
 $(function () { //create account bt popup event start
     $('#create_acc').hover(function (){
         $(this).stop().animate({ opacity: 0.8 }, 200);
@@ -103,7 +107,6 @@ $(function () {//e-mail and password value reset start
 /////////////////////////////////////////////////////////
 //      before sign in input reset end
 /////////////////////////////////////////////////////////
-
 /////////////////////////////////////////////////////////
 //      before sign in input shiny start
 /////////////////////////////////////////////////////////

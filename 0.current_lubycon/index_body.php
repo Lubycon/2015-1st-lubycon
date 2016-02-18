@@ -24,6 +24,7 @@ $(function(){
 */
 </script>
 <link href="css/index.css" rel="stylesheet" type="text/css" />  <!-- index file css -->
+<link href='https://fonts.googleapis.com/css?family=Goudy+Bookletter+1911' rel='stylesheet' type='text/css'>
 <div id="index_figure_wrap" class="main_figure_wrap hidden-mb-b">
     <figure id="index_figure">
         <h2>Connect Your Creativity With The World</h2>

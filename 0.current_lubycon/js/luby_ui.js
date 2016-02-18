@@ -70,6 +70,7 @@ function lubySticky(stickyStart) {
                 "box-shadow": "0px 3px 7px rgba(0,0,0,0.3)"
             });
             stickyContent(stickyStart);
+            return;
         }
     }
     else {
@@ -90,6 +91,7 @@ function lubySticky(stickyStart) {
                 "box-shadow": "0px 0px 0px rgba(0,0,0,0.3)"
             });
             stickyContent(stickyStart);
+            return;
         }
     }
 }
@@ -309,7 +311,6 @@ $(function(){
                             $(this).next(".original_box").show().trigger("focus");
                         }
                         toggle_count = 1;
-                        return true;
                     break;
 
                     case 1 :
@@ -322,11 +323,12 @@ $(function(){
                             $(this).next(".original_box").hide().trigger("blur");
                         }
                         toggle_count = 0;
-                        return true;
                     break;
 
-                    default: return false; break;
+                    default: return; break;
                 };//switch end
+                keyCheck(toggle_count,$(this).find($(".lubySelector_list")));
+                return;
             }
             else if(dragging){
                 return;
@@ -361,6 +363,19 @@ function hideAnywhere(selector){
         });//click end
     });//mouseleave end
 }
+function keyCheck(toggleCount,lubySelector){
+    if(toggleCount == 1){
+        $(document).on('keydown', function(event) {
+            var keyCode = event.keyCode ? event.keyCode : event.which;
+            if(keyCode==65){
+                lubySelector.scrollTop(0);
+            }
+        });  
+    }
+    else{
+        return;
+    }
+};
 /////////////////////////////////////////////////////////
 //      lubySelectbox action end
 /////////////////////////////////////////////////////////

@@ -1,12 +1,10 @@
 @charset "utf-8";
 /* CSS Document */
 /****************************css reset start***********************************************************/
-body
-{
+body{
 	background: #282828;
 }
-body,h1,h2,h3,h4,h5,h6,div,p,ul,ol,dl,li,dt,dd,address,figure, nav, section, header, footer
-{
+body,h1,h2,h3,h4,h5,h6,div,p,ul,ol,dl,li,dt,dd,address,figure, nav, section, header, footer{
 	margin: 0px;
 	padding: 0px;
 	color: #000;
@@ -65,7 +63,6 @@ form
     position: relative;
     width: 400px;
     margin: 0px auto;
-    margin-top: 70px;
     padding: 20px;
     background: #282828;
     z-index: 1;
