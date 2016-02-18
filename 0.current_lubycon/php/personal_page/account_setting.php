@@ -35,7 +35,6 @@
             <p class="setting_title">History setting</p>
             <div class="history_cell">
                 <div class="history_data">
-
                     <div class="lubySelector hidden-mb-ib" data="history_year">
                         <span class="global_icon"><i class="fa fa-filter"></i></span>
                         <span class="lubySelector_selected history_year_changer">2016</span>
