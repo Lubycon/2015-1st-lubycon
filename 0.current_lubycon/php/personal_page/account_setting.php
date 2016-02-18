@@ -38,7 +38,7 @@
 
                     <div class="lubySelector hidden-mb-ib" data="history_year">
                         <span class="global_icon"><i class="fa fa-filter"></i></span>
-                        <span class="lubySelector_selected">2016</span>
+                        <span class="lubySelector_selected history_year_changer">2016</span>
                         <span class="lubySelector_arrow"><i class="fa fa-caret-down"></i></span>
                         <ul class="lubySelector_list">
                         <?php
@@ -52,7 +52,7 @@
 
                     <div class="lubySelector hidden-mb-ib" data="history_month">
                         <span class="global_icon"><i class="fa fa-filter"></i></span>
-                        <span class="lubySelector_selected">January</span>
+                        <span class="lubySelector_selected history_month_changer">January</span>
                         <span class="lubySelector_arrow"><i class="fa fa-caret-down"></i></span>
                         <ul class="lubySelector_list">
                             <li data-value="1">January</li>
@@ -72,7 +72,7 @@
 
                     <div class="lubySelector hidden-mb-ib" data="history_kind">
                         <span class="global_icon"><i class="fa fa-filter"></i></span>
-                        <span class="lubySelector_selected">January</span>
+                        <span class="lubySelector_selected history_kind_changer">Work Expierence</span>
                         <span class="lubySelector_arrow"><i class="fa fa-caret-down"></i></span>
                         <ul class="lubySelector_list">
                             <li data-value="work_expierence">Work Expierence</li>

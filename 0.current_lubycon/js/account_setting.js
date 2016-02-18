@@ -114,9 +114,15 @@ $(".lubySelector li").on("click", function ()
     }
 
     $('.history_cell .history_data').each(function (index) {
-        $(this).children('select:nth-of-type(1)').val(aftersort[index].year);
+        $(this).children('select:nth-of-type(1)').val(aftersort[index].year); //hidden selecter value change
+        $(this).find('.history_year_changer').text(aftersort[index].year); //luby ui lubySelector_selected.span text change
+
         $(this).children('select:nth-of-type(2)').val(aftersort[index].month);
+        $(this).find('.history_month_changer').text(aftersort[index].month);
+
         $(this).children('select:nth-of-type(3)').val(aftersort[index].kind);
+        $(this).find('.history_kind_changer').text(aftersort[index].kind);
+
         $(this).children('.history_text').val(aftersort[index].text);
         //$(this).find('.history_year').val(aftersort[index].year).attr('selected', 'selected');
         //$(this).find('.history_month').val(aftersort[index].month).attr('selected', 'selected');
