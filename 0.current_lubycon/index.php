@@ -273,6 +273,12 @@ session_start();
                         <li>
                             <a href="./index.php?1=company&2=about_us"><i class="fa fa-building fa-1x"></i><p>About us</p></a>
                         </li>
+                        <li>
+                            <a href="./index.php?1=company&2=terms_of_service"><i class="fa fa-book"></i><p>TOS</p></a>
+                        </li>
+                        <li>
+                            <a href="./index.php?1=company&2=private_policy"><i class="fa fa-book"></i><p>PP</p></a>
+                        </li>
                     </ul>	<!--end Company menu-->
                 </li>
             </ul> <!-- end gnb ul -->
@@ -382,8 +388,8 @@ session_start();
             <a href="#"><i class="fa fa-tumblr-square"></i></a>
         </span>
         <span id="luby_policies">
-            <span id="termsOfService_foot"><a href="../document/Important/term_of_service.pdf" class="document" target="_blank">Terms of service</a></span>
-            <span id="privatePolicy_foot"><a href="../document/Important/private_policy.pdf" class="document" target="_blank">Private policy</a></span>
+            <span id="termsOfService_foot"><a href="./index.php?1=company&2=terms_of_service" class="document">Terms of service</a></span>
+            <span id="privatePolicy_foot"><a href="./index.php?1=company&2=private_policy" class="document">Private policy</a></span>
         </span>
     </footer>   <!--end footer-->
 </div>
