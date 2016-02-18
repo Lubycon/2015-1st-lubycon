@@ -1,6 +1,7 @@
 <link href="css/account_setting.css" rel="stylesheet" type="text/css" />
 <link href="css/croppic.css" rel="stylesheet" type="text/css" />
 <!-- account_setting page css -->
+<script type="text/javascript" src="js/luby_ui.js"></script>
 <script type="text/javascript" src="js/account_setting.js"></script>
 <script type="text/javascript" src="js/jquery.mousewheel.min.js"></script>
 
@@ -34,34 +35,54 @@
             <p class="setting_title">History setting</p>
             <div class="history_cell">
                 <div class="history_data">
-                    <select class="history_year" name="history_year[]">
+
+                    <div class="lubySelector hidden-mb-ib" data="history_year">
+                        <span class="global_icon"><i class="fa fa-filter"></i></span>
+                        <span class="lubySelector_selected">2016</span>
+                        <span class="lubySelector_arrow"><i class="fa fa-caret-down"></i></span>
+                        <ul class="lubySelector_list">
                         <?php
-                            for( $i=2016 ; $i > 1899 ; $i-- )
+                            for( $i=2016 ; $i > 1939 ; $i-- )
                             {
-                                echo '<option value="'.$i.'">'.$i.'</option>';
+                                echo '<li data-value='.$i.'>'.$i.'</li>';
                             }
                         ?>
-                    </select>
-                    <select class="history_month" name="history_month[]">
-                        <option value="1">January</option>
-                        <option value="2">February</option>
-                        <option value="3">March</option>
-                        <option value="4">April</option>
-                        <option value="5">May</option>
-                        <option value="6">Jun</option>
-                        <option value="7">July</option>
-                        <option value="8">August</option>
-                        <option value="9">September</option>
-                        <option value="10">October</option>
-                        <option value="11">November</option>
-                        <option value="12">December</option>
-                    </select>
-                    <select class="history_kind" name="history_kind[]">
-                        <option value="work_expierence">Work Expierence</option>
-                        <option value="studied">Studied</option>
-                        <option value="contest_prized">Contest / Prized</option>
-                    </select>
+                        </ul>
+                    </div>
+
+                    <div class="lubySelector hidden-mb-ib" data="history_month">
+                        <span class="global_icon"><i class="fa fa-filter"></i></span>
+                        <span class="lubySelector_selected">January</span>
+                        <span class="lubySelector_arrow"><i class="fa fa-caret-down"></i></span>
+                        <ul class="lubySelector_list">
+                            <li data-value="1">January</li>
+                            <li data-value="2">February</li>
+                            <li data-value="3">March</li>
+                            <li data-value="4">April</li>
+                            <li data-value="5">May</li>
+                            <li data-value="6">Jun</li>
+                            <li data-value="7">July</li>
+                            <li data-value="8">August</li>
+                            <li data-value="9">September</li>
+                            <li data-value="10">October</li>
+                            <li data-value="11">November</li>
+                            <li data-value="12">December</li>
+                        </ul>
+                    </div>
+
+                    <div class="lubySelector hidden-mb-ib" data="history_kind">
+                        <span class="global_icon"><i class="fa fa-filter"></i></span>
+                        <span class="lubySelector_selected">January</span>
+                        <span class="lubySelector_arrow"><i class="fa fa-caret-down"></i></span>
+                        <ul class="lubySelector_list">
+                            <li data-value="work_expierence">Work Expierence</li>
+                            <li data-value="studied">Studied</li>
+                            <li data-value="contest_prized">Contest / Prized</li>
+                        </ul>
+                    </div>
+
                     <input class="history_text" type="text" name="history_text[]"/>
+
                 </div>
             </div>
             <div id="history_plus">

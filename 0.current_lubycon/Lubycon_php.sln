@@ -24,6 +24,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "account", "account", "{EB38
 		php\account\mail_for_resist.php = php\account\mail_for_resist.php
 		php\account\overlap_check.php = php\account\overlap_check.php
 		php\account\registration.php = php\account\registration.php
+		php\account\session_check.php = php\account\session_check.php
 		php\account\success_account.php = php\account\success_account.php
 		php\account\waiting_for_resisting.php = php\account\waiting_for_resisting.php
 	EndProjectSection
