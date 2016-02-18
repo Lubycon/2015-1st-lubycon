@@ -434,23 +434,26 @@
                 .creator_desc .name{
                     font-size: 14px;
                 }
+
+
+        #bestCreator{
+
+        }
+            #bestCreator .creator_pic{
+                width: 80px;
+                height: 80px;
+            }
+            #bestCreator .creator_name a{
+                color: #fafafa;
+                font-size: 25px;
+            }
+            #bestCreator .usercontent{
+                width: 30%;
+            }
         .creators_card_in{
             display: block;
             margin: 0px;
         }
-        #best_creator_wrap{
-            width: 100%;
-            max-width: 800px;
-            margin: 0px auto;
-            border-bottom: 1px solid #eeeeee;
-            border-radius: 0px;
-        }
-            #best_left_wrap{
-                width: 100%;
-            }
-            #best_right_wrap{
-                width: 100%;
-            }
         .creators_card {
             width: 100%;
             max-width: 800px;
@@ -932,6 +935,22 @@
                 .creator_desc .name{
                     font-size: 14px;
                 }
+    #bestCreator{
+
+    }
+        #bestCreator .creator_pic{
+            width: 100px;
+            height: 100px;
+        }
+        #bestCreator .creator_name a{
+            font-size: 30px;
+        }
+        #bestCreator .usercontent{
+            width: auto;
+        }
+        #bestCreator .creator_bot_info{
+            border-top: 1px solid #333333;
+        }
     .creator_card_in{
         display: inline-block;
         margin: 10px;
@@ -968,7 +987,7 @@
             font-size: 16px;
         }
     .creator_bot_info {
-        border-top: 1px solid #aaaaaa;
+        border-top: 1px solid #dddddd;
         margin: 0px auto;
         margin-top: 18px;
         padding: 10px;
@@ -1091,17 +1110,6 @@
             margin-top: 20px;
             font-size: 26px;
         }
-    #best_creator_wrap{
-        width: 806px;
-        margin: 20px auto;
-        margin-top: 0;
-    }
-        #best_left_wrap{
-            width: 50%;
-        }
-        #best_right_wrap{
-            width: 49%;
-        }
     #my_page_bt{
         width: 220px;
         height: 45px;
@@ -1112,6 +1120,10 @@
         font-weight: 200;
         color: #ffffff;
     }
+        #my_page_bt:hover{
+            border: 1px solid #87ead1;
+            color: #87ead1;
+        }
     .tab_item table{
         min-width: 1200px;
     }

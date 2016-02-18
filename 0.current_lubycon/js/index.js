@@ -1,18 +1,6 @@
 ﻿/*----------------------------common js----------------------------*/
-var windowWidth = $(window).width();
-/////////////////////////////////////////////////////////
-//      mobile browser address window disable start
-/////////////////////////////////////////////////////////
-window.addEventListener("load",function() {
-    // Set a timeout...
-    setTimeout(function(){ // It's not working now
-        // Hide the address bar!
-        window.scrollTo(0, 1);
-    }, 0);
-});
-/////////////////////////////////////////////////////////
-//      mobile browser address window disable start
-/////////////////////////////////////////////////////////
+var windowWidth = $(window).width(),
+    windowHeight = $(window).height();
 /////////////////////////////////////////////////////////
 //      dragging sensor start
 /////////////////////////////////////////////////////////
@@ -27,6 +15,27 @@ $(function(){
 });
 /////////////////////////////////////////////////////////
 //      dragging sensor end
+/////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+//      loading icon start
+/////////////////////////////////////////////////////////
+$(function(){
+    var $loading = $('#loading').hide();
+    $("#loading").css("height",windowHeight.toString() + "px");
+    $("#loading_icon").css(
+        "margin-top",((windowHeight/2) - ($("loading_icon").height()) - 50).toString() + "px"
+    );
+    $(document)
+      .ajaxStart(function() {
+        $loading.show();
+      })
+      .ajaxStop(function() {
+        $loading.hide();
+      });
+})
+
+/////////////////////////////////////////////////////////
+//      loading icon end
 /////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////
 //      event handler start

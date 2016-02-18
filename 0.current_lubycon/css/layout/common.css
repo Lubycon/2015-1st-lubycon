@@ -86,6 +86,24 @@ body{
     margin-right: 10px;
 }
 /* popup end */
+#loading{
+    position: fixed;
+    width: 100%;
+    background: rgba(255,255,255,0.8);
+    z-index: 99999999;
+    text-align: center;
+}
+    #loading_icon{
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        margin: 0px auto;
+        border-radius: 7px;
+        color: #eeeeee;
+        font-size: 40px;
+        background: #444444;
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.8);
+    }
 
 .dark_overlay {
     background: rgba(0,0,0,0.8);
@@ -636,6 +654,7 @@ body{
 #index_figure_wrap {
     width: 100%;
     height: 450px;
+    margin-top: 50px;
 }
 #main_figure,#index_figure {
     background: url(../../ch/img/main_img.jpg) 0% 45% no-repeat;
@@ -667,9 +686,8 @@ body{
         padding-top: 137px;
         color: #fff;
         font-size: 46px;
-        font-weight:200;
+        font-weight:400;
         letter-spacing: 1px;
-        font-family: 'Goudy Bookletter 1911', serif;
     }
 
 #navsel {
@@ -1130,13 +1148,17 @@ body{
             position: absolute;
             width: 100%;
             z-index:2;
+            text-align: center;
         }
         .contents_overlay .fa-search-plus{
             color:#ffffff;
-            display: block;
-            text-align: center;
-            margin-top: 70px;
-            font-size:60px;
+            display: inline-block;
+            margin: 0px auto;
+            margin-top: 80px;
+            padding: 12px;
+            border: 2px solid #ffffff;
+            border-radius: 50%;
+            font-size: 25px;
         }
         .contents_overlay ul{
             margin-top:57px;
@@ -1473,8 +1495,6 @@ body{
         }
             .creator_menu_list ul li{
                 text-align: center;
-                color: #aaaaaa;
-                font-weight: 200;
                 font-size: 14px;
             }
             .creator_menu_list ul li:hover{
@@ -1482,15 +1502,14 @@ body{
             }
                 .creator_menu_list ul li i{
                     display: inline-block;
-                    color: #aaaaaa;
+                    color: #444444;
                     float: left;
                     margin-top: 8px;
                     margin-left: 7px;
                     font-size: 17px;
                 }
                 .creator_menu_list ul li a{
-                    color: #aaaaaa;
-                    font-weight: 200;
+                    color: #444444;
                 }
     .creator_top_info {
         position: relative;

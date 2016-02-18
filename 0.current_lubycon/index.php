@@ -52,6 +52,11 @@ session_start();
     <![endif]-->
 </head>
 <body id="bodyer">
+<div id="loading">
+    <div id="loading_icon">
+        <i class="fa fa-spinner fa-spin"></i>
+    </div>
+</div>
 <div id="wrapper"> 
     <div class="dark_overlay"></div>
     <div id="cancel_layer"></div>

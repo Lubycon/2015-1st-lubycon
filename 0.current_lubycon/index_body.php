@@ -27,7 +27,7 @@ $(function(){
 <link href='https://fonts.googleapis.com/css?family=Goudy+Bookletter+1911' rel='stylesheet' type='text/css'>
 <div id="index_figure_wrap" class="main_figure_wrap hidden-mb-b">
     <figure id="index_figure">
-        <h2>Connect Your Creativity With The World</h2>
+        <h2>Connect Your Creativity With The World<br>Cheer Up Guys. We can do it!</h2>
     </figure>
 </div>
 <!-- end main_figure -->
