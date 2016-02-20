@@ -21,6 +21,47 @@ function eventHandler(event, selector) {
 //      event handler end
 /////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////
+//      global event start
+/////////////////////////////////////////////////////////
+var selectorToggle = {
+    toggle : function(event,selector){
+        eventHandler(event, selector);
+        if(!dragging){
+            if(selector.hasClass("open")){
+                selector.removeClass("open");              
+                this.closeAction();
+            }
+            else{
+                selector.addClass("open");  
+                this.openAction();
+            }
+            keyUse(selector.find($(".lubySelector_list")));
+        }
+        else if(dragging){
+            return;
+        }    
+    },
+    openAction : function(){},
+    closeAction : function(){}
+};
+function hideAnywhere(selector,object){
+    selector.mouseleave(function(){
+        $(document).click(function (event) {
+            event = event || window.event//for IE
+            if (!$(event.target).hasClass($(this).attr("class"))) {
+                object.stop().fadeOut(300);
+                selector.removeClass("open");
+            }
+            else{
+                return true;
+            }
+        });
+    });
+};
+/////////////////////////////////////////////////////////
+//      global event end
+/////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
 //      dragging sensor start
 /////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////
@@ -277,97 +318,60 @@ function hideAlert(){
 */
 $(function(){
     $(".lubySelector").each(function(){
-        var toggle_count = 0;
-        var option_list = [];
-        $(this).find(".global_icon").addClass("hidden-mb-ib");
-        $(this).find(".lubySelector_list li").each(function(){
-            option_list.push($(this).text().replace(/ /gi, ''));
-            //It will be push to array after removed all spaces  
-        });
-        $(this).after("<select class='original_box' name='" + $(this).attr('data') + "[]'>");
-        for(i in option_list){
-            $(this).next(".original_box").append("<option value="+option_list[i]+">"+option_list[i]+"</option>");
-        };
-        $(".original_box").hide();//original select box will be hide
-        $(".original_box").change(function(){
-            var lubySelectbox = $(this).prev(".lubySelector").find(".lubySelector_selected");
-            var original_value = $(this).val();
-            lubySelectbox.text(original_value.toString());
-            $(this).hide();
-            toggle_count = 0;    
-        });
-        $(this).on("click touchend",function (event){
-            eventHandler(event, $(this));
-            if(!dragging){
-                switch(toggle_count){
-                    case 0 :
-                        if(windowWidth > 1024){
-                            $(this).find($(".lubySelector_arrow")).children("i").attr("class","fa fa-caret-down");
-                            $(this).find($(".lubySelector_list")).stop().fadeIn(300);
-                            $(this).css("background","#333333");
-                            $(this).find($(".lubySelector_arrow")).children("i").attr("class","fa fa-caret-up");
-                        }
-                        else{
-                            $(this).next(".original_box").show().trigger("focus");
-                        }
-                        toggle_count = 1;
-                    break;
-
-                    case 1 :
-                        if(windowWidth > 1024){
-                            $(this).find($(".lubySelector_list")).stop().fadeOut(300);
-                            $(this).css("background","#555555");
-                            $(this).find($(".lubySelector_arrow")).children("i").attr("class","fa fa-caret-down");
-                        }
-                        else{
-                            $(this).next(".original_box").hide().trigger("blur");
-                        }
-                        toggle_count = 0;
-                    break;
-
-                    default: return; break;
-                };//switch end
-                keyCheck(toggle_count,$(this).find($(".lubySelector_list")));
+        var selectList = $(this).find($(".lubySelector_list"));
+        makeOriginalBox($(this));
+        hideAnywhere($(this),selectList);
+        $(this).on("click touchend",function(event){
+            event = event || window.event
+            selectorToggle.openAction = function(){
+                selectList.fadeIn(300);
                 return;
             }
-            else if(dragging){
+            selectorToggle.closeAction = function(){
+                selectList.fadeOut(300);
                 return;
-            }            
-        });//click end
-        $(this).find($(".lubySelector_list li")).on("click touchend",function (event){
-            event = event || window.event
-            var selected_v = $(event.target).text();
-            var selected_option = $(event.target).text().replace(/ /gi, '');
-            $(event.target).parent().siblings(".lubySelector_selected").text(selected_v);
-            $(event.target).parents(".lubySelector").next(".original_box").val(selected_option);
-            $(event.target).siblings("li").removeClass();
-            $(event.target).addClass("selected_li");
+            }
+            selectorToggle.toggle(event,$(this));
         });
-        hideAnywhere($(this))
-    });//each end
+        $(this).find($(".lubySelector_list li")).on("click touchend",function (event){
+            lubyListClick(event,$(event.target));
+        });
+    });
 });
-function hideAnywhere(selector){
-    selector.mouseleave(function(){
-        $(document).click(function (event) {
-            event = event || window.event//for IE
-            if (!$(event.target).hasClass($(this).attr("class"))) {
-                $(this).find($(".lubySelector_list")).stop().fadeOut(300);
-                $(".lubySelector").css("background","#555555");
-                $(this).find($(".lubySelector_arrow")).children("i").attr("class","fa fa-caret-down");
-                toggle_count = 0;
-                return true;
-            }//if end
-            else{
-                return true;
-            }//else end
-        });//click end
-    });//mouseleave end
-}
-function keyCheck(toggleCount,lubySelector){
+function lubylistClick(event,selector){
+    event = event || window.event
+    var selected_v = selector.text(),
+    selected_option = selector.text().replace(/ /gi, '');
+    selector.parent().siblings(".lubySelector_selected").text(selected_v);
+    selector.parents(".lubySelector").next(".original_box").val(selected_option);
+    selector.siblings("li").removeClass();
+    selector.addClass("selected_li");
+};
+function makeOriginalBox(selector){
+    var option_list = [];
+    selector.find(".global_icon").addClass("hidden-mb-ib");
+    selector.find(".lubySelector_list li").each(function(){
+        option_list.push($(this).text().replace(/ /gi, ''));  
+    });
+    selector.after("<select class='original_box' name='" + selector.attr('data') + "[]'>");
+    for(i in option_list){
+        selector.next(".original_box").append("<option value="+option_list[i]+">"+option_list[i]+"</option>");
+    };
+    $(".original_box").hide();
+    $(".original_box").change(function(){
+        var lubySelectbox = $(this).prev(".lubySelector").find(".lubySelector_selected");
+        var original_value = $(this).val();
+        lubySelectbox.text(original_value.toString());
+        $(this).hide();
+        toggle_count = 0;
+        return toggle_count;    
+    });
+};
+function keyUse(toggleCount,lubySelector){
     if(toggleCount == 1){
         $(document).on('keydown', function(event) {
             var keyCode = event.keyCode ? event.keyCode : event.which;
-            if(keyCode==65){
+            if(keyCode == 65){
                 lubySelector.scrollTop(0);
             }
         });  

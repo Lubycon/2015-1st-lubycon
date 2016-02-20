@@ -1,6 +1,5 @@
 
-$(function () //account setting script
-{
+$(function (){ //account setting script
     $('#change_pass').click(function () //change pass remove attr
     {
         if($('#now_pass_id').attr('disabled'))
@@ -27,12 +26,11 @@ $(function () //account setting script
         if (i < 4) {
             var lang_div = '<div id="lang_clone' + i + '"><div id="lang_option_' + i + '" class="language_option"><select class="basic_filter" name="lang_ability[]"><option value="Beginer">Beginer</option><option value="Advanced">Advanced</option><option value="Fluent">Fluent</option><option value="Native">Native</option></select></div><input id="lang_input_' + i + '" class="language_text" name="language[]" type="text"></div>';
             $("#clone_div").append(lang_div);
-            $(".basic_filter").selectOrDie
-                ({
-                    customClass: "custom",
-                    customID: "custom",
-                    size: 5
-                });
+            $(".basic_filter").selectOrDie({
+                customClass: "custom",
+                customID: "custom",
+                size: 5
+            });
             $("#lang_minus_id").show();
             i++; //int plus
 
