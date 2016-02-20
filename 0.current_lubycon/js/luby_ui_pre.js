@@ -6,6 +6,27 @@
 //5. selector
 //6. mb-panel_menu
 /////////////////////////////////////////////////////////
+//      event handler start
+/////////////////////////////////////////////////////////
+//This function will be canceled the click event when users touch in mobile devices
+//So if you want use any function in mobile, This eventHandler must be called to your function//
+function eventHandler(event, selector) {
+    event.stopPropagation();
+    event.preventDefault();
+    if (event.type === 'touchend'){
+        selector.off('click');
+    }
+};
+/////////////////////////////////////////////////////////
+//      event handler end
+/////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+//      dragging sensor start
+/////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+//      dragging sensor end
+/////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
 //      sticky start
 /////////////////////////////////////////////////////////
 $(document).scroll(function () {
@@ -256,110 +277,104 @@ function hideAlert(){
 */
 $(function(){
     $(".lubySelector").each(function(){
-        var selectList = $(this).find($(".lubySelector_list")),
-            selectArrow = $(this).find($(".lubySelector_arrow"));
-        makeOriginalBox($(this));
-        hideAnywhere($(this),selectList,selectArrow);
-        $(this).on("click touchend",function(event){
-            event = event || window.event
-            eventHandler(event,$(this));
-            selectorToggle.toggle(event,$(this),selectList,selectArrow);
-        });
-        $(this).find($(".lubySelector_list li")).on("click touchend",function (event){
-            lubyListClick(event,$(event.target));
-        });
-    });
-    function lubylistClick(event,selector){
-        event = event || window.event
-        var selected_v = selector.text(),
-        selected_option = selector.text().replace(/ /gi, '');
-        selector.parent().siblings(".lubySelector_selected").text(selected_v);
-        selector.parents(".lubySelector").next(".original_box").val(selected_option);
-        selector.siblings("li").removeClass();
-        selector.addClass("selected_li");
-    };
-    function makeOriginalBox(selector){
+        var toggle_count = 0;
         var option_list = [];
-        selector.find(".global_icon").addClass("hidden-mb-ib");
-        selector.find(".lubySelector_list li").each(function(){
-            option_list.push($(this).text().replace(/ /gi, ''));  
+        $(this).find(".global_icon").addClass("hidden-mb-ib");
+        $(this).find(".lubySelector_list li").each(function(){
+            option_list.push($(this).text().replace(/ /gi, ''));
+            //It will be push to array after removed all spaces  
         });
-        selector.after("<select class='original_box' name='" + selector.attr('data') + "[]'>");
+        $(this).after("<select class='original_box' name='" + $(this).attr('data') + "[]'>");
         for(i in option_list){
-            selector.next(".original_box").append("<option value="+option_list[i]+">"+option_list[i]+"</option>");
+            $(this).next(".original_box").append("<option value="+option_list[i]+">"+option_list[i]+"</option>");
         };
-        $(".original_box").hide();
+        $(".original_box").hide();//original select box will be hide
         $(".original_box").change(function(){
             var lubySelectbox = $(this).prev(".lubySelector").find(".lubySelector_selected");
             var original_value = $(this).val();
             lubySelectbox.text(original_value.toString());
             $(this).hide();
-            $(this).prev(".lubySelector").removeClass("open");   
+            toggle_count = 0;    
         });
-    };
-    function keyUse(lubySelector){
-        $(document).on('keydown', function(event) {
-            var keyCode = event.keyCode ? event.keyCode : event.which;
-            if(keyCode == 65){
-                lubySelector.scrollTop(0);
+        $(this).on("click touchend",function (event){
+            eventHandler(event, $(this));
+            if(!dragging){
+                switch(toggle_count){
+                    case 0 :
+                        if(windowWidth > 1024){
+                            $(this).find($(".lubySelector_arrow")).children("i").attr("class","fa fa-caret-down");
+                            $(this).find($(".lubySelector_list")).stop().fadeIn(300);
+                            $(this).css("background","#333333");
+                            $(this).find($(".lubySelector_arrow")).children("i").attr("class","fa fa-caret-up");
+                        }
+                        else{
+                            $(this).next(".original_box").show().trigger("focus");
+                        }
+                        toggle_count = 1;
+                    break;
+
+                    case 1 :
+                        if(windowWidth > 1024){
+                            $(this).find($(".lubySelector_list")).stop().fadeOut(300);
+                            $(this).css("background","#555555");
+                            $(this).find($(".lubySelector_arrow")).children("i").attr("class","fa fa-caret-down");
+                        }
+                        else{
+                            $(this).next(".original_box").hide().trigger("blur");
+                        }
+                        toggle_count = 0;
+                    break;
+
+                    default: return; break;
+                };//switch end
+                keyCheck(toggle_count,$(this).find($(".lubySelector_list")));
+                return;
             }
-        });  
-    };
+            else if(dragging){
+                return;
+            }            
+        });//click end
+        $(this).find($(".lubySelector_list li")).on("click touchend",function (event){
+            event = event || window.event
+            var selected_v = $(event.target).text();
+            var selected_option = $(event.target).text().replace(/ /gi, '');
+            $(event.target).parent().siblings(".lubySelector_selected").text(selected_v);
+            $(event.target).parents(".lubySelector").next(".original_box").val(selected_option);
+            $(event.target).siblings("li").removeClass();
+            $(event.target).addClass("selected_li");
+        });
+        hideAnywhere($(this))
+    });//each end
 });
-var selectorToggle = {
-    toggle : function(event,selector,object,arrow){
-        eventHandler(event, selector);
-        if(!dragging){
-            if(selector.hasClass("open")){
-                selector.removeClass("open");              
-                this.lubyCloseAction(selector,object,arrow);
-            }
-            else{
-                selector.addClass("open");  
-                this.lubyOpenAction(selector,object,arrow);
-            }
-        }
-        else if(dragging){
-            return;
-        }    
-    },
-    lubyOpenAction : function(selector,object,arrow){
-        if(windowWidth > 1024){
-            arrow.children("i").attr("class","fa fa-caret-down");
-            object.fadeIn(300);
-            arrow.children("i").attr("class","fa fa-caret-up");
-            return;
-        }
-        else{
-            selector.next(".original_box").show().trigger("focus");
-            console.log($(this).next().attr("class"));
-        }
-    },
-    lubyCloseAction : function(selector,object,arrow){
-        if(windowWidth > 1024){
-            object.fadeOut(300);
-            arrow.children("i").attr("class","fa fa-caret-down");
-            return;
-        }
-        else{
-            selector.next(".original_box").hide().trigger("blur");
-        }
-    }
-};
-function hideAnywhere(selector,object,arrow){
+function hideAnywhere(selector){
     selector.mouseleave(function(){
         $(document).click(function (event) {
             event = event || window.event//for IE
             if (!$(event.target).hasClass($(this).attr("class"))) {
-                object.stop().fadeOut(300);
-                selector.removeClass("open");
-                arrow.children("i").attr("class","fa fa-caret-down");
-            }
+                $(this).find($(".lubySelector_list")).stop().fadeOut(300);
+                $(".lubySelector").css("background","#555555");
+                $(this).find($(".lubySelector_arrow")).children("i").attr("class","fa fa-caret-down");
+                toggle_count = 0;
+                return true;
+            }//if end
             else{
                 return true;
+            }//else end
+        });//click end
+    });//mouseleave end
+}
+function keyCheck(toggleCount,lubySelector){
+    if(toggleCount == 1){
+        $(document).on('keydown', function(event) {
+            var keyCode = event.keyCode ? event.keyCode : event.which;
+            if(keyCode==65){
+                lubySelector.scrollTop(0);
             }
-        });
-    });
+        });  
+    }
+    else{
+        return;
+    }
 };
 /////////////////////////////////////////////////////////
 //      lubySelectbox action end
@@ -510,7 +525,7 @@ $(window).on("load resize", function(){
     else{
         return;
     }
-})
+});
 /////////////////////////////////////////////////////////
 //      visible goToTheTop button end
 /////////////////////////////////////////////////////////

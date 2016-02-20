@@ -27,18 +27,18 @@
                 <!-- end select box -->
                 
                 <label>Nickname</label><input type="text" value="loremIpsum" disabled />
-                <label>Passward</label><input type="password" name="now_pass" id="now_pass_id" disabled /><i></i><span id="change_pass">Change Passward</span><br />
+                <label>Password</label><input type="password" name="now_pass" id="now_pass_id" disabled /><i></i><span id="change_pass">Change Password</span><br />
                 <p id="now_pass_check" class="form_check"></p>
-                <label>New Passward</label><input type="password" name="pass" id="pass_id" disabled /><i></i>
+                <label>New Password</label><input type="password" name="pass" id="pass_id" disabled /><i></i>
                 <p id="pass_check" class="form_check"></p>
-                <label>Repeat Passward</label><input type="password" name="repass" id="re_pass_id" disabled /><i></i>
+                <label>Repeat Password</label><input type="password" name="repass" id="re_pass_id" disabled /><i></i>
                 <p id="re_pass_check" class="form_check"></p>
         </section>
         <section id="basic_info_section" class="setting_card">
-            <p class="setting_title">Basic Info</p>
+            <p class="setting_title">Basic Infomation</p>
                 <label>Profile Photo</label>
                 <div id="croppic_account"></div>
-                    <span class="btn" id="cropContainerHeaderButton">Find image</span>
+                    <span class="btn" id="cropContainerHeaderButton">Find Image</span>
                     <script src="./js/croppic.min.js"></script>
                     <script>
 		                var croppicHeaderOptions = {
@@ -65,9 +65,12 @@
                 <label>Occupation / Job</label>
                 <div class="job_option">
                     <select class="basic_filter" name="job">
+                        <option value="artist">Artist</option>
+                        <option value="creator">Creator</option>
                         <option value="designer">Designer</option>
                         <option value="engineer">Engineer</option>
                         <option value="student">Student</option>
+                        <option value="other">Other</option>
                     </select>
                 </div>
 
@@ -87,10 +90,9 @@
                 <label>Language</label>
                 <div id="lang_option_id" class="language_option">
                     <select class="basic_filter" name="lang_ability[]">
-                        <option value="Beginer">Beginer</option>
+                        <option value="Beginer">Beginner</option>
                         <option value="Advanced">Advanced</option>
                         <option value="Fluent">Fluent</option>
-                        <option value="Native">Native</option>
                     </select>
                 </div>
                 <input type="text" id="lang_input_id" class="language_text" name="language[]" />
@@ -104,7 +106,7 @@
                 <label id="basic_desc_label">Description</label><textarea id="basic_desc" maxlength="1000" name="desc"></textarea><br />
         </section>
         <section id="history_setting_section" class="setting_card">
-            <p class="setting_title">History setting</p>
+            <p class="setting_title">History Setting</p>
             <div class="history_cell">
                 <div class="history_data">
                     <div class="lubySelector hidden-mb-ib" data="history_year">
@@ -131,7 +133,7 @@
                             <li data-value="3">March</li>
                             <li data-value="4">April</li>
                             <li data-value="5">May</li>
-                            <li data-value="6">Jun</li>
+                            <li data-value="6">June</li>
                             <li data-value="7">July</li>
                             <li data-value="8">August</li>
                             <li data-value="9">September</li>
@@ -146,9 +148,9 @@
                         <span class="lubySelector_selected history_kind_changer">Work Expierence</span>
                         <span class="lubySelector_arrow"><i class="fa fa-caret-down"></i></span>
                         <ul class="lubySelector_list">
-                            <li data-value="work_expierence">Work Expierence</li>
-                            <li data-value="studied">Studied</li>
-                            <li data-value="contest_prized">Contest / Prized</li>
+                            <li data-value="work_expierence">Work Experience</li>
+                            <li data-value="studied">Education</li>
+                            <li data-value="contest_prized">Awards</li>
                         </ul>
                     </div>
 

@@ -53,14 +53,13 @@
 
             <div class="lubySelector hidden-mb-ib" data="licence_sort">
                 <span class="global_icon"><i class="fa fa-copyright"></i></span>
-                <span class="lubySelector_selected">All Lisence</span>
+                <span class="lubySelector_selected">All License</span>
                 <span class="lubySelector_arrow"><i class="fa fa-caret-down"></i></span>
                 <ul class="lubySelector_list">
                     <li class="selected_li">All License</li>
                     <li>Free</li>
-                    <li>Uncommercial</li>
-                    <li>Share</li>
-                    <li>Donate</li>
+                    <li>Non-Commercial</li>
+                    <li>Non-Derivative</li>
                 </ul>
             </div>
 

@@ -41,6 +41,7 @@ session_start();
     <script type="text/javascript" src="js/selectordie.min.js"></script> <!-- selector decoration js -->
     <script type="text/javascript" src="js/selectordie.demo.js"></script> <!-- selector decoration js -->
     <script type="text/javascript" src="js/slider.js"></script><!--slider plugin-->
+    <script type="text/javascript" src="js/resizeObject.js"></script>
     <script type="text/javascript" src="js/index.js"></script> <!-- index file js -->
     <script type="text/javascript" src="js/luby_ui.js"></script><!-- ui file js -->
     <script type="text/javascript" src="js/account.js"></script> <!-- account file js -->
@@ -350,7 +351,7 @@ session_start();
     <!---------------- header end ---------------->
     <!---------------- search bar start ---------------->
     <div id="main_search_bar">
-        <input type="text" id="main_search_text" value="Enter the Keyword" />
+        <input type="text" id="main_search_text" value="Enter The Keyword" />
         <button id="main_search_btn" class="out">
             <i class="fa fa-search"></i>
         </button>

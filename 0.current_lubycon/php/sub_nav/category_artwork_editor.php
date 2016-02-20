@@ -1,6 +1,6 @@
 <option>Animation</option>
 <option>Architecture</option>
-<option>Avantgarde</option>
+<option>Avant-garde</option>
 <option>Baroque</option>
 <option>Design</option>
 <option>Digital art</option>

@@ -26,34 +26,8 @@
     $uploaded_file_size;
 
 ?>
-
-
-
 <form id="editor_form" enctype="multipart/form-data" method="post" action="./php/editor/test.php">
 <input type="hidden" name="contents_cate_name" value="<?=$contents_cate?>" />
-<div id="popup_wrap">
-    <div id="next_pop_body" class="fadeInDown animated"></div><!--go to thumbnail-->
-<!--<div id="popup_wrap">
-    <div id="next_pop_body" class="fadeInDown animated"></div>
-</div>
-
-<div id="embed_popup">
-    <p>Embed Media</p>
-    <textarea id="embed_textarea"></textarea>
-    <button type="button" class="mic_next_bt">Embed</button>
-    <button type="button" class="cancel_bt">Cancel</button>
-    <button type="button" class="editor_popup_cancel"><i class="fa fa-times"></i></button>
-</div>
-<nav id="editor_gnv">
-    <ol>
-        <li class="editor_selected_gnv">1.Edit</li>
-        <li>></li>
-        <li>2.Thumbnail</li>
-        <li>></li>
-        <li>3.Setting</li>
-    </ol>
-    <button type="button" class="next_bt" id="call_thumb">Next</button>
-</nav>-->
 <section id="editor_inbody">
     <section id="editor_body" class="con_wrap">
         <section id="editor_section" class="con_main">
@@ -102,7 +76,7 @@
                         </li>
                     </ul>
                     <div id="croppic"></div>
-                    <span class="btn" id="cropContainerHeaderButton">Choose the croping pic</span>
+                    <span class="btn" id="cropContainerHeaderButton">Choose Image</span>
                     <script src="./js/croppic.min.js"></script>
                     <script>
 		                var croppicHeaderOptions = {
@@ -132,7 +106,7 @@
         <section class="tab_section" id="setting_tab_section">
             <div id="top_set" class="setting_group">
                 <div id="cate_editor">
-                    <p class="setting_title">Categories (max 3 categorys)</p>
+                    <p class="setting_title">Categories (max 3 categories)</p>
                     <div class="set_con">
                             <!-- need save user select category max value = 3 -->
                             <select data-placeholder="Choose your contents categories" style="width:100%;" class="chosen-select" multiple tabindex="8" name="user_selected_category[]">
@@ -153,7 +127,7 @@
                     <p class="setting_title">Tags</p>
                     <div class="set_con">
                             <!-- need to save user select tag max value = infinite -->
-                            <select data-placeholder="Choose your contents categorys" style="width:100%;" class="chosen-select2" multiple tabindex="8" name="user_selected_tag[]">
+                            <select data-placeholder="Choose your contents categories" style="width:100%;" class="chosen-select2" multiple tabindex="8" name="user_selected_tag[]">
                                 <option>Car</option>
                                 <option>People</option>
                                 <option>Book</option>

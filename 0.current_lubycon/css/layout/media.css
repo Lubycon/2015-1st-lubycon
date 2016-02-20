@@ -215,7 +215,7 @@
                 background: #282828;
                 box-sizing: border-box;
                 -webkit-box-sizing: border-box;
-                -moz-box=sizing: border-box;
+                -moz-box-sizing: border-box;
             }
             #mb-signin {
                 text-align: center;
@@ -332,7 +332,7 @@
         }
              .mb-lubySelector .lubySelector_selected{
                 position: absolute;
-                width: 114px;
+                width: 115px;
                 margin: 0px;
                 top: 8px;
                 right: 50%;

@@ -32,7 +32,7 @@ $(function(){
       .ajaxStop(function() {
         $loading.hide();
       });
-})
+});
 
 /////////////////////////////////////////////////////////
 //      loading icon end

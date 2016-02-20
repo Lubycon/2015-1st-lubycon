@@ -15,8 +15,8 @@
             <p class="descript_subject">Welcome to Lubycon !</p>
             <p class="descript_article">
                 Lubycon is a playground for all creative minds.<br />
-                Through Lubycon, anyone can create, share and gain access to unique designs that inspire the World.<br />
-                Lubycon respect all designer, engineer, developer, artists and their works
+                Through Lubycon, anyone can create, share and gain access to unique creations that inspire the World.<br />
+                Lubycon respects all creators, artists, designers, engineers and their works.
             </p>
         </article>
         <div class="aboutus_photo">
@@ -39,20 +39,20 @@
             <div class="focus_div" id="focus_share">
                 <p class="focus_subject">SHARE</p>
                 <p class="focus_article">
-                    Discover other similar minds<br/>
+                    Discover other new minds<br/>
                     that connect to you and<br/>
-                    inspire other artists!<br/>
+                    inspire other artists.<br/>
                     Connect your creativity with<br/>
-                    the World 
+                    the World! 
                 </p>
             </div>
             <div class="focus_div" id="focus_community">
                 <p class="focus_subject">COMMUNITY</p>
                 <p class="focus_article">
                     Make new friends through<br/>
-                    your design! The community<br/>
+                    your design. The community<br/>
                     exists to help and give you<br/>
-                    access to new information. 
+                    access to new information! 
                 </p>
             </div>
         </div>
@@ -62,8 +62,8 @@
         <div id="contactus_wrap">
             <p class="contactus_subject">Contact Us</p>
             <p class="contactus_article">
-                If you have any questions<br />
-                please feel free to contact us at
+                If you have any questions,<br />
+                contact us at
             <a id="mailadress" href="mailto:contact@lubycon.com">contact@lubycon.com</a>
             </p>
             <a class="contactus_mailbt" href="mailto:contact@lubycon.com" target="_blank">

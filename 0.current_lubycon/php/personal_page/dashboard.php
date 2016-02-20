@@ -73,7 +73,7 @@
                     <p class="dash_body_content"><?=$usercity?> / <?=$usercountry?></p>
                 </div>
                 <div class="dash_body_sector" id="user_language">
-                    <p class="dash_body_title">Job</p>
+                    <p class="dash_body_title">Language</p>
                     <p class="dash_body_content"><?=$language1?><br><?=$language2?></p>
                 </div>
             </div>
@@ -114,15 +114,15 @@
                 <aside id="history_desc" class="hidden-mb-ib">
                     <p class="history_desc_list" id="work_desc">
                         <i class="fa fa-circle"></i>
-                        <span>Work Expierence</span>
+                        <span>Work Experience</span>
                     </p>
                     <p class="history_desc_list" id="studied_desc">
                         <i class="fa fa-circle"></i>
-                        <span>Studied</span>
+                        <span>Education</span>
                     </p>
                     <p class="history_desc_list" id="contest_desc">
                         <i class="fa fa-circle"></i>
-                        <span>Contest / Prized</span>
+                        <span>Awards</span>
                     </p>
                 </aside>
             </div>
@@ -152,7 +152,7 @@
                     </div>
                 </div>
                 <div id="dash_chart_wrap">
-                    <p class="dash_body_title" id="chart_body_title">The last 7 days data</p>
+                    <p class="dash_body_title" id="chart_body_title">Last 7 days data</p>
                     <div class="chart_title">
                         <i id="chart_icon" class="fa fa-heart"></i>
                         <span id="chart_name">Like</span>
