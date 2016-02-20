@@ -337,49 +337,49 @@ $(function(){
             lubyListClick(event,$(event.target));
         });
     });
-});
-function lubylistClick(event,selector){
-    event = event || window.event
-    var selected_v = selector.text(),
-    selected_option = selector.text().replace(/ /gi, '');
-    selector.parent().siblings(".lubySelector_selected").text(selected_v);
-    selector.parents(".lubySelector").next(".original_box").val(selected_option);
-    selector.siblings("li").removeClass();
-    selector.addClass("selected_li");
-};
-function makeOriginalBox(selector){
-    var option_list = [];
-    selector.find(".global_icon").addClass("hidden-mb-ib");
-    selector.find(".lubySelector_list li").each(function(){
-        option_list.push($(this).text().replace(/ /gi, ''));  
-    });
-    selector.after("<select class='original_box' name='" + selector.attr('data') + "[]'>");
-    for(i in option_list){
-        selector.next(".original_box").append("<option value="+option_list[i]+">"+option_list[i]+"</option>");
+    function lubylistClick(event,selector){
+        event = event || window.event
+        var selected_v = selector.text(),
+        selected_option = selector.text().replace(/ /gi, '');
+        selector.parent().siblings(".lubySelector_selected").text(selected_v);
+        selector.parents(".lubySelector").next(".original_box").val(selected_option);
+        selector.siblings("li").removeClass();
+        selector.addClass("selected_li");
     };
-    $(".original_box").hide();
-    $(".original_box").change(function(){
-        var lubySelectbox = $(this).prev(".lubySelector").find(".lubySelector_selected");
-        var original_value = $(this).val();
-        lubySelectbox.text(original_value.toString());
-        $(this).hide();
-        toggle_count = 0;
-        return toggle_count;    
-    });
-};
-function keyUse(toggleCount,lubySelector){
-    if(toggleCount == 1){
-        $(document).on('keydown', function(event) {
-            var keyCode = event.keyCode ? event.keyCode : event.which;
-            if(keyCode == 65){
-                lubySelector.scrollTop(0);
-            }
-        });  
-    }
-    else{
-        return;
-    }
-};
+    function makeOriginalBox(selector){
+        var option_list = [];
+        selector.find(".global_icon").addClass("hidden-mb-ib");
+        selector.find(".lubySelector_list li").each(function(){
+            option_list.push($(this).text().replace(/ /gi, ''));  
+        });
+        selector.after("<select class='original_box' name='" + selector.attr('data') + "[]'>");
+        for(i in option_list){
+            selector.next(".original_box").append("<option value="+option_list[i]+">"+option_list[i]+"</option>");
+        };
+        $(".original_box").hide();
+        $(".original_box").change(function(){
+            var lubySelectbox = $(this).prev(".lubySelector").find(".lubySelector_selected");
+            var original_value = $(this).val();
+            lubySelectbox.text(original_value.toString());
+            $(this).hide();
+            toggle_count = 0;
+            return toggle_count;    
+        });
+    };
+    function keyUse(toggleCount,lubySelector){
+        if(toggleCount == 1){
+            $(document).on('keydown', function(event) {
+                var keyCode = event.keyCode ? event.keyCode : event.which;
+                if(keyCode == 65){
+                    lubySelector.scrollTop(0);
+                }
+            });  
+        }
+        else{
+            return;
+        }
+    };
+});
 /////////////////////////////////////////////////////////
 //      lubySelectbox action end
 /////////////////////////////////////////////////////////
