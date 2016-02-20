@@ -20,11 +20,11 @@ $(function(){
 //      loading icon start
 /////////////////////////////////////////////////////////
 $(function(){
-    var $loading = $('#loading').hide();
-    $("#loading").css("height",windowHeight.toString() + "px");
-    $("#loading_icon").css(
-        "margin-top",((windowHeight/2) - ($("loading_icon").height()) - 50).toString() + "px"
-    );
+    var $loading = $('#loading_icon').hide();
+    $("#loading_icon").css
+    ({
+        "margin-top": ((windowHeight / 2) - ($("loading_icon").height()) - 50).toString() + "px"
+    });
     $(document)
       .ajaxStart(function() {
         $loading.show();

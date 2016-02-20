@@ -1,7 +1,7 @@
 $(window).on("load",function(){
     var aboutus_nav = $("#aboutus_nav"),
         aboutus_section = $(".aboutus_section"),
-        aboutus_main_img = $("#aboutus_figure");
+        aboutus_main_img = $("#aboutus_figure , .aboutus_photo");
 
     var windowHeight = $(window).height(),
         navHeight= aboutus_nav.height(),
