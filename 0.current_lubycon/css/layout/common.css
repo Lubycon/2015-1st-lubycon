@@ -772,6 +772,9 @@ body{
 .lubySelector:hover{
     background: #666666;
 }
+.lubySelector.open{
+    background: #333333;
+}
     .nav_guide #category_bt{
         /*empty*/    
     }
