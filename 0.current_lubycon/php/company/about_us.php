@@ -19,6 +19,9 @@
                 Lubycon respect all designer, engineer, developer, artists and their works
             </p>
         </article>
+        <div class="aboutus_photo">
+            <img src="./ch/img/about_us/overlay.png" class="photo_overlay"/>
+        </div>
     </section>
     <section class="aboutus_section" id="focus_section">
         <div id="focus_wrap">

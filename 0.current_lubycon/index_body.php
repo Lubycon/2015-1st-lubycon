@@ -261,7 +261,7 @@ $(function(){
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />
                 </p>
             </div>
-            <div class="viewmore_bt animate_opacity">VIEW MORE</div>
+            <div class="viewmore_bt animate_opacity"><a href="./index.php?1=creators_page&2=creators">VIEW MORE</a></div>
         </div>  
     </div>
 </section>
