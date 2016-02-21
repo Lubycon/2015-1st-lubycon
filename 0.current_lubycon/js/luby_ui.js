@@ -254,31 +254,71 @@ function hideAlert(){
     </ul>
 </div>
 */
+
 $(function(){
     $(".lubySelector").each(function(){
         var selectList = $(this).find($(".lubySelector_list")),
+            innerList = selectList.find("li"),
             selectArrow = $(this).find($(".lubySelector_arrow"));
-        makeOriginalBox($(this));
         hideAnywhere($(this),selectList,selectArrow);
         $(this).on("click touchend",function(event){
             event = event || window.event
             eventHandler(event,$(this));
-            selectorToggle.toggle(event,$(this),selectList,selectArrow);
+            lubySelector.start(event,$(this),selectList,selectArrow);
         });
-        $(this).find($(".lubySelector_list li")).on("click touchend",function (event){
+        innerList.on("click touchend",function (event){
             lubyListClick(event,$(event.target));
         });
     });
-    function lubyListClick(event,selector){
-        event = event || window.event
-        var selected_v = selector.text(),
-        selected_option = selector.text().replace(/ /gi, '');
-        selector.parent().siblings(".lubySelector_selected").text(selected_v);
-        selector.parents(".lubySelector").next(".original_box").val(selected_option);
-        selector.siblings("li").removeClass();
-        selector.addClass("selected_li");
+    function keyUse(lubySelector){
+        $(document).on('keydown', function(event) {
+            var keyCode = event.keyCode ? event.keyCode : event.which;
+            if(keyCode == 65){
+                lubySelector.scrollTop(0);
+            }
+        });  
     };
-    function makeOriginalBox(selector){
+});
+var lubySelector = {
+    start : function(event,selector,list,arrow){
+        if(!dragging){
+            if(selector.hasClass("open")){
+                selector.removeClass("open");              
+                this.CloseAction(selector,list,arrow);
+            }
+            else{
+                selector.addClass("open");  
+                this.OpenAction(selector,list,arrow);
+            }
+        }
+        else if(dragging){
+            return;
+        }
+        makeOriginalBox(selector);
+        listClick(event,selector)    
+    },
+    OpenAction : function(selector,list,arrow){
+        if(windowWidth > 1024){
+            arrow.children("i").attr("class","fa fa-caret-down");
+            list.fadeIn(300);
+            arrow.children("i").attr("class","fa fa-caret-up");
+            return;
+        }
+        else{
+            selector.next(".original_box").show().trigger("focus");
+        }
+    },
+    CloseAction : function(selector,list,arrow){
+        if(windowWidth > 1024){
+            list.fadeOut(300);
+            arrow.children("i").attr("class","fa fa-caret-down");
+            return;
+        }
+        else{
+            selector.next(".original_box").hide().trigger("blur");
+        }
+    },
+    makeOriginalBox :  function(selector){
         var option_list = [];
         selector.find(".global_icon").addClass("hidden-mb-ib");
         selector.find(".lubySelector_list li").each(function(){
@@ -296,55 +336,15 @@ $(function(){
             $(this).hide();
             $(this).prev(".lubySelector").removeClass("open");   
         });
-    };
-    function keyUse(lubySelector){
-        $(document).on('keydown', function(event) {
-            var keyCode = event.keyCode ? event.keyCode : event.which;
-            if(keyCode == 65){
-                lubySelector.scrollTop(0);
-            }
-        });  
-    };
-});
-var selectorToggle = {
-    toggle : function(event,selector,object,arrow){
-        eventHandler(event, selector);
-        if(!dragging){
-            if(selector.hasClass("open")){
-                selector.removeClass("open");              
-                this.lubyCloseAction(selector,object,arrow);
-            }
-            else{
-                selector.addClass("open");  
-                this.lubyOpenAction(selector,object,arrow);
-            }
-        }
-        else if(dragging){
-            return;
-        }    
     },
-    lubyOpenAction : function(selector,object,arrow){
-        if(windowWidth > 1024){
-            arrow.children("i").attr("class","fa fa-caret-down");
-            object.fadeIn(300);
-            arrow.children("i").attr("class","fa fa-caret-up");
-            return;
-        }
-        else{
-            selector.next(".original_box").show().trigger("focus");
-            console.log($(this).next().attr("class"));
-        }
-    },
-    lubyCloseAction : function(selector,object,arrow){
-        if(windowWidth > 1024){
-            object.fadeOut(300);
-            arrow.children("i").attr("class","fa fa-caret-down");
-            return;
-        }
-        else{
-            selector.next(".original_box").hide().trigger("blur");
-        }
-    }
+    lubyListClick : function(event,selector){
+        var selected_v = selector.text(),
+        selected_option = selector.text().replace(/ /gi, '');
+        selector.parent().siblings(".lubySelector_selected").text(selected_v);
+        selector.parents(".lubySelector").next(".original_box").val(selected_option);
+        selector.siblings("li").removeClass();
+        selector.addClass("selected_li");
+    };
 };
 function hideAnywhere(selector,object,arrow){
     selector.mouseleave(function(){
