@@ -269,7 +269,7 @@ $(function(){
             lubyListClick(event,$(event.target));
         });
     });
-    function lubylistClick(event,selector){
+    function lubyListClick(event,selector){
         event = event || window.event
         var selected_v = selector.text(),
         selected_option = selector.text().replace(/ /gi, '');
