@@ -5,38 +5,49 @@
 (function($){
 	$.fn.lubySelector = function(option){
         var defaults = { 
-            width : 300,
-            theme : "black",//기본값 블랙, 블랙이 아닐 시 무조건 화이트
-            header : false,//알파벳 헤더 기능
-            searchBar : false//true시 셀렉박스리스트 맨 위에 서치바 생성
+            width: 300,
+            icon: "fa fa-filter",
+            theme: "black",//기본값 블랙, 블랙이 아닐 시 무조건 화이트
+            header: false,//알파벳 헤더 기능
+            searchBar: false,//true시 셀렉박스리스트 맨 위에 서치바 생성
+            callback: $.nothing
         },
-        options = $.extend({}, defaults, option),//유저가 입력한 option + default 값 상속-> 새로운 객체 생성
-        initLS = function(selector){ //실행 함수
-            var existTest = selector.hasClass("lubySelectBody") ? true : false;
-            if(existTest) console.log("lubySelector is already exists");//lubySelector가 존재 하는 지 검사
-            else{
-                makeSelector(selector);
+        d = {},
+        pac = {
+            init: function (option) {
+                return d = $.extend({}, defaults, option), this.each(function () {
+                    if ($(this).hasClass("selectorKey")) console.log("lubySelector is already exists");
+                    else {
+                        var $this = $(this),
+
+                        width = $this.data("width") ? $this.data("width"):d.width,
+                        theme = $this.data("theme") ? $this.data("theme"):d.theme,
+                        header = $this.data("header") ? $this.data("header"):d.header,
+                        searchBar = $this.data("searchBar") ? $this.data("searchBar"):d.searchBar,
+                        $lubySelector = $("<span/>", {
+                            "class": "lubySelector",
+                            header: header,
+                            searchBar: searchBar,
+                            theme: theme
+                        }),
+                        $lubySelector = $this.wrapAll($lubySelector);
+                    }
+                })
             }
         },
-        makeSelector = function(selector){
-            selector.parent().prepend("<div class='lubySelector'></div>");//루비셀렉터 div생성
-            var lubySelector = selector.prev(".lubySelector");
-            lubySelector.text(selector.val());
-            selector.addClass("lubySelectorBody");//모체가 되는 셀렉박스에 중복방지 클래스 생성
-            selector.hide();//모체 셀렉박스는 숨긴다
-            optionEnable(lubySelector);//생성된 루비 셀렉터에 옵션을 적용
-        },
-        optionEnable = function(selector){
-            var themeCheck = (options.theme =="black") ? true : false;//테마 체크 
-            var theme = themeCheck ? { background: "#555555", color: "#ffffff" } : { background: "#ffffff", color: "#444444" };
-            //테마 객체 생성
-            selector.css({
-                "width" : options.width,
-                "background" : theme.background,
-                "color" : theme.color
-            });
+        callbacks = {
+            test: function () {
+                return this.each(function () {
+                    console.log("tested");
+                })
+            }
         }
-        initLS(this);
-        return this;//enable chaining
+        //debug = console.log("object" != typeof option && option ? ($.error('lubySelecto: No such method "' + option + '" for the lubySelector instance'), void 0) : pac.init.apply(this, arguments));
+
+        return callbacks[option] ? 
+        callbacks[option].apply(this, Array.prototype.slice.call(arguments, 1)) : 
+        "object" != typeof option && option ? 
+            ($.error('lubySelecto: No such method "' + option + '" for the lubySelector instance'), void 0) : 
+            pac.init.apply(this, arguments);
     };
 })(jQuery);

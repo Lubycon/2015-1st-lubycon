@@ -344,7 +344,7 @@ var lubySelector = {
         selector.parents(".lubySelector").next(".original_box").val(selected_option);
         selector.siblings("li").removeClass();
         selector.addClass("selected_li");
-    };
+    }
 };
 function hideAnywhere(selector,object,arrow){
     selector.mouseleave(function(){
