@@ -267,7 +267,7 @@ $(function(){
             lubySelector.start(event,$(this),selectList,selectArrow);
         });
         innerList.on("click touchend",function (event){
-            lubyListClick(event,$(event.target));
+            lubySelector.listClick(event,$(event.target));
         });
     });
     function keyUse(lubySelector){
@@ -294,8 +294,8 @@ var lubySelector = {
         else if(dragging){
             return;
         }
-        makeOriginalBox(selector);
-        listClick(event,selector)    
+        this.makeOriginalBox(selector);
+        this.listClick(event,selector)    
     },
     OpenAction : function(selector,list,arrow){
         if(windowWidth > 1024){
@@ -337,7 +337,7 @@ var lubySelector = {
             $(this).prev(".lubySelector").removeClass("open");   
         });
     },
-    lubyListClick : function(event,selector){
+    listClick : function(event,selector){
         var selected_v = selector.text(),
         selected_option = selector.text().replace(/ /gi, '');
         selector.parent().siblings(".lubySelector_selected").text(selected_v);
