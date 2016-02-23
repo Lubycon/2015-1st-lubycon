@@ -1,13 +1,20 @@
-//It started 21th Febuary 2016
-//Developed by DART, Lubycon
-//LubySelector
+/* ===========================================================
+ *
+ *  Name:          lubySelector.min.js
+ *  Updated:       2016-02-23
+ *  Version:       0.1.0
+ *  Created by:    DART, Lubycon.co
+ *
+ *  Copyright (c) 2016 Lubycon.co
+ *
+ * =========================================================== */
 
 (function($){
 	$.fn.lubySelector = function(option){
         var defaults = { 
             width: 150,
             icon: "fa fa-filter",
-            theme: "black",//기본값 블랙, 블랙이 아닐 시 무조건 화이트
+            theme: "black",//white, ghost
             header: false,//알파벳 헤더 기능
             searchBar: false,//true시 셀렉박스리스트 맨 위에 서치바 생성
             callback: $.nothing
@@ -30,9 +37,14 @@
                             header: header,
                             searchBar: searchBar,
                             theme: theme
-                        }).insertAfter(this).css({"width":d.width}).on("click",pac.boxClick),
-                        $label = $("<span/>",{"class": "ls_Label"}).appendTo($wrapper).text(label),
-                        $optionWrap = $("<span/>",{"class": "ls_optionWrap"}).appendTo($wrapper).hide(),
+                        }).insertAfter($this).append($this).css({"width":d.width})
+                        .on("click", pac.boxClick).on("click", pac.trigger)
+                        .on("focusin", pac.boxFocus).on("focusout", pac.boxBlur)
+                        .on("click", ".ls_option", pac.optionClick)
+                        .on("change","select",pac.changeOption),
+
+                        $label = $("<span/>",{"class": "ls_Label"}).insertBefore($this).text(label),
+                        $optionWrap = $("<span/>",{"class": "ls_optionWrap"}).insertBefore($this).hide(),
                         $options = $("<span/>",{"class": "ls_option"}).appendTo($optionWrap);
                         $this.find("option").each(function(option,selector){
                             var $this = $(this);
@@ -64,12 +76,50 @@
             },
             boxClick: function(selector) {
                 var $this = $(this),
-                    options = $this.find(".ls_optionWrap");
-                selector.stopPropagation();//셀렉터가 로딩되었을 때 이벤트 자동발생 방지
+                options = $this.find(".ls_optionWrap");
+                selector.stopPropagation();
                 !$this.hasClass("open")?
                     options.fadeIn(300) && $this.addClass("open"):
                     options.fadeOut(300) && $this.removeClass("open");
                 
+            },
+            trigger: function(selector) {
+                var $this = $(this),
+                selectbox = $this.find("select");
+                selector.stopPropagation();
+                $this.hasClass("open")?
+                    selectbox.show().trigger("focus")&&console.log("original selectbox was enabled"):
+                    selectbox.hide().trigger("blur")&&console.log("original selectbox was disabled");
+                
+            },
+            boxFocus: function(selector) {
+                var $this = $(this);
+                !$this.hasClass("focused") ? $this.addClass("focused"): "";
+            },
+            boxBlur: function(selector) {
+                var $this = $(this);
+                $this.hasClass("focused") ? $this.removeClass("open focused") && $this.find(".ls_optionWrap").fadeOut(300):"";
+            },
+            optionClick: function(selector) {
+                var $this = $(this),
+                selectbox = $this.parent().next("select"),
+                label = $this.parent().prev(".ls_Label"),
+                selectedValue = $this.data("value");
+                selector.stopPropagation();
+                !$this.hasClass("selected")?
+                    $this.addClass("selected").siblings().removeClass("selected") && selectbox.val(selectedValue) && label.text(selectedValue):
+                    ""; 
+            },
+            changeOption: function(selector) {
+                var $this = $(this),
+                text = $this.val(),
+                option = $this.find("option").val(),
+                list = $this.prev(".ls_optionWrap").find(".ls_option"),
+                listValue = list.data("value");
+                list.each(function(){
+                    var $this = $(this);
+                    (listValue == option) ? $this.addClass("selected") : $this.removeClass("selected");//어제 여기까지 짬(문제점 : 전부다 false로 감)
+                })
             }
         },
         start = {
@@ -79,7 +129,6 @@
                 })
             }
         }
-        //debug = console.log("object" != typeof option && option ? ($.error('lubySelecto: No such method "' + option + '" for the lubySelector instance'), void 0) : pac.init.apply(this, arguments));
 
         return start[option] ? 
         start[option].apply(this, Array.prototype.slice.call(arguments, 1)) : 

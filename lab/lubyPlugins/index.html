@@ -9,7 +9,7 @@
 <body>
 	<select id="test">
 		<option>designer1</option>
-		<option selected="selected">engineer1</option>
+		<option>engineer1</option>
 		<option>student1</option>
 		<option>marketer1</option>
 		<option>artist1</option>
@@ -44,8 +44,9 @@
 	<script>
 		$("#test").lubySelector();
 		$("#test2").lubySelector({
-			width: 450
-		})
+			width: 500,
+			theme: "ghost"
+		});
 		$("#test3").selectOrDie();
 	</script>
 </body>
