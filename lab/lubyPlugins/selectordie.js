@@ -67,9 +67,8 @@
                             "data-prefix": f,
                             "data-filter": ""
                         })
-                        .insertAfter(this), h.isTouch() && u.addClass("touch"), v = a("<span/>", {"class": "sod_list_wrapper"})
-                        .appendTo(u), w = a("<span/>", {"class": "sod_list"})
-                        .appendTo(v), a("option, optgroup", b)
+                        .insertAfter(this), h.isTouch() && u.addClass("touch"), v = a("<span/>", {"class": "sod_list_wrapper"}).appendTo(u), 
+                        w = a("<span/>", {"class": "sod_list"}).appendTo(v), a("option, optgroup", b)
                         .each(function (b) {
                             var c = a(this);
                             o && !a.trim(c.text()) ? c.remove() : 0 === b && i && !r ? h.populateSoD(c, w, u, !0) : h.populateSoD(c, w, u, !1)

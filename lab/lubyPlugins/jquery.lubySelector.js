@@ -16,7 +16,7 @@
         pac = {
             init: function (option) {
                 return d = $.extend({}, defaults, option), this.each(function () {
-                    if ($(this).hasClass("selectorKey")) console.log("lubySelector is already exists");
+                    if ($(this).hasClass("selectorKey")) $.error("lubySelector is already exists");
                     else {
                         var $this = $(this), $label, $options,
                         width = $this.data("width") ? $this.data("width") : d.width,
@@ -84,7 +84,7 @@
         return start[option] ? 
         start[option].apply(this, Array.prototype.slice.call(arguments, 1)) : 
         "object" != typeof option && option ? 
-            ($.error('lubySelecto: No such method "' + option + '" for the lubySelector instance'), void 0) : 
+            ($.error('No such method "' + option + '" for the lubySelector instance'), void 0) : 
             pac.init.apply(this, arguments);
     };
 })(jQuery);
