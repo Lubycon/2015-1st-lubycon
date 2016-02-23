@@ -36,7 +36,6 @@
                 return d = a.extend({}, c, b), this.each(function () {
                     if (a(this).parent().hasClass("sod_select")) console.log("already exists");
                     else {
-                        console.log("success(select or die) : " + $(this).attr("id"));
                         var u, v, w, b = a(this),
                             c = b.data("custom-id") ? b.data("custom-id") : d.customID,
                             e = b.data("custom-class") ? b.data("custom-class") : d.customClass,
@@ -114,6 +113,7 @@
                     html: s,
                     "data-label": s
                 }).appendTo(c)
+                console.log(k);
             },
             focusSod: function () {
                 var b = a(this);
@@ -223,8 +223,8 @@
                             (d.find(".sod_list:first .sod_option[data-value='" + b + "']").removeClass("disabled"), d.find(".sod_list:first .sod_option[data-label='" + b + "']").nextUntil(":not(.groupchild)").removeClass("disabled"), a("option[value='" + b + "'], optgroup[label='" + b + "']", this).prop("disabled", !1)) : d.hasClass("sod_select") && (d.removeClass("disabled"), c.prop("disabled", !1)) : console.log("Select or Die: There's no SoD to enable")
                 })
             }
-        },
-        debug = console.log("object" != typeof b && b ? (a.error('Select or Die: Oh no! No such method "' + b + '" for the SoD instance'), void 0) : h.initSoD.apply(this, arguments));
+        }
+        
         return i[b] ? 
         i[b].apply(this, Array.prototype.slice.call(arguments, 1)) : 
         "object" != typeof b && b ? 

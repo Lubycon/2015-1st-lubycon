@@ -8,41 +8,44 @@
 </head>
 <body>
 	<select id="test">
-		<option>aaaaaaa</option>
-		<option>bbbbbbb</option>
-		<option>ccccccc</option>
-		<option>ddddddd</option>
-		<option>eeeeeee</option>
-		<option>fffffff</option>
+		<option>designer1</option>
+		<option selected="selected">engineer1</option>
+		<option>student1</option>
+		<option>marketer1</option>
+		<option>artist1</option>
+		<option>creator1</option>
 	</select>
 	<select id="test2">
-		<option>aaaaaaa</option>
-		<option>bbbbbbb</option>
-		<option>ccccccc</option>
-		<option>ddddddd</option>
-		<option>eeeeeee</option>
-		<option>fffffff</option>
+		<option>designer2</option>
+		<option>engineer2</option>
+		<option>student2</option>
+		<option>marketer2</option>
+		<option>artist2</option>
+		<option>creator2</option>
 	</select>
 	<select id="test3">
-		<option>aaaaaaa</option>
-		<option>bbbbbbb</option>
-		<option>ccccccc</option>
-		<option>ddddddd</option>
-		<option>eeeeeee</option>
-		<option>fffffff</option>
+		<option>designer3</option>
+		<option>engineer3</option>
+		<option>student3</option>
+		<option>marketer3</option>
+		<option>artist3</option>
+		<option>creator3</option>
 	</select>
 	<select id="test4">
-		<option>aaaaaaa</option>
-		<option>bbbbbbb</option>
-		<option>ccccccc</option>
-		<option>ddddddd</option>
-		<option>eeeeeee</option>
-		<option>fffffff</option>
+		<option>designer4</option>
+		<option>engineer4</option>
+		<option>student4</option>
+		<option>marketer4</option>
+		<option>artist4</option>
+		<option>creator4</option>
 	</select>
 	<script type="text/javascript" src="selectordie.js"></script>
 	<script type="text/javascript" src="jquery.lubySelector.js"></script>
 	<script>
 		$("#test").lubySelector();
+		$("#test2").lubySelector({
+			width: 450
+		})
 		$("#test3").selectOrDie();
 	</script>
 </body>
