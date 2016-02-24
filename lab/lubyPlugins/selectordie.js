@@ -53,7 +53,8 @@
                             r = "",
                             s = "",
                             t = 0;
-                        f && (r = '<span class="sod_prefix">' + f + "</span> "), s += g && !f ? '<span class="sod_label sod_placeholder">' + g + "</span>" : '<span class="sod_label">' + r + "</span>", u = a("<span/>", {
+                        f && (r = '<span class="sod_prefix">' + f + "</span> "), s += g && !f ? '<span class="sod_label sod_placeholder">' + g + "</span>" : '<span class="sod_label">' + r + "</span>", 
+                        u = a("<span/>", {
                             id: c,
                             "class": "sod_select " + e + q,
                             title: p,
@@ -76,10 +77,12 @@
                         m && (v.show(), a(".sod_option:lt(" + m + ")", w).each(function () {
                             t += a(this).outerHeight()
                         }), 
-                        v.removeAttr("style"), w.css({
+                        v.removeAttr("style"), 
+                        w.css({
                             "max-height": t
                         })), 
-                        b.appendTo(u), u.on("focusin", h.focusSod).on("click", h.triggerSod).on("click", ".sod_option", h.optionClick).on("mousemove", ".sod_option", h.optionHover).on("keydown", h.keyboardUse), b.on("change", h.selectChange), a(document).on("click", "label[for='" + b.attr("id") + "']", function (a) {
+                        b.appendTo(u), 
+                        u.on("focusin", h.focusSod).on("click", h.triggerSod).on("click", ".sod_option", h.optionClick).on("mousemove", ".sod_option", h.optionHover).on("keydown", h.keyboardUse), b.on("change", h.selectChange), a(document).on("click", "label[for='" + b.attr("id") + "']", function (a) {
                             a.preventDefault(), u.focus()
                         })
                     }
@@ -112,13 +115,16 @@
                     html: s,
                     "data-label": s
                 }).appendTo(c)
-                console.log(k);
             },
             focusSod: function () {
                 var b = a(this);
-                b.hasClass("disabled") ? h.blurSod(b) : (h.blurSod(a(".sod_select.focus").not(b)), b.addClass("focus"), a("html").on("click.sodBlur", function () {
-                    h.blurSod(b)
-                }))
+                b.hasClass("disabled") ? h.blurSod(b) : (h.blurSod(a(".sod_select.focus").not(b)), 
+                    b.addClass("focus"), 
+                    a("html").on("click.sodBlur", function () {
+                        h.blurSod(b);
+                        console.log("sodBlur2");
+                    })
+                )
             },
             triggerSod: function (b) {
                 b.stopPropagation();
@@ -169,6 +175,7 @@
                         f = b.find(".active"),
                         h = b.find(".selected"),
                         i = !1;
+                    console.log("blurSod");
                     clearTimeout(g), e && !f.hasClass("selected") ? (f.click(), i = !0) : f.hasClass("selected") || (f.removeClass("active"), h.addClass("active")), !i && d ? b.find(".sod_label").get(0).lastChild.nodeValue = h.text() : i || (b.find(".sod_label").get(0).lastChild.nodeValue = c), e = !1, b.removeClass("open focus"), b.blur(), a("html").off(".sodBlur")
                 }
             },

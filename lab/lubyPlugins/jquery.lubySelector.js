@@ -13,6 +13,7 @@
 	$.fn.lubySelector = function(option){
         var defaults = { 
             width: 150,
+            maxHeight: 250,
             icon: "fa fa-filter",
             theme: "black",//white, ghost
             header: false,//알파벳 헤더 기능
@@ -38,22 +39,23 @@
                             searchBar: searchBar,
                             theme: theme
                         }).insertAfter($this).append($this).css({"width":d.width})
-                        .on("click", pac.boxClick).on("click", pac.trigger)
-                        .on("focusin", pac.boxFocus).on("focusout", pac.boxBlur)
+                        .on("click", pac.boxClick).on("focusin", pac.boxFocus)
                         .on("click", ".ls_option", pac.optionClick)
                         .on("change","select",pac.changeOption),
 
+                        $icon = $("<i/>",{"class": "global_icon " + d.icon}).insertBefore($this),
                         $label = $("<span/>",{"class": "ls_Label"}).insertBefore($this).text(label),
-                        $optionWrap = $("<span/>",{"class": "ls_optionWrap"}).insertBefore($this).hide(),
-                        $options = $("<span/>",{"class": "ls_option"}).appendTo($optionWrap);
+                        $arrow = $("<i/>",{"class": "ls_arrow fa fa-caret-down"}).insertBefore($this),
+                        $optionWrap = $("<span/>",{"class": "ls_optionWrap"}).insertBefore($this).css({"max-height":d.maxHeight}).hide(),
+                        $options = $("<span/>",{"class": "ls_option"}).appendTo($optionWrap).hide();
                         $this.find("option").each(function(option,selector){
                             var $this = $(this);
-                            pac.dataIn(option,d,$this,$options);
+                            pac.dataUpdate(option,d,$this,$options);
                         });
                     }
                 })
             },
-            dataIn: function(option,d,selector,list) {
+            dataUpdate: function(option,d,selector,list) {
                 var $this = selector,//options in selectbox
                 $selectbox = $this.parent,
                 $options = list,
@@ -75,40 +77,54 @@
                 }).appendTo($optionWrap)) : "";
             },
             boxClick: function(selector) {
-                var $this = $(this),
-                options = $this.find(".ls_optionWrap");
                 selector.stopPropagation();
+                var $this = $(this),
+                $arrow = $this.find(".ls_arrow"),
+                $options = $this.find(".ls_optionWrap"),
+                $selectbox = $this.find("select");
                 !$this.hasClass("open")?
-                    options.fadeIn(300) && $this.addClass("open"):
-                    options.fadeOut(300) && $this.removeClass("open");
-                
+                    $options.fadeIn(300) && $this.addClass("open") && $arrow.attr("class","ls_arrow fa fa-caret-up") && $selectbox.show().trigger("focus") :
+                    $options.fadeOut(300) && $this.removeClass("open") && $arrow.attr("class","ls_arrow fa fa-caret-down") && $selectbox.hide().trigger("blur");
+                $this.focusin();
+                console.log("boxClick");
             },
-            trigger: function(selector) {
-                var $this = $(this),
-                selectbox = $this.find("select");
-                selector.stopPropagation();
-                $this.hasClass("open")?
-                    selectbox.show().trigger("focus")&&console.log("original selectbox was enabled"):
-                    selectbox.hide().trigger("blur")&&console.log("original selectbox was disabled");
-                
-            },
-            boxFocus: function(selector) {
+            boxFocus: function() {
                 var $this = $(this);
-                !$this.hasClass("focused") ? $this.addClass("focused"): "";
+                $this.hasClass("disabled") ? pac.boxBlur($this) : 
+                (pac.boxBlur($(".lubySelector.focused").not($this)), 
+                    $this.addClass("focused"), 
+                    $("html").on("click.boxBlur", function () {
+                        pac.boxBlur($this);
+                        console.log("boxFocus_inner");
+                    })
+                );
+                console.log("boxFocus");
             },
             boxBlur: function(selector) {
-                var $this = $(this);
-                $this.hasClass("focused") ? $this.removeClass("open focused") && $this.find(".ls_optionWrap").fadeOut(300):"";
+                if ($("body").find(selector).length!=0) {
+                    var $this = selector,
+                    $optionWrap = $this.find(".ls_optionWrap");
+                    $this.hasClass("focused") ? ($this.removeClass("open focused")) && ($optionWrap.fadeOut(300)) : "";
+                    console.log("boxBlur");
+                }
             },
             optionClick: function(selector) {
                 var $this = $(this),
-                selectbox = $this.parent().next("select"),
-                label = $this.parent().prev(".ls_Label"),
+                $optionWrap = $this.parent(),
+                $selectbox = $this.parent().next("select"),
+                $label = $this.parent().prev(".ls_Label"),
+                $wrap = $optionWrap.parent(),
                 selectedValue = $this.data("value");
+
                 selector.stopPropagation();
                 !$this.hasClass("selected")?
-                    $this.addClass("selected").siblings().removeClass("selected") && selectbox.val(selectedValue) && label.text(selectedValue):
-                    ""; 
+                    $this.addClass("selected").siblings().removeClass("selected") 
+                    && $label.text(selectedValue) 
+                    && $selectbox.val(selectedValue)
+                    && $wrap.removeClass("open")
+                    && $optionWrap.fadeOut(300) :
+                    "";
+                console.log("optionClick"); console.log("select value is '" + $selectbox.val() + "'"); 
             },
             changeOption: function(selector) {
                 var $this = $(this),
@@ -119,7 +135,8 @@
                 list.each(function(){
                     var $this = $(this);
                     (listValue == option) ? $this.addClass("selected") : $this.removeClass("selected");//어제 여기까지 짬(문제점 : 전부다 false로 감)
-                })
+                });
+                console.log("changeOption");
             }
         },
         start = {
