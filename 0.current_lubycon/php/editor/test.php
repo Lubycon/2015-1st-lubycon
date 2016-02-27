@@ -1,5 +1,8 @@
 <?php
+    //require_once '';
+
     echo "<br/>-------------zip file upload--------------<br/><br/>";
+    $member_info = unserialize($_COOKIE['login']);
     $set_date = date("YmdHis");
     $con_cate = $_POST['contents_cate_name'];
     $uploaddir = '../../../contents_data/' . $con_cate . "/" . $set_date . "/" ;
@@ -86,7 +89,11 @@
             echo $sel_tag[$j] . " ";
         };
     };
-    
+
+    echo "<br/><br/>-------------user information tags--------------<br/>";
+
+    echo "<br/> ".$member_info[0]."+".$member_info[1]." <br/>";
+
     echo "<br/><br/>-------------user seleced tags--------------<br/>";
     
     echo "<br/><br/>-------------contents description--------------<br/>";

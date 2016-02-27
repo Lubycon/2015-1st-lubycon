@@ -1,19 +1,20 @@
-<?php
-session_start();
-    if(isset($_COOKIE)){
-        if(isset($_COOKIE['login'])){
-            $info = unserialize($_COOKIE['login']);
-            setcookie('login', serialize($info), time()+5);
-        }else if(!isset($_COOKIE['login'])){
-            session_destroy();
-        }
-    }
-?>
 <!DOCTYPE html>
 
 <html>
 
 <head>
+<?php
+require_once './php/session/session_class.php';
+$session = new Session();
+    if(isset($_COOKIE)){
+        if(isset($_COOKIE['login'])){
+            $info = unserialize($_COOKIE['login']);
+            setcookie('login', serialize($info), time()+900);
+        }else if(!isset($_COOKIE['login'])){
+            $session->remove_session('id');
+        }
+    }
+?>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta name="subject" content="Lubycon" />
