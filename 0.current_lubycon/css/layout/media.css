@@ -215,26 +215,60 @@
                 background: #282828;
                 box-sizing: border-box;
                 -webkit-box-sizing: border-box;
-                -moz-box=sizing: border-box;
+                -moz-box-sizing: border-box;
             }
-            #mb-user_pic {
-                width: 50px;
-                height: 50px;
-                border-radius: 50%;
-                overflow: hidden;
-                display: inline-block;
+            #mb-signin {
+                text-align: center;
             }
-                #mb-user_pic img {
-                    width: 100%;
+                #mb-signin a p{
+                    color: #ffffff;
+                    font-size: 20px;
+                    cursor: pointer;
+                    text-align: center;
+                    display: inline-block;
                 }
-            #mb-user_name {
-                display: inline-block;
-                line-height: 50px;
-                margin-left: 18px;
-                color: #ffffff;
-                font-size: 23px;
-                vertical-align: top;
+                #mb-signin a p i{
+                    margin-right: 10px;
+                }
+            #mb-after_signin{
+                display: none;
             }
+                #mb-user_pic {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    display: inline-block;
+                }
+                    #mb-user_pic img {
+                        width: 100%;
+                    }
+                #mb-user_info{
+                    width: 168px;
+                    display: inline-block;
+                    margin-left: 18px;
+                    position: relative;
+                    vertical-align: top;
+                }
+                    #mb-user_name {
+                        display: inline-block;
+                        width: 100%;
+                        line-height: 30px;
+                        color: #ffffff;
+                        font-size: 23px;
+                        vertical-align: top;
+                    }
+                    #mb-user_location{
+                        display: inline-block;
+                        width: 100%;
+                        font-size: 14px;
+                        color: #dddddd;
+                        font-weight: 200;
+                    }
+                    #mb-user_location i{
+                        color: #ffffff;
+                        margin-right: 5px;
+                    }
         #main_header h1{ 
             left: 50%;
             margin-left: -50px;
@@ -298,7 +332,7 @@
         }
              .mb-lubySelector .lubySelector_selected{
                 position: absolute;
-                width: 114px;
+                width: 115px;
                 margin: 0px;
                 top: 8px;
                 right: 50%;
@@ -400,17 +434,25 @@
                 .creator_desc .name{
                     font-size: 14px;
                 }
+
+
+        #bestCreator{
+
+        }
+            #bestCreator .creator_pic{
+                width: 80px;
+                height: 80px;
+            }
+            #bestCreator .creator_name a{
+                color: #fafafa;
+                font-size: 25px;
+            }
+            #bestCreator .usercontent{
+                width: 30%;
+            }
         .creators_card_in{
             display: block;
             margin: 0px;
-        }
-        #best_creator_wrap{
-            width: 100%;
-            max-width: 800px;
-            margin: 0px auto;
-            border-bottom: 1px solid #eeeeee;
-            border-radius: 0px;
-
         }
         .creators_card {
             width: 100%;
@@ -461,10 +503,39 @@
     #floating_bt{
         display: block;
         position: relative;
-        background: #aaaaaa;
+        background: #222222;
         width: 100%;
-        height: 200px;
+        padding: 30px;
     }
+        #floating_bt #bookmark_bt{
+            width: 80px;
+            height: 80px;
+            line-height: 80px;
+        }
+            #floating_bt #bookmark_inner_bt{
+                font-size: 45px;
+                margin: 0px 10px;
+            }
+        #floating_bt #like_bt{
+            width: 80px;
+            height: 80px;
+            line-height: 80px;
+        }
+            #floating_bt #like_bt i{
+                font-size: 45px;
+                margin: 0px 10px;
+            }
+    #cc_total_wrap{
+
+    }
+        #cc_title{
+            background: #222222;
+        }
+        #cc_wrap{
+            background: #222222;
+            margin: 0;
+            border-radius: 0;
+        }
     #contents_subject {
         display: block;
     }
@@ -529,7 +600,7 @@
             height: 70px;
         }
         #comment_box #comment_bt {
-            width: 88%;
+            width: 80%;
             height: 45px;
             display: inline-block;
             padding: 0px 10px;
@@ -804,7 +875,7 @@
                 max-height: 300px;
              }
     .con_wrap{
-        background: #fafafa;
+        
     }
     .con_main {
         margin-top: 0px;
@@ -864,6 +935,22 @@
                 .creator_desc .name{
                     font-size: 14px;
                 }
+    #bestCreator{
+
+    }
+        #bestCreator .creator_pic{
+            width: 100px;
+            height: 100px;
+        }
+        #bestCreator .creator_name a{
+            font-size: 30px;
+        }
+        #bestCreator .usercontent{
+            width: auto;
+        }
+        #bestCreator .creator_bot_info{
+            border-top: 1px solid #333333;
+        }
     .creator_card_in{
         display: inline-block;
         margin: 10px;
@@ -900,7 +987,7 @@
             font-size: 16px;
         }
     .creator_bot_info {
-        border-top: 1px solid #aaaaaa;
+        border-top: 1px solid #dddddd;
         margin: 0px auto;
         margin-top: 18px;
         padding: 10px;
@@ -919,6 +1006,32 @@
         z-index: 1;
         overflow: hidden;
     }
+        #floating_bt #bookmark_bt{
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+        }
+            #floating_bt #bookmark_inner_bt{
+                font-size: 26px;
+                margin-left: 4px;
+            }
+        #floating_bt #like_bt{
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+        }
+        #floating_bt #like_bt i{
+            font-size: 20px;
+        }
+    #cc_total_wrap{
+        margin-top: 20px;
+    }
+        #cc_wrap{
+            background: #282828;
+            margin: 10px;
+            border-radius: 5px;
+            box-shadow: inset -1px 2px 5px 0px rgba(0,0,0,0.3);
+        }
     #contents_subject {
         display: inline-block;
     }
@@ -981,7 +1094,7 @@
             width: 70px;
             height: 33px;
             display: inline-block;
-            margin: 0px 0px 2px 7px;
+            margin: 0px 0px 5px 7px;
         }
     #user_view_aside #myinfo_main{
         margin-top: 30px;
@@ -997,11 +1110,6 @@
             margin-top: 20px;
             font-size: 26px;
         }
-    #best_creator_wrap{
-        width: 806px;
-        margin: 20px auto;
-        margin-top: 0;
-    }
     #my_page_bt{
         width: 220px;
         height: 45px;
@@ -1012,6 +1120,10 @@
         font-weight: 200;
         color: #ffffff;
     }
+        #my_page_bt:hover{
+            border: 1px solid #87ead1;
+            color: #87ead1;
+        }
     .tab_item table{
         min-width: 1200px;
     }

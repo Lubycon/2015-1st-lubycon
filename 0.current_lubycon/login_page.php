@@ -42,7 +42,7 @@
             <button type="submit" id="login_lubycon" class="animate_width"><i class="fa fa-unlock-alt"></i></button><!--submit bt-->
         </form><!--end login_input form-->
         <div id="login_submit">
-            <p id="loginWith_title">Log in with</p>
+            <p id="loginWith_title">Login with</p>
             <button id="login_facebook"><i class="fa fa-facebook"></i><span>Facebook</span></button>
             <button id="login_google"><i class="fa fa-google-plus"></i><span>Google+</span></button>
         </div>     <!-- end login_submit div -->

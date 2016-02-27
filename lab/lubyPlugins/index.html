@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+	<link href="common.css" rel="stylesheet" type="text/css" />  <!-- common css -->
+	<script type="text/javascript" src="jquery-1.11.3.min.js"></script> <!-- jquery library -->
+	<title>Document</title>
+</head>
+<body>
+	<select id="test">
+		<option>a1</option>
+		<option>b1</option>
+		<option>c1</option>
+		<option>d1</option>
+		<option>e1</option>
+		<option>f1</option>
+		<option>g1</option>
+		<option>h1</option>
+		<option>i1</option>
+		<option>j1</option>
+		<option>k1</option>
+		<option>l1</option>
+		<option>m1</option>
+		<option>n1</option>
+		<option>o1</option>
+		<option>p1</option>
+		<option>q1</option>
+		<option>r1</option>
+		<option>s1</option>
+		<option>t1</option>
+		<option>u1</option>
+		<option>v1</option>
+		<option>w1</option>
+		<option>x1</option>
+		<option>y1</option>
+		<option>z1</option>
+	</select>
+	<select id="test2">
+		<option>designer2</option>
+		<option>engineer2</option>
+		<option>student2</option>
+		<option>marketer2</option>
+		<option>artist2</option>
+		<option>creator2</option>
+	</select>
+	<select id="test3">
+		<option>designer3</option>
+		<option>engineer3</option>
+		<option>student3</option>
+		<option>marketer3</option>
+		<option>artist3</option>
+		<option>creator3</option>
+	</select>
+	<select id="test4">
+		<option>designer4</option>
+		<option>engineer4</option>
+		<option>student4</option>
+		<option>marketer4</option>
+		<option>artist4</option>
+		<option>creator4</option>
+	</select>
+	<script type="text/javascript" src="selectordie.js"></script>
+	<script type="text/javascript" src="jquery.lubySelector.js"></script>
+	<script>
+		$("#test").lubySelector();
+		$("#test2").lubySelector({
+			width: 500,
+			theme: "ghost",
+			icon: "fa fa-bars"
+		});
+		$("#test3").selectOrDie();
+	</script>
+</body>
+</html>

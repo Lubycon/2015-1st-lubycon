@@ -28,13 +28,6 @@ switch($current_url){
     default : $current_url = "artwork"; $contents_name = $artwork_subject;$contents_author = $artwork_author; break;
 };
 ?>
-
-<div class="main_figure_wrap hidden-mb-b">
-    <figure id="main_figure">
-        <div class="dark_overlay_small"></div>
-        <h2>CONTENTS</h2>
-    </figure>   <!-- end main_figure -->
-</div>
 <link href="css/contents_view.css" rel="stylesheet" type="text/css" /><!-- contents view css -->
 <section id="contents">
     <section id="navsel" class="hidden-mb-b">
@@ -119,6 +112,29 @@ switch($current_url){
                         </div>
                         <div id="like_bt" class="like_bt lubyAlert_bt" data="like">
                             <i class="fa fa-heart"></i>
+                        </div>
+                    </div>
+                    <div id="cc_total_wrap" class="visible-mb">
+                        <div id="cc_wrap">
+                            <ul id="cc_wrap_inner">
+                                <a href="#" id="cc_desc_link" target="_brank">
+                                <li class="cc_icon" id="cc_main">
+                                    <img src="./ch/img/creative_commons/png/cc_w.png" />
+                                </li><!--cc icon-->
+                                <li class="cc_icon" id="cc_by">
+                                    <img src="./ch/img/creative_commons/png/by_w.png" />
+                                </li><!-- default icon-->
+                                <li class="cc_icon" id="cc_nc">
+                                    <img src="./ch/img/creative_commons/png/nc_w.png" />
+                                </li><!--non commercial-->
+                                <li class="cc_icon" id="cc_nd">
+                                    <img src="./ch/img/creative_commons/png/nd_w.png" />
+                                </li><!--non derivation-->
+                                <li class="cc_icon" id="cc_share">
+                                    <img src="./ch/img/creative_commons/png/share_w.png" />
+                                </li><!--non derivation-->
+                            </a>
+                            </ul>                       
                         </div>
                     </div>
                     

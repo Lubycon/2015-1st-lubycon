@@ -1,6 +1,5 @@
 
-$(function () //account setting script
-{
+$(function (){ //account setting script
     $('#change_pass').click(function () //change pass remove attr
     {
         if($('#now_pass_id').attr('disabled'))
@@ -27,12 +26,11 @@ $(function () //account setting script
         if (i < 4) {
             var lang_div = '<div id="lang_clone' + i + '"><div id="lang_option_' + i + '" class="language_option"><select class="basic_filter" name="lang_ability[]"><option value="Beginer">Beginer</option><option value="Advanced">Advanced</option><option value="Fluent">Fluent</option><option value="Native">Native</option></select></div><input id="lang_input_' + i + '" class="language_text" name="language[]" type="text"></div>';
             $("#clone_div").append(lang_div);
-            $(".basic_filter").selectOrDie
-                ({
-                    customClass: "custom",
-                    customID: "custom",
-                    size: 5
-                });
+            $(".basic_filter").selectOrDie({
+                customClass: "custom",
+                customID: "custom",
+                size: 5
+            });
             $("#lang_minus_id").show();
             i++; //int plus
 
@@ -80,19 +78,19 @@ $(document).on("click touchend", "#history_minus", function (event) //clone lang
     }
     history_stack--;
 });
-$(document).on("change", ".history_data select", function (event)
+$(".lubySelector li").on("click", function ()
 {
-    eventHandler(event, $(this));
-
+    //console.log($(this).parents('.lubySelector').next().val());
     var history_array = [];
+
 
     $('.history_cell .history_data').each(function (index) {
         history_array.push(
             {
                 'index':  index,
-                'year': $(this).find('.history_year').val(),
-                'month':$(this).find('.history_month').val(),
-                'kind': $(this).find('.history_kind').val(),
+                'year':  $(this).children('select:nth-of-type(1)').val(),
+                'month': $(this).children('select:nth-of-type(2)').val(),
+                'kind':  $(this).children('select:nth-of-type(3)').val(),
                 'text': $(this).find('.history_text').val()
             });
         //console.log(history_array[index]);
@@ -114,13 +112,20 @@ $(document).on("change", ".history_data select", function (event)
     }
 
     $('.history_cell .history_data').each(function (index) {
-        console.log(aftersort[index].year)
-        //console.log($(this).find('.history_year').val());
-        //$(this).find('.history_year option').attr("selected","disable");
-        $(this).find('.history_year').val(aftersort[index].year).attr('selected', 'selected');
-        $(this).find('.history_month').val(aftersort[index].month).attr('selected', 'selected');
-        $(this).find('.history_kind').val(aftersort[index].kind).attr('selected', 'selected');
-        $(this).find('.history_text').val(aftersort[index].text);
+        $(this).children('select:nth-of-type(1)').val(aftersort[index].year); //hidden selecter value change
+        $(this).find('.history_year_changer').text(aftersort[index].year); //luby ui lubySelector_selected.span text change
+
+        $(this).children('select:nth-of-type(2)').val(aftersort[index].month);
+        $(this).find('.history_month_changer').text(aftersort[index].month);
+
+        $(this).children('select:nth-of-type(3)').val(aftersort[index].kind);
+        $(this).find('.history_kind_changer').text(aftersort[index].kind);
+
+        $(this).children('.history_text').val(aftersort[index].text);
+        //$(this).find('.history_year').val(aftersort[index].year).attr('selected', 'selected');
+        //$(this).find('.history_month').val(aftersort[index].month).attr('selected', 'selected');
+        //$(this).find('.history_kind').val(aftersort[index].kind).attr('selected', 'selected');
+        //$(this).find('.history_text').val(aftersort[index].text);
     });
 });
 ////////////////////////////delete button interaction start

@@ -10,6 +10,11 @@
     max-width: 300px;
 }
 
+.lubySelector{
+    float: left;
+    
+}
+
 #confirm_alert {
     width: 400px;
     height: 200px;

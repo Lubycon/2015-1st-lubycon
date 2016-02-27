@@ -11,6 +11,9 @@
     display:none;
     cursor:pointer;
 }
+#navsel{
+    margin-top: 50px;
+}
 .nav_guide{
     height: auto;
 }
@@ -22,13 +25,11 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
 }
-
 .contents_view{
     position: relative;
     width:100%;
     top:0px;
 }
-
     #contents_title{
         display: block;
         text-align: left;
@@ -37,7 +38,6 @@
         letter-spacing:1px;
         font-weight: 600;
     }
-
     #contents_category{
         color: #eeeeee;
         font-weight: 200;
@@ -58,12 +58,11 @@
 }
 
     #floating_bt{
-        /*empty*/
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
     }
-        .contents_view #bookmark_bt{
-            width:40px;
-            height:40px;
-            line-height: 39px;
+        #floating_bt #bookmark_bt{
             top:0px;
             border: none;
             display: inline-block;
@@ -71,19 +70,13 @@
             vertical-align: top;
             z-index: 1;
         }
-            .contents_view #bookmark_bt #bookmark_inner_bt{
-                font-size: 26px;
-                margin-left: 4px;
+            #floating_bt #bookmark_inner_bt{
                 vertical-align:middle;
                 color:#cccccc;
                 cursor:pointer;
             }
 
-        #like_bt{
-            width:40px;
-            height:40px;
-            line-height:40px;
-            
+        #floating_bt #like_bt{
             border:none;
             display:inline-block;
             border-radius: 0px !important;
@@ -95,18 +88,17 @@
 
         }
             #like_bt i {
-                font-size:20px;
                 vertical-align:middle;
             }
 
     .contents_view .contents_img{
         width: 100%;
         background: #aaaaaa;
-        margin-bottom: -4px;
     }
         .inner_img{
             width: 100%;
             max-width: 1450px;
+            margin-bottom: -4px;
         }
     #webgl_viewer{
         width: 100%;
@@ -280,7 +272,6 @@
                 }
     #cc_total_wrap{
         width: 100%;
-        margin-top: 20px;
     }
         #cc_title{
             font-size:16px;
@@ -296,12 +287,8 @@
 
             }
         #cc_wrap {
-            background: #282828;
-            margin: 10px;
             padding:5px;
             text-align: center;
-            border-radius: 5px;
-            box-shadow: inset -1px 2px 5px 0px rgba(0,0,0,0.3);
             box-sizing: border-box;
             -webkit-box-sizing: border-box;
             -moz-box-sizing: border-box;

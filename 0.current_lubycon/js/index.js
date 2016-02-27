@@ -1,18 +1,6 @@
 ﻿/*----------------------------common js----------------------------*/
-var windowWidth = $(window).width();
-/////////////////////////////////////////////////////////
-//      mobile browser address window disable start
-/////////////////////////////////////////////////////////
-window.addEventListener("load",function() {
-    // Set a timeout...
-    setTimeout(function(){ // It's not working now
-        // Hide the address bar!
-        window.scrollTo(0, 1);
-    }, 0);
-});
-/////////////////////////////////////////////////////////
-//      mobile browser address window disable start
-/////////////////////////////////////////////////////////
+var windowWidth = $(window).width(),
+    windowHeight = $(window).height();
 /////////////////////////////////////////////////////////
 //      dragging sensor start
 /////////////////////////////////////////////////////////
@@ -27,6 +15,27 @@ $(function(){
 });
 /////////////////////////////////////////////////////////
 //      dragging sensor end
+/////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+//      loading icon start
+/////////////////////////////////////////////////////////
+$(function(){
+    var $loading = $('#loading_icon').hide();
+    $("#loading_icon").css
+    ({
+        "margin-top": ((windowHeight / 2) - ($("loading_icon").height()) - 50).toString() + "px"
+    });
+    $(document)
+      .ajaxStart(function() {
+        $loading.show();
+      })
+      .ajaxStop(function() {
+        $loading.hide();
+      });
+});
+
+/////////////////////////////////////////////////////////
+//      loading icon end
 /////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////
 //      event handler start
@@ -202,9 +211,9 @@ $(function () { //search box click value reset start
     var search_bt = $('#main_search_btn');
     var search_bt2 = $('#sub_search_btn');
 
-    search_box.on('keypress', function(e) {
+    search_box.on('keypress', function(event) {
         console.log("keypress_true");
-        if(e.which == 13) {// 13 == enter key@ascii
+        if(event.which == 13) {// 13 == enter key@ascii
             console.log("if true");
             search_bt.click();
         };//if end
@@ -292,24 +301,7 @@ $(function(){
 /////////////////////////////////////////////////////////
 //      main index contents viewmore end(mobile)
 /////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////
-//      create account checkbox event start
-/////////////////////////////////////////////////////////
-/*$(function(){
-     $(document).on("click", function(e) {
-        if($(".check_box").is(":checked") == true){
-
-        }else{
-
-        };
-    });
-});*/
-
-/////////////////////////////////////////////////////////
-//      create account checkbox event end
-/////////////////////////////////////////////////////////
 /*----------------------------common js----------------------------*/
-
 /*----------------------------index page slider----------------------------*/
 /////////////////////////////////////////////////////////
 //      index page slide switch start
@@ -594,98 +586,6 @@ $(function () {
 /////////////////////////////////////////////////////////
 
 /*----------------------------personal page----------------------------*/
-/*----------------------------about us----------------------------*/
-/////////////////////////////////////////////////////////
-//      about us animation event start
-/////////////////////////////////////////////////////////
-$(window).load(function(){
-    $("#descript_lubycon").addClass("fadeIn animated");
-    
-    $(function(){
-        $(document).scroll(function () { //account setting move banner
-            if($(window).scrollTop()>=360){
-               callIcon1();
-               setTimeout("callIcon2()",250);
-               setTimeout("callIcon3()",500);
-            }//if end
-            if($(window).scrollTop()>=1156){
-                /////////animation
-                callTeam1();
-                setTimeout("callTeam2()",150);
-                setTimeout("callTeam3()",300);
-                setTimeout("callTeam4()",450);
-                setTimeout("callTeam5()",600);
-            }
-            if($(window).scrollTop()>=1993){
-                callContact();
-            }
-        });    
-    });
-});
-///////////animation for Icon methods start
-function callIcon1(){
-    $("#icon1").addClass("fadeIn animated").stop().animate({opacity:100},200);
-};
-function callIcon2(){
-    $("#icon2").addClass("fadeIn animated").stop().animate({opacity:100},200);
-};
-function callIcon3(){
-    $("#icon3").addClass("fadeIn animated").stop().animate({opacity:100},200);
-};
-///////////animation for Icon methods end
-///////////animation for Employees methods start
-function callTeam1(){
-    $("#ceo").addClass("fadeIn animated").stop().animate({opacity:100},200);
-};
-function callTeam2(){
-    $("#dart").addClass("fadeIn animated").stop().animate({opacity:100},200);
-}
-function callTeam3(){
-    $("#ssaru").addClass("fadeIn animated").stop().animate({opacity:100},200);
-}
-function callTeam4(){
-    $("#simon").addClass("fadeIn animated").stop().animate({opacity:100},200);
-}
-function callTeam5(){
-    $("#zepot").addClass("fadeIn animated").stop().animate({opacity:100},200);
-}
-///////////animation for Employees methods end
-///////////animation for Contact Us start
-function callContact(){
-    $("#contact_body").addClass("fadeIn animated").stop().animate({opacity:100},200);
-}
-///////////animation for Contact Us end
-/////////////////////////////////////////////////////////
-//      about us animation event end
-/////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////
-//      about us hover event start
-/////////////////////////////////////////////////////////
-$(function(){
-    $('#mailbtn').hover(
-        function (){
-            $(this).animate({opacity:0.7},200);
-        },
-        function (){
-            $(this).animate({opacity:1},200);
-        }
-    );
-});
-
-$(function(){
-    $('#mailadress').hover(
-        function (){
-            $(this).animate({opacity:0.5},200);
-        },
-        function (){
-            $(this).animate({opacity:1},200);
-        }
-    );
-});
-/////////////////////////////////////////////////////////
-//      about us hover event end
-/////////////////////////////////////////////////////////
-/************************************about us**************************************/
 /*----------------------------waiting for resisting start----------------------------*/
 
 /////////////////////////////////////////////////////////

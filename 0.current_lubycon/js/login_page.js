@@ -1,7 +1,13 @@
+var windowHeight = $(window).height();
+
 $(document).ready(function(){
 	$("#bodyer").fadeIn(500);
+    var loginboxHeight = $("#login_box").height();
+    $("#login_box").css("margin-top",verticalAlign(windowHeight,loginboxHeight));
 });
-
+function verticalAlign(windowHeight,objectHeight){
+    return ((windowHeight*0.5) - (objectHeight*0.5) - 20).toString() + "px";
+};
 /////////////////////////////////////////////////////////
 //      sign in ajax start
 /////////////////////////////////////////////////////////
@@ -11,47 +17,6 @@ $(document).ready(function(){
             $("#login_lubycon").click();
         };//if end
     });//keypress end
-    /*
-    $("#login_lubycon").click(function(){
-        var form_data = {
-            user_id: $("#login_id").val(),//input id
-            user_pw: $("#login_pass").val(),//input pw
-            is_ajax: 1
-        };
-        console.log("response wating");
-        $.ajax({
-            type: "POST",
-            url: "php/ajax/login_check.php",
-            cache: false,
-            data: form_data,//user_id, user_pw, is_ajax
-            success: function(data) {
-                console.log(data);
-                if(data == "true"){
-                    go_index();
-                    $('#after_signin').show();
-                    $('#addcontent_bt').show();
-                    $('#signin_bt').hide();
-                    console.log(data);
-                    return;
-                }else if(data == "false"){
-                    setTimeout(function(){
-                        $("#login_box").attr("class","shake animated");
-                    },10);
-                    console.log(data);
-                    return;
-                }
-                else{
-                    console.log("exception");
-                    return;
-                }
-                return;
-            },
-            error: function(response) {
-                console.log("ajax error");
-            }
-        });
-    });
-*/
 });    //ajax
 function go_index(){
     //location.replace("../../index.php");
@@ -60,11 +25,9 @@ function go_index(){
 /////////////////////////////////////////////////////////
 //      sign in ajax end
 /////////////////////////////////////////////////////////
-
 /////////////////////////////////////////////////////////
 //      create account bt popup event start (ajax)
 /////////////////////////////////////////////////////////
-
 $(function () { //create account bt popup event start
     $('#create_acc').hover(function (){
         $(this).stop().animate({ opacity: 0.8 }, 200);
@@ -79,21 +42,25 @@ $(function () { //create account bt popup event start
             //data: "id=" + id,//test.asp에 id 값을 보낸다
             cache: false,
             success: function (data) {
-                $('#bodyer').hide().append(data).fadeIn(300); //해당 내용을 보여준다
+                $('#bodyer').hide().append(data).fadeIn(500); //해당 내용을 보여준다
                 $(".basic_filter").selectOrDie
                 ({
                     customClass: "custom",
                     customID: "custom",
                     size: 5
                 });
-                $('.dark_overlay').fadeIn(300);
+                $('.dark_overlay').fadeIn(500);
+                $("#modal_close_bt").on("click",function(){
+                    $('.dark_overlay').stop().fadeOut(500);
+                     $('#create_account_area').stop().fadeOut(500).remove();
+                });
             }
         });
     });
 
-    $('.dark_overlay').click(function () {
-        $('.dark_overlay').stop().fadeOut(300);
-        $('#create_account_area').stop().fadeOut(300).remove();
+    $('.dark_overlay').on("click",function () {
+        $('.dark_overlay').stop().fadeOut(500);
+        $('#create_account_area').stop().fadeOut(500).remove();
     });
 });
 
@@ -140,7 +107,6 @@ $(function () {//e-mail and password value reset start
 /////////////////////////////////////////////////////////
 //      before sign in input reset end
 /////////////////////////////////////////////////////////
-
 /////////////////////////////////////////////////////////
 //      before sign in input shiny start
 /////////////////////////////////////////////////////////

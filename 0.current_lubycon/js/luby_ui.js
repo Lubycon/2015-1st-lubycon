@@ -6,106 +6,114 @@
 //5. selector
 //6. mb-panel_menu
 /////////////////////////////////////////////////////////
-//      event handler start
+//      sticky start
 /////////////////////////////////////////////////////////
-//This function will be canceled the click event when users touch in mobile devices
-//So if you want use any function in mobile, This eventHandler must be called to your function//
-function eventHandler(event, selector) {
-    event.stopPropagation();
-    event.preventDefault();
-    if (event.type === 'touchend'){
-        selector.off('click');
-    }
-};
-/////////////////////////////////////////////////////////
-//      event handler end
-/////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////
-//      dragging sensor start
-/////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////
-//      dragging sensor end
-/////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////
-//      nav_guide sticky start
-/////////////////////////////////////////////////////////
-$(document).scroll(function (){
-    if($(".nav_guide").length != 0){
-        var nav_guide = $(".nav_guide");
-        var sticky_start = $("#main_figure").height() + $("#navsel").height();
-        if($("#navsel").length == 0){
-            sticky_start -= $("#navsel").height();
-        }else{
-            sticky_start;
-        }   
-        if (($(document).scrollTop() >= sticky_start) && (windowWidth >= 1025)){
-            $("#main_header").css({"box-shadow": "0px 0px 0px 0px rgba(0,0,0,0.5)"});
-            nav_guide.css({ "position": "fixed", "top": "50px", "z-index": "4", "box-shadow": "0px 3px 7px rgba(0,0,0,0.3)" });  
-        }
-        else {
-            $("#main_header").css({"box-shadow": "0px 2px 4px 0px rgba(0,0,0,0.5)"});
-            nav_guide.css({ "position": "relative", "top": "0px", "box-shadow": "0px 0px 0px rgba(0,0,0,0.3)" });
-        }  
-    }
-    else{
-        return true;
-    }  
-});
-/////////////////////////////////////////////////////////
-//      nav_guide sticky end
-/////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////
-//      containers sticky start
-/////////////////////////////////////////////////////////
-$(document).ready(function(){  
-    $(document).scroll(function (){
+$(document).scroll(function () {
+    if (($(".nav_guide").length != 0) && windowWidth >= 1025) {
         var stickyStart = $("#main_figure").height() + $("#navsel").height();
-        if($("#navsel").length == 0){
-                stickyStart -= $("#navsel").height();
+        if($("#navsel").length == 0) {
+            stickyStart -= $("#navsel").height();
+        }else {
+            stickyStart;
+        }
+        if($("#main_figure").length == 0){
+            stickyStart -= $("#main_figure").height();
         }else{
             stickyStart;
         }
-        console.log(stickyStart);
-        var scrollEnd = $(document).height() - $(window).height(),
-            bannerPosition = $("#main_header").height() + $(".nav_guide").height(),
-            contentPosition = $(".nav_guide").height();
-
-        if($(document).find(".con_aside" && ".con_wrap") && ($(".con_aside").attr("id") != "editor_aside") && (windowWidth >= 1025)){  
-            if ($(document).scrollTop() >= stickyStart && $(document).scrollTop() < scrollEnd){
-                console.log("sticky_start");
-                if($(".nav_guide").attr("id") == "contents_info_wrap"){
-                    $("#contents_score").slideUp(150);
-                    bannerPosition = $("#main_header").height() + $(".nav_guide").height();
-                    contentPosition = bannerPosition - $("#navsel").outerHeight(true);
-                    $(".nav_guide").next().css({"top": contentPosition.toString() + "px" });
-                    $(".con_aside").css({ "position": "fixed", "top": bannerPosition.toString() + "px" });
-                    $("#floating_bt").css({"position" : "fixed", "top" : "150px"});    
-                }
-                else{
-                    $(".con_aside").css({ "position": "fixed", "top": bannerPosition });
-                    $(".nav_guide").next().css({"top": contentPosition });
-                }
-                //console.log("sticky start");
-            }
-            else if($(document).scrollTop() == scrollEnd){
-                //console.log("sticky bottom end");
-            }
-            else if($(document).scrollTop() < stickyStart){
-                $("#contents_score").slideDown(150);
-                $(".nav_guide").next().css({"top": "0px"});
-                $(".con_aside").css({ "position": "absolute", "top": "0px" });
-                $("#floating_bt").css({ "position": "absolute", "top": "0px"});
-                $("#floating_bt").css({"position" : "absolute", "top" : "0px"});
-                //console.log("sticky top end");
-            };
-        }
-        else{
-            return true;
-        };
-    });
+        lubySticky(stickyStart);
+    }
+    else {
+        return;
+    }
 });
+function lubySticky(stickyStart) {
+    if ($(document).scrollTop() >= stickyStart) {
+        if ($(".nav_guide").attr("id") == "contents_info_wrap") {
+            $("#contents_score").hide(1, function () {
+                $(".nav_guide").css({
+                    "position": "fixed",
+                    "top": "50px",
+                    "z-index": "4",
+                    "box-shadow": "0px 3px 7px rgba(0,0,0,0.3)"
+                });
+                stickyContent(stickyStart);
+                return;
+            });
+        }
+        else {
+            $(".nav_guide").css({
+                "position": "fixed",
+                "top": "50px",
+                "z-index": "4",
+                "box-shadow": "0px 3px 7px rgba(0,0,0,0.3)"
+            });
+            stickyContent(stickyStart);
+            return;
+        }
+    }
+    else {
+        if ($(".nav_guide").attr("id") == "contents_info_wrap") {
+            $(".nav_guide").css({
+                "position": "relative",
+                "top": "0px",
+                "box-shadow": "0px 0px 0px rgba(0,0,0,0.3)"
+            });
+            stickyContent(stickyStart);
+            $("#contents_score").show();
+            return;
+        }
+        else {
+            $(".nav_guide").css({
+                "position": "relative",
+                "top": "0px",
+                "box-shadow": "0px 0px 0px rgba(0,0,0,0.3)"
+            });
+            stickyContent(stickyStart);
+            return;
+        }
+    }
+}
+function stickyContent(stickyStart) {
+    var bannerPosition = $("#main_header").height() + $(".nav_guide").height(),
+        contentPosition = bannerPosition - $("#navsel").height() - 15;
+    if($("#navsel").length == 0){
+        contentPosition -= 35; 
+    }
+    else{
+        contentPosition = contentPosition;
+    }
+    if ($(document).find(".con_aside") && ($(".con_aside").attr("id") != "editor_aside")) {
+        if ($(document).scrollTop() >= stickyStart) {
+            stickyAsideStart(bannerPosition, contentPosition);
+        }
+        else if ($(document).scrollTop() < stickyStart) {
+            stickyAsideStop();
+        };
+    }
+    else {
+        return;
+    }
+}
+function stickyAsideStart(bannerPosition, contentPosition) {
+    if ($(".nav_guide").attr("id") == "contents_info_wrap") {
+        $(".nav_guide").next().css({ "top": contentPosition.toString() + "px" });
+        $(".con_aside").css({ "position": "fixed", "top": bannerPosition.toString() + "px" });
+        $("#floating_bt").css({ "position": "fixed", "top": "150px" });
+    }
+    else {
+        $(".con_aside").css({ "position": "fixed", "top": bannerPosition });
+        $(".nav_guide").next().css({ "top": contentPosition });
+    }
+}
+function stickyAsideStop() {
+    $(".nav_guide").next().css({ "top": "0px" });
+    $(".con_aside").css({ "position": "absolute", "top": "0px" });
+    $("#floating_bt").css({ "position": "absolute", "top": "0px" });
+    $("#floating_bt").css({ "position": "absolute", "top": "0px" });
+}
 /////////////////////////////////////////////////////////
-//      containers sticky end
+//      sticky end
 /////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////
 //      add hover animations start
@@ -234,7 +242,7 @@ function hideAlert(){
 //      lubySelectbox action start
 /////////////////////////////////////////////////////////
 /*
-<div class="lubySelector"> //.....................................class: lubySelector
+<div data="name" class="lubySelector"> //.....................................class: lubySelector
     <span class="global_icon"><i class="fa fa-usd"></i></span> // class: global_icon(It was used font-awesome)
     <span class="lubySelector_selected">All</span> //.............class: lubySelector_selected
     <span class="lubySelector_arrow"><i class="fa fa-caret-down"></i></span> //class: lubySelector_arrow
@@ -246,91 +254,113 @@ function hideAlert(){
     </ul>
 </div>
 */
+
 $(function(){
     $(".lubySelector").each(function(){
-        var toggle_count = 0;
-        var option_list = [];
-        $(this).find(".global_icon").addClass("hidden-mb-ib");
-        $(this).find(".lubySelector_list li").each(function(){
-            option_list.push($(this).text().replace(/ /gi, ''));
-            //It will be push to array after removed all spaces  
+        var selectList = $(this).find($(".lubySelector_list")),
+            innerList = selectList.find("li"),
+            selectArrow = $(this).find($(".lubySelector_arrow"));
+        hideAnywhere($(this),selectList,selectArrow);
+        $(this).on("click touchend",function(event){
+            event = event || window.event
+            eventHandler(event,$(this));
+            lubySelector.start(event,$(this),selectList,selectArrow);
         });
-        $(this).after("<select class='original_box'>");
+        innerList.on("click touchend",function (event){
+            lubySelector.listClick(event,$(event.target));
+        });
+    });
+    function keyUse(lubySelector){
+        $(document).on('keydown', function(event) {
+            var keyCode = event.keyCode ? event.keyCode : event.which;
+            if(keyCode == 65){
+                lubySelector.scrollTop(0);
+            }
+        });  
+    };
+});
+var lubySelector = {
+    start : function(event,selector,list,arrow){
+        if(!dragging){
+            if(selector.hasClass("open")){
+                selector.removeClass("open");              
+                this.CloseAction(selector,list,arrow);
+            }
+            else{
+                selector.addClass("open");  
+                this.OpenAction(selector,list,arrow);
+            }
+        }
+        else if(dragging){
+            return;
+        }
+        this.makeOriginalBox(selector);
+        this.listClick(event,selector)    
+    },
+    OpenAction : function(selector,list,arrow){
+        if(windowWidth > 1024){
+            arrow.children("i").attr("class","fa fa-caret-down");
+            list.fadeIn(300);
+            arrow.children("i").attr("class","fa fa-caret-up");
+            return;
+        }
+        else{
+            selector.next(".original_box").show().trigger("focus");
+        }
+    },
+    CloseAction : function(selector,list,arrow){
+        if(windowWidth > 1024){
+            list.fadeOut(300);
+            arrow.children("i").attr("class","fa fa-caret-down");
+            return;
+        }
+        else{
+            selector.next(".original_box").hide().trigger("blur");
+        }
+    },
+    makeOriginalBox :  function(selector){
+        var option_list = [];
+        selector.find(".global_icon").addClass("hidden-mb-ib");
+        selector.find(".lubySelector_list li").each(function(){
+            option_list.push($(this).text().replace(/ /gi, ''));  
+        });
+        selector.after("<select class='original_box' name='" + selector.attr('data') + "[]'>");
         for(i in option_list){
-            $(this).next(".original_box").append("<option value="+option_list[i]+">"+option_list[i]+"</option>");
+            selector.next(".original_box").append("<option value="+option_list[i]+">"+option_list[i]+"</option>");
         };
-        $(".original_box").hide();//original select box will be hide
+        $(".original_box").hide();
         $(".original_box").change(function(){
             var lubySelectbox = $(this).prev(".lubySelector").find(".lubySelector_selected");
             var original_value = $(this).val();
             lubySelectbox.text(original_value.toString());
             $(this).hide();
-            toggle_count = 0;    
+            $(this).prev(".lubySelector").removeClass("open");   
         });
-        $(this).on("click touchend",function (event){
-            eventHandler(event, $(this));
-            if(!dragging){
-                switch(toggle_count){
-                    case 0 :
-                        if(windowWidth > 1024){
-                            $(this).find($(".lubySelector_arrow")).children("i").attr("class","fa fa-caret-down");
-                            $(this).find($(".lubySelector_list")).stop().fadeIn(300);
-                            $(this).css("background","#333333");
-                            $(this).find($(".lubySelector_arrow")).children("i").attr("class","fa fa-caret-up");
-                        }
-                        else{
-                            $(this).next(".original_box").show().trigger("focus");
-                        }
-                        toggle_count = 1;
-                        return true;
-                    break;
-
-                    case 1 :
-                        if(windowWidth > 1024){
-                            $(this).find($(".lubySelector_list")).stop().fadeOut(300);
-                            $(this).css("background","#555555");
-                            $(this).find($(".lubySelector_arrow")).children("i").attr("class","fa fa-caret-down");
-                        }
-                        else{
-                            $(this).next(".original_box").hide().trigger("blur");
-                        }
-                        toggle_count = 0;
-                        return true;
-                    break;
-
-                    default: return false; break;
-                };//switch end
+    },
+    listClick : function(event,selector){
+        var selected_v = selector.text(),
+        selected_option = selector.text().replace(/ /gi, '');
+        selector.parent().siblings(".lubySelector_selected").text(selected_v);
+        selector.parents(".lubySelector").next(".original_box").val(selected_option);
+        selector.siblings("li").removeClass();
+        selector.addClass("selected_li");
+    }
+};
+function hideAnywhere(selector,object,arrow){
+    selector.mouseleave(function(){
+        $(document).click(function (event) {
+            event = event || window.event//for IE
+            if (!$(event.target).hasClass($(this).attr("class"))) {
+                object.stop().fadeOut(300);
+                selector.removeClass("open");
+                arrow.children("i").attr("class","fa fa-caret-down");
             }
-            else if(dragging){
-                return;
-            }            
-        });//click end
-        $(this).mouseleave(function(){
-            $(document).click(function (event) {
-                event = event || window.event//for IE
-                if (!$(event.target).hasClass("lubySelector")) {
-                    $(this).find($(".lubySelector_list")).stop().fadeOut(300);
-                    $(".lubySelector").css("background","#555555");
-                    $(this).find($(".lubySelector_arrow")).children("i").attr("class","fa fa-caret-down");
-                    toggle_count = 0;
-                    return true;
-                }//if end
-                else{
-                    return true;
-                }//else end
-            });//click end
-        });//mouseleave end
-        $(this).find($(".lubySelector_list li")).on("click touchend",function (event){
-            event = event || window.event
-            var selected_v = $(event.target).text();
-            var selected_option = $(event.target).text().replace(/ /gi, '');
-            $(event.target).parent().siblings(".lubySelector_selected").text(selected_v);
-            $(event.target).parents(".lubySelector").next(".original_box").val(selected_option);
-            $(event.target).siblings("li").removeClass();
-            $(event.target).addClass("selected_li");
+            else{
+                return true;
+            }
         });
-    });//each end
-});
+    });
+};
 /////////////////////////////////////////////////////////
 //      lubySelectbox action end
 /////////////////////////////////////////////////////////
@@ -461,7 +491,7 @@ $(window).on("load resize",function(){
 $(window).on("load resize", function(){
     if((windowWidth < 1025) && ($("#gotop_bt").length != 0)){
         var goTopBt = $(document).find("#gotop_bt");
-        $(document).on("touchmove scroll", function (event){
+        $(document).on("touchmove", function (event){
             if($(document).scrollTop() > 500){
                 goTopBt.stop().show();
                 return;
@@ -472,6 +502,7 @@ $(window).on("load resize", function(){
             }
         });
         $("#gotop_bt").on("click touchend", function(event){
+            eventHandler(event,$(this));
             $('html, body').animate({scrollTop : 0},500);
             return;
         });

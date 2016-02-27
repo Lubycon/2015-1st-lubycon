@@ -31,10 +31,13 @@
             <span class="lubySelector_selected">All jobs</span>
             <span class="lubySelector_arrow"><i class="fa fa-caret-down"></i></span>
             <ul class="lubySelector_list">
-                <li class="selected_li">All jobs</li>
+                <li class="selected_li">All Jobs</li>
+                <li>Artist</li>
+                <li>Creator</li>
                 <li>Designer</li>
                 <li>Engineer</li>
                 <li>Student</li>
+                <li>Other</li>
             </ul>
         </div>
         <div class="lubySelector hidden-mb-ib">
@@ -42,7 +45,7 @@
             <span class="lubySelector_selected">New</span>
             <span class="lubySelector_arrow"><i class="fa fa-caret-down"></i></span>
             <ul class="lubySelector_list">
-                <li class="selected_li">Newbies</li>
+                <li class="selected_li">New</li>
                 <li>Most Like</li>
                 <li>Most Download</li>
                 <li>Most Comment</li>
@@ -105,59 +108,76 @@
                         <p class="myinfo_name" id="language_name"><?=$language1?>, <?=$language2?></p>
                     </article>
                 </div>
-                <button id="my_page_bt">My Page</button>
+                <a href="./index.php?1=personal_page&2=personal_page&3=dashboard"><button id="my_page_bt">My Page</button></a>
             </div><!--end con_aside-->
             <div id="user_view_main" class="con_main">
+                <?php
+                    $user_img_url = "../contents_data/3djpg/profile/15.jpg";
+                    $user_location_img = "./ch/img/flag_icons/United-States-Of-America.png";
+                    $usercity = "Los Santos";
+                    $usercountry = "United States";
+                    $username = "Ssaru";
+                    $userjob = "Gangster";
+                    $contents_count = rand(3, 150);
+                    $user_content1 = "../contents_data/artworkjpg/thumb/20.jpg";
+                    $user_content2 = "../contents_data/artworkjpg/thumb/34.jpg";
+                    $user_content3 = "../contents_data/artworkjpg/thumb/50.jpg";
+                ?><!--you should change to mySQL later-->
+                <div id="bestCreator" class="creators_card">
+                    <div class="creator_menu">
+                        <i class="fa fa-bars creator_menu_icon hidden-mb-b"></i>
+                        <div class="creator_menu_list">
+                            <ul>
+                                <li><a href="./index.php?1=personal_page&2=personal_page&3=dashboard"><i class="fa fa-tachometer"></i>View Dashboard</a></li>
+                                <li><a href="./index.php?1=personal_page&2=personal_page&3=my_contents"><i class="fa fa-eye"></i>View Contents</a></li>
+                                <li><a href="./index.php?1=personal_page&2=personal_page&3=insight"><i class="fa fa-bar-chart"></i>View Insight</a></li>
+                                <li><a href="./index.php?1=personal_page&2=personal_page&3=my_forums"><i class="fa fa-table"></i>View Forums</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="creator_info_wrap">
+                        <div class="creator_top_info">
+                            <div class="creator_pic">
+                                <img src="<?=$user_img_url?>" alt="user_pic"/>
+                            </div>
+                            <div class="creator_location_img">
+                                <img src="<?=$user_location_img?>" alt="user_location"/>
+                            </div>
+                        </div>
+                        <div class="creator_mid_info">
+                            <p class="creator_name"><a href="./index.php?1=personal_page&2=personal_page&3=dashboard"><?=$username?></a></p><!--user name-->
+                            <p class="creator_job"><?=$userjob?></p><!--job-->
+                            <p class="creator_location"><i class="fa fa-map-marker"></i><?=$usercity?>, <?=$usercountry?></p>
+                            <article class="contents_count">
+                                <p class="count_num"><?=$contents_count?></p>
+                                Contents
+                            </article>
+                        </div>
+                    </div>
+                    <div class="creator_bot_info">
+                        <ul>
+                            <li class="usercontent">
+                                <img src="<?=$user_content1?>" alt="user_content"/>
+                            </li>
+                            <li class="usercontent">
+                                <img src="<?=$user_content2?>" alt="user_content"/>
+                            </li>
+                            <li class="usercontent">
+                                <img src="<?=$user_content3?>" alt="user_content"/>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
                 <ul id="creator_card_wrap">
                 <?php
                     $bestCreator_img_url = "../contents_data/3djpg/profile/60.jpg";
                     $bestCreator_location_img = "./ch/img/flag_icons/United-States-Of-America.png";
                     $bestCreator_contents_num = rand(3, 150);
+                    for($i=0;$i<60;$i++){
+                        $_GET["number"] = $i;
+                        include('php/layout/creator_card.php');
+                    }
                 ?>
-                    <li id="best_creator_wrap">
-                        <div id="best_left_wrap">
-                            <div id="best_left_background"></div>
-                            <div id="best_left_content">
-                                <figure id="creator_pic_wrap">
-                                    <div class="creator_pic">
-                                        <img src="<?=$bestCreator_img_url?>" alt="user_pic"/>
-                                    </div>
-                                    <div class="creator_location_img">
-                                        <img src="<?=$bestCreator_location_img?>" alt="user_location"/>
-                                    </div>
-                                </figure>
-                                <div class="creator_mid_info" id="best_creator_info">
-                                    <p class="creator_name"><a href="./index.php?1=personal_page&2=personal_page&3=dashboard">Admin User</p></a><!--user name-->
-                                    <p class="creator_job">Designer</p><!--job-->
-                                    <p class="creator_location hidden-mb-b"><i class="fa fa-map-marker"></i>Los Santos, United States</p>
-                                    <article class="contents_count hidden-mb-b">
-                                        <p class="count_num"><?=$bestCreator_contents_num?></p>
-                                        Contents
-                                    </article>
-                                </div>   
-                            </div>
-                        </div>
-                        <div id="best_right_wrap">
-                            <div class="best_sector">
-                                <img class="best_contents_sector" src="../contents_data/artworkjpg/thumb/1.jpg">
-                                <img class="best_contents_sector" src="../contents_data/artworkjpg/thumb/2.jpg">
-                                <img class="best_contents_sector" src="../contents_data/artworkjpg/thumb/3.jpg">
-                                <img class="best_contents_sector" src="../contents_data/artworkjpg/thumb/4.jpg">
-                            </div>
-                            <div class="best_sector">
-                                <img class="best_contents_sector" src="../contents_data/artworkjpg/thumb/5.jpg">
-                                <img class="best_contents_sector" src="../contents_data/artworkjpg/thumb/6.jpg">
-                                <img class="best_contents_sector" src="../contents_data/artworkjpg/thumb/7.jpg">
-                                <img class="best_contents_sector" src="../contents_data/artworkjpg/thumb/8.jpg">
-                            </div>
-                        </div>
-                    </li>
-                    <?php
-                        for($i=0;$i<60;$i++){
-                            $_GET["number"] = $i;
-                            include('php/layout/creator_card.php');
-                        }
-                    ?>
                 </ul>
             </div><!--end con_main-->
         </section><!--end user_box_total-->

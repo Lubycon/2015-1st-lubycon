@@ -15,10 +15,10 @@
 
 #work_space{
     width:100%;
-    background:#f0f0f0;
     padding:20px 0px;
     padding-bottom: 40px;
-    text-align: center
+    text-align: center;
+    top: 50px;
 }
 .note-editor.note-frame{
     
@@ -96,7 +96,7 @@
 
 
     #main_work_space{
-        width:1100px;
+        width: 100%;
         background:#fff;
         border-radius: 3px;
         display: inline-block;
@@ -157,10 +157,11 @@
 #community_submit{
     display: inline-block;
     width: 200px;
-    height: 70px;
-    line-height: 70px;
+    height: 60px;
+    line-height: 57px;
     background: #48cfad;
-    border-radius: 5px;
+    border: none;
+    border-radius: 200px;
     color: #ffffff;
     font-size: 23px;
     font-weight: 200;

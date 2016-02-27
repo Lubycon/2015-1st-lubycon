@@ -2,7 +2,7 @@
 /*
 *	!!! THIS IS JUST AN EXAMPLE !!!, PLEASE USE ImageMagick or some other quality image processing libraries
 */
-    $imagePath = "temp/";
+    $imagePath = "../../../contents_data/temp/"; //edit only this path
 
 	$allowedExts = array("gif", "jpeg", "jpg", "png", "GIF", "JPEG", "JPG", "PNG");
 	$temp = explode(".", $_FILES["img"]["name"]);
@@ -24,7 +24,7 @@
 		  $filename = $_FILES["img"]["tmp_name"];
 		  list($width, $height) = getimagesize( $filename );
 
-		  move_uploaded_file($filename,"../../" . $imagePath . $_FILES["img"]["name"]); //edit this path
+		  move_uploaded_file($filename, $imagePath . $_FILES["img"]["name"]);
 
 		  $response = array(
 			"status" => 'success',

@@ -1,12 +1,4 @@
 <script type="text/javascript" src="js/call_comments.js"></script> <!-- account file js -->
-
-<div class="main_figure_wrap hidden-mb-b">
-    <figure id="main_figure">
-        <div class="dark_overlay_small"></div>
-        <h2>COMMUNITY</h2>
-    </figure>
-</div>	<!-- end main_figure -->
-
 <link href="css/community_view.css" rel="stylesheet" type="text/css" />  <!-- community_view css -->
 <link href="css/community.css" rel="stylesheet" type="text/css" />  <!-- community css -->
 <script type="text/javascript" src="js/community.js"></script>

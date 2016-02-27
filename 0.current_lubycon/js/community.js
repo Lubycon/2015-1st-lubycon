@@ -5,33 +5,7 @@ function eventHandler(event, selector) {//
         selector.off('click');
     }
 };
-/*--------------------------------postbox sticky start-------------------------------*/
-$(function(){
-    if(($(window).width() > 1024) && ($("#main_board").length != 0)){
-        var postBanner = $("#post_banner"),
-            valueMain = $("#author_main").outerHeight(true),
-            valueSub = $("#author_sub").outerHeight(true),
-            bannerStop = $("#main_board").position().top - (valueMain + valueSub) - 101,
-            bannerPosition = (bannerStop-101-35).toString()+"px";
-        $("#comment_box").on("resize",function(){
-            bannerStop = $("#main_board").position().top - (valueMain + valueSub) - 101,
-            bannerPosition = (bannerStop-101-35).toString()+"px";
-            postBanner.css({ "position": "fixed", "top": "100px" });
-        });
-        $(document).scroll(function(){
-            if($(document).scrollTop() >= bannerStop){
-                postBanner.css({"position":"absolute", "top": bannerPosition});
-                return;
-            }
-            else{
-                return;
-            }
-        });
-    }else{
-        return;
-    }; 
-});
-/*--------------------------------postbox sticky end-------------------------------*/
+
 /*--------------------------------community write button start-----------------------------*/
 $(function(){
     if($("#write_bt").length != 0){
@@ -62,7 +36,7 @@ $(function(){
 $(document).ready(function(){
     if($("#main_work_space").length != 0){
         $('#summernote').summernote({
-            height: $(window).height() + 100,
+            height: 250,
             minHeight: null,
             maxHeight: null,
             focus: true,
@@ -77,12 +51,9 @@ $(document).ready(function(){
                 ['insert', ['picture', 'video', 'link', 'table', 'hr']],
                 ['misc', ['help']]
             ],
-            callbacks:
-            {
-                onImageUpload: function (files, editor, welEditable)
-                {
-                    for ( var i = files.length - 1 ; i >= 0 ; i-- )
-                    {
+            callbacks:{
+                onImageUpload: function (files, editor, welEditable){
+                    for ( var i = files.length - 1 ; i >= 0 ; i-- ){
                         sendFile(files[i], this);
                         console.log(files[i]);
                     }
