@@ -1,13 +1,13 @@
 # README(LUBYCON)
 
 
-###LUBYCON
+### LUBYCON
 Hi guys. This is Dart.
 You can modify this page free. what i'm going to say if you have any ideas plz add list in this page.
 
 I think we better determine some rules for LUBYCON.
 
-###example 
+### example 
 * file Directory
 * structure for Web Database
 * meeting day
@@ -15,7 +15,7 @@ I think we better determine some rules for LUBYCON.
 * When we better have english time...etc
 
 
-###The tip for readme page
+### The tip for readme page
 * '#'Title'#'
 * '###'ul
 * '*'li(if you want use li that you must use ul first)
